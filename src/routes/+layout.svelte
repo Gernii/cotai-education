@@ -1,0 +1,9 @@
+<script lang="ts">
+	import { navigating } from '$app/stores';
+	import '../app.pcss';
+</script>
+
+{#if $navigating}
+	<progress class="progress progress-primary absolute top-0 z-50 h-1.5 w-screen" />
+{/if}
+<slot />

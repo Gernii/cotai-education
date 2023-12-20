@@ -1,0 +1,9 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"layout_header_openLanguageMenu": "Open Language Menu",
+	"hello_world": "Hello World",
+	"mainLogo": "CoTAI Edu Logo",
+	"language": "Language",
+	"contact": "Contact",
+	"gemCollection": "Gem Collection"
+}
