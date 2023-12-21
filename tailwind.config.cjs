@@ -1,7 +1,8 @@
 import defaultTheme from 'tailwindcss/defaultTheme';
-
+import daisyui from 'daisyui'
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+
 	theme: {
 		extend: {
 			spacing: {
@@ -10,8 +11,7 @@ const config = {
 				sidebar: defaultTheme.spacing['64'],
 				modal: '40rem',
 				'modal-lg': '50rem'
-			},
-			
+			}
 		}
 	},
 	daisyui: {
@@ -45,10 +45,6 @@ const config = {
 			}
 		]
 	},
-	plugins: [
-		require('daisyui'),
-		require('@tailwindcss/forms'),
-		require('@tailwindcss/typography')
-	]
+	plugins: [daisyui]
 };
 module.exports = config;

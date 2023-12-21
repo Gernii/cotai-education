@@ -23,8 +23,7 @@
 	setContext(HeaderScrollContext, isScroll);
 
 	$: headerClassName = headerClassNameHandler({
-		disableScrollEvent,
-		scroll: $isScroll
+		disableScrollEvent
 	});
 
 	const onScrollHandler = (e: Event) => {

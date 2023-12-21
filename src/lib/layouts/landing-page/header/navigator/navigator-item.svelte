@@ -10,6 +10,6 @@
 	export { className as class };
 </script>
 
-<a class={twMerge('btn btn-ghost flex-nowrap', className)} {href} {...$$restProps}>
+<a class={twMerge('btn btn-ghost flex-nowrap justify-between', className)} {href} {...$$restProps}>
 	<slot />
 </a>

@@ -6,8 +6,8 @@
 	import NavigatorItem from './navigator-item.svelte';
 
 	import * as m from '$i18n/messages';
-	import { IconChevronDown } from '$lib/components/icons';
 	import { navigate } from '$lib/lib/i18n/routing';
+	import NavigatorCollapse from './navigator-collapse.svelte';
 
 	interface $$Props {
 		sidenav?: boolean;
@@ -17,7 +17,10 @@
 </script>
 
 <div
-	class="dark:bg-tertiary-900 flex h-full flex-col bg-base-100 xl:bg-transparent xl:dark:bg-transparent"
+	class={cx('flex h-full flex-col ', {
+		'rounded-btn bg-base-100': sidenav,
+		'bg-transparent': !sidenav
+	})}
 >
 	<nav
 		class={cx('flex', {
@@ -25,23 +28,12 @@
 			'flex-col p-4': sidenav
 		})}
 	>
-		<div class="dropdown" />
-		<div class="dropdown dropdown-hover">
-			<div tabindex="0" role="button" class="btn btn-ghost flex-nowrap">
-				<span class="whitespace-nowrap">Our courses</span>
-				<IconChevronDown class="h-4 w-4" />
-			</div>
-			<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
-			<div
-				tabindex="0"
-				class="card dropdown-content card-compact z-[1] min-w-[10rem] bg-base-100 shadow"
-			>
-				<ul class="menu">
-					<li><a href={navigate('/')}>Item 1</a></li>
-					<li><a href={navigate('/')}>Item 2</a></li>
-				</ul>
-			</div>
-		</div>
+		<NavigatorCollapse title={m.ourCourses()} {sidenav}>
+			<ul class="menu w-full">
+				<li><a href={navigate('/')} class="w-full">Item 1</a></li>
+				<li><a href={navigate('/')}>Item 2</a></li>
+			</ul>
+		</NavigatorCollapse>
 
 		<NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
 			{m.contact()}
@@ -57,10 +49,10 @@
 		</NavigatorItem>
 	</nav>
 	{#if sidenav}
-		<hr class="dark:border-tertiary-800 mb-2 w-full border" />
+		<hr class="mb-2 w-full border" />
+		<div class="flex items-center justify-between px-4 py-2">
+			<p class="font-semibold">{m.language()}</p>
+			<LangSelector />
+		</div>
 	{/if}
-	<div class="flex items-center justify-between px-4 py-2 lg:hidden lg:p-0">
-		<p class="block font-semibold lg:hidden">{m.language()}</p>
-		<LangSelector />
-	</div>
 </div>
