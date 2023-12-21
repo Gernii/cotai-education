@@ -22,7 +22,7 @@
 		"lint.check": "eslint  \"src/**/*.{ts*,svelte}\"  --max-warnings=0",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare",
 		"postinstall": "paraglide-js compile --project ./project.inlang",
-		"prepare": "husky install"
+		"prepare": "husky install | chmod u+x .husky/*"
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "^0.8.1",
@@ -70,5 +70,6 @@
 			"prettier --check"
 		]
 	},
-	"type": "module"
+	"type": "module",
+	"packageManager": "pnpm@8.12.1"
 }

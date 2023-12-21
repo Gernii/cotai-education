@@ -2,14 +2,11 @@ name: Validate PR
 
 on:
   pull_request:
-    branches:
-      - 'dev'
-      - 'staging'
-      - 'prod'
     types:
       - opened
       - reopened
       - synchronize
+      - edited
 
 permissions:
   id-token: write
