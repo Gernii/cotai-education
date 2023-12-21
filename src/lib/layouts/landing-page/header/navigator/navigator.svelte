@@ -8,12 +8,15 @@
 	import * as m from '$i18n/messages';
 	import { navigate } from '$lib/lib/i18n/routing';
 	import NavigatorCollapse from './navigator-collapse.svelte';
+	import type { layoutPrograms } from '../../types';
 
 	interface $$Props {
 		sidenav?: boolean;
+		programs: layoutPrograms;
 	}
 
 	export let sidenav: NonNullable<$$Props['sidenav']> = false;
+	export let programs: $$Props['programs'] = undefined;
 </script>
 
 <div
@@ -28,13 +31,19 @@
 			'flex-col p-4': sidenav
 		})}
 	>
-		<NavigatorCollapse title={m.ourCourses()} {sidenav}>
-			<ul class="menu w-full">
-				<li><a href={navigate('/')} class="w-full">Item 1</a></li>
-				<li><a href={navigate('/')}>Item 2</a></li>
-			</ul>
-		</NavigatorCollapse>
-
+		{#if programs}
+			<NavigatorCollapse title={m.ourCourses()} {sidenav}>
+				<ul class="menu w-full">
+					{#each programs as program (program.id)}
+						<li>
+							<a href={navigate(`/program/${program.id}`)} class="w-full whitespace-nowrap">
+								{program.title}
+							</a>
+						</li>
+					{/each}
+				</ul>
+			</NavigatorCollapse>
+		{/if}
 		<NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
 			{m.contact()}
 		</NavigatorItem>

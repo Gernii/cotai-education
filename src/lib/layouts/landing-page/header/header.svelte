@@ -13,10 +13,14 @@
 	import { navigate } from '$lib/lib/i18n/routing';
 
 	import { headerClassNameHandler } from './styles';
+	import type { layoutPrograms } from '../types';
 
-	interface $$Props extends HeaderProps {}
+	interface $$Props extends HeaderProps {
+		programs: layoutPrograms;
+	}
 
 	export let disableScrollEvent: NonNullable<$$Props['disableScrollEvent']> = false;
+	export let programs: $$Props['programs'] = undefined;
 
 	const isScroll = writable(false);
 
@@ -52,7 +56,7 @@
 <svelte:window on:scroll={onScrollHandler} />
 
 <header class={headerClassName}>
-	<div class="navbar h-full gap-x-8">
+	<div class="navbar h-full min-h-fit gap-x-2 lg:gap-x-8">
 		<div class="navbar-start block lg:hidden">
 			<SidenavTrigger />
 		</div>
@@ -63,7 +67,7 @@
 		</div>
 
 		<div class="hidden lg:block">
-			<Navigator />
+			<Navigator {programs} />
 		</div>
 		<div class="flex flex-grow-0 lg:flex-grow" />
 		<div class="navbar-end">

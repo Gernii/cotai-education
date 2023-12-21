@@ -3,7 +3,7 @@ import { cva } from 'cva';
 import type { HeaderCVAProps } from './types';
 
 export const headerClassNameHandler = cva<HeaderCVAProps>(
-	'inset-x-3 top-3 z-40 h-20 bg-white px-2 py-1 shadow',
+	'inset-x-1 top-1 z-40 h-16 border bg-base-100/90 px-1 py-1 shadow backdrop-blur-sm lg:inset-x-3 lg:top-3 lg:h-20 lg:px-2',
 	{
 		variants: {
 			disableScrollEvent: {
