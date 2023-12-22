@@ -10,7 +10,7 @@
 	>
 		<div class="text-shadow-sm space-y-5 text-center text-primary shadow-base-content">
 			<p class="text-4xl font-bold sm:text-5xl lg:font-extrabold xl:text-7xl">
-				{m.homepage_hero_title()} <span class="text-secondary">{m.success()}</span>
+				{m.homepage_hero_title()}
 			</p>
 		</div>
 	</ContainerContent>

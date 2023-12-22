@@ -15,7 +15,6 @@ export const load: PageLoad = async ({ fetch }) => {
 	const programs = programsRawData.filter((program) => program !== undefined) as ProgramProps[];
 
 	return {
-		data: 'asd',
 		programs
 	};
 };
@@ -43,7 +42,6 @@ const fetchPrograms = async (id: string, fetch: LoadEvent['fetch']) => {
 
 		const data = await res.json();
 
-		console.log(data);
 		return { ...data, id } as ProgramProps;
 	} catch (e) {
 		console.error(e);
