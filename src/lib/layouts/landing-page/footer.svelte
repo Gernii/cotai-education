@@ -63,11 +63,7 @@
 					>
 						<IconLinkedin class="h-6 w-6" />
 					</a>
-					<a
-						href="https://www.linkedin.com/company/cotai/mycompany/"
-						aria-label={'Linkedin'}
-						class="btn btn-square"
-					>
+					<a href="https://www.youtube.com/@cotai" aria-label={'Youtube'} class="btn btn-square">
 						<IconYoutube class="h-6 w-6" />
 					</a>
 				</div>

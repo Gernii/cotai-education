@@ -11,6 +11,27 @@ export interface ProgramProps {
 	components: ComponentProps[];
 }
 
+export interface CourseProps {
+	id: string;
+	title?: string;
+	price?: number;
+	'register-url'?: string;
+	embed?: string;
+	thumbnail?: string;
+	description?: string;
+}
+
+export interface CurriculumProps {
+	title?: string;
+	hidden?: boolean;
+	classesCountable?: boolean;
+}
+
+export interface CurriculumProps_Details {
+	hidden?: boolean;
+	content?: string;
+}
+
 export enum ComponentType {
 	'no-image',
 	'text-left',

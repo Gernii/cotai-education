@@ -8,15 +8,25 @@
 	import * as m from '$i18n/messages';
 	import { navigate } from '$lib/lib/i18n/routing';
 	import NavigatorCollapse from './navigator-collapse.svelte';
-	import type { layoutPrograms } from '../../types';
+
+	import { page } from '$app/stores';
+	import type { ProgramProps } from '$lib/utils/types/data';
+	import { routingPathProgramsId } from '$lib/utils/routing-path';
 
 	interface $$Props {
 		sidenav?: boolean;
-		programs: layoutPrograms;
 	}
 
 	export let sidenav: NonNullable<$$Props['sidenav']> = false;
-	export let programs: $$Props['programs'] = undefined;
+
+	$: pdPrograms = $page.data.programs as ProgramProps[] | undefined;
+
+	$: programs = pdPrograms
+		? pdPrograms.map((program) => ({
+				id: program.id,
+				title: program.title
+			}))
+		: [];
 </script>
 
 <div
@@ -31,12 +41,15 @@
 			'flex-col p-4': sidenav
 		})}
 	>
-		{#if programs}
+		{#if programs.length > 0}
 			<NavigatorCollapse title={m.ourCourses()} {sidenav}>
 				<ul class="menu w-full">
 					{#each programs as program (program.id)}
 						<li>
-							<a href={navigate(`/program/${program.id}`)} class="w-full whitespace-nowrap">
+							<a
+								href={navigate(routingPathProgramsId(program.id))}
+								class="w-full whitespace-nowrap"
+							>
 								{program.title}
 							</a>
 						</li>

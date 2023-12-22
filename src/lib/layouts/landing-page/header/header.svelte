@@ -6,21 +6,18 @@
 	import { LangSelector } from './lang-selector';
 	import { Navigator } from './navigator';
 	import { SidenavTrigger } from './sidenav';
-	import type { HeaderProps } from './types';
 
 	import * as m from '$i18n/messages';
 	import CoTAILogo from '$lib/assets/logo/CoTAI-Ver0-640.png';
 	import { navigate } from '$lib/lib/i18n/routing';
 
 	import { headerClassNameHandler } from './styles';
-	import type { layoutPrograms } from '../types';
 
-	interface $$Props extends HeaderProps {
-		programs: layoutPrograms;
+	interface $$Props {
+		disableScrollEvent?: boolean;
 	}
 
 	export let disableScrollEvent: NonNullable<$$Props['disableScrollEvent']> = false;
-	export let programs: $$Props['programs'] = undefined;
 
 	const isScroll = writable(false);
 
@@ -67,7 +64,7 @@
 		</div>
 
 		<div class="hidden lg:block">
-			<Navigator {programs} />
+			<Navigator />
 		</div>
 		<div class="flex flex-grow-0 lg:flex-grow" />
 		<div class="navbar-end">
