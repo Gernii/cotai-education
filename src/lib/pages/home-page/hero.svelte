@@ -1,6 +1,7 @@
 <script lang="ts">
-	import * as m from '$i18n/messages';
 	import { ContainerContent } from '$lib/components/ui/container';
+
+	import * as m from '$i18n/messages';
 </script>
 
 <div class="hero h-screen overflow-hidden supports-[height:100dvh]:h-[100dvh]">

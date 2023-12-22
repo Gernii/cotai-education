@@ -1,8 +1,11 @@
 <script lang="ts">
-	import * as m from '$i18n/messages';
 	import CoTAILogo from '$lib/assets/logo/CoTAI-Ver0-640.png';
-	import { IconFacebook, IconLinkedin, IconYoutube } from '$lib/components/icons';
+
 	import { Container, ContainerContent } from '$lib/components/ui/container';
+
+	import * as m from '$i18n/messages';
+
+	import { IconFacebook, IconLinkedin, IconYoutube } from '$lib/components/icons';
 </script>
 
 <footer class="border-t bg-base-200 py-2">

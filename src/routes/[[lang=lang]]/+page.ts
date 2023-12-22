@@ -1,6 +1,7 @@
 import type { LoadEvent } from '@sveltejs/kit';
 
 import type { HomePageDataProps } from '$lib/pages/home-page';
+
 import type { CourseProps, ProgramProps } from '$lib/utils/types/data';
 
 import type { PageLoad } from './$types';

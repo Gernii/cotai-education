@@ -2,15 +2,16 @@
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 
+	import CoTAILogo from '$lib/assets/logo/CoTAI-Ver0-640.png';
+
+	import { navigate } from '$lib/lib/i18n/routing';
+
+	import * as m from '$i18n/messages';
+
 	import { HeaderScrollContext } from './context';
 	import { LangSelector } from './lang-selector';
 	import { Navigator } from './navigator';
 	import { SidenavTrigger } from './sidenav';
-
-	import * as m from '$i18n/messages';
-	import CoTAILogo from '$lib/assets/logo/CoTAI-Ver0-640.png';
-	import { navigate } from '$lib/lib/i18n/routing';
-
 	import { headerClassNameHandler } from './styles';
 
 	interface $$Props {

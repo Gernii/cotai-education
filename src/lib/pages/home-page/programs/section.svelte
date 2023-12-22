@@ -1,10 +1,16 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import * as m from '$i18n/messages';
+
 	import { Container, ContainerContent } from '$lib/components/ui/container';
+
 	import { navigate } from '$lib/lib/i18n/routing';
+
 	import { routingPathProgramsId } from '$lib/utils/routing-path';
+
+	import * as m from '$i18n/messages';
+
 	import type { HomePageDataProps } from '../types';
+
 	import CourseCard from './course-card.svelte';
 	import Info from './info.svelte';
 

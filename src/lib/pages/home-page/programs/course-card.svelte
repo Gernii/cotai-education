@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { navigate } from '$lib/lib/i18n/routing';
+
 	import type { CourseProps } from '$lib/utils/types/data';
-	import * as m from '$i18n/messages';
 	import { routingPathCoursesId } from '$lib/utils/routing-path';
 	import { defaultImage } from '$lib/utils/constants';
+
+	import * as m from '$i18n/messages';
 
 	type $$Props = CourseProps;
 

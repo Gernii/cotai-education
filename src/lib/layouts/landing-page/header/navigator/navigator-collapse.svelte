@@ -1,6 +1,7 @@
 <script lang="ts">
-	import { IconChevronDown } from '$lib/components/icons';
 	import { cx } from 'cva';
+
+	import { IconChevronDown } from '$lib/components/icons';
 
 	interface $$Props {
 		title: string;

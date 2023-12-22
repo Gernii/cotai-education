@@ -1,9 +1,10 @@
 <script lang="ts">
-	import LangSelectorContent from './lang-selector-content.svelte';
-	import LangSelectorIcon from './lang-selector-icon.svelte';
+	import { currentLang } from '$lib/lib/i18n/routing';
 
 	import * as m from '$i18n/messages';
-	import { currentLang } from '$lib/lib/i18n/routing';
+
+	import LangSelectorContent from './lang-selector-content.svelte';
+	import LangSelectorIcon from './lang-selector-icon.svelte';
 </script>
 
 <div class="dropdown dropdown-end dropdown-bottom">

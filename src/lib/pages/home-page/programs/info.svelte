@@ -1,6 +1,8 @@
 <script lang="ts">
 	import type { ProgramProps } from '$lib/utils/types/data';
+
 	import * as m from '$i18n/messages';
+
 	type $$Props = Pick<ProgramProps, 'title' | 'description' | 'targets'>;
 
 	export let title: $$Props['title'] = undefined;

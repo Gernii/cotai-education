@@ -1,17 +1,19 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	import { cx } from 'cva';
+
+	import { navigate } from '$lib/lib/i18n/routing';
+
+	import type { ProgramProps } from '$lib/utils/types/data';
+	import { routingPathProgramsId } from '$lib/utils/routing-path';
+
+	import * as m from '$i18n/messages';
 
 	import { LangSelector } from '../lang-selector';
 
 	import NavigatorItem from './navigator-item.svelte';
-
-	import * as m from '$i18n/messages';
-	import { navigate } from '$lib/lib/i18n/routing';
 	import NavigatorCollapse from './navigator-collapse.svelte';
-
-	import { page } from '$app/stores';
-	import type { ProgramProps } from '$lib/utils/types/data';
-	import { routingPathProgramsId } from '$lib/utils/routing-path';
 
 	interface $$Props {
 		sidenav?: boolean;
