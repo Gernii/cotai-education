@@ -6,7 +6,6 @@ import type { headerClassNameHandler } from './styles';
 
 export type HeaderCVAProps = {
 	disableScrollEvent: Record<Boolean, string>;
-	scroll: Record<Boolean, string>;
 };
 
 export interface HeaderStylesProps extends VariantProps<typeof headerClassNameHandler> {}

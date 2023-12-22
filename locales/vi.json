@@ -1,9 +1,1 @@
-{
-	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"layout_header_openLanguageMenu": "Open Language Menu",
-	"hello_world": "Xin chào",
-	"mainLogo": "CoTAI Edu Logo",
-	"language": "Ngôn ngữ",
-	"contact": "Liên hệ",
-	"gemCollection": "Gem Collection"
-}
+{"$schema":"https://inlang.com/schema/inlang-message-format","layout_header_openLanguageMenu":"Open Language Menu","hello_world":"Xin chào","mainLogo":"CoTAI Edu Logo","language":"Ngôn ngữ","contact":"Liên hệ","gemCollection":"Bộ sưu tập Gem","ourCourses":"Các khóa học","homepage_hero_title":"Học lập trình với CoTAI","viewProgramDetails":"Xem chi tiết","contacts":"Liên hệ","email":"Email","phone":"Phone","hotline":"Hotline","address":"Địa chỉ","contacts_address_1":"An Suong Office space - tòa nhà MDN, Quận 12, TP.HCM","contacts_address_2":"Trường THPT Chuyên Lê Hồng Phong, 235 Nguyễn Văn Cừ, Q.5, TP.HCM","contacts_address_3":"147/9 Nguyễn Sỹ Sách, P.15, Q.Tân Bình, TP.HCM","thumbnail":"ảnh nền của {title}","target":"Đối tượng"}

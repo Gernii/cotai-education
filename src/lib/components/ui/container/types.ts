@@ -7,7 +7,7 @@ import type { containerClassNameHandler, containerContentClassNameHandler } from
 // Container
 export type ContainerStylesProps = VariantProps<typeof containerClassNameHandler>;
 
-export type ContainerPaddingProps = 'bottom' | 'top-bottom' | 'none';
+export type ContainerPaddingProps = 'top' | 'bottom' | 'top-bottom' | 'none';
 
 export type ContainerCVAProps = {
 	padding: Record<ContainerPaddingProps, string>;

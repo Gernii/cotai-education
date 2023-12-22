@@ -2,6 +2,7 @@
 	import { cx } from 'cva';
 
 	import type { AvailableLanguageTag } from '$i18n/runtime';
+
 	import { IconFlagUs, IconFlagVietnam } from '$lib/components/icons';
 
 	interface $$Props {

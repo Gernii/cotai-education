@@ -4,6 +4,7 @@ import Facebook from './facebook.svelte';
 import FlagUs from './flag-us.svelte';
 import FlagVietnam from './flag-vietnam.svelte';
 import Linkedin from './linkedin.svelte';
+import Youtube from './youtube.svelte';
 
 export {
 	Bars3 as IconBars3,
@@ -15,5 +16,6 @@ export {
 
 	// Social Media
 	Facebook as IconFacebook,
-	Linkedin as IconLinkedin
+	Linkedin as IconLinkedin,
+	Youtube as IconYoutube
 };

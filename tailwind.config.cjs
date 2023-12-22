@@ -1,7 +1,11 @@
+import AspectRatio from '@tailwindcss/aspect-ratio';
+import Typography from '@tailwindcss/typography';
+import daisyui from 'daisyui';
 import defaultTheme from 'tailwindcss/defaultTheme';
 
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+
 	theme: {
 		extend: {
 			spacing: {
@@ -11,7 +15,11 @@ const config = {
 				modal: '40rem',
 				'modal-lg': '50rem'
 			},
-			
+			aspectRatio: {
+				thumbnail169: '16 / 9',
+				thumbnail21: '2 / 1',
+				thumbnail43: '4 / 3'
+			}
 		}
 	},
 	daisyui: {
@@ -19,8 +27,9 @@ const config = {
 			{
 				default: {
 					'color-scheme': 'light',
-					primary: 'oklch(56.86% 0.255 257.57)',
-					secondary: '#463AA2',
+					primary: 'oklch(71.03% 0.163 240.29)',
+					'primary-content': 'oklch(90.03% 0.082 240.289)',
+					secondary: '#fc8c04',
 					accent: '#C148AC',
 					neutral: '#021431',
 					'base-100': 'oklch(100% 0 0)',
@@ -45,10 +54,6 @@ const config = {
 			}
 		]
 	},
-	plugins: [
-		require('daisyui'),
-		require('@tailwindcss/forms'),
-		require('@tailwindcss/typography')
-	]
+	plugins: [Typography, AspectRatio, daisyui]
 };
 module.exports = config;

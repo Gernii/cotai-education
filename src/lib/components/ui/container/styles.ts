@@ -6,7 +6,8 @@ export const containerClassNameHandler = cva<ContainerCVAProps>('', {
 	variants: {
 		padding: {
 			bottom: 'pb-20 sm:pb-32 lg:pb-40',
-			'top-bottom': 'py-14 sm:py-24 lg:py-28',
+			top: 'pt-10 sm:pt-16 lg:pt-20',
+			'top-bottom': 'pb-20 pt-10 sm:pb-32 sm:pt-16 lg:pb-40 lg:pt-20',
 			none: ''
 		}
 	},

@@ -1,11 +1,27 @@
 name: Test
 
-description: Lint, Test and build
+description: Lint, Fmt, Test, Check and build
 
 runs:
   using: composite
 
   steps:
-    - name: Validate Lint & fmt & build
+    - name: Lint
       shell: bash
-      run: pnpm run validate
+      run: pnpm run lint
+
+    - name: Fmt
+      shell: bash
+      run: pnpm run fmt
+
+    - name: Test
+      shell: bash
+      run: pnpm run test
+
+    - name: Check
+      shell: bash
+      run: pnpm run check
+
+    - name: Build
+      shell: bash
+      run: pnpm run build

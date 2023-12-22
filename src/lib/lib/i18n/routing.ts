@@ -1,6 +1,6 @@
-import { derived, get } from 'svelte/store';
-
 import { page } from '$app/stores';
+
+import { derived, get } from 'svelte/store';
 
 import { type AvailableLanguageTag, availableLanguageTags, sourceLanguageTag } from '$i18n/runtime';
 

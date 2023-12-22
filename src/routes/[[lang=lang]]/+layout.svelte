@@ -1,8 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
-	import { availableLanguageTags, setLanguageTag } from '$i18n/runtime';
 
 	import { currentLang, route } from '$lib/lib/i18n/routing';
+
+	import { availableLanguageTags, setLanguageTag } from '$i18n/runtime';
+
 	//Use the default language if no language is given
 	$: setLanguageTag($currentLang);
 </script>

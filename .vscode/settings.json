@@ -3,6 +3,8 @@
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": "explicit"
     },
+    "eslint.validate": ["javascript", "javascriptreact", "svelte"],
+    "prettier.documentSelectors": ["**/*.svelte"],
     "tailwindCSS.experimental.classRegex": [
       ["cva(([^)]*))", "[\"'`]([^\"'`]*).*?[\"'`]"],
       ["cx(([^)]*))", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
