@@ -31,7 +31,7 @@
 			"classesCountable": true,
 			"details": {
 				"hidden": false,
-				"value": "\n\t\t\t\t- Hình thức: Online\n\t\t\t\t- Nội dung:\n\t\t\t\t\t- Giảng viên sẽ giới thiệu về ngôn ngữ python\n\t\t\t\t- Chi tiết:\n\t\t\t\t\t- Các cài đặt python\n\t\t\t\t\t-\tCài đặt môi trường ảo\n\t\t\t\t\t- Sử dụng google colab\n\t\t\t\t\t...\n\t\t\t\t"
+				"content": "\n\t\t\t\t- Hình thức: Online\n\t\t\t\t- Nội dung:\n\t\t\t\t\t- Giảng viên sẽ giới thiệu về ngôn ngữ python\n\t\t\t\t- Chi tiết:\n\t\t\t\t\t- Các cài đặt python\n\t\t\t\t\t-\tCài đặt môi trường ảo\n\t\t\t\t\t- Sử dụng google colab\n\t\t\t\t\t...\n\t\t\t\t"
 			}
 		}
 	]

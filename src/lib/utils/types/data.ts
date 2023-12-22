@@ -19,12 +19,14 @@ export interface CourseProps {
 	embed?: string;
 	thumbnail?: string;
 	description?: string;
+	curriculum: CurriculumProps[];
 }
 
 export interface CurriculumProps {
 	title?: string;
 	hidden?: boolean;
 	classesCountable?: boolean;
+	details?: CurriculumProps_Details;
 }
 
 export interface CurriculumProps_Details {
