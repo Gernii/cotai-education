@@ -3,6 +3,7 @@ import type { LoadEvent } from '@sveltejs/kit';
 import type { HomePageDataProps } from '$lib/pages/home-page';
 
 import type { CourseProps, ProgramProps } from '$lib/utils/types/data';
+import { staticDataFetcher } from '$lib/utils/static-data-fetcher';
 
 import type { PageLoad } from './$types';
 
@@ -66,27 +67,6 @@ const fetchCourses = async (programs: ProgramProps[], fetch: LoadEvent['fetch'])
 		{} as Record<string, CourseProps>
 	);
 	return courses;
-};
-
-export interface StaticDataFetcherProps {
-	id: string;
-	path: string;
-	fetch: LoadEvent['fetch'];
-}
-
-const staticDataFetcher = async <T>(props: StaticDataFetcherProps) => {
-	const { id, path, fetch } = props;
-	try {
-		const res = await fetch(`data/${path}/${id}.json`);
-
-		const data = await res.json();
-
-		return { ...data, id } as T;
-	} catch (e) {
-		console.error(e);
-
-		return undefined;
-	}
 };
 
 const treeShakingCourses = (programs: ProgramProps[]) => {

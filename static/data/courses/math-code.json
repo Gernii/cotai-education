@@ -15,7 +15,15 @@
 			"description": "\n\t\t\t# H1\n\t\t\t#### h4\n\t\t\t$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n\t\t\t$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n\t\t\t==marked==\n\n\t\t\t==marked==\n\n\t\t\t::: warning\n\t\t\thello\n\t\t\t:::\n\n\t\t\txyz\n\n\t\t\tabc\n\t\t\t- Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\t\t\t- Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\t\t\t\t- hell\n\t\t\t\t- hi\n\t\t\t\t\t- essasdasdas\n\t\t\t\t\t- els\n\t\t\t"
 		},
 		{
-			"type": 0,
+			"type": 1,
+			"title": "Lợi ích",
+			"image": "https://i.imgur.com/uAfO3SL.jpeg",
+			"background": false,
+			"hidden": false,
+			"description": "\n\t\t\t# H1\n\t\t\t#### h4\n\t\t\t$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n\t\t\t$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n\t\t\t==marked==\n\n\t\t\t==marked==\n\n\t\t\t::: warning\n\t\t\thello\n\t\t\t:::\n\n\t\t\txyz\n\n\t\t\tabc\n\t\t\t- Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\t\t\t- Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\t\t\t\t- hell\n\t\t\t\t- hi\n\t\t\t\t\t- essasdasdas\n\t\t\t\t\t- els\n\t\t\t"
+		},
+		{
+			"type": 2,
 			"title": "Lợi ích",
 			"image": "https://i.imgur.com/uAfO3SL.jpeg",
 			"background": false,
@@ -24,14 +32,18 @@
 		}
 	],
 	"curriculum": [
-		{ "title": "Buổi khai giảng: giới thiệu khoá học", "hidden": false, "classesCountable": false },
 		{
-			"title": "Buổi 1: giới thiệu về python",
+			"title": "Buổi khai giảng: giới thiệu khoá học",
+			"hidden": false,
+			"classesCountable": false
+		},
+		{
+			"title": "Buổi 1: giới thiệu về python giới thiệu về python giới thiệu về python giới thiệu về python giới thiệu về python",
 			"hidden": false,
 			"classesCountable": true,
 			"details": {
 				"hidden": false,
-				"value": "\n\t\t\t\t- Hình thức: Online\n\t\t\t\t- Nội dung:\n\t\t\t\t\t- Giảng viên sẽ giới thiệu về ngôn ngữ python\n\t\t\t\t- Chi tiết:\n\t\t\t\t\t- Các cài đặt python\n\t\t\t\t\t-\tCài đặt môi trường ảo\n\t\t\t\t\t- Sử dụng google colab\n\t\t\t\t\t...\n\t\t\t\t"
+				"content": "\n\t\t\t\t- Hình thức: Online\n\t\t\t\t- Nội dung:\n\t\t\t\t\t- Giảng viên sẽ giới thiệu về ngôn ngữ python\n\t\t\t\t- Chi tiết:\n\t\t\t\t\t- Các cài đặt python\n\t\t\t\t\t-\tCài đặt môi trường ảo\n\t\t\t\t\t- Sử dụng google colab\n\t\t\t\t\t...\n\t\t\t\t"
 			}
 		}
 	]

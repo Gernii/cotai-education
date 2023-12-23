@@ -9,7 +9,10 @@ const config = {
 	theme: {
 		extend: {
 			spacing: {
+				'header-space': defaultTheme.spacing['20'],
+				'header-space-sm': defaultTheme.spacing['16'],
 				header: defaultTheme.spacing['16'],
+				'header-sm': defaultTheme.spacing['14'],
 				'sub-header': defaultTheme.spacing['12'],
 				sidebar: defaultTheme.spacing['64'],
 				modal: '40rem',
@@ -28,7 +31,7 @@ const config = {
 				default: {
 					'color-scheme': 'light',
 					primary: 'oklch(71.03% 0.163 240.29)',
-					'primary-content': 'oklch(90.03% 0.082 240.289)',
+					'primary-content': 'oklch(97.03% 0.015 240.310)',
 					secondary: '#fc8c04',
 					accent: '#C148AC',
 					neutral: '#021431',

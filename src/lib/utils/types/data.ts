@@ -1,3 +1,5 @@
+import type { ComponentProps } from '$lib/components/ui/component/types';
+
 export interface ProgramProps {
 	id: string;
 	title?: string;
@@ -19,30 +21,18 @@ export interface CourseProps {
 	embed?: string;
 	thumbnail?: string;
 	description?: string;
+	curriculum: CurriculumProps[];
+	components: ComponentProps[];
 }
 
 export interface CurriculumProps {
 	title?: string;
 	hidden?: boolean;
 	classesCountable?: boolean;
+	details?: CurriculumProps_Details;
 }
 
 export interface CurriculumProps_Details {
 	hidden?: boolean;
 	content?: string;
-}
-
-export enum ComponentType {
-	'no-image',
-	'text-left',
-	'text-right'
-}
-
-export interface ComponentProps {
-	type: ComponentType;
-	title?: string;
-	image?: string;
-	background?: boolean;
-	hidden?: boolean;
-	description?: string;
 }
