@@ -5,12 +5,12 @@
 
 	import { navigate } from '$lib/lib/i18n/routing';
 
-	import type { ProgramProps } from '$lib/utils/types/data';
 	import { routingPathProgramsId } from '$lib/utils/routing-path';
 
 	import * as m from '$i18n/messages';
 
 	import { LangSelector } from '../lang-selector';
+	import type { LandingPage_LayoutData } from '../../types';
 
 	import NavigatorItem from './navigator-item.svelte';
 	import NavigatorCollapse from './navigator-collapse.svelte';
@@ -21,14 +21,9 @@
 
 	export let sidenav: NonNullable<$$Props['sidenav']> = false;
 
-	$: pdPrograms = $page.data.programs as ProgramProps[] | undefined;
+	$: pd = $page.data as { layoutData: LandingPage_LayoutData };
 
-	$: programs = pdPrograms
-		? pdPrograms.map((program) => ({
-				id: program.id,
-				title: program.title
-			}))
-		: [];
+	$: programs = pd.layoutData.programs;
 </script>
 
 <div
@@ -46,7 +41,7 @@
 		{#if programs.length > 0}
 			<NavigatorCollapse title={m.ourCourses()} {sidenav}>
 				<ul class="menu w-full">
-					{#each programs as program (program.id)}
+					{#each programs as program}
 						<li>
 							<a
 								href={navigate(routingPathProgramsId(program.id))}

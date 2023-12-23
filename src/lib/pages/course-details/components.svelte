@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	import { Component } from '$lib/components/ui/component';
+	import { ComponentData } from '$lib/components/ui/component-data';
 
 	import type { CourseDetailsPageDataProps } from './types';
 
@@ -10,5 +10,5 @@
 </script>
 
 {#each components as component}
-	<Component {...component} />
+	<ComponentData {...component} />
 {/each}

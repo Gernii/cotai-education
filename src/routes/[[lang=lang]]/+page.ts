@@ -1,4 +1,4 @@
-import type { LoadEvent } from '@sveltejs/kit';
+import { error, type LoadEvent } from '@sveltejs/kit';
 
 import type { HomePageDataProps } from '$lib/pages/home-page';
 
@@ -9,11 +9,18 @@ import type { PageLoad } from './$types';
 
 export const prerender = true;
 
-export const load: PageLoad = async ({ fetch }): Promise<HomePageDataProps> => {
-	const preData = await fetchPagePreData(fetch);
-	if (!preData) return { programs: [], courses: {} };
+export const load: PageLoad = async ({ fetch, parent }): Promise<HomePageDataProps> => {
+	const preData = await parent();
 
-	const programs = await fetchPrograms(preData.programs, fetch);
+	if (!preData.layoutData.programs) {
+		error(404, {
+			message: 'Not found'
+		});
+	}
+
+	const programIds = preData.layoutData.programs.map((program) => program.id);
+
+	const programs = await fetchPrograms(programIds, fetch);
 
 	const courses = await fetchCourses(programs, fetch);
 
@@ -23,26 +30,9 @@ export const load: PageLoad = async ({ fetch }): Promise<HomePageDataProps> => {
 	};
 };
 
-interface HomePagePreData {
-	programs: string[];
-}
-
-const fetchPagePreData = async (fetch: LoadEvent['fetch']) => {
-	try {
-		const res = await fetch('data/home-page.json');
-
-		const data = await res.json();
-
-		return data as HomePagePreData;
-	} catch (e) {
-		console.error(e);
-		return undefined;
-	}
-};
-
-const fetchPrograms = async (programs: HomePagePreData['programs'], fetch: LoadEvent['fetch']) => {
+const fetchPrograms = async (programIds: string[], fetch: LoadEvent['fetch']) => {
 	const programsRawData = await Promise.all(
-		programs.map((id) => staticDataFetcher<ProgramProps>({ id, path: 'programs', fetch }))
+		programIds.map((id) => staticDataFetcher<ProgramProps>({ id, path: 'programs', fetch }))
 	);
 
 	const treeShakedPrograms = programsRawData.filter(

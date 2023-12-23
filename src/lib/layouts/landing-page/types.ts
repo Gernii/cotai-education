@@ -1,3 +1,7 @@
-import type { ProgramProps } from '$lib/utils/types/data';
-
-export type layoutPrograms = Pick<ProgramProps, 'title' | 'id'>[] | undefined;
+export interface LandingPage_LayoutData {
+	programs: LandingPage_LayoutData_ProgramsProps[];
+}
+export interface LandingPage_LayoutData_ProgramsProps {
+	id: string;
+	title?: string;
+}
