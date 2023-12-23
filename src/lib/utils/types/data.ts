@@ -1,3 +1,5 @@
+import type { ComponentProps } from '$lib/components/ui/component/types';
+
 export interface ProgramProps {
 	id: string;
 	title?: string;
@@ -33,19 +35,4 @@ export interface CurriculumProps {
 export interface CurriculumProps_Details {
 	hidden?: boolean;
 	content?: string;
-}
-
-export enum ComponentType {
-	'no-image',
-	'text-left',
-	'text-right'
-}
-
-export interface ComponentProps {
-	type: ComponentType;
-	title?: string;
-	image?: string;
-	background?: boolean;
-	hidden?: boolean;
-	description?: string;
 }

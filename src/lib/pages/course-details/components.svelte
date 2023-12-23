@@ -1,9 +1,10 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
-	import type { CourseDetailsPageDataProps } from '../types';
+	import { Component } from '$lib/components/ui/component';
 
-	import Component from './component.svelte';
+	import type { CourseDetailsPageDataProps } from './types';
+
 	$: pd = $page.data as CourseDetailsPageDataProps;
 	$: components = pd.components;
 </script>

@@ -4,9 +4,10 @@
 	import { ContainerContent, Container } from '$lib/components/ui/container';
 	import { SectionTitle } from '$lib/components/ui/section-title';
 
-	import { ComponentType, type ComponentProps } from '$lib/utils/types/data';
-
 	import * as m from '$i18n/messages';
+
+	import type { ComponentProps } from './types';
+	import { ComponentType } from './constans';
 
 	type $$Props = ComponentProps;
 
