@@ -22,7 +22,7 @@
 							</p>
 							<p>
 								<span class="font-semibold">{m.hotline()}:</span>{' '}
-								<a href="tel:+84815503467" class="link-hover link">+84 815503467</a>
+								<a href="tel:+84815503467" class="link-hover link">{m.phoneNumber()}</a>
 							</p>
 							<div class="flex flex-col gap-x-2 lg:flex-row">
 								<span class="font-semibold">{m.address()}:</span>
@@ -57,17 +57,17 @@
 			<div class="flex flex-col items-center justify-between gap-y-3 lg:flex-row">
 				<div class="flex flex-wrap gap-x-4">
 					<a href="https://www.facebook.com/cotaivn" aria-label={'Facebook'} class="btn btn-square">
-						<IconFacebook class="h-6 w-6" />
+						<IconFacebook class="size-6" />
 					</a>
 					<a
 						href="https://www.linkedin.com/company/cotai/mycompany/"
 						aria-label={'Linkedin'}
 						class="btn btn-square"
 					>
-						<IconLinkedin class="h-6 w-6" />
+						<IconLinkedin class="size-6" />
 					</a>
 					<a href="https://www.youtube.com/@cotai" aria-label={'Youtube'} class="btn btn-square">
-						<IconYoutube class="h-6 w-6" />
+						<IconYoutube class="size-6" />
 					</a>
 				</div>
 				<!-- ! fix this -->

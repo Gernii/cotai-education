@@ -20,6 +20,7 @@ export interface CourseProps {
 	thumbnail?: string;
 	description?: string;
 	curriculum: CurriculumProps[];
+	components: ComponentProps[];
 }
 
 export interface CurriculumProps {

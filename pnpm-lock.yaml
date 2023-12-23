@@ -9,11 +9,11 @@ devDependencies:
     specifier: ^0.8.1
     version: 0.8.1
   '@inlang/paraglide-js':
-    specifier: 1.0.0-prerelease.20
-    version: 1.0.0-prerelease.20
+    specifier: 1.0.0-prerelease.22
+    version: 1.0.0-prerelease.22
   '@inlang/paraglide-js-adapter-vite':
-    specifier: ^1.0.2
-    version: 1.0.2
+    specifier: ^1.0.3
+    version: 1.0.3
   '@playwright/test':
     specifier: ^1.28.1
     version: 1.40.1
@@ -751,10 +751,10 @@ packages:
       '@sinclair/typebox': 0.31.28
     dev: true
 
-  /@inlang/paraglide-js-adapter-unplugin@1.0.2:
-    resolution: {integrity: sha512-eckY8fWXDka4jLmrAtPhdlQzEKHJLWxDr7ix8I/C/OVr/HV5hMPlzcV0UD6ImoX2vWYJ9TZ/0Me+pO2QauCH3A==}
+  /@inlang/paraglide-js-adapter-unplugin@1.0.3:
+    resolution: {integrity: sha512-Wz6/4kThZZHUWFhOgcHeJMv49Am2zkUXux4fPw6yNcNw2JqxiAxKiH8Ang2CBcWePKKjnK/JBMRxn0NYIkOybw==}
     dependencies:
-      '@inlang/paraglide-js': 1.0.0-prerelease.19
+      '@inlang/paraglide-js': 1.0.0-prerelease.20
       '@inlang/sdk': 0.19.0
       unplugin: 1.5.1
     transitivePeerDependencies:
@@ -762,17 +762,17 @@ packages:
       - debug
     dev: true
 
-  /@inlang/paraglide-js-adapter-vite@1.0.2:
-    resolution: {integrity: sha512-/o3S4kq/nH+bznI4b0nOSQt0EPP64w7gkLJcq01cOMCBB+j5EzfHiSVunE7FGwzUf3itw/E/h/FIZa3NWELONQ==}
+  /@inlang/paraglide-js-adapter-vite@1.0.3:
+    resolution: {integrity: sha512-jtM/xMXqUPxKuTM3kbmgds4MAgBsJRaHkEB4RuH4NsqPliBkHbqYXkT3FxlbPmLlLf5NqayTTQBtq9Va0ome6Q==}
     dependencies:
-      '@inlang/paraglide-js-adapter-unplugin': 1.0.2
+      '@inlang/paraglide-js-adapter-unplugin': 1.0.3
     transitivePeerDependencies:
       - babel-plugin-macros
       - debug
     dev: true
 
-  /@inlang/paraglide-js@1.0.0-prerelease.19:
-    resolution: {integrity: sha512-hWsZVsW6rTBzEN4dWjcaO9bXnpokvjjF3Ath1VpLm/hFvGLN5Ij+rkE2GKoR0It6HSKjEV8qBLkuU9KGTp0G5A==}
+  /@inlang/paraglide-js@1.0.0-prerelease.20:
+    resolution: {integrity: sha512-t8P15e05EHA5oovpDttENJ6bYmw5TLTOszd/CAdDZK5AI5ZggcrGnXObViL6XBMFjyJt+kmZG5YNOQDCJZsYEA==}
     hasBin: true
     dependencies:
       '@inlang/detect-json-formatting': 1.0.0
@@ -789,12 +789,13 @@ packages:
       - debug
     dev: true
 
-  /@inlang/paraglide-js@1.0.0-prerelease.20:
-    resolution: {integrity: sha512-t8P15e05EHA5oovpDttENJ6bYmw5TLTOszd/CAdDZK5AI5ZggcrGnXObViL6XBMFjyJt+kmZG5YNOQDCJZsYEA==}
+  /@inlang/paraglide-js@1.0.0-prerelease.22:
+    resolution: {integrity: sha512-wXbjoA8HKXy4P4d7qPOvUrI8xRobzS/9IZq7KgOs5PR58tVqk1ZjpahfT4mptZZVYH/blCq+3wEHJuluvlZzGw==}
     hasBin: true
     dependencies:
       '@inlang/detect-json-formatting': 1.0.0
       '@inlang/sdk': 0.19.0
+      '@inlang/valid-js-identifier': 0.0.2
       '@lix-js/fs': 0.4.0
       commander: 11.1.0
       consola: 3.2.3
@@ -865,6 +866,10 @@ packages:
     dependencies:
       '@inlang/language-tag': 1.2.0(@sinclair/typebox@0.31.28)
       '@sinclair/typebox': 0.31.28
+    dev: true
+
+  /@inlang/valid-js-identifier@0.0.2:
+    resolution: {integrity: sha512-qjw0v2U2J2Q0w8padDFUBjLbNBbb32MaDyoZex9Xn646tbQMRWhzFeQqOR33p61H4QI2kl6AbtEi2v/wkqFOsw==}
     dev: true
 
   /@jest/schemas@29.6.3:

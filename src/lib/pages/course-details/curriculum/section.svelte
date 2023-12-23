@@ -3,8 +3,13 @@
 
 	import { Container } from '$lib/components/ui/container';
 	import ContainerContent from '$lib/components/ui/container/container-content.svelte';
+	import SectionTitle from '$lib/components/ui/section-title/section-title.svelte';
+
+	import * as m from '$i18n/messages';
 
 	import type { CourseDetailsPageDataProps } from '../types';
+
+	import CurriculumCard from './curriculum-card.svelte';
 
 	$: pd = $page.data as CourseDetailsPageDataProps;
 
@@ -14,21 +19,11 @@
 {#if curriculum.length > 0}
 	<Container>
 		<ContainerContent>
+			<SectionTitle>{m.curriculum()}</SectionTitle>
+
 			<ul class="space-y-4">
 				{#each curriculum as section}
-					<li class="collapse rounded-btn border">
-						{#if section.details && !section.details.hidden}
-							<input type="checkbox" />
-						{/if}
-						<div class="collapse-title text-xl font-medium">
-							{section.title}
-						</div>
-						{#if section.details && !section.details.hidden}
-							<div class="collapse-content bg-base-200">
-								{section.details.content}
-							</div>
-						{/if}
-					</li>
+					<CurriculumCard {...section} />
 				{/each}
 			</ul>
 		</ContainerContent>

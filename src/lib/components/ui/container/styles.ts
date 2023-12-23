@@ -5,9 +5,9 @@ import type { ContainerCVAProps, ContainerContentCVAProps } from './types';
 export const containerClassNameHandler = cva<ContainerCVAProps>('', {
 	variants: {
 		padding: {
-			bottom: 'pb-20 sm:pb-32 lg:pb-40',
-			top: 'pt-10 sm:pt-16 lg:pt-20',
-			'top-bottom': 'pb-20 pt-10 sm:pb-32 sm:pt-16 lg:pb-40 lg:pt-20',
+			bottom: 'pb-8 pt-2 sm:pb-12 sm:pt-4 lg:pb-16 lg:pt-4',
+			top: 'pb-2 pt-8 sm:pb-4 sm:pt-12 lg:pb-4 lg:pt-16',
+			'top-bottom': 'pb-16 pt-16 sm:pb-24 sm:pt-24 lg:pb-32 lg:pt-32',
 			none: ''
 		}
 	},
