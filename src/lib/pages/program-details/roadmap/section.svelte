@@ -13,8 +13,6 @@
 	$: pd = $page.data as ProgramDetailsPageDataProps;
 	$: courseIds = pd.programDetails.coursesRoadmap;
 	$: courses = pd.courses;
-
-	$: console.log(pd);
 </script>
 
 <Container>

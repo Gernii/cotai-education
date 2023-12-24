@@ -10,14 +10,17 @@ import { type AvailableLanguageTag, availableLanguageTags, sourceLanguageTag } f
 export const route = (path: string, lang: AvailableLanguageTag) => {
 	path = withoutLanguageTag(path);
 
+	const isStartWithSlash = path.startsWith('/');
+
 	// Don't prefix the default language
 	if (lang === sourceLanguageTag) {
 		if (path === '') return `/${path}`;
-		return `${path}`;
+		if (isStartWithSlash) return `${path}`;
+		return `/${path}`;
 	}
 
 	// Prefix all other languages
-	return `/${lang}${path}`;
+	return `/${lang}${isStartWithSlash ? '' : '/'}${path}`;
 };
 
 export const navigate = (path: string) => {
