@@ -75,16 +75,16 @@
 					<p>Copyright 2023 © CoTAI Academy. All Rights Reserved. A subsidiary of CoTAI.</p>
 					<ul class="flex flex-wrap justify-center gap-x-3 font-semibold lg:justify-end">
 						<li>
-							<a href="/" aria-label={'Sitemap'} class="link-hover link"> Sitemap </a>
+							<p aria-label={'Sitemap'}>Sitemap</p>
 						</li>
 						<li>
-							<a href="/" aria-label="Cookies Policy" class="link-hover link"> Cookies Policy </a>
+							<p aria-label="Cookies Policy">Cookies Policy</p>
 						</li>
 						<li>
-							<a href="/" aria-label="Privacy Policy" class="link-hover link"> Privacy Policy </a>
+							<p aria-label="Privacy Policy">Privacy Policy</p>
 						</li>
 						<li>
-							<a href="/" aria-label="Terms of Use" class="link-hover link"> Terms of Use </a>
+							<p aria-label="Terms of Use">Terms of Use</p>
 						</li>
 					</ul>
 				</div>
