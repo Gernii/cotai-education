@@ -23,7 +23,11 @@
 
 <svelte:head>
 	{#each availableLanguageTags as lang}
-		<link rel="alternate" hreflang={lang} href={route($page.url.pathname, lang)} />
+		<link
+			rel="alternate"
+			hreflang={lang}
+			href={`${$page.url.origin}${route($page.url.pathname, lang)}`}
+		/>
 	{/each}
 </svelte:head>
 
