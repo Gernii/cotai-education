@@ -35,12 +35,12 @@
 		{
 			"title": "Buổi khai giảng: giới thiệu khoá học",
 			"hidden": false,
-			"classesCountable": false
+			"classes-countable": false
 		},
 		{
 			"title": "Buổi 1: giới thiệu về python giới thiệu về python giới thiệu về python giới thiệu về python giới thiệu về python",
 			"hidden": false,
-			"classesCountable": true,
+			"classes-countable": true,
 			"details": {
 				"hidden": false,
 				"content": "\n\t\t\t\t- Hình thức: Online\n\t\t\t\t- Nội dung:\n\t\t\t\t\t- Giảng viên sẽ giới thiệu về ngôn ngữ python\n\t\t\t\t- Chi tiết:\n\t\t\t\t\t- Các cài đặt python\n\t\t\t\t\t-\tCài đặt môi trường ảo\n\t\t\t\t\t- Sử dụng google colab\n\t\t\t\t\t...\n\t\t\t\t"

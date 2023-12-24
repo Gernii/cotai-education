@@ -1,6 +1,6 @@
-import type { ComponentProps } from '$lib/components/ui/component/types';
+import type { ComponentDataProps } from '$lib/components/ui/component-data';
 
-export interface ProgramProps {
+export interface ProgramResponsesProps {
 	id: string;
 	title?: string;
 	description?: string;
@@ -10,10 +10,35 @@ export interface ProgramProps {
 	'courses-highlighted': string[];
 	'courses-roadmap': string[];
 	targets: string[];
-	components: ComponentProps[];
+	components: ComponentDataProps[];
+}
+
+export interface ProgramProps {
+	id: string;
+	title?: string;
+	description?: string;
+	image?: string;
+	hidden?: boolean;
+	courses: string[];
+	coursesHighlighted: string[];
+	coursesRoadmap: string[];
+	targets: string[];
+	components: ComponentDataProps[];
 }
 
 export interface CourseProps {
+	id: string;
+	title?: string;
+	price?: number;
+	registerUrl?: string;
+	embed?: string;
+	thumbnail?: string;
+	description?: string;
+	curriculum: CurriculumProps[];
+	components: ComponentDataProps[];
+}
+
+export interface CourseResponsesProps {
 	id: string;
 	title?: string;
 	price?: number;
@@ -21,14 +46,21 @@ export interface CourseProps {
 	embed?: string;
 	thumbnail?: string;
 	description?: string;
-	curriculum: CurriculumProps[];
-	components: ComponentProps[];
+	curriculum: CurriculumResponsesProps[];
+	components: ComponentDataProps[];
 }
 
 export interface CurriculumProps {
 	title?: string;
 	hidden?: boolean;
 	classesCountable?: boolean;
+	details?: CurriculumProps_Details;
+}
+
+export interface CurriculumResponsesProps {
+	title?: string;
+	hidden?: boolean;
+	'classes-countable'?: boolean;
 	details?: CurriculumProps_Details;
 }
 

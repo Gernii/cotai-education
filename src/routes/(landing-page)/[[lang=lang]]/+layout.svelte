@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { page } from '$app/stores';
 
+	import { LandingPageLayout } from '$lib/layouts/landing-page';
+
 	import { currentLang, route } from '$lib/lib/i18n/routing';
 
 	import { availableLanguageTags, setLanguageTag } from '$i18n/runtime';
@@ -16,5 +18,7 @@
 </svelte:head>
 
 {#key $currentLang}
-	<slot />
+	<LandingPageLayout>
+		<slot />
+	</LandingPageLayout>
 {/key}

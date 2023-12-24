@@ -3,10 +3,10 @@
 
 	import { ComponentData } from '$lib/components/ui/component-data';
 
-	import type { CourseDetailsPageDataProps } from './types';
+	import type { ProgramDetailsPageDataProps } from './types';
 
-	$: pd = $page.data as CourseDetailsPageDataProps;
-	$: components = pd.components;
+	$: pd = $page.data as ProgramDetailsPageDataProps;
+	$: components = pd.programDetails.components;
 </script>
 
 {#each components as component}

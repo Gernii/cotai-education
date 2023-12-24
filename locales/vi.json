@@ -23,5 +23,10 @@
     "registerNow": "Đăng ký ngay",
     "or": "Hoặc",
     "studyprice": "Học phí",
-    "curriculum": "Chương trình học"
+    "curriculum": "Chương trình học",
+    "programDetails_courseRoadmap": "Khoá học {number}",
+    "totalSessions": "{number} buổi",
+    "showDetails": "Xem chi tiết",
+    "roadmap": "Lộ trình học",
+    "courses": "Các khóa học"
 }
