@@ -39,7 +39,7 @@
 		})}
 	>
 		{#if programs.length > 0}
-			<NavigatorCollapse title={m.ourCourses()} {sidenav}>
+			<NavigatorCollapse title={m.ourPrograms()} {sidenav}>
 				<ul class="menu w-full">
 					{#each programs as program}
 						<li>

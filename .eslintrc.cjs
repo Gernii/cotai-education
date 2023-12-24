@@ -119,6 +119,7 @@ module.exports = {
 			}
 		],
 		'import/no-unresolved': 'off',
+		"svelte/no-at-html-tags": "off"
 	},
 	ignorePatterns: ['*.cjs']
 };
