@@ -28,5 +28,9 @@
     "totalSessions": "{number} sessions",
     "showDetails": "Details",
     "roadmap": "Roadmap",
-    "courses": "Courses"
+    "courses": "Courses",
+    "siteNameWithTitle": "{title} - CoTAI Academy",
+    "siteName": "CoTAI Academy",
+    "homePage_head_description": "Specializing in providing AI courses for all ages from 15 and courses for those who do not require programming skills",
+    "noscript": "Please enable JavaScript to view the site."
 }

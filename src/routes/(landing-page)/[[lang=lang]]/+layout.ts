@@ -9,6 +9,8 @@ import { fetcher } from '$lib/utils/fetcher';
 
 import type { LayoutLoad } from './$types';
 
+export const prerender = true;
+
 export const load: LayoutLoad = async ({ fetch }) => {
 	const programs = await fetcher<LandingPage_LayoutData_ProgramsProps[]>(
 		'/data/programs.json',

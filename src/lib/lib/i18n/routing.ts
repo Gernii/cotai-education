@@ -11,7 +11,10 @@ export const route = (path: string, lang: AvailableLanguageTag) => {
 	path = withoutLanguageTag(path);
 
 	// Don't prefix the default language
-	if (lang === sourceLanguageTag) return `/${path}`;
+	if (lang === sourceLanguageTag) {
+		if (path === '') return `/${path}`;
+		return `${path}`;
+	}
 
 	// Prefix all other languages
 	return `/${lang}${path}`;

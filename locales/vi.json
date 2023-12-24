@@ -28,5 +28,9 @@
     "totalSessions": "{number} buổi",
     "showDetails": "Xem chi tiết",
     "roadmap": "Lộ trình học",
-    "courses": "Các khóa học"
+    "courses": "Các khóa học",
+    "siteNameWithTitle": "{title} - CoTAI Academy",
+    "siteName": "CoTAI Academy",
+    "homePage_head_description": "Chuyên cung cấp các khóa học về Trí tuệ Nhân tạo cho mọi độ tuổi từ 15 và các khóa học dành cho những người không cần kỹ năng lập trình",
+    "noscript": "Trình duyệt của bạn không hỗ trợ Javascript. Vui lòng bật Javascript để trải nghiệm tốt hơn."
 }
