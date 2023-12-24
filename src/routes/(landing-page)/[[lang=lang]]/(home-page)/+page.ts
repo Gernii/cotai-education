@@ -2,8 +2,14 @@ import { error, type LoadEvent } from '@sveltejs/kit';
 
 import type { HomePageDataProps } from '$lib/pages/home-page';
 
-import type { CourseProps, ProgramProps } from '$lib/utils/types/data';
+import type {
+	CourseProps,
+	CourseResponsesProps,
+	ProgramProps,
+	ProgramResponsesProps
+} from '$lib/utils/types/data';
 import { staticDataFetcher } from '$lib/utils/static-data-fetcher';
+import { courseMappingData, programMappingData } from '$lib/utils/data-mapping';
 
 import type { PageLoad } from './$types';
 
@@ -32,27 +38,32 @@ export const load: PageLoad = async ({ fetch, parent }): Promise<HomePageDataPro
 
 const fetchPrograms = async (programIds: string[], fetch: LoadEvent['fetch']) => {
 	const programsRawData = await Promise.all(
-		programIds.map((id) => staticDataFetcher<ProgramProps>({ id, path: 'programs', fetch }))
+		programIds.map((id) =>
+			staticDataFetcher<ProgramResponsesProps>({ id, path: 'programs', fetch })
+		)
 	);
 
 	const treeShakedPrograms = programsRawData.filter(
 		(program) => program !== undefined
-	) as ProgramProps[];
+	) as ProgramResponsesProps[];
 
-	return treeShakedPrograms;
+	const programMappedData = treeShakedPrograms.map((program) => programMappingData(program));
+
+	return programMappedData;
 };
 
 const fetchCourses = async (programs: ProgramProps[], fetch: LoadEvent['fetch']) => {
 	const courseIds = treeShakingCourses(programs);
 
 	const coursesRawData = await Promise.all(
-		courseIds.map((id) => staticDataFetcher<CourseProps>({ id, path: 'courses', fetch }))
+		courseIds.map((id) => staticDataFetcher<CourseResponsesProps>({ id, path: 'courses', fetch }))
 	);
 
 	const courses = coursesRawData.reduce(
 		(prev, course) => {
 			if (!course) return prev;
-			return { ...prev, [course.id]: course };
+			const courseMapped = courseMappingData(course);
+			return { ...prev, [course.id]: courseMapped };
 		},
 		{} as Record<string, CourseProps>
 	);

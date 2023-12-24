@@ -1,13 +1,14 @@
 <script lang="ts">
 	import { navigate } from '$lib/lib/i18n/routing';
 
-	import type { CourseProps } from '$lib/utils/types/data';
 	import { routingPathCoursesId } from '$lib/utils/routing-path';
 	import { defaultImage } from '$lib/utils/constants';
 
 	import * as m from '$i18n/messages';
 
-	type $$Props = CourseProps;
+	import type { CoursesListProps_Courses } from './types';
+
+	type $$Props = CoursesListProps_Courses;
 
 	export let id: $$Props['id'];
 	export let title: $$Props['title'] = undefined;
