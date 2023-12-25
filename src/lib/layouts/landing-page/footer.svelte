@@ -30,7 +30,7 @@
 							</p>
 							<div class="flex flex-col gap-x-2 lg:flex-row">
 								<span class="font-semibold">{m.address()}:</span>
-								<div>
+								<div class="space-y-1">
 									<a
 										href="https://www.google.com/maps/place/MDN+building/@10.8458901,106.6145654,17z/data=!3m1!4b1!4m5!3m4!1s0x31752b0733df578d:0x176cb06b6ce2d507!8m2!3d10.8459893!4d106.6166801"
 										class="link-hover link block"

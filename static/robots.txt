@@ -1,12 +1,7 @@
 # https://www.robotstxt.org/robotstxt.html
+Sitemap: https://academy-dev.cot.ai/sitemap.xml
 User-agent: *
-
+Disallow: 
+Disallow: /admin
 Disallow: /*.js$
 Disallow: /*.json
-
-# Specific disallow rules
-Disallow: /admin
-
-# Specific directives for GPTBot
-User-agent: GPTBot
-Disallow: /

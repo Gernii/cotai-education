@@ -18,7 +18,7 @@
 				<p>{pd.description}</p>
 			</div>
 			<div
-				class="group card col-span-1 w-full overflow-hidden border bg-white shadow hover:shadow-lg lg:col-span-2"
+				class="group card col-span-1 w-full self-start overflow-hidden border bg-white shadow hover:shadow-lg lg:col-span-2"
 			>
 				<figure class="aspect-thumbnail169">
 					<img
