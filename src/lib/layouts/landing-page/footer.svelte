@@ -61,7 +61,12 @@
 					</div>
 				</div>
 				<div class="h-36">
-					<img src={CoTAILogo} alt={m.mainLogo()} class="h-full w-full object-contain" />
+					<img
+						loading="lazy"
+						src={CoTAILogo}
+						alt={m.mainLogo()}
+						class="h-full w-full object-contain"
+					/>
 				</div>
 			</div>
 			<div class="flex flex-col items-center justify-between gap-y-3 lg:flex-row">

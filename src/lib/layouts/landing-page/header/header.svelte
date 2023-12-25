@@ -60,7 +60,12 @@
 		</div>
 		<div class="h-full flex-shrink-0 max-lg:navbar-center">
 			<a href={navigate('/')} class="inline-block h-full w-full">
-				<img src={CoTAILogo} alt={m.mainLogo()} class="h-full w-full object-contain" />
+				<img
+					loading="lazy"
+					src={CoTAILogo}
+					alt={m.mainLogo()}
+					class="h-full w-full object-contain"
+				/>
 			</a>
 		</div>
 

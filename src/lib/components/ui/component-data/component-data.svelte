@@ -47,6 +47,7 @@
 					<figure class="aspect-thumbnail43">
 						<img
 							src={image}
+							loading="lazy"
 							alt={m.thumbnail({ title: title })}
 							height={200}
 							width={448}

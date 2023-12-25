@@ -382,18 +382,18 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 🛠 [SVGO](https://github.com/svg/svgo) a Nodejs-based tool for optimizing SVG vector graphics files.
 > - 🛠 [SVGOMG](https://jakearchibald.github.io/svgomg/) a web-based GUI version of SVGO for optimising your svgs online.
 
-- [ ] **Picture/Srcset:** :orange_circle: You use picture/srcset to provide the most appropriate image for the current viewport of the user.
+- [x] **Picture/Srcset:** :orange_circle: You use picture/srcset to provide the most appropriate image for the current viewport of the user.
 
 > - 📖 [How to Build Responsive Images with srcset](https://www.sitepoint.com/how-to-build-responsive-images-with-srcset/)
 
 - [ ] **Retina:** :large_blue_circle: You provide layout images 2x or 3x, support retina display.
-- [ ] **Sprite:** :orange_circle: Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
-- [ ] **Width and Height:** :red_circle: Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
-- [ ] **Alternative text:** :red_circle: All `<img>` have an alternative text which describes the image visually.
+- [x] **Sprite:** :orange_circle: Small images are in a sprite file (in the case of icons, they can be in an SVG sprite image).
+- [x] **Width and Height:** :red_circle: Set `width` and `height` attributes on `<img>` if the final rendered image size is known (can be omitted for CSS sizing).
+- [x] **Alternative text:** :red_circle: All `<img>` have an alternative text which describes the image visually.
 
 > - 📖 [Alt-texts: The Ultimate Guide](https://axesslab.com/alt-texts/)
 
-- [ ] **Lazy loading:** :orange_circle: Images are lazyloaded (A noscript fallback is always provided).
+- [x] **Lazy loading:** :orange_circle: Images are lazyloaded (A noscript fallback is always provided).
   > - 🛠 [Native lazy loading polyfill](https://github.com/mfranzke/loading-attribute-polyfill/)
 
 **[⬆ back to top](#table-of-contents)**
@@ -506,17 +506,17 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 🛠 [WebPageTest](https://www.webpagetest.org/)
 > - 📖 [Size Limit: Make the Web lighter](https://evilmartians.com/chronicles/size-limit-make-the-web-lighter)
 
-- [ ] **Minified HTML:** :orange_circle: Your HTML is minified.
+- [x] **Minified HTML:** :orange_circle: Your HTML is minified.
 
-- [ ] **Lazy loading:** :orange_circle: Images, scripts and CSS need to be lazy loaded to improve the response time of the current page (See details in their respective sections).
+- [x] **Lazy loading:** :orange_circle: Images, scripts and CSS need to be lazy loaded to improve the response time of the current page (See details in their respective sections).
 
-- [ ] **Cookie size:** :orange_circle: If you are using cookies be sure each cookie doesn't exceed 4096 bytes and your domain name doesn't have more than 20 cookies.
+- [x] **Cookie size:** :orange_circle: If you are using cookies be sure each cookie doesn't exceed 4096 bytes and your domain name doesn't have more than 20 cookies.
 
 > - 📖 [Cookie specification: RFC 6265](https://tools.ietf.org/html/rfc6265)
 > - 📖 [Cookies](https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies)
 > - 🛠 [Browser Cookie Limits](http://browsercookielimits.squawky.net/)
 
-- [ ] **Third party components:** :orange_circle: Third party iframes or components relying on external JS (like sharing buttons) are replaced by static components when possible, thus limiting calls to external APIs and keeping your user's activity private.
+- [x] **Third party components:** :orange_circle: Third party iframes or components relying on external JS (like sharing buttons) are replaced by static components when possible, thus limiting calls to external APIs and keeping your user's activity private.
 
 > - 🛠 [Simple sharing buttons generator](https://simplesharingbuttons.com/)
 
@@ -552,7 +552,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Performance testing
 
-- [ ] **Google PageSpeed:** :red_circle: All your pages were tested (not only the homepage) and have a score of at least 90/100.
+- [x] **Google PageSpeed:** :red_circle: All your pages were tested (not only the homepage) and have a score of at least 90/100.
 
 > - 🛠 [Google PageSpeed](https://developers.google.com/speed/pagespeed/insights/)
 > - 🛠 [Test your mobile speed with Google](https://testmysite.withgoogle.com)

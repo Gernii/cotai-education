@@ -22,6 +22,7 @@
 			>
 				<figure class="aspect-thumbnail169">
 					<img
+						loading="lazy"
 						src={pd.thumbnail}
 						alt={m.thumbnail({ title: pd.title ?? '' })}
 						height={200}
