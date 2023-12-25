@@ -225,13 +225,13 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-- [ ] **HTML5 Semantic Elements:** :red_circle: HTML5 Semantic Elements are used appropriately (header, section, footer, main...).
+- [x] **HTML5 Semantic Elements:** :red_circle: HTML5 Semantic Elements are used appropriately (header, section, footer, main...).
 
 > - 📖 [HTML Reference](http://htmlreference.io/)
 
-- [ ] **Error pages:** :red_circle: Error 404 page and 5xx exist. Remember that the 5xx error pages need to have their CSS integrated (no external call on the current server).
+- [x] **Error pages:** :red_circle: Error 404 page and 5xx exist. Remember that the 5xx error pages need to have their CSS integrated (no external call on the current server).
 
-- [ ] **Noopener:** :orange_circle: In case you are using external links with `target="_blank"`, your link should have a `rel="noopener"` attribute to prevent tab nabbing. If you need to support older versions of Firefox, use `rel="noopener noreferrer"`.
+- [x] **Noopener:** :orange_circle: In case you are using external links with `target="_blank"`, your link should have a `rel="noopener"` attribute to prevent tab nabbing. If you need to support older versions of Firefox, use `rel="noopener noreferrer"`.
 
 > - 📖 [About rel=noopener](https://mathiasbynens.github.io/rel-noopener/)
 
@@ -239,17 +239,17 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### HTML testing
 
-- [ ] **W3C compliant:** :red_circle: All pages need to be tested with the W3C validator to identify possible issues in the HTML code.
+- [x] **W3C compliant:** :red_circle: All pages need to be tested with the W3C validator to identify possible issues in the HTML code.
 
 > - 🛠 [W3C validator](https://validator.w3.org/)
 
-- [ ] **HTML Lint:** :red_circle: I use tools to help me analyze any issues I could have on my HTML code.
+- [x] **HTML Lint:** :red_circle: I use tools to help me analyze any issues I could have on my HTML code.
 
 > - 🛠 [Dirty markup](https://www.10bestdesign.com/dirtymarkup/)
 
 > - 🛠 [webhint](https://webhint.io/)
 
-- [ ] **Link checker:** :red_circle: There are no broken links in my page, verify that you don't have any 404 error.
+- [x] **Link checker:** :red_circle: There are no broken links in my page, verify that you don't have any 404 error.
 
 > - 🛠 [W3C Link Checker](https://validator.w3.org/checklink)
 
