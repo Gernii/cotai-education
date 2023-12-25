@@ -35,5 +35,8 @@
 	"noscript": "Please enable JavaScript to view the site.",
 	"error404_title": "UH OH! You're lost.",
 	"error404_description": "The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage.",
-	"homepage": "Homepage"
+	"homepage": "Homepage",
+	"reviewsTitle": "Reviews from our students",
+	"reviewCourseNameWithSubtitle": "Course: {title}  - {subtitle}",
+	"reviewCourseName": "Course: {title}"
 }

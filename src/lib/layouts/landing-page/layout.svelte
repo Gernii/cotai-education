@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Footer from './footer.svelte';
 	import { Header, type HeaderProps, SidenavContent } from './header';
+	import { Reviews } from './reviews';
 
 	interface $$Props {
 		header?: HeaderProps;
@@ -15,6 +16,7 @@
 	<main class="drawer-content">
 		<Header {...header} />
 		<slot />
+		<Reviews />
 		<Footer />
 	</main>
 

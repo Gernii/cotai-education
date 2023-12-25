@@ -17,9 +17,6 @@ devDependencies:
   '@playwright/test':
     specifier: ^1.28.1
     version: 1.40.1
-  '@sveltejs/adapter-auto':
-    specifier: ^3.0.0
-    version: 3.0.1(@sveltejs/kit@2.0.4)
   '@sveltejs/adapter-cloudflare':
     specifier: ^3.0.1
     version: 3.0.1(@sveltejs/kit@2.0.4)
@@ -32,9 +29,6 @@ devDependencies:
   '@tailwindcss/aspect-ratio':
     specifier: ^0.4.2
     version: 0.4.2(tailwindcss@3.4.0)
-  '@tailwindcss/forms':
-    specifier: ^0.5.7
-    version: 0.5.7(tailwindcss@3.4.0)
   '@tailwindcss/typography':
     specifier: ^0.5.10
     version: 0.5.10(tailwindcss@3.4.0)
@@ -74,6 +68,9 @@ devDependencies:
   iso-639-1:
     specifier: ^3.1.0
     version: 3.1.0
+  keen-slider:
+    specifier: ^6.8.6
+    version: 6.8.6
   npm-run-all:
     specifier: ^4.1.5
     version: 4.1.5
@@ -1102,15 +1099,6 @@ packages:
     resolution: {integrity: sha512-/s55Jujywdw/Jpan+vsy6JZs1z2ZTGxTmbZTPiuSL2wz9mfzA2gN1zzaqmvfi4pq+uOt7Du85fkiwv5ymW84aQ==}
     dev: true
 
-  /@sveltejs/adapter-auto@3.0.1(@sveltejs/kit@2.0.4):
-    resolution: {integrity: sha512-OpilmvRN136lUgOa9F0zpSI6g+PouOmk+YvJQrB+/hAtllLghjjYuoyfUsrF7U6oJ52cxCtAJTPXgZdyyCffrQ==}
-    peerDependencies:
-      '@sveltejs/kit': ^2.0.0
-    dependencies:
-      '@sveltejs/kit': 2.0.4(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.10)
-      import-meta-resolve: 4.0.0
-    dev: true
-
   /@sveltejs/adapter-cloudflare@3.0.1(@sveltejs/kit@2.0.4):
     resolution: {integrity: sha512-yhncGexWlDE3DAd6N/wsuel7BFwgBGWkvTG8iMAEaE/dHSEEUEUXOFK4IMKtPZWFuIkXmyfLxOSD8A8Kzv7ppg==}
     peerDependencies:
@@ -1189,15 +1177,6 @@ packages:
     peerDependencies:
       tailwindcss: '>=2.0.0 || >=3.0.0 || >=3.0.0-alpha.1'
     dependencies:
-      tailwindcss: 3.4.0
-    dev: true
-
-  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.0):
-    resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
-    peerDependencies:
-      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
-    dependencies:
-      mini-svg-data-uri: 1.4.4
       tailwindcss: 3.4.0
     dev: true
 
@@ -2816,10 +2795,6 @@ packages:
       resolve-from: 4.0.0
     dev: true
 
-  /import-meta-resolve@4.0.0:
-    resolution: {integrity: sha512-okYUR7ZQPH+efeuMJGlq4f8ubUgO50kByRPyt/Cy1Io4PSRsPjxME+YlVaCOx+NIToW7hCsZNFJyTPFFKepRSA==}
-    dev: true
-
   /imurmurhash@0.1.4:
     resolution: {integrity: sha512-JmXMZ6wuvDmLiHEml9ykzqO6lwFbof0GG4IkcGaENdCRDDmMVnny7s5HsIgHCbaq0w2MyPhDqkhTUgS2LU2PHA==}
     engines: {node: '>=0.8.19'}
@@ -3070,6 +3045,10 @@ packages:
     resolution: {integrity: sha512-gfFQZrcTc8CnKXp6Y4/CBT3fTc0OVuDofpre4aEeEpSBPV5X5v4+Vmx+8snU7RLPrNHPKSgLxGo9YuQzz20o+w==}
     dev: true
 
+  /keen-slider@6.8.6:
+    resolution: {integrity: sha512-dcEQ7GDBpCjUQA8XZeWh3oBBLLmyn8aoeIQFGL/NTVkoEOsmlnXqA4QykUm/SncolAZYGsEk/PfUhLZ7mwMM2w==}
+    dev: true
+
   /keyv@4.5.4:
     resolution: {integrity: sha512-oxVHkHR/EJf2CNXnWxRLW6mg7JyCCUcG0DtEGmL2ctUo1PNTin1PUil+r/+4r5MpVgC/fn1kjsx7mjSujKqIpw==}
     dependencies:
@@ -3231,11 +3210,6 @@ packages:
   /min-indent@1.0.1:
     resolution: {integrity: sha512-I9jwMn07Sy/IwOj3zVkVik2JTvgpaykDZEigL6Rx6N9LbMywwUSMtxET+7lVoDLLd3O3IXwJwvuuns8UB/HeAg==}
     engines: {node: '>=4'}
-    dev: true
-
-  /mini-svg-data-uri@1.4.4:
-    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
-    hasBin: true
     dev: true
 
   /miniflare@3.20231030.4:
