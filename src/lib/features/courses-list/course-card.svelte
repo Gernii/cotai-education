@@ -27,6 +27,7 @@
 					alt={m.thumbnail({ title: title ?? '' })}
 					height={200}
 					width={448}
+					loading="lazy"
 					class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
 				/>
 			</figure>

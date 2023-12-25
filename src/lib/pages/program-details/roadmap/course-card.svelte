@@ -73,6 +73,7 @@
 							<div class="overflow-hidden rounded-box">
 								<figure class="aspect-thumbnail43">
 									<img
+										loading="lazy"
 										src={thumbnail}
 										alt={m.thumbnail({ title: title })}
 										height={200}

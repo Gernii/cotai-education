@@ -13,8 +13,6 @@ import { courseMappingData, programMappingData } from '$lib/utils/data-mapping';
 
 import type { PageLoad } from './$types';
 
-export const prerender = true;
-
 export const load: PageLoad = async ({ fetch, parent }): Promise<HomePageDataProps> => {
 	const preData = await parent();
 
