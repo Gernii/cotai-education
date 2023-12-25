@@ -452,23 +452,23 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-- [ ] **HTTPS:** :red_circle: HTTPS is used on every page and for all external content (plugins, images...).
+- [x] **HTTPS:** :red_circle: HTTPS is used on every page and for all external content (plugins, images...).
 
 > - 🛠 [Let's Encrypt - Free SSL/TLS Certificates](https://letsencrypt.org/)
 > - 🛠 [Free SSL Server Test](https://www.ssllabs.com/ssltest/index.html)
 > - 📖 [Strict Transport Security](http://caniuse.com/#feat=stricttransportsecurity)
 
-- [ ] **HTTP Strict Transport Security (HSTS):** :orange_circle: The HTTP header is set to 'Strict-Transport-Security'.
+- [x] **HTTP Strict Transport Security (HSTS):** :orange_circle: The HTTP header is set to 'Strict-Transport-Security'.
 
 > - 🛠 [Check HSTS preload status and eligibility](https://hstspreload.org/)
 > - 📖 [HTTP Strict Transport Security Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Strict_Transport_Security_Cheat_Sheet.html)
 > - 📖 [Transport Layer Protection Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Transport_Layer_Protection_Cheat_Sheet.html)
 
-- [ ] **Cross Site Request Forgery (CSRF):** :red_circle: You ensure that requests made to your server-side are legitimate and originate from your website / app to prevent CSRF attacks.
+- [x] **Cross Site Request Forgery (CSRF):** :red_circle: You ensure that requests made to your server-side are legitimate and originate from your website / app to prevent CSRF attacks.
 
 > - 📖 [Cross-Site Request Forgery (CSRF) Prevention Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross-Site_Request_Forgery_Prevention_Cheat_Sheet.html)
 
-- [ ] **Cross Site Scripting (XSS):** :red_circle: Your page or website is free from XSS possible issues.
+- [x] **Cross Site Scripting (XSS):** :red_circle: Your page or website is free from XSS possible issues.
 
 > - 📖 [XSS (Cross Site Scripting) Prevention Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/Cross_Site_Scripting_Prevention_Cheat_Sheet.html)
 > - 📖 [DOM based XSS Prevention Cheat Sheet - OWASP](https://cheatsheetseries.owasp.org/cheatsheets/DOM_based_XSS_Prevention_Cheat_Sheet.html)
@@ -477,12 +477,12 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 > - 📖 [X-Content-Type-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-content-type-options)
 
-- [ ] **X-Frame-Options (XFO):** :orange_circle: Protects your visitors against clickjacking attacks.
+- [x] **X-Frame-Options (XFO):** :orange_circle: Protects your visitors against clickjacking attacks.
 
 > - 📖 [X-Frame-Options - Scott Helme](https://scotthelme.co.uk/hardening-your-http-response-headers/#x-frame-options)
 > - 📖 [RFC7034 - HTTP Header Field X-Frame-Options](https://tools.ietf.org/html/rfc7034)
 
-- [ ] **Content Security Policy:** :orange_circle: Defines how content is loaded on your site and from where it is permitted to be loaded. Can also be used to protect against clickjacking attacks.
+- [x] **Content Security Policy:** :orange_circle: Defines how content is loaded on your site and from where it is permitted to be loaded. Can also be used to protect against clickjacking attacks.
 
 > - 📖 [Content Security Policy - An Introduction - Scott Helme](https://scotthelme.co.uk/content-security-policy-an-introduction/)
 > - 📖 [CSP Cheat Sheet - Scott Helme](https://scotthelme.co.uk/csp-cheat-sheet/)
