@@ -570,7 +570,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 ### Best practices
 
-- [ ] **Progressive enhancement:** :orange_circle: Major functionality like main navigation and search should work without JavaScript enabled.
+- [x] **Progressive enhancement:** :orange_circle: Major functionality like main navigation and search should work without JavaScript enabled.
 
 > - 📖 [Enable / Disable JavaScript in Chrome Developer Tools](https://www.youtube.com/watch?v=kBmvq2cE0D8)
 
@@ -628,16 +628,16 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 
 > - 🛠 [Tota11y, tab Headings](http://khan.github.io/tota11y/#Try-it)
 
-- [ ] **sitemap.xml:** :red_circle: A sitemap.xml exists and was submitted to Google Search Console (previously Google Webmaster Tools).
+- [x] **sitemap.xml:** :red_circle: A sitemap.xml exists and was submitted to Google Search Console (previously Google Webmaster Tools).
 
 > - 🛠 [Sitemap generator](https://websiteseochecker.com/html-sitemap-generator/)
 
-- [ ] **robots.txt:** :red_circle: The robots.txt is not blocking webpages.
+- [x] **robots.txt:** :red_circle: The robots.txt is not blocking webpages.
 
 > - 📖 [The robots.txt file](https://varvy.com/robottxt.html)
 > - 🛠 Test your robots.txt with [Google Robots Testing Tool](https://www.google.com/webmasters/tools/robots-testing-tool)
 
-- [ ] **Structured Data:** :red_circle: Pages using structured data are tested and are without errors. Structured data helps crawlers understand the content in the current page.
+- [x] **Structured Data:** :red_circle: Pages using structured data are tested and are without errors. Structured data helps crawlers understand the content in the current page.
 
 > - 📖 [Introduction to Structured Data - Search - Google Developers](https://developers.google.com/search/docs/guides/intro-structured-data)
 > - 📖 [JSON-LD](https://json-ld.org/)
@@ -645,7 +645,7 @@ Visualize and generate automatically our social meta tags with [Meta Tags](https
 > - 🛠 Test your page with the [Rich Results Test](https://search.google.com/test/rich-results)
 > - 🛠 Complete list of vocabularies that can be used as structured data. [Schema.org Full Hierarchy](http://schema.org/docs/full.html)
 
-- [ ] **Sitemap HTML:** :orange_circle: An HTML sitemap is provided and is accessible via a link in the footer of your website.
+- [x] **Sitemap HTML:** :orange_circle: An HTML sitemap is provided and is accessible via a link in the footer of your website.
 
 > - 📖 [Sitemap guidelines - Google Support](https://support.google.com/webmasters/answer/183668?hl=en)
 
