@@ -68,3 +68,19 @@ export interface CurriculumProps_Details {
 	hidden?: boolean;
 	content?: string;
 }
+
+export interface ReviewProps {
+	name: string;
+	review: string;
+	classNameTitle?: string;
+	classNameSubtitle?: string;
+	role?: string;
+}
+
+export interface ReviewResponseProps {
+	name?: string;
+	review?: string;
+	'class-name-title'?: string;
+	'class-name-subtitle'?: string;
+	role?: string;
+}

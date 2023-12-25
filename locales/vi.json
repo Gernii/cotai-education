@@ -35,5 +35,8 @@
 	"noscript": "Trình duyệt của bạn không hỗ trợ Javascript. Vui lòng bật Javascript để trải nghiệm tốt hơn.",
 	"error404_title": "UH OH! Bạn bị lạc rồi.",
 	"error404_description": "Trang mà bạn đang tìm không tồn tại. Cách bạn đến đây thật là bí ẩn. Nhưng bạn có thể nhấn nút dưới đây để quay về trang chủ.",
-	"homepage": "Trang chủ"
+	"homepage": "Trang chủ",
+	"reviewsTitle": "Đánh giá từ các học viên",
+	"reviewCourseNameWithSubtitle": "Khoá học: {title} - {subtitle}",
+	"reviewCourseName": "Khoá học: {title}"
 }
