@@ -27,7 +27,13 @@
 			type: 'website',
 			url: $page.url.href,
 			site_name: m.siteName(),
-			description
+			description,
+			images: [
+				{
+					url: SEOImage,
+					alt: m.siteName()
+				}
+			]
 		}}
 		twitter={{
 			card: 'summary_large_image',
@@ -43,6 +49,8 @@
 			name: m.siteName()
 		}}
 	/>
+
+	<link rel="canonical" href={$page.url.href} />
 </svelte:head>
 <!-- extend={{
     // extending the default link tags
