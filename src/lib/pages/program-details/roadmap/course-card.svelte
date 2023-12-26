@@ -1,6 +1,8 @@
 <script lang="ts">
 	import { cx } from 'cva';
 
+	import { Markdown } from '$lib/components/ui/markdown';
+
 	import { navigate } from '$lib/lib/i18n/routing';
 
 	import type { CourseProps } from '$lib/utils/types/data';
@@ -23,6 +25,8 @@
 	export let last: $$Props['last'];
 
 	$: totalSessions = curriculum.filter((c) => c.classesCountable).length;
+
+	$: console.log(curriculum);
 </script>
 
 {#if title}
@@ -53,14 +57,16 @@
 						<div>
 							<p class="font-semibold">{m.programDetails_courseRoadmap({ number: idx + 1 })}</p>
 							<h1 class="text-xl font-bold">
-								{title}
+								<a href={navigate(`/courses/${id}`)} class="link-hover link hover:text-primary">
+									{title}
+								</a>
 							</h1>
 						</div>
 						<div class="flex items-center gap-x-1">
 							<IconClock class="size-5 stroke-2" />
 							<p>{m.totalSessions({ number: totalSessions })}</p>
 						</div>
-						<p>{description}</p>
+						<Markdown text={description} />
 						<div class="card-actions">
 							<a href={navigate(`/courses/${id}`)} class="btn btn-primary">
 								{m.showDetails()}

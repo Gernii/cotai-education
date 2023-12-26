@@ -2,6 +2,7 @@
 	import { page } from '$app/stores';
 
 	import { ContainerContent } from '$lib/components/ui/container';
+	import { Markdown } from '$lib/components/ui/markdown';
 
 	import * as m from '$i18n/messages';
 
@@ -15,7 +16,7 @@
 		<div class="grid grid-cols-1 gap-x-32 gap-y-16 pt-16 lg:grid-cols-5">
 			<div class="col-span-1 space-y-8 lg:col-span-3">
 				<h1 class="text-5xl font-extrabold">{pd.title}</h1>
-				<p>{pd.description}</p>
+				<Markdown text={pd.description} />
 			</div>
 			<div
 				class="group card col-span-1 w-full self-start overflow-hidden border bg-white shadow hover:shadow-lg lg:col-span-2"

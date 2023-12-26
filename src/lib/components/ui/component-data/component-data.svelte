@@ -6,6 +6,8 @@
 
 	import * as m from '$i18n/messages';
 
+	import { Markdown } from '../markdown';
+
 	import type { ComponentDataProps } from './types';
 	import { ComponentDataType } from './constans';
 
@@ -34,9 +36,7 @@
 			<div class="pt-2">
 				<SectionTitle>{title}</SectionTitle>
 
-				<div>
-					{description}
-				</div>
+				<Markdown text={description} />
 			</div>
 			{#if image && type !== ComponentDataType['no-image']}
 				<div
