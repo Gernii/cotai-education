@@ -18,7 +18,7 @@
 <Container>
 	<ContainerContent>
 		<SectionTitle>{m.roadmap()}</SectionTitle>
-		<ul class="steps steps-vertical w-full">
+		<ul class="w-full">
 			{#each courseIds as courseId, idx}
 				<CourseCard {...courses[courseId]} {idx} last={idx + 1 === courseIds.length} />
 			{/each}

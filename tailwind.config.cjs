@@ -22,6 +22,13 @@ const config = {
 				thumbnail169: '16 / 9',
 				thumbnail21: '2 / 1',
 				thumbnail43: '4 / 3'
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100ch' // add required value here
+					}
+				}
 			}
 		}
 	},
