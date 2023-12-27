@@ -69,7 +69,7 @@
 		</NavigatorItem>
 	</nav>
 	{#if sidenav}
-		<hr class="mb-2 w-full border" />
+		<hr class="mb-2 w-full border border-base-content/5" />
 		<div class="flex items-center justify-between px-4 py-2">
 			<p class="font-semibold">{m.language()}</p>
 			<LangSelector />

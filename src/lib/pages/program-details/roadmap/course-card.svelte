@@ -43,7 +43,7 @@
 			></div>
 		</div>
 		<div
-			class={cx('card  w-full border shadow', {
+			class={cx('card  w-full border border-base-content/5 shadow shadow-base-content/5', {
 				'mb-4': !last
 			})}
 		>

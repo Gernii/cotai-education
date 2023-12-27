@@ -10,7 +10,7 @@
 	import { IconFacebook, IconLinkedin, IconYoutube } from '$lib/components/icons';
 </script>
 
-<footer class="border-t bg-base-200 py-2" id="contact">
+<footer class="border-t border-base-content/5 bg-base-200 py-2" id="contact">
 	<Container padding="top">
 		<ContainerContent class="space-y-10 text-center lg:text-start">
 			<div class="flex flex-col-reverse justify-between gap-12 lg:flex-row">

@@ -19,7 +19,9 @@
 </script>
 
 {#if title && description}
-	<li class="group card card-compact overflow-hidden bg-white shadow hover:shadow-lg">
+	<li
+		class="group card card-bordered card-compact overflow-hidden border-base-content/5 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5"
+	>
 		<a href={courseNavigate}>
 			<figure class="aspect-thumbnail169">
 				<img
@@ -33,7 +35,7 @@
 			</figure>
 		</a>
 
-		<div class="card-body">
+		<div class="card-body flex-none">
 			<div>
 				<a
 					href={courseNavigate}

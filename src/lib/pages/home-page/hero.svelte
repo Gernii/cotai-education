@@ -9,7 +9,7 @@
 		size={0}
 		class="relative grid h-full content-center sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl"
 	>
-		<div class="text-shadow-sm space-y-5 text-center text-primary shadow-base-content">
+		<div class="text-shadow-sm space-y-5 text-center text-primary shadow-base-content/5">
 			<p class="text-4xl font-bold sm:text-5xl lg:font-extrabold xl:text-7xl">
 				{@html m.homepage_hero_title()}
 			</p>
