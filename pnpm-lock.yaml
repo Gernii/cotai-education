@@ -131,6 +131,9 @@ devDependencies:
   vite:
     specifier: ^5.0.3
     version: 5.0.10
+  vite-plugin-sitemap:
+    specifier: ^0.5.3
+    version: 0.5.3
   vitest:
     specifier: ^1.0.0
     version: 1.1.0
@@ -5040,6 +5043,10 @@ packages:
       - sugarss
       - supports-color
       - terser
+    dev: true
+
+  /vite-plugin-sitemap@0.5.3:
+    resolution: {integrity: sha512-DSqZLAkXaNgoJLcaxjJHrfWjIIiZRSuZIseE7ihJYUvPFG4OsvXn/+Oujmzbs+6tV7yu1dn7uhWXpV7QuiH/1g==}
     dev: true
 
   /vite@5.0.10:

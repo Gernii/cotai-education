@@ -101,7 +101,7 @@
 				</div>
 				<!-- ! fix this -->
 				<div class="space-y-3">
-					<p>Copyright 2023 © CoTAI Academy. All Rights Reserved. A subsidiary of CoTAI.</p>
+					<p>Copyright 2023 © CoTAI Education. All Rights Reserved. A subsidiary of CoTAI.</p>
 					<ul class="hidden flex-wrap justify-center gap-x-3 font-semibold lg:justify-end">
 						<li>
 							<a href={navigate('/')} aria-label={'Sitemap'}>Sitemap</a>

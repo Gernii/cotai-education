@@ -1,6 +1,7 @@
 import { paraglide } from '@inlang/paraglide-js-adapter-vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
+import sitemap from 'vite-plugin-sitemap';
 
 export default defineConfig({
 	plugins: [
@@ -8,6 +9,18 @@ export default defineConfig({
 		paraglide({
 			project: './project.inlang',
 			outdir: './src/lib/lib/i18n/messages'
+		}),
+		sitemap({
+			exclude: ['/admin', '/private'],
+			outDir: '.svelte-kit/cloudflare',
+			generateRobotsTxt: true,
+			robots: [
+				{
+					userAgent: '*',
+					allow: ['/'],
+					disallow: ['/admin', '/private', '/*.js$', '/*.json']
+				}
+			]
 		})
 	],
 	test: {
