@@ -1,13 +1,13 @@
 import type {
 	CourseProps,
-	CourseResponsesProps,
+	CourseResponseProps,
 	CurriculumProps,
-	CurriculumResponsesProps,
+	CurriculumResponseProps,
 	ProgramProps,
-	ProgramResponsesProps
+	ProgramResponseProps
 } from './types/data';
 
-export const courseMappingData = (course: CourseResponsesProps): CourseProps => {
+export const courseMappingData = (course: CourseResponseProps): CourseProps => {
 	const mappedCourse = {
 		...course,
 		registerUrl: course['register-url'],
@@ -17,7 +17,7 @@ export const courseMappingData = (course: CourseResponsesProps): CourseProps => 
 	return mappedCourse;
 };
 
-export const curriculumMappingData = (curriculum: CurriculumResponsesProps): CurriculumProps => {
+export const curriculumMappingData = (curriculum: CurriculumResponseProps): CurriculumProps => {
 	const mappedCurriculum = {
 		...curriculum,
 		classesCountable: curriculum['classes-countable']
@@ -26,7 +26,7 @@ export const curriculumMappingData = (curriculum: CurriculumResponsesProps): Cur
 	return mappedCurriculum;
 };
 
-export const programMappingData = (program: ProgramResponsesProps): ProgramProps => {
+export const programMappingData = (program: ProgramResponseProps): ProgramProps => {
 	const mappedProgram = {
 		...program,
 		coursesHighlighted: program['courses-highlighted'],

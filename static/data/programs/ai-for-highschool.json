@@ -1,6 +1,6 @@
 {
 	"title": "Ai for highschool",
-	"hidden": true,
+	"hidden": false,
 	"courses": [
 		"image-search-and-retrieval-project-based-training",
 		"math-code",
