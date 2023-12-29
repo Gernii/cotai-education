@@ -17,7 +17,7 @@ export default ({ mode }) => {
 			}),
 			sitemap({
 				hostname: process.env.VITE_HOSTNAME,
-				exclude: ['/admin', '/private'],
+				exclude: ['/admin', '/private', '/en'],
 				outDir: '.svelte-kit/cloudflare',
 				generateRobotsTxt: true,
 				robots: [

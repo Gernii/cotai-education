@@ -25,8 +25,6 @@
 	export let last: $$Props['last'];
 
 	$: totalSessions = curriculum.filter((c) => c.classesCountable).length;
-
-	$: console.log(curriculum);
 </script>
 
 {#if title}
