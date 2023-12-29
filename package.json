@@ -26,8 +26,8 @@
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "^0.8.1",
-		"@inlang/paraglide-js": "1.0.0-prerelease.22",
-		"@inlang/paraglide-js-adapter-vite": "^1.0.3",
+		"@inlang/paraglide-js": "latest",
+		"@inlang/paraglide-js-adapter-vite": "latest",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-cloudflare": "^3.0.1",
 		"@sveltejs/kit": "^2.0.0",

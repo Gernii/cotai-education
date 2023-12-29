@@ -7,7 +7,6 @@ import { loadEnv } from 'vite';
 // @ts-ignore
 export default ({ mode }) => {
 	process.env = Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
-	console.log(process.env);
 
 	return defineConfig({
 		plugins: [
@@ -25,7 +24,7 @@ export default ({ mode }) => {
 					{
 						userAgent: '*',
 						allow: ['/'],
-						disallow: ['/admin', '/private', '/*.js$', '/*.json']
+						disallow: ['/admin', '/private', '/*.js$', '/*.json', '/en']
 					}
 				]
 			})

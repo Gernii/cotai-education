@@ -9,7 +9,6 @@
 
 	import * as m from '$i18n/messages';
 
-	import { LangSelector } from '../lang-selector';
 	import type { LandingPage_LayoutData } from '../../types';
 
 	import NavigatorItem from './navigator-item.svelte';
@@ -68,11 +67,12 @@
 			{m.gemCollection()}
 		</NavigatorItem>
 	</nav>
-	{#if sidenav}
+	<!-- TODO: re-open after update ENG language   -->
+	<!-- {#if sidenav}
 		<hr class="mb-2 w-full border border-base-content/5" />
 		<div class="flex items-center justify-between px-4 py-2">
 			<p class="font-semibold">{m.language()}</p>
 			<LangSelector />
 		</div>
-	{/if}
+	{/if} -->
 </div>

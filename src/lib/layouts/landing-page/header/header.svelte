@@ -9,7 +9,6 @@
 	import * as m from '$i18n/messages';
 
 	import { HeaderScrollContext } from './context';
-	import { LangSelector } from './lang-selector';
 	import { Navigator } from './navigator';
 	import { SidenavTrigger } from './sidenav';
 	import { headerClassNameHandler } from './styles';
@@ -74,9 +73,10 @@
 		</div>
 		<div class="flex flex-grow-0 lg:flex-grow" />
 		<div class="navbar-end">
-			<div class="hidden lg:flex">
+			<!-- TODO: re-open after update ENG language   -->
+			<!-- <div class="hidden lg:flex">
 				<LangSelector />
-			</div>
+			</div> -->
 		</div>
 	</div>
 </header>
