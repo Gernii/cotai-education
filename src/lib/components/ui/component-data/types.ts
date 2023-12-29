@@ -8,3 +8,12 @@ export interface ComponentDataProps {
 	hidden?: boolean;
 	description?: string;
 }
+
+export interface ComponentDataResponseProps {
+	type: ComponentDataType;
+	title?: string;
+	image?: string;
+	background?: boolean;
+	hidden?: boolean;
+	description?: string;
+}

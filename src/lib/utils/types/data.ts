@@ -1,4 +1,7 @@
-import type { ComponentDataProps } from '$lib/components/ui/component-data';
+import type {
+	ComponentDataResponseProps,
+	ComponentDataProps
+} from '$lib/components/ui/component-data';
 
 export interface ProgramResponseProps {
 	id: string;
@@ -10,7 +13,7 @@ export interface ProgramResponseProps {
 	'courses-highlighted': string[];
 	'courses-roadmap': string[];
 	targets: string[];
-	components: ComponentDataProps[];
+	components: ComponentDataResponseProps[];
 }
 
 export interface ProgramProps {
@@ -47,7 +50,7 @@ export interface CourseResponseProps {
 	thumbnail?: string;
 	description?: string;
 	curriculum: CurriculumResponseProps[];
-	components: ComponentDataProps[];
+	components: ComponentDataResponseProps[];
 }
 
 export interface CurriculumProps {

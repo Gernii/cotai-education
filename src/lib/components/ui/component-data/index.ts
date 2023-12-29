@@ -1,5 +1,5 @@
 import ComponentData from './component-data.svelte';
-import type { ComponentDataProps } from './types';
+import type { ComponentDataProps, ComponentDataResponseProps } from './types';
 export { ComponentData };
 
-export type { ComponentDataProps };
+export type { ComponentDataProps, ComponentDataResponseProps };
