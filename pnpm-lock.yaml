@@ -5,9 +5,6 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
-  '@builder.io/partytown':
-    specifier: ^0.8.1
-    version: 0.8.1
   '@inlang/paraglide-js':
     specifier: latest
     version: 1.0.0-prerelease.22
@@ -131,9 +128,6 @@ devDependencies:
   vite:
     specifier: ^5.0.3
     version: 5.0.10
-  vite-plugin-sitemap:
-    specifier: ^0.5.3
-    version: 0.5.3
   vitest:
     specifier: ^1.0.0
     version: 1.1.0
@@ -166,12 +160,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.1
-    dev: true
-
-  /@builder.io/partytown@0.8.1:
-    resolution: {integrity: sha512-p4xhEtQCPe8YFJ8e7KT9RptnT+f4lvtbmXymbp1t0bLp+USkNMTxrRMNc3Dlr2w2fpxyX7uA0CyAeU3ju84O4A==}
-    engines: {node: '>=18.0.0'}
-    hasBin: true
     dev: true
 
   /@cloudflare/kv-asset-handler@0.2.0:
@@ -5043,10 +5031,6 @@ packages:
       - sugarss
       - supports-color
       - terser
-    dev: true
-
-  /vite-plugin-sitemap@0.5.3:
-    resolution: {integrity: sha512-DSqZLAkXaNgoJLcaxjJHrfWjIIiZRSuZIseE7ihJYUvPFG4OsvXn/+Oujmzbs+6tV7yu1dn7uhWXpV7QuiH/1g==}
     dev: true
 
   /vite@5.0.10:
