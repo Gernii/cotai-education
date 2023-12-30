@@ -12,6 +12,7 @@ permissions:
 jobs:
   Release:
     runs-on: ubuntu-latest
+    environment: Prod
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -38,6 +39,7 @@ jobs:
   Ping_Google:
     name: Ping Google
     runs-on: ubuntu-latest
+    environment: Prod
 
     steps:
       - name: Send HTTP GET request
