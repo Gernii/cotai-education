@@ -12,6 +12,7 @@ permissions:
 jobs:
   Staging:
     runs-on: ubuntu-latest
+    environment: Staging
     steps:
       - name: Checkout
         uses: actions/checkout@v4
