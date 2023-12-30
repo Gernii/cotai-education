@@ -1,9 +1,8 @@
 import { paraglide } from '@inlang/paraglide-js-adapter-vite';
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
-import sitemap from 'vite-plugin-sitemap';
 import { loadEnv } from 'vite';
-
+import sitemap from 'vite-plugin-sitemap';
 // @ts-ignore
 export default ({ mode }) => {
 	process.env = Object.assign(process.env, loadEnv(mode, process.cwd(), ''));
@@ -17,9 +16,7 @@ export default ({ mode }) => {
 			}),
 			sitemap({
 				hostname: process.env.VITE_HOSTNAME,
-				exclude: ['/admin', '/private', '/en'],
-				outDir: '.svelte-kit/cloudflare',
-				generateRobotsTxt: true,
+				outDir: '.svelte-kit/output/client',
 				robots: [
 					{
 						userAgent: '*',

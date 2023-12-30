@@ -22,7 +22,8 @@
 		"lint.check": "eslint  \"src/**/*.{ts*,svelte}\"  --max-warnings=0",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare",
 		"postinstall": "paraglide-js compile --project ./project.inlang",
-		"prepare": "husky install | chmod u+x .husky/*"
+		"prepare": "husky install",
+		"postbuild": "node scripts/post-build.js"
 	},
 	"devDependencies": {
 		"@builder.io/partytown": "^0.8.1",
