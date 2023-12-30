@@ -14,6 +14,7 @@ permissions:
 
 jobs:
   Validate:
+    environment: Validator
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -24,3 +25,5 @@ jobs:
 
       - name: Test
         uses: ./.github/actions/test
+        with:
+          public_hostname: ${{ vars.PUBLIC_HOSTNAME }}

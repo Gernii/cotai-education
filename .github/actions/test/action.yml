@@ -2,6 +2,11 @@ name: Test
 
 description: Lint, Fmt, Test, Check and build
 
+inputs:
+  public_hostname: # id of input
+    description: 'public hostname'
+    required: true
+
 runs:
   using: composite
 
@@ -21,6 +26,8 @@ runs:
     - name: Check
       shell: bash
       run: pnpm run check
+      env:
+        PUBLIC_HOSTNAME: ${{ inputs.public_hostname }}
 
     - name: Build
       shell: bash
