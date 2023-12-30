@@ -24,6 +24,7 @@ jobs:
         run: pnpm build
         env:
           VITE_HOSTNAME: ${{ vars.VITE_HOSTNAME }}
+          PUBLIC_HOSTNAME: ${{ vars.PUBLIC_HOSTNAME }}
 
       - name: Publish to Cloudflare Pages
         uses: cloudflare/pages-action@v1
