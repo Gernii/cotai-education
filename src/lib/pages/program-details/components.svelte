@@ -9,6 +9,6 @@
 	$: components = pd.programDetails.components;
 </script>
 
-{#each components as component}
-	<ComponentData {...component} />
+{#each components as component, idx}
+	<ComponentData {...component} {idx} />
 {/each}

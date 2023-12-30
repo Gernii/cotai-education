@@ -41,7 +41,7 @@
 		<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 		<div
 			tabindex="0"
-			class="card dropdown-content card-compact z-[1] min-w-[10rem] bg-base-100 shadow"
+			class="card dropdown-content card-compact z-[1] min-w-[10rem] bg-base-100 shadow shadow-base-content/5"
 		>
 			<slot />
 		</div>

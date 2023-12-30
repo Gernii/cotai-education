@@ -1,32 +1,39 @@
 <script lang="ts">
+	import { page } from '$app/stores';
+
 	import { Container, ContainerContent } from '$lib/components/ui/container';
 
 	import { navigate } from '$lib/lib/i18n/routing';
 
 	import { routingPathProgramsId } from '$lib/utils/routing-path';
-	import type { CourseProps, ProgramProps } from '$lib/utils/types/data';
 
 	import * as m from '$i18n/messages';
 
+	import type { HomePageDataProps, HomePageData_ProgramProps } from '../types';
+
 	import type { CoursesListProps_Courses } from '$lib/features/courses-list';
 	import { CoursesList } from '$lib/features/courses-list';
-	interface $$Props extends ProgramProps {
-		coursesDetails: Record<string, CourseProps>;
-	}
+
+	type $$Props = HomePageData_ProgramProps;
 
 	export let coursesHighlighted: $$Props['coursesHighlighted'] = [];
-	export let coursesDetails: $$Props['coursesDetails'];
 	export let title: $$Props['title'] = undefined;
 	export let description: $$Props['description'] = undefined;
 	export let id: $$Props['id'];
 	export let targets: $$Props['targets'];
 
-	$: courses = coursesHighlighted.slice(0, 6).map((courseId) => ({
-		id: courseId,
-		title: coursesDetails[courseId].title,
-		description: coursesDetails[courseId].description,
-		thumbnail: coursesDetails[courseId].thumbnail
-	})) as CoursesListProps_Courses[];
+	$: pd = $page.data as HomePageDataProps;
+
+	$: pdCourses = pd.courses;
+
+	$: courses = coursesHighlighted.slice(0, 6).map(
+		(courseId): CoursesListProps_Courses => ({
+			id: courseId,
+			title: pdCourses[courseId].title,
+			description: pdCourses[courseId].description,
+			thumbnail: pdCourses[courseId].thumbnail
+		})
+	);
 </script>
 
 {#if title}

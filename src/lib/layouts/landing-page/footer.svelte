@@ -10,7 +10,7 @@
 	import { IconFacebook, IconLinkedin, IconYoutube } from '$lib/components/icons';
 </script>
 
-<footer class="border-t bg-base-200 py-2" id="contact">
+<footer class="border-t border-base-content/5 bg-base-200 py-2" id="contact">
 	<Container padding="top">
 		<ContainerContent class="space-y-10 text-center lg:text-start">
 			<div class="flex flex-col-reverse justify-between gap-12 lg:flex-row">
@@ -81,7 +81,7 @@
 						<IconFacebook class="size-6" />
 					</a>
 					<a
-						href="https://www.linkedin.com/company/cotai/mycompany/"
+						href="https://www.linkedin.com/company/cotai/mycompany"
 						aria-label={'Linkedin'}
 						class="btn btn-square"
 						target="_blank"
@@ -101,7 +101,7 @@
 				</div>
 				<!-- ! fix this -->
 				<div class="space-y-3">
-					<p>Copyright 2023 © CoTAI Academy. All Rights Reserved. A subsidiary of CoTAI.</p>
+					<p>Copyright 2023 © CoTAI Education. All Rights Reserved. A subsidiary of CoTAI.</p>
 					<ul class="hidden flex-wrap justify-center gap-x-3 font-semibold lg:justify-end">
 						<li>
 							<a href={navigate('/')} aria-label={'Sitemap'}>Sitemap</a>

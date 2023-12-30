@@ -11,7 +11,9 @@
 	import type { ComponentDataProps } from './types';
 	import { ComponentDataType } from './constans';
 
-	type $$Props = ComponentDataProps;
+	interface $$Props extends ComponentDataProps {
+		idx: number;
+	}
 
 	export let title: $$Props['title'] = undefined;
 	export let background: $$Props['background'] = false;
@@ -19,14 +21,14 @@
 	export let hidden: $$Props['hidden'] = false;
 	export let image: $$Props['image'] = undefined;
 	export let type: $$Props['type'] = 0;
+	export let idx: $$Props['idx'];
 </script>
 
 {#if !hidden && title && description}
 	<Container
 		class={cx({
-			'bg-base-200': background
+			'bg-base-200': background || idx % 2 === 0 || idx === 0
 		})}
-		padding="top-bottom"
 	>
 		<ContainerContent
 			class={cx({

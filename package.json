@@ -1,5 +1,5 @@
 {
-	"name": "cotai-academy",
+	"name": "cotai-education",
 	"version": "0.0.1",
 	"private": true,
 	"engines": {
@@ -22,13 +22,12 @@
 		"lint.check": "eslint  \"src/**/*.{ts*,svelte}\"  --max-warnings=0",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare",
 		"postinstall": "paraglide-js compile --project ./project.inlang",
-		"postbuild": "pnpm exec svelte-sitemap --out-dir .svelte-kit/cloudflare --domain https://academy.cot.ai --ignore '**/admin/**'",
-		"prepare": "husky install | chmod u+x .husky/*"
+		"prepare": "husky install",
+		"postbuild": "node scripts/post-build.js"
 	},
 	"devDependencies": {
-		"@builder.io/partytown": "^0.8.1",
-		"@inlang/paraglide-js": "1.0.0-prerelease.22",
-		"@inlang/paraglide-js-adapter-vite": "^1.0.3",
+		"@inlang/paraglide-js": "latest",
+		"@inlang/paraglide-js-adapter-vite": "latest",
 		"@playwright/test": "^1.28.1",
 		"@sveltejs/adapter-cloudflare": "^3.0.1",
 		"@sveltejs/kit": "^2.0.0",

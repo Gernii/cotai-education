@@ -1,0 +1,44 @@
+name: Release Prod
+
+on:
+  push:
+    branches:
+      - prod
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  Release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup
+        uses: ./.github/actions/setup
+
+      - name: Build website
+        run: pnpm build
+        env:
+          VITE_HOSTNAME: ${{ vars.VITE_HOSTNAME }}
+
+      - name: Publish to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
+          directory: .svelte-kit/cloudflare
+          branch: main
+          # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
+          wranglerVersion: '3'
+
+  Ping_Google:
+    name: Ping Google
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Send HTTP GET request
+        run: curl http://www.google.com/ping?sitemap=${{ vars.VITE_HOSTNAME }}/sitemap.xml

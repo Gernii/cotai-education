@@ -22,7 +22,7 @@
 </script>
 
 <li
-	class={cx('collapse border', {
+	class={cx('collapse border border-base-content/5', {
 		'collapse-open': isContentOpen,
 		'collapse-close': !isContentOpen
 	})}

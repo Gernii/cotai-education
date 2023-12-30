@@ -19,7 +19,7 @@
 				<Markdown text={pd.description} />
 			</div>
 			<div
-				class="group card col-span-1 w-full self-start overflow-hidden border bg-white shadow hover:shadow-lg lg:col-span-2"
+				class="group card col-span-1 w-full self-start overflow-hidden border border-base-content/5 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5 lg:col-span-2"
 			>
 				<figure class="aspect-thumbnail169">
 					<img
@@ -32,30 +32,17 @@
 					/>
 				</figure>
 
-				<div class="card-body gap-y-4">
-					<div>
-						<p class="text-sm">{m.studyprice()}</p>
-						<p class="text-2xl font-semibold">
-							{#if pd.price}
-								{pd.price.toLocaleString('vi-VN', {
-									style: 'currency',
-									currency: 'VND'
-								})}
-							{:else}
-								{m.contact()}
-							{/if}
-						</p>
-					</div>
-					<div class="card-actions flex-col">
-						<a href="/" class="btn btn-primary btn-block">{m.registerNow()}</a>
+				<div class="card-body">
+					{#if pd.registerUrl}
+						<a href={pd.registerUrl} class="btn btn-primary btn-block">{m.registerNow()}</a>
 
 						<div class="divider uppercase">{m.or()}</div>
-						<div class="space-y-2">
-							<div class="text-xl font-semibold">{m.contact()}</div>
-							<address class="not-italic">
-								<p><span>{m.hotline()}: </span>{m.phoneNumber()}</p>
-							</address>
-						</div>
+					{/if}
+					<div class="space-y-2">
+						<div class="text-xl font-semibold">{m.contact()}</div>
+						<address class="not-italic">
+							<p><span>{m.hotline()}: </span>{m.phoneNumber()}</p>
+						</address>
 					</div>
 				</div>
 			</div>

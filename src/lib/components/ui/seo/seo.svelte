@@ -19,39 +19,39 @@
 </script>
 
 <svelte:head>
-	<SvelteSeo
-		title={contentTitle}
-		{description}
-		openGraph={{
-			title: contentTitle,
-			type: 'website',
-			url: $page.url.href,
-			site_name: m.siteName(),
-			description,
-			images: [
-				{
-					url: SEOImage,
-					alt: m.siteName()
-				}
-			]
-		}}
-		twitter={{
-			card: 'summary_large_image',
-			title: contentTitle,
-			description,
-			image: SEOImage
-		}}
-		jsonLd={{
-			'@context': 'https://schema.org',
-			'@type': 'WebSite',
-			url: $page.url.origin,
-			description: m.homePage_head_description(),
-			name: m.siteName()
-		}}
-	/>
-
 	<link rel="canonical" href={$page.url.href} />
+	<link rel="manifest" href={`${$page.url.origin}/manifest.json`} />
 </svelte:head>
+<SvelteSeo
+	title={contentTitle}
+	{description}
+	openGraph={{
+		title: contentTitle,
+		type: 'website',
+		url: $page.url.href,
+		site_name: m.siteName(),
+		description,
+		images: [
+			{
+				url: SEOImage,
+				alt: m.siteName()
+			}
+		]
+	}}
+	twitter={{
+		card: 'summary_large_image',
+		title: contentTitle,
+		description,
+		image: SEOImage
+	}}
+	jsonLd={{
+		'@context': 'https://schema.org',
+		'@type': 'WebSite',
+		url: $page.url.origin,
+		description: m.homePage_head_description(),
+		name: m.siteName()
+	}}
+/>
 <!-- extend={{
     // extending the default link tags
     link: [

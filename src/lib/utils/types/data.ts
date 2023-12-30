@@ -1,6 +1,9 @@
-import type { ComponentDataProps } from '$lib/components/ui/component-data';
+import type {
+	ComponentDataResponseProps,
+	ComponentDataProps
+} from '$lib/components/ui/component-data';
 
-export interface ProgramResponsesProps {
+export interface ProgramResponseProps {
 	id: string;
 	title?: string;
 	description?: string;
@@ -10,7 +13,7 @@ export interface ProgramResponsesProps {
 	'courses-highlighted': string[];
 	'courses-roadmap': string[];
 	targets: string[];
-	components: ComponentDataProps[];
+	components: ComponentDataResponseProps[];
 }
 
 export interface ProgramProps {
@@ -38,7 +41,7 @@ export interface CourseProps {
 	components: ComponentDataProps[];
 }
 
-export interface CourseResponsesProps {
+export interface CourseResponseProps {
 	id: string;
 	title?: string;
 	price?: number;
@@ -46,8 +49,8 @@ export interface CourseResponsesProps {
 	embed?: string;
 	thumbnail?: string;
 	description?: string;
-	curriculum: CurriculumResponsesProps[];
-	components: ComponentDataProps[];
+	curriculum: CurriculumResponseProps[];
+	components: ComponentDataResponseProps[];
 }
 
 export interface CurriculumProps {
@@ -57,7 +60,7 @@ export interface CurriculumProps {
 	details?: CurriculumProps_Details;
 }
 
-export interface CurriculumResponsesProps {
+export interface CurriculumResponseProps {
 	title?: string;
 	hidden?: boolean;
 	'classes-countable'?: boolean;

@@ -25,8 +25,6 @@
 	export let last: $$Props['last'];
 
 	$: totalSessions = curriculum.filter((c) => c.classesCountable).length;
-
-	$: console.log(curriculum);
 </script>
 
 {#if title}
@@ -43,7 +41,7 @@
 			></div>
 		</div>
 		<div
-			class={cx('card  w-full border shadow', {
+			class={cx('card  w-full border border-base-content/5 shadow shadow-base-content/5', {
 				'mb-4': !last
 			})}
 		>

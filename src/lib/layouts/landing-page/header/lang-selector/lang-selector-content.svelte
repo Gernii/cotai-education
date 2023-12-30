@@ -11,7 +11,10 @@
 	import LangSelectorIcon from './lang-selector-icon.svelte';
 </script>
 
-<ul tabIndex={0} class="dropdown-content z-[1] space-y-1 rounded-box bg-base-100 p-2 shadow">
+<ul
+	tabIndex={0}
+	class="dropdown-content z-[1] space-y-1 rounded-box bg-base-100 p-2 shadow shadow-base-content/5"
+>
 	{#each availableLanguageTags as lang}
 		<li>
 			<a

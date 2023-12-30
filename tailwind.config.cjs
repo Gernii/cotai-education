@@ -2,7 +2,7 @@ import AspectRatio from '@tailwindcss/aspect-ratio';
 import Typography from '@tailwindcss/typography';
 import daisyui from 'daisyui';
 import defaultTheme from 'tailwindcss/defaultTheme';
-
+import daisyThemes from 'daisyui/src/theming/themes';
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
@@ -35,21 +35,11 @@ const config = {
 	daisyui: {
 		themes: [
 			{
-				default: {
-					'color-scheme': 'light',
+				light: {
+					...daisyThemes['winter'],
 					primary: 'oklch(71.03% 0.163 240.29)',
 					'primary-content': 'oklch(97.03% 0.015 240.310)',
 					secondary: '#fc8c04',
-					accent: '#C148AC',
-					neutral: '#021431',
-					'base-100': 'oklch(100% 0 0)',
-					'base-200': '#F2F7FF',
-					'base-300': '#E3E9F4',
-					'base-content': '#394E6A',
-					info: '#93E7FB',
-					success: '#81CFD1',
-					warning: '#EFD7BB',
-					error: '#E58B8B',
 
 					'--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
 					'--rounded-btn': '0.5rem', // border radius rounded-btn utility class, used in buttons and similar element

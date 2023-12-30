@@ -3,19 +3,13 @@ import { error, type LoadEvent } from '@sveltejs/kit';
 import type { ProgramDetailsPageDataProps } from '$lib/pages/program-details/types';
 
 import { staticDataFetcher } from '$lib/utils/static-data-fetcher';
-import type {
-	CourseProps,
-	CourseResponsesProps,
-	ProgramResponsesProps
-} from '$lib/utils/types/data';
-import { courseMappingData, programMappingData } from '$lib/utils/data-mapping';
+import type { CourseProps, CourseResponseProps, ProgramResponseProps } from '$lib/utils/types/data';
+import { courseMappingData, programMappingData } from '$lib/utils/data-mapping.server';
 
-import type { PageLoad } from './$types';
-
-export const load: PageLoad = async ({ fetch, params }): Promise<ProgramDetailsPageDataProps> => {
+export const load = async ({ fetch, params }): Promise<ProgramDetailsPageDataProps> => {
 	const programId = params['program_id'];
 
-	const program = await staticDataFetcher<ProgramResponsesProps>({
+	const program = await staticDataFetcher<ProgramResponseProps>({
 		id: programId,
 		path: 'programs',
 		fetch
@@ -42,7 +36,7 @@ export const load: PageLoad = async ({ fetch, params }): Promise<ProgramDetailsP
 
 const fetchCourses = async (courseIds: string[], fetch: LoadEvent['fetch']) => {
 	const coursesRawData = await Promise.all(
-		courseIds.map((id) => staticDataFetcher<CourseResponsesProps>({ id, path: 'courses', fetch }))
+		courseIds.map((id) => staticDataFetcher<CourseResponseProps>({ id, path: 'courses', fetch }))
 	);
 
 	const courses = coursesRawData.reduce(
