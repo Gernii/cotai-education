@@ -1,0 +1,49 @@
+{
+	"title": "Math Cat",
+	"register-url": "https://i.imgur.com/uAfO3SL.jpeg",
+	"embed": "https://upload.wikimedia.org/wikipedia/commons/1/15/Cat_August_2010-4.jpg",
+	"thumbnail": "https://i.imgur.com/uAfO3SL.jpeg",
+	"description": "\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\n- Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n\n- Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\nLorem Ipsum is simply dummy text of the printing and typesetting industry.\n\nLorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n",
+	"components": [
+		{
+			"type": 0,
+			"title": "Vì sao nên học",
+			"image": "https://i.imgur.com/uAfO3SL.jpeg",
+			"background": true,
+			"hidden": false,
+			"description": "\n# H1\n#### h4\n$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n==marked==\n\n==marked==\n\n::: warning\nhello\n:::\n\nxyz\n\nabc\n- Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n- Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n- hell\n- hi\n- essasdasdas\n- els\n"
+		},
+		{
+			"type": 1,
+			"title": "Lợi ích",
+			"image": "https://i.imgur.com/uAfO3SL.jpeg",
+			"background": false,
+			"hidden": false,
+			"description": "\n# H1\n#### h4\n$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n==marked==\n\n==marked==\n\n::: warning\nhello\n:::\n\nxyz\n\nabc\n- Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n- Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n- hell\n- hi\n- essasdasdas\n- els\n"
+		},
+		{
+			"type": 2,
+			"title": "Lợi ích",
+			"image": "https://i.imgur.com/uAfO3SL.jpeg",
+			"background": false,
+			"hidden": false,
+			"description": "\n# H1\n#### h4\n$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n$x = {-b \\pm \\sqrt{b^2-4ac} \\over 2a}$\n\n==marked==\n\n==marked==\n\n::: warning\nhello\n:::\n\nxyz\n\nabc\n- Lorem Ipsum is simply dummy text of the printing and typesetting industry.\n- Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.\n- hell\n- hi\n- essasdasdas\n- els\n"
+		}
+	],
+	"curriculum": [
+		{
+			"title": "Buổi khai giảng: giới thiệu khoá học",
+			"hidden": false,
+			"classes-countable": true
+		},
+		{
+			"title": "Buổi 1: giới thiệu về python giới thiệu về python giới thiệu về python giới thiệu về python giới thiệu về python",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": false,
+				"content": "- Hình thức: Online\n- Nội dung:\n\t- Giảng viên sẽ giới thiệu về ngôn ngữ python\n- Chi tiết:\n\t- Các cài đặt python\n\t-Cài đặt môi trường ảo\n\t- Sử dụng google colab\n\t- ..."
+			}
+		}
+	]
+}

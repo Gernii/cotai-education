@@ -5,7 +5,10 @@ module.exports = {
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:svelte/recommended',
-		'prettier'
+		'prettier',
+		'plugin:import/errors',
+		'plugin:import/warnings',
+		'plugin:import/typescript'
 	],
 	parser: '@typescript-eslint/parser',
 	plugins: ['unused-imports', '@typescript-eslint'],
@@ -56,7 +59,67 @@ module.exports = {
 				argsIgnorePattern: '^_'
 			}
 		],
-		'no-undef': 'off'
+		'no-undef': 'off',
+		'import/order': [
+			'warn',
+			{
+				"pathGroups": [
+					{
+						"pattern": "$app/**",
+						"position": "after",
+						"group": "builtin"
+					},
+					{
+						"pattern": "$env/**",
+						"position": "after",
+						"group": "builtin"
+					},
+					{
+						"pattern": "$lib/assets/**",
+						"position": "after",
+						"group": "external"
+					},
+					{
+						"pattern": "$lib/components/ui/**",
+						"position": "after",
+						"group": "external"
+					},
+					{
+						"pattern": "$lib/components/icons/**",
+						"position": "after",
+						"group": "external"
+					},
+					{
+						"pattern": "$lib/layouts/**",
+						"position": "after",
+						"group": "external"
+					},
+					{
+						"pattern": "$lib/lib/**",
+						"position": "after",
+						"group": "external"
+					},
+					{
+						"pattern": "$lib/pages/**",
+						"position": "after",
+						"group": "external"
+					},
+					{
+						"pattern": "$lib/utils/**",
+						"position": "after",
+						"group": "external"
+					},
+					{
+						"pattern": "$i18n/**",
+						"position": "after",
+						"group": "external"
+					}
+				],
+				'newlines-between': 'always'
+			}
+		],
+		'import/no-unresolved': 'off',
+		"svelte/no-at-html-tags": "off"
 	},
 	ignorePatterns: ['*.cjs']
 };

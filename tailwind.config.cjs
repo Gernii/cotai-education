@@ -1,36 +1,45 @@
+import AspectRatio from '@tailwindcss/aspect-ratio';
+import Typography from '@tailwindcss/typography';
+import daisyui from 'daisyui';
 import defaultTheme from 'tailwindcss/defaultTheme';
-
+import daisyThemes from 'daisyui/src/theming/themes';
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
+
 	theme: {
 		extend: {
 			spacing: {
+				'header-space': defaultTheme.spacing['20'],
+				'header-space-sm': defaultTheme.spacing['16'],
 				header: defaultTheme.spacing['16'],
+				'header-sm': defaultTheme.spacing['14'],
 				'sub-header': defaultTheme.spacing['12'],
 				sidebar: defaultTheme.spacing['64'],
 				modal: '40rem',
 				'modal-lg': '50rem'
 			},
-			
+			aspectRatio: {
+				thumbnail169: '16 / 9',
+				thumbnail21: '2 / 1',
+				thumbnail43: '4 / 3'
+			},
+			typography: {
+				DEFAULT: {
+					css: {
+						maxWidth: '100ch' // add required value here
+					}
+				}
+			}
 		}
 	},
 	daisyui: {
 		themes: [
 			{
-				default: {
-					'color-scheme': 'light',
-					primary: 'oklch(56.86% 0.255 257.57)',
-					secondary: '#463AA2',
-					accent: '#C148AC',
-					neutral: '#021431',
-					'base-100': 'oklch(100% 0 0)',
-					'base-200': '#F2F7FF',
-					'base-300': '#E3E9F4',
-					'base-content': '#394E6A',
-					info: '#93E7FB',
-					success: '#81CFD1',
-					warning: '#EFD7BB',
-					error: '#E58B8B',
+				light: {
+					...daisyThemes['winter'],
+					primary: 'oklch(71.03% 0.163 240.29)',
+					'primary-content': 'oklch(97.03% 0.015 240.310)',
+					secondary: '#fc8c04',
 
 					'--rounded-box': '1rem', // border radius rounded-box utility class, used in card and other large boxes
 					'--rounded-btn': '0.5rem', // border radius rounded-btn utility class, used in buttons and similar element
@@ -45,10 +54,6 @@ const config = {
 			}
 		]
 	},
-	plugins: [
-		require('daisyui'),
-		require('@tailwindcss/forms'),
-		require('@tailwindcss/typography')
-	]
+	plugins: [Typography, AspectRatio, daisyui]
 };
 module.exports = config;
