@@ -20,6 +20,7 @@
 
 <svelte:head>
 	<link rel="canonical" href={$page.url.href} />
+	<link rel="manifest" href={`${$page.url.origin}/manifest.json`} />
 </svelte:head>
 <SvelteSeo
 	title={contentTitle}
