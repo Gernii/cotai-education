@@ -81,7 +81,7 @@
 						<IconFacebook class="size-6" />
 					</a>
 					<a
-						href="https://www.linkedin.com/company/cotai/mycompany/"
+						href="https://www.linkedin.com/company/cotai/mycompany"
 						aria-label={'Linkedin'}
 						class="btn btn-square"
 						target="_blank"
