@@ -6,6 +6,8 @@
 	export let text: $$Props['text'] = undefined;
 </script>
 
-<article class="prose">
-	{@html text}
-</article>
+{#if text}
+	<article class="prose">
+		{@html text}
+	</article>
+{/if}
