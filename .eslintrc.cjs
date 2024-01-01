@@ -119,6 +119,9 @@ module.exports = {
 			}
 		],
 		'import/no-unresolved': 'off',
+		"import/no-named-as-default": "off",
+		"import/default": "off",
+		"import/no-named-as-default-member": "off",
 		"svelte/no-at-html-tags": "off"
 	},
 	ignorePatterns: ['*.cjs']
