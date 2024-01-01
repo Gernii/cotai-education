@@ -1,8 +1,6 @@
 <script lang="ts">
 	import { cx } from 'cva';
 
-	import { Markdown } from '$lib/components/ui/markdown';
-
 	import { navigate } from '$lib/lib/i18n/routing';
 
 	import type { CourseProps } from '$lib/utils/types/data';
@@ -10,6 +8,7 @@
 	import * as m from '$i18n/messages';
 
 	import { IconChevronRight, IconClock } from '$lib/components/icons';
+	import { TextContent } from '$lib/features/text-content';
 
 	interface $$Props extends CourseProps {
 		idx: number;
@@ -64,7 +63,7 @@
 							<IconClock class="size-5 stroke-2" />
 							<p>{m.totalSessions({ number: totalSessions })}</p>
 						</div>
-						<Markdown text={description} />
+						<TextContent text={description} />
 						<div class="card-actions">
 							<a href={navigate(`/courses/${id}`)} class="btn btn-primary">
 								{m.showDetails()}

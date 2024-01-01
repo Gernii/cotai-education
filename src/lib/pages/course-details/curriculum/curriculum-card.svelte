@@ -1,11 +1,10 @@
 <script lang="ts">
 	import { cx } from 'cva';
 
-	import { Markdown } from '$lib/components/ui/markdown';
-
 	import type { CurriculumProps } from '$lib/utils/types/data';
 
 	import { IconChevronDown } from '$lib/components/icons';
+	import { TextContent } from '$lib/features/text-content';
 
 	type $$Props = CurriculumProps;
 
@@ -38,7 +37,7 @@
 	{#if details && isContentEnabled}
 		<div class="collapse-content bg-base-200">
 			<div class="pt-2">
-				<Markdown text={details.content} />
+				<TextContent text={details.content} />
 			</div>
 		</div>
 	{/if}
