@@ -1,89 +1,30 @@
 {
-	"name": "cotai-education",
-	"version": "0.0.1",
-	"private": true,
-	"engines": {
-		"node": ">=18.0.0"
-	},
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"test": "pnpm run test:unit",
-		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
-		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
-		"test:integration": "playwright test",
-		"test:unit": "vitest run",
-		"validate": "run-s lint fmt test check build",
-		"fmt": "run-s \"fmt.*\"",
-		"fmt.write": "prettier --write \"src/**/*.{ts*,svelte}\"",
-		"fmt.check": "prettier --check \"src/**/*.{ts*,svelte}\"",
-		"lint": "run-s \"lint.*\"",
-		"lint.fix": "eslint \"src/**/*.{ts*,svelte}\" --fix",
-		"lint.check": "eslint  \"src/**/*.{ts*,svelte}\"  --max-warnings=0",
-		"preview": "wrangler pages dev .svelte-kit/cloudflare",
-		"postinstall": "paraglide-js compile --project ./project.inlang",
-		"prepare": "husky install",
-		"postbuild": "node scripts/post-build.js"
-	},
-	"devDependencies": {
-		"@inlang/paraglide-js": "latest",
-		"@inlang/paraglide-js-adapter-vite": "latest",
-		"@playwright/test": "^1.28.1",
-		"@sveltejs/adapter-cloudflare": "^3.0.1",
-		"@sveltejs/kit": "^2.0.0",
-		"@sveltejs/vite-plugin-svelte": "^3.0.0",
-		"@tailwindcss/aspect-ratio": "^0.4.2",
-		"@tailwindcss/typography": "^0.5.10",
-		"@tiptap/core": "^2.1.13",
-		"@tiptap/extension-document": "^2.1.13",
-		"@tiptap/extension-paragraph": "^2.1.13",
-		"@tiptap/extension-text": "^2.1.13",
-		"@tiptap/pm": "^2.1.13",
-		"@tiptap/starter-kit": "^2.1.13",
-		"@types/markdown-it": "^13.0.7",
-		"@types/markdown-it-container": "^2.0.9",
-		"@typescript-eslint/eslint-plugin": "^6.0.0",
-		"@typescript-eslint/parser": "^6.0.0",
-		"autoprefixer": "^10.4.16",
-		"cva": "npm:class-variance-authority@^0.7.0",
-		"daisyui": "^4.4.22",
-		"eslint": "^8.28.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-svelte": "^2.30.0",
-		"eslint-plugin-unused-imports": "^3.0.0",
-		"husky": "^8.0.3",
-		"iso-639-1": "^3.1.0",
-		"keen-slider": "^6.8.6",
-		"markdown-it": "^14.0.0",
-		"markdown-it-container": "^4.0.0",
-		"markdown-it-mark": "^4.0.0",
-		"markdown-it-mathjax3": "^4.3.2",
-		"npm-run-all": "^4.1.5",
-		"postcss": "^8.4.32",
-		"prettier": "^3.1.1",
-		"prettier-plugin-svelte": "^3.1.2",
-		"prettier-plugin-tailwindcss": "^0.5.9",
-		"svelte": "^4.2.7",
-		"svelte-check": "^3.6.0",
-		"svelte-seo": "^1.5.4",
-		"svelte-sitemap": "^2.6.0",
-		"tailwind-merge": "^2.1.0",
-		"tailwindcss": "^3.4.0",
-		"tslib": "^2.4.1",
-		"typescript": "^5.0.0",
-		"vite": "^5.0.3",
-		"vitest": "^1.0.0",
-		"wrangler": "^3.22.1"
-	},
-	"lint-staged": {
-		"src/**/*.{ts*,svelte}": [
-			"eslint --fix",
-			"eslint --max-warnings=0",
-			"prettier --write",
-			"prettier --check"
-		]
-	},
-	"type": "module",
-	"packageManager": "pnpm@8.12.1"
+  "name": "cotai-education",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "validate": "run-s \"validate.*\"",
+    "validate.lint": "turbo run lint --parallel",
+    "validate.fmt": "turbo run fmt --parallel",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint --parallel",
+    "test": "turbo run test --parallel",
+    "fmt": "turbo run fmt --parallel",
+    "deploy": "turbo run deploy",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@repo/eslint-config": "workspace:*",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.1.1",
+    "turbo": "latest"
+  },
+  "packageManager": "pnpm@8.12.1",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "npm-run-all": "^4.1.5"
+  }
 }

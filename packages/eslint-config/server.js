@@ -1,36 +1,20 @@
-/** @type { import("eslint").Linter.FlatConfig } */
 module.exports = {
-	root: true,
 	extends: [
 		'eslint:recommended',
 		'plugin:@typescript-eslint/recommended',
 		'plugin:svelte/recommended',
 		'prettier',
+        "eslint-config-turbo",
 		'plugin:import/errors',
 		'plugin:import/warnings',
-		'plugin:import/typescript'
+		'plugin:import/typescript',
+
 	],
 	parser: '@typescript-eslint/parser',
-	plugins: ['unused-imports', '@typescript-eslint'],
-	parserOptions: {
-		sourceType: 'module',
-		ecmaVersion: 2020,
-		extraFileExtensions: ['.svelte']
-	},
+	plugins: ['unused-imports', '@typescript-eslint', "only-warn"],
 	env: {
-		browser: true,
-		es2017: true,
 		node: true
 	},
-	overrides: [
-		{
-			files: ['*.svelte'],
-			parser: 'svelte-eslint-parser',
-			parserOptions: {
-				parser: '@typescript-eslint/parser'
-			}
-		}
-	],
 	rules: {
 		'@typescript-eslint/no-explicit-any': 'off',
 		'@typescript-eslint/explicit-module-boundary-types': 'off',
@@ -69,51 +53,6 @@ module.exports = {
 						"position": "after",
 						"group": "builtin"
 					},
-					{
-						"pattern": "$env/**",
-						"position": "after",
-						"group": "builtin"
-					},
-					{
-						"pattern": "$lib/assets/**",
-						"position": "after",
-						"group": "external"
-					},
-					{
-						"pattern": "$lib/components/ui/**",
-						"position": "after",
-						"group": "external"
-					},
-					{
-						"pattern": "$lib/components/icons/**",
-						"position": "after",
-						"group": "external"
-					},
-					{
-						"pattern": "$lib/layouts/**",
-						"position": "after",
-						"group": "external"
-					},
-					{
-						"pattern": "$lib/lib/**",
-						"position": "after",
-						"group": "external"
-					},
-					{
-						"pattern": "$lib/pages/**",
-						"position": "after",
-						"group": "external"
-					},
-					{
-						"pattern": "$lib/utils/**",
-						"position": "after",
-						"group": "external"
-					},
-					{
-						"pattern": "$i18n/**",
-						"position": "after",
-						"group": "external"
-					}
 				],
 				'newlines-between': 'always'
 			}
