@@ -45,3 +45,16 @@ yarn-error.log*
 
 # Svelte Kit
 .svelte-kit
+
+# Backend AWS
+jspm_packages
+
+# Serverless directories
+.serverless
+
+# esbuild directories
+.esbuild
+
+# Wepack
+
+.webpack

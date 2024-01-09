@@ -10,21 +10,25 @@
     "lint": "turbo run lint --parallel",
     "test": "turbo run test --parallel",
     "fmt": "turbo run fmt --parallel",
-    "deploy": "turbo run deploy",
+    "deploy": "turbo run deploy --parallel",
     "prepare": "husky install"
   },
   "devDependencies": {
-    "@repo/eslint-config": "workspace:*",
+    "@repo/eslint-config": "*",
     "husky": "^8.0.3",
     "lint-staged": "^15.2.0",
     "prettier": "^3.1.1",
     "turbo": "latest"
   },
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "npm@10.2.3",
   "engines": {
     "node": ">=20"
   },
   "dependencies": {
     "npm-run-all": "^4.1.5"
-  }
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
 }

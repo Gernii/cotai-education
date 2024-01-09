@@ -21,7 +21,7 @@ jobs:
         uses: ./.github/actions/setup
 
       - name: Build website
-        run: pnpm build
+        run: npm build
         env:
           VITE_HOSTNAME: ${{ vars.VITE_HOSTNAME }}
           PUBLIC_HOSTNAME: ${{ vars.PUBLIC_HOSTNAME }}
