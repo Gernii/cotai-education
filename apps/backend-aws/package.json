@@ -4,9 +4,10 @@
   "description": "CoTAI Education Backend",
   "main": "serverless.ts",
   "scripts": {
+    "dev": "serverless offline --stage dev --reloadHandler",
     "deploy": "npm run predeploy && serverless deploy --stage dev",
     "predeploy": "run-s \"predeploy.*\"",
-    "predeploy.validator": "chmod +x scripts/pre-transpiling-validator-schema.sh && scripts/pre-transpiling-validator-schema.sh",
+    "predeploy.empty": "",
     "fmt": "run-s \"fmt.*\"",
     "fmt.write": "prettier --write \"src/**/*.ts\"",
     "fmt.check": "prettier --check \"src/**/*.ts\"",
@@ -22,9 +23,6 @@
     "@serverless/typescript": "^3.38.0",
     "@types/aws-lambda": "^8.10.131",
     "@types/node": "^20.10.7",
-    "@types/validator": "^13.11.8",
-    "ajv": "^8.12.0",
-    "ajv-cmd": "^0.3.4",
     "serverless-bundle": "^6.1.0",
     "serverless-offline": "^13.3.2"
   },
@@ -33,8 +31,7 @@
     "@middy/http-error-handler": "^5.2.3",
     "@middy/http-json-body-parser": "^5.2.3",
     "@middy/util": "^5.2.1",
-    "@middy/validator": "^5.2.3",
-    "json-schema-to-ts": "^3.0.0"
+    "yup": "^1.3.3"
   },
   "lint-staged": {
     "**/src/**/*.ts": [

@@ -1,21 +1,12 @@
-import type { Handler } from '$utils/lambda';
-import { initLambda } from '$utils/lambda';
-import { initEventSchema } from '$utils/event-schema';
 import { formatJSONResponse } from '$utils/format-json-response';
 
-import { bodySchema } from './schema';
-import type { BodyData } from './schema';
+import type { HelloRequest } from './types';
+import { helloBodySchema } from './schema';
 
-const hello: Handler<BodyData, void, void> = async (event) => {
-	// we don't need to deserialize the body ourself as a middleware will be used to do that
-	console.log(event.body);
-	console.log('hi');
+import { initLambda, type Handler } from '$libs/lambda';
 
-	return formatJSONResponse({ message: 'Hello World!' });
+const hello: Handler<HelloRequest, void, void> = async (event) => {
+	return formatJSONResponse({ message: event.body.hi });
 };
 
-const eventSchema = initEventSchema({
-	body: bodySchema
-});
-
-export const main = initLambda(hello, { eventSchema });
+export const main = initLambda(hello, { bodySchema: helloBodySchema });

@@ -1,6 +1,6 @@
-import type { AWS } from '@serverless/typescript';
-
 import hello from '$functions/hello';
+
+import type { AWS } from '@serverless/typescript';
 
 const serverlessConfiguration: AWS = {
 	service: 'cotai-education',

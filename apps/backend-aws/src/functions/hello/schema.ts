@@ -1,14 +1,8 @@
-import type { JSONSchemaType } from 'ajv';
-export interface BodyData {
-	name: string;
-	age: number;
-}
+import type { ObjectSchema } from 'yup';
+import { object, string } from 'yup';
 
-export const bodySchema: JSONSchemaType<BodyData> = {
-	type: 'object',
-	properties: {
-		name: { type: 'string' },
-		age: { type: 'number' }
-	},
-	required: ['name']
-};
+import type { HelloRequest } from './types';
+
+export const helloBodySchema: ObjectSchema<HelloRequest> = object({
+	hi: string().required()
+});
