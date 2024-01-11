@@ -1,10 +1,11 @@
 import type { AWS } from '@serverless/typescript';
-import hello from '@functions/hello';
+
+import hello from '$functions/hello';
 
 const serverlessConfiguration: AWS = {
 	service: 'cotai-education',
 	frameworkVersion: '3',
-	plugins: ['serverless-bundle'],
+	plugins: ['serverless-offline', 'serverless-bundle'],
 	useDotenv: true,
 	provider: {
 		name: 'aws',
@@ -34,6 +35,9 @@ const serverlessConfiguration: AWS = {
 			minifyOptions: {
 				keepNames: true
 			}
+		},
+		'serverless-offline': {
+			httpPort: 4000
 		}
 	}
 };

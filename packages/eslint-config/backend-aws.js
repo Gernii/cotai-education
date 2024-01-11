@@ -47,7 +47,12 @@ module.exports = {
       {
         pathGroups: [
           {
-            pattern: "$app/**",
+            pattern: "$utils/**",
+            position: "after",
+            group: "builtin",
+          },
+          {
+            pattern: "$functions/**",
             position: "after",
             group: "builtin",
           },
@@ -60,5 +65,5 @@ module.exports = {
     "import/default": "off",
     "import/no-named-as-default-member": "off",
   },
-  ignorePatterns: ["*.cjs"],
+  ignorePatterns: ["*.*js"],
 };
