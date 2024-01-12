@@ -37,5 +37,18 @@
 	"homepage": "Trang chủ",
 	"reviewsTitle": "Đánh giá từ các học viên",
 	"reviewCourseNameWithSubtitle": "Khoá học: {title} - {subtitle}",
-	"reviewCourseName": "Khoá học: {title}"
+	"reviewCourseName": "Khoá học: {title}",
+	"whoweare": "Giới thiệu",
+	"whoweareDescription": "CoTAI là một studio khởi nghiệp chuyên về Trí tuệ nhân tạo, tập trung vào 3 mảng chính: đào tạo nhân tài nghiên cứu và phát triển sản phẩm AI, thực hiện các dự án R&D gia công phần mềm AI, phát triển các sản phẩm dịch vụ riêng và xây dựng các công ty khởi nghiệp (spinoff).",
+	"whoweareDescription2": "CoTAI luôn nỗ lực đúc kết và tổng hợp các nguyên lý quan trọng và công nghệ AI tiên tiến nhất từ các dự án thực tế để đưa vào chương trình đào tạo, góp phần xây dựng nguồn nhân tài AI có năng lực đổi mới sáng tạo & khởi nghiệp.",
+	"whyChooseUs_title": "Chương trình đào tạo",
+	"whyChooseUs_items_1_title": "Tăng tốc & chuyên sâu",
+	"whyChooseUs_items_2_title": "Trực quan và Tương tác",
+	"whyChooseUs_items_3_title": "Dự án thực tế cùng kỹ sư AI",
+	"whyChooseUs_items_1_description": "Kho kiến thức độc quyền do CoTAI tự xây dựng kết hợp 20% nguyên lý Toán của AI với 80% các công nghệ mới nhất giúp học viên học rộng hiểu sâu một cách nhanh chóng hiệu quả.",
+	"whyChooseUs_items_2_description": "Các mô phỏng & minh họa trong học liệu giúp trực quan hóa kiến thức một cách sinh động cuốn hút & dễ hiểu, kích thích tư duy sáng tạo.",
+	"whyChooseUs_items_3_description": "Hứng khởi tự tay lập trình các dự án và ứng dụng AI dưới sự hướng dẫn trực tiếp của các chuyên gia và kỹ sư AI nhiều kinh nghiệm.",
+	"whyChooseUs_thumbnail": "Hình ảnh minh họa chương trình đào tạo",
+	"text": "Chương trình",
+	"whoWeAre_thumbnail": "Hình ảnh minh họa về giới thiệu về công ty"
 }

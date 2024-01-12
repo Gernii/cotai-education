@@ -15,6 +15,7 @@
     }
   ],
   "conventionalCommits.scopes": [
-    "backend-aws"
+    "backend-aws",
+    "web"
   ]
 }

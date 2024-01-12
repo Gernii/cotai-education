@@ -1,4 +1,6 @@
 <script lang="ts">
+	import { SectionTitle } from '$lib/components/ui/section-title';
+
 	import CourseCard from './course-card.svelte';
 	import type { CoursesListProps } from './types';
 
@@ -14,9 +16,9 @@
 <div class="space-y-6 lg:space-y-10">
 	{#if title}
 		<div class="space-y-2 lg:space-y-4">
-			<h1 class="text-2xl font-bold lg:text-4xl">
+			<SectionTitle paddingBottom={false}>
 				{title}
-			</h1>
+			</SectionTitle>
 
 			<slot name="details-main" />
 

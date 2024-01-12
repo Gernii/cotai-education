@@ -30,7 +30,7 @@ const serverlessConfiguration: AWS = {
 		bundle: {
 			sourcemaps: false,
 			disableForkTsChecker: true,
-			// esbuild: true,
+			esbuild: true,
 			excludeFiles: ['**/*.spec.ts', '**/*.test.ts'],
 			minifyOptions: {
 				keepNames: true

@@ -37,5 +37,17 @@
 	"homepage": "Homepage",
 	"reviewsTitle": "Reviews from our students",
 	"reviewCourseNameWithSubtitle": "Course: {title}  - {subtitle}",
-	"reviewCourseName": "Course: {title}"
+	"reviewCourseName": "Course: {title}",
+	"whoweare": "Who we are",
+	"whoweareDescription": "We are a startup studio specialized in Artificial Intelligence. We have been training world-class AI talents, providing fullstack AI R&D outsourcing/offshore services, and building AI products/spinoffs since 2019.",
+	"whoweareDescription2": "Our mission is to distill, synthesize, integrate & disseminate both best practice and state-of-the-art (SOTA) in AI to the community, enabling innovation and creativity for social good.",
+	"whyChooseUs_title": "Why choose us?",
+	"whyChooseUs_items_1_title": "Accelerated Training for Mastery",
+	"whyChooseUs_items_2_title": "Highly Intuitive & Interactive Courseware",
+	"whyChooseUs_items_3_title": "Project hands-on with AI Experts & Engineers",
+	"whyChooseUs_items_1_description": "CoTAI’s rigorous & unified AI KnowledgeBase with 20% math principles + 80% SOTA tech acts as a “Second Brain” to help students learn fast.",
+	"whyChooseUs_items_2_description": "Enjoy the beauty of AI math and code through informative visualizations & illustrations to boost students’ understanding & creativity.",
+	"whyChooseUs_items_3_description": "Fun and joy in developing integrated projects & apps under direct guidance of dedicated staff who have been building real-world AI products.",
+	"whyChooseUs_thumbnail": "Why choose us thumbnail",
+	"whoWeAre_thumbnail": "Who we are thumbnail"
 }
