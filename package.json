@@ -10,6 +10,7 @@
     "lint": "turbo run lint --parallel",
     "test": "turbo run test --parallel",
     "fmt": "turbo run fmt --parallel",
+    "check": "turbo run check --parallel",
     "deploy": "turbo run deploy --parallel",
     "prepare": "husky install"
   },
