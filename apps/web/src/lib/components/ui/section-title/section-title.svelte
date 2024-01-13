@@ -1,3 +1,17 @@
-<h2 class="pb-4 text-2xl font-bold sm:pb-8 md:text-3xl">
+<script lang="ts">
+	import { cx } from 'cva';
+
+	interface $$Props {
+		paddingBottom?: boolean;
+	}
+
+	export let paddingBottom: $$Props['paddingBottom'] = true;
+
+	$: className = cx('text-2xl font-bold md:text-3xl lg:text-4xl', {
+		'pb-4 sm:pb-8 ': paddingBottom
+	});
+</script>
+
+<h1 class={className}>
 	<slot />
-</h2>
+</h1>
