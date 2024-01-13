@@ -9,7 +9,7 @@
 
 <div class="group flex gap-x-6">
 	<div
-		class="pl-4 transition-transform duration-300 group-hover:scale-105 group-hover:text-primary"
+		class="pl-4 pt-2 transition-transform duration-300 group-hover:scale-105 group-hover:text-primary"
 	>
 		<slot />
 	</div>
