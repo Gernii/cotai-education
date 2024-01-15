@@ -51,11 +51,6 @@ module.exports = {
             position: "after",
             group: "builtin",
           },
-          {
-            pattern: "$functions/**",
-            position: "after",
-            group: "builtin",
-          },
         ],
         "newlines-between": "always",
       },
@@ -64,7 +59,6 @@ module.exports = {
     "import/no-named-as-default": "off",
     "import/default": "off",
     "import/no-named-as-default-member": "off",
-    "turbo/no-undeclared-env-vars": "off",
   },
   ignorePatterns: ["*.*js"],
 };

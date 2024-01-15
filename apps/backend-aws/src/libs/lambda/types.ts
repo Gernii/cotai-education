@@ -27,3 +27,20 @@ export type Handler<
 	TPathParameters = void,
 	TQueryStringParameters = void
 > = AWSHandler<Event<TBody, TPathParameters, TQueryStringParameters>, Result>;
+
+export interface PrivateEvent<TBody, TPathParameters, TQueryStringParameters>
+	extends Event<TBody, TPathParameters, TQueryStringParameters> {
+	authContext: AuthContext;
+}
+
+export interface AuthContext {
+	user_id: string;
+	email: string;
+}
+
+// Handler type which gives us proper types on our event based on TBody and TPathParameters which are JSON schemas
+export type PrivateHandler<
+	TBody = void,
+	TPathParameters = void,
+	TQueryStringParameters = void
+> = AWSHandler<PrivateEvent<TBody, TPathParameters, TQueryStringParameters>, Result>;

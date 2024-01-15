@@ -2,8 +2,8 @@ interface FormatJSONResponseOptions {
 	statusCode?: number;
 }
 
-export const formatJSONResponse = (
-	response: Record<string, unknown> | string,
+export const formatJSONResponse = <R>(
+	response: R extends object ? R : Record<string, unknown> | string,
 	options?: FormatJSONResponseOptions
 ) => {
 	const body = typeof response === 'string' ? response : JSON.stringify(response);

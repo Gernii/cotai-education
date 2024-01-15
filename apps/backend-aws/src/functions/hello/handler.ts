@@ -9,4 +9,4 @@ const hello: Handler<HelloRequest, void, void> = async (event) => {
 	return formatJSONResponse({ message: event.body.hi });
 };
 
-export const main = initLambda(hello, { bodySchema: helloBodySchema });
+export const main = initLambda(hello, { validatorSchema: { bodySchema: helloBodySchema } });
