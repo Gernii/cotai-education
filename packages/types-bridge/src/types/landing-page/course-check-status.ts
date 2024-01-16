@@ -1,10 +1,10 @@
-import type { ContentSyncStatus } from "../enums";
+import type { ContentSyncStatus } from "../../enums";
 
 export namespace LandingPageCourseCheckStatus {
   export interface Request {
     id: string;
   }
-  export type Response = {
+  export interface Response {
     status: ContentSyncStatus;
-  };
+  }
 }

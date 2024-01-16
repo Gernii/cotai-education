@@ -27,7 +27,6 @@ export const handler = middy<APIGatewayRequestAuthorizerEventV2>().handler(
 					user_id: 'dev-1',
 					email: 'a@a.com'
 				};
-				console.log(generateAllow('dev-1', context, event.routeArn));
 
 				return generateAllow('dev-1', context, event.routeArn);
 			}

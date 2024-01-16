@@ -1,1 +1,1 @@
-export * from "./landingpage-course-check-status";
+export * from "./landing-page";

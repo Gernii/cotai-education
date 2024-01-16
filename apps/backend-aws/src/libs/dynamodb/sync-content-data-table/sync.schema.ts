@@ -1,4 +1,5 @@
 import { Entity } from 'dynamodb-toolbox';
+import { ContentSyncStatus } from '@repo/types-bridge';
 
 import { SyncContentDataTableDDB } from './init';
 
@@ -24,7 +25,14 @@ export const SyncDataSchema = new Entity({
 			type: 'string',
 			default: generateGSI1SK,
 			prefix: 'C#'
+		},
+		status: {
+			type: 'number',
+			default: ContentSyncStatus.OPEN,
+			map: 's',
+			required: true
 		}
+
 		// ttl: {
 		// 	type: 'number',
 		// 	map: 'ttl',

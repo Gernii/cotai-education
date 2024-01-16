@@ -4,7 +4,7 @@
   "description": "CoTAI Education Backend",
   "main": "serverless.ts",
   "scripts": {
-    "dev": "serverless offline --stage dev --reloadHandler",
+    "dev": "serverless offline start --stage dev-local --reloadHandler",
     "deploy": "npm run predeploy && serverless deploy --stage dev",
     "predeploy": "run-s \"predeploy.*\"",
     "predeploy.empty": "",
@@ -25,6 +25,7 @@
     "@types/node": "^20.10.7",
     "serverless-bundle": "^6.1.0",
     "serverless-deployment-bucket": "^1.6.0",
+    "serverless-dynamodb": "^0.2.47",
     "serverless-offline": "^13.3.2",
     "serverless-prune-plugin": "^2.0.2",
     "serverless-stack-output": "^0.2.3",

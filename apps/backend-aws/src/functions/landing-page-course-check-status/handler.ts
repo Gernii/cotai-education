@@ -17,9 +17,11 @@ const handler: PrivateHandler<void, LandingPageCourseCheckStatus.Request, void> 
 
 	if (isContentSynced) {
 		return formatJSONResponse<LandingPageCourseCheckStatus.Response>({
-			status: ContentSyncStatus.SYNCED
+			status: ContentSyncStatus.SYNCED_BLOCKED
 		});
 	}
+
+	await createContentSyncStatus(user_id, contentId);
 
 	return formatJSONResponse<LandingPageCourseCheckStatus.Response>({
 		status: ContentSyncStatus.NOT_SYNCED
@@ -33,6 +35,10 @@ const checkQueryContentSyncStatus = async (userId: string, contentId: string) =>
 		return true;
 	}
 	return false;
+};
+
+const createContentSyncStatus = async (userId: string, contentId: string) => {
+	await SyncDataSchema.put({ userId, contentId, status: ContentSyncStatus.OPEN });
 };
 
 export const main = initLambda(handler, {

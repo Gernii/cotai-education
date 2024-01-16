@@ -1,4 +1,8 @@
 export enum ContentSyncStatus {
-  SYNCED = "synced",
-  NOT_SYNCED = "not_synced",
+  PENDING,
+  OPEN,
+  FORCE_UPDATING,
+  SYNCED,
+  NOT_SYNCED,
+  SYNCED_BLOCKED,
 }

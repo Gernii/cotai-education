@@ -1,6 +1,7 @@
 import hello from '$functions/hello';
 import { authorizationPrivate } from '$functions/authorization-private';
 import { landingPageCourseCheckStatus } from '$functions/landing-page-course-check-status';
+import { landingPageCourseAccess } from '$functions/landing-page-course-access';
 
 import type { AWS } from '@serverless/typescript';
 import {
@@ -24,8 +25,9 @@ const serverlessConfiguration: AWS = {
 	service: 'cotai-education',
 	frameworkVersion: '3',
 	plugins: [
-		'serverless-offline',
 		'serverless-bundle',
+		'serverless-dynamodb',
+		'serverless-offline',
 		'serverless-prune-plugin',
 		'serverless-deployment-bucket',
 		'serverless-stack-output'
@@ -60,14 +62,18 @@ const serverlessConfiguration: AWS = {
 		environment: {
 			USER_POOL_ID: '${env:USER_POOL_ID}',
 			USER_POOL_CLIENT_ID: '${env:USER_POOL_CLIENT_ID}',
-			SYNC_CONTENT_DATA_TABLE_NAME: '${self:provider.stackName}-${env:SYNC_CONTENT_DATA_TABLE_NAME}'
+			SYNC_CONTENT_DATA_TABLE_NAME:
+				'${self:provider.stackName}-${env:SYNC_CONTENT_DATA_TABLE_NAME}',
+			DYNAMO_REGION: '${env:DYNAMO_REGION}',
+			DYNAMO_ENDPOINT: '${env:DYNAMO_ENDPOINT}'
 		}
 	},
 	// import the function via paths
 	functions: {
 		hello,
 		[authorizationPrivate.name]: authorizationPrivate,
-		landingPageCourseCheckStatus
+		landingPageCourseCheckStatus,
+		landingPageCourseAccess
 	},
 	package: { individually: true },
 	custom: {
@@ -90,7 +96,17 @@ const serverlessConfiguration: AWS = {
 			includeLayers: true,
 			number: 0
 		},
-		output: { handler: 'scripts/output.handler', file: 'stack/config.toml' }
+		output: { handler: 'scripts/output.handler', file: 'stack/config.toml' },
+		'serverless-dynamodb': {
+			start: {
+				docker: true,
+				port: 8000,
+				inMemory: true,
+				migrate: true,
+				seed: true,
+				convertEmptyValues: true
+			}
+		}
 	},
 	resources: {
 		Resources: {

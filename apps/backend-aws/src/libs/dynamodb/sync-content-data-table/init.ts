@@ -6,6 +6,10 @@ import { Table } from 'dynamodb-toolbox';
 const SYNC_CONTENT_DATA_TABLE_NAME =
 	process.env.SYNC_CONTENT_DATA_TABLE_NAME ?? 'cotai-education-dev-sync-content-data-table';
 
+const DYNAMO_REGION = process.env.DYNAMO_REGION ?? undefined;
+const DYNAMO_ENDPOINT =
+	process.env.DYNAMO_ENDPOINT !== '' ? process.env.DYNAMO_ENDPOINT : undefined;
+
 const translateConfig: TranslateConfig = {
 	marshallOptions: {
 		// Specify your client options as usual
@@ -15,7 +19,7 @@ const translateConfig: TranslateConfig = {
 const TableName = `${SYNC_CONTENT_DATA_TABLE_NAME}`;
 
 export const DynamoDocumentClient = DynamoDBDocumentClient.from(
-	new DynamoDBClient({ region: 'ap-southeast-1' }),
+	new DynamoDBClient({ region: DYNAMO_REGION, endpoint: DYNAMO_ENDPOINT }),
 	translateConfig
 );
 
