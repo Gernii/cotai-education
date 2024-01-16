@@ -4,7 +4,6 @@ import type { LandingPageCourseCheckStatus } from '@repo/types-bridge';
 import { ContentSyncStatus } from '@repo/types-bridge';
 
 import { pathParamsSchema } from './schema';
-import { requestMethod } from './config';
 
 import { initLambda } from '$libs/lambda';
 import type { PrivateHandler } from '$libs/lambda/types';
@@ -40,6 +39,5 @@ export const main = initLambda(handler, {
 	validatorSchema: {
 		pathParamsSchema
 	},
-	isPrivateRouter: true,
-	method: requestMethod
+	isPrivateRouter: true
 });
