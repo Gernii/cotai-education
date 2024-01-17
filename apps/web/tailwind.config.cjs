@@ -14,7 +14,7 @@ const config = {
 				header: defaultTheme.spacing['16'],
 				'header-sm': defaultTheme.spacing['14'],
 				'sub-header': defaultTheme.spacing['12'],
-				sidebar: defaultTheme.spacing['64'],
+				sidebar: defaultTheme.spacing['80'],
 				modal: '40rem',
 				'modal-lg': '50rem'
 			},

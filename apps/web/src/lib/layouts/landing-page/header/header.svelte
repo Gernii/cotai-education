@@ -2,11 +2,11 @@
 	import { setContext } from 'svelte';
 	import { writable } from 'svelte/store';
 
-	import CoTAILogo from '$lib/assets/logo/CoTAI-Ver0-640.png';
+	import LogoCotAI from '$lib/assets/logo/CoTAI-Ver0-640.png?imagetools';
+
+	import { Picture } from '$lib/components/ui/picture';
 
 	import { navigate } from '$lib/lib/i18n/routing';
-
-	import * as m from '$i18n/messages';
 
 	import { HeaderScrollContext } from './context';
 	import { Navigator } from './navigator';
@@ -59,12 +59,7 @@
 		</div>
 		<div class="h-full flex-shrink-0 max-lg:navbar-center">
 			<a href={navigate('/')} class="inline-block h-full w-full">
-				<img
-					loading="lazy"
-					src={CoTAILogo}
-					alt={m.mainLogo()}
-					class="h-full w-full object-contain"
-				/>
+				<Picture meta={LogoCotAI} alt="Logo CoTAI" />
 			</a>
 		</div>
 
