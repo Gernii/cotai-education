@@ -7,5 +7,7 @@ export namespace LandingPageCourseForceAccess {
     "force-stop-user-id": string;
   }
 
-  export type Response = string;
+  export interface Response {
+    success: boolean;
+  }
 }

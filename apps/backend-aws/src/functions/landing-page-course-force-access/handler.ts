@@ -26,7 +26,9 @@ const handler: PrivateHandler<
 
 	await createContentSyncStatus(userId, contentId);
 
-	return formatJSONResponse('success');
+	return formatJSONResponse<LandingPageCourseForceAccess.Response>({
+		success: true
+	});
 };
 
 const checkOtherUserContentSyncStatusWithId = async (userId: string, contentId: string) => {

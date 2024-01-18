@@ -14,8 +14,8 @@ export const prerender = true;
 
 export const load = async ({ fetch }) => {
 	const [programsRawData, reviewsRawData] = await Promise.all([
-		fetcher<LandingPage_LayoutData_ProgramProps[]>('/data/programs.json', fetch),
-		fetcher<LandingPage_LayoutData_ReviewResponseProps[]>('/data/reviews.json', fetch)
+		fetcher<LandingPage_LayoutData_ProgramProps[]>(fetch, '/data/programs.json'),
+		fetcher<LandingPage_LayoutData_ReviewResponseProps[]>(fetch, '/data/reviews.json')
 	]);
 
 	const reviews = reviewsRawData ? reviewsMappingData(reviewsRawData) : undefined;

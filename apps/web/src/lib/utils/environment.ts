@@ -1,6 +1,7 @@
 export const API_ID = '429hms92i2';
 export const API_REGION = 'ap-southeast-1';
-export const BASE_URL = `https://${API_ID}.execute-api.${API_REGION}.amazonaws.com`;
+// export const BASE_URL = `https://${API_ID}.execute-api.${API_REGION}.amazonaws.com`;
+export const BASE_URL = `http://localhost:4000`;
 
 export const AUTH_PATH = '/auth';
 

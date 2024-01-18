@@ -13,7 +13,7 @@ export const USER_POOL_ID = process.env.USER_POOL_ID;
 export const USER_POOL_CLIENT_ID = process.env.USER_POOL_CLIENT_ID;
 
 export const handler = middy<APIGatewayRequestAuthorizerEventV2>().handler(
-	async (event, _context, callback) => {
+	async (event, _context) => {
 		try {
 			if (!USER_POOL_ID || !USER_POOL_ID || !TOKEN_USE || !USER_POOL_CLIENT_ID) {
 				throw Error();
@@ -41,7 +41,8 @@ export const handler = middy<APIGatewayRequestAuthorizerEventV2>().handler(
 
 			const context = {
 				user_id: payload.sub,
-				email: payload.email as string,
+				username: payload['cognito:username'] as string,
+				email: payload.email as string | undefined,
 				group: payload['cognito:groups']?.reduce((prev, cur, idx) => {
 					if (idx === 0) {
 						return cur;
@@ -50,10 +51,17 @@ export const handler = middy<APIGatewayRequestAuthorizerEventV2>().handler(
 				}, '')
 			};
 
+			if (!context.email) {
+				delete context.email;
+			}
+
+			if (!context.group) {
+				delete context.group;
+			}
+
 			return generateAllow(payload.sub, context, event.routeArn);
 		} catch (error) {
-			callback('Unauthorized');
-			return;
+			return 'Unauthorized';
 		}
 	}
 );

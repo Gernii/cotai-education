@@ -1,8 +1,12 @@
 import type { LoadEvent } from '@sveltejs/kit';
 
-export const fetcher = async <T>(input: string | URL | Request, fetch: LoadEvent['fetch']) => {
+export const fetcher = async <T>(
+	fetch: LoadEvent['fetch'],
+	input: string | URL | Request,
+	init?: RequestInit | undefined
+) => {
 	try {
-		const res = await fetch(input);
+		const res = await fetch(input, init);
 
 		const data = await res.json();
 

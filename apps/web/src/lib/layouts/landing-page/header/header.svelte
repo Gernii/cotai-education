@@ -8,11 +8,12 @@
 
 	import { navigate } from '$lib/lib/i18n/routing';
 
+	import * as m from '$i18n/messages';
+
 	import { HeaderScrollContext } from './context';
 	import { Navigator } from './navigator';
 	import { SidenavTrigger } from './sidenav';
 	import { headerClassNameHandler } from './styles';
-
 	interface $$Props {
 		disableScrollEvent?: boolean;
 	}
@@ -59,7 +60,7 @@
 		</div>
 		<div class="h-full flex-shrink-0 max-lg:navbar-center">
 			<a href={navigate('/')} class="inline-block h-full w-full">
-				<Picture meta={LogoCotAI} alt="Logo CoTAI" />
+				<Picture meta={LogoCotAI} alt={m.mainLogo()} />
 			</a>
 		</div>
 

@@ -2,6 +2,7 @@ import hello from '$functions/hello';
 import { authorizationPrivate } from '$functions/authorization-private';
 import { landingPageCourseCheckStatus } from '$functions/landing-page-course-check-status';
 import { landingPageCourseAccess } from '$functions/landing-page-course-access';
+import { landingPageCourseForceAccess } from '$functions/landing-page-course-force-access';
 
 import type { AWS } from '@serverless/typescript';
 import {
@@ -73,7 +74,8 @@ const serverlessConfiguration: AWS = {
 		hello,
 		[authorizationPrivate.name]: authorizationPrivate,
 		landingPageCourseCheckStatus,
-		landingPageCourseAccess
+		landingPageCourseAccess,
+		landingPageCourseForceAccess
 	},
 	package: { individually: true },
 	custom: {
@@ -103,8 +105,8 @@ const serverlessConfiguration: AWS = {
 				port: 8000,
 				inMemory: true,
 				migrate: true,
-				seed: true,
-				convertEmptyValues: true
+				convertEmptyValues: true,
+				sharedDb: true
 			}
 		}
 	},

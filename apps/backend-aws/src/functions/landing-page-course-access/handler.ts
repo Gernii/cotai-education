@@ -1,17 +1,29 @@
 import { formatJSONResponse } from '$utils/format-json-response';
 
 import type { LandingPageCourseAccess } from '@repo/types-bridge';
-import { ContentSyncStatus } from '@repo/types-bridge';
+import { ContentSyncStatus, LandingPageCourseAccessRequestType } from '@repo/types-bridge';
 
-import { pathParamsSchema } from './schema';
+import { pathParamsSchema, bodySchema } from './schema';
 
 import { initLambda } from '$libs/lambda';
 import type { PrivateHandler } from '$libs/lambda/types';
 import { SyncDataSchema } from '$libs/dynamodb/sync-content-data-table';
 
-const handler: PrivateHandler<void, LandingPageCourseAccess.Request, void> = async (event) => {
+const handler: PrivateHandler<
+	LandingPageCourseAccess.RequestBody,
+	LandingPageCourseAccess.RequestPathParams,
+	void
+> = async (event) => {
 	const { id: contentId } = event.pathParameters;
+	const { type } = event.body;
 	const { user_id } = event.authContext;
+
+	if (type === LandingPageCourseAccessRequestType.REQUEST_CHECKOUT) {
+		await removeContentSyncStatus(user_id, contentId);
+		return formatJSONResponse<LandingPageCourseAccess.Response>({
+			status: ContentSyncStatus.NOT_SYNCED
+		});
+	}
 
 	const contentStatus = await checkQueryContentSyncStatus(user_id, contentId);
 
@@ -41,6 +53,10 @@ const createContentSyncStatus = async (userId: string, contentId: string) => {
 	await SyncDataSchema.update({ userId, contentId, status: ContentSyncStatus.SYNCED });
 };
 
+const removeContentSyncStatus = async (userId: string, contentId: string) => {
+	await SyncDataSchema.delete({ userId, contentId });
+};
+
 const checkQueryContentSyncStatus = async (userId: string, contentId: string) => {
 	const res = await SyncDataSchema.get({ userId, contentId });
 
@@ -68,7 +84,8 @@ const checkOtherUsersContentSyncStatus = async (userId: string, contentId: strin
 
 export const main = initLambda(handler, {
 	validatorSchema: {
-		pathParamsSchema
+		pathParamsSchema,
+		bodySchema
 	},
 	isPrivateRouter: true
 });

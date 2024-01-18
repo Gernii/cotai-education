@@ -20,5 +20,5 @@
 	{#each Object.entries(sources) as [type, srcMeta]}
 		<source type="image/{type}" srcset={srcMeta} />
 	{/each}
-	<img src={fallback.src} {alt} class={cx('h-full object-contain', imageClass)} {loading} />
+	<img src={fallback.src} {alt} class={cx('h-full w-full object-contain', imageClass)} {loading} />
 </picture>

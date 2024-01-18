@@ -8,7 +8,7 @@ import { validator } from './middlewares/validator';
 import type { Handler, PrivateHandler } from './types';
 import { privateRouter } from './middlewares/private-router';
 export interface InitLambdaOptions {
-	validatorSchema?: ValidatorSchema | null;
+	validatorSchema?: ValidatorSchema;
 	isPrivateRouter?: boolean;
 }
 
@@ -16,7 +16,6 @@ export const initLambda = (
 	handler: Handler<never, never, never> | PrivateHandler<never, never, never>,
 	options?: InitLambdaOptions
 ) => {
-	const { validatorSchema, isPrivateRouter } = options;
 	const wrapper = middy()
 		.use(httpEventNormalizerMiddleware())
 		.use(
@@ -25,11 +24,11 @@ export const initLambda = (
 			})
 		);
 
-	if (validatorSchema !== null) {
-		wrapper.use(validator(validatorSchema));
+	if (options?.validatorSchema !== undefined) {
+		wrapper.use(validator(options.validatorSchema));
 	}
 
-	if (isPrivateRouter) {
+	if (options?.isPrivateRouter) {
 		wrapper.use(privateRouter());
 	}
 

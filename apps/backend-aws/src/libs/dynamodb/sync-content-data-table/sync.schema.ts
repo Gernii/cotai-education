@@ -31,6 +31,11 @@ export const SyncDataSchema = new Entity({
 			default: ContentSyncStatus.OPEN,
 			map: 's',
 			required: true
+		},
+		username: {
+			type: 'string',
+			map: 'u_n',
+			required: true
 		}
 
 		// ttl: {

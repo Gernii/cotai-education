@@ -26,11 +26,11 @@
 		<ul class="menu px-4 py-0">
 			<li>
 				<a
-					href={routerPath.admin.contents}
+					href={routerPath.admin.courses}
 					class="group"
-					class:active={$page.url.pathname === routerPath.admin.contents}
+					class:active={$page.url.pathname === routerPath.admin.courses}
 				>
-					<IconDocumentText class="size-5" /> Contents
+					<IconDocumentText class="size-5" /> Courses
 				</a>
 			</li>
 		</ul>

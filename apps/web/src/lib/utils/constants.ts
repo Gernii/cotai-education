@@ -10,7 +10,7 @@ export const routerPath = {
 			authForgotPassword: '/admin/auth/forgot-password'
 		},
 		dashboard: '/admin',
-		contents: '/admin/contents'
+		courses: '/admin/courses'
 	}
 
 	// cars: {
@@ -29,11 +29,53 @@ export const routerPath = {
 	// }
 };
 
-const generateLocalAPIPath = (path: string) => `/api${path}`;
+export const SEARCH_PARAMS_ACTION = 'action';
 
-export const signOutAPIRouterPath = () => {
+const generateLocalAPIAction = (action: string | number) => `${SEARCH_PARAMS_ACTION}=${action}`;
+
+export enum CourseAPIRouterAction {
+	CHECK_ACCESS,
+	FORCE_ACCESS,
+	CHECKOUT
+}
+
+export const courseAPIRouterPath = () => {
+	const courseCheckStatusWithId = (_id: string) => {
+		return {
+			external: `/landing-page/course/check-status/${_id}`
+		};
+	};
+
+	const courseAccessWithId = (_id: string) => {
+		return {
+			external: `/landing-page/course/access/${_id}`
+		};
+	};
+
+	const courseForceAccessWithId = (_id: string) => {
+		return {
+			external: `/landing-page/course/force-access/${_id}`
+		};
+	};
+
+	const courseWithId = (_id: string) => {
+		return {
+			local: `${routerPath.admin.courses}/${_id}`
+		};
+	};
+
+	const action = {
+		checkAccess: generateLocalAPIAction(CourseAPIRouterAction.CHECK_ACCESS),
+		forceAccess: generateLocalAPIAction(CourseAPIRouterAction.FORCE_ACCESS),
+		checkout: generateLocalAPIAction(CourseAPIRouterAction.CHECKOUT)
+	};
+
 	return {
-		local: generateLocalAPIPath(`/sign-out`)
+		courseWithId,
+		courseCheckStatusWithId,
+		courseAccessWithId,
+		courseForceAccessWithId,
+		action
 	};
 };
 
