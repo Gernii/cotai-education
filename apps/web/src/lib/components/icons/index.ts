@@ -10,7 +10,11 @@ import Clock from './clock.svelte';
 import TeamWork from './teamwork.svelte';
 import Rocket from './rocket.svelte';
 import Idea from './idea.svelte';
-
+import Eye from './eye.svelte';
+import EyeSlash from './eye-slash.svelte';
+import DocumentText from './document-text.svelte';
+import User from './user.svelte';
+import ArrowRightStartOnRectangle from './arrow-right-start-on-rectangle.svelte';
 export {
 	Bars3 as IconBars3,
 	ChevronDown as IconChevronDown,
@@ -19,6 +23,11 @@ export {
 	Idea as IconIdea,
 	TeamWork as IconTeamWork,
 	Rocket as IconRocket,
+	Eye as IconEye,
+	EyeSlash as IconEyeSlash,
+	DocumentText as IconDocumentText,
+	User as IconUser,
+	ArrowRightStartOnRectangle as IconArrowRightStartOnRectangle,
 
 	// Country Flag
 	FlagUs as IconFlagUs,

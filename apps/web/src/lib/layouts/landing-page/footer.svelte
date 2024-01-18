@@ -1,7 +1,8 @@
 <script lang="ts">
-	import CoTAILogo from '$lib/assets/logo/CoTAI-Ver0-640.png';
+	import LogoCotAI from '$lib/assets/logo/CoTAI-Ver0-640.png?imagetools';
 
 	import { Container, ContainerContent } from '$lib/components/ui/container';
+	import { Picture } from '$lib/components/ui/picture';
 
 	import { navigate } from '$lib/lib/i18n/routing';
 
@@ -61,12 +62,13 @@
 					</div>
 				</div>
 				<div class="h-36">
-					<img
+					<!-- <img
 						loading="lazy"
 						src={CoTAILogo}
 						alt={m.mainLogo()}
 						class="h-full w-full object-contain"
-					/>
+					/> -->
+					<Picture meta={LogoCotAI} alt={m.mainLogo()} />
 				</div>
 			</div>
 			<div class="flex flex-col items-center justify-between gap-y-3 lg:flex-row">
