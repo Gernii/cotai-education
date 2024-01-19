@@ -15,7 +15,7 @@
 	$: courses = pd.programDetails.courses.map((courseId) => ({
 		id: courseId,
 		title: pd.courses[courseId].title,
-		description: pd.courses[courseId].description,
+		description: pd.courses[courseId].descriptionRaw,
 		thumbnail: pd.courses[courseId].thumbnail
 	})) as CoursesListProps_Courses[];
 </script>

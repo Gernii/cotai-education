@@ -19,6 +19,7 @@ export const courseMappingData = (course: CourseResponseProps): CourseProps => {
 		registerUrl: course['register-url'],
 		curriculum: course.curriculum.map((curriculum) => curriculumMappingData(curriculum)),
 		description: course.description ? parseMarkdownToHTML(course.description) : undefined,
+		descriptionRaw: course.description ?? undefined,
 		components: course.components.map((component) => componentDataMappingData(component))
 	};
 

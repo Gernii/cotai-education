@@ -47,7 +47,7 @@
 					isSlideRendered = true;
 				}
 			},
-			[autoSwitchSlide(2000)]
+			[autoSwitchSlide(5000)]
 		);
 
 		carouselSliderRef = slider;

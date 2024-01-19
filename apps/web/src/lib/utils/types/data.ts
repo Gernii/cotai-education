@@ -37,6 +37,7 @@ export interface CourseProps {
 	embed?: string;
 	thumbnail?: string;
 	description?: string;
+	descriptionRaw?: string;
 	curriculum: CurriculumProps[];
 	components: ComponentDataProps[];
 }

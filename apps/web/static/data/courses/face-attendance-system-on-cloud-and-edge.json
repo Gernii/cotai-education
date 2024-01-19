@@ -1,0 +1,177 @@
+{
+	"title": "Face Attendance System On Cloud And Edge",
+	"register-url": "",
+	"thumbnail": "/images/logo/CoTAI-Ver0-320.png",
+	"description": "Khóa học sẽ giúp học viên hiểu được cách thức để triển khai hệ thông Face recognition thành 1 ứng dụng điểm danh sử dụng khuôn mặt. \n\nKhóa học phù hợp với các học viên đã biết sử dụng các thư viện và framework Machine learning, deep learning như Pytorch, Tensorflow, Scikit-learn\n\nKhóa học sẽ hướng dẫn học viên tối ưu hóa mô hình face detection, face recognition để chạy thuần CPU, sau đó deploy model AI lên server, embedded system, serverless. \n\nNgoài ra khóa học sẽ giúp xây dựng hệ thống sử dụng relational database, serverless backend và thiết kế API trên cloud\n\nXây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python",
+	"components": [
+		{
+			"type": 0,
+			"title": "Làm việc với các mô hình AI nổi tiếng",
+			"image": "/images/logo/CoTAI-Ver0-320.png",
+			"background": true,
+			"hidden": false,
+			"description": "Các bạn sẽ được giới thiệu và sử dụng các framework, thư viện và các mô hình AI nổi tiếng về nhận diện khuôn mặt."
+		},
+		{
+			"type": 0,
+			"title": "Tối ưu model AI cho production",
+			"image": "/images/logo/CoTAI-Ver0-320.png",
+			"background": false,
+			"hidden": false,
+			"description": "Khóa học sẽ hướng dẫn học viên tối ưu hóa mô hình face detection, face recognition để chạy thuần CPU, sau đó triển khai mô AI lên hệ thống đám mây AWS, hệ thống nhúng Raspberry Pi, Serverless."
+		},
+		{
+			"type": 0,
+			"title": "Xây dựng hệ thống backend cho ứng dụng điểm danh bằng khuôn mặt",
+			"image": "/images/logo/CoTAI-Ver0-320.png",
+			"background": false,
+			"hidden": false,
+			"description": "Thiết kế hệ thống serverless backend, API trên cloud kết hợp với Relational Database."
+		},
+		{
+			"type": 0,
+			"title": "Xây dựng ứng dụng trên mạch nhúng Raspberry Pi",
+			"image": "/images/logo/CoTAI-Ver0-320.png",
+			"background": false,
+			"hidden": false,
+			"description": "- Tối ưu hóa mô hình để chạy trên Raspberry Pi, tối ưu camera để phù hợp với môi trường thiếu sáng.\n- Hạn chế giật lag và FPS thấp bằng xử lý đa luồng AI/Camera trong Python."
+		}
+	],
+	"curriculum": [
+		{
+			"title": "Giới thiệu tổng quan",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Giới thiệu về face recognition\n- Các ứng dụng thực tế\n- Luồng xử lý của face recognition\n\t- Face Detection\n\t- Landmarks Detection\n\t- Feature Extraction\n\t- Embedding Search\n- Giới thiệu Mediapipe"
+			}
+		},
+		{
+			"title": "Setup môi trường và giải thích chi tiết sâu vào luồng xử lý của face recognition",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Setup môi trường code trên máy tính\n- Anaconda & Python\n- Thư viện:\n\t- Pytorch\n\t- Numpy\n\t- OpenCV\n\t- Pillow\n\t- Onnxruntime\n\t- Scikit-learn\n\t- Openvino\n- Lý thuyết về Face detection và landmark detection\n- Face alignment\n- Tại sao phải căn chỉnh khuôn mặt?\n- Cách để căn chỉnh khuôn mặt\n- Face embedding:\n- Giải thích ngắn gọn về trích xuất đặc trưng \n- Embedding search\n- Thuật toán KD-Tree\n- Thuật toán Ball-Tree\n- Faiss"
+			}
+		},
+		{
+			"title": "Thực hành làm ứng dụng face recognition bằng repo Insightface",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Dùng opensource Insightface để xây dựng ứng dụng face recognition\n- Sử dụng thuật toán Ball-Tree để search embedding\n- Làm database khuôn mặt bằng nhiều khuôn mặt khác nhau"
+			}
+		},
+		{
+			"title": "Thực hành làm ứng dụng face recognition bằng repo Insightface",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Giải thích về các runtime (CPU Arm, CPU Intel, NPU, GPU)\n- Khi nào thì sử dụng Openvino hoặc Onnxruntime hoặc Pytorch? \n- Chạy mô hình Onnx và Openvino."
+			}
+		},
+		{
+			"title": "Tối ưu mô hình quantize từ FP16 -> INT8",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Vì sao cần phải quantize model?\n- Hướng dẫn quantize model sang INT8\n- So sánh mô hình FP16 và INT8:\n\t- Kích thước file\n\t- Độ chính xác\n\t- Tốc độ chạy"
+			}
+		},
+		{
+			"title": "Xây dựng pipeline hoàn chỉnh cho face recognition",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Xử lý tấm hình từ webcam cho mô hình Face detection \n- Sử dụng Face detection để nhận diện khuôn mặt\n- Xử lý cắt hình cho Face embedding\n- Search embedding trong database khuôn mặt"
+			}
+		},
+		{
+			"title": "Làm hệ thống backend, API, Database",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Cài đặt và sử dụng PostgreSQL \n- Hướng dẫn làm Backend và API đơn giản bằng Python\n- Liên kết database với Backend để ghi và nhận dữ liệu"
+			}
+		},
+		{
+			"title": "Làm hệ thống backend, API, Database",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Thiết kế backend theo kiến trúc N-layered\n- Cấu trúc thư mục và dự án, git\n- Hướng dẫn làm các API dựa theo bản thiết kế hệ thống"
+			}
+		},
+		{
+			"title": "Làm hệ thống serverless và deploy lên AWS",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Giới thiệu về serverless và AWS cloud service\n- Framework quản lý và deploy serverless\n- Làm serverless API đơn giản trên AWS"
+			}
+		},
+		{
+			"title": "Làm hệ thống serverless và deploy lên AWS",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Hướng dẫn làm serverless AI service cho hệ thống điểm danh khuôn mặt\n- Chuyển đổi hệ thống backend truyền thống thành serverless"
+			}
+		},
+		{
+			"title": "Làm hệ thống serverless và deploy lên AWS",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Tìm hiểu về MQTT thay thế cho API truyền thống.\n- Tạo broker và cách nhận message để xử lý trên AWS"
+			}
+		},
+		{
+			"title": "Làm hệ thống Face attendance trên Raspberry Pi",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Giới thiệu về Raspberry Pi.\n- Hướng dẫn setup và build thư viện cho Raspberry Pi\n- Cài đặt và sử dụng Python để giao tiếp với camera CSI"
+			}
+		},
+		{
+			"title": "Làm hệ thống Face attendance trên Raspberry Pi",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Chạy các mô hình AI face trên Raspberry Pi\n- Tích hợp camera CSI và chạy face recognition \n- Giới thiệu thư viện làm UI bằng Python"
+			}
+		},
+		{
+			"title": "Làm hệ thống Face attendance trên Raspberry Pi",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Làm UI đơn giản để lấy mẫu khuôn mặt và điểm danh\n- Tích hợp MQTT vào để gửi dữ liệu điểm danh lên database"
+			}
+		},
+		{
+			"title": "Làm hệ thống Face attendance trên Raspberry Pi",
+			"hidden": false,
+			"classes-countable": true,
+			"details": {
+				"hidden": true,
+				"content": "- Xử lý đa luồng cho AI để tăng trải nghiệm người dùng\n- Giải thích về các tham số cho camera của Picamera\n- Tối ưu camera để có thể hoạt động trong cả môi trường sáng và tối"
+			}
+		}
+	]
+}

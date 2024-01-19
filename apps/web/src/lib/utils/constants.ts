@@ -1,4 +1,4 @@
-export const defaultImage = 'https://i.imgur.com/uAfO3SL.jpeg';
+export const defaultImage = '/images/logo/CoTAI-Ver0-320.png';
 
 export const routerPath = {
 	admin: {

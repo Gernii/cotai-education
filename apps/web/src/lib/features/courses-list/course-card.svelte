@@ -30,7 +30,7 @@
 					height={200}
 					width={448}
 					loading="lazy"
-					class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+					class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
 				/>
 			</figure>
 		</a>

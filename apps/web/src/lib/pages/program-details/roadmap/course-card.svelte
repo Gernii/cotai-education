@@ -27,13 +27,15 @@
 </script>
 
 {#if title}
-	<li class="flex gap-x-4">
-		<div class="relative flex w-14 flex-col items-center">
-			<div class="absolute top-4 flex size-12 items-center justify-center rounded-full bg-primary">
-				<div class="size-6 rounded-full bg-secondary"></div>
+	<li class="flex gap-x-1 sm:gap-x-4">
+		<div class="relative flex w-7 flex-col items-center sm:w-14">
+			<div
+				class="absolute top-4 flex size-6 items-center justify-center rounded-full bg-primary sm:size-12"
+			>
+				<div class="size-3 rounded-full bg-secondary sm:size-6"></div>
 			</div>
 			<div
-				class={cx('w-2 bg-primary', {
+				class={cx('w-1 bg-primary sm:w-2', {
 					'mt-4 h-[calc(100%-1rem)]': idx === 0,
 					'h-full': idx !== 0
 				})}
@@ -46,11 +48,11 @@
 		>
 			<div class="card-body items-start">
 				<div
-					class={cx('grid grid-cols-1 gap-x-16 gap-y-8 ', {
+					class={cx('grid w-full grid-cols-1 gap-x-16 gap-y-8', {
 						'lg:grid-cols-5': !!thumbnail
 					})}
 				>
-					<div class="col-span-1 space-y-4 text-start lg:col-span-3">
+					<div class="col-span-1 flex flex-col gap-y-4 text-start lg:col-span-3">
 						<div>
 							<p class="font-semibold">{m.programDetails_courseRoadmap({ number: idx + 1 })}</p>
 							<h1 class="text-xl font-bold">
@@ -63,7 +65,9 @@
 							<IconClock class="size-5 stroke-2" />
 							<p>{m.totalSessions({ number: totalSessions })}</p>
 						</div>
-						<TextContent text={description} />
+						<div class="flex-grow">
+							<TextContent text={description} />
+						</div>
 						<div class="card-actions">
 							<a href={navigate(`/courses/${id}`)} class="btn btn-primary">
 								{m.showDetails()}
@@ -81,7 +85,7 @@
 										alt={m.thumbnail({ title: title })}
 										height={200}
 										width={448}
-										class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+										class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
 									/>
 								</figure>
 							</div>
