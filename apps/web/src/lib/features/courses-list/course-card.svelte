@@ -8,12 +8,15 @@
 
 	import type { CoursesListProps_Courses } from './types';
 
+	import { IconClock } from '$lib/components/icons';
+
 	type $$Props = CoursesListProps_Courses;
 
 	export let id: $$Props['id'];
 	export let title: $$Props['title'] = undefined;
 	export let thumbnail: $$Props['thumbnail'] = undefined;
 	export let description: $$Props['description'] = undefined;
+	export let totalLessons: $$Props['totalLessons'] = 0;
 
 	$: courseNavigate = navigate(routingPathCoursesId(id));
 </script>
@@ -39,10 +42,14 @@
 			<div>
 				<a
 					href={courseNavigate}
-					class="flex-grow-0 text-base font-semibold hover:text-primary lg:text-xl"
+					class="flex-grow-0 text-base font-bold hover:text-primary lg:text-xl"
 				>
 					{title}
 				</a>
+			</div>
+			<div class="flex items-center gap-x-1">
+				<IconClock class="size-4" />
+				<p>{m.totalSessions({ number: totalLessons })}</p>
 			</div>
 			<p class="line-clamp-3 flex-grow">{description}</p>
 		</div>

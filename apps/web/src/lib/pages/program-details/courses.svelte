@@ -16,7 +16,8 @@
 		id: courseId,
 		title: pd.courses[courseId].title,
 		description: pd.courses[courseId].descriptionRaw,
-		thumbnail: pd.courses[courseId].thumbnail
+		thumbnail: pd.courses[courseId].thumbnail,
+		totalLessons: pd.courses[courseId].totalLessons
 	})) as CoursesListProps_Courses[];
 </script>
 

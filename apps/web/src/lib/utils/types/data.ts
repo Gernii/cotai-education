@@ -40,6 +40,7 @@ export interface CourseProps {
 	descriptionRaw?: string;
 	curriculum: CurriculumProps[];
 	components: ComponentDataProps[];
+	totalLessons: number;
 }
 
 export interface CourseResponseProps {

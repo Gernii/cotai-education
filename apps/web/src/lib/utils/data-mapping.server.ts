@@ -20,7 +20,8 @@ export const courseMappingData = (course: CourseResponseProps): CourseProps => {
 		curriculum: course.curriculum.map((curriculum) => curriculumMappingData(curriculum)),
 		description: course.description ? parseMarkdownToHTML(course.description) : undefined,
 		descriptionRaw: course.description ?? undefined,
-		components: course.components.map((component) => componentDataMappingData(component))
+		components: course.components.map((component) => componentDataMappingData(component)),
+		totalLessons: countTotalLessons(course.curriculum)
 	};
 
 	return mappedCourse;
@@ -72,4 +73,15 @@ export const componentDataMappingData = (
 	};
 
 	return mappedComponentData;
+};
+
+export const countTotalLessons = (curriculum: CurriculumResponseProps[]) => {
+	const totalLessons: number = curriculum.reduce((prev, lesson) => {
+		if (!lesson.hidden) {
+			return prev + 1;
+		}
+		return prev;
+	}, 0);
+
+	return totalLessons;
 };

@@ -8,6 +8,7 @@ import type {
 
 import type { CourseResponseProps, ProgramResponseProps } from '$lib/utils/types/data';
 import { staticDataFetcher } from '$lib/utils/static-data-fetcher';
+import { countTotalLessons } from '$lib/utils/data-mapping.server.js';
 
 export const load = async ({ fetch, parent }): Promise<HomePageDataProps> => {
 	const preData = await parent();
@@ -69,7 +70,8 @@ const treeShakingCourseReponse = (course: CourseResponseProps): HomePageData_Cou
 		id: course.id,
 		title: course.title,
 		thumbnail: course.thumbnail,
-		description: course.description
+		description: course.description,
+		totalLessons: countTotalLessons(course.curriculum)
 	};
 };
 
@@ -79,7 +81,8 @@ const treeShakingProgramReponse = (course: ProgramResponseProps): HomePageData_P
 		title: course.title,
 		coursesHighlighted: course['courses-highlighted'],
 		targets: course.targets,
-		hidden: course.hidden
+		hidden: course.hidden,
+		description: course.description
 	};
 };
 

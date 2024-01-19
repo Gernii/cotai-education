@@ -12,4 +12,6 @@ export interface CoursesListProps {
 export type CoursesListProps_Courses = Pick<
 	CourseProps,
 	'id' | 'title' | 'thumbnail' | 'description'
->;
+> & {
+	totalLessons: number;
+};

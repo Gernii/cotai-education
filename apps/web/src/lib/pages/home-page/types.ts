@@ -13,4 +13,6 @@ export type HomePageData_ProgramProps = Pick<
 export type HomePageData_CourseProps = Pick<
 	CourseProps,
 	'id' | 'title' | 'thumbnail' | 'description'
->;
+> & {
+	totalLessons: number;
+};

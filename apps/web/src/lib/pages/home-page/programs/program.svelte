@@ -31,7 +31,8 @@
 			id: courseId,
 			title: pdCourses[courseId].title,
 			description: pdCourses[courseId].description,
-			thumbnail: pdCourses[courseId].thumbnail
+			thumbnail: pdCourses[courseId].thumbnail,
+			totalLessons: pdCourses[courseId].totalLessons
 		})
 	);
 </script>
