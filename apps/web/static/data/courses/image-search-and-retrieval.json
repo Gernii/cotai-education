@@ -1,5 +1,5 @@
 {
-	"title": "Image Search & Retrieval Project Based Training",
+	"title": "Image Search & Retrieval",
 	"thumbnail": "/images/logo/CoTAI-Ver0-320.png",
 	"description": "This course aims to provide learners with a comprehensive understanding of Image Similarity Search. By utilizing a top-down approach, the course will enable learners to:\n\n1.  **Research-Oriented Learning**: Develop the ability to independently research and gather relevant resources, including: debugging code, case studies and existing solutions in the field of image similarity search. \n2.  **System Design Based on Real-Life Requirements**: Learn to design robust and efficient image similarity search systems tailored to real-life requirements.\n3.  **Hands-On Development with Pretrained Models**: Gain practical experience in coding and developing their own image similarity search systems using pretrained models. ",
 	"components": [
