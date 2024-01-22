@@ -3,8 +3,6 @@
 
 	import { navigating } from '$app/stores';
 
-	import { Toaster } from 'svelte-sonner';
-
 	import * as m from '$i18n/messages';
 </script>
 
@@ -14,4 +12,3 @@
 {/if}
 
 <slot />
-<Toaster position="top-right" />

@@ -36,6 +36,7 @@
 	"error404_description": "Trang mà bạn đang tìm không tồn tại. Cách bạn đến đây thật là bí ẩn. Nhưng bạn có thể nhấn nút dưới đây để quay về trang chủ.",
 	"homepage": "Trang chủ",
 	"reviewsTitle": "Đánh giá từ các học viên",
+	"reviewBullet": "Đánh giá từ các học viên #{idx}",
 	"reviewCourseNameWithSubtitle": "Khoá học: {title} - {subtitle}",
 	"reviewCourseName": "Khoá học: {title}",
 	"whoweare": "Giới thiệu",
@@ -49,6 +50,10 @@
 	"whyChooseUs_items_2_description": "Các mô phỏng & minh họa trong học liệu giúp trực quan hóa kiến thức một cách sinh động cuốn hút & dễ hiểu, kích thích tư duy sáng tạo.",
 	"whyChooseUs_items_3_description": "Hứng khởi tự tay lập trình các dự án và ứng dụng AI dưới sự hướng dẫn trực tiếp của các chuyên gia và kỹ sư AI nhiều kinh nghiệm.",
 	"whyChooseUs_thumbnail": "Hình ảnh minh họa chương trình đào tạo",
+	"whoWeAre_thumbnail": "Hình ảnh minh họa về giới thiệu về công ty",
+	"layout_header_openThemeMenu": "Mở bảng chọn giao diện",
+	"light": "Sáng",
+	"dark": "Tối",
 	"text": "Chương trình",
-	"whoWeAre_thumbnail": "Hình ảnh minh họa về giới thiệu về công ty"
+	"system": "Hệ thống"
 }

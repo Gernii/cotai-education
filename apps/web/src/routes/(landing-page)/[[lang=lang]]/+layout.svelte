@@ -4,6 +4,8 @@
 
 	import { PUBLIC_HOSTNAME } from '$env/static/public';
 
+	import { ThemeController } from '$lib/components/ui/theme-controller';
+
 	import { LandingPageLayout } from '$lib/layouts/landing-page';
 
 	import { currentLang, route } from '$lib/lib/i18n/routing';
@@ -34,6 +36,8 @@
 		<link rel="alternate" hreflang={lang} href={`${hostname}${route($page.url.pathname, lang)}`} />
 	{/each}
 </svelte:head>
+
+<ThemeController />
 
 {#key $currentLang}
 	<LandingPageLayout>

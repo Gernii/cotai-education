@@ -23,7 +23,7 @@
 
 {#if title && description}
 	<li
-		class="group card card-bordered card-compact overflow-hidden border-base-content/5 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5"
+		class="group card card-bordered card-compact overflow-hidden border-base-content/5 bg-base-100 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5"
 	>
 		<a href={courseNavigate}>
 			<figure class="aspect-thumbnail169">

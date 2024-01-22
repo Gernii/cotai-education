@@ -1,8 +1,9 @@
 <script lang="ts">
-	import WhyChooseUsSVG from '$lib/assets/pages/home-page/why-choose-us.svg';
+	import WhyChooseUsPNG from '$lib/assets/pages/home-page/why-choose-us.png?imagetools';
 
 	import { Container, ContainerContent } from '$lib/components/ui/container';
 	import { SectionTitle } from '$lib/components/ui/section-title';
+	import { Picture } from '$lib/components/ui/picture';
 
 	import * as m from '$i18n/messages';
 
@@ -38,7 +39,11 @@
 		</div>
 
 		<div class="col-span-1 self-center px-4 md:col-span-4">
-			<img src={WhyChooseUsSVG} alt={m.whyChooseUs_thumbnail()} />
+			<Picture
+				meta={WhyChooseUsPNG}
+				author={'Image by storyset on Freepik'}
+				alt={m.whyChooseUs_thumbnail()}
+			/>
 		</div>
 	</ContainerContent>
 </Container>

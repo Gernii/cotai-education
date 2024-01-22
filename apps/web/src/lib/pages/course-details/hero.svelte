@@ -12,7 +12,7 @@
 	$: pd = $page.data as CourseDetailsPageDataProps;
 </script>
 
-<div class="hero mb-16 min-h-screen supports-[min-height:100dvh]:min-h-[100dvh]">
+<div class="mb-16 min-h-dvh">
 	<ContainerContent class="h-full pt-header-space-sm lg:pt-header-space">
 		<div class="grid grid-cols-1 gap-x-32 gap-y-16 pt-16 lg:grid-cols-5">
 			<div class="col-span-1 space-y-8 lg:col-span-3">
@@ -20,7 +20,7 @@
 				<TextContent text={pd.description} />
 			</div>
 			<div
-				class="group card col-span-1 w-full self-start overflow-hidden border border-base-content/5 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5 lg:col-span-2"
+				class="group card col-span-1 w-full self-start overflow-hidden border border-base-content/5 bg-base-100 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5 lg:col-span-2"
 			>
 				<figure class="aspect-thumbnail169">
 					<img

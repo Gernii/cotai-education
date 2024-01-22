@@ -81,6 +81,7 @@
 							'bg-base-300': currentReview !== idx
 						})}
 						on:click={() => onChangeSlide(idx)}
+						aria-label={m.reviewBullet({ idx: idx + 1 })}
 					/>
 				{/each}
 			</div>

@@ -62,12 +62,6 @@
 					</div>
 				</div>
 				<div class="h-36">
-					<!-- <img
-						loading="lazy"
-						src={CoTAILogo}
-						alt={m.mainLogo()}
-						class="h-full w-full object-contain"
-					/> -->
 					<Picture meta={LogoCotAI} alt={m.mainLogo()} />
 				</div>
 			</div>
@@ -103,7 +97,10 @@
 				</div>
 				<!-- ! fix this -->
 				<div class="space-y-3">
-					<p>Copyright 2023 © CoTAI Education. All Rights Reserved. A subsidiary of CoTAI.</p>
+					<p>
+						Copyright {new Date().getFullYear()} © CoTAI Education. All Rights Reserved. A subsidiary
+						of CoTAI.
+					</p>
 					<ul class="hidden flex-wrap justify-center gap-x-3 font-semibold lg:justify-end">
 						<li>
 							<a href={navigate('/')} aria-label={'Sitemap'}>Sitemap</a>

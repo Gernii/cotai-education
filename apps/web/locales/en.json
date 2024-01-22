@@ -36,6 +36,7 @@
 	"error404_description": "The page you are looking for does not exist. How you got here is a mystery. But you can click the button below to go back to the homepage.",
 	"homepage": "Homepage",
 	"reviewsTitle": "Reviews from our students",
+	"reviewBullet": "Review from student #{idx}",
 	"reviewCourseNameWithSubtitle": "Course: {title}  - {subtitle}",
 	"reviewCourseName": "Course: {title}",
 	"whoweare": "Who we are",
@@ -49,5 +50,9 @@
 	"whyChooseUs_items_2_description": "Enjoy the beauty of AI math and code through informative visualizations & illustrations to boost students’ understanding & creativity.",
 	"whyChooseUs_items_3_description": "Fun and joy in developing integrated projects & apps under direct guidance of dedicated staff who have been building real-world AI products.",
 	"whyChooseUs_thumbnail": "Why choose us thumbnail",
-	"whoWeAre_thumbnail": "Who we are thumbnail"
+	"whoWeAre_thumbnail": "Who we are thumbnail",
+	"layout_header_openThemeMenu": "Open Theme Menu",
+	"light": "Light",
+	"dark": "Dark",
+	"system": "System"
 }

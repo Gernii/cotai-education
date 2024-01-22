@@ -26,7 +26,9 @@
 		'collapse-close': !isContentOpen
 	})}
 >
-	<div class="collapse-title flex items-center justify-between pe-4 text-xl font-medium">
+	<div
+		class="collapse-title flex items-center justify-between bg-base-100 pe-4 text-xl font-medium"
+	>
 		<span>{title}</span>
 		{#if isContentEnabled}
 			<button class="btn btn-square btn-ghost btn-sm" on:click={contentOpenToggle}>

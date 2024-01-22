@@ -42,9 +42,12 @@
 			></div>
 		</div>
 		<div
-			class={cx('card  w-full border border-base-content/5 shadow shadow-base-content/5', {
-				'mb-4': !last
-			})}
+			class={cx(
+				'card  w-full border border-base-content/5 bg-base-100 shadow shadow-base-content/5',
+				{
+					'mb-4': !last
+				}
+			)}
 		>
 			<div class="card-body items-start">
 				<div

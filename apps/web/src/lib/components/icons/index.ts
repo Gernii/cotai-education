@@ -15,6 +15,9 @@ import EyeSlash from './eye-slash.svelte';
 import DocumentText from './document-text.svelte';
 import User from './user.svelte';
 import ArrowRightStartOnRectangle from './arrow-right-start-on-rectangle.svelte';
+import Sun from './sun.svelte';
+import Moon from './moon.svelte';
+import ComputerDesktop from './computer-desktop.svelte';
 export {
 	Bars3 as IconBars3,
 	ChevronDown as IconChevronDown,
@@ -28,6 +31,9 @@ export {
 	DocumentText as IconDocumentText,
 	User as IconUser,
 	ArrowRightStartOnRectangle as IconArrowRightStartOnRectangle,
+	Sun as IconSun,
+	Moon as IconMoon,
+	ComputerDesktop as IconComputerDesktop,
 
 	// Country Flag
 	FlagUs as IconFlagUs,
