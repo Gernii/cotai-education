@@ -2,4 +2,6 @@
 	import { Toaster } from 'svelte-sonner';
 </script>
 
+<slot />
+
 <Toaster position="top-right" />

@@ -25,7 +25,7 @@
 	$: signoutActionURL = urlRedirect($page.url, routerPath.admin.auth.authSignout);
 
 	$: headerClassName = cx(
-		'sticky top-0 z-30 flex h-header w-full bg-base-100 bg-opacity-90 backdrop-blur transition-shadow',
+		'sticky top-0 z-30 flex h-header w-full bg-base-100 bg-opacity-90 transition-shadow',
 		{
 			'shadow-sm': $isScroll,
 			'shadow-none': !$isScroll

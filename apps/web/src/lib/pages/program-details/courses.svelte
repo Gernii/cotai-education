@@ -23,6 +23,6 @@
 
 <Container>
 	<ContainerContent>
-		<CoursesList title={m.courses()} {courses} />
+		<CoursesList title={m.courses()} {courses} id="courses" />
 	</ContainerContent>
 </Container>

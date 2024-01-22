@@ -54,5 +54,9 @@
 	"layout_header_openThemeMenu": "Open Theme Menu",
 	"light": "Light",
 	"dark": "Dark",
-	"system": "System"
+	"system": "System",
+	"totalRoadmapCourses": "{number} courses",
+	"program": "Program",
+	"theme": "Theme",
+	"course": "Course"
 }

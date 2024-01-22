@@ -18,6 +18,8 @@ import ArrowRightStartOnRectangle from './arrow-right-start-on-rectangle.svelte'
 import Sun from './sun.svelte';
 import Moon from './moon.svelte';
 import ComputerDesktop from './computer-desktop.svelte';
+import BookMark from './book-mark.svelte';
+import Xmark from './x-mark.svelte';
 export {
 	Bars3 as IconBars3,
 	ChevronDown as IconChevronDown,
@@ -34,6 +36,8 @@ export {
 	Sun as IconSun,
 	Moon as IconMoon,
 	ComputerDesktop as IconComputerDesktop,
+	BookMark as IconBookMark,
+	Xmark as IconXmark,
 
 	// Country Flag
 	FlagUs as IconFlagUs,

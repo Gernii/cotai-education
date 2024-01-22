@@ -11,9 +11,10 @@
 	export let courses: $$Props['courses'];
 	export let showMoreUrl: $$Props['showMoreUrl'] = undefined;
 	export let showMoreText: $$Props['showMoreText'] = undefined;
+	export let id: $$Props['id'] = undefined;
 </script>
 
-<div class="space-y-6 lg:space-y-10">
+<div class="space-y-6 lg:space-y-10" {id}>
 	{#if title}
 		<div class="space-y-2 lg:space-y-4">
 			<SectionTitle paddingBottom={false}>

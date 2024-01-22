@@ -10,9 +10,12 @@
 	import * as m from '$i18n/messages';
 
 	import type { LandingPage_LayoutData } from '../../types';
+	import { ThemeSelector } from '../theme-selector';
 
 	import NavigatorItem from './navigator-item.svelte';
 	import NavigatorCollapse from './navigator-collapse.svelte';
+
+	import { IconXmark } from '$lib/components/icons';
 
 	interface $$Props {
 		sidenav?: boolean;
@@ -31,6 +34,14 @@
 		'bg-transparent': !sidenav
 	})}
 >
+	{#if sidenav}
+		<div class="flex w-full justify-end pr-2 pt-2">
+			<label for="my-drawer" aria-label="close sidebar" class="btn btn-square btn-ghost btn-md">
+				<IconXmark class="size-8" />
+			</label>
+		</div>
+	{/if}
+
 	<nav
 		class={cx('flex', {
 			'flex-row items-center gap-x-3': !sidenav,
@@ -67,12 +78,16 @@
 			{m.gemCollection()}
 		</NavigatorItem>
 	</nav>
-	<!-- TODO: re-open after update ENG language   -->
-	<!-- {#if sidenav}
+	{#if sidenav}
 		<hr class="mb-2 w-full border border-base-content/5" />
-		<div class="flex items-center justify-between px-4 py-2">
+		<!-- TODO: re-open after update ENG language   -->
+		<!-- <div class="flex items-center justify-between px-4 py-2">
 			<p class="font-semibold">{m.language()}</p>
 			<LangSelector />
+		</div> -->
+		<div class="flex items-center justify-between px-4 py-2">
+			<p class="font-semibold">{m.theme()}</p>
+			<ThemeSelector />
 		</div>
-	{/if} -->
+	{/if}
 </div>

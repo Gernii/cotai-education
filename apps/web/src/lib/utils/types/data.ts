@@ -20,6 +20,7 @@ export interface ProgramProps {
 	id: string;
 	title?: string;
 	description?: string;
+	rawDescription?: string;
 	image?: string;
 	hidden?: boolean;
 	courses: string[];

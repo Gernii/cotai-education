@@ -52,6 +52,8 @@ export const programMappingData = (program: ProgramResponseProps): ProgramProps 
 		...program,
 		coursesHighlighted: program['courses-highlighted'],
 		coursesRoadmap: program['courses-roadmap'],
+		description: program.description ? parseMarkdownToHTML(program.description) : undefined,
+		rawDescription: program.description,
 		components: program.components.map((component) => componentDataMappingData(component))
 	};
 

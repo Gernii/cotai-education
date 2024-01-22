@@ -18,7 +18,6 @@
 
 	export let coursesHighlighted: $$Props['coursesHighlighted'] = [];
 	export let title: $$Props['title'] = undefined;
-	export let description: $$Props['description'] = undefined;
 	export let id: $$Props['id'];
 	export let targets: $$Props['targets'];
 
@@ -43,7 +42,6 @@
 			<CoursesList
 				{courses}
 				{title}
-				{description}
 				showMoreUrl={navigate(routingPathProgramsId(id))}
 				showMoreText={m.viewProgramDetails()}
 			>

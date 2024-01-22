@@ -8,6 +8,7 @@
 	import type { CourseDetailsPageDataProps } from './types';
 
 	import { TextContent } from '$lib/features/text-content';
+	import { IconClock } from '$lib/components/icons';
 
 	$: pd = $page.data as CourseDetailsPageDataProps;
 </script>
@@ -15,8 +16,19 @@
 <div class="mb-16 min-h-dvh">
 	<ContainerContent class="h-full pt-header-space-sm lg:pt-header-space">
 		<div class="grid grid-cols-1 gap-x-32 gap-y-16 pt-16 lg:grid-cols-5">
-			<div class="col-span-1 space-y-8 lg:col-span-3">
-				<h1 class="text-5xl font-extrabold">{pd.title}</h1>
+			<div class="col-span-1 space-y-4 lg:col-span-3">
+				<div>
+					<p class="text-lg font-semibold">{m.course()}</p>
+					<h1 class="text-5xl font-extrabold">{pd.title}</h1>
+				</div>
+				<div class="flex flex-wrap gap-x-4 gap-y-1">
+					<div class="flex items-center gap-x-1">
+						<IconClock class="size-6 stroke-2 text-primary" />
+						<p>{m.totalSessions({ number: pd.totalLessons })}</p>
+					</div>
+				</div>
+				<hr class="h-1 w-12 border-0 bg-secondary" />
+
 				<TextContent text={pd.description} />
 			</div>
 			<div

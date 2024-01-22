@@ -1,5 +1,5 @@
 const program = {
-	title: 'Extra',
+	title: 'Khóa học bổ trợ',
 	hidden: false,
 	courses: ['ai-for-all'],
 	'courses-highlighted': ['ai-for-all'],

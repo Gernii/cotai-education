@@ -27,7 +27,7 @@
 	"totalSessions": "{number} buổi",
 	"showDetails": "Xem chi tiết",
 	"roadmap": "Lộ trình học",
-	"courses": "Các khóa học",
+	"courses": "Danh sách khóa học",
 	"siteNameWithTitle": "{title} - CoTAI Education",
 	"siteName": "CoTAI Education",
 	"homePage_head_description": "Chuyên cung cấp các khóa học về Trí tuệ Nhân tạo cho mọi độ tuổi từ 15 và các khóa học dành cho những người không cần kỹ năng lập trình",
@@ -54,6 +54,10 @@
 	"layout_header_openThemeMenu": "Mở bảng chọn giao diện",
 	"light": "Sáng",
 	"dark": "Tối",
+	"system": "Hệ thống",
+	"totalRoadmapCourses": "{number} khóa học",
+	"program": "Lộ trình",
+	"theme": "Giao diện",
 	"text": "Chương trình",
-	"system": "Hệ thống"
+	"course": "Khóa học"
 }

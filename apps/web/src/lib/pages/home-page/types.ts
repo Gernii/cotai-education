@@ -7,7 +7,7 @@ export interface HomePageDataProps {
 
 export type HomePageData_ProgramProps = Pick<
 	ProgramProps,
-	'id' | 'title' | 'description' | 'coursesHighlighted' | 'hidden' | 'targets'
+	'id' | 'title' | 'coursesHighlighted' | 'hidden' | 'targets'
 >;
 
 export type HomePageData_CourseProps = Pick<

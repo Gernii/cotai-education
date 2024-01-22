@@ -4,7 +4,7 @@
 	import * as m from '$i18n/messages';
 </script>
 
-<div class="hero h-screen overflow-hidden supports-[height:100dvh]:h-[100dvh]">
+<div class="hero h-dvh overflow-hidden">
 	<ContainerContent
 		size={0}
 		class="relative grid h-full content-center sm:max-w-xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl 2xl:max-w-7xl"

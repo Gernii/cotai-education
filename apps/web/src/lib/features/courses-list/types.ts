@@ -7,6 +7,7 @@ export interface CoursesListProps {
 	limit?: number;
 	showMoreUrl?: string;
 	showMoreText?: string;
+	id?: string;
 }
 
 export type CoursesListProps_Courses = Pick<
