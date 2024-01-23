@@ -20,7 +20,7 @@
 		"lint.fix": "eslint \"src/**/*.{ts*,svelte}\" --fix",
 		"lint.check": "eslint  \"src/**/*.{ts*,svelte}\"  --max-warnings=0",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare",
-		"postinstall": "paraglide-js compile --project ../../project.inlang",
+		"postinstall": "paraglide-js compile --project ./project.inlang",
 		"postbuild": "node scripts/post-build.js"
 	},
 	"devDependencies": {
