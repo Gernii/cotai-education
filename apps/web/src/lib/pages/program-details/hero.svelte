@@ -16,8 +16,6 @@
 
 	$: program = pd.programDetails;
 
-	$: console.log(program);
-
 	$: totalRoadmapCourses = program.coursesRoadmap.length;
 
 	$: totalRoadmapSessions = program.coursesRoadmap.reduce(

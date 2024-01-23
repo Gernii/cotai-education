@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { navigate } from '$lib/lib/i18n/routing';
+	import { navigate } from '$lib/libs/i18n/routing';
 
 	import { routingPathCoursesId } from '$lib/utils/routing-path';
 	import { defaultImage } from '$lib/utils/constants';

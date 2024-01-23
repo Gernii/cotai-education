@@ -1,6 +1,6 @@
 import { redirect, type RequestEvent } from '@sveltejs/kit';
 
-import { refreshTokenRequest } from '$lib/lib/fetch/fetch.server';
+import { refreshTokenRequest } from '$lib/libs/fetch/fetch.server';
 
 import { ID_TOKEN, REFRESH_TOKEN } from '$lib/utils/environment';
 import { addTokens, decodeToken, removeTokens } from '$lib/utils/token-handler';
@@ -49,8 +49,6 @@ const validateTokens = async (event: RequestEvent) => {
 };
 
 export const load: LayoutServerLoad = async (event) => {
-	console.log(event.route.id);
-
 	if (event.route.id?.startsWith('/(admin)/admin/auth')) {
 		removeTokens(event.cookies);
 	}

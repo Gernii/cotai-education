@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cx } from 'cva';
 
-	import { navigate } from '$lib/lib/i18n/routing';
+	import { navigate } from '$lib/libs/i18n/routing';
 
 	import type { CourseProps } from '$lib/utils/types/data';
 

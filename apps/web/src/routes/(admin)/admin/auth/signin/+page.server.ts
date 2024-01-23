@@ -2,7 +2,7 @@ import type { ActionFailure } from '@sveltejs/kit';
 import { fail, redirect } from '@sveltejs/kit';
 import { type ObjectSchema, object, string } from 'yup';
 
-import { yupValidator } from '$lib/lib/yup/validator-handler.server';
+import { yupValidator } from '$lib/libs/yup/validator-handler.server';
 
 import { type CognitoAuthResponse, fetchCognito } from '$lib/utils/auth';
 import { REDIRECT_PARAM, routerPath } from '$lib/utils/constants';

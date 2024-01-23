@@ -94,7 +94,7 @@ module.exports = {
             group: "external",
           },
           {
-            pattern: "$lib/lib/**",
+            pattern: "$lib/libs/**",
             position: "after",
             group: "external",
           },

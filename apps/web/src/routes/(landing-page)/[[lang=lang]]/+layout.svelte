@@ -8,7 +8,7 @@
 
 	import { LandingPageLayout } from '$lib/layouts/landing-page';
 
-	import { currentLang, route } from '$lib/lib/i18n/routing';
+	import { currentLang, route } from '$lib/libs/i18n/routing';
 
 	import {
 		setLanguageTag,

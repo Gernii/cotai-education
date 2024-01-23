@@ -6,7 +6,7 @@
 
 	import { Picture } from '$lib/components/ui/picture';
 
-	import { navigate } from '$lib/lib/i18n/routing';
+	import { navigate } from '$lib/libs/i18n/routing';
 
 	import * as m from '$i18n/messages';
 

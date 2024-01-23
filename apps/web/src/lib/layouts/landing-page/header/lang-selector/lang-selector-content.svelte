@@ -4,7 +4,7 @@
 	import { cx } from 'cva';
 	import ISO6991 from 'iso-639-1';
 
-	import { currentLang, route } from '$lib/lib/i18n/routing';
+	import { currentLang, route } from '$lib/libs/i18n/routing';
 
 	import { availableLanguageTags } from '$i18n/runtime';
 

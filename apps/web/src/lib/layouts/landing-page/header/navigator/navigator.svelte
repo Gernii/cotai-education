@@ -3,7 +3,7 @@
 
 	import { cx } from 'cva';
 
-	import { navigate } from '$lib/lib/i18n/routing';
+	import { navigate } from '$lib/libs/i18n/routing';
 
 	import { routingPathProgramsId } from '$lib/utils/routing-path';
 

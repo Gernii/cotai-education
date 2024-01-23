@@ -15,7 +15,7 @@ const config = {
 			routes: { exclude: ['<all>', '/sitemap.xml', '/robots.txt'] }
 		}),
 		alias: {
-			$i18n: './src/lib/lib/i18n/messages'
+			$i18n: './src/lib/libs/i18n/messages'
 		},
 		output: {
 			preloadStrategy: 'preload-mjs'

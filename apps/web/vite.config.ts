@@ -11,14 +11,16 @@ export default defineConfig(({ mode }) => {
 		plugins: [
 			imagetools({
 				defaultDirectives: (url) => {
-		
 					const extension = url.pathname.substring(
 						url.pathname.lastIndexOf('.') + 1
 					);
-		
+					
 					if (supportedExtensions.includes(extension)) {
+						const width = url.searchParams.get('w') ?? undefined;
+						
 						return new URLSearchParams({
 							format: 'avif;webp;' + extension,
+							...(width ? { w: width } : {w: '320;640;1280'}),
 							as: 'picture'
 						});
 					}
@@ -27,8 +29,8 @@ export default defineConfig(({ mode }) => {
 			}),
 			sveltekit(),
 			paraglide({
-				project: '../../project.inlang',
-				outdir: './src/lib/lib/i18n/messages'
+				project: './project.inlang',
+				outdir: './src/lib/libs/i18n/messages'
 			})
 		],
 		test: {

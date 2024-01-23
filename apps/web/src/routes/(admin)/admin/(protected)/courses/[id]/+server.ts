@@ -19,7 +19,6 @@ export const GET = async ({ url, params, locals }) => {
 		const res = await locals.handlePrivateFetch<LandingPageCourseCheckStatus.Response>(
 			courseAPI.courseCheckStatusWithId(id).external
 		);
-		console.log(res);
 
 		return json(res);
 	}
