@@ -20,6 +20,8 @@ import Moon from './moon.svelte';
 import ComputerDesktop from './computer-desktop.svelte';
 import BookMark from './book-mark.svelte';
 import Xmark from './x-mark.svelte';
+import Check from './check.svelte';
+
 export {
 	Bars3 as IconBars3,
 	ChevronDown as IconChevronDown,
@@ -38,6 +40,7 @@ export {
 	ComputerDesktop as IconComputerDesktop,
 	BookMark as IconBookMark,
 	Xmark as IconXmark,
+	Check as IconCheck,
 
 	// Country Flag
 	FlagUs as IconFlagUs,

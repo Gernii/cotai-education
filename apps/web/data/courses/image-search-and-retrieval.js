@@ -7,6 +7,15 @@ const course = {
 
 	thumbnail: '/images/logo/CoTAI-Ver0-320.png',
 
+	'experience-requirement': [
+		'NVIDIA GPU with at least 4GB of VRAM (much more VRAM is good to have)',
+		'At least 1 year of experience in using Python in works (self-works / company works)',
+		'Basic Backend understanding (flask, fastapi, django)',
+		'Numpy: Tensor operations',
+		'OpenCV / Pillow: Image operations',
+		'Simple Machine Learning concepts, such as: Similarity measure, K-Means, K-NN'
+	],
+
 	description: `This course aims to provide learners with a comprehensive understanding of Image Similarity Search. By utilizing a top-down approach, the course will enable learners to:
 
 1.  **Research-Oriented Learning**: Develop the ability to independently research and gather relevant resources, including: debugging code, case studies and existing solutions in the field of image similarity search. 

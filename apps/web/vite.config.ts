@@ -4,7 +4,7 @@ import { defineConfig } from 'vitest/config';
 import { imagetools } from 'vite-imagetools';
 
 const supportedExtensions = ['png', 'jpg', 'jpeg'];
-
+const defaultImageToolsWidth = '320;640;1280';
 
 export default defineConfig(({ mode }) => {
 	return {
@@ -20,7 +20,7 @@ export default defineConfig(({ mode }) => {
 						
 						return new URLSearchParams({
 							format: 'avif;webp;' + extension,
-							...(width ? { w: width } : {w: '320;640;1280'}),
+							w: width ?? defaultImageToolsWidth,
 							as: 'picture'
 						});
 					}

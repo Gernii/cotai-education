@@ -1,6 +1,15 @@
 {
 	"title": "Image Search & Retrieval",
+	"register-url": "",
 	"thumbnail": "/images/logo/CoTAI-Ver0-320.png",
+	"experience-requirement": [
+		"NVIDIA GPU with at least 4GB of VRAM (much more VRAM is good to have)",
+		"At least 1 year of experience in using Python in works (self-works / company works)",
+		"Basic Backend understanding (flask, fastapi, django)",
+		"Numpy: Tensor operations",
+		"OpenCV / Pillow: Image operations",
+		"Simple Machine Learning concepts, such as: Similarity measure, K-Means, K-NN"
+	],
 	"description": "This course aims to provide learners with a comprehensive understanding of Image Similarity Search. By utilizing a top-down approach, the course will enable learners to:\n\n1.  **Research-Oriented Learning**: Develop the ability to independently research and gather relevant resources, including: debugging code, case studies and existing solutions in the field of image similarity search. \n2.  **System Design Based on Real-Life Requirements**: Learn to design robust and efficient image similarity search systems tailored to real-life requirements.\n3.  **Hands-On Development with Pretrained Models**: Gain practical experience in coding and developing their own image similarity search systems using pretrained models. ",
 	"components": [
 		{

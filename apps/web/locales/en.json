@@ -58,5 +58,10 @@
 	"totalRoadmapCourses": "{number} courses",
 	"program": "Program",
 	"theme": "Theme",
-	"course": "Course"
+	"course": "Course",
+	"experience": "Experience",
+	"requirement": "requirement",
+	"needSupport": "Need support",
+	"needSupport_description": "CoTAI will help you identify and advise on the skills needed for this course",
+	"contactNow": "Contact now"
 }

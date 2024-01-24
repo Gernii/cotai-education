@@ -58,6 +58,11 @@
 	"totalRoadmapCourses": "{number} khóa học",
 	"program": "Lộ trình",
 	"theme": "Giao diện",
+	"course": "Khóa học",
+	"experience": "Kinh nghiệm",
+	"requirement": "yêu cầu",
+	"needSupport": "Tư vấn ngay",
+	"needSupport_description": "CoTAI sẽ giúp bạn xác định và tư vấn các kỹ năng cần có cho khoá học này",
 	"text": "Chương trình",
-	"course": "Khóa học"
+	"contactNow": "Liên hệ ngay"
 }

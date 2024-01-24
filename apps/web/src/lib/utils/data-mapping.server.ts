@@ -15,13 +15,18 @@ import type {
 
 export const courseMappingData = (course: CourseResponseProps): CourseProps => {
 	const mappedCourse: CourseProps = {
-		...course,
 		registerUrl: course['register-url'],
 		curriculum: course.curriculum.map((curriculum) => curriculumMappingData(curriculum)),
 		description: course.description ? parseMarkdownToHTML(course.description) : undefined,
 		descriptionRaw: course.description ?? undefined,
+		experienceRequirement: course['experience-requirement'] ?? [],
 		components: course.components.map((component) => componentDataMappingData(component)),
-		totalLessons: countTotalLessons(course.curriculum)
+		totalLessons: countTotalLessons(course.curriculum),
+		id: course.id,
+		title: course.title,
+		price: course.price,
+		thumbnail: course.thumbnail,
+		embed: course.embed
 	};
 
 	return mappedCourse;

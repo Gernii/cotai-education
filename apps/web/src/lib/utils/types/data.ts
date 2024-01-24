@@ -39,6 +39,7 @@ export interface CourseProps {
 	thumbnail?: string;
 	description?: string;
 	descriptionRaw?: string;
+	experienceRequirement: string[];
 	curriculum: CurriculumProps[];
 	components: ComponentDataProps[];
 	totalLessons: number;
@@ -49,6 +50,7 @@ export interface CourseResponseProps {
 	title?: string;
 	price?: number;
 	'register-url'?: string;
+	'experience-requirement'?: string[];
 	embed?: string;
 	thumbnail?: string;
 	description?: string;
