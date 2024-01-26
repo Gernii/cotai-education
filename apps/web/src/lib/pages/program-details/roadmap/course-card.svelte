@@ -43,7 +43,7 @@
 		</div>
 		<div
 			class={cx(
-				'card  w-full border border-base-content/5 bg-base-100 shadow shadow-base-content/5',
+				'card w-full border border-base-content/5 bg-base-100 shadow shadow-base-content/5',
 				{
 					'mb-4': !last
 				}
@@ -57,7 +57,9 @@
 				>
 					<div class="col-span-1 flex flex-col gap-y-4 text-start lg:col-span-3">
 						<div>
-							<p class="font-semibold">{m.programDetails_courseRoadmap({ number: idx + 1 })}</p>
+							<p class="font-semibold">
+								{m.programDetails_courseRoadmap({ number: idx + 1 })}
+							</p>
 							<h1 class="text-xl font-bold">
 								<a href={navigate(`/courses/${id}`)} class="link-hover link hover:text-primary">
 									{title}

@@ -6,6 +6,6 @@
 	export let data;
 </script>
 
-<SEO description={data.description} title={data.title} />
+<SEO description={data.descriptionRaw} title={data.title} />
 
 <CourseDetailsPage />

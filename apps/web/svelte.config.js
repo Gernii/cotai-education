@@ -5,7 +5,9 @@ import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
 const config = {
 	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
 	// for more information about preprocessors
-	preprocess: vitePreprocess(),
+	preprocess: vitePreprocess({
+		postcss: true
+	}),
 
 	kit: {
 		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
@@ -16,9 +18,6 @@ const config = {
 		}),
 		alias: {
 			$i18n: './src/lib/libs/i18n/messages'
-		},
-		output: {
-			preloadStrategy: 'preload-mjs'
 		},
 		prerender: {
 			handleHttpError: ({ path, message }) => {

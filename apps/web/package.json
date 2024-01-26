@@ -24,6 +24,7 @@
 		"postbuild": "node scripts/post-build.js"
 	},
 	"devDependencies": {
+		"@fontsource/mulish": "^5.0.16",
 		"@inlang/paraglide-js": "latest",
 		"@inlang/paraglide-js-adapter-vite": "latest",
 		"@playwright/test": "^1.28.1",
@@ -63,6 +64,7 @@
 		"tailwindcss": "^3.4.0",
 		"tslib": "^2.4.1",
 		"typescript": "^5.0.0",
+		"unplugin-fonts": "^1.1.1",
 		"vite": "^5.0.3",
 		"vite-imagetools": "^6.2.9",
 		"vitest": "^1.0.0",

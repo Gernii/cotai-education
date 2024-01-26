@@ -7,6 +7,9 @@ const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: ['class', '[data-theme="dark"]'],
 	theme: {
+		fontFamily: {
+			sans: ['"Mulish"', ...defaultTheme.fontFamily.sans]
+		},
 		extend: {
 			spacing: {
 				'header-space': defaultTheme.spacing['20'],

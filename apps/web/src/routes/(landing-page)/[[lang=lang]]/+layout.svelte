@@ -28,8 +28,6 @@
 	$: if (browser) document.documentElement.lang = lang;
 </script>
 
-<link rel="alternate" hreflang={'vi'} href={`${hostname}${route($page.url.pathname, 'vi')}`} />
-
 <!-- TODO: Update after implement ENG -->
 <svelte:head>
 	{#each availableLanguageTags as lang}

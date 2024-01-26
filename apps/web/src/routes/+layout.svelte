@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.pcss';
-
+	import 'unfonts.css';
 	import { navigating } from '$app/stores';
 
 	import * as m from '$i18n/messages';
