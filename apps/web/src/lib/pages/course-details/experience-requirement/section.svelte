@@ -18,7 +18,7 @@
 	$: experienceRequirement = pd.experienceRequirement;
 </script>
 
-{#if experienceRequirement.length > 0}
+{#if experienceRequirement && experienceRequirement.length > 0}
 	<Container>
 		<ContainerContent class="flex flex-col gap-x-16 gap-y-8 lg:flex-row">
 			<div class="w-full flex-shrink-0 sm:w-96">

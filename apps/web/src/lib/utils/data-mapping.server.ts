@@ -6,6 +6,7 @@ import type {
 import { parseMarkdownToHTML } from './parse-markdown-to-json.server';
 import type {
 	CourseProps,
+	CourseProps_Archive,
 	CourseResponseProps,
 	CurriculumProps,
 	CurriculumResponseProps,
@@ -19,7 +20,10 @@ export const courseMappingData = (course: CourseResponseProps): CourseProps => {
 		curriculum: course.curriculum.map((curriculum) => curriculumMappingData(curriculum)),
 		description: course.description ? parseMarkdownToHTML(course.description) : undefined,
 		descriptionRaw: course.description ?? undefined,
-		experienceRequirement: course['experience-requirement'] ?? [],
+		experienceRequirement: course['experience-requirement'],
+		whoShouldJoin: course['who-should-join'],
+		archives: archivesParseData(course.archives),
+		skills: course.skills,
 		components: course.components.map((component) => componentDataMappingData(component)),
 		totalLessons: countTotalLessons(course.curriculum),
 		id: course.id,
@@ -91,4 +95,28 @@ export const countTotalLessons = (curriculum: CurriculumResponseProps[]) => {
 	}, 0);
 
 	return totalLessons;
+};
+
+// in course details, we only need to show 2 archives per row
+export const archivesParseData = (
+	archives?: CourseProps_Archive[]
+): CourseProps_Archive[][] | undefined => {
+	if (!archives) {
+		return undefined;
+	}
+	const archivesParsed = archives.reduce((prev, archive) => {
+		const lastArchive = prev[prev.length - 1] ?? [];
+
+		if (lastArchive.length < 2 && prev.length > 0) {
+			lastArchive.push(archive);
+			prev[prev.length - 1] = lastArchive;
+
+			return prev;
+		} else {
+			prev.push([archive]);
+			return prev;
+		}
+	}, [] as CourseProps_Archive[][]);
+
+	return archivesParsed;
 };

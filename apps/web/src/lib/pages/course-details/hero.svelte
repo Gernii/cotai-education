@@ -9,6 +9,7 @@
 
 	import HeroiconsClock from '~icons/heroicons/clock';
 	import { TextContent } from '$lib/features/text-content';
+	import { SkillsList } from '$lib/features/skill-icons';
 
 	$: pd = $page.data as CourseDetailsPageDataProps;
 </script>
@@ -30,6 +31,11 @@
 				<hr class="h-1 w-12 border-0 bg-secondary" />
 
 				<TextContent text={pd.description} />
+
+				{#if pd.skills && pd.skills.length > 0}
+					<hr class="h-1 w-12 border-0 bg-secondary" />
+					<SkillsList skills={pd.skills} />
+				{/if}
 			</div>
 			<div
 				class="group card col-span-1 w-full self-start overflow-hidden border border-base-content/5 bg-base-100 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5 lg:col-span-2"

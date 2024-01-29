@@ -63,5 +63,12 @@
 	"requirement": "requirement",
 	"needSupport": "Need support",
 	"needSupport_description": "CoTAI will help you identify and advise on the skills needed for this course",
-	"contactNow": "Contact now"
+	"contactNow": "Contact now",
+	"experienceRequirement_imageAlt": "Experience requirement image",
+	"who_should_join_1": "Who should",
+	"who_should_join_2": "join?",
+	"skills": "Skills",
+	"math": "Math",
+	"artificialintelligence": "Artificial intelligence",
+	"learningoutcomes": "Learning Outcomes?"
 }

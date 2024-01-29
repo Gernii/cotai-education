@@ -63,6 +63,14 @@
 	"requirement": "yêu cầu",
 	"needSupport": "Tư vấn ngay",
 	"needSupport_description": "CoTAI sẽ giúp bạn xác định và tư vấn các kỹ năng cần có cho khoá học này",
+	"contactNow": "Liên hệ ngay",
+	"experienceRequirement_imageAlt": "Hình ảnh minh họa về kinh nghiệm yêu cầu",
+	"who_should_join_1": "Ai nên tham gia",
+	"who_should_join_2": "khóa này?",
+	"skills": "Kỹ năng",
+	"math": "Toán",
+	"artificialintelligence": "Trí tuệ nhân tạo",
 	"text": "Chương trình",
-	"contactNow": "Liên hệ ngay"
+	"experienceRequirement": "Hình ảnh minh họa về kinh nghiệm yêu cầu",
+	"learningoutcomes": "Học viên đạt được gì?"
 }

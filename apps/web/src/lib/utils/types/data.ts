@@ -3,6 +3,8 @@ import type {
 	ComponentDataProps
 } from '$lib/components/ui/component-data';
 
+import type { SkillTypes } from '$lib/features/skill-icons/constant';
+
 export interface ProgramResponseProps {
 	id: string;
 	title?: string;
@@ -39,7 +41,10 @@ export interface CourseProps {
 	thumbnail?: string;
 	description?: string;
 	descriptionRaw?: string;
-	experienceRequirement: string[];
+	experienceRequirement?: string[];
+	whoShouldJoin?: string[];
+	skills?: SkillTypes[];
+	archives?: CourseProps_Archive[][];
 	curriculum: CurriculumProps[];
 	components: ComponentDataProps[];
 	totalLessons: number;
@@ -51,6 +56,9 @@ export interface CourseResponseProps {
 	price?: number;
 	'register-url'?: string;
 	'experience-requirement'?: string[];
+	'who-should-join'?: string[];
+	skills?: SkillTypes[];
+	archives?: CourseProps_Archive[];
 	embed?: string;
 	thumbnail?: string;
 	description?: string;
@@ -91,4 +99,9 @@ export interface ReviewResponseProps {
 	'class-name-title'?: string;
 	'class-name-subtitle'?: string;
 	role?: string;
+}
+
+export interface CourseProps_Archive {
+	title: string;
+	description: string;
 }

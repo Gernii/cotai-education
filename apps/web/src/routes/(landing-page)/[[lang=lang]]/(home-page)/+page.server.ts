@@ -81,8 +81,7 @@ const treeShakingProgramReponse = (course: ProgramResponseProps): HomePageData_P
 		title: course.title,
 		coursesHighlighted: course['courses-highlighted'],
 		targets: course.targets,
-		hidden: course.hidden,
-		description: course.description
+		hidden: course.hidden
 	};
 };
 

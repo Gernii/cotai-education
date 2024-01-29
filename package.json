@@ -4,9 +4,12 @@
   "scripts": {
     "build": "turbo run build",
     "validate": "run-s \"validate.*\"",
+    "validate.test": "turbo run test --parallel",
+    "validate.check": "turbo run check --parallel",
     "validate.lint": "turbo run lint --parallel",
     "validate.fmt": "turbo run fmt --parallel",
     "validate.build": "turbo run build --parallel",
+    
     "dev": "turbo run dev",
     "lint": "turbo run lint --parallel",
     "test": "turbo run test --parallel",

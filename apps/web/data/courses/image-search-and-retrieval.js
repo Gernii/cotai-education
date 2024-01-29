@@ -15,6 +15,25 @@ const course = {
 		'OpenCV / Pillow: Image operations',
 		'Simple Machine Learning concepts, such as: Similarity measure, K-Means, K-NN'
 	],
+	'who-should-join': [
+		'New AI Learner',
+		"Students that already completed CoTAI's PythonAI & MC4AI",
+		'Software Engineers who want to leverage your knowledge in AI'
+	],
+	skills: ['python', 'anaconda', 'deep-learning', 'docker'],
+
+	archives: [
+		{
+			title: 'Understand the Core Concepts',
+			description:
+				'Gain a solid grasp of the underlying algorithms and techniques used in image similarity search, including feature extraction, dimensionality reduction, distance metrics and vector search'
+		},
+		{
+			title: 'Implement MVPs (minimum viable products) using Pretrained Models',
+			description:
+				'Develop practical skills in implementing image similarity search solutions by utilizing pretrained models. This will include learning how to integrate these models into their systems, customize them for specific tasks, and optimize them for better performance.'
+		}
+	],
 
 	description: `This course aims to provide learners with a comprehensive understanding of Image Similarity Search. By utilizing a top-down approach, the course will enable learners to:
 
