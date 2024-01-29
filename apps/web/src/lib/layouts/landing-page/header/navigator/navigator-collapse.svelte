@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cx } from 'cva';
 
-	import { IconChevronDown } from '$lib/components/icons';
+	import HeroiconsChevronDown16Solid from '~icons/heroicons/chevron-down-16-solid';
 
 	interface $$Props {
 		title: string;
@@ -26,7 +26,7 @@
 	>
 		<button class="btn btn-ghost w-full flex-nowrap justify-between" on:click={onActiveToggle}>
 			<span class="whitespace-nowrap">{title}</span>
-			<IconChevronDown class="size-4" />
+			<HeroiconsChevronDown16Solid class="size-4" />
 		</button>
 		<div class="collapse-content">
 			<slot />
@@ -36,7 +36,7 @@
 	<div class="dropdown dropdown-hover">
 		<div tabindex="0" role="button" class="btn btn-ghost w-full flex-nowrap">
 			<span class="whitespace-nowrap">{title}</span>
-			<IconChevronDown class="size-4" />
+			<HeroiconsChevronDown16Solid class="size-4" />
 		</div>
 		<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 		<div

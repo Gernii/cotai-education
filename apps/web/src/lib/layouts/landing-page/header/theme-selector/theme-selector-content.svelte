@@ -6,7 +6,9 @@
 	import { DARK_THEME, LIGHT_THEME, SYSTEM_THEME } from './constants';
 	import ThemeSelectorItem from './theme-selector-item.svelte';
 
-	import { IconComputerDesktop, IconMoon, IconSun } from '$lib/components/icons';
+	import HeroiconsSun from '~icons/heroicons/sun';
+	import HeroiconsMoon from '~icons/heroicons/moon';
+	import HeroiconsComputerDesktop from '~icons/heroicons/computer-desktop';
 
 	let currentTheme: string | undefined = undefined;
 
@@ -47,17 +49,17 @@
 		active={currentTheme === LIGHT_THEME}
 		on:click={() => themeToggle(LIGHT_THEME)}
 	>
-		<IconSun class="size-5" />
+		<HeroiconsSun />
 		{m.light()}
 	</ThemeSelectorItem>
 	<ThemeSelectorItem active={currentTheme === DARK_THEME} on:click={() => themeToggle(DARK_THEME)}>
-		<IconMoon class="size-5" />
+		<HeroiconsMoon />
 		{m.dark()}
 	</ThemeSelectorItem>
 	<ThemeSelectorItem
 		active={currentTheme === SYSTEM_THEME}
 		on:click={() => themeToggle(SYSTEM_THEME)}
 	>
-		<IconComputerDesktop class="size-5" /> <span class="whitespace-nowrap">{m.system()}</span>
+		<HeroiconsComputerDesktop /> <span class="whitespace-nowrap">{m.system()}</span>
 	</ThemeSelectorItem>
 </ul>

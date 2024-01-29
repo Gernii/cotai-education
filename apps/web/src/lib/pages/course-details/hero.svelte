@@ -7,8 +7,8 @@
 
 	import type { CourseDetailsPageDataProps } from './types';
 
+	import HeroiconsClock from '~icons/heroicons/clock';
 	import { TextContent } from '$lib/features/text-content';
-	import { IconClock } from '$lib/components/icons';
 
 	$: pd = $page.data as CourseDetailsPageDataProps;
 </script>
@@ -23,7 +23,7 @@
 				</div>
 				<div class="flex flex-wrap gap-x-4 gap-y-1">
 					<div class="flex items-center gap-x-1">
-						<IconClock class="size-6 stroke-2 text-primary" />
+						<HeroiconsClock class="size-6 stroke-2 text-primary" />
 						<p>{m.totalSessions({ number: pd.totalLessons })}</p>
 					</div>
 				</div>

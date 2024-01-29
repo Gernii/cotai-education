@@ -8,7 +8,9 @@
 
 	import * as m from '$i18n/messages';
 
-	import { IconFacebook, IconLinkedin, IconYoutube } from '$lib/components/icons';
+	import LucideYoutube from '~icons/lucide/youtube';
+	import LucideFacebook from '~icons/lucide/facebook';
+	import LucideLinkedin from '~icons/lucide/linkedin';
 </script>
 
 <footer class="border-t border-base-content/5 bg-base-200 py-2" id="contact">
@@ -74,7 +76,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<IconFacebook class="size-6" />
+						<LucideFacebook />
 					</a>
 					<a
 						href="https://www.linkedin.com/company/cotai/mycompany"
@@ -83,7 +85,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<IconLinkedin class="size-6" />
+						<LucideLinkedin />
 					</a>
 					<a
 						href="https://www.youtube.com/@cotai"
@@ -92,7 +94,7 @@
 						target="_blank"
 						rel="noopener noreferrer"
 					>
-						<IconYoutube class="size-6" />
+						<LucideYoutube />
 					</a>
 				</div>
 				<!-- ! fix this -->

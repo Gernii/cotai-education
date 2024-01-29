@@ -9,8 +9,9 @@
 
 	import type { ProgramDetailsPageDataProps } from './types';
 
+	import HeroiconsBookmark from '~icons/heroicons/bookmark';
+	import HeroiconsClock from '~icons/heroicons/clock';
 	import { TextContent } from '$lib/features/text-content';
-	import { IconClock, IconBookMark } from '$lib/components/icons';
 
 	$: pd = $page.data as ProgramDetailsPageDataProps;
 
@@ -42,11 +43,11 @@
 				{/if}
 				<div class="flex flex-wrap gap-x-4 gap-y-1">
 					<div class="flex items-center gap-x-1">
-						<IconBookMark class="size-6 stroke-2 text-primary" />
+						<HeroiconsBookmark class="size-6 stroke-2 text-primary" />
 						<p>{m.totalRoadmapCourses({ number: totalRoadmapCourses })}</p>
 					</div>
 					<div class="flex items-center gap-x-1">
-						<IconClock class="size-6 stroke-2 text-primary" />
+						<HeroiconsClock class="size-6 stroke-2 text-primary" />
 						<p>{m.totalSessions({ number: totalRoadmapSessions })}</p>
 					</div>
 				</div>

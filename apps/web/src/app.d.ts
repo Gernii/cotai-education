@@ -1,4 +1,6 @@
 // See https://kit.svelte.dev/docs/types#app
+import 'unplugin-icons/types/svelte';
+import 'unplugin-fonts/client';
 
 import type { GetCredentialsResponse, HandlePrivateFetchOptions } from './hooks.server';
 

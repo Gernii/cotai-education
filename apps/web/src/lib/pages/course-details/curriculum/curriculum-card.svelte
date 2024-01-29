@@ -3,7 +3,7 @@
 
 	import type { CurriculumProps } from '$lib/utils/types/data';
 
-	import { IconChevronDown } from '$lib/components/icons';
+	import HeroiconsChevronDown from '~icons/heroicons/chevron-down';
 	import { TextContent } from '$lib/features/text-content';
 
 	type $$Props = CurriculumProps;
@@ -32,7 +32,7 @@
 		<span>{title}</span>
 		{#if isContentEnabled}
 			<button class="btn btn-square btn-ghost btn-sm" on:click={contentOpenToggle}>
-				<IconChevronDown class="size-6 stroke-2" />
+				<HeroiconsChevronDown class="size-6 stroke-2" />
 			</button>
 		{/if}
 	</div>

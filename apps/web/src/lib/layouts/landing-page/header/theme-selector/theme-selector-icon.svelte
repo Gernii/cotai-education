@@ -1,14 +1,15 @@
 <script lang="ts">
 	import { cx } from 'cva';
 
-	import { IconMoon, IconSun } from '$lib/components/icons';
+	import HeroiconsSun from '~icons/heroicons/sun';
+	import HeroiconsMoon from '~icons/heroicons/moon';
 
-	$: iconClasses = cx('inline-block w-7');
+	let iconClasses = cx('inline-block size-7');
 </script>
 
 <div class="block dark:hidden">
-	<IconSun class={iconClasses} />
+	<HeroiconsSun class={iconClasses} />
 </div>
 <div class="hidden dark:block">
-	<IconMoon class={iconClasses} />
+	<HeroiconsMoon class={iconClasses} />
 </div>

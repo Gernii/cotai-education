@@ -15,8 +15,7 @@
 	import NavigatorItem from './navigator-item.svelte';
 	import NavigatorCollapse from './navigator-collapse.svelte';
 
-	import { IconXmark } from '$lib/components/icons';
-
+	import HeroiconsXMark from '~icons/heroicons/x-mark';
 	interface $$Props {
 		sidenav?: boolean;
 	}
@@ -37,7 +36,7 @@
 	{#if sidenav}
 		<div class="flex w-full justify-end pr-2 pt-2">
 			<label for="my-drawer" aria-label="close sidebar" class="btn btn-square btn-ghost btn-md">
-				<IconXmark class="size-8" />
+				<HeroiconsXMark class="size-8" />
 			</label>
 		</div>
 	{/if}

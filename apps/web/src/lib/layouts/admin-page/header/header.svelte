@@ -16,7 +16,8 @@
 	import { HeaderScrollContext } from './context';
 	import { SidenavTrigger } from './sidenav';
 
-	import { IconArrowRightStartOnRectangle, IconUser } from '$lib/components/icons';
+	import HeroiconsArrowRightStartOnRectangle from '~icons/heroicons/arrow-right-start-on-rectangle';
+	import HeroiconsUser from '~icons/heroicons/user';
 
 	const isScroll = writable(false);
 
@@ -71,7 +72,7 @@
 			<div class="hidden lg:flex">
 				<div class="dropdown dropdown-end">
 					<div tabindex="0" role="button" class="btn btn-square btn-ghost">
-						<IconUser class="size-6" />
+						<HeroiconsUser />
 					</div>
 					<!-- svelte-ignore a11y-no-noninteractive-tabindex -->
 					<ul tabindex="0" class="card dropdown-content z-[1] rounded-box bg-base-100 p-2 shadow">
@@ -82,7 +83,7 @@
 								use:enhance
 							>
 								<button class="btn btn-error flex-nowrap">
-									<IconArrowRightStartOnRectangle class="size-6" /> <span>Signout</span>
+									<HeroiconsArrowRightStartOnRectangle /> <span>Signout</span>
 								</button>
 							</form>
 						</li>

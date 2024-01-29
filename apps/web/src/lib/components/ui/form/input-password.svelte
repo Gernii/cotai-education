@@ -3,7 +3,8 @@
 	import type { HTMLInputAttributes } from 'svelte/elements';
 	import { twMerge } from 'tailwind-merge';
 
-	import { IconEye, IconEyeSlash } from '$lib/components/icons';
+	import HeroiconsEye from '~icons/heroicons/eye';
+	import HeroiconsEyeSlash from '~icons/heroicons/eye-slash';
 
 	type $$Props = HTMLInputAttributes;
 
@@ -30,13 +31,13 @@
 	/>
 	<div class="absolute right-0 top-1/2 -translate-y-1/2">
 		<button class="btn btn-square btn-ghost swap" type="button" on:click={onShowToggle} {disabled}>
-			<IconEye
+			<HeroiconsEye
 				class={cx('size-6', {
 					'swap-on': isShow,
 					'swap-off': !isShow
 				})}
 			/>
-			<IconEyeSlash
+			<HeroiconsEyeSlash
 				class={cx('size-6', {
 					'swap-on': !isShow,
 					'swap-off': isShow

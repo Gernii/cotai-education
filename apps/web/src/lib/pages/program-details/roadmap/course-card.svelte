@@ -7,9 +7,9 @@
 
 	import * as m from '$i18n/messages';
 
-	import { IconChevronRight, IconClock } from '$lib/components/icons';
+	import HeroiconsClock from '~icons/heroicons/clock';
+	import HeroiconsChevronRight16Solid from '~icons/heroicons/chevron-right-16-solid';
 	import { TextContent } from '$lib/features/text-content';
-
 	interface $$Props extends CourseProps {
 		idx: number;
 		last: boolean;
@@ -67,7 +67,7 @@
 							</h1>
 						</div>
 						<div class="flex items-center gap-x-1">
-							<IconClock class="size-5 stroke-2" />
+							<HeroiconsClock class="size-5 stroke-2" />
 							<p>{m.totalSessions({ number: totalSessions })}</p>
 						</div>
 						<div class="flex-grow">
@@ -76,7 +76,7 @@
 						<div class="card-actions">
 							<a href={navigate(`/courses/${id}`)} class="btn btn-primary">
 								{m.showDetails()}
-								<IconChevronRight class="size-4 stroke-2" />
+								<HeroiconsChevronRight16Solid class="size-4 stroke-2" />
 							</a>
 						</div>
 					</div>

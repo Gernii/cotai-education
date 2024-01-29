@@ -7,7 +7,7 @@
 
 	import { routerPath } from '$lib/utils/constants';
 
-	import { IconDocumentText } from '$lib/components/icons';
+	import HeroiconsDocumentText from '~icons/heroicons/document-text';
 </script>
 
 <div class="drawer-side z-40" style="scroll-behavior: smooth; scroll-padding-top: 5rem;">
@@ -30,7 +30,7 @@
 					class="group"
 					class:active={$page.url.pathname === routerPath.admin.courses}
 				>
-					<IconDocumentText class="size-5" /> Courses
+					<HeroiconsDocumentText /> Courses
 				</a>
 			</li>
 		</ul>

@@ -9,7 +9,9 @@
 
 	import Item from './item.svelte';
 
-	import { IconIdea, IconRocket, IconTeamWork } from '$lib/components/icons';
+	import HeroiconsRocketLaunch from '~icons/heroicons/rocket-launch';
+	import HeroiconsLightBulb from '~icons/heroicons/light-bulb';
+	import HeroiconsUserGroup from '~icons/heroicons/user-group';
 </script>
 
 <Container>
@@ -21,19 +23,19 @@
 					title={m.whyChooseUs_items_1_title()}
 					description={m.whyChooseUs_items_1_description()}
 				>
-					<IconRocket class="size-8 sm:size-12" />
+					<HeroiconsRocketLaunch class="size-8 sm:size-12" />
 				</Item>
 				<Item
 					title={m.whyChooseUs_items_2_title()}
 					description={m.whyChooseUs_items_2_description()}
 				>
-					<IconIdea class="size-8 sm:size-12" />
+					<HeroiconsLightBulb class="size-8 sm:size-12" />
 				</Item>
 				<Item
 					title={m.whyChooseUs_items_3_title()}
 					description={m.whyChooseUs_items_3_description()}
 				>
-					<IconTeamWork class="size-8 sm:size-12" />
+					<HeroiconsUserGroup class="size-8 sm:size-12" />
 				</Item>
 			</div>
 		</div>

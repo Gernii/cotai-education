@@ -8,7 +8,7 @@
 
 	import type { CoursesListProps_Courses } from './types';
 
-	import { IconClock } from '$lib/components/icons';
+	import HeroiconsClock from '~icons/heroicons/clock';
 
 	type $$Props = CoursesListProps_Courses;
 
@@ -48,7 +48,7 @@
 				</a>
 			</div>
 			<div class="flex items-center gap-x-1">
-				<IconClock class="size-4" />
+				<HeroiconsClock class="size-4" />
 				<p>{m.totalSessions({ number: totalLessons })}</p>
 			</div>
 			<p class="line-clamp-3 flex-grow">{description}</p>

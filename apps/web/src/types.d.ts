@@ -1,5 +1,3 @@
-/// <reference types="unplugin-fonts/client" />
-
 type ImgProps = {
 	src: string;
 	w: number;
