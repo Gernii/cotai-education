@@ -4,6 +4,7 @@ import { defineConfig } from 'vitest/config';
 import { imagetools } from 'vite-imagetools';
 import Unfonts from 'unplugin-fonts/vite';
 import Icons from 'unplugin-icons/vite';
+
 const supportedExtensions = ['png', 'jpg', 'jpeg'];
 const defaultImageToolsWidth = '320;640;1280';
 
@@ -54,7 +55,7 @@ export default defineConfig(({ mode }) => {
 			}),
 			Icons({
 				compiler: 'svelte',
-				defaultClass: 'size-6',
+				defaultClass: 'size-5 flex-shrink-0',
 				
 			}),
 			paraglide({

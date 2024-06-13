@@ -38,11 +38,12 @@
 			</figure>
 		</a>
 
-		<div class="card-body flex-none">
+		<div class="card-body">
 			<div>
 				<a
 					href={courseNavigate}
 					class="flex-grow-0 text-base font-bold hover:text-primary lg:text-xl"
+					{title}
 				>
 					{title}
 				</a>
@@ -51,7 +52,7 @@
 				<HeroiconsClock class="size-4" />
 				<p>{m.totalSessions({ number: totalLessons })}</p>
 			</div>
-			<p class="line-clamp-3 flex-grow">{description}</p>
+			<p class="line-clamp-3 flex-none">{description}</p>
 		</div>
 	</li>
 {/if}

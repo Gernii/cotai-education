@@ -19,7 +19,7 @@
 		"machine-learning-for-ai",
 		"deep-learning-for-ai"
 	],
-	"targets": ["student", "developer", "all"],
-	"description": "Comming soon",
+	"targets": ["student", "developer"],
+	"description": "- Kiến thức AI từ nền tảng đến công nghệ mới nhất, được khái quát và hệ thống trực quan dễ hiểu.\n- Kỹ năng lập trình, huấn luyện, tinh chỉnh, triển khai AI. Thực hành qua nhiều bài tập và ứng dụng AI đa dạng thú vị.\n- Tự làm các ứng dụng AI yêu thích dưới sự hướng dẫn của kỹ sư CoTAI và cơ hội tham gia dự án, phát triển sản phẩm & nghiên cứu chuyên sâu.\n- Khoá học ngắn hạn 12 buổi × 120 phút bài giảng (kèm 60–120 phút tự thực hành) mỗi buổi. Học viên được kiểm tra đầu vào để đăng ký lớp phù hợp.",
 	"components": []
 }

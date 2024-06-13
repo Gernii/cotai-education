@@ -1,11 +1,11 @@
 const program = {
 	title: 'Đào tạo cùng dự án thực tế',
 	hidden: false,
-	courses: ['face-attendace-system-on-cloud-and-edge', 'image-search-and-retrieval'],
-	'courses-highlighted': ['face-attendace-system-on-cloud-and-edge', 'image-search-and-retrieval'],
-	'courses-roadmap': ['face-attendace-system-on-cloud-and-edge', 'image-search-and-retrieval'],
-	targets: ['student', 'developer', 'all'],
-	description: 'Comming soon',
+	courses: ['face-attendance-system-on-cloud-and-edge', 'image-search-and-retrieval'],
+	'courses-highlighted': ['face-attendance-system-on-cloud-and-edge', 'image-search-and-retrieval'],
+	'courses-roadmap': ['face-attendance-system-on-cloud-and-edge', 'image-search-and-retrieval'],
+	targets: ['student', 'developer'],
+	description: '',
 	components: []
 };
 

@@ -40,96 +40,96 @@ const course = {
 1.  **Research-Oriented Learning**: Develop the ability to independently research and gather relevant resources, including: debugging code, case studies and existing solutions in the field of image similarity search. 
 2.  **System Design Based on Real-Life Requirements**: Learn to design robust and efficient image similarity search systems tailored to real-life requirements.
 3.  **Hands-On Development with Pretrained Models**: Gain practical experience in coding and developing their own image similarity search systems using pretrained models. `,
-	components: [
-		{
-			type: 0,
+	// 	components: [
+	// 		{
+	// 			type: 0,
 
-			title: 'Course Information',
+	// 			title: 'Course Information',
 
-			image: '/images/logo/CoTAI-Ver0-320.png',
+	// 			image: '/images/logo/CoTAI-Ver0-320.png',
 
-			background: true,
+	// 			background: true,
 
-			hidden: false,
+	// 			hidden: false,
 
-			description: `- Learning method: Online 100%, self-paced with videos
-- Resources:
-	- Intel CPU 10th or above
-	- NVIDIA GPU with at least 6GB of VRAM (much more VRAM is good to have)
-	- Ubuntu OS or Windows Subsystem Linux
-- Usecases: image, video, text, tabular, document/webpage, user/item profile, multi-modality`
-		},
-		{
-			type: 0,
+	// 			description: `- Learning method: Online 100%, self-paced with videos
+	// - Resources:
+	// 	- Intel CPU 10th or above
+	// 	- NVIDIA GPU with at least 6GB of VRAM (much more VRAM is good to have)
+	// 	- Ubuntu OS or Windows Subsystem Linux
+	// - Usecases: image, video, text, tabular, document/webpage, user/item profile, multi-modality`
+	// 		},
+	// 		{
+	// 			type: 0,
 
-			title: 'Prerequisite',
+	// 			title: 'Prerequisite',
 
-			image: '/images/logo/CoTAI-Ver0-320.png',
+	// 			image: '/images/logo/CoTAI-Ver0-320.png',
 
-			background: false,
+	// 			background: false,
 
-			hidden: false,
+	// 			hidden: false,
 
-			description: `At least 1 year of experience in using Python in works (self-works / company works)
-- Writen OOP code
-- Basic Backend understanding
+	// 			description: `At least 1 year of experience in using Python in works (self-works / company works)
+	// - Writen OOP code
+	// - Basic Backend understanding
 
-Familiar with:
-1. Numpy
-	- Tensor operations
-4. OpenCV / Pillow
-	- Image operations
-4. Simple Machine Learning concepts, such as:
-	- Similarity measure
-	- K-Means
-	- K-NN
+	// Familiar with:
+	// 1. Numpy
+	// 	- Tensor operations
+	// 4. OpenCV / Pillow
+	// 	- Image operations
+	// 4. Simple Machine Learning concepts, such as:
+	// 	- Similarity measure
+	// 	- K-Means
+	// 	- K-NN
 
-Optional: participant could include self-projects or related certificates to prove their capabilities.`
-		},
-		{
-			type: 0,
+	// Optional: participant could include self-projects or related certificates to prove their capabilities.`
+	// 		},
+	// 		{
+	// 			type: 0,
 
-			title: 'Learning Outcomes',
+	// 			title: 'Learning Outcomes',
 
-			image: '/images/logo/CoTAI-Ver0-320.png',
+	// 			image: '/images/logo/CoTAI-Ver0-320.png',
 
-			background: false,
+	// 			background: false,
 
-			hidden: false,
+	// 			hidden: false,
 
-			description: `By the end of this course, learners will be able to:
-1. **Understand the Core Concepts**: Gain a solid grasp of the underlying algorithms and techniques used in image similarity search, including feature extraction, dimensionality reduction, distance metrics and vector search.
-2. **Implement MVPs (minimum viable products) using Pretrained Models**: Develop practical skills in implementing image similarity search solutions by utilizing pretrained models. This will include learning how to integrate these models into their systems, customize them for specific tasks, and optimize them for better performance.`
-		},
-		{
-			type: 0,
+	// 			description: `By the end of this course, learners will be able to:
+	// 1. **Understand the Core Concepts**: Gain a solid grasp of the underlying algorithms and techniques used in image similarity search, including feature extraction, dimensionality reduction, distance metrics and vector search.
+	// 2. **Implement MVPs (minimum viable products) using Pretrained Models**: Develop practical skills in implementing image similarity search solutions by utilizing pretrained models. This will include learning how to integrate these models into their systems, customize them for specific tasks, and optimize them for better performance.`
+	// 		},
+	// 		{
+	// 			type: 0,
 
-			title: "Skills you'll practice",
+	// 			title: "Skills you'll practice",
 
-			image: '/images/logo/CoTAI-Ver0-320.png',
+	// 			image: '/images/logo/CoTAI-Ver0-320.png',
 
-			background: false,
+	// 			background: false,
 
-			hidden: false,
+	// 			hidden: false,
 
-			description: `\`Python Programming\` \`OOP\` \`Deep Learning Inference\` \`Docker\``
-		},
-		{
-			type: 0,
+	// 			description: `\`Python Programming\` \`OOP\` \`Deep Learning Inference\` \`Docker\``
+	// 		},
+	// 		{
+	// 			type: 0,
 
-			title: 'Who should join?',
+	// 			title: 'Who should join?',
 
-			image: '/images/logo/CoTAI-Ver0-320.png',
+	// 			image: '/images/logo/CoTAI-Ver0-320.png',
 
-			background: false,
+	// 			background: false,
 
-			hidden: false,
+	// 			hidden: false,
 
-			description: `- New AI Learner
-- Students that already completed CoTAI's PythonAI & MC4AI
-- Software Engineers who want to leverage their knowledge in AI`
-		}
-	],
+	// 			description: `- New AI Learner
+	// - Students that already completed CoTAI's PythonAI & MC4AI
+	// - Software Engineers who want to leverage their knowledge in AI`
+	// 		}
+	// 	],
 
 	curriculum: [
 		{

@@ -4,7 +4,7 @@
 	import HeroiconsSun from '~icons/heroicons/sun';
 	import HeroiconsMoon from '~icons/heroicons/moon';
 
-	let iconClasses = cx('inline-block size-7');
+	let iconClasses = cx('inline-block size-5');
 </script>
 
 <div class="block dark:hidden">

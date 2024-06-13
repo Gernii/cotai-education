@@ -14,61 +14,30 @@ Khóa học sẽ hướng dẫn học viên tối ưu hóa mô hình face detect
 Ngoài ra khóa học sẽ giúp xây dựng hệ thống sử dụng relational database, serverless backend và thiết kế API trên cloud
 
 Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
-	components: [
-		{
-			type: 0,
 
+	archives: [
+		{
 			title: 'Làm việc với các mô hình AI nổi tiếng',
-
-			image: '/images/logo/CoTAI-Ver0-320.png',
-
-			background: true,
-
-			hidden: false,
-
-			description: `Các bạn sẽ được giới thiệu và sử dụng các framework, thư viện và các mô hình AI nổi tiếng về nhận diện khuôn mặt.`
+			description:
+				'Các bạn sẽ được giới thiệu và sử dụng các framework, thư viện và các mô hình AI nổi tiếng về nhận diện khuôn mặt'
 		},
 		{
-			type: 0,
-
 			title: 'Tối ưu model AI cho production',
-
-			image: '/images/logo/CoTAI-Ver0-320.png',
-
-			background: false,
-
-			hidden: false,
-
-			description: `Khóa học sẽ hướng dẫn học viên tối ưu hóa mô hình face detection, face recognition để chạy thuần CPU, sau đó triển khai mô AI lên hệ thống đám mây AWS, hệ thống nhúng Raspberry Pi, Serverless.`
+			description:
+				'Khóa học sẽ hướng dẫn học viên tối ưu hóa mô hình face detection, face recognition để chạy thuần CPU, sau đó triển khai mô AI lên hệ thống đám mây AWS, hệ thống nhúng Raspberry Pi, Serverless'
 		},
 		{
-			type: 0,
-
 			title: 'Xây dựng hệ thống backend cho ứng dụng điểm danh bằng khuôn mặt',
-
-			image: '/images/logo/CoTAI-Ver0-320.png',
-
-			background: false,
-
-			hidden: false,
-
-			description: `Thiết kế hệ thống serverless backend, API trên cloud kết hợp với Relational Database.`
+			description:
+				'Thiết kế hệ thống serverless backend, API trên cloud kết hợp với Relational Database'
 		},
 		{
-			type: 0,
-
 			title: 'Xây dựng ứng dụng trên mạch nhúng Raspberry Pi',
-
-			image: '/images/logo/CoTAI-Ver0-320.png',
-
-			background: false,
-
-			hidden: false,
-
-			description: `- Tối ưu hóa mô hình để chạy trên Raspberry Pi, tối ưu camera để phù hợp với môi trường thiếu sáng.
-- Hạn chế giật lag và FPS thấp bằng xử lý đa luồng AI/Camera trong Python.`
+			description: `- Tối ưu hóa mô hình để chạy trên Raspberry Pi, tối ưu camera để phù hợp với môi trường thiếu sáng
+- Hạn chế giật lag và FPS thấp bằng xử lý đa luồng AI/Camera trong Python`
 		}
 	],
+	components: [],
 
 	curriculum: [
 		{
