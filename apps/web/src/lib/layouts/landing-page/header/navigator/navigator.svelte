@@ -5,7 +5,7 @@
 
 	import { navigate } from '$lib/libs/i18n/routing';
 
-	import { routingPathProgramsId } from '$lib/utils/routing-path';
+	import { routingPathAboutUs, routingPathProgramsId } from '$lib/utils/routing-path';
 
 	import * as m from '$i18n/messages';
 
@@ -63,8 +63,13 @@
 				</ul>
 			</NavigatorCollapse>
 		{/if}
+
 		<NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
 			{m.contact()}
+		</NavigatorItem>
+
+		<NavigatorItem href={navigate(routingPathAboutUs())} target="_self" aria-label={m.aboutUs()}>
+			{m.aboutUs()}
 		</NavigatorItem>
 
 		<NavigatorItem

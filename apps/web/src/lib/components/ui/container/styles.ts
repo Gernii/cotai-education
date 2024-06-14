@@ -7,7 +7,7 @@ export const containerClassNameHandler = cva<ContainerCVAProps>('', {
 		padding: {
 			bottom: 'pb-8 pt-2 sm:pb-12 sm:pt-4 lg:pb-16 lg:pt-4',
 			top: 'pb-2 pt-8 sm:pb-4 sm:pt-12 lg:pb-4 lg:pt-16',
-			'top-bottom': 'pb-6 sm:py-8 lg:py-12',
+			'top-bottom': 'py-6 sm:py-8 lg:py-12',
 			none: ''
 		}
 	},
@@ -40,7 +40,7 @@ export const containerContentClassNameHandler = cva<ContainerContentCVAProps>('m
 		}
 	},
 	defaultVariants: {
-		size: 12,
+		size: 10,
 		padding: true
 	}
 });

@@ -31,7 +31,7 @@
 		</div>
 	{/if}
 
-	<ul class="grid grid-cols-1 gap-x-12 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
+	<ul class="grid grid-cols-1 gap-x-6 gap-y-6 sm:grid-cols-2 lg:grid-cols-3">
 		{#each courses as course}
 			<CourseCard {...course} />
 		{/each}

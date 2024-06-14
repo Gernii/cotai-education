@@ -3,9 +3,13 @@
 
 	import { ProgramDetailsPage } from '$lib/pages/program-details';
 
+	import { Reviews } from '$lib/features/reviews';
+
 	export let data;
 </script>
 
 <SEO description={data.programDetails.rawDescription} title={data.programDetails.title} />
 
 <ProgramDetailsPage />
+
+<Reviews />
