@@ -3,6 +3,7 @@ import Typography from '@tailwindcss/typography';
 import daisyui from 'daisyui';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import daisyThemes from 'daisyui/src/theming/themes';
+import Animated from 'tailwindcss-animated';
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 	darkMode: ['class', '[data-theme="dark"]'],
@@ -75,6 +76,6 @@ const config = {
 			}
 		]
 	},
-	plugins: [Typography, AspectRatio, daisyui]
+	plugins: [Typography, AspectRatio, Animated, daisyui]
 };
 module.exports = config;
