@@ -9,7 +9,7 @@ const config = {
 	darkMode: ['class', '[data-theme="dark"]'],
 	theme: {
 		fontFamily: {
-			sans: ['"Mulish"', ...defaultTheme.fontFamily.sans]
+			sans: ['"Inter"', '"Mulish"', ...defaultTheme.fontFamily.sans]
 		},
 		extend: {
 			spacing: {

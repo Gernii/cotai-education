@@ -24,12 +24,14 @@
 		"postbuild": "node scripts/post-build.js"
 	},
 	"devDependencies": {
+		"@fontsource/inter": "^5.0.18",
 		"@fontsource/mulish": "^5.0.16",
 		"@iconify-json/devicon": "^1.1.35",
 		"@iconify-json/flag": "^1.1.47",
 		"@iconify-json/heroicons": "^1.1.19",
 		"@iconify-json/logos": "^1.1.42",
 		"@iconify-json/lucide": "^1.1.159",
+		"@iconify-json/teenyicons": "^1.1.9",
 		"@inlang/paraglide-js": "latest",
 		"@inlang/paraglide-js-adapter-vite": "latest",
 		"@melt-ui/pp": "^0.3.2",

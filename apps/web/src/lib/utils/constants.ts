@@ -1,5 +1,7 @@
 export const defaultImage = '/images/logo/CoTAI-Ver0-320.png';
 
+export const programIds = ['public-training', 'project-based-training', 'extra'];
+
 export const routerPath = {
 	admin: {
 		auth: {

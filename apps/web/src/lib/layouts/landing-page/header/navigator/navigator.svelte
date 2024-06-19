@@ -64,12 +64,12 @@
 			</NavigatorCollapse>
 		{/if}
 
-		<NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
-			{m.contact()}
-		</NavigatorItem>
-
 		<NavigatorItem href={navigate(routingPathAboutUs())} target="_self" aria-label={m.aboutUs()}>
 			{m.aboutUs()}
+		</NavigatorItem>
+
+		<NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
+			{m.contact()}
 		</NavigatorItem>
 
 		<NavigatorItem

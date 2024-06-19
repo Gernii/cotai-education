@@ -6,6 +6,7 @@
 	import { navigate } from '$lib/libs/i18n/routing';
 
 	import { routingPathProgramsId } from '$lib/utils/routing-path';
+	import { programIds } from '$lib/utils/constants';
 
 	import * as m from '$i18n/messages';
 
@@ -36,26 +37,28 @@
 	);
 </script>
 
-{#if title}
-	<Container>
-		<ContainerContent>
-			<CoursesList
-				{courses}
-				{title}
-				showMoreUrl={navigate(routingPathProgramsId(id))}
-				showMoreText={m.viewProgramDetails()}
-			>
-				<svelte:fragment slot="details-main">
-					{#if targets.length > 0}
-						<div>
-							<span>{m.target()}:</span>{' '}
-							{#each targets as target}
-								<span class="badge badge-primary badge-outline">{target}</span>{' '}
-							{/each}
-						</div>
-					{/if}
-				</svelte:fragment>
-			</CoursesList>
-		</ContainerContent>
-	</Container>
+{#if title && programIds.includes(id)}
+	<section {id}>
+		<Container>
+			<ContainerContent>
+				<CoursesList
+					{courses}
+					{title}
+					showMoreUrl={navigate(routingPathProgramsId(id))}
+					showMoreText={m.viewProgramDetails()}
+				>
+					<svelte:fragment slot="details-main">
+						{#if targets.length > 0}
+							<div>
+								<span>{m.target()}:</span>{' '}
+								{#each targets as target}
+									<span class="badge badge-primary badge-outline">{target}</span>{' '}
+								{/each}
+							</div>
+						{/if}
+					</svelte:fragment>
+				</CoursesList>
+			</ContainerContent>
+		</Container>
+	</section>
 {/if}
