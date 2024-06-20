@@ -1,9 +1,12 @@
 <script lang="ts">
 	import { cx } from 'cva';
+	import { writable } from 'svelte/store';
+	import { inview } from 'svelte-inview';
 
 	import { Picture } from '$lib/components/ui/picture';
 
 	import { navigate } from '$lib/libs/i18n/routing';
+	import { inviewCommonOptions, onInViewEnter } from '$lib/libs/inview';
 
 	import type { CourseProps } from '$lib/utils/types/data';
 	import { coursesThumbnail } from '$lib/utils/courses-thumbnail';
@@ -14,6 +17,7 @@
 	import HeroiconsClock from '~icons/heroicons/clock';
 	import HeroiconsChevronRight16Solid from '~icons/heroicons/chevron-right-16-solid';
 	import { TextContent } from '$lib/features/text-content';
+
 	interface $$Props extends CourseProps {
 		idx: number;
 		last: boolean;
@@ -27,15 +31,19 @@
 	export let idx: $$Props['idx'];
 	export let last: $$Props['last'];
 
+	let isInview = writable(false);
+
 	$: totalSessions = curriculum.filter((c) => c.classesCountable).length;
 
 	$: courseThumbnail = coursesThumbnail(id as CourseId);
-
-	$: console.log(courseThumbnail, id);
 </script>
 
 {#if title}
-	<li class="flex gap-x-1 sm:gap-x-4">
+	<li
+		class="flex gap-x-1 sm:gap-x-4"
+		use:inview={inviewCommonOptions}
+		on:inview_enter={onInViewEnter(isInview)}
+	>
 		<div class="relative flex w-7 flex-col items-center sm:w-14">
 			<div
 				class="absolute top-4 flex size-6 items-center justify-center rounded-full bg-primary sm:size-12"
@@ -56,6 +64,8 @@
 					'mb-4': !last
 				}
 			)}
+			class:opacity-0={!$isInview}
+			class:animate-fade-up={$isInview}
 		>
 			<div class="card-body items-start">
 				<div
