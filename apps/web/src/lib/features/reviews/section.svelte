@@ -2,7 +2,6 @@
 	import { page } from '$app/stores';
 	import 'keen-slider/keen-slider.min.css';
 
-	// eslint-disable-next-line import/default, import/no-named-as-default, import/no-named-as-default-member
 	import KeenSlider, { type KeenSliderInstance } from 'keen-slider';
 	import { cx } from 'cva';
 	import { onMount } from 'svelte';

@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { cx } from 'cva';
-	import { inview, type ObserverEventDetails } from 'svelte-inview';
-	import { writable, type Writable } from 'svelte/store';
+	import { inview } from 'svelte-inview';
+	import { writable } from 'svelte/store';
 
 	import HeroPicture from '$lib/assets/pages/about/hero.jpg?imagetools';
 	import CoTAIAIOpenDayPicture from '$lib/assets/pages/about/cotai-ai-open-day.jpg?imagetools';
@@ -16,6 +16,8 @@
 	import { SEO } from '$lib/components/ui/seo';
 	import { Picture } from '$lib/components/ui/picture';
 
+	import { inviewCommonOptions, onInViewEnter } from '$lib/libs/inview';
+
 	import { AboutPageMembers, AboutPagePartnerItem } from '$lib/pages/about';
 
 	import * as m from '$i18n/messages';
@@ -28,57 +30,33 @@
 
 	let wrapperClassName = cx('space-y-4 md:space-y-8');
 
-	let isHeroImageInView = writable(false);
-	let isOurStoryInView = writable(false);
 	let isOurAdvantage = writable(false);
 	let isOutstandingMarks = writable(false);
 	let isOurTeam = writable(false);
 	let isPartner = writable(false);
-
-	let inviewOptions = {
-		unobserveOnEnter: true,
-		rootMargin: '-20%'
-	};
-
-	const onOnInViewEnter =
-		(inviewStore: Writable<boolean>) => (event: CustomEvent<ObserverEventDetails>) => {
-			const { inView } = event.detail;
-			inviewStore.set(inView);
-		};
 </script>
 
 <SEO title={m.aboutus()} />
-<section
-	class="mt-header-space"
-	use:inview={inviewOptions}
-	on:inview_enter={onOnInViewEnter(isHeroImageInView)}
->
+
+<section class="mt-header-space">
 	<Container>
 		<ContainerContent>
-			<div class:animate-fade-up={$isHeroImageInView} class:opacity-0={!$isHeroImageInView}>
+			<div>
 				<Picture meta={HeroPicture} alt={m.mainLogo()} imageClass="rounded-box" />
 			</div>
 		</ContainerContent>
 	</Container>
 </section>
 
-<section use:inview={inviewOptions} on:inview_enter={onOnInViewEnter(isOurStoryInView)}>
+<section>
 	<Container>
 		<ContainerContent class={wrapperClassName}>
-			<div
-				class="border-l-4 border-primary pl-4"
-				class:opacity-0={!$isOurStoryInView}
-				class:animate-fade={$isOurStoryInView}
-			>
-				<h1 class="text-2xl font-bold sm:text-4xl" class:animate-fade-left={$isOurStoryInView}>
+			<div class="border-l-4 border-primary pl-4">
+				<h1 class="text-2xl font-bold sm:text-4xl">
 					{m.ourStory()}
 				</h1>
 			</div>
-			<div
-				class={textAndImageGridClassName}
-				class:animate-fade-up={$isOurStoryInView}
-				class:opacity-0={!$isOurStoryInView}
-			>
+			<div class={textAndImageGridClassName}>
 				<div>
 					{@html m.ourStory_description()}
 				</div>
@@ -94,7 +72,7 @@
 	</Container>
 </section>
 
-<section use:inview={inviewOptions} on:inview_enter={onOnInViewEnter(isOurAdvantage)}>
+<section use:inview={inviewCommonOptions} on:inview_enter={onInViewEnter(isOurAdvantage)}>
 	<Container>
 		<ContainerContent class={wrapperClassName}>
 			<div
@@ -128,8 +106,8 @@
 
 <section
 	class="bg-primary/90 text-white"
-	use:inview={inviewOptions}
-	on:inview_enter={onOnInViewEnter(isOutstandingMarks)}
+	use:inview={inviewCommonOptions}
+	on:inview_enter={onInViewEnter(isOutstandingMarks)}
 >
 	<Container>
 		<ContainerContent class={wrapperClassName}>
@@ -170,7 +148,7 @@
 	</Container>
 </section>
 
-<section use:inview={inviewOptions} on:inview_enter={onOnInViewEnter(isOurTeam)}>
+<section use:inview={inviewCommonOptions} on:inview_enter={onInViewEnter(isOurTeam)}>
 	<Container>
 		<ContainerContent class={wrapperClassName}>
 			<div class="flex justify-center">
@@ -191,7 +169,7 @@
 	</Container>
 </section>
 
-<section use:inview={inviewOptions} on:inview_enter={onOnInViewEnter(isPartner)}>
+<section use:inview={inviewCommonOptions} on:inview_enter={onInViewEnter(isPartner)}>
 	<Container>
 		<ContainerContent class={wrapperClassName}>
 			<div class="flex justify-center">

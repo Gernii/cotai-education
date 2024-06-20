@@ -8,8 +8,6 @@
 	import { coursesThumbnail } from '$lib/utils/courses-thumbnail';
 	import type { CourseId } from '$lib/utils/constants';
 
-	import { Reviews } from '$lib/features/reviews';
-
 	export let data;
 
 	$: courseThumbnail = coursesThumbnail(data.id as CourseId);
@@ -23,4 +21,4 @@
 
 <CourseDetailsPage />
 
-<Reviews />
+<!-- <Reviews /> -->

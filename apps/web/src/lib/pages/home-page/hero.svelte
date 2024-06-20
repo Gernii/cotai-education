@@ -14,6 +14,8 @@
 	import LucideGraduationCap from '~icons/lucide/graduation-cap';
 	import TeenyiconsDiscountSolid from '~icons/teenyicons/discount-solid';
 	import HeroiconsCheck16Solid from '~icons/heroicons/check-16-solid';
+
+	let isDiscountVisible = false;
 </script>
 
 <section
@@ -21,22 +23,24 @@
 >
 	<Container>
 		<ContainerContent>
-			<div class="relative pb-16">
-				<div
-					class="card static -top-32 mx-auto flex w-full flex-row gap-x-2 bg-error text-error-content"
-				>
-					<div class="flex flex-row gap-x-2 px-4 py-2">
-						<div class="mt-1">
-							<TeenyiconsDiscountSolid class="size-4 flex-shrink-0 sm:size-6" />
-						</div>
-						<div>
-							<p class="text-base font-bold sm:text-lg">Ưu đãi lên đến 15,000,000đ</p>
-							<p class="text-sm sm:text-base">Giảm 100% cho học sinh cấp 3</p>
-							<p class="text-xs sm:text-sm">*Ưu đãi năm học mới trước 29/06/2024</p>
+			{#if isDiscountVisible}
+				<div class="relative pb-16">
+					<div
+						class="card static -top-32 mx-auto flex w-full flex-row gap-x-2 bg-error text-error-content"
+					>
+						<div class="flex flex-row gap-x-2 px-4 py-2">
+							<div class="mt-1">
+								<TeenyiconsDiscountSolid class="size-4 flex-shrink-0 sm:size-6" />
+							</div>
+							<div>
+								<p class="text-base font-bold sm:text-lg">Ưu đãi lên đến 15,000,000đ</p>
+								<p class="text-sm sm:text-base">Giảm 100% cho học sinh cấp 3</p>
+								<p class="text-xs sm:text-sm">*Ưu đãi năm học mới trước 29/06/2024</p>
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			{/if}
 			<div class="grid grid-cols-1 gap-y-8 md:grid-cols-2">
 				<div class="space-y-1 lg:space-y-4">
 					<p class="text-lg font-bold text-primary lg:text-3xl">CoTAI Education</p>

@@ -3,8 +3,6 @@
 
 	import { ProgramDetailsPage } from '$lib/pages/program-details';
 
-	import { Reviews } from '$lib/features/reviews';
-
 	export let data;
 </script>
 
@@ -12,4 +10,4 @@
 
 <ProgramDetailsPage />
 
-<Reviews />
+<!-- <Reviews /> -->
