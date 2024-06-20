@@ -2,7 +2,7 @@
 	import { cx } from 'cva';
 
 	interface $$Props {
-		meta: ImgMeta[];
+		meta: ImgMeta[] | ImgMeta;
 		alt?: string;
 		loading?: 'lazy' | 'eager';
 		imageClass?: string;
