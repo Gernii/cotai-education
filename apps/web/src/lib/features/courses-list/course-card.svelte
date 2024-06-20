@@ -1,8 +1,11 @@
 <script lang="ts">
+	import { Picture } from '$lib/components/ui/picture';
+
 	import { navigate } from '$lib/libs/i18n/routing';
 
 	import { routingPathCoursesId } from '$lib/utils/routing-path';
-	import { defaultImage } from '$lib/utils/constants';
+	import { type CourseId } from '$lib/utils/constants';
+	import { coursesThumbnail } from '$lib/utils/courses-thumbnail';
 
 	import * as m from '$i18n/messages';
 
@@ -14,11 +17,12 @@
 
 	export let id: $$Props['id'];
 	export let title: $$Props['title'] = undefined;
-	export let thumbnail: $$Props['thumbnail'] = undefined;
 	export let description: $$Props['description'] = undefined;
 	export let totalLessons: $$Props['totalLessons'] = 0;
 
 	$: courseNavigate = navigate(routingPathCoursesId(id));
+
+	$: courseThumbnail = coursesThumbnail(id as CourseId);
 </script>
 
 {#if title && description}
@@ -27,14 +31,13 @@
 	>
 		<a href={courseNavigate}>
 			<figure class="aspect-thumbnail169">
-				<img
-					src={thumbnail ?? defaultImage}
-					alt={m.thumbnail({ title: title ?? '' })}
-					height={200}
-					width={448}
-					loading="lazy"
-					class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-				/>
+				{#key id}
+					<Picture
+						meta={courseThumbnail}
+						alt={m.thumbnail({ title: title ?? '' })}
+						imageClass="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+					/>
+				{/key}
 			</figure>
 		</a>
 

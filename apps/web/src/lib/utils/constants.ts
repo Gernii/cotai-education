@@ -1,6 +1,15 @@
 export const defaultImage = '/images/logo/CoTAI-Ver0-320.png';
 
 export const programIds = ['public-training', 'project-based-training', 'extra'];
+export const coursesId = [
+	'ai-for-all',
+	'deep-learning-for-ai',
+	'python-ai',
+	'math-and-coding-for-ai',
+	'machine-learning-for-ai'
+] as const;
+
+export type CourseId = (typeof coursesId)[number];
 
 export const routerPath = {
 	admin: {

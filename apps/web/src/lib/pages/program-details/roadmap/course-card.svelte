@@ -1,9 +1,13 @@
 <script lang="ts">
 	import { cx } from 'cva';
 
+	import { Picture } from '$lib/components/ui/picture';
+
 	import { navigate } from '$lib/libs/i18n/routing';
 
 	import type { CourseProps } from '$lib/utils/types/data';
+	import { coursesThumbnail } from '$lib/utils/courses-thumbnail';
+	import type { CourseId } from '$lib/utils/constants';
 
 	import * as m from '$i18n/messages';
 
@@ -24,6 +28,10 @@
 	export let last: $$Props['last'];
 
 	$: totalSessions = curriculum.filter((c) => c.classesCountable).length;
+
+	$: courseThumbnail = coursesThumbnail(id as CourseId);
+
+	$: console.log(courseThumbnail, id);
 </script>
 
 {#if title}
@@ -83,15 +91,14 @@
 					{#if thumbnail}
 						<div class="col-span-1 self-center lg:col-span-2">
 							<div class="overflow-hidden rounded-box">
-								<figure class="aspect-thumbnail43">
-									<img
-										loading="lazy"
-										src={thumbnail}
-										alt={m.thumbnail({ title: title })}
-										height={200}
-										width={448}
-										class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-									/>
+								<figure>
+									{#key id}
+										<Picture
+											meta={courseThumbnail}
+											alt={m.thumbnail({ title: title ?? '' })}
+											imageClass="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+										/>
+									{/key}
 								</figure>
 							</div>
 						</div>

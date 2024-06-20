@@ -2,6 +2,10 @@
 	import { page } from '$app/stores';
 
 	import { ContainerContent } from '$lib/components/ui/container';
+	import { Picture } from '$lib/components/ui/picture';
+
+	import { coursesThumbnail } from '$lib/utils/courses-thumbnail';
+	import type { CourseId } from '$lib/utils/constants';
 
 	import * as m from '$i18n/messages';
 
@@ -12,9 +16,11 @@
 	import { SkillsList } from '$lib/features/skill-icons';
 
 	$: pd = $page.data as CourseDetailsPageDataProps;
+
+	$: courseThumbnail = coursesThumbnail(pd.id as CourseId);
 </script>
 
-<div class="mb-16 min-h-dvh">
+<div class="mb-16">
 	<ContainerContent class="h-full pt-header-space-sm lg:pt-header-space">
 		<div class="grid grid-cols-1 gap-x-32 gap-y-16 pt-16 lg:grid-cols-5">
 			<div class="col-span-1 space-y-4 lg:col-span-3">
@@ -41,14 +47,13 @@
 				class="group card col-span-1 w-full self-start overflow-hidden border border-base-content/5 bg-base-100 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5 lg:col-span-2"
 			>
 				<figure class="aspect-thumbnail169">
-					<img
-						loading="lazy"
-						src={pd.thumbnail}
-						alt={m.thumbnail({ title: pd.title ?? '' })}
-						height={200}
-						width={448}
-						class="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-					/>
+					{#if courseThumbnail}
+						<Picture
+							meta={courseThumbnail}
+							alt={m.thumbnail({ title: pd.title ?? '' })}
+							imageClass="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+						/>
+					{/if}
 				</figure>
 
 				<div class="card-body">

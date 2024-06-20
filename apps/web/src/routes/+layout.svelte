@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.pcss';
+	import '../app.css';
 	import 'unfonts.css';
 	import { navigating } from '$app/stores';
 </script>
