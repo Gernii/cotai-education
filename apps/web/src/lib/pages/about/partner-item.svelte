@@ -3,7 +3,7 @@
 
 	interface $$Props {
 		name: string;
-		meta: ImgMeta[];
+		meta: ImgMeta[] | ImgMeta;
 	}
 
 	export let name: $$Props['name'];

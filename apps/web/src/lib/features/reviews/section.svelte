@@ -10,9 +10,9 @@
 	import { Container, ContainerContent } from '$lib/components/ui/container';
 	import SectionTitle from '$lib/components/ui/section-title/section-title.svelte';
 
-	import * as m from '$i18n/messages';
+	import type { LandingPage_LayoutData } from '$lib/layouts/landing-page/types';
 
-	import type { LandingPage_LayoutData } from '../types';
+	import * as m from '$i18n/messages';
 
 	import Review from './review.svelte';
 	import { autoSwitchSlide } from './slider-handler';

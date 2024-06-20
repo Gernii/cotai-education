@@ -20,11 +20,10 @@
 	export let author: $$Props['author'] = undefined;
 
 	// if there is only one, vite-imagetools won't wrap the object in an array
-	if (!(meta instanceof Array)) meta = [meta];
 
-	$: sources = meta[0].sources;
+	$: sources = meta instanceof Array ? meta[0].sources : meta.sources;
 
-	$: fallback = meta[0].img;
+	$: fallback = meta instanceof Array ? meta[0].img : meta.img;
 </script>
 
 <picture class={cx('block h-full', pictureClass)} data-author={author}>

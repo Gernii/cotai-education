@@ -13,7 +13,7 @@
 	interface $$Props {
 		name: string;
 		role: string;
-		meta: ImgMeta[];
+		meta: ImgMeta[] | ImgMeta;
 		url?: string;
 	}
 
