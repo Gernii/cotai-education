@@ -1,3 +1,5 @@
+import { PUBLIC_LOGS_URL, PUBLIC_POSTHOG_TOKEN } from '$env/static/public';
+
 export const defaultImage = '/images/logo/CoTAI-Ver0-320.png';
 
 export const programIds = ['public-training', 'project-based-training', 'extra'];
@@ -91,3 +93,8 @@ export const courseAPIRouterPath = () => {
 };
 
 export const REDIRECT_PARAM = 'redirect';
+
+export const getIsUserInEu = () =>
+	Intl.DateTimeFormat().resolvedOptions().timeZone.startsWith('Europe') ? true : false;
+
+export const isPostHogEnvValid = PUBLIC_POSTHOG_TOKEN !== '' && PUBLIC_LOGS_URL !== '';

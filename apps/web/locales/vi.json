@@ -79,8 +79,6 @@
 	"partner": "Đối tác",
 	"partner_lhp_title": "Trường THPT chuyên Lê Hồng Phong",
 	"aboutUs": "Về chúng tôi",
-	"text": "Chương trình",
-	"experienceRequirement": "Hình ảnh minh họa về kinh nghiệm yêu cầu",
 	"ngoQuocHungName": "Ngô Quốc Hưng",
 	"ngoQuocHungRole": "Founder & CEO",
 	"ngoQuocHungDescription": "Giám đốc và sáng lập Trung tâm tài năng & khởi nghiệp CoTAI, từng là giám đốc AI công ty\n\t\t\tAINovation (2018-2019), giảng viên nghiên cứu AI & Robotics ở Lab của giáo sư Marc Toussaint\n\t\t\tĐại học Stuttgart (Đức, 2015-2018), nghiên cứu sinh Tiến sỹ cùng giáo sư Juergen Schmidhuber ở\n\t\t\tviện IDSIA (Thuỵ Sỹ, 2010-2015), thủ khoa khoa Điện Đại học Bách Khoa HCM (1997-2002, hạng\n\t\t\t1/530).",
@@ -92,9 +90,12 @@
 	"ourAdvantage_description": "Chương trình đào tạo nhân tài AI được đội ngũ CoTAI chắt lọc tinh gọn & cập nhật thường\n\t\t\t\t\txuyên suốt nhiều năm, giúp học viên nắm bắt một cách hiệu quả các nguyên lý cốt lõi cùng\n\t\t\t\t\tcông nghệ AI mới nhất để nhanh chóng thực chiến. Nội dung đào tạo được xây dựng từ các dự\n\t\t\t\t\tán và sản phẩm AI ứng dụng thực tế do CoTAI phát triển, do chính đội ngũ kỹ sư tâm huyết\n\t\t\t\t\tcủa CoTAI trực tiếp giảng dạy, giúp học viên kế thừa các tinh hoa để “đi tắt đón đầu” trên\n\t\t\t\t\ttinh thần thực học thực làm",
 	"outstandingMarks_description": "Tự hào với chương trình <a\n\t\t\t\t\t\tclass=\"link font-semibold\"\n\t\t\t\t\t\thref=\"https://gem.cot.ai/s/B5Th2F3dp\"\n\t\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\t\trel=\"noopener noreferrer\">AI4HighSchool</a\n\t\t\t\t\t> đầu tiên và duy nhất ở Việt Nam đào tạo AI từ phổ cập đến chuyên sâu cho học sinh cấp 3 THPT\n\t\t\t\t\tChuyên Lê Hồng Phong HCM liên tục từ 2019 (được Sở GDĐT Tp.HCM cho phép triển khai chính thức\n\t\t\t\t\tbằng văn bản từ năm học 2021-2022) đến nay",
 	"outstandingMarks_description_2": "Hiện CoTAI đang đào tạo tập trung <a\n\t\t\t\t\t\tclass=\"link font-semibold\"\n\t\t\t\t\t\thref=\"https://gem.cot.ai/#2-Internal-Talent-Training-Programs\"\n\t\t\t\t\t\ttarget=\"_blank\"\n\t\t\t\t\t\trel=\"noopener noreferrer\">chuyên sâu và không thu phí</a\n\t\t\t\t\t> các tài năng trẻ trong suốt ít nhất 1 năm để trở thành kỹ sư nghiên cứu AI (research engineers)\n\t\t\t\t\tvà kỹ sư phát triển sản phẩm AI (fullstack production engineers), bên cạnh các chương trình\n\t\t\t\t\tngắn hạn cho cộng đồng. Ngoài việc trở thành kỹ sư trụ cột phát triển các dự án và sản phẩm\n\t\t\t\t\tcủa CoTAI, các học viên đã tốt nghiệp hiện còn đang làm việc tại các công ty lớn như Meta AI\n\t\t\t\t\t(Facebook, UK), TikTok AI Singapore, You.com, Connectly AI, Astria AI, VinBDI, và các viện\n\t\t\t\t\tnghiên cứu lớn như TU Darmstadt, KAIST, v.v.",
-	"universityOfScience": "Trường Đại học Khoa học Tự nhiên",
 	"partner_universityOfScience_title": "Trường Đại học Khoa học Tự nhiên",
 	"partner_universityOfTechnology_title": "Trường Đại học Bách khoa",
 	"partner_engineeringAndTechnologyHueUniversity_title": "Khoa Kỹ thuật và Công nghệ - Đại học Huế",
-	"partner_gambaru_title": "Gambaru (nhà tuyển dụng)"
+	"partner_gambaru_title": "Gambaru (nhà tuyển dụng)",
+	"text": "Chương trình",
+	"experienceRequirement": "Hình ảnh minh họa về kinh nghiệm yêu cầu",
+	"universityOfScience": "Trường Đại học Khoa học Tự nhiên",
+	"cookieConsentBanner_description": "Chúng tôi sử dụng cookie để cải thiện trải nghiệm của bạn trên\n\t\t\t\t\ttrang web của chúng tôi. Bằng cách nhấp vào \"Chấp nhận\", bạn đồng ý với việc chúng tôi sử\n\t\t\t\t\tdụng cookie."
 }

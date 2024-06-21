@@ -13,7 +13,6 @@ export const coursesThumbnail = (id: CourseId) => {
 		[coursesId[3], CourseThumbnailMathCodeAIPicture],
 		[coursesId[4], CourseThumbnailMachineLearingPicture]
 	]);
-	console.log('thumbnails', thumbnails.get(id));
 
 	const img = thumbnails.get(id) ?? CourseThumbnailDefaultPicture;
 
