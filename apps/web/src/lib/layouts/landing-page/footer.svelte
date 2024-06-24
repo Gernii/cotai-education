@@ -115,22 +115,25 @@
                         All Rights Reserved. A subsidiary of CoTAI.
                     </p>
                     <ul
-                        class="hidden flex-wrap justify-center gap-x-3 font-semibold lg:justify-end"
+                        class="flex flex-wrap justify-center gap-x-3 font-semibold lg:justify-end"
                     >
-                        <li>
+                        <li class="hidden">
                             <a href={"/"} aria-label={"Sitemap"}>Sitemap</a>
                         </li>
                         <li>
-                            <a href={"/"} aria-label="Cookies Policy"
-                                >Cookies Policy</a
+                            <a
+                                href={"/cookie-policy"}
+                                aria-label="Cookie Policy">{m.cookiePolicy()}</a
                             >
                         </li>
                         <li>
-                            <a href={"/"} aria-label="Privacy Policy"
-                                >Privacy Policy</a
+                            <a
+                                href={"/privacy-policy"}
+                                aria-label="Privacy Policy"
+                                >{m.privacyPolicy()}</a
                             >
                         </li>
-                        <li>
+                        <li class="hidden">
                             <a href={"/"} aria-label="Terms of Use"
                                 >Terms of Use</a
                             >
