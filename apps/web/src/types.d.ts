@@ -15,3 +15,4 @@ declare module "*&imagetools" {
     const outputs: ImgMeta[] | ImgMeta;
     export default outputs;
 }
+declare module "*.md";
