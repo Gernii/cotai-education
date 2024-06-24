@@ -1,1 +1,1 @@
-export { default as AdminCoursesPage } from './page.svelte';
+export { default as AdminCoursesPage } from "./page.svelte";

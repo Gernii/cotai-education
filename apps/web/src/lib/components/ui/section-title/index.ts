@@ -1,3 +1,3 @@
-import SectionTitle from './section-title.svelte';
+import SectionTitle from "./section-title.svelte";
 
 export { SectionTitle };

@@ -1,0 +1,10 @@
+{
+    "scopes": [
+        "backend-aws",
+        "backend-aws-edge",
+        "web",
+        "types-bridge",
+        "eslint-config",
+        "config"
+    ]
+}

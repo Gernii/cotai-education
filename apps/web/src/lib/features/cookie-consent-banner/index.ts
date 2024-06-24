@@ -1,1 +1,1 @@
-export { default as CookieConsentBanner } from './cookie-consent-banner.svelte';
+export { default as CookieConsentBanner } from "./cookie-consent-banner.svelte";

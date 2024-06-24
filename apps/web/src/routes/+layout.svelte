@@ -1,29 +1,39 @@
 <script lang="ts">
-	import '../app.css';
-	import 'unfonts.css';
-	import { navigating, page } from '$app/stores';
-	import { browser } from '$app/environment';
-	import { afterNavigate, beforeNavigate } from '$app/navigation';
+    import "../app.css";
+    import "unfonts.css";
+    import { navigating, page } from "$app/stores";
+    import { browser } from "$app/environment";
+    import { afterNavigate, beforeNavigate } from "$app/navigation";
 
-	import posthog from 'posthog-js';
+    import posthog from "posthog-js";
+    import { ParaglideJS } from "@inlang/paraglide-js-adapter-sveltekit";
 
-	$: pathname = $page.url.pathname;
+    import { i18n } from "$lib/libs/i18n";
 
-	$: isPathAllowAnalytics = !pathname.startsWith('/api') && !pathname.startsWith('/admin');
+    import * as m from "$i18n/messages";
+    $: pathname = $page.url.pathname;
 
-	$: {
-		if (browser && isPathAllowAnalytics) {
-			beforeNavigate(() => posthog.capture('$pageleave'));
-			afterNavigate(() => posthog.capture('$pageview'));
-		}
-	}
+    $: isPathAllowAnalytics =
+        !pathname.startsWith("/api") && !pathname.startsWith("/admin");
+
+    $: {
+        if (browser && isPathAllowAnalytics) {
+            beforeNavigate(() => posthog.capture("$pageleave"));
+            afterNavigate(() => posthog.capture("$pageview"));
+        }
+    }
 </script>
 
-{#if $navigating}
-	<progress class="progress progress-primary absolute top-0 z-50 h-1.5 w-screen" />
-{/if}
+<noscript>{m.noscript()}</noscript>
 
-<slot />
+{#if $navigating}
+    <progress
+        class="progress progress-primary absolute top-0 z-50 h-1.5 w-screen"
+    />
+{/if}
+<ParaglideJS {i18n}>
+    <slot />
+</ParaglideJS>
 
 <!-- {#if browser}
 	{#if getIsAllowLogsCapture() === undefined && isPathAllowAnalytics && isPostHogEnvValid}

@@ -18,3 +18,9 @@ yarn.lock
 .wrangler
 
 js
+
+# Ignore files for Vite
+types-bridge
+backend-aws
+
+ts

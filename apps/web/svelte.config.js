@@ -22,18 +22,6 @@ const config = {
 		}),
 		alias: {
 			$i18n: './src/lib/libs/i18n/messages'
-		},
-		prerender: {
-			handleHttpError: ({ path, message }) => {
-				console.log('path', path, message);
-				// ! ignore vite-imagetools urls
-				if (path.endsWith('/[object Object]') || path.endsWith('/[object%20Object]')) {
-					return;
-				}
-
-				// otherwise fail the build
-				throw new Error(message);
-			}
 		}
 	}
 };

@@ -1,3 +1,3 @@
-import { default as ThemeController } from './theme-controller.svelte';
+import { default as ThemeController } from "./theme-controller.svelte";
 
 export { ThemeController };

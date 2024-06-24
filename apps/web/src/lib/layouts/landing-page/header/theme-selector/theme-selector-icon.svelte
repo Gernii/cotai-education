@@ -1,15 +1,15 @@
 <script lang="ts">
-	import { cx } from 'cva';
+    import { cx } from "cva";
 
-	import HeroiconsSun from '~icons/heroicons/sun';
-	import HeroiconsMoon from '~icons/heroicons/moon';
+    import HeroiconsSun from "~icons/heroicons/sun";
+    import HeroiconsMoon from "~icons/heroicons/moon";
 
-	let iconClasses = cx('inline-block size-5');
+    let iconClasses = cx("inline-block size-5");
 </script>
 
 <div class="block dark:hidden">
-	<HeroiconsSun class={iconClasses} />
+    <HeroiconsSun class={iconClasses} />
 </div>
 <div class="hidden dark:block">
-	<HeroiconsMoon class={iconClasses} />
+    <HeroiconsMoon class={iconClasses} />
 </div>

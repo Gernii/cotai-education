@@ -1,1 +1,1 @@
-export { default as ThemeSelector } from './theme-selector.svelte';
+export { default as ThemeSelector } from "./theme-selector.svelte";

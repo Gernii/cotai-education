@@ -1,5 +1,5 @@
-import { initLogsCapture } from '$lib/libs/posthog/init-logs-capture';
+import { initLogsCapture } from "$lib/libs/posthog/init-logs-capture";
 
-export const load = async () => {
-	initLogsCapture();
+export const load = () => {
+    initLogsCapture();
 };

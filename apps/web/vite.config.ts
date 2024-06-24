@@ -1,4 +1,4 @@
-import { paraglide } from '@inlang/paraglide-js-adapter-vite';
+import { paraglide } from "@inlang/paraglide-js-adapter-sveltekit/vite";
 import { sveltekit } from '@sveltejs/kit/vite';
 import { defineConfig } from 'vitest/config';
 import { imagetools } from 'vite-imagetools';
@@ -8,24 +8,30 @@ import Icons from 'unplugin-icons/vite';
 const supportedExtensions = ['png', 'jpg', 'jpeg'];
 const defaultImageToolsWidth = '320;640;1280';
 
+// biome-ignore lint/style/noDefaultExport: <explanation>
 export default defineConfig(({ mode }) => {
 	return {
 		plugins: [
 			sveltekit(),
 			imagetools({
 				defaultDirectives: (url) => {
-					const extension = url.pathname.substring(url.pathname.lastIndexOf('.') + 1);
+					const searchParams = url.searchParams;
 
-					if (supportedExtensions.includes(extension)) {
-						const width = url.searchParams.get('w') ?? undefined;
+                    const extension = url.pathname.substring(url.pathname.lastIndexOf(".") + 1);
 
-						return new URLSearchParams({
-							format: 'avif;webp;' + extension,
-							w: width ?? defaultImageToolsWidth,
-							as: 'picture'
-						});
-					}
-					return new URLSearchParams();
+                    if (
+                        supportedExtensions.includes(extension) &&
+                        typeof searchParams.get("imagetools") === "string"
+                    ) {
+                        const width = url.searchParams.get("w") ?? undefined;
+
+                        return new URLSearchParams({
+                            format: `avif;webp;${extension}`,
+                            w: width ?? defaultImageToolsWidth,
+                            as: "picture",
+                        });
+                    }
+                    return new URLSearchParams();
 				}
 			}),
 			Unfonts({

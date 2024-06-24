@@ -1,42 +1,52 @@
 <script lang="ts">
-	import { page } from '$app/stores';
+    import { page } from "$app/stores";
 
-	import { writable } from 'svelte/store';
-	import { inview } from 'svelte-inview';
+    import { writable } from "svelte/store";
+    import { inview } from "svelte-inview";
 
-	import { Container } from '$lib/components/ui/container';
-	import ContainerContent from '$lib/components/ui/container/container-content.svelte';
-	import SectionTitle from '$lib/components/ui/section-title/section-title.svelte';
+    import { Container } from "$lib/components/ui/container";
+    import ContainerContent from "$lib/components/ui/container/container-content.svelte";
+    import SectionTitle from "$lib/components/ui/section-title/section-title.svelte";
 
-	import { inviewCommonOptions, onInViewEnter } from '$lib/libs/inview';
+    import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
-	import * as m from '$i18n/messages';
+    import * as m from "$i18n/messages";
 
-	import type { CourseDetailsPageDataProps } from '../types';
+    import type { CourseDetailsPageDataProps } from "../types";
 
-	import CurriculumCard from './curriculum-card.svelte';
+    import CurriculumCard from "./curriculum-card.svelte";
 
-	let isInview = writable(false);
+    let isInview = writable(false);
 
-	$: pd = $page.data as CourseDetailsPageDataProps;
+    $: pd = $page.data as CourseDetailsPageDataProps;
 
-	$: curriculum = pd.curriculum;
+    $: curriculum = pd.curriculum;
 </script>
 
 {#if curriculum.length > 0}
-	<section use:inview={inviewCommonOptions} on:inview_enter={onInViewEnter(isInview)}>
-		<Container>
-			<ContainerContent>
-				<div class:opacity-0={!$isInview} class:animate-fade-left={$isInview}>
-					<SectionTitle>{m.curriculum()}</SectionTitle>
-				</div>
+    <section
+        use:inview={inviewCommonOptions}
+        on:inview_enter={onInViewEnter(isInview)}
+    >
+        <Container>
+            <ContainerContent>
+                <div
+                    class:opacity-0={!$isInview}
+                    class:animate-fade-left={$isInview}
+                >
+                    <SectionTitle>{m.curriculum()}</SectionTitle>
+                </div>
 
-				<ul class="space-y-4" class:opacity-0={!$isInview} class:animate-fade-up={$isInview}>
-					{#each curriculum as section}
-						<CurriculumCard {...section} />
-					{/each}
-				</ul>
-			</ContainerContent>
-		</Container>
-	</section>
+                <ul
+                    class="space-y-4"
+                    class:opacity-0={!$isInview}
+                    class:animate-fade-up={$isInview}
+                >
+                    {#each curriculum as section}
+                        <CurriculumCard {...section} />
+                    {/each}
+                </ul>
+            </ContainerContent>
+        </Container>
+    </section>
 {/if}
