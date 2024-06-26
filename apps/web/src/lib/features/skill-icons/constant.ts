@@ -10,4 +10,17 @@ export type SkillTypes =
     | "math"
     | "ai"
     | "deep-learning"
-    | "machine-learning";
+    | "machine-learning"
+    | "opencv"
+    | "pillow"
+    | "numpy"
+    | "matplotlib"
+    | "plotly"
+    | "pandas"
+    | "scikit-learn"
+    | "keras"
+    | "timm"
+    | "torchmetric"
+    | "torchseg"
+    | "mmdetection"
+    | "transformers";

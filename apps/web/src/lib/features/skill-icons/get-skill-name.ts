@@ -27,5 +27,31 @@ export const getSkillName = (skill: SkillTypes) => {
             return "Streamlit";
         case "tensorflow":
             return "Tensorflow";
+        case "opencv":
+            return "OpenCV";
+        case "pillow":
+            return "Pillow";
+        case "numpy":
+            return "Numpy";
+        case "matplotlib":
+            return "Matplotlib";
+        case "plotly":
+            return "Plotly";
+        case "keras":
+            return "Keras";
+        case "pandas":
+            return "Pandas";
+        case "scikit-learn":
+            return "Scikit-learn";
+        case "mmdetection":
+            return "MMDetection";
+        case "torchmetric":
+            return "TorchMetric";
+        case "torchseg":
+            return "Torch Segmentation Models";
+        case "timm":
+            return "Timm";
+        case "transformers":
+            return "Transformers";
     }
 };
