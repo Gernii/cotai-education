@@ -20,7 +20,7 @@ export type SkillTypes =
     | "scikit-learn"
     | "keras"
     | "timm"
-    | "torchmetric"
+    | "torchmetrics"
     | "torchseg"
     | "mmdetection"
     | "transformers";

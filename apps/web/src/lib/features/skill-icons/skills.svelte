@@ -1,5 +1,6 @@
 <script lang="ts">
     import TorchSeg from "$lib/assets/images/skills-icon/torchseg.png?imagetools";
+    import TorchMetrics from "$lib/assets/images/skills-icon/torchmetrics.png?imagetools";
 
     import Picture from "$lib/components/ui/picture/picture.svelte";
 
@@ -69,5 +70,9 @@
 {:else if skill === "torchseg"}
     <div class="size-8">
         <Picture meta={TorchSeg} />
+    </div>
+{:else if skill === "torchmetrics"}
+    <div class="size-8">
+        <Picture meta={TorchMetrics} />
     </div>
 {/if}

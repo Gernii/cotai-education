@@ -45,8 +45,8 @@ export const getSkillName = (skill: SkillTypes) => {
             return "Scikit-learn";
         case "mmdetection":
             return "MMDetection";
-        case "torchmetric":
-            return "TorchMetric";
+        case "torchmetrics":
+            return "TorchMetrics";
         case "torchseg":
             return "Torch Segmentation Models";
         case "timm":

@@ -19,7 +19,7 @@ const course = {
         `python`,
         `math`,
         `numpy`,
-        `sklearn`,
+        `scikit-learn`,
         `pytorch`,
         `torchmetric`,
         `timm`,
