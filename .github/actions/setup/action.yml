@@ -3,18 +3,21 @@ name: Setup
 description: Setup
 
 runs:
-  using: composite
+    using: composite
 
-  steps:
-    - name: Checkout
-      uses: actions/checkout@v4
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4
 
-    - name: Setup node
-      uses: actions/setup-node@v3
-      with:
-        node-version: 20
-        cache: 'npm'
+        - name: Install pnpm
+          uses: pnpm/action-setup@v4
 
-    - name: Install dependencies
-      shell: bash
-      run: npm ci
+        - name: Setup node
+          uses: actions/setup-node@v4
+          with:
+              node-version: 20
+              cache: "pnpm"
+
+        - name: Install dependencies
+          shell: bash
+          run: pnpm install --frozen-lockfile

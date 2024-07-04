@@ -1,41 +1,45 @@
 {
   "name": "cotai-education",
+  "version": "0.0.0",
+
   "private": true,
   "scripts": {
-    "build": "turbo run build",
+    "build": "pnpm -r --parallel build",
     "validate": "run-s \"validate.*\"",
-    "validate.lint": "turbo run lint.fix --parallel",
-    "validate.fmt": "turbo run fmt.fix --parallel",
-    
-    "dev": "turbo run dev",
+    "validate.lint": "pnpm -r --parallel lint.fix",
+    "validate.fmt": "pnpm -r --parallel fmt.fix",
 
-    "lint": "turbo run lint.check --parallel",
-    "test": "turbo run test --parallel",
-    "fmt": "turbo run fmt.check --parallel",
-    "check": "turbo run check --parallel",
-    "deploy": "turbo run deploy --parallel",
+    "dev": "pnpm -r --parallel dev",
+
+    "---ISSUES---": "current preview not work yet because backend-aws use serverless and env hvae Ref, which not work with serverless-offline",
+    "preview.dev": "pnpm -r --parallel preview.dev",
+    "preview.prod": "pnpm -r --parallel preview.prod",
+
+    "lint": "pnpm -r --parallel lint.check",
+    "test": "pnpm -r --parallel test",
+    "fmt": "pnpm -r --parallel fmt.check",
+    "check": "pnpm -r --parallel check",
+    "deploy": "pnpm -r --parallel deploy",
     
-    "commit": "czg"
+    "commit": "czg",
+    "prepare": "husky"
 
   },
   "devDependencies": {
-    "@repo/eslint-config": "*",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.7",
     "npm-run-all2": "^6.2.0",
     "prettier": "^3.3.2",
-    "turbo": "latest",
     "typescript": "^5.5.2",
-    "czg": "1.9.3",
+    "czg": "^1.9.3",
     "@biomejs/biome": "^1.8.2"
   },
-  "packageManager": "npm@10.2.3",
+  "packageManager": "pnpm@9.4.0",
   "engines": {
     "node": ">=20"
   },
   "workspaces": [
     "apps/web",
-    "packages/eslint-config",
     "packages/types-bridge"
   ]
 }

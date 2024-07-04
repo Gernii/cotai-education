@@ -6,9 +6,11 @@
 		"node": ">=20"
 	},
 	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"test": "npm run test:unit",
+		"dev": " vite dev",
+		"preview.dev": "wrangler pages dev .svelte-kit/cloudflare",
+		"preview.prod": "wrangler pages prod .svelte-kit/cloudflare",
+		"build": "pnpm run postinstall && vite build",
+		"test": "pnpm run test:unit",
 		"check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
 		"check:watch": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --watch",
 		"test:integration": "playwright test",
@@ -29,7 +31,7 @@
 		"lint.check.eslint": "eslint  \"src/**/*.svelte\"  --max-warnings=0",
 		"lint.check.biome": "biome check ./src",
 		"preview": "wrangler pages dev .svelte-kit/cloudflare",
-		"postinstall": "paraglide-js compile --project ./project.inlang",
+		"postinstall": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/libs/i18n/messages",
 		"postbuild": "node scripts/post-build.js"
 	},
 	"devDependencies": {
@@ -46,8 +48,7 @@
 		"@melt-ui/pp": "^0.3.2",
 		"@melt-ui/svelte": "^0.81.0",
 		"@playwright/test": "^1.44.1",
-		"@repo/eslint-config": "*",
-		"@repo/types-bridge": "*",
+		"@repo/types-bridge": "workspace:*",
 		"@sveltejs/adapter-cloudflare": "^4.5.0",
 		"@sveltejs/kit": "^2.5.17",
 		"@sveltejs/vite-plugin-svelte": "^3.1.1",
@@ -90,7 +91,15 @@
 		"vite": "^5.3.1",
 		"vite-imagetools": "^7.0.2",
 		"vitest": "^1.0.0",
-		"wrangler": "^3.61.0"
+		"wrangler": "^3.61.0",
+		"@typescript-eslint/eslint-plugin": "^7.13.1",
+		"@typescript-eslint/parser": "^7.13.1",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-svelte": "^2.40.0",
+		"eslint-plugin-unused-imports": "^3.2.0",
+		"@types/eslint": "8.56.10"
 	},
 	"lint-staged": {
 		"src/**/*.svelte": [
@@ -104,6 +113,5 @@
 			"biome check --write --unsafe --no-errors-on-unmatched"
 		]
 	},
-	"type": "module",
-	"packageManager": "npm@10.2.3"
+	"type": "module"
 }
