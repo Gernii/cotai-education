@@ -1,24 +1,39 @@
 <script lang="ts">
-	import { cx } from 'cva';
+    import { cx } from "cva";
 
-	export let meta: ImgMeta[];
-	// if there is only one, vite-imagetools won't wrap the object in an array
-	if (!(meta instanceof Array)) meta = [meta];
+    interface $$Props {
+        meta: ImgMeta[] | ImgMeta;
+        alt?: string;
+        loading?: "lazy" | "eager";
+        imageClass?: string;
+        pictureClass?: string;
+        author?: string;
+    }
 
-	const sources = meta[0].sources;
+    export let meta: $$Props["meta"];
 
-	const fallback = meta[0].img;
+    export let alt: $$Props["alt"] = undefined;
+    export let loading: $$Props["loading"] = "lazy";
 
-	export let alt = '';
-	export let loading: 'lazy' | 'eager' | null | undefined = 'lazy';
+    export let imageClass: $$Props["imageClass"] = undefined;
+    export let pictureClass: $$Props["pictureClass"] = undefined;
+    export let author: $$Props["author"] = undefined;
 
-	export let imageClass = '';
-	export let pictureClass = '';
+    // if there is only one, vite-imagetools won't wrap the object in an array
+
+    $: sources = meta instanceof Array ? meta[0].sources : meta.sources;
+
+    $: fallback = meta instanceof Array ? meta[0].img : meta.img;
 </script>
 
-<picture class={cx('block h-full', pictureClass)}>
-	{#each Object.entries(sources) as [type, srcMeta]}
-		<source type="image/{type}" srcset={srcMeta} />
-	{/each}
-	<img src={fallback.src} {alt} class={cx('h-full w-full object-contain', imageClass)} {loading} />
+<picture class={cx("block h-full", pictureClass)} data-author={author}>
+    {#each Object.entries(sources) as [type, srcMeta]}
+        <source type="image/{type}" srcset={srcMeta} />
+    {/each}
+    <img
+        src={fallback.src}
+        {alt}
+        class={cx("h-full w-full object-contain", imageClass)}
+        {loading}
+    />
 </picture>

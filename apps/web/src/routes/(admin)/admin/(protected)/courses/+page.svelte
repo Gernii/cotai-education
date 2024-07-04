@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { AdminCoursesPage } from '$lib/pages/admin/courses';
+    import { AdminCoursesPage } from "$lib/pages/admin/courses";
 
-	export let data;
+    export let data;
 </script>
 
 <AdminCoursesPage data={data.streamed.courses} />

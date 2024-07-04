@@ -1,3 +1,3 @@
-import TextContent from './text-content.svelte';
+import TextContent from "./text-content.svelte";
 
 export { TextContent };

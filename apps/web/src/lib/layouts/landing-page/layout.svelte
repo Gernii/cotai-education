@@ -1,24 +1,22 @@
 <script lang="ts">
-	import Footer from './footer.svelte';
-	import { Header, type HeaderProps, SidenavContent } from './header';
-	import { Reviews } from './reviews';
+    import Footer from "./footer.svelte";
+    import { Header, type HeaderProps, SidenavContent } from "./header";
 
-	interface $$Props {
-		header?: HeaderProps;
-	}
+    interface $$Props {
+        header?: HeaderProps;
+    }
 
-	export let header: $$Props['header'] = undefined;
+    export let header: $$Props["header"] = undefined;
 </script>
 
-<div class="drawer">
-	<input id="my-drawer" type="checkbox" class="drawer-toggle" />
+<div class="drawer bg-base-200/40 dark:bg-base-300">
+    <input id="my-drawer" type="checkbox" class="drawer-toggle" />
 
-	<main class="drawer-content">
-		<Header {...header} />
-		<slot />
-		<Reviews />
-		<Footer />
-	</main>
+    <main class="drawer-content">
+        <Header {...header} />
+        <slot />
+        <Footer />
+    </main>
 
-	<SidenavContent />
+    <SidenavContent />
 </div>

@@ -1,47 +1,42 @@
-name: Release Prod
-
+name: Release
 on:
-  push:
-    branches:
-      - prod
+    push:
+        branches:
+            - prod
 
 permissions:
-  id-token: write
-  contents: read
+    contents: read
 
 jobs:
-  Release:
-    runs-on: ubuntu-latest
-    environment: Prod
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    release:
+        # environment: Release
+        name: Semantic Release
+        runs-on: ubuntu-latest
+        permissions:
+            contents: write
+            issues: write
+            pull-requests: write
+            id-token: write
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: Setup
-        uses: ./.github/actions/setup
+            - name: Install pnpm
+              uses: pnpm/action-setup@v4
 
-      - name: Build website
-        run: npm build
-        env:
-          VITE_HOSTNAME: ${{ vars.VITE_HOSTNAME }}
-          PUBLIC_HOSTNAME: ${{ vars.PUBLIC_HOSTNAME }}
+            - name: Setup node
+              uses: actions/setup-node@v4
+              with:
+                  node-version: 20
+                  cache: "pnpm"
 
-      - name: Publish to Cloudflare Pages
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ vars.CLOUDFLARE_PROJECT_NAME }}
-          directory: .svelte-kit/cloudflare
-          branch: main
-          # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
-          wranglerVersion: '3'
+            - name: Setup Release Dependencies
+              run: pnpm add -g semantic-release@21.0.2
 
-  Ping_Google:
-    name: Ping Google
-    runs-on: ubuntu-latest
-    environment: Prod
+            - name: Setup semantic-release Dependencies
+              run: pnpm add -g @semantic-release/changelog @semantic-release/git
 
-    steps:
-      - name: Send HTTP GET request
-        run: curl http://www.google.com/ping?sitemap=${{ vars.VITE_HOSTNAME }}/sitemap.xml
+            - name: Release
+              env:
+                  GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+              run: pnpm exec semantic-release

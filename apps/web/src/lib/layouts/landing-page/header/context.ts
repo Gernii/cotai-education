@@ -1,1 +1,1 @@
-export const HeaderScrollContext = 'HeaderScrollContext';
+export const HeaderScrollContext = "HeaderScrollContext";

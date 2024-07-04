@@ -1,27 +1,32 @@
 {
 	"name": "@repo/types-bridge",
-	"version": "0.0.1",
 	"sideEffects": false,
-	"main": "src/index.ts",
-	"types": "src/index.ts",
-	"devDependencies": {
-		"@repo/eslint-config": "*",
-		"typescript": "^5.0.0"
-	},
+	"module": "./src/index.ts",
+	"main": "./src/index.ts",
+	"type": "module",
+	"types": "./src/index.ts",
 	"scripts": {
-		"lint": "run-s \"lint.*\"",
-		"lint.fix": "eslint \"src/**/*.ts*\" --fix",
-		"lint.check": "eslint  \"src/**/*.ts*\"  --max-warnings=0",
-		"fmt": "run-s \"fmt.*\"",
-		"fmt.write": "prettier --write \"src/**/*.ts*\"",
-		"fmt.check": "prettier --check \"src/**/*.ts*\""
+	  "---------FMT CHECK-----------": "Fmt check vaid code only",
+	  "---------fmt.check": "run-s \"fmt.check.*\"",
+	  "---------fmt.check.biome": "biome format ./src",
+	  "---------FMT FIX-----------": "Fmt check and fix vaid code",
+	  "---------fmt.fix": "run-s \"fmt.fix.*\"",
+	  "---------fmt.fix.biome": "biome format --write ./src",
+	  "---------LINT CHECK-----------": "Lint check vaid code only",
+	  "---------lint.check": "run-s \"lint.check.*\"",
+	  "---------lint.check.biome": "biome check ./src",
+	  "---------LINT FIX-----------": "Lint check and fix vaid code",
+	  "---------lint.fix": "run-s \"lint.fix.*\"",
+	  "---------lint.fix.biome": "biome check --write --unsafe ./src"
 	},
-	"lint-staged": {
-		"src/**/*.ts*": [
-			"eslint --fix",
-			"eslint --max-warnings=0",
-			"prettier --write",
-			"prettier --check"
-		]
+	
+	"exports":{
+	  ".": {
+		"import": "./src/index.ts",
+		"types": "./src/index.ts",
+		"default": "./src/index.ts"
+	  }
 	}
-}
+	
+  }
+  

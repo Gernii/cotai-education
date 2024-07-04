@@ -1,1 +1,1 @@
-export { default as PasswordStrength } from './password-strength.svelte';
+export { default as PasswordStrength } from "./password-strength.svelte";

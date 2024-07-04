@@ -1,29 +1,54 @@
 name: Validate PR
 
 on:
-  pull_request:
-    types:
-      - opened
-      - reopened
-      - synchronize
-      - edited
+    pull_request:
+        types:
+            - opened
+            - reopened
+            - synchronize
+            - edited
 
 permissions:
-  id-token: write
-  contents: read
+    id-token: write
+    contents: read
 
 jobs:
-  Validate:
-    environment: Validator
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
+    Frontend:
+        environment: Validate
+        runs-on: ubuntu-latest
+        steps:
+            - name: Checkout
+              uses: actions/checkout@v4
 
-      - name: Setup
-        uses: ./.github/actions/setup
+            - name: Setup
+              uses: ./.github/actions/setup
 
-      - name: Test
-        uses: ./.github/actions/test
-        with:
-          public_hostname: ${{ vars.PUBLIC_HOSTNAME }}
+            - name: Build Web
+              shell: bash
+              run: pnpm run build
+              env:
+                  PUBLIC_HOSTNAME: ${{ vars.PUBLIC_HOSTNAME }}
+                  POSTHOG_URL: ${{ vars.POSTHOG_URL }}
+                  PUBLIC_POSTHOG_TOKEN: ${{ vars.PUBLIC_POSTHOG_TOKEN }}
+                  PUBLIC_LOGS_URL: ${{ vars.PUBLIC_LOGS_URL }}
+
+            - name: Lint
+              shell: bash
+              run: pnpm run lint
+
+            - name: Fmt
+              shell: bash
+              run: pnpm run fmt
+
+            - name: Test
+              shell: bash
+              run: pnpm run test
+
+            - name: Check
+              shell: bash
+              run: pnpm run check
+              env:
+                  PUBLIC_HOSTNAME: ${{ vars.PUBLIC_HOSTNAME }}
+                  POSTHOG_URL: ${{ vars.POSTHOG_URL }}
+                  PUBLIC_POSTHOG_TOKEN: ${{ vars.PUBLIC_POSTHOG_TOKEN }}
+                  PUBLIC_LOGS_URL: ${{ vars.PUBLIC_LOGS_URL }}

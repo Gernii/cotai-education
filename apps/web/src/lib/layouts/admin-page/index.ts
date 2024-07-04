@@ -1,1 +1,1 @@
-export { default as AdminPageLayout } from './layout.svelte';
+export { default as AdminPageLayout } from "./layout.svelte";

@@ -1,7 +1,10 @@
 <script>
-	import { IconBars3 } from '$lib/components/icons';
+    import HeroiconsBars3 from "~icons/heroicons/bars-3";
 </script>
 
-<label for="my-drawer" class="btn btn-square btn-ghost btn-primary drawer-button">
-	<IconBars3 class="size-6" />
+<label
+    for="my-drawer"
+    class="btn btn-square btn-ghost btn-primary drawer-button"
+>
+    <HeroiconsBars3 />
 </label>

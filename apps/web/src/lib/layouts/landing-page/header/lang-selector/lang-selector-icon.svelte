@@ -1,21 +1,21 @@
 <script lang="ts">
-	import { cx } from 'cva';
+    import { cx } from "cva";
 
-	import type { AvailableLanguageTag } from '$i18n/runtime';
+    import type { AvailableLanguageTag } from "$i18n/runtime";
 
-	import { IconFlagUs, IconFlagVietnam } from '$lib/components/icons';
+    import FlagVn4x3 from "~icons/flag/vn-4x3";
+    import FlagUs4x3 from "~icons/flag/us-4x3";
+    interface $$Props {
+        lang: AvailableLanguageTag;
+    }
 
-	interface $$Props {
-		lang: AvailableLanguageTag;
-	}
+    export let lang: $$Props["lang"];
 
-	export let lang: $$Props['lang'];
-
-	$: iconClasses = cx('inline-block w-7');
+    $: iconClasses = cx("inline-block w-7 rounded-sm");
 </script>
 
-{#if lang === 'vi'}
-	<IconFlagVietnam class={iconClasses} />
+{#if lang === "vi"}
+    <FlagVn4x3 class={iconClasses} />
 {:else}
-	<IconFlagUs class={iconClasses} />
+    <FlagUs4x3 class={iconClasses} />
 {/if}

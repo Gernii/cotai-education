@@ -1,3 +1,3 @@
-import Page from './page.svelte';
+import Page from "./page.svelte";
 
 export { Page as ProgramDetailsPage };

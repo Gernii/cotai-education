@@ -1,50 +1,59 @@
 <script lang="ts">
-	import { navigate } from '$lib/lib/i18n/routing';
+    import { Picture } from "$lib/components/ui/picture";
 
-	import { routingPathCoursesId } from '$lib/utils/routing-path';
-	import { defaultImage } from '$lib/utils/constants';
+    import { routingPathCoursesId } from "$lib/utils/routing-path";
+    import { type CourseId } from "$lib/utils/constants";
+    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
 
-	import * as m from '$i18n/messages';
+    import * as m from "$i18n/messages";
 
-	import type { CoursesListProps_Courses } from './types';
+    import type { CoursesListProps_Courses } from "./types";
 
-	type $$Props = CoursesListProps_Courses;
+    import HeroiconsClock from "~icons/heroicons/clock";
 
-	export let id: $$Props['id'];
-	export let title: $$Props['title'] = undefined;
-	export let thumbnail: $$Props['thumbnail'] = undefined;
-	export let description: $$Props['description'] = undefined;
+    type $$Props = CoursesListProps_Courses;
 
-	$: courseNavigate = navigate(routingPathCoursesId(id));
+    export let id: $$Props["id"];
+    export let title: $$Props["title"] = undefined;
+    export let description: $$Props["description"] = undefined;
+    export let totalLessons: $$Props["totalLessons"] = 0;
+
+    $: courseNavigate = routingPathCoursesId(id);
+
+    $: courseThumbnail = coursesThumbnail(id as CourseId);
 </script>
 
 {#if title && description}
-	<li
-		class="group card card-bordered card-compact overflow-hidden border-base-content/5 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5"
-	>
-		<a href={courseNavigate}>
-			<figure class="aspect-thumbnail169">
-				<img
-					src={thumbnail ?? defaultImage}
-					alt={m.thumbnail({ title: title ?? '' })}
-					height={200}
-					width={448}
-					loading="lazy"
-					class="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-				/>
-			</figure>
-		</a>
+    <li
+        class="group card card-bordered card-compact overflow-hidden border-base-content/5 bg-base-100 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5"
+    >
+        <a href={courseNavigate}>
+            <figure class="aspect-thumbnail169">
+                {#key id}
+                    <Picture
+                        meta={courseThumbnail}
+                        alt={m.thumbnail({ title: title ?? "" })}
+                        imageClass="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    />
+                {/key}
+            </figure>
+        </a>
 
-		<div class="card-body flex-none">
-			<div>
-				<a
-					href={courseNavigate}
-					class="flex-grow-0 text-base font-semibold hover:text-primary lg:text-xl"
-				>
-					{title}
-				</a>
-			</div>
-			<p class="line-clamp-3 flex-grow">{description}</p>
-		</div>
-	</li>
+        <div class="card-body">
+            <div>
+                <a
+                    href={courseNavigate}
+                    class="flex-grow-0 text-base font-bold hover:text-primary lg:text-xl"
+                    {title}
+                >
+                    {title}
+                </a>
+            </div>
+            <div class="flex items-center gap-x-1">
+                <HeroiconsClock class="size-4" />
+                <p>{m.totalSessions({ number: totalLessons })}</p>
+            </div>
+            <p class="line-clamp-3 flex-none">{description}</p>
+        </div>
+    </li>
 {/if}

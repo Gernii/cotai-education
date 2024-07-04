@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /admin
+
+User-agent: *
+Disallow: /api
+
+User-agent: chatgpt
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+

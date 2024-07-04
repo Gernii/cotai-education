@@ -1,1 +1,1 @@
-export type Boolean = 'true' | 'false';
+export type Boolean = "true" | "false";

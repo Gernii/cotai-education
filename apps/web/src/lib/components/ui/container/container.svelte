@@ -1,20 +1,20 @@
 <script lang="ts">
-	import type { HTMLAttributes } from 'svelte/elements';
-	import { twMerge } from 'tailwind-merge';
+    import type { HTMLAttributes } from "svelte/elements";
+    import { twMerge } from "tailwind-merge";
 
-	import { containerClassNameHandler } from './styles';
-	import type { ContainerStylesProps } from './types';
+    import { containerClassNameHandler } from "./styles";
+    import type { ContainerStylesProps } from "./types";
 
-	type $$Props = HTMLAttributes<HTMLDivElement> & ContainerStylesProps;
+    type $$Props = HTMLAttributes<HTMLDivElement> & ContainerStylesProps;
 
-	let className: string | undefined | null = undefined;
+    let className: string | undefined | null = undefined;
 
-	export let padding: $$Props['padding'] = undefined;
-	export { className as class };
+    export let padding: $$Props["padding"] = undefined;
+    export { className as class };
 
-	$: containerClass = containerClassNameHandler({ padding });
+    $: containerClass = containerClassNameHandler({ padding });
 </script>
 
 <div {...$$restProps} class={twMerge(containerClass, className)}>
-	<slot />
+    <slot />
 </div>

@@ -1,10 +1,14 @@
 [
-    {
-        "id": "ai-for-highschool",
-        "title": "AI for High School"
-    },
-    {
-        "id": "ai-for-highschool-2",
-        "title": "AI for High School 2"
-    }
+	{
+		"id": "public-training",
+		"title": "Public training"
+	},
+	{
+		"id": "project-based-training",
+		"title": "Đào tạo dựa trên dự án thực tế"
+	},
+	{
+		"id": "extra",
+		"title": "Khóa học bổ trợ"
+	}
 ]

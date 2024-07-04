@@ -1,7 +1,7 @@
 <script lang="ts">
-	import { AdminPageLayout } from '$lib/layouts/admin-page';
+    import { AdminPageLayout } from "$lib/layouts/admin-page";
 </script>
 
 <AdminPageLayout>
-	<slot />
+    <slot />
 </AdminPageLayout>

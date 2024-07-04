@@ -1,0 +1,113 @@
+const course = {
+	title: 'AI for all',
+
+	'register-url': '',
+
+	thumbnail: '/images/logo/CoTAI-Ver0-320.png',
+
+	'experience-requirement': [],
+	'who-should-join': [
+		'Học sinh THPT cần sớm định hướng nghề nghiệp tương lai',
+		'Sinh viên & nhân viên mọi ngành nghề học cách sử dụng AI cho công việc',
+		'Những nhà sáng tạo nội dung với công cụ AI',
+		'Doanh nghiệp & nhà đầu tư muốn lựa chọn áp dụng công nghệ AI',
+		'Lưu ý: Khoá học không cần lập trình'
+	],
+	skills: [],
+	archives: [],
+
+	description: `Khoá học dành cho tất cả mọi người (từ cấp 3 trở lên) thực hành sáng tạo cùng các ứng dụng AI thú vị, qua đó hiểu các nguyên lý hoạt động của AI, các nguồn tài nguyên mã mở & lộ trình đào tạo để khai thác áp dụng, các tiềm năng to lớn cũng như các ảnh hưởng & hệ luỵ. Lưu ý: Khoá học không cần lập trình.`,
+	components: [],
+
+	curriculum: [
+		{
+			title: 'Làm sao AI có trí tuệ? Trích xuất đặc trưng biểu diễn các vùng khái niệm',
+
+			hidden: false,
+
+			'classes-countable': true,
+
+			details: {
+				hidden: false,
+
+				content: `Representation ≡ feature extraction → embedding coordinates`
+			}
+		},
+		{
+			title: 'Năng lực phức tạp của AI được xây dựng từ những mô hình (predictors) đơn giản!',
+
+			hidden: false,
+
+			'classes-countable': true,
+
+			details: {
+				hidden: false,
+
+				content: `- Mô hình dự đoán giá trị (regressions), gom nhóm (clustering & segmentation) & phân loại (classification)
+- Mở rộng 1: so khớp, độ giống khác (similarities, distances), hàm lỗi (losses) & chuẩn đánh giá (metrics).
+- Mở rộng 2: nguyên lý trích xuất đặc trưng bằng tích chập (convolutions).`
+			}
+		},
+		{
+			title: 'Cùng huấn luyện cho AI biết nghe, nhìn, đọc, nói chuyện và sáng tạo nội dung',
+
+			hidden: false,
+
+			'classes-countable': true,
+
+			details: {
+				hidden: false,
+
+				content: `- AI xử lý hình ảnh (thị giác, perception & vision)
+- AI hiểu ngôn ngữ (NLU) & âm thanh giọng nói (audio/sound, STT & TTS)
+- Các mô hình nền tảng (foundation models)`
+			}
+		},
+		{
+			title: 'Từ khả năng nhận dạng đến học, hiểu, suy nghĩ và quyết định',
+
+			hidden: false,
+
+			'classes-countable': true,
+
+			details: {
+				hidden: false,
+
+				content: `AI học (machine learning), suy luận (reasoning), ra quyết định & lên kế hoạch (planning)
+- A. Mô hình học máy tổng quát TEFPA®
+- B. Suy luận & lên kế hoạch (machine reasoning & planning)
+- C. Vòng lặp tri giác – hành động (perception – action cycle) và người máy.`
+			}
+		},
+		{
+			title: 'Thời của các công cụ AI phổ dụng đã đến, cùng nắm bắt và khai thác!',
+
+			hidden: false,
+
+			'classes-countable': true,
+
+			details: {
+				hidden: false,
+
+				content: `- Lập nhóm chia sẻ cách sử dụng các công cụ AI, ý tưởng khởi nghiệp
+- AI sáng tạo (curious creative AI) tạo sinh/sinh mẫu (generative AI)
+- AI nghiên cứu thuốc, vật liệu mới & phương pháp khoa học (scientific methods)`
+			}
+		},
+		{
+			title: 'AI & robots: Tương lai nghề nghiệp, các vấn đề về đạo đức an ninh & hệ luỵ',
+
+			hidden: false,
+
+			'classes-countable': true,
+
+			details: {
+				hidden: false,
+
+				content: `Ôn tập, tổng hợp kiến thức, kiểm tra & triển lãm các ứng dụng AI.`
+			}
+		}
+	]
+};
+
+console.log(JSON.stringify(course));

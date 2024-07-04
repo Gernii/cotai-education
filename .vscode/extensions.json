@@ -1,5 +1,16 @@
 {
   "recommendations": [
-    "inlang.vs-code-extension"
+    "inlang.vs-code-extension",
+    "dbaeumer.vscode-eslint",
+    "formulahendry.auto-close-tag",
+    "formulahendry.auto-rename-tag",
+    "aaron-bond.better-comments",
+    "biomejs.biome",
+    "jota0222.multi-formatter",
+    "esbenp.prettier-vscode",
+    "svelte.svelte-vscode",
+    "bradlc.vscode-tailwindcss",
+    "gruntfuggly.todo-tree",
+    "dbizzy.dbizzy"
   ]
 }

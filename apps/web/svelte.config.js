@@ -1,38 +1,39 @@
-import adapter from '@sveltejs/adapter-cloudflare';
-import { vitePreprocess } from '@sveltejs/vite-plugin-svelte';
+import adapter from "@sveltejs/adapter-cloudflare";
+import { vitePreprocess } from "@sveltejs/vite-plugin-svelte";
+import { preprocessMeltUI, sequence } from "@melt-ui/pp";
+import { mdsvex } from "mdsvex";
+
+/** @type {import('mdsvex').MdsvexOptions} */
+const mdsvexOptions = {
+    extensions: [".md"],
+};
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
-	// Consult https://kit.svelte.dev/docs/integrations#preprocessors
-	// for more information about preprocessors
-	preprocess: vitePreprocess(),
+    // Consult https://kit.svelte.dev/docs/integrations#preprocessors
+    // for more information about preprocessors
+    extensions: [".svelte", ".md"],
 
-	kit: {
-		// adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
-		// If your environment is not supported or you settled on a specific environment, switch out the adapter.
-		// See https://kit.svelte.dev/docs/adapters for more information about adapters.
-		adapter: adapter({
-			routes: { exclude: ['<all>', '/sitemap.xml', '/robots.txt'] }
-		}),
-		alias: {
-			$i18n: './src/lib/lib/i18n/messages'
-		},
-		output: {
-			preloadStrategy: 'preload-mjs'
-		},
-		prerender: {
-			handleHttpError: ({ path, message }) => {
-				console.log('path', path, message);
-				// ! ignore vite-imagetools urls
-				if (path.endsWith('/[object Object]') || path.endsWith('/[object%20Object]')) {
-					return;
-				}
+    preprocess: sequence([
+        // ... other preprocessors
+        vitePreprocess({
+            postcss: true,
+        }),
+        mdsvex(mdsvexOptions),
+        preprocessMeltUI(),
+    ]),
 
-				// otherwise fail the build
-				throw new Error(message);
-			}
-		}
-	}
+    kit: {
+        // adapter-auto only supports some environments, see https://kit.svelte.dev/docs/adapter-auto for a list.
+        // If your environment is not supported or you settled on a specific environment, switch out the adapter.
+        // See https://kit.svelte.dev/docs/adapters for more information about adapters.
+        adapter: adapter({
+            routes: { exclude: ["<all>", "/sitemap.xml", "/robots.txt"] },
+        }),
+        alias: {
+            $i18n: "./src/lib/libs/i18n/messages",
+        },
+    },
 };
 
 export default config;
