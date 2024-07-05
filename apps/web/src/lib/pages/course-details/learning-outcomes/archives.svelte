@@ -1,10 +1,10 @@
 <script lang="ts">
-    import type { CourseProps_Archive } from "$lib/utils/types/data";
+    import type { Deprecated_CourseProps_Archive } from "$lib/utils/types/data.deprecated";
 
     import ArchiveDetails from "./archive-details.svelte";
 
     interface $$Props {
-        archives: CourseProps_Archive[];
+        archives: Deprecated_CourseProps_Archive[];
     }
 
     export let archives: $$Props["archives"];

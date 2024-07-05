@@ -13,9 +13,9 @@
         type LandingPageCourseForceAccess,
     } from "../../../../../../../packages/types-bridge/src";
 
-    import type { CourseProps } from "./types";
+    import type { Deprecated_CourseProps } from "./types";
 
-    type $$Props = CourseProps;
+    type $$Props = Deprecated_CourseProps;
 
     export let id: $$Props["id"];
     export let title: $$Props["title"];

@@ -16,7 +16,7 @@
     import CourseCard from "./course-card.svelte";
 
     $: pd = $page.data as ProgramDetailsPageDataProps;
-    $: courseIds = pd.programDetails.coursesRoadmap;
+    $: CourseIdDeprecateds = pd.programDetails.coursesRoadmap;
     $: courses = pd.courses;
 
     let isInview = writable(false);
@@ -35,11 +35,11 @@
                 <SectionTitle id="roadmap">{m.roadmap()}</SectionTitle>
             </div>
             <ul class="w-full">
-                {#each courseIds as courseId, idx}
+                {#each CourseIdDeprecateds as CourseIdDeprecated, idx}
                     <CourseCard
-                        {...courses[courseId]}
+                        {...courses[CourseIdDeprecated]}
                         {idx}
-                        last={idx + 1 === courseIds.length}
+                        last={idx + 1 === CourseIdDeprecateds.length}
                     />
                 {/each}
             </ul>

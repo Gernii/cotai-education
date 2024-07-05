@@ -5,17 +5,17 @@ import type {
 
 import { parseMarkdownToHTML } from "./parse-markdown-to-json.server";
 import type {
-    CourseProps,
-    CourseProps_Archive,
+    Deprecated_CourseProps,
+    Deprecated_CourseProps_Archive,
     CourseResponseProps,
     CurriculumProps,
     CurriculumResponseProps,
     ProgramProps,
     ProgramResponseProps,
-} from "./types/data";
+} from "./types/data.deprecated";
 
-export const courseMappingData = (course: CourseResponseProps): CourseProps => {
-    const mappedCourse: CourseProps = {
+export const courseMappingData = (course: CourseResponseProps): Deprecated_CourseProps => {
+    const mappedCourse: Deprecated_CourseProps = {
         registerUrl: course["register-url"],
         curriculum: course.curriculum.map((curriculum) => curriculumMappingData(curriculum)),
         description: course.description ? parseMarkdownToHTML(course.description) : undefined,
@@ -99,8 +99,8 @@ export const countTotalLessons = (curriculum: CurriculumResponseProps[]) => {
 
 // in course details, we only need to show 2 archives per row
 export const archivesParseData = (
-    archives?: CourseProps_Archive[],
-): CourseProps_Archive[][] | undefined => {
+    archives?: Deprecated_CourseProps_Archive[],
+): Deprecated_CourseProps_Archive[][] | undefined => {
     if (!archives) {
         return undefined;
     }
@@ -115,7 +115,7 @@ export const archivesParseData = (
         }
         prev.push([archive]);
         return prev;
-    }, [] as CourseProps_Archive[][]);
+    }, [] as Deprecated_CourseProps_Archive[][]);
 
     return archivesParsed;
 };

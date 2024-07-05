@@ -1,7 +1,7 @@
 <script lang="ts">
     import { cx } from "cva";
 
-    import type { CurriculumProps } from "$lib/utils/types/data";
+    import type { CurriculumProps } from "$lib/utils/types/data.deprecated";
 
     import HeroiconsChevronDown from "~icons/heroicons/chevron-down";
     import { TextContent } from "$lib/features/text-content";

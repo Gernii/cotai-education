@@ -7,9 +7,9 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
-    import type { CourseProps } from "$lib/utils/types/data";
-    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
-    import type { CourseId } from "$lib/utils/constants";
+    import { coursesThumbnailDeprecated } from "$lib/utils/courses-thumbnail";
+    import type { CourseIdDeprecated } from "$lib/utils/constants";
+    import type { Deprecated_CourseProps } from "$lib/utils/types/data.deprecated";
 
     import * as m from "$i18n/messages";
 
@@ -17,7 +17,7 @@
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
     import { TextContent } from "$lib/features/text-content";
 
-    interface $$Props extends CourseProps {
+    interface $$Props extends Deprecated_CourseProps {
         idx: number;
         last: boolean;
     }
@@ -34,7 +34,7 @@
 
     $: totalSessions = curriculum.filter((c) => c.classesCountable).length;
 
-    $: courseThumbnail = coursesThumbnail(id as CourseId);
+    $: courseThumbnail = coursesThumbnailDeprecated(id as CourseIdDeprecated);
 </script>
 
 {#if title}

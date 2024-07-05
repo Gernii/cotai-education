@@ -15,12 +15,12 @@
 
     $: pd = $page.data as ProgramDetailsPageDataProps;
 
-    $: courses = pd.programDetails.courses.map((courseId) => ({
-        id: courseId,
-        title: pd.courses[courseId].title,
-        description: pd.courses[courseId].descriptionRaw,
-        thumbnail: pd.courses[courseId].thumbnail,
-        totalLessons: pd.courses[courseId].totalLessons,
+    $: courses = pd.programDetails.courses.map((CourseIdDeprecated) => ({
+        id: CourseIdDeprecated,
+        title: pd.courses[CourseIdDeprecated].title,
+        description: pd.courses[CourseIdDeprecated].descriptionRaw,
+        thumbnail: pd.courses[CourseIdDeprecated].thumbnail,
+        totalLessons: pd.courses[CourseIdDeprecated].totalLessons,
     })) as CoursesListProps_Courses[];
 </script>
 

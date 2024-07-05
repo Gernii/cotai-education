@@ -3,7 +3,7 @@ import { PUBLIC_LOGS_URL, PUBLIC_POSTHOG_TOKEN } from "$env/static/public";
 export const defaultImage = "/images/logo/CoTAI-Ver0-320.png";
 
 export const programIds = ["public-training", "project-based-training", "extra"];
-export const coursesId = [
+export const coursesIdDeprecated = [
     "ai-for-all",
     "deep-learning-for-ai",
     "python-ai",
@@ -11,7 +11,7 @@ export const coursesId = [
     "machine-learning-for-ai",
 ] as const;
 
-export type CourseId = (typeof coursesId)[number];
+export type CourseIdDeprecated = (typeof coursesIdDeprecated)[number];
 
 export const routerPath = {
     admin: {

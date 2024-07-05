@@ -1,10 +1,10 @@
 <script lang="ts">
     import type { PagesResponse } from "@repo/types-bridge";
 
-    import type { CourseProps } from "./types";
+    import type { Deprecated_CourseProps } from "./types";
     import CourseItem from "./course-item.svelte";
     interface $$Props {
-        data: Promise<PagesResponse<CourseProps>>;
+        data: Promise<PagesResponse<Deprecated_CourseProps>>;
     }
 
     export let data: $$Props["data"];

@@ -5,12 +5,14 @@
 
     import { CourseDetailsPage } from "$lib/pages/course-details";
 
-    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
-    import type { CourseId } from "$lib/utils/constants";
+    import { coursesThumbnailDeprecated } from "$lib/utils/courses-thumbnail";
+    import type { CourseIdDeprecated } from "$lib/utils/constants";
 
     export let data;
 
-    $: courseThumbnail = coursesThumbnail(data.id as CourseId);
+    $: courseThumbnail = coursesThumbnailDeprecated(
+        data.id as CourseIdDeprecated,
+    );
 </script>
 
 <SEO

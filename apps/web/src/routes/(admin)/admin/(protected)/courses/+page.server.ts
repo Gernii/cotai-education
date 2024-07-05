@@ -1,9 +1,9 @@
 import type { PagesResponse } from "@repo/types-bridge";
 
-import type { CourseProps } from "$lib/pages/admin/courses/types";
+import type { Deprecated_CourseProps } from "$lib/pages/admin/courses/types";
 
 export const load = () => {
-    const courses = async (): Promise<PagesResponse<CourseProps>> => {
+    const courses = async (): Promise<PagesResponse<Deprecated_CourseProps>> => {
         return {
             data: [
                 {

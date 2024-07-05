@@ -18,7 +18,8 @@
     $: totalRoadmapCourses = program.coursesRoadmap.length;
 
     $: totalRoadmapSessions = program.coursesRoadmap.reduce(
-        (prev, courseId) => prev + pd.courses[courseId].totalLessons,
+        (prev, CourseIdDeprecated) =>
+            prev + pd.courses[CourseIdDeprecated].totalLessons,
         0,
     );
 </script>

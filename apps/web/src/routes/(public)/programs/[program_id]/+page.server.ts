@@ -3,7 +3,7 @@ import { error } from "@sveltejs/kit";
 import type { ProgramDetailsPageDataProps } from "$lib/pages/program-details/types";
 
 import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
-import type { ProgramResponseProps } from "$lib/utils/types/data";
+import type { ProgramResponseProps } from "$lib/utils/types/data.deprecated";
 import { programMappingData } from "$lib/utils/data-mapping.server";
 import { fetcherCourses } from "$lib/utils/fetcher/courses.js";
 
@@ -22,9 +22,9 @@ export const load = async ({ fetch, params }): Promise<ProgramDetailsPageDataPro
         });
     }
 
-    const courseIds = program.courses;
+    const CourseIdDeprecateds = program.courses;
 
-    const courses = await fetcherCourses(courseIds, fetch);
+    const courses = await fetcherCourses(CourseIdDeprecateds, fetch);
 
     return {
         programDetails: {

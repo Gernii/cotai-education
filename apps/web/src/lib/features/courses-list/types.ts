@@ -1,4 +1,4 @@
-import type { CourseProps } from "$lib/utils/types/data";
+import type { Deprecated_CourseProps } from "$lib/utils/types/data.deprecated";
 
 export interface CoursesListProps {
     title: string;
@@ -11,7 +11,7 @@ export interface CoursesListProps {
 }
 
 export type CoursesListProps_Courses = Pick<
-    CourseProps,
+    Deprecated_CourseProps,
     "id" | "title" | "thumbnail" | "description"
 > & {
     totalLessons: number;
