@@ -3,7 +3,7 @@ import { error } from "@sveltejs/kit";
 import type { ProgramDetailsPageDataProps } from "$lib/pages/program-details/types";
 
 import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
-import type { ProgramResponseProps } from "$lib/utils/types/data";
+import type { ProgramResponseProps } from "$lib/utils/types/data.deprecated";
 import { programMappingData } from "$lib/utils/data-mapping.server";
 import { fetcherCourses } from "$lib/utils/fetcher/courses.js";
 

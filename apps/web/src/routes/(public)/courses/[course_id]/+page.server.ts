@@ -3,7 +3,7 @@ import { error } from "@sveltejs/kit";
 import type { CourseDetailsPageDataProps } from "$lib/pages/course-details";
 
 import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
-import type { CourseResponseProps } from "$lib/utils/types/data";
+import type { CourseResponseProps } from "$lib/utils/types/data.deprecated";
 import { courseMappingData } from "$lib/utils/data-mapping.server";
 
 export const load = async ({ fetch, params }): Promise<CourseDetailsPageDataProps> => {

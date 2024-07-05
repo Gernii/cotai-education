@@ -1,5 +1,5 @@
 <script lang="ts">
-    import type { ReviewProps } from "$lib/utils/types/data";
+    import type { ReviewProps } from "$lib/utils/types/data.deprecated";
 
     import * as m from "$i18n/messages";
 

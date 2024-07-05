@@ -2,11 +2,11 @@ import { error, type LoadEvent } from "@sveltejs/kit";
 
 import type { HomePageDataProps } from "$lib/pages/home-page";
 import type {
-    HomePageData_CourseProps,
+    HomePageData_Deprecated_CourseProps,
     HomePageData_ProgramProps,
 } from "$lib/pages/home-page/types";
 
-import type { CourseResponseProps, ProgramResponseProps } from "$lib/utils/types/data";
+import type { CourseResponseProps, ProgramResponseProps } from "$lib/utils/types/data.deprecated";
 import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
 import { countTotalLessons, programMappingData } from "$lib/utils/data-mapping.server";
 
@@ -74,12 +74,14 @@ const fetchCourses = async (programs: HomePageData_ProgramProps[], fetch: LoadEv
             prev[course.id] = courseTreeShaked;
             return prev;
         },
-        {} as Record<string, HomePageData_CourseProps>,
+        {} as Record<string, HomePageData_Deprecated_CourseProps>,
     );
     return courses;
 };
 
-const treeShakingCourseReponse = (course: CourseResponseProps): HomePageData_CourseProps => {
+const treeShakingCourseReponse = (
+    course: CourseResponseProps,
+): HomePageData_Deprecated_CourseProps => {
     return {
         ...course,
         id: course.id,

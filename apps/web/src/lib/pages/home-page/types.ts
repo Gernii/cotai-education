@@ -1,13 +1,17 @@
-import type { CourseProps, CourseProps_Archive, ProgramProps } from "$lib/utils/types/data";
+import type {
+    Deprecated_CourseProps,
+    Deprecated_CourseProps_Archive,
+    ProgramProps,
+} from "$lib/utils/types/data.deprecated";
 
 export interface HomePageDataProps {
     programs: HomePageData_ProgramProps[];
-    courses: Record<string, HomePageData_CourseProps>;
+    courses: Record<string, HomePageData_Deprecated_CourseProps>;
 }
 
 export type HomePageData_ProgramProps = ProgramProps;
 
-export type HomePageData_CourseProps = Omit<CourseProps, "archives"> & {
+export type HomePageData_Deprecated_CourseProps = Omit<Deprecated_CourseProps, "archives"> & {
     totalLessons: number;
-    archives?: CourseProps_Archive[];
+    archives?: Deprecated_CourseProps_Archive[];
 };

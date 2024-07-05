@@ -1,7 +1,7 @@
 <script lang="ts">
-    import type { CourseProps_Archive } from "$lib/utils/types/data";
+    import type { Deprecated_CourseProps_Archive } from "$lib/utils/types/data.deprecated";
 
-    type $$Props = CourseProps_Archive;
+    type $$Props = Deprecated_CourseProps_Archive;
 
     export let title: $$Props["title"];
     export let description: $$Props["description"];

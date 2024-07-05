@@ -32,7 +32,7 @@ export interface ProgramProps {
     components: ComponentDataProps[];
 }
 
-export interface CourseProps {
+export interface Deprecated_CourseProps {
     id: string;
     title?: string;
     price?: number;
@@ -44,7 +44,7 @@ export interface CourseProps {
     experienceRequirement?: string[];
     whoShouldJoin?: string[];
     skills?: SkillTypes[];
-    archives?: CourseProps_Archive[][];
+    archives?: Deprecated_CourseProps_Archive[][];
     curriculum: CurriculumProps[];
     components: ComponentDataProps[];
     totalLessons: number;
@@ -58,7 +58,7 @@ export interface CourseResponseProps {
     "experience-requirement"?: string[];
     "who-should-join"?: string[];
     skills?: SkillTypes[];
-    archives?: CourseProps_Archive[];
+    archives?: Deprecated_CourseProps_Archive[];
     embed?: string;
     thumbnail?: string;
     description?: string;
@@ -101,7 +101,7 @@ export interface ReviewResponseProps {
     role?: string;
 }
 
-export interface CourseProps_Archive {
+export interface Deprecated_CourseProps_Archive {
     title: string;
     description: string;
 }

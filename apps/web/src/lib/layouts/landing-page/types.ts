@@ -1,4 +1,4 @@
-import type { ReviewProps, ReviewResponseProps } from "$lib/utils/types/data";
+import type { ReviewProps, ReviewResponseProps } from "$lib/utils/types/data.deprecated";
 
 export interface LandingPage_LayoutData {
     programs: LandingPage_LayoutData_ProgramProps[];

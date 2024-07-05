@@ -1,6 +1,6 @@
-import type { CourseProps, ProgramProps } from "$lib/utils/types/data";
+import type { Deprecated_CourseProps, ProgramProps } from "$lib/utils/types/data.deprecated";
 
 export interface ProgramDetailsPageDataProps {
     programDetails: ProgramProps;
-    courses: Record<string, CourseProps>;
+    courses: Record<string, Deprecated_CourseProps>;
 }

@@ -7,7 +7,7 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
-    import type { CourseProps } from "$lib/utils/types/data";
+    import type { Deprecated_CourseProps } from "$lib/utils/types/data.deprecated";
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
     import type { CourseId } from "$lib/utils/constants";
 
@@ -17,7 +17,7 @@
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
     import { TextContent } from "$lib/features/text-content";
 
-    interface $$Props extends Omit<CourseProps, "archives"> {
+    interface $$Props extends Omit<Deprecated_CourseProps, "archives"> {
         idx: number;
         last: boolean;
     }
