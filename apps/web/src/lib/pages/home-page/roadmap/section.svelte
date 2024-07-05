@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { page } from "$app/stores";
-
     import { writable } from "svelte/store";
     import { inview } from "svelte-inview";
 
@@ -11,14 +9,14 @@
 
     import * as m from "$i18n/messages";
 
-    import type { HomePageDataProps } from "../types";
-
     import CourseCard from "./course-card.svelte";
 
-    $: pd = $page.data as HomePageDataProps;
-    $: courseIds =
-        pd.programs.find((p) => p.id === "public-training")?.courses ?? [];
-    $: courses = pd.courses;
+    import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
+    import { coursesObject } from "$lib/datas/courses/healpers";
+
+    let roadmapProgram = dataProgramPublicTraining();
+
+    $: CourseIdDeprecateds = roadmapProgram.coursesRoadmap;
 
     let isInview = writable(false);
 </script>
@@ -32,15 +30,18 @@
             <div
                 class:opacity-0={!$isInview}
                 class:animate-fade-left={$isInview}
+                class="w-full sm:w-3/4"
             >
-                <SectionTitle id="roadmap">{m.roadmap()}</SectionTitle>
+                <SectionTitle id="roadmap">
+                    {m.lazy_elegant_jannes_support()}
+                </SectionTitle>
             </div>
             <ul class="w-full">
-                {#each courseIds as courseId, idx}
+                {#each CourseIdDeprecateds as CourseIdDeprecated, idx}
                     <CourseCard
-                        {...courses[courseId]}
+                        {...coursesObject[CourseIdDeprecated]()}
                         {idx}
-                        last={idx + 1 === courseIds.length}
+                        last={idx + 1 === CourseIdDeprecateds.length}
                     />
                 {/each}
             </ul>

@@ -1,15 +1,17 @@
-export const dataCourseML4AI = {
-    id: "ML4AI",
+import type { CourseProps } from "$lib/utils/types/data";
+
+export const dataCourseML4AI = (): CourseProps => ({
+    id: "mc4ai",
     title: "Machine learning for AI",
 
-    register_url: "https://go.cot.ai/091023",
+    registerUrl: "https://go.cot.ai/091023",
 
-    experience_requirement: [
+    experienceRequirement: [
         "Sử dụng tốt Python",
         "Có kiến thức về Đại Số Tuyến Tính (Linear Algebra) và Toán Giải Tích (Calculus)",
         "Biết sử dụng thư viện Python: numpy và pandas",
     ],
-    who_should_join: [
+    whoShouldJoin: [
         "Các bạn học sinh / sinh viên từ cấp Trung Học Phổ Thông trở lên muốn tìm hiểu và đắm mình vào lĩnh vực AI",
         'Các bạn lập trình viên muốn "nâng cấp" bản thân để bắt kịp với xu hướng phát triển cực nhanh của lĩnh vực AI',
     ],
@@ -59,7 +61,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Representation",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -73,7 +75,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Linear Predictor",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -86,7 +88,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "MLP (Multi-Layer Perceptron)",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -99,7 +101,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Training Loss & Evaluation Metrics → Optimization",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -111,7 +113,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Kiểm tra giữa kỳ",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -124,7 +126,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "CNN (Convolutional Neural Network)",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -138,7 +140,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "RNN (Recurrent Neural Network)",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -151,7 +153,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Recommender System",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -163,7 +165,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Decision Tree",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -176,7 +178,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "MDP (Markov Decision Process): Planning",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -188,7 +190,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Q-Learning & Decision Making",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -201,7 +203,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Kiểm tra cuối kỳ",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -211,7 +213,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
         {
             title: "Báo cáo dự án",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -219,4 +221,4 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
             },
         },
     ],
-};
+});

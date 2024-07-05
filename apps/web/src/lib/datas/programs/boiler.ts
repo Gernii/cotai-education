@@ -6,11 +6,11 @@ const boiler = {
         "image-search-and-retrieval-project-based-training",
         "face-attendance-system-on-cloud-and-edge",
     ],
-    "courses-highlighted": [
+    coursesHighlighted: [
         "image-search-and-retrieval-project-based-training",
         "face-attendance-system-on-cloud-and-edge",
     ],
-    "courses-roadmap": [
+    coursesRoadmap: [
         "image-search-and-retrieval-project-based-training",
         "face-attendance-system-on-cloud-and-edge",
     ],

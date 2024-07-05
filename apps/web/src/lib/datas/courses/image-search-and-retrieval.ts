@@ -4,11 +4,11 @@ const dataCourseImageSearchAndRetrieval = {
 
     // price: 1000000,
 
-    register_url: "",
+    registerUrl: "",
 
     thumbnail: "/images/logo/CoTAI-Ver0-320.png",
 
-    experience_requirement: [
+    experienceRequirement: [
         "NVIDIA GPU with at least 4GB of VRAM (much more VRAM is good to have)",
         "At least 1 year of experience in using Python in works (self-works / company works)",
         "Basic Backend understanding (flask, fastapi, django)",
@@ -16,7 +16,7 @@ const dataCourseImageSearchAndRetrieval = {
         "OpenCV / Pillow: Image operations",
         "Simple Machine Learning concepts, such as: Similarity measure, K-Means, K-NN",
     ],
-    who_should_join: [
+    whoShouldJoin: [
         "New AI Learner",
         "Students that already completed CoTAI's PythonAI & MC4AI",
         "Software Engineers who want to leverage your knowledge in AI",
@@ -138,7 +138,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -154,7 +154,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -168,7 +168,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -184,7 +184,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -197,7 +197,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -210,7 +210,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -223,7 +223,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -237,7 +237,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -250,7 +250,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -264,7 +264,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -277,7 +277,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -290,7 +290,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -305,7 +305,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -319,7 +319,7 @@ const dataCourseImageSearchAndRetrieval = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,

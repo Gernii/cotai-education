@@ -3,8 +3,8 @@ const dataProgramExtra = {
     title: "Khóa học bổ trợ",
     hidden: false,
     courses: ["ai-for-all"],
-    "courses-highlighted": ["ai-for-all"],
-    "courses-roadmap": ["ai-for-all"],
+    coursesHighlighted: ["ai-for-all"],
+    coursesRoadmap: ["ai-for-all"],
     targets: ["student", "developer"],
     description: `- Các nguyên lý chính của AI minh hoạ qua ứng dụng thực tế.
 - Thực hành huấn luyện AI nghe, nhìn, đọc, nói.

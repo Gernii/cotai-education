@@ -1,9 +1,9 @@
 <script lang="ts">
     import { Picture } from "$lib/components/ui/picture";
 
-    import { routingPathCoursesId } from "$lib/utils/routing-path";
-    import { type CourseId } from "$lib/utils/constants";
-    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
+    import { routingPathcoursesIdDeprecated } from "$lib/utils/routing-path";
+    import { type CourseIdDeprecated } from "$lib/utils/constants";
+    import { coursesThumbnailDeprecated } from "$lib/utils/courses-thumbnail";
 
     import * as m from "$i18n/messages";
 
@@ -18,9 +18,9 @@
     export let description: $$Props["description"] = undefined;
     export let totalLessons: $$Props["totalLessons"] = 0;
 
-    $: courseNavigate = routingPathCoursesId(id);
+    $: courseNavigate = routingPathcoursesIdDeprecated(id);
 
-    $: courseThumbnail = coursesThumbnail(id as CourseId);
+    $: courseThumbnail = coursesThumbnailDeprecated(id as CourseIdDeprecated);
 </script>
 
 {#if title && description}

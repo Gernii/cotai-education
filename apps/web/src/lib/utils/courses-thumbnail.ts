@@ -4,14 +4,28 @@ import CourseThumbnailDefaultPicture from "$lib/assets/images/course-thumbnail-d
 import CourseThumbnailDeepLearingPicture from "$lib/assets/images/course-thumbnail-deep-learning.jpg?imagetools";
 import CourseThumbnailMachineLearingPicture from "$lib/assets/images/course-thumbnail-machine-learing.jpg?imagetools";
 
-import { coursesId, type CourseId } from "./constants";
+import { coursesIdDeprecated, type CourseIdDeprecated } from "./constants";
+import { coursesList, type CourseId } from "$lib/datas/courses/healpers";
+
+export const coursesThumbnailDeprecated = (id: CourseIdDeprecated) => {
+    const thumbnails = new Map<string, ImgMeta[] | ImgMeta>([
+        [coursesIdDeprecated[1], CourseThumbnailDeepLearingPicture],
+        [coursesIdDeprecated[2], CourseThumbnailPythonAIPicture],
+        [coursesIdDeprecated[3], CourseThumbnailMathCodeAIPicture],
+        [coursesIdDeprecated[4], CourseThumbnailMachineLearingPicture],
+    ]);
+
+    const img = thumbnails.get(id) ?? CourseThumbnailDefaultPicture;
+
+    return Array.isArray(img) ? img : [img];
+};
 
 export const coursesThumbnail = (id: CourseId) => {
     const thumbnails = new Map<string, ImgMeta[] | ImgMeta>([
-        [coursesId[1], CourseThumbnailDeepLearingPicture],
-        [coursesId[2], CourseThumbnailPythonAIPicture],
-        [coursesId[3], CourseThumbnailMathCodeAIPicture],
-        [coursesId[4], CourseThumbnailMachineLearingPicture],
+        [coursesList[0], CourseThumbnailPythonAIPicture],
+        [coursesList[1], CourseThumbnailMathCodeAIPicture],
+        [coursesList[2], CourseThumbnailMachineLearingPicture],
+        [coursesList[3], CourseThumbnailDeepLearingPicture],
     ]);
 
     const img = thumbnails.get(id) ?? CourseThumbnailDefaultPicture;

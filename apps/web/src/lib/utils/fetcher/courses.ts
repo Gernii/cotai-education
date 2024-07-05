@@ -3,9 +3,12 @@ import { fetcherStaticData } from "./static-data";
 import type { Deprecated_CourseProps, CourseResponseProps } from "../types/data.deprecated";
 import { courseMappingData } from "../data-mapping.server";
 
-export const fetcherCourses = async (courseIds: string[], fetch: ServerLoadEvent["fetch"]) => {
+export const fetcherCourses = async (
+    CourseIdDeprecateds: string[],
+    fetch: ServerLoadEvent["fetch"],
+) => {
     const coursesRawData = await Promise.all(
-        courseIds.map((id) =>
+        CourseIdDeprecateds.map((id) =>
             fetcherStaticData<CourseResponseProps>({
                 id,
                 path: "courses",

@@ -7,9 +7,9 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
+    import { coursesThumbnailDeprecated } from "$lib/utils/courses-thumbnail";
+    import type { CourseIdDeprecated } from "$lib/utils/constants";
     import type { Deprecated_CourseProps } from "$lib/utils/types/data.deprecated";
-    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
-    import type { CourseId } from "$lib/utils/constants";
 
     import * as m from "$i18n/messages";
 
@@ -34,7 +34,7 @@
 
     $: totalSessions = curriculum.filter((c) => c.classesCountable).length;
 
-    $: courseThumbnail = coursesThumbnail(id as CourseId);
+    $: courseThumbnail = coursesThumbnailDeprecated(id as CourseIdDeprecated);
 </script>
 
 {#if title}

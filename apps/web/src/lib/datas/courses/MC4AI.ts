@@ -1,13 +1,13 @@
-export const dataCourseMC4AI = {
-    id: "MC4AI",
+import type { CourseProps } from "$lib/utils/types/data";
+
+export const dataCourseMC4AI = (): CourseProps => ({
+    id: "mc4ai",
     title: "Math & coding for AI",
 
-    register_url: "https://go.cot.ai/091023",
+    registerUrl: "https://go.cot.ai/091023",
 
-    thumbnail: "/images/logo/CoTAI-Ver0-320.png",
-
-    experience_requirement: ["Đã hoàn thành khoá PythonAI"],
-    who_should_join: [
+    experienceRequirement: ["Đã hoàn thành khoá PythonAI"],
+    whoShouldJoin: [
         "Học sinh THPT & sinh viên các ngành muốn làm lập trình viên AI hoặc xin học bổng du học & nghiên cứu (được viết thư giới thiệu.)",
         'Người đi làm muốn phát triển nghề nghiệp chuyên môn với công nghệ AI, lập trình viên muốn nhanh chóng "nâng cấp" năng lực lập trình AI.',
     ],
@@ -40,7 +40,7 @@ export const dataCourseMC4AI = {
         {
             title: "Đại số tuyến tính & Numpy cơ bản",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -54,7 +54,7 @@ export const dataCourseMC4AI = {
         {
             title: "Các hàm thông dụng của Numpy & Matplotlib",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -69,7 +69,7 @@ export const dataCourseMC4AI = {
         {
             title: "Pandas & Phân tích dữ liệu",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -87,7 +87,7 @@ export const dataCourseMC4AI = {
         {
             title: "Thuật toán Gradient Descent & Plotly",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -101,7 +101,7 @@ export const dataCourseMC4AI = {
         {
             title: "Xác suất & Phân phối xác suất",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -116,12 +116,12 @@ export const dataCourseMC4AI = {
         {
             title: "Kiểm tra giữa kỳ & đăng ký dự án",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
         },
         {
             title: "Thuật toán kNN & kMeans",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -136,7 +136,7 @@ export const dataCourseMC4AI = {
         {
             title: "Mô hình Linear Regression",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -149,7 +149,7 @@ export const dataCourseMC4AI = {
         {
             title: "Mô hình Logistic Regression",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -163,7 +163,7 @@ export const dataCourseMC4AI = {
         {
             title: "Mô hình Softmax Regression",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -177,7 +177,7 @@ export const dataCourseMC4AI = {
         {
             title: "Thuật toán Gradient Descent cho các mô hình tuyến tính",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -190,12 +190,12 @@ export const dataCourseMC4AI = {
         {
             title: "Thi cuối kỳ",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
         },
         {
             title: "Báo cáo dự án",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
         },
     ],
-};
+});

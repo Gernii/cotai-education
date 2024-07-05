@@ -7,10 +7,10 @@ import type { CourseResponseProps } from "$lib/utils/types/data.deprecated";
 import { courseMappingData } from "$lib/utils/data-mapping.server";
 
 export const load = async ({ fetch, params }): Promise<CourseDetailsPageDataProps> => {
-    const courseId = params.course_id;
+    const CourseIdDeprecated = params.course_id;
 
     const course = await fetcherStaticData<CourseResponseProps>({
-        id: courseId,
+        id: CourseIdDeprecated,
         path: "courses",
         fetch,
     });
@@ -23,6 +23,6 @@ export const load = async ({ fetch, params }): Promise<CourseDetailsPageDataProp
 
     return {
         ...courseMappingData(course),
-        id: courseId,
+        id: CourseIdDeprecated,
     };
 };

@@ -2,12 +2,12 @@ export const dataCourseAiForAll = {
     id: "ai-for-all",
     title: "AI for all",
 
-    register_url: "",
+    registerUrl: "",
 
     thumbnail: "/images/logo/CoTAI-Ver0-320.png",
 
-    experience_requirement: [],
-    who_should_join: [
+    experienceRequirement: [],
+    whoShouldJoin: [
         "Học sinh THPT cần sớm định hướng nghề nghiệp tương lai",
         "Sinh viên & nhân viên mọi ngành nghề học cách sử dụng AI cho công việc",
         "Những nhà sáng tạo nội dung với công cụ AI",
@@ -27,7 +27,7 @@ export const dataCourseAiForAll = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -40,7 +40,7 @@ export const dataCourseAiForAll = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -55,7 +55,7 @@ export const dataCourseAiForAll = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -70,7 +70,7 @@ export const dataCourseAiForAll = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -86,7 +86,7 @@ export const dataCourseAiForAll = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,
@@ -101,7 +101,7 @@ export const dataCourseAiForAll = {
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: false,

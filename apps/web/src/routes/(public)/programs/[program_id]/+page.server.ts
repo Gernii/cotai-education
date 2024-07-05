@@ -22,9 +22,9 @@ export const load = async ({ fetch, params }): Promise<ProgramDetailsPageDataPro
         });
     }
 
-    const courseIds = program.courses;
+    const CourseIdDeprecateds = program.courses;
 
-    const courses = await fetcherCourses(courseIds, fetch);
+    const courses = await fetcherCourses(CourseIdDeprecateds, fetch);
 
     return {
         programDetails: {

@@ -1,12 +1,12 @@
-export const dataCoursePython4AI = {
-    id: "Python4AI",
+import type { CourseProps } from "$lib/utils/types/data";
+
+export const dataCoursePython4AI = (): CourseProps => ({
+    id: "python4ai",
     title: "Python AI",
 
-    register_url: "https://go.cot.ai/091023",
+    registerUrl: "https://go.cot.ai/091023",
 
-    thumbnail: "/images/logo/CoTAI-Ver0-320.png",
-
-    who_should_join: [
+    whoShouldJoin: [
         "Học sinh THPT & sinh viên các ngành muốn làm lập trình viên AI hoặc xin học bổng du học & nghiên cứu (được viết thư giới thiệu.)",
         'Người đi làm muốn phát triển nghề nghiệp chuyên môn với công nghệ AI, lập trình viên muốn nhanh chóng "nâng cấp" năng lực lập trình AI.',
     ],
@@ -29,7 +29,7 @@ export const dataCoursePython4AI = {
     ],
     description:
         "Khoá học cung cấp các kiến thức lập trình cơ bản nhất như biến, kiểu dữ liệu, toán tử, câu lệnh điều kiện, vòng lặp, các thuật toán, kỹ thuật lập trình ... giúp cho học viên có thể giải quyết những bài toán từ cơ bản như Tính chu vi, diện tích hình tròn, Giải phương trình bậc nhất, bậc hai ... đến nâng cao như Xử lý ảnh số (thay đổi màu sắc, vẽ hình, cắt vùng ảnh ...), hoặc xây dựng một website có ứng dụng công nghệ AI & có link chạy thực trên Internet",
-    experience_requirement: [
+    experienceRequirement: [
         "Các kỹ năng sử dụng máy tính cơ bản: truy cập file, folder, cách cài đặt phần mềm, sử dụng internet",
         "Kiến thức toán cơ bản: hình học cơ bản, giải phương trình bậc 1,2",
     ],
@@ -39,7 +39,7 @@ export const dataCoursePython4AI = {
         {
             title: "Nhập môn lập trình Python",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -52,7 +52,7 @@ export const dataCoursePython4AI = {
         {
             title: "Câu lệnh điều kiện",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -64,7 +64,7 @@ export const dataCoursePython4AI = {
         {
             title: "Các kiểu dữ liệu List, Tuple, Dictionary",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -76,7 +76,7 @@ export const dataCoursePython4AI = {
         {
             title: "Vòng lặp",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -91,7 +91,7 @@ export const dataCoursePython4AI = {
         {
             title: "Hàm & Các kỹ thuật lập trình cơ bản",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -102,12 +102,12 @@ export const dataCoursePython4AI = {
         {
             title: "Kiểm tra giữa kỳ",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
         },
         {
             title: "Kiểu dữ liệu String & Class",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -118,7 +118,7 @@ export const dataCoursePython4AI = {
         {
             title: "Xử lý file & 2D List",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -130,7 +130,7 @@ export const dataCoursePython4AI = {
         {
             title: "Xử lý ảnh với Pillow & OpenCV",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -146,7 +146,7 @@ export const dataCoursePython4AI = {
         {
             title: "Lập trình web với Streamlit",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -159,7 +159,7 @@ export const dataCoursePython4AI = {
         {
             title: "Thi cuối kỳ",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
         },
     ],
-};
+});

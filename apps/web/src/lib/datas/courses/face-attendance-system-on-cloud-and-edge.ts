@@ -2,7 +2,7 @@
 const dataCourseFaceAttendanceSystemOnCloudAndEdge = {
     title: "Face Attendance System On Cloud And Edge",
 
-    register_url: "",
+    registerUrl: "",
 
     thumbnail: "/images/logo/CoTAI-Ver0-320.png",
 
@@ -46,7 +46,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: true,
 
@@ -65,7 +65,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -97,7 +97,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -112,7 +112,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -127,7 +127,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -145,7 +145,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -161,7 +161,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -176,7 +176,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -191,7 +191,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -206,7 +206,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -220,7 +220,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -234,7 +234,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -249,7 +249,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -264,7 +264,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,
@@ -278,7 +278,7 @@ Xây dựng ứng dụng UI và nút trên Raspberry Pi bằng Python`,
 
             hidden: false,
 
-            classes_countable: true,
+            classesCountable: true,
 
             details: {
                 hidden: true,

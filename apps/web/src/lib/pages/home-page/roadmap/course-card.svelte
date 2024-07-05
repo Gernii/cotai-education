@@ -7,17 +7,17 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
-    import type { Deprecated_CourseProps } from "$lib/utils/types/data.deprecated";
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
-    import type { CourseId } from "$lib/utils/constants";
+    import type { CourseProps } from "$lib/utils/types/data";
 
     import * as m from "$i18n/messages";
 
     import HeroiconsClock from "~icons/heroicons/clock";
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
     import { TextContent } from "$lib/features/text-content";
+    import type { CourseId } from "$lib/datas/courses/healpers";
 
-    interface $$Props extends Omit<Deprecated_CourseProps, "archives"> {
+    interface $$Props extends CourseProps {
         idx: number;
         last: boolean;
     }
@@ -26,7 +26,6 @@
     export let curriculum: $$Props["curriculum"] = [];
     export let description: $$Props["description"] = undefined;
     export let id: $$Props["id"];
-    export let thumbnail: $$Props["thumbnail"] = undefined;
     export let idx: $$Props["idx"];
     export let last: $$Props["last"];
 
@@ -69,7 +68,7 @@
             <div class="card-body items-start">
                 <div
                     class={cx("grid w-full grid-cols-1 gap-x-16 gap-y-8", {
-                        "lg:grid-cols-5": !!thumbnail,
+                        "lg:grid-cols-5": !!courseThumbnail,
                     })}
                 >
                     <div
@@ -106,19 +105,17 @@
                             </a>
                         </div>
                     </div>
-                    {#if thumbnail}
+                    {#if courseThumbnail}
                         <div class="col-span-1 self-center lg:col-span-2">
                             <div class="overflow-hidden rounded-box">
                                 <figure>
-                                    {#key id}
-                                        <Picture
-                                            meta={courseThumbnail}
-                                            alt={m.thumbnail({
-                                                title: title ?? "",
-                                            })}
-                                            imageClass="w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                                        />
-                                    {/key}
+                                    <Picture
+                                        meta={courseThumbnail}
+                                        alt={m.thumbnail({
+                                            title: title ?? "",
+                                        })}
+                                        imageClass="w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                                    />
                                 </figure>
                             </div>
                         </div>

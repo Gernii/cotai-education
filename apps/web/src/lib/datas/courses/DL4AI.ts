@@ -1,18 +1,18 @@
-export const dataCourseDL4AI = {
-    id: "DL4AI",
+import type { CourseProps } from "$lib/utils/types/data";
+
+export const dataCourseDL4AI = (): CourseProps => ({
+    id: "dl4ai",
     title: "Deep learning for AI",
 
-    register_url: "https://go.cot.ai/091023",
+    registerUrl: "https://go.cot.ai/091023",
 
-    thumbnail: "/images/logo/CoTAI-Ver0-320.png",
-
-    experience_requirement: [
+    experienceRequirement: [
         "Sử dụng thành thạo ngôn ngữ Python",
         "Sử dụng tốt các thư viện liên quan đến xử lý ma trận và xử lý dữ liệu như numpy và pandas",
         "Các phương pháp trích xuất đặc trưng và biểu diễn dữ liệu để máy tính hiểu",
         "Hiểu biết cơ bản về Đại Số Tuyến Tính (Linear Algebra) và Toán Giải Tích (Calculus)",
     ],
-    who_should_join: [
+    whoShouldJoin: [
         "Các bạn học sinh / sinh viên từ cấp Trung Học Phổ Thông trở lên muốn tìm hiểu và đắm mình vào lĩnh vực AI",
         'Các bạn lập trình viên muốn "nâng cấp" bản thân để bắt kịp với xu hướng phát triển cực nhanh của lĩnh vực AI',
     ],
@@ -22,7 +22,7 @@ export const dataCourseDL4AI = {
         "numpy",
         "scikit-learn",
         "pytorch",
-        "torchmetric",
+        "torchmetrics",
         "timm",
         "torchseg",
         "mmdetection",
@@ -60,7 +60,7 @@ Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các 
         {
             title: "Review: PyTorch & Advanced Training Techniques",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -71,7 +71,7 @@ Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các 
         {
             title: "The history of DCNNs: How to go deeper?",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -81,7 +81,7 @@ Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các 
         {
             title: "The history of DCNNs: From Depth to Efficiency",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -91,7 +91,7 @@ Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các 
         {
             title: "The history of DCNNs: From Low-resolution to High-resolution & Object Segmentation",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -101,7 +101,7 @@ Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các 
         {
             title: "Object Detection",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -111,7 +111,7 @@ Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các 
         {
             title: "Visual Attention & Transformers",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -122,7 +122,7 @@ Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về ki�
         {
             title: "Transformer in Computer Vision & ViT (Vision Transformer)",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -132,7 +132,7 @@ Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về ki�
         {
             title: "Transformer in Object Detection & Segmentation",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -142,7 +142,7 @@ Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về ki�
         {
             title: "Modern ConvNets",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -152,7 +152,7 @@ Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về ki�
         {
             title: "Báo cáo dự án",
             hidden: false,
-            classes_countable: true,
+            classesCountable: true,
             details: {
                 hidden: false,
 
@@ -160,4 +160,4 @@ Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về ki�
             },
         },
     ],
-};
+});

@@ -4,8 +4,8 @@
     import { ContainerContent } from "$lib/components/ui/container";
     import { Picture } from "$lib/components/ui/picture";
 
-    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
-    import type { CourseId } from "$lib/utils/constants";
+    import { coursesThumbnailDeprecated } from "$lib/utils/courses-thumbnail";
+    import type { CourseIdDeprecated } from "$lib/utils/constants";
 
     import * as m from "$i18n/messages";
 
@@ -17,7 +17,9 @@
 
     $: pd = $page.data as CourseDetailsPageDataProps;
 
-    $: courseThumbnail = coursesThumbnail(pd.id as CourseId);
+    $: courseThumbnail = coursesThumbnailDeprecated(
+        pd.id as CourseIdDeprecated,
+    );
 </script>
 
 <div class="mb-16">
