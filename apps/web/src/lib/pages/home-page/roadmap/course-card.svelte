@@ -8,15 +8,18 @@
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
-    import type { CourseProps } from "$lib/utils/types/data";
 
     import * as m from "$i18n/messages";
 
+    import LucideNetwork from "~icons/lucide/network";
+    import LucideUsers from "~icons/lucide/users";
+    import type { CourseProps } from "$lib/datas/courses/types";
     import HeroiconsClock from "~icons/heroicons/clock";
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
     import { TextContent } from "$lib/features/text-content";
     import type { CourseId } from "$lib/datas/courses/healpers";
-
+    import { courseStudyType } from "$lib/datas/courses/constants";
+    import LucideMonitorPlay from "~icons/lucide/monitor-play";
     interface $$Props extends CourseProps {
         idx: number;
         last: boolean;
@@ -28,6 +31,9 @@
     export let id: $$Props["id"];
     export let idx: $$Props["idx"];
     export let last: $$Props["last"];
+    export let studyTypes: $$Props["studyTypes"] = [];
+
+    $: console.log(studyTypes);
 
     let isInview = writable(false);
 
@@ -38,6 +44,7 @@
 
 {#if title}
     <li
+        {id}
         class="flex gap-x-1 sm:gap-x-4"
         use:inview={inviewCommonOptions}
         on:inview_enter={onInViewEnter(isInview)}
@@ -57,7 +64,7 @@
         </div>
         <div
             class={cx(
-                "card w-full border border-base-content/5 bg-base-100 shadow shadow-base-content/5",
+                "card card-compact w-full border border-base-content/5 bg-base-100 shadow shadow-base-content/5 sm:card-normal",
                 {
                     "mb-4": !last,
                 },
@@ -93,6 +100,27 @@
                             <HeroiconsClock class="size-5 stroke-2" />
                             <p>{m.totalSessions({ number: totalSessions })}</p>
                         </div>
+                        <ul class="flex flex-wrap gap-x-2 gap-y-2">
+                            {#each studyTypes as studyType}
+                                <li class="badge badge-ghost gap-x-1 px-3 py-4">
+                                    {courseStudyType[studyType].name}
+                                    {#if studyType === "offline"}
+                                        <LucideUsers
+                                            class="size-4 flex-shrink-0 sm:size-5"
+                                        />
+                                    {:else if studyType === "online"}
+                                        <LucideNetwork
+                                            class="size-4 flex-shrink-0 sm:size-5"
+                                        />
+                                    {:else if studyType === "selfPaced"}
+                                        <LucideMonitorPlay
+                                            class="size-4 flex-shrink-0 sm:size-5"
+                                        />
+                                    {/if}
+                                </li>
+                            {/each}
+                        </ul>
+                        <hr class="h-1 w-12 border-0 bg-secondary" />
                         <div class="flex-grow">
                             <TextContent text={description} />
                         </div>

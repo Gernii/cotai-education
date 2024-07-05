@@ -1,8 +1,9 @@
-import type { CourseProps } from "$lib/utils/types/data";
+import type { CourseProps } from "./types";
 
 export const dataCourseMC4AI = (): CourseProps => ({
     id: "mc4ai",
     title: "Math & coding for AI",
+    studyTypes: ["online", "offline", "selfPaced"],
 
     registerUrl: "https://go.cot.ai/091023",
 

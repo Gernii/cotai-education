@@ -1,4 +1,4 @@
-import type { ProgramProps } from "$lib/utils/types/data";
+import type { ProgramProps } from "./types";
 
 export const dataProgramPublicTraining = (): ProgramProps => ({
     id: "public-training",

@@ -1,9 +1,9 @@
-import type { CourseProps } from "$lib/utils/types/data";
+import type { CourseProps } from "./types";
 
 export const dataCoursePython4AI = (): CourseProps => ({
     id: "python4ai",
     title: "Python AI",
-
+    studyTypes: ["online", "offline", "selfPaced"],
     registerUrl: "https://go.cot.ai/091023",
 
     whoShouldJoin: [

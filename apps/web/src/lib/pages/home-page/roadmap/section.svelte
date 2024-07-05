@@ -16,7 +16,7 @@
 
     let roadmapProgram = dataProgramPublicTraining();
 
-    $: CourseIdDeprecateds = roadmapProgram.coursesRoadmap;
+    $: courseIds = roadmapProgram.coursesRoadmap;
 
     let isInview = writable(false);
 </script>
@@ -37,11 +37,11 @@
                 </SectionTitle>
             </div>
             <ul class="w-full">
-                {#each CourseIdDeprecateds as CourseIdDeprecated, idx}
+                {#each courseIds as courseId, idx}
                     <CourseCard
-                        {...coursesObject[CourseIdDeprecated]()}
+                        {...coursesObject[courseId]()}
                         {idx}
-                        last={idx + 1 === CourseIdDeprecateds.length}
+                        last={idx + 1 === courseId.length}
                     />
                 {/each}
             </ul>
