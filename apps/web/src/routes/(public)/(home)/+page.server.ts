@@ -7,8 +7,8 @@ import type {
 } from "$lib/pages/home-page/types";
 
 import type { CourseResponseProps, ProgramResponseProps } from "$lib/utils/types/data";
-import { staticDataFetcher } from "$lib/utils/static-data-fetcher";
-import { countTotalLessons } from "$lib/utils/data-mapping.server";
+import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
+import { countTotalLessons, programMappingData } from "$lib/utils/data-mapping.server";
 
 export const load = async ({ fetch, parent }): Promise<HomePageDataProps> => {
     const preData = await parent();
@@ -34,7 +34,7 @@ export const load = async ({ fetch, parent }): Promise<HomePageDataProps> => {
 const fetchPrograms = async (programIds: string[], fetch: LoadEvent["fetch"]) => {
     const programsRawData = await Promise.all(
         programIds.map((id) =>
-            staticDataFetcher<ProgramResponseProps>({
+            fetcherStaticData<ProgramResponseProps>({
                 id,
                 path: "programs",
                 fetch,
@@ -46,7 +46,7 @@ const fetchPrograms = async (programIds: string[], fetch: LoadEvent["fetch"]) =>
         (program) => program !== undefined && program?.hidden !== true,
     ) as ProgramResponseProps[];
 
-    const programTreeShaked = filteredPrograms.map((program) => treeShakingProgramReponse(program));
+    const programTreeShaked = filteredPrograms.map((program) => programMappingData(program));
 
     return programTreeShaked;
 };
@@ -56,7 +56,7 @@ const fetchCourses = async (programs: HomePageData_ProgramProps[], fetch: LoadEv
 
     const coursesRawData = await Promise.all(
         courseIds.map((id) =>
-            staticDataFetcher<CourseResponseProps>({
+            fetcherStaticData<CourseResponseProps>({
                 id,
                 path: "courses",
                 fetch,
@@ -81,21 +81,12 @@ const fetchCourses = async (programs: HomePageData_ProgramProps[], fetch: LoadEv
 
 const treeShakingCourseReponse = (course: CourseResponseProps): HomePageData_CourseProps => {
     return {
+        ...course,
         id: course.id,
         title: course.title,
         thumbnail: course.thumbnail,
         description: course.description,
         totalLessons: countTotalLessons(course.curriculum),
-    };
-};
-
-const treeShakingProgramReponse = (course: ProgramResponseProps): HomePageData_ProgramProps => {
-    return {
-        id: course.id,
-        title: course.title,
-        coursesHighlighted: course["courses-highlighted"],
-        targets: course.targets,
-        hidden: course.hidden,
     };
 };
 

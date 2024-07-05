@@ -1,12 +1,12 @@
 import type { LoadEvent } from "@sveltejs/kit";
 
-export interface StaticDataFetcherProps {
+export interface fetcherStaticDataProps {
     id: string;
     path: string;
     fetch: LoadEvent["fetch"];
 }
 
-export const staticDataFetcher = async <T>(props: StaticDataFetcherProps) => {
+export const fetcherStaticData = async <T>(props: fetcherStaticDataProps) => {
     const { id, path, fetch } = props;
     try {
         const res = await fetch(`/data/${path}/${id}.json`);

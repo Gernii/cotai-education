@@ -1,15 +1,16 @@
-import { error, type LoadEvent } from "@sveltejs/kit";
+import { error } from "@sveltejs/kit";
 
 import type { ProgramDetailsPageDataProps } from "$lib/pages/program-details/types";
 
-import { staticDataFetcher } from "$lib/utils/static-data-fetcher";
-import type { CourseProps, CourseResponseProps, ProgramResponseProps } from "$lib/utils/types/data";
-import { courseMappingData, programMappingData } from "$lib/utils/data-mapping.server";
+import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
+import type { ProgramResponseProps } from "$lib/utils/types/data";
+import { programMappingData } from "$lib/utils/data-mapping.server";
+import { fetcherCourses } from "$lib/utils/fetcher/courses.js";
 
 export const load = async ({ fetch, params }): Promise<ProgramDetailsPageDataProps> => {
     const programId = params.program_id;
 
-    const program = await staticDataFetcher<ProgramResponseProps>({
+    const program = await fetcherStaticData<ProgramResponseProps>({
         id: programId,
         path: "programs",
         fetch,
@@ -23,7 +24,7 @@ export const load = async ({ fetch, params }): Promise<ProgramDetailsPageDataPro
 
     const courseIds = program.courses;
 
-    const courses = await fetchCourses(courseIds, fetch);
+    const courses = await fetcherCourses(courseIds, fetch);
 
     return {
         programDetails: {
@@ -32,31 +33,4 @@ export const load = async ({ fetch, params }): Promise<ProgramDetailsPageDataPro
         },
         courses,
     };
-};
-
-const fetchCourses = async (courseIds: string[], fetch: LoadEvent["fetch"]) => {
-    const coursesRawData = await Promise.all(
-        courseIds.map((id) =>
-            staticDataFetcher<CourseResponseProps>({
-                id,
-                path: "courses",
-                fetch,
-            }),
-        ),
-    );
-
-    const courses = coursesRawData.reduce(
-        (prev, course) => {
-            if (!course) {
-                return prev;
-            }
-
-            const courseMapped = courseMappingData(course);
-
-            prev[course.id] = courseMapped;
-            return prev;
-        },
-        {} as Record<string, CourseProps>,
-    );
-    return courses;
 };
