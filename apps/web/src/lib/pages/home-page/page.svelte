@@ -4,6 +4,8 @@
     import { Roadmap } from "./roadmap";
     import WhoWeAre from "./who-we-are.svelte";
     import { WhyChooseUs } from "./why-choose-us";
+
+    import { RegisterGuide } from "$lib/features/register-guide";
 </script>
 
 <Hero />
@@ -11,3 +13,4 @@
 <WhoWeAre />
 <WhyChooseUs />
 <Roadmap />
+<RegisterGuide />
