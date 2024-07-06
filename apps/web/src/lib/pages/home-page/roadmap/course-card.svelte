@@ -33,7 +33,6 @@
     export let last: $$Props["last"];
     export let studyTypes: $$Props["studyTypes"] = [];
 
-    $: console.log(studyTypes);
 
     let isInview = writable(false);
 

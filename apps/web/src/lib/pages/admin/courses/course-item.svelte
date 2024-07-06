@@ -4,7 +4,7 @@
     import { cx } from "cva";
     import { toast } from "svelte-sonner";
 
-    import { courseAPIRouterPath, defaultImage } from "$lib/utils/constants";
+    import { courseAPIRouterPath } from "$lib/utils/constants";
 
     import {
         ContentSyncStatus,
@@ -19,9 +19,6 @@
 
     export let id: $$Props["id"];
     export let title: $$Props["title"];
-    export let thumbnail: NonNullable<$$Props["thumbnail"]> = defaultImage;
-
-    $: console.log(thumbnail);
 
     const courseAPI = courseAPIRouterPath();
 
