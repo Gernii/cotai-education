@@ -5,6 +5,8 @@
     import { WhoShouldJoin } from "./who-should-join";
     import Hero from "./hero.svelte";
     import { LearningOutcomes } from "./learning-outcomes";
+
+    import { RegisterGuide } from "$lib/features/register-guide";
 </script>
 
 <Hero />
@@ -13,3 +15,4 @@
 <LearningOutcomes />
 <Components />
 <Curriculum />
+<RegisterGuide />

@@ -40,7 +40,6 @@
     };
     $: currentPage = `${PUBLIC_HOSTNAME}${i18n.route($page.url.pathname)}`;
 
-    $: console.log($page.url.pathname);
 
     $: formattedTitle = !removeSiteNameFromTitle
         ? title
