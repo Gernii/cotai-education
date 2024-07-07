@@ -204,6 +204,9 @@ importers:
       svelte-sonner:
         specifier: ^0.3.24
         version: 0.3.24(svelte@4.2.18)
+      sveltekit-rate-limiter:
+        specifier: ^0.5.1
+        version: 0.5.1(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))
       tailwind-merge:
         specifier: ^2.3.0
         version: 2.3.0
@@ -914,6 +917,10 @@ packages:
 
   '@isaacs/cliui@8.0.2':
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
+    engines: {node: '>=12'}
+
+  '@isaacs/ttlcache@1.4.1':
+    resolution: {integrity: sha512-RQgQ4uQ+pLbqXfOmieB91ejmLwvSgv9nLx6sT6sD83s7umBypgg+OIBOBbEUiJXrfpnp9j0mRhYYdzp9uqq3lA==}
     engines: {node: '>=12'}
 
   '@jest/schemas@29.6.3':
@@ -3749,6 +3756,11 @@ packages:
     resolution: {integrity: sha512-d0FdzYIiAePqRJEb90WlJDkjUEx42xhivxN8muUBmfZnP+tzUgz12DJ2hRJi8sIHCME7jeK1PTMgKPSfTd8JrA==}
     engines: {node: '>=16'}
 
+  sveltekit-rate-limiter@0.5.1:
+    resolution: {integrity: sha512-Q2C7mT9PdoL6v3VXgxngyXiEg2i3Dp0iVjVvKi722lroTM7oHxAJsmj66607BiSw8mdQk1Me6nhE6uRXrkDVIg==}
+    peerDependencies:
+      '@sveltejs/kit': 1.x || 2.x
+
   sveltekit-superforms@2.15.2:
     resolution: {integrity: sha512-8mraZXhTL43z2H7mqmkpfqMvIGmV9mtRabHIYM2B6I3ZmEvWESS9tQPhHFY8uIEFKL6oG6BP9Tvi/aP4QKdcyg==}
     peerDependencies:
@@ -4750,6 +4762,8 @@ snapshots:
       strip-ansi-cjs: strip-ansi@6.0.1
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
+
+  '@isaacs/ttlcache@1.4.1': {}
 
   '@jest/schemas@29.6.3':
     dependencies:
@@ -7831,6 +7845,11 @@ snapshots:
       locate-character: 3.0.0
       magic-string: 0.30.10
       periscopic: 3.1.0
+
+  sveltekit-rate-limiter@0.5.1(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9))):
+    dependencies:
+      '@isaacs/ttlcache': 1.4.1
+      '@sveltejs/kit': 2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9))
 
   sveltekit-superforms@2.15.2(@sveltejs/kit@2.5.18(@sveltejs/vite-plugin-svelte@3.1.1(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18)(vite@5.3.3(@types/node@20.14.9)))(svelte@4.2.18):
     dependencies:
