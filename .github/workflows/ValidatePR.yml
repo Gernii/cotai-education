@@ -31,6 +31,10 @@ jobs:
                   POSTHOG_URL: ${{ vars.POSTHOG_URL }}
                   PUBLIC_POSTHOG_TOKEN: ${{ vars.PUBLIC_POSTHOG_TOKEN }}
                   PUBLIC_LOGS_URL: ${{ vars.PUBLIC_LOGS_URL }}
+                  DISCORD_ROLE: ${{ vars.DISCORD_ROLE }}
+                  DISCORD_ID: ${{ vars.DISCORD_ID }}
+                  DISCORD_TOKEN: ${{ vars.DISCORD_TOKEN }}
+                  DISCORD_THREAD_ID: ${{ vars.DISCORD_THREAD_ID }}
 
             - name: Lint
               shell: bash
@@ -52,3 +56,7 @@ jobs:
                   POSTHOG_URL: ${{ vars.POSTHOG_URL }}
                   PUBLIC_POSTHOG_TOKEN: ${{ vars.PUBLIC_POSTHOG_TOKEN }}
                   PUBLIC_LOGS_URL: ${{ vars.PUBLIC_LOGS_URL }}
+                  DISCORD_ROLE: ${{ vars.DISCORD_ROLE }}
+                  DISCORD_ID: ${{ vars.DISCORD_ID }}
+                  DISCORD_TOKEN: ${{ vars.DISCORD_TOKEN }}
+                  DISCORD_THREAD_ID: ${{ vars.DISCORD_THREAD_ID }}
