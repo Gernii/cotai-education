@@ -7,6 +7,7 @@
     import { LearningOutcomes } from "./learning-outcomes";
 
     import { RegisterGuide } from "$lib/features/register-guide";
+    import { RegisterForm } from "$lib/features/register-form";
 </script>
 
 <Hero />
@@ -16,3 +17,4 @@
 <Components />
 <Curriculum />
 <RegisterGuide />
+<RegisterForm />

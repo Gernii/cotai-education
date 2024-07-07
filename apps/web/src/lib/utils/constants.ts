@@ -3,6 +3,16 @@ import { PUBLIC_LOGS_URL, PUBLIC_POSTHOG_TOKEN } from "$env/static/public";
 export const defaultImage = "/images/logo/CoTAI-Ver0-320.png";
 
 export const programIds = ["public-training", "project-based-training", "extra"];
+
+export const contacts = {
+    phone: {
+        tel: "+84815503467",
+        value: "+84 815503467",
+    },
+    email: "contact@cot.ai",
+    facebook: "https://m.me/cotaivn",
+} as const;
+
 export const coursesIdDeprecated = [
     "ai-for-all",
     "deep-learning-for-ai",

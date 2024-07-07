@@ -6,6 +6,7 @@
     import { WhyChooseUs } from "./why-choose-us";
 
     import { RegisterGuide } from "$lib/features/register-guide";
+    import { RegisterForm } from "$lib/features/register-form";
 </script>
 
 <Hero />
@@ -14,3 +15,4 @@
 <WhyChooseUs />
 <Roadmap />
 <RegisterGuide />
+<RegisterForm />

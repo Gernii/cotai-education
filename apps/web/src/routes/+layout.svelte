@@ -7,6 +7,7 @@
 
     import posthog from "posthog-js";
     import { ParaglideJS } from "@inlang/paraglide-js-adapter-sveltekit";
+    import { Toaster } from "svelte-sonner";
 
     import { i18n } from "$lib/libs/i18n";
 
@@ -32,6 +33,8 @@
     />
 {/if}
 <ParaglideJS {i18n}>
+    <Toaster position="top-right" richColors />
+
     <slot />
 </ParaglideJS>
 

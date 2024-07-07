@@ -55,7 +55,7 @@ const handlePrivateFetch = async <T>(
     options?: HandlePrivateFetchOptions,
 ) => {
     const { request, fetch } = event;
-    const credentials = await event.locals.getCredentials();
+    const credentials = event.locals.getCredentials();
 
     const createNewRequest = () => {
         let urlConvert: URL;
