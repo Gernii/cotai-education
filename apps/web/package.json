@@ -60,11 +60,19 @@
 		"@tiptap/extension-text": "^2.1.13",
 		"@tiptap/pm": "^2.1.13",
 		"@tiptap/starter-kit": "^2.1.13",
+		"@types/eslint": "8.56.10",
 		"@types/markdown-it": "^13.0.7",
 		"@types/markdown-it-container": "^2.0.10",
+		"@typescript-eslint/eslint-plugin": "^7.13.1",
+		"@typescript-eslint/parser": "^7.13.1",
 		"autoprefixer": "^10.4.19",
 		"cva": "npm:class-variance-authority@^0.7.0",
 		"daisyui": "^4.12.2",
+		"eslint": "^8.56.0",
+		"eslint-config-prettier": "^9.1.0",
+		"eslint-plugin-import": "^2.29.1",
+		"eslint-plugin-svelte": "^2.40.0",
+		"eslint-plugin-unused-imports": "^3.2.0",
 		"iso-639-1": "^3.1.2",
 		"keen-slider": "^6.8.6",
 		"markdown-it": "^14.1.0",
@@ -91,15 +99,7 @@
 		"vite": "^5.3.1",
 		"vite-imagetools": "^7.0.2",
 		"vitest": "^1.0.0",
-		"wrangler": "^3.61.0",
-		"@typescript-eslint/eslint-plugin": "^7.13.1",
-		"@typescript-eslint/parser": "^7.13.1",
-		"eslint": "^8.56.0",
-		"eslint-config-prettier": "^9.1.0",
-		"eslint-plugin-import": "^2.29.1",
-		"eslint-plugin-svelte": "^2.40.0",
-		"eslint-plugin-unused-imports": "^3.2.0",
-		"@types/eslint": "8.56.10"
+		"wrangler": "^3.61.0"
 	},
 	"lint-staged": {
 		"src/**/*.svelte": [
@@ -113,5 +113,9 @@
 			"biome check --write --unsafe --no-errors-on-unmatched"
 		]
 	},
-	"type": "module"
+	"type": "module",
+	"dependencies": {
+		"sveltekit-superforms": "^2.15.2",
+		"zod": "^3.23.8"
+	}
 }

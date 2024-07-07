@@ -10,8 +10,6 @@ import type {
 
 import { fetcher } from "$lib/utils/fetcher";
 
-export const prerender = true;
-
 export const load = async ({ fetch }) => {
     const [programsRawData, reviewsRawData] = await Promise.all([
         fetcher<LandingPage_LayoutData_ProgramProps[]>(fetch, "/data/programs.json"),

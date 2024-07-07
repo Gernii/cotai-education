@@ -9,5 +9,3 @@
 <SEO description={m.homePage_head_description()} />
 
 <HomePage />
-
-<!-- <Reviews /> -->

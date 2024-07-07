@@ -21,6 +21,6 @@
     );
 </script>
 
-<h1 class={className} {id}>
+<h2 class={className} {id}>
     <slot />
-</h1>
+</h2>
