@@ -2,8 +2,8 @@ import {
     discordRegisterForm,
     loadValidatorRegisterForm,
 } from "$lib/features/register-form/handler.server";
+import { RateLimiter } from "$lib/libs/sveltekit-rate-limiter";
 import { error } from "@sveltejs/kit";
-import { RateLimiter } from "sveltekit-rate-limiter/server";
 
 export const load = async () => {
     const registerForm = await loadValidatorRegisterForm();

@@ -3,11 +3,11 @@ import { error } from "@sveltejs/kit";
 import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
 import type { CourseResponseProps } from "$lib/utils/types/data.deprecated";
 import { courseMappingData } from "$lib/utils/data-mapping.server";
-import { RateLimiter } from "sveltekit-rate-limiter/server";
 import {
     discordRegisterForm,
     loadValidatorRegisterForm,
 } from "$lib/features/register-form/handler.server";
+import { RateLimiter } from "$lib/libs/sveltekit-rate-limiter";
 
 export const load = async ({ fetch, params }) => {
     const CourseIdDeprecated = params.course_id;
