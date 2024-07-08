@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { page } from "$app/stores";
     import "keen-slider/keen-slider.min.css";
 
     import KeenSlider, { type KeenSliderInstance } from "keen-slider";
@@ -9,15 +8,12 @@
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import SectionTitle from "$lib/components/ui/section-title/section-title.svelte";
 
-    import type { LandingPage_LayoutData } from "$lib/layouts/landing-page/types";
-
     import * as m from "$i18n/messages";
 
     import Review from "./review.svelte";
     import { autoSwitchSlide } from "./slider-handler";
-    $: pd = $page.data.layoutData as LandingPage_LayoutData;
 
-    $: reviews = pd.reviews;
+    import { dataReviews } from "$lib/datas/reviews/reviews";
 
     let currentReview = 0;
     let isSlideRendered = false;
@@ -37,7 +33,23 @@
                 slides: {
                     origin: "auto",
                     perView: 1,
-                    spacing: 15,
+                },
+                breakpoints: {
+                    "(min-width: 640px)": {
+                        slides: {
+                            origin: "auto",
+                            spacing: 8,
+
+                            perView: 2,
+                        },
+                    },
+                    "(min-width: 1024px)": {
+                        slides: {
+                            origin: "auto",
+                            spacing: 16,
+                            perView: 3,
+                        },
+                    },
                 },
                 detailsChanged: (s) => {
                     currentReview = s.track.details.rel;
@@ -53,14 +65,14 @@
     });
 </script>
 
-{#if reviews}
+<section>
     <Container padding="top-bottom">
         <ContainerContent>
             <SectionTitle>{m.reviewsTitle()}</SectionTitle>
 
             <div class="flex flex-col">
                 <div class="keen-slider" bind:this={carouselRef}>
-                    {#each reviews as review, idx}
+                    {#each dataReviews as review, idx}
                         <div
                             class={cx("keen-slider__slide", {
                                 hidden: idx !== 0 && !isSlideRendered,
@@ -73,7 +85,7 @@
             </div>
 
             <div class="flex w-full justify-center gap-2 py-2">
-                {#each [...Array(reviews.length)] as _, idx}
+                {#each [...Array(dataReviews.length)] as _, idx}
                     <button
                         class={cx("btn btn-circle  btn-xs", {
                             "btn-primary": currentReview === idx,
@@ -86,4 +98,4 @@
             </div>
         </ContainerContent>
     </Container>
-{/if}
+</section>

@@ -7,6 +7,7 @@
 
     import { RegisterGuide } from "$lib/features/register-guide";
     import { RegisterForm } from "$lib/features/register-form";
+    import { Reviews } from "$lib/features/reviews";
 </script>
 
 <Hero />
@@ -14,5 +15,6 @@
 <WhoWeAre />
 <WhyChooseUs />
 <Roadmap />
+<Reviews />
 <RegisterGuide />
 <RegisterForm />

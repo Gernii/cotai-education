@@ -37,7 +37,7 @@
 	"homepage": "Homepage",
 	"reviewsTitle": "Reviews from our students",
 	"reviewBullet": "Review from student #{idx}",
-	"reviewCourseNameWithSubtitle": "Course: {title}  - {subtitle}",
+	"reviewCourseNameWithSubtitle": "Course: {title}  - {year}",
 	"reviewCourseName": "Course: {title}",
 	"whoweare": "Who we are",
 	"whoweareDescription": "We are a startup studio specialized in Artificial Intelligence. We have been training world-class AI talents, providing fullstack AI R&D outsourcing/offshore services, and building AI products/spinoffs since 2019.",

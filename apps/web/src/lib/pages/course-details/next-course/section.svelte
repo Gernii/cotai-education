@@ -8,8 +8,6 @@
     import { Container } from "$lib/components/ui/container";
     import ContainerContent from "$lib/components/ui/container/container-content.svelte";
 
-    import { inviewCommonOptions } from "$lib/libs/inview";
-
     import { routerPath } from "$lib/utils/constants";
 
     import * as m from "$i18n/messages";
@@ -30,10 +28,16 @@
     const onInViewEnter = async (event: CustomEvent<ObserverEventDetails>) => {
         const { inView } = event.detail;
         if (inView) {
+            isConfetti = false;
             isInview = true;
             await tick();
             isConfetti = true;
         }
+    };
+
+    const inviewCommonOptions = {
+        unobserveOnEnter: false,
+        rootMargin: "-20%",
     };
 </script>
 
