@@ -8,17 +8,37 @@ import {
     loadValidatorRegisterForm,
 } from "$lib/features/register-form/handler.server";
 import { RateLimiter } from "$lib/libs/sveltekit-rate-limiter";
+import { type CourseIds, coursesMap } from "$lib/datas/courses/healpers.js";
 
 export const load = async ({ fetch, params }) => {
-    const CourseIdDeprecated = params.course_id;
+    const courseId = params.course_id as CourseIds;
 
-    const course = await fetcherStaticData<CourseResponseProps>({
-        id: CourseIdDeprecated,
+    const courseGetter = coursesMap.get(courseId);
+
+    if (!courseGetter) {
+        error(404, {
+            message: "Not found",
+        });
+    }
+    const course = courseGetter();
+
+    let nextCourseTitle: undefined | string;
+
+    if (course.nextCourseId) {
+        const nextCourse = coursesMap.get(course.nextCourseId);
+
+        if (nextCourse) {
+            nextCourseTitle = nextCourse().title;
+        }
+    }
+
+    const courseDeprecated = await fetcherStaticData<CourseResponseProps>({
+        id: courseId,
         path: "courses",
         fetch,
     });
 
-    if (!course) {
+    if (!courseDeprecated) {
         error(404, {
             message: "Not found",
         });
@@ -26,9 +46,11 @@ export const load = async ({ fetch, params }) => {
     const registerForm = await loadValidatorRegisterForm();
 
     return {
-        ...courseMappingData(course),
-        id: CourseIdDeprecated,
+        ...courseMappingData(courseDeprecated),
+        id: courseDeprecated.id,
         registerForm,
+        course,
+        nextCourseTitle,
     };
 };
 

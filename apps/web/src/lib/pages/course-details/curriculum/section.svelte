@@ -10,17 +10,16 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
+    import type { CurriculumProps } from "$lib/utils/types/data.deprecated";
+
     import * as m from "$i18n/messages";
 
-    import type { CourseDetailsPageDataProps } from "../types";
-
     import CurriculumCard from "./curriculum-card.svelte";
+    import Certs from "./certs.svelte";
 
     let isInview = writable(false);
 
-    $: pd = $page.data as CourseDetailsPageDataProps;
-
-    $: curriculum = pd.curriculum;
+    $: curriculum = $page.data.curriculum as CurriculumProps[];
 </script>
 
 {#if curriculum.length > 0}
@@ -45,6 +44,20 @@
                     {#each curriculum as section}
                         <CurriculumCard {...section} />
                     {/each}
+                    <CurriculumCard
+                        classesCountable={false}
+                        title={m.every_mild_gadfly_attend()}
+                        highlight
+                    >
+                        <div class="grid grid-cols-1 gap-x-4 md:grid-cols-2">
+                            <div class="prose">
+                                {@html m.awful_long_tapir_advise()}
+                            </div>
+                            <div>
+                                <Certs />
+                            </div>
+                        </div>
+                    </CurriculumCard>
                 </ul>
             </ContainerContent>
         </Container>

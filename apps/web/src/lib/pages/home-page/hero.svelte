@@ -13,7 +13,7 @@
     import LucideGraduationCap from "~icons/lucide/graduation-cap";
     import TeenyiconsDiscountSolid from "~icons/teenyicons/discount-solid";
     import HeroiconsCheck16Solid from "~icons/heroicons/check-16-solid";
-    import { coursesList } from "$lib/datas/courses/healpers";
+    import { CourseIds } from "$lib/datas/courses/healpers";
 
     let isDiscountVisible = false;
 </script>
@@ -172,7 +172,7 @@
                             <div class="w-1/2">
                                 <a
                                     class="btn w-full bg-base-300"
-                                    href={`#${coursesList[0]}`}
+                                    href={`#${CourseIds.python4ai}`}
                                 >
                                     <LucideGraduationCap
                                         class="size-4 flex-shrink-0 lg:size-6"
@@ -190,7 +190,7 @@
                             <div class="w-1/2">
                                 <a
                                     class="btn w-full bg-base-300"
-                                    href={`#${coursesList[1]}`}
+                                    href={`#${CourseIds.mc4ai}`}
                                 >
                                     <LucideGraduationCap
                                         class="size-4 flex-shrink-0 lg:size-6"
@@ -211,7 +211,7 @@
                             <div class="w-1/2">
                                 <a
                                     class="btn w-full bg-base-300"
-                                    href={`#${coursesList[2]}`}
+                                    href={`#${CourseIds.ml4ai}`}
                                 >
                                     <LucideGraduationCap
                                         class="size-4 flex-shrink-0 lg:size-6"
@@ -228,7 +228,7 @@
                             <div class="w-1/2">
                                 <a
                                     class="btn w-full bg-base-300"
-                                    href={`#${coursesList[3]}`}
+                                    href={`#${CourseIds.dl4ai}`}
                                 >
                                     <LucideGraduationCap
                                         class="size-4 flex-shrink-0 lg:size-6"

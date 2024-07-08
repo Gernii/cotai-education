@@ -2,11 +2,11 @@ import type { ComponentDataProps } from "$lib/components/ui/component-data";
 
 import type { SkillTypes } from "$lib/features/skill-icons/constant";
 import type { courseStudyType } from "./constants";
-import type { CourseId } from "./healpers";
+import type { CourseIds } from "./healpers";
 
 export interface CourseProps {
     studyTypes: CourseStudyType[];
-    id: CourseId;
+    id: CourseIds;
     title?: string;
     price?: number;
     registerUrl?: string;
@@ -14,6 +14,7 @@ export interface CourseProps {
     thumbnail?: string;
     description?: string;
     descriptionRaw?: string;
+    nextCourseId?: CourseIds;
     experienceRequirement: string[];
     whoShouldJoin: string[];
     skills: SkillTypes[];
@@ -21,6 +22,7 @@ export interface CourseProps {
     curriculum: CurriculumProps[];
     components: ComponentDataProps[];
     totalLessons?: number;
+    certs?: (ImgMeta | ImgMeta[])[];
 }
 
 export type CourseStudyType = keyof typeof courseStudyType;
