@@ -2,6 +2,7 @@ import type { ComponentDataProps } from "$lib/components/ui/component-data";
 
 import type { SkillTypes } from "$lib/features/skill-icons/constant";
 import type { ProgramIds } from "../programs/constants";
+
 import type { courseStudyType } from "./constants";
 import type { CourseIds } from "./constants";
 

@@ -10,7 +10,7 @@ import {
 import { RateLimiter } from "$lib/libs/sveltekit-rate-limiter";
 import type { CourseIds } from "$lib/datas/courses/constants";
 import { coursesMap } from "$lib/datas/courses/healpers";
-import { programsMap } from "$lib/datas/programs/healpers.js";
+import { programsMap } from "$lib/datas/programs/healpers";
 
 export const load = async ({ fetch, params }) => {
     const courseId = params.course_id as CourseIds;
