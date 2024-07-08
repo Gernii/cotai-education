@@ -1,5 +1,5 @@
 import type { ComponentDataProps } from "$lib/components/ui/component-data";
-import type { CourseId } from "../courses/healpers";
+import type { CourseIds } from "../courses/healpers";
 
 export interface ProgramProps {
     id: string;
@@ -8,9 +8,9 @@ export interface ProgramProps {
     rawDescription?: string;
     image?: string;
     hidden?: boolean;
-    courses: CourseId[];
-    coursesHighlighted: CourseId[];
-    coursesRoadmap: CourseId[];
+    courses: CourseIds[];
+    coursesHighlighted: CourseIds[];
+    coursesRoadmap: CourseIds[];
     targets: string[];
     components: ComponentDataProps[];
 }

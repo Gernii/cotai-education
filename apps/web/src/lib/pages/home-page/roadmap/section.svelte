@@ -12,7 +12,7 @@
     import CourseCard from "./course-card.svelte";
 
     import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
-    import { coursesObject } from "$lib/datas/courses/healpers";
+    import { coursesMap } from "$lib/datas/courses/healpers";
 
     let roadmapProgram = dataProgramPublicTraining();
 
@@ -38,11 +38,14 @@
             </div>
             <ul class="w-full">
                 {#each courseIds as courseId, idx}
-                    <CourseCard
-                        {...coursesObject[courseId]()}
-                        {idx}
-                        last={idx + 1 === courseId.length}
-                    />
+                    {@const course = coursesMap.get(courseId)}
+                    {#if course}
+                        <CourseCard
+                            {...course()}
+                            {idx}
+                            last={idx + 1 === courseId.length}
+                        />
+                    {/if}
                 {/each}
             </ul>
         </ContainerContent>

@@ -6,10 +6,13 @@
     import HeroiconsChevronDown from "~icons/heroicons/chevron-down";
     import { TextContent } from "$lib/features/text-content";
 
-    type $$Props = CurriculumProps;
+    interface $$Props extends CurriculumProps {
+        highlight?: boolean;
+    }
 
     export let title: $$Props["title"] = undefined;
     export let details: $$Props["details"] = undefined;
+    export let highlight: $$Props["highlight"] = undefined;
 
     let isContentOpen = true;
 
@@ -17,7 +20,7 @@
         isContentOpen = !isContentOpen;
     };
 
-    $: isContentEnabled = details && !details.hidden;
+    $: isContentEnabled = (details && !details.hidden) || $$slots.default;
 </script>
 
 <li
@@ -29,7 +32,7 @@
     <div
         class="collapse-title flex items-center justify-between bg-base-100 pe-4 text-xl font-medium"
     >
-        <span>{title}</span>
+        <span class:text-primary={highlight}>{title}</span>
         {#if isContentEnabled}
             <button
                 class="btn btn-square btn-ghost btn-sm"
@@ -39,10 +42,14 @@
             </button>
         {/if}
     </div>
-    {#if details && isContentEnabled}
+    {#if isContentEnabled}
         <div class="collapse-content bg-base-200">
-            <div class="pt-2">
-                <TextContent text={details.content} />
+            <div class="pt-4">
+                {#if $$slots.default}
+                    <slot />
+                {:else if details}
+                    <TextContent text={details.content} />
+                {/if}
             </div>
         </div>
     {/if}

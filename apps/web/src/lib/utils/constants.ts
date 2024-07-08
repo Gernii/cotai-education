@@ -1,4 +1,5 @@
 import { PUBLIC_LOGS_URL, PUBLIC_POSTHOG_TOKEN } from "$env/static/public";
+import type { CourseIds } from "$lib/datas/courses/healpers";
 
 export const defaultImage = "/images/logo/CoTAI-Ver0-320.png";
 
@@ -35,7 +36,7 @@ export const routerPath = {
         dashboard: "/admin",
         courses: "/admin/courses",
     },
-
+    courseId: (id: string | CourseIds) => `/courses/${id}`,
     // cars: {
     // 	cars: '/cars',
     // 	carDetails: (id: string) => `cars/${id}`

@@ -78,6 +78,9 @@ importers:
       '@melt-ui/svelte':
         specifier: ^0.81.0
         version: 0.81.0(svelte@4.2.18)
+      '@neoconfetti/svelte':
+        specifier: ^2.2.1
+        version: 2.2.1
       '@playwright/test':
         specifier: ^1.44.1
         version: 1.45.1
@@ -968,6 +971,9 @@ packages:
     resolution: {integrity: sha512-QWVy+kVp8CZ+ph4W780PI6rPBa3MJIUFH/E1EHYfI05QloOGVBXtrI9MlzQSIrGYtGgSGQoTbh8cPO+YtkNAwg==}
     peerDependencies:
       svelte: ^3.0.0 || ^4.0.0 || ^5.0.0-next.118
+
+  '@neoconfetti/svelte@2.2.1':
+    resolution: {integrity: sha512-2Ts0Rxaf6clW2qG+AKhTwpl01AAyZEAe03XeuQ7Vp+qYIaM3ycuI94j546fmEkUxwACwGI3Zl2cZ/pncTuNcJg==}
 
   '@nodelib/fs.scandir@2.1.5':
     resolution: {integrity: sha512-vq24Bq3ym5HEQm2NKCr3yXDwjc7vTsEThRDnkp2DK9p1uqLR+DHurm/NOTo0KG7HYHU7eppKZj3MyqYuMBf62g==}
@@ -4826,6 +4832,8 @@ snapshots:
       focus-trap: 7.5.4
       nanoid: 5.0.7
       svelte: 4.2.18
+
+  '@neoconfetti/svelte@2.2.1': {}
 
   '@nodelib/fs.scandir@2.1.5':
     dependencies:

@@ -8,6 +8,7 @@
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
+    import { routerPath } from "$lib/utils/constants";
 
     import * as m from "$i18n/messages";
 
@@ -17,7 +18,7 @@
     import HeroiconsClock from "~icons/heroicons/clock";
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
     import { TextContent } from "$lib/features/text-content";
-    import type { CourseId } from "$lib/datas/courses/healpers";
+    import type { CourseIds } from "$lib/datas/courses/healpers";
     import { courseStudyType } from "$lib/datas/courses/constants";
     import LucideMonitorPlay from "~icons/lucide/monitor-play";
     interface $$Props extends CourseProps {
@@ -33,12 +34,13 @@
     export let last: $$Props["last"];
     export let studyTypes: $$Props["studyTypes"] = [];
 
-
     let isInview = writable(false);
 
     $: totalSessions = curriculum.filter((c) => c.classesCountable).length;
 
-    $: courseThumbnail = coursesThumbnail(id as CourseId);
+    $: courseThumbnail = coursesThumbnail(id as CourseIds);
+
+    $: courseUrl = routerPath.courseId(id);
 </script>
 
 {#if title}
@@ -124,7 +126,7 @@
                             <TextContent text={description} />
                         </div>
                         <div class="card-actions">
-                            <a href={`/courses/${id}`} class="btn btn-primary">
+                            <a href={courseUrl} class="btn btn-primary">
                                 {m.showDetails()}
                                 <HeroiconsChevronRight16Solid
                                     class="size-4 stroke-2"

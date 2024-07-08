@@ -1,9 +1,13 @@
 import type { CourseProps } from "./types";
+import CertBack from "$lib/assets/images/certs/cert-back.png?imagetools";
+import { CourseIds } from "./healpers";
 
 export const dataCourseMC4AI = (): CourseProps => ({
-    id: "mc4ai",
+    id: CourseIds.mc4ai,
     title: "Math & coding for AI",
     studyTypes: ["online", "offline", "selfPaced"],
+    certs: [CertBack, CertBack, CertBack],
+    nextCourseId: CourseIds.ml4ai,
 
     registerUrl: "https://go.cot.ai/091023",
 
