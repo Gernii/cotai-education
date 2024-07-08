@@ -5,7 +5,7 @@ import type { ProgramDetailsPageDataProps } from "$lib/pages/program-details/typ
 import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
 import type { ProgramResponseProps } from "$lib/utils/types/data.deprecated";
 import { programMappingData } from "$lib/utils/data-mapping.server";
-import { fetcherCourses } from "$lib/utils/fetcher/courses.js";
+import { fetcherCourses } from "$lib/utils/fetcher/courses";
 
 export const load = async ({ fetch, params }): Promise<ProgramDetailsPageDataProps> => {
     const programId = params.program_id;
