@@ -11,6 +11,7 @@
 
     import { RegisterGuide } from "$lib/features/register-guide";
     import { RegisterForm } from "$lib/features/register-form";
+    import { Reviews } from "$lib/features/reviews";
 </script>
 
 <Hero />
@@ -21,6 +22,7 @@
 <Curriculum />
 <NextCourse />
 <OtherCourses />
+<Reviews />
 <FAQ />
 <RegisterGuide />
 <RegisterForm />
