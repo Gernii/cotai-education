@@ -15,6 +15,19 @@ export const dataCourseMC4AI = (): CourseProps => ({
     programId: ProgramIds.public_training,
 
     registerUrl: "https://go.cot.ai/091023",
+    faqs: [
+        {
+            title: "Làm sao để đăng ký học?",
+            content:
+                "Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)",
+        },
+        {
+            title: "Làm sao để đăng ký học?",
+            content: `- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
+- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
+- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)`,
+        },
+    ],
 
     experienceRequirement: ["Đã hoàn thành khoá PythonAI"],
     whoShouldJoin: [

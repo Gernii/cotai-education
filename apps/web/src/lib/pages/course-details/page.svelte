@@ -7,6 +7,7 @@
     import { LearningOutcomes } from "./learning-outcomes";
     import { NextCourse } from "./next-course";
     import { OtherCourses } from "./other-courses";
+    import { FAQ } from "./fag";
 
     import { RegisterGuide } from "$lib/features/register-guide";
     import { RegisterForm } from "$lib/features/register-form";
@@ -20,5 +21,6 @@
 <Curriculum />
 <NextCourse />
 <OtherCourses />
+<FAQ />
 <RegisterGuide />
 <RegisterForm />

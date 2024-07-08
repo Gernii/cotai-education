@@ -27,6 +27,12 @@ export interface CourseProps {
     totalLessons?: number;
     programId?: ProgramIds;
     certs?: (ImgMeta | ImgMeta[])[];
+    faqs?: FAQProps[];
+}
+
+export interface FAQProps {
+    title?: string;
+    content?: string;
 }
 
 export type CourseStudyType = keyof typeof courseStudyType;

@@ -11,6 +11,8 @@ import { RateLimiter } from "$lib/libs/sveltekit-rate-limiter";
 import type { CourseIds } from "$lib/datas/courses/constants";
 import { coursesMap } from "$lib/datas/courses/healpers";
 import { programsMap } from "$lib/datas/programs/healpers";
+import type { CourseProps } from "$lib/datas/courses/types";
+import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server.js";
 
 export const load = async ({ fetch, params }) => {
     const courseId = params.course_id as CourseIds;
@@ -60,7 +62,13 @@ export const load = async ({ fetch, params }) => {
         ...courseMappingData(courseDeprecated),
         id: courseDeprecated.id,
         registerForm,
-        course,
+        course: {
+            ...course,
+            faqs: course.faqs?.map((faq) => ({
+                title: faq.title,
+                content: faq.content ? parseMarkdownToHTML(faq.content) : undefined,
+            })),
+        } satisfies CourseProps,
         nextCourseTitle,
         programCourses,
     };
