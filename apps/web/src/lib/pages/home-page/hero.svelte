@@ -13,7 +13,7 @@
     import LucideGraduationCap from "~icons/lucide/graduation-cap";
     import TeenyiconsDiscountSolid from "~icons/teenyicons/discount-solid";
     import HeroiconsCheck16Solid from "~icons/heroicons/check-16-solid";
-    import { CourseIds } from "$lib/datas/courses/healpers";
+    import { CourseIds } from "$lib/datas/courses/constants";
 
     let isDiscountVisible = false;
 </script>

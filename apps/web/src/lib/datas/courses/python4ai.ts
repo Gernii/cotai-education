@@ -1,14 +1,17 @@
 import type { CourseProps } from "./types";
 import CertBack from "$lib/assets/images/certs/cert-back.png?imagetools";
-import { CourseIds } from "./healpers";
+import { CourseIds } from "./constants";
+import { ProgramIds } from "../programs/constants";
 
 export const dataCoursePython4AI = (): CourseProps => ({
     id: CourseIds.python4ai,
     title: "Python for AI",
+    shortTitle: "Python4AI",
     studyTypes: ["online", "offline", "selfPaced"],
     registerUrl: "https://go.cot.ai/091023",
-    certs: [CertBack, CertBack, CertBack],
     nextCourseId: CourseIds.mc4ai,
+    programId: ProgramIds.public_training,
+    certs: [CertBack, CertBack, CertBack],
 
     whoShouldJoin: [
         "Học sinh THPT & sinh viên các ngành muốn làm lập trình viên AI hoặc xin học bổng du học & nghiên cứu (được viết thư giới thiệu.)",

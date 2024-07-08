@@ -3,7 +3,7 @@
     import { Curriculum } from "./curriculum";
     import { ExperienceRequirement } from "./experience-requirement";
     import { WhoShouldJoin } from "./who-should-join";
-    import Hero from "./hero.svelte";
+    import { Hero } from "./hero";
     import { LearningOutcomes } from "./learning-outcomes";
     import { NextCourse } from "./next-course";
 

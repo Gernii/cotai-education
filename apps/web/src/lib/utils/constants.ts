@@ -1,5 +1,5 @@
 import { PUBLIC_LOGS_URL, PUBLIC_POSTHOG_TOKEN } from "$env/static/public";
-import type { CourseIds } from "$lib/datas/courses/healpers";
+import type { CourseIds } from "$lib/datas/courses/constants";
 
 export const defaultImage = "/images/logo/CoTAI-Ver0-320.png";
 

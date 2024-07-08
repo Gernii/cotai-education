@@ -9,7 +9,9 @@
 
     import * as m from "$i18n/messages";
 
-    import type { CourseDetailsPageDataProps } from "./types";
+    import type { CourseDetailsPageDataProps } from "../types";
+
+    import Roadmap from "./roadmap.svelte";
 
     import HeroiconsClock from "~icons/heroicons/clock";
     import { TextContent } from "$lib/features/text-content";
@@ -22,8 +24,10 @@
     );
 </script>
 
-<div class="mb-16">
-    <ContainerContent class="h-full pt-header-space-sm lg:pt-header-space">
+<section class="mb-16">
+    <ContainerContent
+        class="h-full space-y-16 pt-header-space-sm lg:pt-header-space"
+    >
         <div class="grid grid-cols-1 gap-x-32 gap-y-16 pt-16 lg:grid-cols-5">
             <div class="col-span-1 space-y-4 lg:col-span-3">
                 <div>
@@ -77,5 +81,6 @@
                 </div>
             </div>
         </div>
+        <Roadmap />
     </ContainerContent>
-</div>
+</section>

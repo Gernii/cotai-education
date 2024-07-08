@@ -1,12 +1,17 @@
 import type { CourseProps } from "./types";
 import CertBack from "$lib/assets/images/certs/cert-back.png?imagetools";
-import { CourseIds } from "./healpers";
+import { CourseIds } from "./constants";
+import { ProgramIds } from "../programs/constants";
 
 export const dataCourseDL4AI = (): CourseProps => ({
     id: CourseIds.dl4ai,
     title: "Deep learning for AI",
+    shortTitle: "DL4AI",
+
     studyTypes: ["online", "offline", "selfPaced"],
     certs: [CertBack, CertBack, CertBack],
+
+    programId: ProgramIds.public_training,
 
     registerUrl: "https://go.cot.ai/091023",
 

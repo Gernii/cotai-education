@@ -1,15 +1,9 @@
-import { dataCourseDL4AI } from "./DL4AI";
-import { dataCourseMC4AI } from "./MC4AI";
-import { dataCourseML4AI } from "./ML4AI";
-import { dataCoursePython4AI } from "./Python4AI";
+import { CourseIds } from "./constants";
+import { dataCourseDL4AI } from "./dl4ai";
+import { dataCourseMC4AI } from "./mc4ai";
+import { dataCourseML4AI } from "./ml4ai";
+import { dataCoursePython4AI } from "./python4ai";
 import type { CourseProps } from "./types";
-
-export enum CourseIds {
-    python4ai = "python4ai",
-    mc4ai = "mc4ai",
-    ml4ai = "ml4ai",
-    dl4ai = "dl4ai",
-}
 
 export const coursesMap = new Map<CourseIds, () => CourseProps>([
     [CourseIds.python4ai, dataCoursePython4AI],

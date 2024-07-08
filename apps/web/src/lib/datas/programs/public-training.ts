@@ -1,4 +1,4 @@
-import { CourseIds } from "../courses/healpers";
+import { CourseIds } from "../courses/constants";
 import type { ProgramProps } from "./types";
 
 export const dataProgramPublicTraining = (): ProgramProps => ({
