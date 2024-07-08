@@ -5,7 +5,7 @@ import CourseThumbnailDeepLearingPicture from "$lib/assets/images/course-thumbna
 import CourseThumbnailMachineLearingPicture from "$lib/assets/images/course-thumbnail-machine-learing.jpg?imagetools";
 
 import { coursesIdDeprecated, type CourseIdDeprecated } from "./constants";
-import { CourseIds } from "$lib/datas/courses/healpers";
+import { CourseIds } from "$lib/datas/courses/constants";
 
 export const coursesThumbnailDeprecated = (id: CourseIdDeprecated) => {
     const thumbnails = new Map<string, ImgMeta[] | ImgMeta>([

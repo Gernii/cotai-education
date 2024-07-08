@@ -1,13 +1,15 @@
 import type { ComponentDataProps } from "$lib/components/ui/component-data";
 
 import type { SkillTypes } from "$lib/features/skill-icons/constant";
+import type { ProgramIds } from "../programs/constants";
 import type { courseStudyType } from "./constants";
-import type { CourseIds } from "./healpers";
+import type { CourseIds } from "./constants";
 
 export interface CourseProps {
     studyTypes: CourseStudyType[];
     id: CourseIds;
     title?: string;
+    shortTitle?: string;
     price?: number;
     registerUrl?: string;
     embed?: string;
@@ -22,6 +24,7 @@ export interface CourseProps {
     curriculum: CurriculumProps[];
     components: ComponentDataProps[];
     totalLessons?: number;
+    programId?: ProgramIds;
     certs?: (ImgMeta | ImgMeta[])[];
 }
 

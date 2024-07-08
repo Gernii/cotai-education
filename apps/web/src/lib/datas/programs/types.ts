@@ -1,5 +1,5 @@
 import type { ComponentDataProps } from "$lib/components/ui/component-data";
-import type { CourseIds } from "../courses/healpers";
+import type { CourseIds } from "../courses/constants";
 
 export interface ProgramProps {
     id: string;

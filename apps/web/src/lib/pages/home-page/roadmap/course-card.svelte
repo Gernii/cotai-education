@@ -18,7 +18,7 @@
     import HeroiconsClock from "~icons/heroicons/clock";
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
     import { TextContent } from "$lib/features/text-content";
-    import type { CourseIds } from "$lib/datas/courses/healpers";
+    import type { CourseIds } from "$lib/datas/courses/constants";
     import { courseStudyType } from "$lib/datas/courses/constants";
     import LucideMonitorPlay from "~icons/lucide/monitor-play";
     interface $$Props extends CourseProps {

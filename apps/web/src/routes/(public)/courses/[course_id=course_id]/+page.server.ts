@@ -8,7 +8,9 @@ import {
     loadValidatorRegisterForm,
 } from "$lib/features/register-form/handler.server";
 import { RateLimiter } from "$lib/libs/sveltekit-rate-limiter";
-import { type CourseIds, coursesMap } from "$lib/datas/courses/healpers.js";
+import type { CourseIds } from "$lib/datas/courses/constants";
+import { coursesMap } from "$lib/datas/courses/healpers";
+import { programsMap } from "$lib/datas/programs/healpers.js";
 
 export const load = async ({ fetch, params }) => {
     const courseId = params.course_id as CourseIds;
@@ -32,6 +34,15 @@ export const load = async ({ fetch, params }) => {
         }
     }
 
+    let programCourses: undefined | CourseIds[] = undefined;
+    if (course.programId) {
+        const programGetter = programsMap.get(course.programId);
+        if (programGetter) {
+            const program = programGetter();
+            programCourses = program.courses;
+        }
+    }
+
     const courseDeprecated = await fetcherStaticData<CourseResponseProps>({
         id: courseId,
         path: "courses",
@@ -51,6 +62,7 @@ export const load = async ({ fetch, params }) => {
         registerForm,
         course,
         nextCourseTitle,
+        programCourses,
     };
 };
 
