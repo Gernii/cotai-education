@@ -13,6 +13,7 @@
     import { RegisterForm } from "$lib/features/register-form";
     import { Reviews } from "$lib/features/reviews";
     import { TeachersBio } from "$lib/features/teachers-bio";
+    import { RegisterEnd } from "$lib/features/register-end";
 </script>
 
 <Hero />
@@ -28,3 +29,4 @@
 <FAQ />
 <RegisterGuide />
 <RegisterForm />
+<RegisterEnd />
