@@ -3,10 +3,10 @@ import CertBack from "$lib/assets/images/certs/cert-back.png?imagetools";
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
 
-export const dataCourseDL4AI = (): CourseProps => ({
-    id: CourseIds.dl4ai,
-    title: "Deep learning for AI",
-    shortTitle: "DL4AI",
+export const dataCourseDL4NLP = (): CourseProps => ({
+    id: CourseIds.dl4nlp,
+    title: "Deep Learning for Natural Language Processing",
+    shortTitle: "DL4NLP",
 
     studyTypes: ["online", "offline", "selfPaced"],
     certs: [CertBack, CertBack, CertBack],

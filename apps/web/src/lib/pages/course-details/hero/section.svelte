@@ -11,13 +11,19 @@
 
     import type { CourseDetailsPageDataProps } from "../types";
 
-    import Roadmap from "./roadmap.svelte";
+    import { roadmapParser } from "./roadmap-parser";
 
     import HeroiconsClock from "~icons/heroicons/clock";
     import { TextContent } from "$lib/features/text-content";
     import { SkillsList } from "$lib/features/skill-icons";
+    import { HeroRoadMap } from "$lib/features/hero-roadmap";
+    import type { CourseProps } from "$lib/datas/courses/types";
+
+    let roadmapProgram = roadmapParser();
 
     $: pd = $page.data as CourseDetailsPageDataProps;
+
+    $: course = $page.data.course as CourseProps;
 
     $: courseThumbnail = coursesThumbnailDeprecated(
         pd.id as CourseIdDeprecated,
@@ -81,6 +87,10 @@
                 </div>
             </div>
         </div>
-        <Roadmap />
+        <HeroRoadMap
+            isNavigate
+            courses={roadmapProgram}
+            currentCourse={course.id}
+        />
     </ContainerContent>
 </section>

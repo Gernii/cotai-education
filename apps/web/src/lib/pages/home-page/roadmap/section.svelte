@@ -14,7 +14,7 @@
     import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
     import { coursesMap } from "$lib/datas/courses/healpers";
 
-    let roadmapProgram = dataProgramPublicTraining();
+    let roadmapProgram = dataProgramPublicTraining;
 
     $: courseIds = roadmapProgram.coursesRoadmap;
 

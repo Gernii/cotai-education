@@ -1,15 +1,26 @@
 <script lang="ts">
-    import { page } from "$app/stores";
+    import { cx } from "cva";
 
     import * as m from "$i18n/messages";
 
     import RoadMapItem from "./road-map-item.svelte";
+    import type { HeroRoadmapCourse } from "./types";
+    import { reorganizeCourses } from "./re-organize-courses";
 
-    import type { CourseProps } from "$lib/datas/courses/types";
-    import { CourseIds } from "$lib/datas/courses/constants";
     import LucideArrowBigRight from "~icons/lucide/arrow-big-right";
+    import type { CourseIds } from "$lib/datas/courses/constants";
 
-    $: course = $page.data.course as CourseProps;
+    interface $$Props {
+        courses: HeroRoadmapCourse[];
+        isNavigate?: boolean;
+        currentCourse?: CourseIds;
+    }
+
+    export let courses: $$Props["courses"];
+    export let isNavigate: $$Props["isNavigate"] = undefined;
+    export let currentCourse: $$Props["currentCourse"] = undefined;
+
+    $: courseArray = reorganizeCourses(courses);
 </script>
 
 <div class="space-y-2">
@@ -50,10 +61,69 @@ C323.057,236.728,319.385,233.668,315.713,233.668z"
     </div>
 
     <div class="card bg-base-100">
+        <div class="hidden gap-x-1 px-6 py-4 lg:flex">
+            {#each courses as course, idx}
+                {@const isCourseLast = idx === courses.length - 1}
+                <div class="w-full flex-grow">
+                    <RoadMapItem
+                        title={course.title}
+                        id={course.id}
+                        shortTitle={course.shortTitle}
+                        {isNavigate}
+                        {currentCourse}
+                    />
+                </div>
+                {#if !isCourseLast}
+                    <div class="flex items-center">
+                        <LucideArrowBigRight
+                            class="size-6 flex-shrink-0 sm:size-6"
+                        />
+                    </div>
+                {/if}
+            {/each}
+        </div>
         <div
-            class="flex flex-col items-center justify-between gap-x-1 gap-y-2 px-3 py-2 sm:gap-x-4 lg:flex-row lg:px-6 lg:py-4"
+            class="flex flex-col items-center justify-between gap-x-1 gap-y-2 px-3 py-2 sm:gap-x-4 lg:hidden lg:px-6 lg:py-4"
         >
-            <div
+            {#each courseArray as courses, coursesIdx}
+                {@const isCoursesLast = coursesIdx === courseArray.length - 1}
+                <div
+                    class={cx(
+                        "relative flex w-full flex-grow gap-x-1 sm:gap-x-4",
+                        {
+                            "justify-between": !isCoursesLast,
+                            "justify-center": isCoursesLast,
+                        },
+                    )}
+                >
+                    {#each courses as course, idx}
+                        {@const isCourseLast = idx === courses.length - 1}
+
+                        <div
+                            class={cx({
+                                "w-1/2": !isCoursesLast,
+                                "min-w-[50%]": isCoursesLast,
+                            })}
+                        >
+                            <RoadMapItem
+                                title={course.title}
+                                id={course.id}
+                                shortTitle={course.shortTitle}
+                                {isNavigate}
+                                {currentCourse}
+                            />
+                        </div>
+                        {#if !isCourseLast}
+                            <div class="flex items-center">
+                                <LucideArrowBigRight
+                                    class="size-6 flex-shrink-0 sm:size-6"
+                                />
+                            </div>
+                        {/if}
+                    {/each}
+                </div>
+            {/each}
+            <!-- <div
                 class="relative flex w-full flex-grow items-center justify-between gap-x-1 sm:gap-x-4"
             >
                 <RoadMapItem
@@ -82,7 +152,7 @@ C323.057,236.728,319.385,233.668,315.713,233.668z"
                     active={course.id === CourseIds.dl4ai}
                     title="DL4AI"
                 />
-            </div>
+            </div> -->
         </div>
     </div>
 </div>

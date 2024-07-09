@@ -22,10 +22,11 @@ export const coursesThumbnailDeprecated = (id: CourseIdDeprecated) => {
 
 export const coursesThumbnail = (id: CourseIds) => {
     const thumbnails = new Map<string, ImgMeta[] | ImgMeta>([
-        [CourseIds.python4ai, CourseThumbnailPythonAIPicture],
+        [CourseIds.pythonai, CourseThumbnailPythonAIPicture],
         [CourseIds.mc4ai, CourseThumbnailMathCodeAIPicture],
         [CourseIds.ml4ai, CourseThumbnailMachineLearingPicture],
-        [CourseIds.dl4ai, CourseThumbnailDeepLearingPicture],
+        [CourseIds.dl4cv, CourseThumbnailDeepLearingPicture],
+        [CourseIds.dl4nlp, CourseThumbnailDeepLearingPicture],
     ]);
 
     const img = thumbnails.get(id) ?? CourseThumbnailDefaultPicture;
