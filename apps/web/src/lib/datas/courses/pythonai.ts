@@ -3,10 +3,10 @@ import CertBack from "$lib/assets/images/certs/cert-back.png?imagetools";
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
 
-export const dataCoursePython4AI = (): CourseProps => ({
-    id: CourseIds.python4ai,
-    title: "Python for AI",
-    shortTitle: "Python4AI",
+export const dataCoursePythonAI = (): CourseProps => ({
+    id: CourseIds.pythonai,
+    title: "Python Coding with AI",
+    shortTitle: "PythonAI",
     studyTypes: ["online", "offline", "selfPaced"],
     registerUrl: "https://go.cot.ai/091023",
     nextCourseId: CourseIds.mc4ai,

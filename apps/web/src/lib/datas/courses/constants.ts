@@ -5,8 +5,10 @@ export const courseStudyType = {
 };
 
 export enum CourseIds {
-    python4ai = "python4ai",
+    pythonai = "pythonai",
     mc4ai = "mc4ai",
     ml4ai = "ml4ai",
     dl4ai = "dl4ai",
+    dl4cv = "dl4cv",
+    dl4nlp = "dl4nlp",
 }

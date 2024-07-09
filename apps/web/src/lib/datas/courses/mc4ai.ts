@@ -5,7 +5,7 @@ import { ProgramIds } from "../programs/constants";
 
 export const dataCourseMC4AI = (): CourseProps => ({
     id: CourseIds.mc4ai,
-    title: "Math & coding for AI",
+    title: "Math Coding for AI",
     shortTitle: "MC4AI",
 
     studyTypes: ["online", "offline", "selfPaced"],

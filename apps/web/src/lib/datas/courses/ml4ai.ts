@@ -5,7 +5,7 @@ import { ProgramIds } from "../programs/constants";
 
 export const dataCourseML4AI = (): CourseProps => ({
     id: CourseIds.ml4ai,
-    title: "Machine learning for AI",
+    title: "Machine Learning for AI",
     shortTitle: "ML4AI",
     studyTypes: ["online", "offline", "selfPaced"],
     certs: [CertBack, CertBack, CertBack],
