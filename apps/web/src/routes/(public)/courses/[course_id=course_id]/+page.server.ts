@@ -13,6 +13,7 @@ import { coursesMap } from "$lib/datas/courses/healpers";
 import { programsMap } from "$lib/datas/programs/healpers";
 import type { CourseProps } from "$lib/datas/courses/types";
 import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server.js";
+import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server.js";
 
 export const load = async ({ fetch, params }) => {
     const courseId = params.course_id as CourseIds;
@@ -58,6 +59,8 @@ export const load = async ({ fetch, params }) => {
     }
     const registerForm = await loadValidatorRegisterForm();
 
+    const teachersBio = dataTeachersBio();
+
     return {
         ...courseMappingData(courseDeprecated),
         id: courseDeprecated.id,
@@ -71,6 +74,7 @@ export const load = async ({ fetch, params }) => {
         } satisfies CourseProps,
         nextCourseTitle,
         programCourses,
+        teachersBio,
     };
 };
 
