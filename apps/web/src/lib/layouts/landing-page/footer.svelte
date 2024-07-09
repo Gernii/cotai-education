@@ -4,6 +4,8 @@
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import { Picture } from "$lib/components/ui/picture";
 
+    import { scrollRef } from "$lib/libs/svelte-scrolling";
+
     import * as m from "$i18n/messages";
 
     import LucideYoutube from "~icons/lucide/youtube";
@@ -11,7 +13,10 @@
     import LucideLinkedin from "~icons/lucide/linkedin";
 </script>
 
-<footer class="border-t border-base-content/5 bg-base-200 py-2" id="contact">
+<footer
+    class="border-t border-base-content/5 bg-base-200 py-2"
+    use:scrollRef={"contact"}
+>
     <Container padding="top">
         <ContainerContent class="space-y-10 text-center lg:text-start">
             <div

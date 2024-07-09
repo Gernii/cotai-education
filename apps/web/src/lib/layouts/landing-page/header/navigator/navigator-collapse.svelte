@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { cx } from "cva";
+    import NavigatorCollapseSidenav from "./navigator-collapse-sidenav.svelte";
 
     import HeroiconsChevronDown16Solid from "~icons/heroicons/chevron-down-16-solid";
 
@@ -10,31 +10,12 @@
 
     export let title: $$Props["title"];
     export let sidenav: $$Props["sidenav"] = undefined;
-
-    let isActive = false;
-
-    const onActiveToggle = () => {
-        isActive = !isActive;
-    };
 </script>
 
 {#if sidenav}
-    <div
-        class={cx("collapse rounded-btn", {
-            "collapse-open": isActive,
-        })}
-    >
-        <button
-            class="btn btn-ghost w-full flex-nowrap justify-between"
-            on:click={onActiveToggle}
-        >
-            <span class="whitespace-nowrap">{title}</span>
-            <HeroiconsChevronDown16Solid class="size-4" />
-        </button>
-        <div class="collapse-content">
-            <slot />
-        </div>
-    </div>
+    <NavigatorCollapseSidenav {title}>
+        <slot />
+    </NavigatorCollapseSidenav>
 {:else}
     <div class="dropdown dropdown-hover">
         <div
