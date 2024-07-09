@@ -39,9 +39,8 @@ export const load = async ({ fetch, params }) => {
 
     let programCourses: undefined | CourseIds[] = undefined;
     if (course.programId) {
-        const programGetter = programsMap.get(course.programId);
-        if (programGetter) {
-            const program = programGetter();
+        const program = programsMap.get(course.programId);
+        if (program) {
             programCourses = program.courses;
         }
     }

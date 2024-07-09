@@ -6,6 +6,7 @@
     import { Picture } from "$lib/components/ui/picture";
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
+    import { scrollRef } from "$lib/libs/svelte-scrolling";
 
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
     import { routerPath } from "$lib/utils/constants";
@@ -45,7 +46,7 @@
 
 {#if title}
     <li
-        {id}
+        use:scrollRef={id}
         class="flex gap-x-1 sm:gap-x-4"
         use:inview={inviewCommonOptions}
         on:inview_enter={onInViewEnter(isInview)}
@@ -90,7 +91,7 @@
                             </p>
                             <h1 class="text-xl font-bold">
                                 <a
-                                    href={`/courses/${id}`}
+                                    href={courseUrl}
                                     class="link-hover link hover:text-primary"
                                 >
                                     {title}
