@@ -10,7 +10,6 @@ export const coursesMap = new Map<CourseIds, () => CourseProps>([
     [CourseIds.pythonai, dataCoursePythonAI],
     [CourseIds.mc4ai, dataCourseMC4AI],
     [CourseIds.ml4ai, dataCourseML4AI],
-    [CourseIds.dl4ai, dataCourseDL4CV],
     [CourseIds.dl4cv, dataCourseDL4CV],
     [CourseIds.dl4nlp, dataCourseDL4NLP],
 ]);

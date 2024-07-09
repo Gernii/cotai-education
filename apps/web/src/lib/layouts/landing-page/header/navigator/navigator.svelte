@@ -3,10 +3,8 @@
 
     import { cx } from "cva";
 
-    import {
-        routingPathAboutUs,
-        routingPathProgramsId,
-    } from "$lib/utils/routing-path";
+    import { routingPathAboutUs } from "$lib/utils/routing-path";
+    import { routerPath } from "$lib/utils/constants";
 
     import * as m from "$i18n/messages";
 
@@ -16,7 +14,9 @@
     import NavigatorItem from "./navigator-item.svelte";
     import NavigatorCollapse from "./navigator-collapse.svelte";
 
+    import LucideGem from "~icons/lucide/gem";
     import HeroiconsXMark from "~icons/heroicons/x-mark";
+    import { coursesMap } from "$lib/datas/courses/healpers";
     interface $$Props {
         sidenav?: boolean;
     }
@@ -52,23 +52,6 @@
             "flex-col p-4": sidenav,
         })}
     >
-        {#if programs.length > 0}
-            <NavigatorCollapse title={m.ourPrograms()} {sidenav}>
-                <ul class="menu w-full">
-                    {#each programs as program}
-                        <li>
-                            <a
-                                href={routingPathProgramsId(program.id)}
-                                class="w-full whitespace-nowrap"
-                            >
-                                {program.title}
-                            </a>
-                        </li>
-                    {/each}
-                </ul>
-            </NavigatorCollapse>
-        {/if}
-
         <NavigatorItem
             href={routingPathAboutUs()}
             target="_self"
@@ -76,10 +59,27 @@
         >
             {m.aboutUs()}
         </NavigatorItem>
-
-        <NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
-            {m.contact()}
-        </NavigatorItem>
+        {#if programs.length > 0}
+            <NavigatorCollapse title={m.ourPrograms()} {sidenav}>
+                <ul class="menu w-full">
+                    {#each coursesMap as [id, courseGetter]}
+                        {#if courseGetter}
+                            {@const course = courseGetter()}
+                            <li>
+                                <a
+                                    href={routerPath.courseId(id)}
+                                    class={cx("w-full", {
+                                        "whitespace-nowrap": !sidenav,
+                                    })}
+                                >
+                                    {course.title}
+                                </a>
+                            </li>
+                        {/if}
+                    {/each}
+                </ul>
+            </NavigatorCollapse>
+        {/if}
 
         <NavigatorItem
             href="https://gem.cot.ai/"
@@ -88,7 +88,18 @@
             class="text-orange-500 hover:text-orange-600"
             target="_blank"
         >
+            {#if !sidenav}
+                <LucideGem />
+            {/if}
             {m.gemCollection()}
+
+            {#if sidenav}
+                <LucideGem />
+            {/if}
+        </NavigatorItem>
+
+        <NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
+            {m.contact()}
         </NavigatorItem>
     </nav>
     {#if sidenav}
