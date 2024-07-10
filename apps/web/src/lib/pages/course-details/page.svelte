@@ -7,7 +7,6 @@
     import { WhoShouldJoin } from "./who-should-join";
     import { Hero } from "./hero";
     import { LearningOutcomes } from "./learning-outcomes";
-    import { NextCourse } from "./next-course";
     import { OtherCourses } from "./other-courses";
     import { FAQ } from "./fag";
 
@@ -28,13 +27,16 @@
 <LearningOutcomes />
 <Components />
 <Curriculum />
-<NextCourse />
+
 <StudentProjects projects={studentProjects} />
 
 <OtherCourses />
+
 <Reviews />
 <TeachersBio />
+
 <FAQ />
+
 <RegisterGuide />
 <RegisterForm />
 <RegisterEnd />
