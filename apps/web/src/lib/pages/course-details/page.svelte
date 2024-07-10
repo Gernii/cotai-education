@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { page } from "$app/stores";
+
     import Components from "./components.svelte";
     import { Curriculum } from "./curriculum";
     import { ExperienceRequirement } from "./experience-requirement";
@@ -14,6 +16,10 @@
     import { Reviews } from "$lib/features/reviews";
     import { TeachersBio } from "$lib/features/teachers-bio";
     import { RegisterEnd } from "$lib/features/register-end";
+    import type { StudentProjectProps } from "$lib/datas/student-projects/types";
+    import { StudentProjects } from "$lib/features/student-projects";
+
+    $: studentProjects = $page.data.studentProjects as StudentProjectProps[];
 </script>
 
 <Hero />
@@ -23,6 +29,8 @@
 <Components />
 <Curriculum />
 <NextCourse />
+<StudentProjects projects={studentProjects} />
+
 <OtherCourses />
 <Reviews />
 <TeachersBio />

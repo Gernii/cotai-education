@@ -3,7 +3,7 @@ import NgoQuocHungAvatar from "$lib/assets/profiles/ngo-quoc-hung.jpg?imagetools
 import LeNguyenThanhHuyAvatar from "$lib/assets/profiles/le-nguyen-thanh-huy.jpg?imagetools";
 import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
 
-export const dataTeachersBio = (): TeacherBioProps[] => [
+export const dataTeachersBio: TeacherBioProps[] = [
     {
         role: "Giám đốc Học vấn",
         avatar: NgoQuocHungAvatar,

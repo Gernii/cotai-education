@@ -14,6 +14,7 @@ import { programsMap } from "$lib/datas/programs/healpers";
 import type { CourseProps } from "$lib/datas/courses/types";
 import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server.js";
 import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server.js";
+import { dataStudentProjects } from "$lib/datas/student-projects/student-projects.server.js";
 
 export const load = async ({ fetch, params }) => {
     const courseId = params.course_id as CourseIds;
@@ -58,7 +59,9 @@ export const load = async ({ fetch, params }) => {
     }
     const registerForm = await loadValidatorRegisterForm();
 
-    const teachersBio = dataTeachersBio();
+    const teachersBio = dataTeachersBio;
+
+    const studentProjects = dataStudentProjects;
 
     return {
         ...courseMappingData(courseDeprecated),
@@ -74,6 +77,7 @@ export const load = async ({ fetch, params }) => {
         nextCourseTitle,
         programCourses,
         teachersBio,
+        studentProjects,
     };
 };
 

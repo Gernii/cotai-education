@@ -20,11 +20,6 @@
     export let shortTitle: $$Props["shortTitle"] = undefined;
     export let isNavigate: $$Props["isNavigate"] = undefined;
     export let currentCourse: $$Props["currentCourse"] = undefined;
-
-    $: console.log({
-        id,
-        currentCourse,
-    });
 </script>
 
 <!-- svelte-ignore a11y-missing-attribute -->
