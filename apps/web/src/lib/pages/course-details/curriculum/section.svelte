@@ -15,7 +15,6 @@
     import * as m from "$i18n/messages";
 
     import CurriculumCard from "./curriculum-card.svelte";
-    import Certs from "./certs.svelte";
 
     let isInview = writable(false);
 
@@ -44,20 +43,6 @@
                     {#each curriculum as section}
                         <CurriculumCard {...section} />
                     {/each}
-                    <CurriculumCard
-                        classesCountable={false}
-                        title={m.every_mild_gadfly_attend()}
-                        highlight
-                    >
-                        <div class="grid grid-cols-1 gap-x-4 md:grid-cols-2">
-                            <div class="prose">
-                                {@html m.awful_long_tapir_advise()}
-                            </div>
-                            <div>
-                                <Certs />
-                            </div>
-                        </div>
-                    </CurriculumCard>
                 </ul>
             </ContainerContent>
         </Container>

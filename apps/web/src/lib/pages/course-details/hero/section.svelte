@@ -14,7 +14,6 @@
     import { roadmapParser } from "./roadmap-parser";
 
     import HeroiconsClock from "~icons/heroicons/clock";
-    import { TextContent } from "$lib/features/text-content";
     import { SkillsList } from "$lib/features/skill-icons";
     import { HeroRoadMap } from "$lib/features/hero-roadmap";
     import type { CourseProps } from "$lib/datas/courses/types";
@@ -47,8 +46,9 @@
                     </div>
                 </div>
                 <hr class="h-1 w-12 border-0 bg-secondary" />
-
-                <TextContent text={pd.description} />
+                <div class="prose prose-sm">
+                    {@html pd.description}
+                </div>
 
                 {#if pd.skills && pd.skills.length > 0}
                     <hr class="h-1 w-12 border-0 bg-secondary" />

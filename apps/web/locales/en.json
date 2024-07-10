@@ -118,7 +118,7 @@
 	"moving_equal_moth_fulfill": "We have received your information and will be in contact shortly!",
 	"sad_ornate_samuel_praise": "You have sent too many requests. Please try again later.",
 	"awful_long_tapir_advise": "<p>Students will receive benefits such as:</p><ul><li> Receive a certificate for each completed course and a certificate of completion for the entire course</li><li> Build a solid portfolio of projects right after the end of the course</li><li> Improve personal skills after each completed project tutoring session</li></ul>",
-	"every_mild_gadfly_attend": "Certifications and results 🎉",
+	"every_mild_gadfly_attend": "<span class=\"text-primary\">Results</span> and <span class=\"relative z-[1] after:absolute after:bottom-1 after:left-0 after:-z-[1] after:h-1 after:w-full after:bg-secondary/70 after:lg:h-2\" >Certifications</span> 🎉",
 	"agent_muddy_finch_create": "You are qualified to join the next class 🎉",
 	"home_safe_horse_bake": "Watch now",
 	"loose_caring_ape_edit": "(You are here)",
@@ -131,5 +131,9 @@
 	"lucky_last_shell_wave": "Member",
 	"active_sad_lionfish_jolt": "Links",
 	"lower_stock_squid_nourish": "AI project library",
-	"basic_fuzzy_cat_rush": "Let's explore the final projects that were built and developed by students at CoTAI"
+	"basic_fuzzy_cat_rush": "Let's explore the final projects that were built and developed by students at CoTAI",
+	"royal_odd_stingray_roar": "Affirm professional capacity",
+	"these_tidy_bulldog_aspire": "Strengthen your competency profile",
+	"low_crisp_iguana_jolt": "Expand scholarship & future career opportunities",
+	"known_misty_firefox_commend": "Connect with the research & development community"
 }

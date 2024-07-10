@@ -7,9 +7,9 @@
     import { WhoShouldJoin } from "./who-should-join";
     import { Hero } from "./hero";
     import { LearningOutcomes } from "./learning-outcomes";
-    import { NextCourse } from "./next-course";
     import { OtherCourses } from "./other-courses";
     import { FAQ } from "./fag";
+    import { Certs } from "./certs";
 
     import { RegisterGuide } from "$lib/features/register-guide";
     import { RegisterForm } from "$lib/features/register-form";
@@ -28,13 +28,17 @@
 <LearningOutcomes />
 <Components />
 <Curriculum />
-<NextCourse />
+<Certs />
+
 <StudentProjects projects={studentProjects} />
 
 <OtherCourses />
+
 <Reviews />
 <TeachersBio />
+
 <FAQ />
+
 <RegisterGuide />
 <RegisterForm />
 <RegisterEnd />
