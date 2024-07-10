@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { page } from "$app/stores";
+
     import HallOfFame from "./hall-of-fame.svelte";
     import { Hero } from "./hero";
     import { Roadmap } from "./roadmap";
@@ -10,6 +12,10 @@
     import { Reviews } from "$lib/features/reviews";
     import { TeachersBio } from "$lib/features/teachers-bio";
     import { RegisterEnd } from "$lib/features/register-end";
+    import { StudentProjects } from "$lib/features/student-projects";
+    import type { StudentProjectProps } from "$lib/datas/student-projects/types";
+
+    $: studentProjects = $page.data.studentProjects as StudentProjectProps[];
 </script>
 
 <Hero />
@@ -17,6 +23,7 @@
 <WhoWeAre />
 <WhyChooseUs />
 <Roadmap />
+<StudentProjects projects={studentProjects} />
 <Reviews />
 <TeachersBio />
 <RegisterGuide />

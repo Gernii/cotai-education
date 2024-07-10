@@ -1,4 +1,5 @@
-import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server.js";
+import { dataStudentProjects } from "$lib/datas/student-projects/student-projects.server";
+import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server";
 import {
     discordRegisterForm,
     loadValidatorRegisterForm,
@@ -9,9 +10,11 @@ import { error } from "@sveltejs/kit";
 export const load = async () => {
     const registerForm = await loadValidatorRegisterForm();
 
-    const teachersBio = dataTeachersBio();
+    const teachersBio = dataTeachersBio;
 
-    return { registerForm, teachersBio };
+    const studentProjects = dataStudentProjects;
+
+    return { registerForm, teachersBio, studentProjects };
 };
 
 const limiter = new RateLimiter({
