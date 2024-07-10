@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { Youtube } from "$lib/components/ui/youtube";
+
     import ProjectDetailsInfo from "./project-details-info.svelte";
 
     import type { StudentProjectProps } from "$lib/datas/student-projects/types";
@@ -36,18 +38,8 @@
     </div>
     {#if demoId}
         <div>
-            <div
-                class="relative w-full overflow-hidden rounded-box pb-[56.25%]"
-            >
-                <iframe
-                    src={`https://www.youtube.com/embed/${demoId}`}
-                    {title}
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerpolicy="strict-origin-when-cross-origin"
-                    allowfullscreen
-                    class="absolute left-0 top-0 h-full w-full object-cover"
-                ></iframe>
+            <div class="overflow-hidden rounded-box">
+                <Youtube id={demoId} {title} />
             </div>
         </div>
     {/if}
