@@ -1,6 +1,11 @@
 <script lang="ts">
+    import { writable } from "svelte/store";
+    import { inview } from "svelte-inview";
+
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import SectionTitle from "$lib/components/ui/section-title/section-title.svelte";
+
+    import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
     import { contacts } from "$lib/utils/constants";
 
@@ -11,21 +16,33 @@
     import LucidePhone from "~icons/lucide/phone";
     import LucideMail from "~icons/lucide/mail";
     import LogosMessenger from "~icons/logos/messenger";
+
+    let isInview = writable(false);
 </script>
 
-<section>
+<section
+    use:inview={inviewCommonOptions}
+    on:inview_enter={onInViewEnter(isInview)}
+>
     <Container>
         <ContainerContent>
-            <SectionTitle>
-                {@html m.major_cool_meerkat_startle()}
-            </SectionTitle>
+            <div
+                class:opacity-0={!$isInview}
+                class:animate-fade-left={$isInview}
+            >
+                <SectionTitle>
+                    {@html m.major_cool_meerkat_startle()}
+                </SectionTitle>
+            </div>
             <div
                 class="grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 lg:gap-x-16"
             >
                 <div class="flex flex-col">
                     <a
-                        class="group card card-compact hover:bg-base-100 hover:shadow"
+                        class="group card card-compact delay-0 hover:bg-base-100 hover:shadow"
                         href={contacts.facebook}
+                        class:opacity-0={!$isInview}
+                        class:animate-fade-up={$isInview}
                     >
                         <div class="card-body flex-row items-center gap-x-4">
                             <div class="group-hover:animate-jump">
@@ -44,8 +61,10 @@
                         </div>
                     </a>
                     <a
-                        class="group card card-compact hover:bg-base-100 hover:shadow"
+                        class="group card card-compact animate-delay-150 hover:bg-base-100 hover:shadow"
                         href={`tel:${contacts.phone.tel}`}
+                        class:opacity-0={!$isInview}
+                        class:animate-fade-up={$isInview}
                     >
                         <div class="card-body flex-row items-center gap-x-4">
                             <div class="group-hover:animate-jump">
@@ -66,8 +85,10 @@
                         </div>
                     </a>
                     <a
-                        class="group card card-compact hover:bg-base-100 hover:shadow"
+                        class="group card card-compact animate-delay-300 hover:bg-base-100 hover:shadow"
                         href={`mailto:${contacts.email}`}
+                        class:opacity-0={!$isInview}
+                        class:animate-fade-up={$isInview}
                     >
                         <div class="card-body flex-row items-center gap-x-4">
                             <div class="group-hover:animate-jump">
@@ -88,7 +109,12 @@
                         </div>
                     </a>
                 </div>
-                <InfoForm />
+                <div
+                    class:opacity-0={!$isInview}
+                    class:animate-jump-in={$isInview}
+                >
+                    <InfoForm />
+                </div>
             </div>
         </ContainerContent>
     </Container>

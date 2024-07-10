@@ -4,9 +4,13 @@
     import KeenSlider, { type KeenSliderInstance } from "keen-slider";
     import { cx } from "cva";
     import { onMount } from "svelte";
+    import { writable } from "svelte/store";
+    import { inview } from "svelte-inview";
 
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import SectionTitle from "$lib/components/ui/section-title/section-title.svelte";
+
+    import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
     import * as m from "$i18n/messages";
 
@@ -20,6 +24,9 @@
 
     let carouselRef: HTMLElement | undefined = undefined;
     let carouselSliderRef: KeenSliderInstance | undefined = undefined;
+
+    let isInview = writable(false);
+
     const onChangeSlide = (idx: number) => {
         carouselSliderRef?.moveToIdx(idx);
     };
@@ -65,26 +72,41 @@
     });
 </script>
 
-<section>
+<section
+    use:inview={inviewCommonOptions}
+    on:inview_enter={onInViewEnter(isInview)}
+>
     <Container padding="top-bottom">
         <ContainerContent>
-            <SectionTitle>{m.reviewsTitle()}</SectionTitle>
-
-            <div class="flex flex-col">
-                <div class="keen-slider" bind:this={carouselRef}>
-                    {#each dataReviews as review, idx}
-                        <div
-                            class={cx("keen-slider__slide", {
-                                hidden: idx !== 0 && !isSlideRendered,
-                            })}
-                        >
-                            <Review {...review} />
-                        </div>
-                    {/each}
-                </div>
+            <div
+                class:opacity-0={!$isInview}
+                class:animate-fade-left={$isInview}
+            >
+                <SectionTitle>{m.reviewsTitle()}</SectionTitle>
             </div>
 
-            <div class="flex w-full justify-center gap-2 py-2">
+            <div
+                class="keen-slider"
+                bind:this={carouselRef}
+                class:opacity-0={!$isInview}
+                class:animate-fade-up={$isInview}
+            >
+                {#each dataReviews as review, idx}
+                    <div
+                        class={cx("keen-slider__slide", {
+                            hidden: idx !== 0 && !isSlideRendered,
+                        })}
+                    >
+                        <Review {...review} />
+                    </div>
+                {/each}
+            </div>
+
+            <div
+                class="flex w-full justify-center gap-2 py-2"
+                class:opacity-0={!$isInview}
+                class:animate-fade={$isInview}
+            >
                 {#each [...Array(dataReviews.length)] as _, idx}
                     <button
                         class={cx("btn btn-circle  btn-xs", {
