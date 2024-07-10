@@ -14,8 +14,8 @@
 	"phone": "Phone",
 	"hotline": "Hotline",
 	"address": "Address",
-	"contacts_address_1": "An Suong Office space - MDN building, District 12, HCMC",
-	"contacts_address_2": "Le Hong Phong High School for the Gifted, 235 Nguyen Van Cu Street, District 5, HCMC",
+	"contacts_address_1": "MDN building, District 12, HCMC",
+	"contacts_address_2": "235 Nguyen Van Cu Street, District 5, HCMC",
 	"contacts_address_3": "147/9 Nguyen Sy Sach Street, Ward 15 , Tan Binh District, TP.HCM",
 	"thumbnail": "{title} thumbail",
 	"target": "Target",
@@ -135,5 +135,11 @@
 	"royal_odd_stingray_roar": "Affirm professional capacity",
 	"these_tidy_bulldog_aspire": "Strengthen your competency profile",
 	"low_crisp_iguana_jolt": "Expand scholarship & future career opportunities",
-	"known_misty_firefox_commend": "Connect with the research & development community"
+	"known_misty_firefox_commend": "Connect with the research & development community",
+	"good_glad_crow_commend": "Programming AI projects with/with CoTAI from Zero to Accelerated Mastery \"Accelerate deep understanding\"",
+	"clean_due_carp_clap": "Le Hong Phong High School for the Gifted",
+	"weary_white_mallard_trip": "An Suong Office space",
+	"least_livid_zebra_hush": "Policy",
+	"tired_bland_leopard_bubble": "Address {idx}",
+	"safe_clear_sparrow_aim": "Work time"
 }

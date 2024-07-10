@@ -35,11 +35,10 @@
         "@context": "https://schema.org",
         "@type": "WebSite",
         url: PUBLIC_HOSTNAME,
-        description: m.homePage_head_description(),
+        description: m.good_glad_crow_commend(),
         name: m.siteName(),
     };
     $: currentPage = `${PUBLIC_HOSTNAME}${i18n.route($page.url.pathname)}`;
-
 
     $: formattedTitle = !removeSiteNameFromTitle
         ? title

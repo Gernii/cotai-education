@@ -1,5 +1,5 @@
 <script lang="ts">
-    import Footer from "./footer.svelte";
+    import { Footer } from "./footer";
     import { Header, type HeaderProps, SidenavContent } from "./header";
 
     interface $$Props {
