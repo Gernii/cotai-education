@@ -37,20 +37,9 @@ export const routerPath = {
         courses: "/admin/courses",
     },
     courseId: (id: string | CourseIds) => `/courses/${id}`,
-    // cars: {
-    // 	cars: '/cars',
-    // 	carDetails: (id: string) => `cars/${id}`
-    // },
-    // devices: {
-    // 	devices: '/devices',
-    // 	deviceDetails: (id: string) => `devices/${id}`
-    // },
-    // histories: {
-    // 	histories: '/histories'
-    // },
-    // init: {
-    // 	device: '/init/device'
-    // }
+    about: "/about",
+    cookiePolicy: "/cookie-policy",
+    privacyPolicy: "/privacy-policy",
 };
 
 export const SEARCH_PARAMS_ACTION = "action";

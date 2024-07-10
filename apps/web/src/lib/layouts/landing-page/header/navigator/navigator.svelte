@@ -98,7 +98,7 @@
             {/if}
         </NavigatorItem>
 
-        <NavigatorItem href="#contact" target="_self" aria-label={m.contact()}>
+        <NavigatorItem href="#footer" target="_self" aria-label={m.contact()}>
             {m.contact()}
         </NavigatorItem>
     </nav>

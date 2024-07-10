@@ -1,5 +1,6 @@
 <script lang="ts">
     import { cx } from "cva";
+    import { twMerge } from "tailwind-merge";
 
     interface $$Props {
         meta: ImgMeta[] | ImgMeta;
@@ -26,14 +27,14 @@
     $: fallback = meta instanceof Array ? meta[0].img : meta.img;
 </script>
 
-<picture class={cx("block h-full", pictureClass)} data-author={author}>
+<picture class={twMerge(cx("block h-full", pictureClass))} data-author={author}>
     {#each Object.entries(sources) as [type, srcMeta]}
         <source type="image/{type}" srcset={srcMeta} />
     {/each}
     <img
         src={fallback.src}
         {alt}
-        class={cx("h-full w-full object-contain", imageClass)}
+        class={twMerge(cx("h-full w-full object-contain", imageClass))}
         {loading}
     />
 </picture>
