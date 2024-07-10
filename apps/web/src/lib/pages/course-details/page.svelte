@@ -3,10 +3,8 @@
 
     import Components from "./components.svelte";
     import { Curriculum } from "./curriculum";
-    import { ExperienceRequirement } from "./experience-requirement";
     import { WhoShouldJoin } from "./who-should-join";
     import { Hero } from "./hero";
-    import { LearningOutcomes } from "./learning-outcomes";
     import { OtherCourses } from "./other-courses";
     import { FAQ } from "./fag";
     import { Certs } from "./certs";
@@ -24,8 +22,8 @@
 
 <Hero />
 <WhoShouldJoin />
-<ExperienceRequirement />
-<LearningOutcomes />
+<!-- <ExperienceRequirement /> -->
+<!-- <LearningOutcomes /> -->
 <Components />
 <Curriculum />
 <Certs />
