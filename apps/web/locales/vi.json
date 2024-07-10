@@ -118,7 +118,7 @@
 	"moving_equal_moth_fulfill": "Chúng tôi đã nhận được thông tin và sẽ liên hệ ngay!",
 	"sad_ornate_samuel_praise": "Bạn đã gửi quá nhiều yêu cầu. Vui lòng thử lại sau.",
 	"awful_long_tapir_advise": "<p>Học viên sẽ được các quyền lợi như:</p><ul><li>Nhận chứng cho mỗi khoá học hoàn thành và chứng nhận hoàn thành toàn khóa</li><li>Xây dựng danh mục portfolio vững chắc gồm các dự án ngay khi kết thúc khoá học</li><li>Nâng cao trình độ cá nhân sau mỗi buổi học kèm dự án đã thực hiện</li></ul>",
-	"every_mild_gadfly_attend": "Chứng nhận và kết quả 🎉",
+	"every_mild_gadfly_attend": "<span class=\"text-primary\">Kết quả</span> và <span class=\"relative z-[1] after:absolute after:bottom-1 after:left-0 after:-z-[1] after:h-1 after:w-full after:bg-secondary/70 after:lg:h-2\" >Chứng nhận</span> 🎉",
 	"agent_muddy_finch_create": "Bạn đã đủ điều kiện để tham gia lớp tiếp theo 🎉",
 	"home_safe_horse_bake": "Xem ngay",
 	"loose_caring_ape_edit": "(Bạn đang ở đây)",
@@ -134,5 +134,9 @@
 	"lucky_last_shell_wave": "Thành viên",
 	"active_sad_lionfish_jolt": "Links",
 	"lower_stock_squid_nourish": "Thư viện dự án AI",
-	"basic_fuzzy_cat_rush": "Cùng khám phá những dự án cuối khoá được xây dựng và phát\n                    triển bởi các bạn học viên tại CoTAI"
+	"basic_fuzzy_cat_rush": "Cùng khám phá những dự án cuối khoá được xây dựng và phát\n                    triển bởi các bạn học viên tại CoTAI",
+	"royal_odd_stingray_roar": "Khẳng định năng lực chuyên môn",
+	"these_tidy_bulldog_aspire": "Làm mạnh hồ sơ năng lực",
+	"low_crisp_iguana_jolt": "Mở rộng cơ hội học bổng & nghề nghiệp tương lai",
+	"known_misty_firefox_commend": "Kết nối cùng cộng đồng nghiên cứu & phát triển"
 }

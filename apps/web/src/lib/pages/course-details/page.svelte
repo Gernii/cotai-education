@@ -9,6 +9,7 @@
     import { LearningOutcomes } from "./learning-outcomes";
     import { OtherCourses } from "./other-courses";
     import { FAQ } from "./fag";
+    import { Certs } from "./certs";
 
     import { RegisterGuide } from "$lib/features/register-guide";
     import { RegisterForm } from "$lib/features/register-form";
@@ -27,6 +28,7 @@
 <LearningOutcomes />
 <Components />
 <Curriculum />
+<Certs />
 
 <StudentProjects projects={studentProjects} />
 

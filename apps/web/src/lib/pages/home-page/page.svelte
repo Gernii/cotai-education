@@ -23,6 +23,7 @@
 <WhoWeAre />
 <WhyChooseUs />
 <Roadmap />
+
 <StudentProjects projects={studentProjects} />
 <Reviews />
 <TeachersBio />
