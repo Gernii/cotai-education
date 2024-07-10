@@ -40,8 +40,8 @@
                     class:opacity-0={!$isInview}
                     class:animate-fade-up={$isInview}
                 >
-                    {#each curriculum as section}
-                        <CurriculumCard {...section} />
+                    {#each curriculum as section, idx}
+                        <CurriculumCard {...section} forceOpen={idx === 0} />
                     {/each}
                 </ul>
             </ContainerContent>
