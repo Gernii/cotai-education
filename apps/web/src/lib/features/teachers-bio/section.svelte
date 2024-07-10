@@ -6,9 +6,13 @@
     import KeenSlider, { type KeenSliderInstance } from "keen-slider";
     import { onDestroy, onMount } from "svelte";
     import { cx } from "cva";
+    import { writable } from "svelte/store";
+    import { inview } from "svelte-inview";
 
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import { SectionTitle } from "$lib/components/ui/section-title";
+
+    import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
     import * as m from "$i18n/messages";
 
@@ -25,6 +29,8 @@
     let isSlideRendered = false;
 
     let currentReview = 0;
+
+    let isInview = writable(false);
 
     const onChangeSlide = (idx: number) => {
         carouselSliderRef?.moveToIdx(idx);
@@ -56,13 +62,23 @@
     });
 </script>
 
-<section>
+<section
+    use:inview={inviewCommonOptions}
+    on:inview_enter={onInViewEnter(isInview)}
+>
     <Container>
         <ContainerContent class="space-y-4">
-            <div>
+            <div
+                class:opacity-0={!$isInview}
+                class:animate-fade-left={$isInview}
+            >
                 <SectionTitle>{m.giant_equal_leopard_drum()}</SectionTitle>
             </div>
-            <div class="hidden grid-cols-4 gap-x-4 lg:grid">
+            <div
+                class="hidden grid-cols-4 gap-x-4 lg:grid"
+                class:opacity-0={!$isInview}
+                class:animate-fade={$isInview}
+            >
                 {#each teachersBio as bio, idx}
                     <ThumbnailCard
                         avatar={bio.avatar}
@@ -74,7 +90,12 @@
                     />
                 {/each}
             </div>
-            <div class="keen-slider" bind:this={carouselRef}>
+            <div
+                class="keen-slider"
+                bind:this={carouselRef}
+                class:opacity-0={!$isInview}
+                class:animate-fade-up={$isInview}
+            >
                 {#each teachersBio as bio, idx}
                     <div
                         class={cx(

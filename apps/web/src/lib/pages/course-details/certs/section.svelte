@@ -1,5 +1,5 @@
 <script lang="ts">
-    import { tick } from "svelte";
+    import { onDestroy, tick } from "svelte";
     import { inview } from "svelte-inview";
     import { confetti } from "@neoconfetti/svelte";
 
@@ -22,15 +22,28 @@
     let isInview = false;
     let isConfetti = false;
 
+    let delayConfettiTimeout: number | undefined = undefined;
+    let delayConfetti = false;
+
     const onInViewEnter = async (event: CustomEvent<ObserverEventDetails>) => {
         const { inView } = event.detail;
-        if (inView) {
+        if (inView && !delayConfetti) {
+            delayConfetti = true;
             isConfetti = false;
             isInview = true;
             await tick();
             isConfetti = true;
+            delayConfettiTimeout = window.setTimeout(() => {
+                delayConfetti = false;
+            }, 10000);
         }
     };
+
+    onDestroy(() => {
+        if (delayConfettiTimeout) {
+            window.clearTimeout(delayConfettiTimeout);
+        }
+    });
 
     const inviewCommonOptions = {
         unobserveOnEnter: false,
