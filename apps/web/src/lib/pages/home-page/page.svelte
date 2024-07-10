@@ -1,11 +1,8 @@
 <script lang="ts">
     import { page } from "$app/stores";
 
-    import HallOfFame from "./hall-of-fame.svelte";
     import { Hero } from "./hero";
     import { Roadmap } from "./roadmap";
-    import WhoWeAre from "./who-we-are.svelte";
-    import { WhyChooseUs } from "./why-choose-us";
 
     import { RegisterGuide } from "$lib/features/register-guide";
     import { RegisterForm } from "$lib/features/register-form";
@@ -19,9 +16,9 @@
 </script>
 
 <Hero />
-<HallOfFame />
-<WhoWeAre />
-<WhyChooseUs />
+<!-- <HallOfFame /> -->
+<!-- <WhoWeAre /> -->
+<!-- <WhyChooseUs /> -->
 <Roadmap />
 
 <StudentProjects projects={studentProjects} />
