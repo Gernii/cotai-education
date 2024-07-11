@@ -26,7 +26,7 @@ export default defineConfig(({ mode }) => {
                         const width = url.searchParams.get("w") ?? undefined;
 
                         return new URLSearchParams({
-                            format: `avif;webp;${extension}`,
+                            format: `webp;${extension}`,
                             w: width ?? defaultImageToolsWidth,
                             as: "picture",
                         });
