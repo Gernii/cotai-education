@@ -1,8 +1,18 @@
 import type { CourseProps } from "./types";
 import CertBack from "$lib/assets/images/certs/cert-back.png?imagetools";
+import CurriculumPython1 from "$lib/assets/images/course/python/1.jpg?imagetools";
+import CurriculumPython2 from "$lib/assets/images/course/python/2.jpg?imagetools";
+import CurriculumPython3 from "$lib/assets/images/course/python/3.jpg?imagetools";
+import CurriculumPython4 from "$lib/assets/images/course/python/4.jpg?imagetools";
+import CurriculumPython5 from "$lib/assets/images/course/python/5.jpg?imagetools";
+import CurriculumPython6 from "$lib/assets/images/course/python/6.jpg?imagetools";
+import CurriculumPython7 from "$lib/assets/images/course/python/7.jpg?imagetools";
+import CurriculumPython8 from "$lib/assets/images/course/python/8.png?imagetools";
+import CurriculumPython9 from "$lib/assets/images/course/python/9.png?imagetools";
+import CurriculumExam from "$lib/assets/images/course/exam.jpg?imagetools";
+
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
-
 export const dataCoursePythonAI = (): CourseProps => ({
     id: CourseIds.pythonai,
     title: "Python Coding with AI",
@@ -62,19 +72,26 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Nhập môn lập trình Python",
             hidden: false,
             classesCountable: true,
+
+            images: [CurriculumPython1],
             details: {
                 hidden: false,
 
-                content: `- Các lệnh: print, input
-- Các kiểu dữ liệu: Integer, Float, String, None
-- Các toán tử: +,-,*,/,//,%
-- Ép kiểu`,
+                content: `Các lệnh: print, input
+
+Các kiểu dữ liệu: Integer, Float, String, None
+
+Các toán tử: +,-,*,/,//,%
+
+Ép kiểu`,
             },
         },
         {
             title: "Câu lệnh điều kiện",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumPython2],
+
             details: {
                 hidden: false,
 
@@ -87,6 +104,8 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Các kiểu dữ liệu List, Tuple, Dictionary",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumPython3],
+
             details: {
                 hidden: false,
 
@@ -99,6 +118,8 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Vòng lặp",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumPython4],
+
             details: {
                 hidden: false,
 
@@ -114,6 +135,8 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Hàm & Các kỹ thuật lập trình cơ bản",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumPython5],
+
             details: {
                 hidden: false,
 
@@ -125,11 +148,14 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Kiểm tra giữa kỳ",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumExam],
         },
         {
             title: "Kiểu dữ liệu String & Class",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumPython6],
+
             details: {
                 hidden: false,
 
@@ -141,6 +167,8 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Xử lý file & 2D List",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumPython7],
+
             details: {
                 hidden: false,
 
@@ -153,6 +181,8 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Xử lý ảnh với Pillow & OpenCV",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumPython8],
+
             details: {
                 hidden: false,
 
@@ -169,6 +199,8 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Lập trình web với Streamlit",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumPython9],
+
             details: {
                 hidden: false,
 
@@ -182,6 +214,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
             title: "Thi cuối kỳ",
             hidden: false,
             classesCountable: true,
+            images: [CurriculumExam],
         },
     ],
 });

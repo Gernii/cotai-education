@@ -3,12 +3,12 @@
     import { cx } from "cva";
     import { slide } from "svelte/transition";
 
-    import type { CurriculumProps } from "$lib/utils/types/data.deprecated";
+    import { Picture } from "$lib/components/ui/picture";
 
     import * as m from "$i18n/messages";
 
     import LucideChevronDown from "~icons/lucide/chevron-down";
-    import { TextContent } from "$lib/features/text-content";
+    import type { CurriculumProps } from "$lib/datas/courses/types";
 
     interface $$Props extends CurriculumProps {
         highlight?: boolean;
@@ -19,8 +19,10 @@
     export let details: $$Props["details"] = undefined;
     export let highlight: $$Props["highlight"] = undefined;
     export let forceOpen: $$Props["forceOpen"] = undefined;
+    export let images: $$Props["images"] = undefined;
 
-    $: isContentEnabled = (details && !details.hidden) || $$slots.default;
+    $: isContentEnabled =
+        (details && !details.hidden) || $$slots.default || images;
 
     const {
         elements: { root, content, trigger },
@@ -52,11 +54,24 @@
     </button>
     {#if isContentEnabled && $open}
         <div class="bg-base-200" use:melt={$content} transition:slide>
-            <div class="px-16 py-4">
-                {#if $$slots.default}
-                    <slot />
-                {:else if details}
-                    <TextContent text={details.content} />
+            <div
+                class={cx("py-4 pl-16 pr-8", {
+                    "grid grid-cols-2 gap-x-8": images,
+                })}
+            >
+                <div>
+                    {#if $$slots.default}
+                        <slot />
+                    {:else if details}
+                        <div class="prose prose-p:my-2">
+                            {@html details.content}
+                        </div>
+                    {/if}
+                </div>
+                {#if images}
+                    <div class="overflow-hidden rounded-box">
+                        <Picture meta={images[0]} />
+                    </div>
                 {/if}
             </div>
         </div>
