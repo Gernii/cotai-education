@@ -3,6 +3,7 @@
 
     import { ContainerContent } from "$lib/components/ui/container";
     import { Picture } from "$lib/components/ui/picture";
+    import { ExternalAnchor } from "$lib/components/ui/external-anchor";
 
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
     import { countTotalLessons } from "$lib/utils/count-total-lessons";
@@ -69,11 +70,12 @@
 
                 <div class="card-body">
                     {#if course.registerUrl}
-                        <a
+                        <ExternalAnchor
                             href={course.registerUrl}
                             class="btn btn-primary btn-block"
-                            >{m.registerNow()}</a
                         >
+                            {m.registerNow()}
+                        </ExternalAnchor>
 
                         <div class="divider uppercase">{m.or()}</div>
                     {/if}
