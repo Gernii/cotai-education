@@ -15,7 +15,6 @@
     import * as m from "$i18n/messages";
 
     import Review from "./review.svelte";
-    import { autoSwitchSlide } from "./slider-handler";
 
     import { dataReviews } from "$lib/datas/reviews/reviews";
 
@@ -33,40 +32,36 @@
 
     onMount(() => {
         if (carouselRef === undefined) return;
-        const slider = new KeenSlider(
-            carouselRef,
-            {
-                loop: true,
-                slides: {
-                    origin: "auto",
-                    perView: 1,
-                },
-                breakpoints: {
-                    "(min-width: 640px)": {
-                        slides: {
-                            origin: "auto",
-                            spacing: 8,
+        const slider = new KeenSlider(carouselRef, {
+            loop: true,
+            slides: {
+                origin: "auto",
+                perView: 1,
+            },
+            breakpoints: {
+                "(min-width: 640px)": {
+                    slides: {
+                        origin: "auto",
+                        spacing: 8,
 
-                            perView: 2,
-                        },
-                    },
-                    "(min-width: 1024px)": {
-                        slides: {
-                            origin: "auto",
-                            spacing: 16,
-                            perView: 3,
-                        },
+                        perView: 2,
                     },
                 },
-                detailsChanged: (s) => {
-                    currentReview = s.track.details.rel;
-                },
-                created: () => {
-                    isSlideRendered = true;
+                "(min-width: 1024px)": {
+                    slides: {
+                        origin: "auto",
+                        spacing: 16,
+                        perView: 3,
+                    },
                 },
             },
-            [autoSwitchSlide(5000)],
-        );
+            detailsChanged: (s) => {
+                currentReview = s.track.details.rel;
+            },
+            created: () => {
+                isSlideRendered = true;
+            },
+        });
 
         carouselSliderRef = slider;
     });
