@@ -14,7 +14,9 @@
     export let externalLinks: $$Props["externalLinks"] = undefined;
 </script>
 
-<div class="card card-bordered card-compact max-w-64 bg-base-200">
+<div
+    class="card card-bordered card-compact w-full max-w-none bg-base-200 sm:w-auto sm:max-w-64"
+>
     <table class="card-body w-full">
         <tbody>
             <tr class="w-full">

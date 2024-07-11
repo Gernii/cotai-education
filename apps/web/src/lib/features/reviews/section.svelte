@@ -3,7 +3,7 @@
 
     import KeenSlider, { type KeenSliderInstance } from "keen-slider";
     import { cx } from "cva";
-    import { onMount } from "svelte";
+    import { onDestroy, onMount } from "svelte";
     import { writable } from "svelte/store";
     import { inview } from "svelte-inview";
 
@@ -37,6 +37,7 @@
             slides: {
                 origin: "auto",
                 perView: 1,
+                spacing: 8,
             },
             breakpoints: {
                 "(min-width: 640px)": {
@@ -64,6 +65,10 @@
         });
 
         carouselSliderRef = slider;
+    });
+
+    onDestroy(() => {
+        carouselSliderRef?.destroy();
     });
 </script>
 

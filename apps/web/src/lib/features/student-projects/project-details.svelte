@@ -20,10 +20,10 @@
 >
     <div class="flex gap-x-8">
         <div class="flex-grow space-y-4">
-            <div>
-                <h3 class="text-2xl font-bold">{title}</h3>
+            <div class="space-y-4">
+                <h3 class="text-xl font-bold sm:text-2xl">{title}</h3>
                 <div
-                    class="float-none ml-0 block sm:float-right sm:ml-2 lg:hidden"
+                    class="float-none ml-0 block w-full sm:float-right sm:ml-2 sm:w-auto lg:hidden"
                 >
                     <ProjectDetailsInfo {className} {members} {externalLinks} />
                 </div>

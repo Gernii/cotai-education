@@ -64,9 +64,9 @@
                     {@html m.every_mild_gadfly_attend()}
                 </SectionTitle>
             </div>
-            <div class="grid grid-cols-2 gap-x-16">
+            <div class="grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-2">
                 <ul
-                    class="space-y-2 text-lg font-semibold"
+                    class="space-y-2 text-base font-semibold sm:text-lg"
                     class:opacity-0={!isInview}
                     class:animate-fade-right={isInview}
                 >

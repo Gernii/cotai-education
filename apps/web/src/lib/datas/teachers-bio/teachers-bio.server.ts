@@ -9,7 +9,7 @@ export const dataTeachersBio: TeacherBioProps[] = [
         avatar: NgoQuocHungAvatar,
         name: "Ngô Quốc Hưng",
         details: parseMarkdownToHTML(
-            "- Giám đốc và sáng lập Trung tâm tài năng & khởi nghiệp CoTAI\n- Từng là giám đốc AI công ty AINovation (2018-2019)\n- Giảng viên nghiên cứu AI & Robotics ở Lab của giáo sư Marc Toussaint Đại học Stuttgart (Đức, 2015-2018)\n- Nghiên cứu sinh Tiến sỹ cùng giáo sư Juergen Schmidhuber ở viện IDSIA (Thuỵ Sỹ, 2010-2015)\n- Thủ khoa khoa Điện Đại học Bách Khoa HCM (1997-2002, hạng 1/530).",
+            "Giám đốc và sáng lập Trung tâm tài năng & khởi nghiệp CoTAI\n\nTừng là giám đốc AI công ty AINovation (2018-2019)\n\nGiảng viên nghiên cứu AI & Robotics ở Lab của giáo sư Marc Toussaint Đại học Stuttgart (Đức, 2015-2018)\n\nNghiên cứu sinh Tiến sỹ cùng giáo sư Juergen Schmidhuber ở viện IDSIA (Thuỵ Sỹ, 2010-2015)\n\nThủ khoa khoa Điện Đại học Bách Khoa HCM (1997-2002, hạng 1/530).",
         ),
     },
     {
