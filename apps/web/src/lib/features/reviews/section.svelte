@@ -111,7 +111,7 @@
                     <button
                         class={cx("btn btn-circle  btn-xs", {
                             "btn-primary": currentReview === idx,
-                            "bg-base-300": currentReview !== idx,
+                            "bg-base-100": currentReview !== idx,
                         })}
                         on:click={() => onChangeSlide(idx)}
                         aria-label={m.reviewBullet({ idx: idx + 1 })}
