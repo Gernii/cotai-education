@@ -1,10 +1,11 @@
 <script lang="ts">
+    import { createCollapsible, melt } from "@melt-ui/svelte";
     import { cx } from "cva";
-    import { onMount } from "svelte";
+    import { slide } from "svelte/transition";
 
-    import HeroiconsChevronDown from "~icons/heroicons/chevron-down";
-    import { TextContent } from "$lib/features/text-content";
+    import LucideMessageCircleQuestion from "~icons/lucide/message-circle-question";
     import type { FAQProps } from "$lib/datas/courses/types";
+    import LucideChevronDown from "~icons/lucide/chevron-down";
 
     interface $$Props extends FAQProps {
         isFirst?: boolean;
@@ -14,39 +15,45 @@
     export let content: $$Props["content"] = undefined;
     export let isFirst: $$Props["isFirst"] = undefined;
 
-    let isContentOpen = false;
-
-    const contentOpenToggle = () => {
-        isContentOpen = !isContentOpen;
-    };
-
-    onMount(() => {
-        if (isFirst) {
-            isContentOpen = true;
-        }
+    const {
+        elements: { root, content: collapsibleContent, trigger },
+        states: { open },
+    } = createCollapsible({
+        forceVisible: true,
+        defaultOpen: isFirst ?? false,
     });
 </script>
 
 <li
-    class={cx("collapse border border-base-content/5", {
-        "collapse-open": isContentOpen,
-        "collapse-close": !isContentOpen,
-    })}
+    use:melt={$root}
+    class="overflow-hidden rounded-box border border-base-content/5"
 >
-    <div
-        class="collapse-title flex items-center justify-between bg-base-100 pe-4 text-xl font-medium"
+    <button
+        class="flex w-full items-center gap-x-3 bg-base-100 px-6 py-4 pe-4 text-xl font-medium"
+        use:melt={$trigger}
     >
+        <LucideMessageCircleQuestion class="size-6 flex-shrink-0" />
         <span>{title}</span>
-        <button
-            class="btn btn-square btn-ghost btn-sm"
-            on:click={contentOpenToggle}
+        <div class="flex-grow"></div>
+        <LucideChevronDown
+            class={cx(
+                "size-6 flex-shrink-0 transform duration-200 ease-in-out",
+                {
+                    "rotate-180": $open,
+                    "rotate-0": !$open,
+                },
+            )}
+        />
+    </button>
+    {#if $open}
+        <div
+            class="bg-base-200"
+            use:melt={$collapsibleContent}
+            transition:slide
         >
-            <HeroiconsChevronDown class="size-6 stroke-2" />
-        </button>
-    </div>
-    <div class="collapse-content bg-base-200">
-        <div class="pt-4">
-            <TextContent text={content} />
+            <div class="prose prose-sm px-16 py-4">
+                {@html content}
+            </div>
         </div>
-    </div>
+    {/if}
 </li>
