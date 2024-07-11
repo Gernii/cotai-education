@@ -28,7 +28,7 @@
         on:inview_enter={onInViewEnter(isInview)}
     >
         <Container>
-            <ContainerContent>
+            <ContainerContent size={8}>
                 <div
                     class="text-center"
                     class:opacity-0={!$isInview}

@@ -20,9 +20,11 @@ export const dataCoursePythonAI = (): CourseProps => ({
         },
         {
             title: "Làm sao để đăng ký học?",
-            content: `- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
-- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
-- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)`,
+            content: `Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
+
+Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
+
+Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)`,
         },
     ],
 
