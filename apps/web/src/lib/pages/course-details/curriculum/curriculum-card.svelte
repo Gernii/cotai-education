@@ -5,7 +5,9 @@
 
     import type { CurriculumProps } from "$lib/utils/types/data.deprecated";
 
-    import HeroiconsChevronDown from "~icons/heroicons/chevron-down";
+    import * as m from "$i18n/messages";
+
+    import LucideChevronDown from "~icons/lucide/chevron-down";
     import { TextContent } from "$lib/features/text-content";
 
     interface $$Props extends CurriculumProps {
@@ -33,28 +35,24 @@
     use:melt={$root}
     class="overflow-hidden rounded-box border border-base-content/5"
 >
-    <div
-        class="flex items-center justify-between bg-base-100 px-6 py-4 pe-4 text-xl font-medium"
+    <button
+        class="flex w-full items-center gap-x-3 bg-base-100 px-6 py-4 pe-4 text-xl font-medium"
+        use:melt={$trigger}
+        aria-label={m.glad_antsy_gecko_explore()}
     >
-        <span class:text-primary={highlight}>{title}</span>
         {#if isContentEnabled}
-            <button
-                class="btn btn-square btn-ghost btn-sm"
-                use:melt={$trigger}
-                aria-label="Xem nội dung"
-            >
-                <HeroiconsChevronDown
-                    class={cx("size-6 transform", {
-                        "rotate-180": $open,
-                        "rotate-0": !$open,
-                    })}
-                />
-            </button>
+            <LucideChevronDown
+                class={cx("size-6 transform duration-200 ease-in-out", {
+                    "rotate-180": $open,
+                    "rotate-0": !$open,
+                })}
+            />
         {/if}
-    </div>
+        <span class:text-primary={highlight}>{title}</span>
+    </button>
     {#if isContentEnabled && $open}
         <div class="bg-base-200" use:melt={$content} transition:slide>
-            <div class="py-4">
+            <div class="px-16 py-4">
                 {#if $$slots.default}
                     <slot />
                 {:else if details}
