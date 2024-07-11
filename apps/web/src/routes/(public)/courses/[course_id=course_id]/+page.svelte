@@ -5,19 +5,20 @@
 
     import { CourseDetailsPage } from "$lib/pages/course-details";
 
-    import { coursesThumbnailDeprecated } from "$lib/utils/courses-thumbnail";
-    import type { CourseIdDeprecated } from "$lib/utils/constants";
+    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
+
+    import type { CourseIds } from "$lib/datas/courses/constants.js";
 
     export let data;
 
-    $: courseThumbnail = coursesThumbnailDeprecated(
-        data.id as CourseIdDeprecated,
-    );
+    $: course = data.course;
+
+    $: courseThumbnail = coursesThumbnail(course.id as CourseIds);
 </script>
 
 <SEO
-    description={data.descriptionRaw}
-    title={data.title}
+    description={course.descriptionRaw}
+    title={course.title}
     image={`${PUBLIC_HOSTNAME}${courseThumbnail[0].img.src}`}
 />
 

@@ -1,8 +1,4 @@
 import { error } from "@sveltejs/kit";
-
-import { fetcherStaticData } from "$lib/utils/fetcher/static-data";
-import type { CourseResponseProps } from "$lib/utils/types/data.deprecated";
-import { courseMappingData } from "$lib/utils/data-mapping.server";
 import {
     discordRegisterForm,
     loadValidatorRegisterForm,
@@ -16,7 +12,7 @@ import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server.js
 import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server.js";
 import { dataStudentProjects } from "$lib/datas/student-projects/student-projects.server.js";
 
-export const load = async ({ fetch, params }) => {
+export const load = async ({ params }) => {
     const courseId = params.course_id as CourseIds;
 
     const courseGetter = coursesMap.get(courseId);
@@ -46,17 +42,6 @@ export const load = async ({ fetch, params }) => {
         }
     }
 
-    const courseDeprecated = await fetcherStaticData<CourseResponseProps>({
-        id: courseId,
-        path: "courses",
-        fetch,
-    });
-
-    if (!courseDeprecated) {
-        error(404, {
-            message: "Not found",
-        });
-    }
     const registerForm = await loadValidatorRegisterForm();
 
     const teachersBio = dataTeachersBio;
@@ -64,20 +49,38 @@ export const load = async ({ fetch, params }) => {
     const studentProjects = dataStudentProjects;
 
     return {
-        ...courseMappingData(courseDeprecated),
-        id: courseDeprecated.id,
         registerForm,
-        course: {
-            ...course,
-            faqs: course.faqs?.map((faq) => ({
-                title: faq.title,
-                content: faq.content ? parseMarkdownToHTML(faq.content) : undefined,
-            })),
-        } satisfies CourseProps,
+        course: courseMappingData(course),
         nextCourseTitle,
         programCourses,
         teachersBio,
         studentProjects,
+    };
+};
+
+const courseMappingData = (course: CourseProps): CourseProps => {
+    const faqs = course.faqs?.map((faq) => ({
+        title: faq.title,
+        content: faq.content ? parseMarkdownToHTML(faq.content) : undefined,
+    }));
+
+    const curriculum = course.curriculum?.map((lesson) => {
+        const details = lesson.details;
+
+        if (details?.content) {
+            details.content = parseMarkdownToHTML(details.content);
+        }
+
+        return {
+            ...lesson,
+            details,
+        };
+    });
+
+    return {
+        ...course,
+        faqs,
+        curriculum,
     };
 };
 
