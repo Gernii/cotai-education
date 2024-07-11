@@ -38,7 +38,7 @@
     class="overflow-hidden rounded-box border border-base-content/5"
 >
     <button
-        class="flex w-full items-center gap-x-3 bg-base-100 px-6 py-4 pe-4 text-xl font-medium"
+        class="flex w-full items-center gap-x-3 bg-base-100 px-4 py-3 text-left text-base font-medium sm:px-6 sm:py-4 sm:text-xl"
         use:melt={$trigger}
         aria-label={m.glad_antsy_gecko_explore()}
     >
@@ -55,15 +55,15 @@
     {#if isContentEnabled && $open}
         <div class="bg-base-200" use:melt={$content} transition:slide>
             <div
-                class={cx("py-4 pl-16 pr-8", {
-                    "grid grid-cols-2 gap-x-8": images,
+                class={cx("px-4 py-4 sm:pl-8 sm:pr-8 md:pl-12", {
+                    "grid grid-cols-1 gap-x-8 md:grid-cols-2": images,
                 })}
             >
                 <div>
                     {#if $$slots.default}
                         <slot />
                     {:else if details}
-                        <div class="prose prose-p:my-2">
+                        <div class="prose prose-sm sm:prose-base prose-p:my-2">
                             {@html details.content}
                         </div>
                     {/if}

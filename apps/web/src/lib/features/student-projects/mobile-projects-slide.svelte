@@ -3,7 +3,7 @@
 
     import { melt, type createTabs } from "@melt-ui/svelte";
     import KeenSlider, { type KeenSliderInstance } from "keen-slider";
-    import { onMount } from "svelte";
+    import { onDestroy, onMount } from "svelte";
     import { cx } from "cva";
 
     import * as m from "$i18n/messages";
@@ -32,6 +32,7 @@
             slides: {
                 origin: "auto",
                 perView: 1,
+                spacing: 8,
             },
             breakpoints: {
                 "(min-width: 640px)": {
@@ -49,6 +50,10 @@
         });
 
         carouselSliderRef = slider;
+    });
+
+    onDestroy(() => {
+        carouselSliderRef?.destroy();
     });
 </script>
 
@@ -74,7 +79,7 @@
                     use:melt={$trigger(project.id)}
                     class="card card-bordered h-full w-full bg-base-100"
                 >
-                    <div class="w-full p-2 text-center">
+                    <div class="w-full p-4 text-center">
                         <p class="font-semibold">
                             {project.title}
                         </p>

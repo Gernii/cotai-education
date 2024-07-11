@@ -29,10 +29,10 @@
     class="overflow-hidden rounded-box border border-base-content/5"
 >
     <button
-        class="flex w-full items-center gap-x-3 bg-base-100 px-6 py-4 pe-4 text-xl font-medium"
+        class="flex w-full items-center gap-x-2 bg-base-100 px-6 py-4 pe-4 text-left text-base font-medium sm:gap-x-3 sm:text-lg"
         use:melt={$trigger}
     >
-        <LucideMessageCircleQuestion class="size-6 flex-shrink-0" />
+        <LucideMessageCircleQuestion class="size-5 flex-shrink-0 sm:size-6" />
         <span>{title}</span>
         <div class="flex-grow"></div>
         <LucideChevronDown
@@ -51,7 +51,7 @@
             use:melt={$collapsibleContent}
             transition:slide
         >
-            <div class="prose prose-sm px-16 py-4">
+            <div class="prose prose-sm px-8 py-4 sm:px-16">
                 {@html content}
             </div>
         </div>

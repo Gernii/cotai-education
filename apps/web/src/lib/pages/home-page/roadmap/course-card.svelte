@@ -18,7 +18,6 @@
     import type { CourseProps } from "$lib/datas/courses/types";
     import HeroiconsClock from "~icons/heroicons/clock";
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
-    import { TextContent } from "$lib/features/text-content";
     import type { CourseIds } from "$lib/datas/courses/constants";
     import { courseStudyType } from "$lib/datas/courses/constants";
     import LucideMonitorPlay from "~icons/lucide/monitor-play";
@@ -123,8 +122,8 @@
                             {/each}
                         </ul>
                         <hr class="h-1 w-12 border-0 bg-secondary" />
-                        <div class="flex-grow">
-                            <TextContent text={description} />
+                        <div class="prose-sm flex-grow sm:prose">
+                            {@html description}
                         </div>
                         <div class="card-actions">
                             <a href={courseUrl} class="btn btn-primary">

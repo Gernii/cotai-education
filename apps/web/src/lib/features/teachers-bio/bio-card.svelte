@@ -11,12 +11,10 @@
     export let details: $$Props["details"] = undefined;
 </script>
 
-<div class="card h-full w-full bg-base-100">
+<div class="card card-compact h-full w-full bg-base-100 sm:card-normal">
     <div class="card-body flex-col gap-x-8 md:flex-row">
-        <div class="w-32 sm:w-44 md:w-72">
-            <div class="overflow-hidden rounded-box">
-                <Picture meta={avatar} alt={name} />
-            </div>
+        <div class="w-32 overflow-hidden rounded-box sm:w-44 md:w-72">
+            <Picture meta={avatar} alt={name} />
         </div>
 
         <div class="space-y-4 md:space-y-6">
@@ -28,7 +26,9 @@
             </div>
 
             {#if details}
-                <p class="prose">{@html details}</p>
+                <div class="card bg-base-200">
+                    <p class="prose prose-sm p-4">{@html details}</p>
+                </div>
             {/if}
         </div>
     </div>
