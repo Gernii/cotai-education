@@ -10,15 +10,17 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
-    import type { CurriculumProps } from "$lib/utils/types/data.deprecated";
-
     import * as m from "$i18n/messages";
 
     import CurriculumCard from "./curriculum-card.svelte";
 
+    import type { CourseProps } from "$lib/datas/courses/types";
+
     let isInview = writable(false);
 
-    $: curriculum = $page.data.curriculum as CurriculumProps[];
+    $: course = $page.data.course as CourseProps;
+
+    $: curriculum = course.curriculum;
 </script>
 
 {#if curriculum.length > 0}

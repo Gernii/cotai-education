@@ -16,9 +16,7 @@ const config = {
 
     preprocess: sequence([
         // ... other preprocessors
-        vitePreprocess({
-            postcss: true,
-        }),
+        vitePreprocess(),
         mdsvex(mdsvexOptions),
         preprocessMeltUI(),
     ]),

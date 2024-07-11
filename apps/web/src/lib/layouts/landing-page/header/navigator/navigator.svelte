@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { page } from "$app/stores";
-
     import { cx } from "cva";
 
     import { routingPathAboutUs } from "$lib/utils/routing-path";
@@ -8,7 +6,6 @@
 
     import * as m from "$i18n/messages";
 
-    import type { LandingPage_LayoutData } from "../../types";
     import { ThemeSelector } from "../theme-selector";
 
     import NavigatorItem from "./navigator-item.svelte";
@@ -22,10 +19,6 @@
     }
 
     export let sidenav: NonNullable<$$Props["sidenav"]> = false;
-
-    $: pd = $page.data as { layoutData: LandingPage_LayoutData };
-
-    $: programs = pd.layoutData.programs;
 </script>
 
 <div
@@ -59,7 +52,7 @@
         >
             {m.aboutUs()}
         </NavigatorItem>
-        {#if programs.length > 0}
+        {#if coursesMap.size > 0}
             <NavigatorCollapse title={m.ourPrograms()} {sidenav}>
                 <ul class="menu w-full">
                     {#each coursesMap as [id, courseGetter]}

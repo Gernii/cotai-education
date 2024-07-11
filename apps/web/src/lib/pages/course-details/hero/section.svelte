@@ -4,12 +4,10 @@
     import { ContainerContent } from "$lib/components/ui/container";
     import { Picture } from "$lib/components/ui/picture";
 
-    import { coursesThumbnailDeprecated } from "$lib/utils/courses-thumbnail";
-    import type { CourseIdDeprecated } from "$lib/utils/constants";
+    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
+    import { countTotalLessons } from "$lib/utils/count-total-lessons";
 
     import * as m from "$i18n/messages";
-
-    import type { CourseDetailsPageDataProps } from "../types";
 
     import { roadmapParser } from "./roadmap-parser";
 
@@ -17,16 +15,15 @@
     import { SkillsList } from "$lib/features/skill-icons";
     import { HeroRoadMap } from "$lib/features/hero-roadmap";
     import type { CourseProps } from "$lib/datas/courses/types";
+    import type { CourseIds } from "$lib/datas/courses/constants";
 
     let roadmapProgram = roadmapParser();
 
-    $: pd = $page.data as CourseDetailsPageDataProps;
-
     $: course = $page.data.course as CourseProps;
 
-    $: courseThumbnail = coursesThumbnailDeprecated(
-        pd.id as CourseIdDeprecated,
-    );
+    $: courseThumbnail = coursesThumbnail(course.id as CourseIds);
+
+    $: totalLessons = countTotalLessons(course.curriculum);
 </script>
 
 <section class="mb-16">
@@ -37,22 +34,24 @@
             <div class="col-span-1 space-y-4 lg:col-span-3">
                 <div>
                     <p class="text-lg font-semibold">{m.course()}</p>
-                    <h1 class="text-5xl font-extrabold">{pd.title}</h1>
+                    <h1 class="text-5xl font-extrabold">{course.title}</h1>
                 </div>
                 <div class="flex flex-wrap gap-x-4 gap-y-1">
                     <div class="flex items-center gap-x-1">
                         <HeroiconsClock class="size-6 stroke-2 text-primary" />
-                        <p>{m.totalSessions({ number: pd.totalLessons })}</p>
+                        <p>
+                            {m.totalSessions({ number: totalLessons })}
+                        </p>
                     </div>
                 </div>
                 <hr class="h-1 w-12 border-0 bg-secondary" />
                 <div class="prose prose-sm">
-                    {@html pd.description}
+                    {@html course.description}
                 </div>
 
-                {#if pd.skills && pd.skills.length > 0}
+                {#if course.skills && course.skills.length > 0}
                     <hr class="h-1 w-12 border-0 bg-secondary" />
-                    <SkillsList skills={pd.skills} />
+                    <SkillsList skills={course.skills} />
                 {/if}
             </div>
             <div
@@ -62,16 +61,16 @@
                     {#if courseThumbnail}
                         <Picture
                             meta={courseThumbnail}
-                            alt={m.thumbnail({ title: pd.title ?? "" })}
+                            alt={m.thumbnail({ title: course.title ?? "" })}
                             imageClass="w-full object-cover transition-transform duration-300 group-hover:scale-105"
                         />
                     {/if}
                 </figure>
 
                 <div class="card-body">
-                    {#if pd.registerUrl}
+                    {#if course.registerUrl}
                         <a
-                            href={pd.registerUrl}
+                            href={course.registerUrl}
                             class="btn btn-primary btn-block"
                             >{m.registerNow()}</a
                         >

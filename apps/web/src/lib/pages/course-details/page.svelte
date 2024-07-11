@@ -1,13 +1,12 @@
 <script lang="ts">
     import { page } from "$app/stores";
 
-    import Components from "./components.svelte";
     import { Curriculum } from "./curriculum";
     import { WhoShouldJoin } from "./who-should-join";
-    import { Hero } from "./hero";
     import { OtherCourses } from "./other-courses";
     import { FAQ } from "./fag";
     import { Certs } from "./certs";
+    import { Hero } from "./hero";
 
     import { RegisterGuide } from "$lib/features/register-guide";
     import { RegisterForm } from "$lib/features/register-form";
@@ -24,7 +23,7 @@
 <WhoShouldJoin />
 <!-- <ExperienceRequirement /> -->
 <!-- <LearningOutcomes /> -->
-<Components />
+<!-- <Components /> -->
 <Curriculum />
 <Certs />
 
