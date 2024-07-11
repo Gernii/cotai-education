@@ -41,21 +41,24 @@
 
 {#if title && description}
     <li
-        class="group card card-bordered card-compact overflow-hidden border-base-content/5 bg-base-100 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5"
+        class="group card card-bordered card-compact m-2 border-base-content/5 bg-base-100 shadow shadow-base-content/5 ring-primary hover:shadow-lg hover:shadow-base-content/5"
+        class:ring-4={currentCourse}
     >
-        {#if isDisabled}
-            <Thumbnail {id} {title} />
-        {:else}
-            <a href={courseNavigate}>
+        <div class="overflow-hidden rounded-t-box">
+            {#if isDisabled}
                 <Thumbnail {id} {title} />
-            </a>
-        {/if}
+            {:else}
+                <a href={courseNavigate}>
+                    <Thumbnail {id} {title} />
+                </a>
+            {/if}
+        </div>
 
         <div class="card-body">
             <div>
                 {#if isDisabled}
                     <div
-                        class="flex-grow-0 text-base font-bold text-primary lg:text-xl"
+                        class="flex-grow-0 text-base font-bold text-primary lg:text-lg"
                         {title}
                     >
                         {title}
@@ -63,7 +66,7 @@
                 {:else}
                     <a
                         href={courseNavigate}
-                        class="flex-grow-0 text-base font-bold hover:text-primary lg:text-xl"
+                        class="flex-grow-0 text-base font-bold hover:text-primary lg:text-lg"
                         {title}
                     >
                         {title}
@@ -76,7 +79,9 @@
                     <p>{m.totalSessions({ number: totalLessons })}</p>
                 </div>
                 {#if currentCourse}
-                    <div class="text-secondary">{m.loose_caring_ape_edit()}</div>
+                    <div class="text-secondary">
+                        {m.loose_caring_ape_edit()}
+                    </div>
                 {/if}
             </div>
             <p class="line-clamp-3 flex-none">{description}</p>

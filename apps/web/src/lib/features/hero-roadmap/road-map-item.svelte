@@ -25,7 +25,10 @@
 <!-- svelte-ignore a11y-missing-attribute -->
 {#if shortTitle}
     {#if id === currentCourse}
-        <div class="card pointer-events-none h-full bg-primary" {title}>
+        <div
+            class="card pointer-events-none h-full bg-primary text-primary-content"
+            {title}
+        >
             <RoadMapItemInner {shortTitle} {title} />
         </div>
     {:else if isNavigate}
