@@ -4,6 +4,7 @@
     import { Hero } from "./hero";
     import { Roadmap } from "./roadmap";
     import { CAMDifference } from "./cam-difference";
+    import { CamDescribe } from "./cam-describe";
 
     import { RegisterGuide } from "$lib/features/register-guide";
     import { RegisterForm } from "$lib/features/register-form";
@@ -17,6 +18,7 @@
 </script>
 
 <Hero />
+<CamDescribe />
 <CAMDifference />
 <!-- <HallOfFame /> -->
 <!-- <WhoWeAre /> -->
