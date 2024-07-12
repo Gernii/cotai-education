@@ -7,6 +7,7 @@ export const dataCourseML4AI = (): CourseProps => ({
     id: CourseIds.ml4ai,
     title: "Machine Learning for AI",
     shortTitle: "ML4AI",
+    price: 5400000,
     studyTypes: ["online", "offline", "selfPaced"],
     certs: [CertBack, CertBack, CertBack],
     nextCourseId: CourseIds.dl4ai,

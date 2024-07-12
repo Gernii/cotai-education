@@ -1,3 +1,6 @@
+import { coursesMap } from "$lib/datas/courses/healpers";
+import type { CourseProps } from "$lib/datas/courses/types";
+import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
 import { dataStudentProjects } from "$lib/datas/student-projects/student-projects.server";
 import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server";
 import {
@@ -5,6 +8,7 @@ import {
     loadValidatorRegisterForm,
 } from "$lib/features/register-form/handler.server";
 import { RateLimiter } from "$lib/libs/sveltekit-rate-limiter";
+import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server.js";
 import { error } from "@sveltejs/kit";
 
 export const load = async () => {
@@ -14,7 +18,27 @@ export const load = async () => {
 
     const studentProjects = dataStudentProjects;
 
-    return { registerForm, teachersBio, studentProjects };
+    const courseRoadmap = getCourseRoadmap();
+
+    return { registerForm, teachersBio, studentProjects, courseRoadmap };
+};
+
+const getCourseRoadmap = () => {
+    const res = dataProgramPublicTraining.coursesRoadmap.reduce((prev, courseId) => {
+        const courseGetter = coursesMap.get(courseId);
+        if (!courseGetter) {
+            return prev;
+        }
+
+        const course = courseGetter();
+        if (course.description) {
+            course.description = parseMarkdownToHTML(course.description);
+        }
+        prev.push(course);
+        return prev;
+    }, [] as CourseProps[]);
+
+    return res;
 };
 
 const limiter = new RateLimiter({
