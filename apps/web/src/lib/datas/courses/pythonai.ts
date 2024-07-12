@@ -1,5 +1,4 @@
 import type { CourseProps } from "./types";
-import CertBack from "$lib/assets/images/certs/cert-back.png?imagetools";
 import CurriculumPython1 from "$lib/assets/images/course/python/1.jpg?imagetools";
 import CurriculumPython2 from "$lib/assets/images/course/python/2.jpg?imagetools";
 import CurriculumPython3 from "$lib/assets/images/course/python/3.jpg?imagetools";
@@ -22,7 +21,6 @@ export const dataCoursePythonAI = (): CourseProps => ({
     registerUrl: "https://go.cot.ai/091023",
     nextCourseId: CourseIds.mc4ai,
     programId: ProgramIds.public_training,
-    certs: [CertBack, CertBack, CertBack],
     faqs: [
         {
             title: "Làm sao để đăng ký học?",

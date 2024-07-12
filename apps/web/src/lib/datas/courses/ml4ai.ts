@@ -1,5 +1,4 @@
 import type { CourseProps } from "./types";
-import CertBack from "$lib/assets/images/certs/cert-back.png?imagetools";
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
 
@@ -9,7 +8,6 @@ export const dataCourseML4AI = (): CourseProps => ({
     shortTitle: "ML4AI",
     price: 5400000,
     studyTypes: ["online", "offline", "selfPaced"],
-    certs: [CertBack, CertBack, CertBack],
     nextCourseId: CourseIds.dl4ai,
 
     programId: ProgramIds.public_training,
