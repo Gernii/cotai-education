@@ -25,18 +25,18 @@
     on:inview_enter={onInViewEnter(isInview)}
 >
     <Container>
-        <ContainerContent>
-            <div
-                class:opacity-0={!$isInview}
-                class:animate-fade-left={$isInview}
-            >
-                <SectionTitle>
-                    {@html m.major_cool_meerkat_startle()}
-                </SectionTitle>
-            </div>
-            <div
-                class="grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 lg:gap-x-16"
-            >
+        <ContainerContent
+            class="grid grid-cols-1 gap-x-4 gap-y-4 md:grid-cols-2 lg:gap-x-16"
+        >
+            <div>
+                <div
+                    class:opacity-0={!$isInview}
+                    class:animate-fade-left={$isInview}
+                >
+                    <SectionTitle>
+                        {@html m.major_cool_meerkat_startle()}
+                    </SectionTitle>
+                </div>
                 <div class="flex flex-col">
                     <a
                         class="group card card-compact delay-0 hover:bg-base-100 hover:shadow"
@@ -109,12 +109,9 @@
                         </div>
                     </a>
                 </div>
-                <div
-                    class:opacity-0={!$isInview}
-                    class:animate-jump-in={$isInview}
-                >
-                    <InfoForm />
-                </div>
+            </div>
+            <div class:opacity-0={!$isInview} class:animate-jump-in={$isInview}>
+                <InfoForm />
             </div>
         </ContainerContent>
     </Container>
