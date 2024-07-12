@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { page } from "$app/stores";
+
     import { writable } from "svelte/store";
     import { inview } from "svelte-inview";
 
@@ -11,12 +13,9 @@
 
     import CourseCard from "./course-card.svelte";
 
-    import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
-    import { coursesMap } from "$lib/datas/courses/healpers";
+    import type { CourseProps } from "$lib/datas/courses/types";
 
-    let roadmapProgram = dataProgramPublicTraining;
-
-    $: courseIds = roadmapProgram.coursesRoadmap;
+    $: courseRoadmap = $page.data.courseRoadmap as CourseProps[];
 
     let isInview = writable(false);
 </script>
@@ -37,15 +36,12 @@
                 </SectionTitle>
             </div>
             <ul class="w-full">
-                {#each courseIds as courseId, idx}
-                    {@const course = coursesMap.get(courseId)}
-                    {#if course}
-                        <CourseCard
-                            {...course()}
-                            {idx}
-                            last={idx + 1 === courseId.length}
-                        />
-                    {/if}
+                {#each courseRoadmap as course, idx}
+                    <CourseCard
+                        {...course}
+                        {idx}
+                        last={idx + 1 === courseRoadmap.length}
+                    />
                 {/each}
             </ul>
         </ContainerContent>

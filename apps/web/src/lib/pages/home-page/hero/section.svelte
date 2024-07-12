@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { page } from "$app/stores";
+
     import HeroPicture from "$lib/assets/pages/about/hero.jpg?imagetools";
     import OutstandingMarks2Picture from "$lib/assets/pages/about/outstanding-marks-2.png?imagetools";
     import Group3SteamHackPicture from "$lib/assets/images/group-3-steamhack.jpg?imagetools";
@@ -14,8 +16,11 @@
     import TeenyiconsDiscountSolid from "~icons/teenyicons/discount-solid";
     import HeroiconsCheck16Solid from "~icons/heroicons/check-16-solid";
     import { HeroRoadMap } from "$lib/features/hero-roadmap";
+    import type { CourseProps } from "$lib/datas/courses/types";
 
-    let roadmapProgram = roadmapParser();
+    $: courseRoadmap = $page.data.courseRoadmap as CourseProps[];
+
+    $: roadmapProgram = roadmapParser(courseRoadmap);
 
     let isDiscountVisible = false;
 </script>

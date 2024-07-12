@@ -7,7 +7,7 @@ export const dataCourseDL4NLP = (): CourseProps => ({
     id: CourseIds.dl4nlp,
     title: "Deep Learning for Natural Language Processing",
     shortTitle: "DL4NLP",
-
+    price: 7000000,
     studyTypes: ["online", "offline", "selfPaced"],
     certs: [CertBack, CertBack, CertBack],
 

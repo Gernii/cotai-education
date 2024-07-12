@@ -11,6 +11,8 @@ import type { CourseProps } from "$lib/datas/courses/types";
 import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server.js";
 import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server.js";
 import { dataStudentProjects } from "$lib/datas/student-projects/student-projects.server.js";
+import { dataProgramPublicTraining } from "$lib/datas/programs/public-training.js";
+import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types.js";
 
 export const load = async ({ params }) => {
     const courseId = params.course_id as CourseIds;
@@ -48,6 +50,8 @@ export const load = async ({ params }) => {
 
     const studentProjects = dataStudentProjects;
 
+    const heroRoadmapCourse = getHeroRoadmapCourse();
+
     return {
         registerForm,
         course: courseMappingData(course),
@@ -55,6 +59,7 @@ export const load = async ({ params }) => {
         programCourses,
         teachersBio,
         studentProjects,
+        heroRoadmapCourse,
     };
 };
 
@@ -63,6 +68,10 @@ const courseMappingData = (course: CourseProps): CourseProps => {
         title: faq.title,
         content: faq.content ? parseMarkdownToHTML(faq.content) : undefined,
     }));
+
+    const description: CourseProps["description"] = course.description
+        ? parseMarkdownToHTML(course.description)
+        : undefined;
 
     const curriculum = course.curriculum?.map((lesson) => {
         const details = lesson.details;
@@ -81,7 +90,33 @@ const courseMappingData = (course: CourseProps): CourseProps => {
         ...course,
         faqs,
         curriculum,
+        description,
     };
+};
+
+const getHeroRoadmapCourse = () => {
+    const res = dataProgramPublicTraining.coursesRoadmap.reduce(
+        (prev, courseId): HeroRoadmapCourse[] => {
+            const courseGetter = coursesMap.get(courseId);
+            if (!courseGetter) {
+                return prev;
+            }
+
+            const course = courseGetter();
+
+            const heroCourse: HeroRoadmapCourse = {
+                id: course.id,
+                shortTitle: course.shortTitle,
+                title: course.title,
+            };
+            prev.push(heroCourse);
+            return prev;
+        },
+
+        [] as HeroRoadmapCourse[],
+    );
+
+    return res;
 };
 
 const limiter = new RateLimiter({

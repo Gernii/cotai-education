@@ -17,6 +17,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
     id: CourseIds.pythonai,
     title: "Python Coding with AI",
     shortTitle: "PythonAI",
+    price: 2500000,
     studyTypes: ["online", "offline", "selfPaced"],
     registerUrl: "https://go.cot.ai/091023",
     nextCourseId: CourseIds.mc4ai,

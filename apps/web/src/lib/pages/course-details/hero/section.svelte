@@ -10,15 +10,14 @@
 
     import * as m from "$i18n/messages";
 
-    import { roadmapParser } from "./roadmap-parser";
-
+    import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types";
     import HeroiconsClock from "~icons/heroicons/clock";
     import { SkillsList } from "$lib/features/skill-icons";
     import { HeroRoadMap } from "$lib/features/hero-roadmap";
     import type { CourseProps } from "$lib/datas/courses/types";
     import type { CourseIds } from "$lib/datas/courses/constants";
 
-    let roadmapProgram = roadmapParser();
+    $: heroRoadmapCourse = $page.data.heroRoadmapCourse as HeroRoadmapCourse[];
 
     $: course = $page.data.course as CourseProps;
 
@@ -69,6 +68,19 @@
                 </figure>
 
                 <div class="card-body">
+                    <div>
+                        <p class="text-sm">{m.teal_grassy_parakeet_buzz()}</p>
+                        <p class="text-2xl font-semibold">
+                            {#if course.price}
+                                {course.price.toLocaleString("vi-VN", {
+                                    style: "currency",
+                                    currency: "VND",
+                                })}
+                            {:else}
+                                {m.contact()}
+                            {/if}
+                        </p>
+                    </div>
                     {#if course.registerUrl}
                         <ExternalAnchor
                             href={course.registerUrl}
@@ -90,7 +102,7 @@
         </div>
         <HeroRoadMap
             isNavigate
-            courses={roadmapProgram}
+            courses={heroRoadmapCourse}
             currentCourse={course.id}
         />
     </ContainerContent>

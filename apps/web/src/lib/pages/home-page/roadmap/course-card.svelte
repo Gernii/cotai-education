@@ -122,7 +122,7 @@
                             {/each}
                         </ul>
                         <hr class="h-1 w-12 border-0 bg-secondary" />
-                        <div class="prose-sm flex-grow sm:prose">
+                        <div class="prose-sm flex-grow">
                             {@html description}
                         </div>
                         <div class="card-actions">

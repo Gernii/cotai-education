@@ -7,7 +7,7 @@ export const dataCourseMC4AI = (): CourseProps => ({
     id: CourseIds.mc4ai,
     title: "Math Coding for AI",
     shortTitle: "MC4AI",
-
+    price: 3700000,
     studyTypes: ["online", "offline", "selfPaced"],
     certs: [CertBack, CertBack, CertBack],
     nextCourseId: CourseIds.ml4ai,

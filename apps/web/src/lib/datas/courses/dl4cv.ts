@@ -7,7 +7,7 @@ export const dataCourseDL4CV = (): CourseProps => ({
     id: CourseIds.dl4cv,
     title: "Deep Learning for Computer Vision",
     shortTitle: "DL4CV",
-
+    price: 7000000,
     studyTypes: ["online", "offline", "selfPaced"],
     certs: [CertBack, CertBack, CertBack],
 
