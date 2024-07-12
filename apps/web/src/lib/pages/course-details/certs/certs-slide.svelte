@@ -11,6 +11,8 @@
 
     import { autoSwitchSlide } from "$lib/libs/keen-slider/auto-switch-slide";
 
+    import * as m from "$i18n/messages";
+
     import type { CourseProps } from "$lib/datas/courses/types";
 
     $: course = $page.data.course as CourseProps;
@@ -66,7 +68,11 @@
         >
             <Picture
                 meta={image}
-                alt={`Chứng nhận hoàn thành khóa học ${course.title}`}
+                alt={course.title
+                    ? m.maroon_soft_sheep_jump({
+                          title: course.title,
+                      })
+                    : ""}
             />
         </div>
     {/each}

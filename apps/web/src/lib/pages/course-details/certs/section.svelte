@@ -1,15 +1,21 @@
 <script lang="ts">
+    import { page } from "$app/stores";
+
     import { onDestroy, tick } from "svelte";
     import { inview } from "svelte-inview";
     import { confetti } from "@neoconfetti/svelte";
 
+    import CertDefaltTemplate from "$lib/assets/images/certs/template.jpg?imagetools";
+
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import { SectionTitle } from "$lib/components/ui/section-title";
+    import { Picture } from "$lib/components/ui/picture";
 
     import * as m from "$i18n/messages";
 
     import CertsSlide from "./certs-slide.svelte";
 
+    import type { CourseProps } from "$lib/datas/courses/types";
     import LucideCheckCheck from "~icons/lucide/check-check";
 
     let results = [
@@ -24,6 +30,10 @@
 
     let delayConfettiTimeout: number | undefined = undefined;
     let delayConfetti = false;
+
+    $: course = $page.data.course as CourseProps;
+
+    $: totalCerts = course.certs ? course.certs.length : 0;
 
     const onInViewEnter = async (event: CustomEvent<ObserverEventDetails>) => {
         const { inView } = event.detail;
@@ -90,7 +100,18 @@
                     class:opacity-0={!isInview}
                     class:animate-fade-left={isInview}
                 >
-                    <CertsSlide />
+                    {#if totalCerts > 0}
+                        <CertsSlide />
+                    {:else}
+                        <Picture
+                            meta={CertDefaltTemplate}
+                            alt={course.title
+                                ? m.maroon_soft_sheep_jump({
+                                      title: course.title,
+                                  })
+                                : ""}
+                        />
+                    {/if}
                 </div>
             </div>
         </ContainerContent>
