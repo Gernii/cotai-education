@@ -78,7 +78,7 @@
             href="https://gem.cot.ai/"
             rel="noopener noreferrer"
             aria-label={m.gemCollection()}
-            class="text-orange-500 hover:text-orange-600"
+            class="text-primary"
             target="_blank"
         >
             {#if !sidenav}

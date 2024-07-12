@@ -116,7 +116,7 @@
                                     <ExternalAnchor
                                         href="https://gem.cot.ai"
                                         aria-label={m.gemCollection()}
-                                        class="link-hover link link-secondary"
+                                        class="link-hover link link-primary"
                                     >
                                         <span>{m.gemCollection()}</span>
                                         <LucideGem class="inline" />
