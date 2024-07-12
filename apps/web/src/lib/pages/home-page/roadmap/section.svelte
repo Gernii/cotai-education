@@ -32,7 +32,7 @@
                 class="w-full sm:w-3/4"
             >
                 <SectionTitle id="roadmap">
-                    {m.lazy_elegant_jannes_support()}
+                    {@html m.lazy_elegant_jannes_support()}
                 </SectionTitle>
             </div>
             <ul class="w-full">
