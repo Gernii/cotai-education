@@ -42,9 +42,9 @@ const config = {
             {
                 light: {
                     ...daisyThemes["winter"],
-                    primary: "oklch(71.03% 0.163 240.29)",
+                    primary: "#fc8c04",
                     "primary-content": "oklch(97.03% 0.015 240.310)",
-                    secondary: "#fc8c04",
+                    secondary: "oklch(71.03% 0.163 240.29)",
 
                     "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
                     "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
@@ -60,9 +60,9 @@ const config = {
             {
                 dark: {
                     ...daisyThemes["dark"],
-                    primary: "oklch(71.03% 0.163 240.29)",
+                    primary: "#fc8c04",
                     "primary-content": "oklch(97.03% 0.015 240.310)",
-                    secondary: "#fc8c04",
+                    secondary: "oklch(71.03% 0.163 240.29)",
                     "base-content": "oklch(90.00% 0.0216 264.435964)",
 
                     "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes

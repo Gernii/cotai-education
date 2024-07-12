@@ -21,7 +21,7 @@
 </script>
 
 <section
-    class="flex min-h-dvh w-full flex-col justify-center bg-secondary/10 pt-header-space-sm dark:bg-base-300"
+    class="flex min-h-dvh w-full flex-col justify-center bg-primary/10 pt-header-space-sm dark:bg-base-300"
 >
     <Container>
         <ContainerContent>

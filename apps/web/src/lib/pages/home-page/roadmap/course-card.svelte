@@ -52,12 +52,12 @@
     >
         <div class="relative flex w-7 flex-col items-center sm:w-14">
             <div
-                class="absolute top-4 flex size-6 items-center justify-center rounded-full bg-primary sm:size-12"
+                class="absolute top-4 flex size-6 items-center justify-center rounded-full bg-secondary sm:size-12"
             >
-                <div class="size-3 rounded-full bg-secondary sm:size-6"></div>
+                <div class="size-3 rounded-full bg-primary sm:size-6"></div>
             </div>
             <div
-                class={cx("w-1 bg-primary sm:w-2", {
+                class={cx("w-1 bg-secondary sm:w-2", {
                     "mt-4 h-[calc(100%-1rem)]": idx === 0,
                     "h-full": idx !== 0,
                 })}

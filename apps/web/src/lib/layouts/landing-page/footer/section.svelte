@@ -156,8 +156,8 @@
                     </div>
                 </div>
             </div>
-            <div class="space-y-6">
-                <div class="grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-3">
+            <div class="space-y-4">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <ContactCard title={m.email()}>
                         <LucideMail
                             class="size-8 flex-shrink-0 group-hover:animate-jump"
@@ -196,7 +196,7 @@
                         </p>
                     </ContactCard>
                 </div>
-                <div class="grid grid-cols-1 gap-x-6 gap-y-4 md:grid-cols-3">
+                <div class="grid grid-cols-1 gap-4 md:grid-cols-3">
                     <ContactCard
                         title={m.tired_bland_leopard_bubble({ idx: 1 })}
                     >
