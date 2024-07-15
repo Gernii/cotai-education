@@ -1,12 +1,13 @@
 import type { CourseProps } from "./types";
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
+import { PUBLIC_COURSE_PRICE_DL4CV, PUBLIC_COURSE_REGISTER_URL_DL4CV } from "$env/static/public";
 
 export const dataCourseDL4CV = (): CourseProps => ({
     id: CourseIds.dl4cv,
     title: "Deep Learning for Computer Vision",
     shortTitle: "DL4CV",
-    price: 7000000,
+    price: Number.parseInt(PUBLIC_COURSE_PRICE_DL4CV),
     studyTypes: ["online", "offline", "selfPaced"],
 
     faqs: [
@@ -25,7 +26,7 @@ export const dataCourseDL4CV = (): CourseProps => ({
 
     programId: ProgramIds.public_training,
 
-    registerUrl: "https://go.cot.ai/091023",
+    registerUrl: PUBLIC_COURSE_REGISTER_URL_DL4CV,
 
     experienceRequirement: [
         "Sử dụng thành thạo ngôn ngữ Python",
