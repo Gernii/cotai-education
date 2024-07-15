@@ -42,10 +42,10 @@
                 <div
                     use:melt={$accordionContent(id)}
                     transition:slide
-                    class="border-t border-base-content/40 bg-base-200 px-6 py-4 text-sm sm:text-base"
+                    class="border-t border-base-content/40 bg-base-200 px-10 py-4 text-sm sm:text-base"
                     class:rounded-b-xl={idx === dataArray.length - 1}
                 >
-                    {content.description}
+                    {@html content.description}
                 </div>
             {/if}
         </div>
