@@ -1,0 +1,15 @@
+.image-top-left {
+    clip-path: inset(0 0 0 0 round 30% 5% 5% 5%);
+}
+
+.image-bottom-left {
+    clip-path: inset(0 0 0 0 round 5% 5% 5% 30%);
+}
+
+.image-top-right {
+    clip-path: inset(0 0 0 0 round 5% 30% 5% 5%)
+}
+
+.image-bottom-right {
+    clip-path: inset(0 0 0 0 round 5% 5% 30% 5%);
+}
