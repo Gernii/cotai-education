@@ -1,18 +1,19 @@
 import type { CourseProps } from "./types";
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
+import { PUBLIC_COURSE_PRICE_ML4AI, PUBLIC_COURSE_REGISTER_URL_ML4AI } from "$env/static/public";
 
 export const dataCourseML4AI = (): CourseProps => ({
     id: CourseIds.ml4ai,
     title: "Machine Learning for AI",
     shortTitle: "ML4AI",
-    price: 5400000,
+    price: Number.parseInt(PUBLIC_COURSE_PRICE_ML4AI),
     studyTypes: ["online", "offline", "selfPaced"],
     nextCourseId: CourseIds.dl4ai,
 
     programId: ProgramIds.public_training,
 
-    registerUrl: "https://go.cot.ai/091023",
+    registerUrl: PUBLIC_COURSE_REGISTER_URL_ML4AI,
     faqs: [
         {
             title: "Làm sao để đăng ký học?",

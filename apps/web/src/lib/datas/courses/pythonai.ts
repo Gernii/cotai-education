@@ -12,13 +12,18 @@ import CurriculumExam from "$lib/assets/images/course/exam.jpg?imagetools";
 
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
+import {
+    PUBLIC_COURSE_PRICE_PYTHON_AI,
+    PUBLIC_COURSE_REGISTER_URL_PYTHON_AI,
+} from "$env/static/public";
+
 export const dataCoursePythonAI = (): CourseProps => ({
     id: CourseIds.pythonai,
     title: "Python Coding with AI",
     shortTitle: "PythonAI",
-    price: 2500000,
+    price: Number.parseInt(PUBLIC_COURSE_PRICE_PYTHON_AI),
     studyTypes: ["online", "offline", "selfPaced"],
-    registerUrl: "https://go.cot.ai/091023",
+    registerUrl: PUBLIC_COURSE_REGISTER_URL_PYTHON_AI,
     nextCourseId: CourseIds.mc4ai,
     programId: ProgramIds.public_training,
     faqs: [
