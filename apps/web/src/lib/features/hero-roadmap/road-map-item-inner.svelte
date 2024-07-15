@@ -1,4 +1,7 @@
 <script lang="ts">
+    import { createTooltip, melt } from "@melt-ui/svelte";
+    import { fade } from "svelte/transition";
+
     import type { HeroRoadmapCourse } from "./types";
 
     import LucideGraduationCap from "~icons/lucide/graduation-cap";
@@ -7,14 +10,39 @@
 
     export let title: $$Props["title"] = undefined;
     export let shortTitle: $$Props["shortTitle"] = undefined;
+
+    const {
+        elements: { trigger, content, arrow },
+        states: { open },
+    } = createTooltip({
+        positioning: {
+            placement: "top",
+        },
+        openDelay: 0,
+        closeDelay: 0,
+        closeOnPointerDown: false,
+        forceVisible: false,
+    });
 </script>
 
-<div class="flex h-full flex-col items-center gap-y-1 p-2">
+<div
+    class="relative flex h-full flex-col items-center gap-y-1 p-2"
+    use:melt={$trigger}
+    aria-label={title}
+>
     <LucideGraduationCap class="size-5 flex-shrink-0 lg:size-6" />
-    <p class="flex-grow text-center text-xs font-semibold">
-        {title}
-    </p>
-    <p>
+    <p class=" flex-grow text-center font-semibold">
         {shortTitle}
+
+        {#if $open}
+            <div
+                use:melt={$content}
+                transition:fade={{ duration: 100 }}
+                class="z-10 rounded-lg bg-base-100 shadow-lg"
+            >
+                <div use:melt={$arrow} />
+                <p class="px-4 py-1">{title}</p>
+            </div>
+        {/if}
     </p>
 </div>

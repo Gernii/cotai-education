@@ -6,6 +6,7 @@
     import SectionTitle from "$lib/components/ui/section-title/section-title.svelte";
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
+    import { scrollRef } from "$lib/libs/svelte-scrolling";
 
     import { contacts } from "$lib/utils/constants";
 
@@ -23,6 +24,8 @@
 <section
     use:inview={inviewCommonOptions}
     on:inview_enter={onInViewEnter(isInview)}
+    use:scrollRef={"register-form"}
+    id="register-form"
 >
     <Container>
         <ContainerContent
