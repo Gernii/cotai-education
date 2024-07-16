@@ -32,18 +32,20 @@
         <ContainerContent class="space-y-8">
             <div class="grid grid-cols-1 gap-x-8 gap-y-6 lg:grid-cols-2">
                 <div class="space-y-8">
-                    <div class="h-16">
-                        <Picture
-                            meta={LogoCotAI}
-                            alt={m.mainLogo()}
-                            imageClass="w-auto"
-                        />
+                    <div class="flex gap-x-8">
+                        <div class="h-16 flex-shrink-0">
+                            <Picture
+                                meta={LogoCotAI}
+                                alt={m.mainLogo()}
+                                imageClass="w-auto"
+                            />
+                        </div>
+                        <p class="text-sm font-bold text-base-content/80">
+                            {m.good_glad_crow_commend()}
+                        </p>
                     </div>
-                    <p class="text-base-content/80">
-                        {m.good_glad_crow_commend()}
-                    </p>
 
-                    <div class="space-y-8">
+                    <div class="space-y-6">
                         <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
                             <ContactCard title={m.email()}>
                                 <LucideMail
@@ -73,10 +75,7 @@
                                 </a>
                             </ContactCard>
                         </div>
-                        <div class="w-full space-y-4">
-                            <p class="text-sm">
-                                {m.tired_bland_leopard_bubble()}
-                            </p>
+                        <div class="w-full space-y-2">
                             <div class="group flex flex-row gap-3">
                                 <LucideMapPin
                                     class="size-5 flex-shrink-0 group-hover:animate-jump"
