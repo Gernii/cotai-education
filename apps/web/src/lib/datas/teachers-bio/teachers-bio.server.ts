@@ -29,13 +29,14 @@ Năng lực & thành tựu nổi bật:
         role: "Instructor",
         avatar: LeNguyenThanhHuyAvatar,
         name: "Lê Nguyễn Thanh Huy",
-        details: parseMarkdownToHTML(`Trình độ: Kỹ sư Khoa học máy tính chuyên ngành phần mềm (ĐH KHTN 2007)
+        details: parseMarkdownToHTML(`Trình độ: Kỹ sư chuyên ngành phần mềm, (ĐH Văn Lang 2018)
 
-Kinh nghiệm giảng dạy: 3 năm đào tạo giải thuật & lập trình, Toán mô hình, và AI/Học máy tại CoTAI
+Kinh nghiệm giảng dạy: 4 năm đào tạo AI (Học máy & học sâu qua lập trình dự án, triển khai tích hợp hệ thống) tại CoTAI
 
 Năng lực & thành tựu nổi bật: 
-  - Tham gia xây dựng giáo trình đào tạo cùng CoTAI từ các kinh nghiệm dự án thực tế (2021–2024)
-  - Hơn 12 năm kinh nghiệm lập trình viên cao cấp về Java tại MECORP (2014–2020), VIVOO (2011–2014), GAMELOFT (2008–2010)`),
+  - Kỹ sư nghiên cứu & phát triển chính, trực tiếp triển khai thành công nhiều dự án AI lớn cho các khách hàng của CoTAI ví dụ Khả Kim, Canawan, Gambaru/Gianty, GlobalCare.
+  - Tham gia xây dựng giáo trình đào tạo cùng CoTAI từ các kinh nghiệm dự án thực tế (2020--2024)
+  - Trực tiếp xây dựng hệ thống BackEnd của startup Go2Joy (2016--2018)`),
     },
     {
         role: "Instructor",
