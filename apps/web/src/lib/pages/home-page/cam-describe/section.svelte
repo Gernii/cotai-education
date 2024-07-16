@@ -2,12 +2,17 @@
     import { writable } from "svelte/store";
     import { inview } from "svelte-inview";
 
+    import Cam2 from "$lib/assets/images/cam/cam-2.png?imagetools";
+    import Cam3 from "$lib/assets/images/cam/cam-3.mp4";
+
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import { SectionTitle } from "$lib/components/ui/section-title";
+    import Picture from "$lib/components/ui/picture/picture.svelte";
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
     import DescribeItem from "./describe-item.svelte";
+    import Chart_80_20 from "./chart-80-20.svelte";
 
     import { dataCamDescribe } from "$lib/datas/cam-describe/cam-describe";
 
@@ -44,12 +49,24 @@
                     </p>
                 </SectionTitle>
             </div>
-            <div class="grid grid-cols-1 md:grid-cols-3">
-                {#each camDescribe as describe}
+            <div
+                class="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-3 md:gap-x-16 lg:gap-x-32"
+            >
+                {#each camDescribe as describe, idx}
                     <DescribeItem
                         description={describe.description}
                         title={describe.title}
-                    />
+                    >
+                        {#if idx === 0}
+                            <Chart_80_20 />
+                        {:else if idx === 1}
+                            <Picture meta={Cam2} />
+                        {:else if idx === 2}
+                            <video autoplay muted loop playsinline>
+                                <source src={Cam3} type="video/mp4" />
+                            </video>
+                        {/if}
+                    </DescribeItem>
                 {/each}
             </div>
         </ContainerContent>

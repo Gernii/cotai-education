@@ -9,7 +9,7 @@ export const dataCamDescribe: CamDescribeProps[] = [
     {
         title: "Tích hợp cực cao",
         description:
-            "Công nghệ phát triển & thị trường thay đổi quá nhanh tạo nên xu hướng tích hợp đa ngành & đa dụng -> cần có năng lực cập nhật & lĩnh hội những công nghệ phổ biến nhất để nhanh chóng áp dụng thực tế",
+            "Công nghệ phát triển & thị trường thay đổi quá nhanh tạo nên xu hướng tích hợp đa ngành & đa dụng -> cần có năng lực cập nhật & lĩnh hội những công nghệ phổ biến nhất là AI để nhanh chóng áp dụng thực tế",
     },
     {
         title: "Bùng nổ sáng tạo",
