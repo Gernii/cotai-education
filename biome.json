@@ -13,7 +13,8 @@
             },
             "style": {
                 "noNamespaceImport": "off",
-                "useNamingConvention": "off"
+                "useNamingConvention": "off",
+                "noUnusedTemplateLiteral": "off"
             },
             "correctness": {
                 "noUndeclaredVariables": "off"

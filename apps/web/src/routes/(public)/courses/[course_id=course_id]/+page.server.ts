@@ -8,11 +8,12 @@ import type { CourseIds } from "$lib/datas/courses/constants";
 import { coursesMap } from "$lib/datas/courses/healpers";
 import { programsMap } from "$lib/datas/programs/healpers";
 import type { CourseProps } from "$lib/datas/courses/types";
-import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server.js";
-import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server.js";
-import { dataStudentProjects } from "$lib/datas/student-projects/student-projects.server.js";
-import { dataProgramPublicTraining } from "$lib/datas/programs/public-training.js";
-import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types.js";
+import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
+import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server";
+import { dataStudentProjects } from "$lib/datas/student-projects/student-projects.server";
+import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
+import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types";
+import { dataFAQs } from "$lib/datas/faq/faq.server";
 
 export const load = async ({ params }) => {
     const courseId = params.course_id as CourseIds;
@@ -25,16 +26,6 @@ export const load = async ({ params }) => {
         });
     }
     const course = courseGetter();
-
-    let nextCourseTitle: undefined | string;
-
-    if (course.nextCourseId) {
-        const nextCourse = coursesMap.get(course.nextCourseId);
-
-        if (nextCourse) {
-            nextCourseTitle = nextCourse().title;
-        }
-    }
 
     let programCourses: undefined | CourseIds[] = undefined;
     if (course.programId) {
@@ -52,14 +43,16 @@ export const load = async ({ params }) => {
 
     const heroRoadmapCourse = getHeroRoadmapCourse();
 
+    const faqs = dataFAQs();
+
     return {
         registerForm,
         course: courseMappingData(course),
-        nextCourseTitle,
         programCourses,
         teachersBio,
         studentProjects,
         heroRoadmapCourse,
+        faqs,
     };
 };
 

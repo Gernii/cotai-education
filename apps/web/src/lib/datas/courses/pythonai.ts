@@ -26,21 +26,6 @@ export const dataCoursePythonAI = (): CourseProps => ({
     registerUrl: PUBLIC_COURSE_REGISTER_URL_PYTHON_AI,
     nextCourseId: CourseIds.mc4ai,
     programId: ProgramIds.public_training,
-    faqs: [
-        {
-            title: "Làm sao để đăng ký học?",
-            content:
-                "Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)",
-        },
-        {
-            title: "Làm sao để đăng ký học?",
-            content: `Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
-
-Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
-
-Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)`,
-        },
-    ],
 
     whoShouldJoin: [
         "Học sinh THPT & sinh viên các ngành muốn làm lập trình viên AI hoặc xin học bổng du học & nghiên cứu (được viết thư giới thiệu.)",

@@ -1,6 +1,7 @@
 import type { ComponentDataProps } from "$lib/components/ui/component-data";
 
 import type { SkillTypes } from "$lib/features/skill-icons/constant";
+import type { FAQProps } from "../faq/types";
 import type { ProgramIds } from "../programs/constants";
 
 import type { courseStudyType } from "./constants";
@@ -28,11 +29,6 @@ export interface CourseProps {
     programId?: ProgramIds;
     certs?: (ImgMeta | ImgMeta[])[];
     faqs?: FAQProps[];
-}
-
-export interface FAQProps {
-    title?: string;
-    content?: string;
 }
 
 export type CourseStudyType = keyof typeof courseStudyType;

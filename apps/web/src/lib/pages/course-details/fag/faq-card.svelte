@@ -3,9 +3,11 @@
     import { cx } from "cva";
     import { slide } from "svelte/transition";
 
+    import { ContentRenderer } from "$lib/components/ui/content-renderer";
+
     import LucideMessageCircleQuestion from "~icons/lucide/message-circle-question";
-    import type { FAQProps } from "$lib/datas/courses/types";
     import LucideChevronDown from "~icons/lucide/chevron-down";
+    import type { FAQProps } from "$lib/datas/faq/types";
 
     interface $$Props extends FAQProps {
         isFirst?: boolean;
@@ -29,7 +31,7 @@
     class="overflow-hidden rounded-box border border-base-content/5"
 >
     <button
-        class="flex w-full items-center gap-x-2 bg-base-100 px-6 py-4 pe-4 text-left text-base font-medium sm:gap-x-3 sm:text-lg"
+        class="flex w-full items-center gap-x-2 bg-base-100 px-6 py-4 pe-4 text-left text-sm font-medium sm:gap-x-3"
         use:melt={$trigger}
     >
         <LucideMessageCircleQuestion class="size-5 flex-shrink-0 sm:size-6" />
@@ -51,8 +53,8 @@
             use:melt={$collapsibleContent}
             transition:slide
         >
-            <div class="prose prose-sm px-8 py-4 sm:px-16">
-                {@html content}
+            <div class="px-8 py-4 sm:px-16">
+                <ContentRenderer {content} />
             </div>
         </div>
     {/if}

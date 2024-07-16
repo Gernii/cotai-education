@@ -10,20 +10,6 @@ export const dataCourseDL4CV = (): CourseProps => ({
     price: Number.parseInt(PUBLIC_COURSE_PRICE_DL4CV),
     studyTypes: ["online", "offline", "selfPaced"],
 
-    faqs: [
-        {
-            title: "Làm sao để đăng ký học?",
-            content:
-                "Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)",
-        },
-        {
-            title: "Làm sao để đăng ký học?",
-            content: `- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
-- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)
-- Để đăng ký học, bạn vui lòng truy cập vào link đăng ký tại đây: [link đăng ký](/)`,
-        },
-    ],
-
     programId: ProgramIds.public_training,
 
     registerUrl: PUBLIC_COURSE_REGISTER_URL_DL4CV,

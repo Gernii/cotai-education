@@ -180,6 +180,9 @@ importers:
       markdown-it-mathjax3:
         specifier: ^4.3.2
         version: 4.3.2
+      markdown-it-merge-cells:
+        specifier: ^2.0.0
+        version: 2.0.0
       mdsvex:
         specifier: ^0.11.2
         version: 0.11.2(svelte@4.2.18)
@@ -2795,6 +2798,9 @@ packages:
 
   markdown-it-mathjax3@4.3.2:
     resolution: {integrity: sha512-TX3GW5NjmupgFtMJGRauioMbbkGsOXAAt1DZ/rzzYmTHqzkO1rNAdiMD4NiruurToPApn2kYy76x02QN26qr2w==}
+
+  markdown-it-merge-cells@2.0.0:
+    resolution: {integrity: sha512-aSAr+Nux0PNdpWQsTZQ2ioxSgaIU7pSGtU4Q+UsxJQc4lexo8vOVUT+qvgQadoZcrgEoXHSpO0P9xFb/r9HdrA==}
 
   markdown-it@14.1.0:
     resolution: {integrity: sha512-a54IwgWPaeBCAAsv13YgmALOF1elABB08FxO9i+r4VFk5Vl4pKokRPeX8u5TCgSsPi6ec1otfLjdOpVcgbpshg==}
@@ -6891,6 +6897,8 @@ snapshots:
       mathjax-full: 3.2.2
     transitivePeerDependencies:
       - encoding
+
+  markdown-it-merge-cells@2.0.0: {}
 
   markdown-it@14.1.0:
     dependencies:
