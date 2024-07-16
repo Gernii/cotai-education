@@ -13,16 +13,18 @@
 
     import FaqCard from "./faq-card.svelte";
 
+    import type { FAQProps } from "$lib/datas/faq/types";
     import type { CourseProps } from "$lib/datas/courses/types";
 
     let isInview = writable(false);
 
     $: course = $page.data.course as CourseProps;
+    $: generalFaqs = $page.data.faqs as FAQProps[] | undefined;
 
-    $: faqs = course.faqs;
+    $: courseFaqs = course.faqs;
 </script>
 
-{#if faqs}
+{#if courseFaqs || generalFaqs}
     <section
         use:inview={inviewCommonOptions}
         on:inview_enter={onInViewEnter(isInview)}
@@ -37,13 +39,20 @@
                     <SectionTitle>{m.large_less_scallop_gasp()}</SectionTitle>
                 </div>
                 <ul
-                    class="space-y-4"
+                    class="space-y-1"
                     class:opacity-0={!$isInview}
                     class:animate-fade-up={$isInview}
                 >
-                    {#each faqs as faq, idx}
-                        <FaqCard {...faq} isFirst={idx === 0} />
-                    {/each}
+                    {#if courseFaqs}
+                        {#each courseFaqs as faq, idx}
+                            <FaqCard {...faq} isFirst={idx === 0} />
+                        {/each}
+                    {/if}
+                    {#if generalFaqs}
+                        {#each generalFaqs as faq, idx}
+                            <FaqCard {...faq} isFirst={idx === 0} />
+                        {/each}
+                    {/if}
                 </ul>
             </ContainerContent>
         </Container>

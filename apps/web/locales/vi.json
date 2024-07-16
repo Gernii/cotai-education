@@ -23,7 +23,7 @@
     "registerNow": "Đăng ký ngay",
     "or": "Hoặc",
     "curriculum": "Chương trình học",
-    "programDetails_courseRoadmap": "Khoá học {number}",
+    "programDetails_courseRoadmap": "Khoá học",
     "totalSessions": "{number} buổi",
     "showDetails": "Xem chi tiết",
     "roadmap": "Lộ trình học",
@@ -144,10 +144,10 @@
     "safe_clear_sparrow_aim": "Giờ làm việc",
     "stock_cute_lemming_spin": "Nhấn để xem video",
     "glad_antsy_gecko_explore": "Xem nội dung",
-    "text": "Chương trình",
-    "experienceRequirement": "Hình ảnh minh họa về kinh nghiệm yêu cầu",
-    "universityOfScience": "Trường Đại học Khoa học Tự nhiên",
     "lazy_only_elephant_bask": "<p> là <span class=\"text-secondary\">sự khác biệt</span></p>",
     "teal_grassy_parakeet_buzz": "Học phí",
-    "maroon_soft_sheep_jump": "Chứng nhận hoàn thành khóa học {title}"
+    "maroon_soft_sheep_jump": "Chứng nhận hoàn thành khóa học {title}",
+    "text": "Chương trình",
+    "experienceRequirement": "Hình ảnh minh họa về kinh nghiệm yêu cầu",
+    "universityOfScience": "Trường Đại học Khoa học Tự nhiên"
 }

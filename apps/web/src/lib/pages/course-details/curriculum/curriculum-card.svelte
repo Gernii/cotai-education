@@ -4,6 +4,7 @@
     import { slide } from "svelte/transition";
 
     import { Picture } from "$lib/components/ui/picture";
+    import { ContentRenderer } from "$lib/components/ui/content-renderer";
 
     import * as m from "$i18n/messages";
 
@@ -63,8 +64,11 @@
                     {#if $$slots.default}
                         <slot />
                     {:else if details}
-                        <div class="prose prose-sm sm:prose-base prose-p:my-2">
-                            {@html details.content}
+                        <div class="prose prose-sm sm:prose-base">
+                            <ContentRenderer
+                                content={details.content}
+                                disabledProse
+                            />
                         </div>
                     {/if}
                 </div>

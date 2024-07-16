@@ -1,4 +1,5 @@
 <script lang="ts">
+    import { ContentRenderer } from "$lib/components/ui/content-renderer";
     import { Picture } from "$lib/components/ui/picture";
 
     import type { TeacherBioProps } from "$lib/datas/teachers-bio/types";
@@ -27,7 +28,9 @@
 
             {#if details}
                 <div class="card bg-base-200">
-                    <p class="prose prose-sm p-4">{@html details}</p>
+                    <div class="p-4">
+                        <ContentRenderer content={details} />
+                    </div>
                 </div>
             {/if}
         </div>
