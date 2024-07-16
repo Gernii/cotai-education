@@ -14,8 +14,10 @@
 
 <div class="card card-compact h-full w-full bg-base-100 sm:card-normal">
     <div class="card-body flex-col gap-x-8 md:flex-row">
-        <div class="w-32 overflow-hidden rounded-box sm:w-44 md:w-72">
-            <Picture meta={avatar} alt={name} />
+        <div
+            class="size-32 flex-shrink-0 overflow-hidden rounded-box sm:size-44 lg:size-72"
+        >
+            <Picture meta={avatar} alt={name} imageClass="object-cover" />
         </div>
 
         <div class="space-y-4 md:space-y-6">
