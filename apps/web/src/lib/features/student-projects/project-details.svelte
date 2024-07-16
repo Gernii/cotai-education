@@ -9,16 +9,14 @@
     interface $$Props extends Omit<StudentProjectProps, "id"> {}
 
     export let title: $$Props["title"];
-    export let description: $$Props["description"];
+    export let description: $$Props["description"] = undefined;
     export let className: $$Props["className"];
     export let members: $$Props["members"];
     export let externalLinks: $$Props["externalLinks"] = undefined;
     export let demoId: $$Props["demoId"] = undefined;
 </script>
 
-<div
-    class="h-full space-y-4 rounded-box bg-base-100 p-4 lg:rounded-none lg:p-8"
->
+<div class="h-full space-y-4 rounded-box bg-base-100 p-4 lg:p-8">
     <div class="flex gap-x-8">
         <div class="flex-grow space-y-4">
             <div class="space-y-4">
@@ -29,9 +27,11 @@
                     <ProjectDetailsInfo {className} {members} {externalLinks} />
                 </div>
             </div>
-            <ContentRenderer content={description} />
+            {#if description}
+                <ContentRenderer content={description} />
+            {/if}
         </div>
-        <div class="hidden lg:block">
+        <div class="hidden flex-shrink-0 lg:block">
             <ProjectDetailsInfo {className} {members} {externalLinks} />
         </div>
     </div>
