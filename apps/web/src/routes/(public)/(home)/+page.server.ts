@@ -16,7 +16,7 @@ export const load = async () => {
 
     const teachersBio = dataTeachersBio();
 
-    const studentProjects = dataStudentProjects;
+    const studentProjects = dataStudentProjects();
 
     const courseRoadmap = getCourseRoadmap();
 

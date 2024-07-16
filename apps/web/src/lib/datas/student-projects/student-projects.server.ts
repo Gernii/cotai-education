@@ -1,87 +1,61 @@
-import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
 import type { StudentProjectProps } from "./types";
 
-export const dataStudentProjects: StudentProjectProps[] = [
+export const dataStudentProjects = (): StudentProjectProps[] => [
     {
         id: "1",
-        title: "Project 1 with long title that will not be truncated",
-        description: parseMarkdownToHTML(`- Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-            
-- Eos ab porro, quialaborum quidem repellendus beatae! Itaque voluptate doloribus praesentium quasi,ic harum veniam accusantium assumenda numquam laboriosam ipsum quas quisquam,temporibus unde corrupti magni odio iure? Esse, laboriosam voluptate? Ipsa natusdicta incidunt, doloribus eaque alias impedit modi et.`),
-        members: ["Lê Ngô Đức Anh"],
-        externalLinks: [
-            { title: "Demo", url: "https://link1.com" },
-            { title: "Slide", url: "https://link2.com" },
-        ],
-        demoId: "wjfuB8Xjhc4",
-        className: "MC4AI - 2023",
+        title: "AI tool for English learning",
+        members: ["Quốc Bảo"],
+        externalLinks: [{ title: "Github", url: "https://github.com/kyle-paul/final-project" }],
+        demoId: "USx-8hVU5cw",
+        className: "MC4AI 2023",
     },
     {
         id: "2",
-        title: "Project 2",
-        description:
-            "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur nulla accusantium consectetur corporis odit a debitis nisi facilis est quam?",
-        members: ["Ngô Quốc Hưng", "Lê Nguyễn Thanh Huy", "Lê Văn A"],
-        demoId: "wjfuB8Xjhc4",
-        className: "MC4AI - 2023",
+        title: "Epidemic Simulation",
+        members: ["Phước Khang", "Gia Bảo"],
+        externalLinks: [
+            { title: "Github", url: "https://github.com/123khg/mc4ai-Covid-Simulation" },
+        ],
+
+        demoId: "-AWL5ogw_H0",
+        className: "MC4AI 2023",
     },
     {
         id: "3",
-        title: "Project 3 with medium title",
-        description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. ",
-        members: ["Ngô Quốc Hưng", "Lê Nguyễn Thanh Huy", "Lê Văn A"],
+        title: "Phân tích điểm và xem điểm bằng login mật khẩu/ khuôn mặt",
+        externalLinks: [
+            { title: "Github", url: "https://github.com/FubuGold/mc4ai-project-hahaha-fbk" },
+        ],
+        members: ["Thành Tài", "Gia Huy"],
         className: "MC4AI - 2023",
+        demoId: "qLRqG-jUVn8",
     },
     {
         id: "4",
-        title: "Project 1 with long title that will not be truncated",
-        description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ab porro, quialaborum quidem repellendus beatae! Itaque voluptate doloribus praesentium quasi,ic harum veniam accusantium assumenda numquam laboriosam ipsum quas quisquam,temporibus unde corrupti magni odio iure? Esse, laboriosam voluptate? Ipsa natusdicta incidunt, doloribus eaque alias impedit modi et.",
-        members: ["Lê Ngô Đức Anh"],
+        title: "Hệ thống phát hiện xe hơi đậu trước nhà",
         externalLinks: [
-            { title: "Demo", url: "https://link1.com" },
-            { title: "Slide", url: "https://link2.com" },
+            { title: "Github", url: "https://github.com/giaphu39/mc4ai-project-checkcar" },
         ],
-        demoId: "wjfuB8Xjhc4",
-        className: "MC4AI - 2023",
+        members: ["Gia Phú", "Đông Quân", "Nam Khánh"],
+        className: "MC4AI 2023",
+        demoId: "wVjxxWFER4o",
     },
     {
         id: "5",
-        title: "Project 1 with long title that will not be truncated",
-        description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ab porro, quialaborum quidem repellendus beatae! Itaque voluptate doloribus praesentium quasi,ic harum veniam accusantium assumenda numquam laboriosam ipsum quas quisquam,temporibus unde corrupti magni odio iure? Esse, laboriosam voluptate? Ipsa natusdicta incidunt, doloribus eaque alias impedit modi et.",
-        members: ["Lê Ngô Đức Anh"],
-        externalLinks: [
-            { title: "Demo", url: "https://link1.com" },
-            { title: "Slide", url: "https://link2.com" },
-        ],
-        demoId: "wjfuB8Xjhc4",
-        className: "MC4AI - 2023",
+        title: "Hệ thống phát hiện xe hơi đậu trước nhà",
+        externalLinks: [{ title: "Github", url: "https://github.com/huypham2403/mc4ai-project" }],
+        members: ["Tường Huy"],
+        className: "MC4AI 2023",
+        demoId: "wVjxxWFER4o",
     },
     {
         id: "6",
-        title: "Project 1 with long title that will not be truncated",
-        description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ab porro, quialaborum quidem repellendus beatae! Itaque voluptate doloribus praesentium quasi,ic harum veniam accusantium assumenda numquam laboriosam ipsum quas quisquam,temporibus unde corrupti magni odio iure? Esse, laboriosam voluptate? Ipsa natusdicta incidunt, doloribus eaque alias impedit modi et.",
-        members: ["Lê Ngô Đức Anh"],
+        title: "Công cụ nhận diện chữ viết tay (Latin & Nhật)",
         externalLinks: [
-            { title: "Demo", url: "https://link1.com" },
-            { title: "Slide", url: "https://link2.com" },
+            { title: "Github", url: "https://github.com/mentallyderanged/mc4aiproject" },
         ],
-        demoId: "wjfuB8Xjhc4",
-        className: "MC4AI - 2023",
-    },
-    {
-        id: "7",
-        title: "Project 1 with long title that will not be truncated",
-        description:
-            "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eos ab porro, quialaborum quidem repellendus beatae! Itaque voluptate doloribus praesentium quasi,ic harum veniam accusantium assumenda numquam laboriosam ipsum quas quisquam,temporibus unde corrupti magni odio iure? Esse, laboriosam voluptate? Ipsa natusdicta incidunt, doloribus eaque alias impedit modi et.",
-        members: ["Lê Ngô Đức Anh"],
-        externalLinks: [
-            { title: "Demo", url: "https://link1.com" },
-            { title: "Slide", url: "https://link2.com" },
-        ],
-        demoId: "wjfuB8Xjhc4",
-        className: "MC4AI - 2023",
+        members: ["Quang Vũ"],
+        className: "MC4AI 2024",
+        demoId: "PmSnFf-jc6M",
     },
 ];

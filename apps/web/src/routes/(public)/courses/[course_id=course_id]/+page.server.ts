@@ -39,7 +39,7 @@ export const load = async ({ params }) => {
 
     const teachersBio = dataTeachersBio();
 
-    const studentProjects = dataStudentProjects;
+    const studentProjects = dataStudentProjects();
 
     const heroRoadmapCourse = getHeroRoadmapCourse();
 

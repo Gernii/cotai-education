@@ -56,21 +56,21 @@
                 class:opacity-0={!$isInview}
                 class:animate-fade-up={$isInview}
                 use:melt={$root}
-                class="flex flex-col gap-y-4 divide-base-content/40 overflow-hidden rounded-none border border-base-200 lg:flex-row lg:divide-x lg:rounded-box"
+                class="flex flex-col gap-x-2 gap-y-4 rounded-none lg:flex-row"
             >
                 <div
                     use:melt={$list}
-                    class="w-full flex-shrink-0 flex-row lg:flex lg:w-72 lg:flex-col"
+                    class="relative w-full flex-shrink-0 flex-row overflow-y-auto lg:flex lg:w-72 lg:flex-col"
                     aria-label="Projects"
                 >
                     <div class="block lg:hidden">
                         <MobileProjectsSlide {projects} {trigger} />
                     </div>
-                    <div class="hidden overflow-y-auto lg:block">
+                    <div class="absolute hidden space-y-2 lg:block">
                         {#each projects as project}
                             <button
                                 use:melt={$trigger(project.id)}
-                                class="flex w-full items-center justify-between gap-y-1 border-b border-base-200 bg-base-100 px-4 py-4 text-left last:border-b-0 hover:bg-base-200"
+                                class="flex w-full items-center justify-between gap-y-1 rounded-box bg-base-100 px-4 py-4 text-left hover:bg-base-200"
                             >
                                 <div>
                                     <p class="font-semibold">
