@@ -14,7 +14,7 @@ import { error } from "@sveltejs/kit";
 export const load = async () => {
     const registerForm = await loadValidatorRegisterForm();
 
-    const teachersBio = dataTeachersBio;
+    const teachersBio = dataTeachersBio();
 
     const studentProjects = dataStudentProjects;
 

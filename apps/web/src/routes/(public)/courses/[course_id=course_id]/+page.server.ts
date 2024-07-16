@@ -37,7 +37,7 @@ export const load = async ({ params }) => {
 
     const registerForm = await loadValidatorRegisterForm();
 
-    const teachersBio = dataTeachersBio;
+    const teachersBio = dataTeachersBio();
 
     const studentProjects = dataStudentProjects;
 

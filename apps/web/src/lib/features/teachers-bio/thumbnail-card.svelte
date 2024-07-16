@@ -20,7 +20,7 @@
     export let active: $$Props["active"] = undefined;
 
     $: buttonClasses = cx(
-        "card card-bordered card-compact bg-base-100 transition-colors",
+        "card card-bordered card-compact h-full w-full flex-grow bg-base-100 transition-colors",
         {
             "bg-secondary/5 ring-2 ring-secondary hover:bg-secondary/10":
                 active,
@@ -28,11 +28,11 @@
     );
 </script>
 
-<button on:click class={buttonClasses}>
-    <span class="card-body w-full items-center">
+<button on:click class={buttonClasses} {...$$restProps}>
+    <div class="card-body w-full flex-grow items-center">
         <div class="size-20 overflow-hidden rounded-full">
             <Picture meta={avatar} alt={teacherName} />
         </div>
-        <p class="font-bold">{teacherName}</p>
-    </span>
+        <p class="flex-grow font-bold">{teacherName}</p>
+    </div>
 </button>

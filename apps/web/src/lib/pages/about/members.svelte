@@ -1,6 +1,6 @@
 <script lang="ts">
-    import ProfileLNTHPicture from "$lib/assets/profiles/le-nguyen-thanh-huy.jpg?imagetools";
-    import ProfileNQHicture from "$lib/assets/profiles/ngo-quoc-hung.jpg?imagetools";
+    import ProfileLNTHPicture from "$lib/assets/profiles/LeNguyenThanhHuy.jpg?imagetools";
+    import ProfileNQHicture from "$lib/assets/profiles/NgoQuocHung.jpg?imagetools";
 
     import * as m from "$i18n/messages";
 
