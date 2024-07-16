@@ -1,5 +1,6 @@
 <script lang="ts">
     import { Youtube } from "$lib/components/ui/youtube";
+    import { ContentRenderer } from "$lib/components/ui/content-renderer";
 
     import ProjectDetailsInfo from "./project-details-info.svelte";
 
@@ -28,9 +29,7 @@
                     <ProjectDetailsInfo {className} {members} {externalLinks} />
                 </div>
             </div>
-            <p class="prose prose-sm">
-                {@html description}
-            </p>
+            <ContentRenderer content={description} />
         </div>
         <div class="hidden lg:block">
             <ProjectDetailsInfo {className} {members} {externalLinks} />

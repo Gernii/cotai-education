@@ -4,6 +4,7 @@
     import { ContainerContent } from "$lib/components/ui/container";
     import { Picture } from "$lib/components/ui/picture";
     import { ExternalAnchor } from "$lib/components/ui/external-anchor";
+    import { ContentRenderer } from "$lib/components/ui/content-renderer";
 
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
     import { countTotalLessons } from "$lib/utils/count-total-lessons";
@@ -45,9 +46,8 @@
                     </div>
                 </div>
                 <hr class="h-1 w-12 border-0 bg-secondary" />
-                <div class="prose prose-sm">
-                    {@html course.description}
-                </div>
+
+                <ContentRenderer content={course.description} />
 
                 {#if course.skills && course.skills.length > 0}
                     <hr class="h-1 w-12 border-0 bg-secondary" />
