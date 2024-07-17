@@ -77,7 +77,7 @@
             >
                 <button
                     use:melt={$trigger(project.id)}
-                    class="card card-bordered h-full w-full bg-base-100"
+                    class="card card-bordered h-full w-full bg-base-200"
                 >
                     <div class="w-full p-4 text-center">
                         <p class="font-semibold">

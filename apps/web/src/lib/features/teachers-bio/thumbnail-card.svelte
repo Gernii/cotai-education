@@ -2,9 +2,10 @@
     import "keen-slider/keen-slider.min.css";
 
     import type { HTMLButtonAttributes } from "svelte/elements";
-    import { cx } from "cva";
 
     import Picture from "$lib/components/ui/picture/picture.svelte";
+
+    import { cn } from "$lib/utils/classname";
 
     import type { TeacherBioProps } from "$lib/datas/teachers-bio/types";
 
@@ -19,16 +20,22 @@
     export let teacherName: $$Props["teacherName"];
     export let active: $$Props["active"] = undefined;
 
-    $: buttonClasses = cx(
-        "card card-bordered card-compact h-full w-full flex-grow bg-base-100 transition-colors",
+    $: buttonClasses = cn(
+        "card card-bordered card-compact h-full w-full flex-grow bg-base-200 transition-colors hover:bg-base-200/80",
         {
-            "bg-secondary/5 ring-2 ring-secondary hover:bg-secondary/10":
+            "bg-secondary/70 ring-2 ring-secondary hover:bg-secondary/60":
                 active,
         },
     );
 </script>
 
-<button on:click class={buttonClasses} {...$$restProps}>
+<button
+    {...$$restProps}
+    on:click
+    class={buttonClasses}
+    aria-label={teacherName}
+    title={teacherName}
+>
     <div class="card-body w-full flex-grow items-center">
         <div class="size-20 overflow-hidden rounded-full">
             <Picture meta={avatar} alt={teacherName} />

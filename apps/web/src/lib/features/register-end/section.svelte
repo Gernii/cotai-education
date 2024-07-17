@@ -16,17 +16,17 @@
     <Container>
         <ContainerContent>
             <div
-                class="card card-bordered bg-base-100 shadow-lg"
+                class="card card-bordered bg-base-200 shadow-lg"
                 class:opacity-0={!$isInview}
                 class:animate-fade-up={$isInview}
             >
                 <div class="card-body flex-col gap-x-8 gap-y-6 md:flex-row">
                     <div class="flex-grow">
-                        <h2 class="text-2xl font-bold">
+                        <h2 class="text-xl font-bold md:text-2xl">
                             Nâng tầm đổi mới và sáng tạo cho cuộc sống tươi đẹp
                         </h2>
-                        <p class="text-sm">
-                            ENABLING INNOVATION AND CREATIVITY FOR SOCIAL GOOD
+                        <p class="text-md md:text-xl">
+                            Enabling innovation and creativity for social good
                         </p>
                     </div>
                     <div>

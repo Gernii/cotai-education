@@ -16,7 +16,7 @@
     export let demoId: $$Props["demoId"] = undefined;
 </script>
 
-<div class="h-full space-y-4 rounded-box bg-base-100 p-4 lg:p-8">
+<div class="h-full space-y-4 rounded-box bg-base-200 p-4 lg:p-8">
     <div class="flex gap-x-8">
         <div class="flex-grow space-y-4">
             <div class="space-y-4">

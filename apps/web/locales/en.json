@@ -105,7 +105,7 @@
     "sharp_stout_gull_dance": "Tell us more about your needs...",
     "antsy_petty_gecko_grip": "We will contact you with the information you need",
     "tense_happy_zebra_file": "Or leave <span class=\"text-secondary\">contact information</span>",
-    "major_cool_meerkat_startle": "<p>Register for a</p><p><span class=\"text-primary\">free</span> entrance test</p><p>and receive consultation</p>",
+    "major_cool_meerkat_startle": "<p>Register for a</p><p>free entrance test</p><p>and receive consultation</p>",
     "stale_fair_pigeon_bake": "Message contact via Facebook",
     "aqua_game_ostrich_leap": "Click to redirect to CoTAI FB page",
     "nimble_low_lamb_cuddle": "Call contact",
@@ -118,7 +118,7 @@
     "moving_equal_moth_fulfill": "We have received your information and will be in contact shortly!",
     "sad_ornate_samuel_praise": "You have sent too many requests. Please try again later.",
     "awful_long_tapir_advise": "<p>Students will receive benefits such as:</p><ul><li> Receive a certificate for each completed course and a certificate of completion for the entire course</li><li> Build a solid portfolio of projects right after the end of the course</li><li> Improve personal skills after each completed project tutoring session</li></ul>",
-    "every_mild_gadfly_attend": "<span class=\"text-primary\">Results</span> and <span class=\"relative z-[1] after:absolute after:bottom-1 after:left-0 after:-z-[1] after:h-1 after:w-full after:bg-secondary/70 after:lg:h-2\" >Certifications</span> 🎉",
+    "every_mild_gadfly_attend": "Certificate of completion🎉",
     "agent_muddy_finch_create": "You are qualified to join the next class 🎉",
     "home_safe_horse_bake": "Watch now",
     "loose_caring_ape_edit": "(You are here)",
@@ -148,5 +148,6 @@
     "teal_grassy_parakeet_buzz": "Price",
     "maroon_soft_sheep_jump": "Course completion certificate {title}",
     "front_proud_iguana_nourish": "Next Instructor",
-    "polite_close_squirrel_cry": "Previous instructor"
+    "polite_close_squirrel_cry": "Previous instructor",
+    "aloof_chunky_oryx_flip": "*Certificate of completion is issued if the learning results meet the requirements for each course"
 }

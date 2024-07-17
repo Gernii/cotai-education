@@ -15,7 +15,7 @@
 </script>
 
 <div
-    class="card card-bordered card-compact w-full max-w-none bg-base-200 sm:w-auto sm:max-w-64"
+    class="card card-bordered card-compact w-full max-w-none bg-base-100 sm:w-auto sm:max-w-64"
 >
     <table class="card-body w-full">
         <tbody>

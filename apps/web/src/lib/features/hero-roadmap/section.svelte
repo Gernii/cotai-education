@@ -60,7 +60,7 @@ C323.057,236.728,319.385,233.668,315.713,233.668z"
         </svg>
     </div>
 
-    <div class="card bg-base-100">
+    <div class="card bg-base-300">
         <div class="hidden gap-x-1 px-6 py-4 lg:flex">
             {#each courses as course, idx}
                 {@const isCourseLast = idx === courses.length - 1}

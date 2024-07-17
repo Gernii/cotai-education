@@ -28,9 +28,9 @@
                 <slot />
             </div>
         </div>
-        <h2 class="mt-4 text-2xl font-bold">{title}</h2>
+        <h2 class="mt-4 text-3xl font-bold">{title}</h2>
         <div class="flex w-full justify-center">
-            <p class="mt-2 text-sm">{description}</p>
+            <p class="mt-4 text-sm">{description}</p>
         </div>
     </div>
 </div>

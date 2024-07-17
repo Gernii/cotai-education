@@ -20,7 +20,6 @@ export function setSliderRefsContext() {
 
     const onChangeSlide = (idx: number) => {
         const teachersBioSlider = get(teachersBioSliderRef);
-        currentReview.set(idx);
         teachersBioSlider?.moveToIdx(idx);
     };
     setContext<SliderRefs>("SliderRefs", {

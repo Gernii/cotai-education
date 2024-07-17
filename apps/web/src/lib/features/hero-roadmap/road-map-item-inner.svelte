@@ -38,7 +38,7 @@
             <div
                 use:melt={$content}
                 transition:fade={{ duration: 100 }}
-                class="z-10 rounded-lg bg-base-100 shadow-lg"
+                class="z-10 rounded-lg bg-base-200 shadow-lg"
             >
                 <div use:melt={$arrow} />
                 <p class="px-4 py-1">{title}</p>

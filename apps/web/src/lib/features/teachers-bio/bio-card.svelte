@@ -12,7 +12,7 @@
     export let details: $$Props["details"] = undefined;
 </script>
 
-<div class="card card-compact h-full w-full bg-base-100 sm:card-normal">
+<div class="card card-compact h-full w-full bg-base-200 sm:card-normal">
     <div class="card-body flex-col gap-x-8 md:flex-row">
         <div
             class="size-32 flex-shrink-0 overflow-hidden rounded-box sm:size-44 lg:size-72"
@@ -29,7 +29,7 @@
             </div>
 
             {#if details}
-                <div class="card bg-base-200">
+                <div class="card bg-base-100">
                     <div class="p-4">
                         <ContentRenderer content={details} />
                     </div>

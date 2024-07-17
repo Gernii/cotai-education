@@ -23,7 +23,7 @@
             role="button"
             class="btn btn-ghost w-full flex-nowrap"
         >
-            <span class="whitespace-nowrap">{title}</span>
+            <span class="whitespace-nowrap uppercase">{title}</span>
             <HeroiconsChevronDown16Solid class="size-4" />
         </div>
         <!-- svelte-ignore a11y-no-noninteractive-tabindex -->

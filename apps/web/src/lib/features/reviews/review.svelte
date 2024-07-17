@@ -24,7 +24,7 @@
 </script>
 
 <div
-    class="card card-bordered card-compact aspect-4 h-full w-full cursor-grab bg-base-100 active:cursor-grabbing"
+    class="card card-bordered card-compact aspect-4 h-full w-full cursor-grab bg-base-200 active:cursor-grabbing"
 >
     <div class="card-body gap-y-4">
         <div class="flex gap-x-2">

@@ -52,12 +52,12 @@
     >
         <div class="relative flex w-7 flex-col items-center sm:w-14">
             <div
-                class="absolute top-4 flex size-6 items-center justify-center rounded-full bg-secondary sm:size-12"
+                class="absolute top-4 flex size-6 items-center justify-center rounded-full bg-base-200 sm:size-12"
             >
                 <div class="size-3 rounded-full bg-primary sm:size-6"></div>
             </div>
             <div
-                class={cx("w-1 bg-secondary sm:w-2", {
+                class={cx("w-1 bg-base-200 sm:w-2", {
                     "mt-4 h-[calc(100%-1rem)]": idx === 0,
                     "h-full": idx !== 0,
                 })}
@@ -65,7 +65,7 @@
         </div>
         <div
             class={cx(
-                "card card-compact w-full border border-base-content/5 bg-base-100 shadow shadow-base-content/5 sm:card-normal",
+                "card card-compact w-full border border-base-content/5 bg-base-200 shadow shadow-base-content/5 sm:card-normal",
                 {
                     "mb-4": !last,
                 },
@@ -84,9 +84,7 @@
                     >
                         <div>
                             <p class="font-semibold">
-                                {m.programDetails_courseRoadmap({
-                                    number: idx + 1,
-                                })}
+                                {m.programDetails_courseRoadmap()}
                             </p>
                             <h1 class="text-xl font-bold">
                                 <a
@@ -103,7 +101,9 @@
                         </div>
                         <ul class="flex flex-wrap gap-x-2 gap-y-2">
                             {#each studyTypes as studyType}
-                                <li class="badge badge-ghost gap-x-1 px-3 py-4">
+                                <li
+                                    class="badge badge-ghost gap-x-1 bg-base-100 px-3 py-4"
+                                >
                                     {courseStudyType[studyType].name}
                                     {#if studyType === "offline"}
                                         <LucideUsers
@@ -122,7 +122,7 @@
                             {/each}
                         </ul>
                         <hr class="h-1 w-12 border-0 bg-secondary" />
-                        <div class="prose-sm flex-grow">
+                        <div class="flex-grow">
                             {@html description}
                         </div>
                         <div class="card-actions">

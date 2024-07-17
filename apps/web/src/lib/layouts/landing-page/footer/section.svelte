@@ -13,7 +13,6 @@
 
     import ContactCard from "./contact-card.svelte";
 
-    import LucideGem from "~icons/lucide/gem";
     import LucideMail from "~icons/lucide/mail";
     import LucidePhoneCall from "~icons/lucide/phone-call";
     import { coursesMap } from "$lib/datas/courses/healpers";
@@ -151,7 +150,6 @@
                                         class="link-hover link link-primary"
                                     >
                                         <span>{m.gemCollection()}</span>
-                                        <LucideGem class="inline" />
                                     </ExternalAnchor>
                                 </li>
                             </ul>

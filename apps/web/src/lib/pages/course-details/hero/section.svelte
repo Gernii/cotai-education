@@ -35,11 +35,15 @@
             <div class="col-span-1 space-y-4 lg:col-span-3">
                 <div>
                     <p class="text-lg font-semibold">{m.course()}</p>
-                    <h1 class="text-5xl font-extrabold">{course.title}</h1>
+                    <h1 class="text-5xl font-extrabold text-primary">
+                        {course.title}
+                    </h1>
                 </div>
                 <div class="flex flex-wrap gap-x-4 gap-y-1">
                     <div class="flex items-center gap-x-1">
-                        <HeroiconsClock class="size-6 stroke-2 text-primary" />
+                        <HeroiconsClock
+                            class="size-6 stroke-2 text-secondary"
+                        />
                         <p>
                             {m.totalSessions({ number: totalLessons })}
                         </p>
@@ -55,7 +59,7 @@
                 {/if}
             </div>
             <div
-                class="group card col-span-1 w-full self-start overflow-hidden border border-base-content/5 bg-base-100 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5 lg:col-span-2"
+                class="group card col-span-1 w-full self-start overflow-hidden border border-base-content/5 bg-base-200 shadow shadow-base-content/5 hover:shadow-lg hover:shadow-base-content/5 lg:col-span-2"
             >
                 <figure class="aspect-thumbnail169">
                     {#if courseThumbnail}
@@ -68,19 +72,22 @@
                 </figure>
 
                 <div class="card-body">
-                    <div>
-                        <p class="text-sm">{m.teal_grassy_parakeet_buzz()}</p>
-                        <p class="text-2xl font-semibold">
-                            {#if course.price}
-                                {course.price.toLocaleString("vi-VN", {
-                                    style: "currency",
-                                    currency: "VND",
-                                })}
-                            {:else}
-                                {m.contact()}
-                            {/if}
-                        </p>
-                    </div>
+                    {#if course.price}
+                        <div>
+                            <p class="text-sm">
+                                {m.teal_grassy_parakeet_buzz()}
+                            </p>
+                            <p class="text-2xl font-semibold">
+                                {#if course.price}
+                                    {course.price.toLocaleString("vi-VN", {
+                                        style: "currency",
+                                        currency: "VND",
+                                    })}
+                                {/if}
+                            </p>
+                        </div>
+                    {/if}
+
                     {#if course.registerUrl}
                         <ExternalAnchor
                             href={course.registerUrl}
@@ -88,7 +95,8 @@
                         >
                             {m.registerNow()}
                         </ExternalAnchor>
-
+                    {/if}
+                    {#if course.price || course.registerUrl}
                         <div class="divider uppercase">{m.or()}</div>
                     {/if}
                     <div class="space-y-2">

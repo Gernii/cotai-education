@@ -31,7 +31,7 @@
     class="overflow-hidden rounded-box border border-base-content/5"
 >
     <button
-        class="flex w-full items-center gap-x-2 bg-base-100 px-6 py-4 pe-4 text-left text-sm font-medium sm:gap-x-3"
+        class="flex w-full items-center gap-x-2 bg-base-200 px-6 py-4 pe-4 text-left text-sm font-medium hover:bg-base-200/80 sm:gap-x-3"
         use:melt={$trigger}
     >
         <LucideMessageCircleQuestion class="size-5 flex-shrink-0 sm:size-6" />
@@ -49,7 +49,7 @@
     </button>
     {#if $open}
         <div
-            class="bg-base-200"
+            class="bg-base-300"
             use:melt={$collapsibleContent}
             transition:slide
         >

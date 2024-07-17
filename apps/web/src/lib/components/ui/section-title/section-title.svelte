@@ -13,7 +13,7 @@
     export { className as class };
 
     $: className = cx(
-        "text-2xl font-bold md:text-3xl lg:text-4xl",
+        "text-2xl font-bold text-secondary md:text-3xl lg:text-4xl",
         {
             "pb-4 sm:pb-8": paddingBottom,
         },

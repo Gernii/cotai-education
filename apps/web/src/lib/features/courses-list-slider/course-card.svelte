@@ -41,7 +41,7 @@
 
 {#if title && description}
     <li
-        class="group card card-bordered card-compact m-2 border-base-content/5 bg-base-100 shadow shadow-base-content/5 ring-primary hover:shadow-lg hover:shadow-base-content/5"
+        class="group card card-bordered card-compact m-2 border-base-content/5 bg-base-200 shadow shadow-base-content/5 ring-primary hover:shadow-lg hover:shadow-base-content/5"
         class:ring-4={currentCourse}
     >
         <div class="overflow-hidden rounded-t-box">
@@ -53,7 +53,6 @@
                 </a>
             {/if}
         </div>
-
         <div class="card-body">
             <div>
                 {#if isDisabled}

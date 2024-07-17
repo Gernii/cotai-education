@@ -15,15 +15,15 @@
 </script>
 
 <div class="flex w-full justify-center gap-2 py-2">
-    {#each [...Array(teachersBio.length)] as _, idx}
+    {#each teachersBio as bio, idx}
         <button
             class={cx("btn btn-circle  btn-xs", {
                 "btn-primary": $currentReview === idx,
-                "bg-base-300 dark:bg-base-100": $currentReview !== idx,
+                "bg-base-200": $currentReview !== idx,
             })}
             on:click={() => sliderRefsContext.onChangeSlide(idx)}
-            aria-label={`${idx + 1}`}
-            title={`${idx + 1}`}
+            aria-label={bio.name}
+            title={bio.name}
         />
     {/each}
 </div>

@@ -10,29 +10,21 @@
 
     export let href: $$Props["href"] = undefined;
     export { className as class };
+
+    $: classNames = twMerge(
+        "btn btn-ghost flex-nowrap justify-start uppercase",
+        className,
+    );
 </script>
 
 {#if href}
     {#if href.startsWith("#")}
         <!-- svelte-ignore a11y-missing-attribute -->
-        <a
-            class={twMerge(
-                "btn btn-ghost flex-nowrap justify-start",
-                className,
-            )}
-            use:scrollTo={href.replace("#", "")}
-        >
+        <a class={classNames} use:scrollTo={href.replace("#", "")}>
             <slot />
         </a>
     {:else}
-        <a
-            class={twMerge(
-                "btn btn-ghost flex-nowrap justify-start",
-                className,
-            )}
-            {href}
-            {...$$restProps}
-        >
+        <a class={classNames} {href} {...$$restProps}>
             <slot />
         </a>
     {/if}
