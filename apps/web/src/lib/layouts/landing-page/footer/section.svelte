@@ -109,7 +109,7 @@
                         >
                             {m.course()}
                         </p>
-                        <hr class="border-base-content/80" />
+                        <hr class="w-1/2 border-base-content/80" />
                         <ul class="space-y-2 font-semibold">
                             {#each coursesMap as [id, courseGetter]}
                                 {#if courseGetter}
@@ -133,7 +133,7 @@
                             >
                                 {m.aboutus()}
                             </p>
-                            <hr class="border-base-content/80" />
+                            <hr class="w-1/2 border-base-content/80" />
                             <ul class="space-y-2 font-semibold">
                                 <li>
                                     <a
@@ -152,9 +152,20 @@
                                         <span>{m.gemCollection()}</span>
                                     </ExternalAnchor>
                                 </li>
+                                <li>
+                                    <a
+                                        href={routerPath.faq}
+                                        aria-label={m.moving_aware_penguin_greet()}
+                                        class="link-hover link"
+                                    >
+                                        <span>
+                                            {m.moving_aware_penguin_greet()}
+                                        </span>
+                                    </a>
+                                </li>
                             </ul>
                         </div>
-                        <div class="space-y-3">
+                        <!-- <div class="space-y-3">
                             <p
                                 class="text-sm font-semibold uppercase text-base-content/80"
                             >
@@ -182,7 +193,7 @@
                                     </a>
                                 </li>
                             </ul>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
