@@ -9,20 +9,16 @@
     import LucideChevronDown from "~icons/lucide/chevron-down";
     import type { FAQProps } from "$lib/datas/faq/types";
 
-    interface $$Props extends FAQProps {
-        isFirst?: boolean;
-    }
+    interface $$Props extends FAQProps {}
 
     export let title: $$Props["title"] = undefined;
     export let content: $$Props["content"] = undefined;
-    export let isFirst: $$Props["isFirst"] = undefined;
 
     const {
         elements: { root, content: collapsibleContent, trigger },
         states: { open },
     } = createCollapsible({
         forceVisible: true,
-        defaultOpen: isFirst ?? false,
     });
 </script>
 

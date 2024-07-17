@@ -1,9 +1,10 @@
 import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
-import type { FAQProps } from "./types";
+import { FAQShowLocation, type FAQProps } from "./types";
 
 export const dataFAQs = (): FAQProps[] => [
     {
         title: "Làm sao để đăng ký khóa học?",
+        show: [FAQShowLocation.course],
         content: parseMarkdownToHTML(
             `Nếu đã xác định khóa học phù hợp, bạn có thể đăng ký lớp trực tiếp tại [form](https://go.cot.ai/091023).
 
@@ -14,6 +15,7 @@ Nếu bạn đã học trước lập trình hoặc Machine Learning, bạn sẽ
     },
     {
         title: "Trong các bước đăng ký, đánh giá kiến thức nền sẽ được thực hiện ra sao? Có bắt buộc không?",
+        show: [FAQShowLocation.course],
         content: parseMarkdownToHTML(`Kiểm tra đánh giá kiến thức nền được thực hiện khi bạn đăng ký các khóa học từ MathCoding4AI trở lên, nhằm giúp xác nhận sự phù hợp để việc học tập của bạn đạt hiệu quả cao nhất.
 
 Kiểm tra được thực hiện online qua Zoom, gồm câu hỏi viết trên nền tảng Aharium và câu hỏi phỏng vấn.`),
@@ -34,6 +36,7 @@ Thực tế còn cho thấy với năng lực AI kết hợp *chuyên môn riên
     },
     {
         title: "Người chưa từng học lập trình có phù hợp để học không?",
+        show: [FAQShowLocation.course],
         content: parseMarkdownToHTML(
             `Chương trình được thiết kế cho cả người mới bắt đầu & chưa biết lập trình ("from zero") có thể nhanh chóng "đắm mình vào lập trình qua tương tác với AI". Cụ thể khóa [Python Coding with AI](/courses/pythonai) là hoàn toàn phù hợp với bạn.`,
         ),
@@ -54,12 +57,14 @@ Ngoài ra các em học sinh THPT còn được hướng dẫn tham gia các cu�
     },
     {
         title: "Thời gian để hoàn thành toàn bộ lộ trình 5 lớp là bao lâu? Làm sao để học trong thời gian ngắn nhất?",
+        show: [FAQShowLocation.course],
         content: parseMarkdownToHTML(`Với tốc độ trung bình 1 bài học mỗi tuần và mỗi khóa gồm 12 bài học thì thời gian hoàn thành toàn bộ lộ trình tương đương khoảng 60 tuần (14 tháng).
 
 Bạn có thể tăng tốc với hình thức học self-paced (vài bài mỗi tuần), ví dụ mỗi tuần học 2 bài thì khoảng 7 tháng là hoàn thành.`),
     },
     {
         title: "Sau khi hoàn thành toàn bộ lộ trình, học viên có thể làm được gì? Hoặc nên học thêm chương trình gì sau đó?",
+        show: [FAQShowLocation.course],
         content: parseMarkdownToHTML(`Các học viên của chương trình sau khi "nâng cấp" năng lực AI đã được tuyển dụng làm kỹ sư AI & Khoa học dữ liệu ở các công ty Việt Nam và quốc tế, hoặc tự mở công ty khởi nghiệp. Một số học viên vừa thích làm sản phẩm vừa đam mê giảng dạy AI đã tham gia CoTAI. Nhiều học viên được công ty cử đi học đã về áp dụng công nghệ AI cho chính công ty chủ quản.
 
 Sau khi hoàn thành lộ trình 5 khoá học, học viên có thể đăng ký khoá học chuyên sâu MathAIR về Toán cho *nghiên cứu* AI & Robotics, hoặc các khoá học ngắn hạn chuyên *làm sản phẩm* AI, và cả tham gia các hoạt động ngoại khoá.`),
@@ -97,6 +102,12 @@ Sau khi hoàn thành lộ trình 5 khoá học, học viên có thể đăng ký
         title: "Làm sao để được hỗ trợ về Thư giới thiệu (LoR: Letter of Recommendation) cho hồ sơ xin học bổng du học & hồ sơ xin việc?",
         content: parseMarkdownToHTML(
             `Học viên được khuyến khích trao đổi trực tiếp với giảng viên *sớm* để ngoài LoR còn được tư vấn hướng nghiệp trong lĩnh vực công nghệ. Học viên cần sớm lên "chiến lược" xây dựng hồ sơ năng lực (profile building) với chi tiết các dự án (portfolio) để có quyết tâm học nhanh thành tài ngay từ bây giờ.`,
+        ),
+    },
+    {
+        title: "Trợ giúp thêm",
+        content: parseMarkdownToHTML(
+            `Nếu có câu hỏi khác, CoTAI rất sẵn sàng hỗ trợ bạn qua email contact@cot.ai, hoặc phone/zalo 081 550 3467.`,
         ),
     },
 ];

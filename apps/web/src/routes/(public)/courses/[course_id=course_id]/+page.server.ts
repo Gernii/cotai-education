@@ -14,6 +14,7 @@ import { dataStudentProjects } from "$lib/datas/student-projects/student-project
 import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
 import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types";
 import { dataFAQs } from "$lib/datas/faq/faq.server";
+import { FAQShowLocation } from "$lib/datas/faq/types.js";
 
 export const load = async ({ params }) => {
     const courseId = params.course_id as CourseIds;
@@ -43,7 +44,7 @@ export const load = async ({ params }) => {
 
     const heroRoadmapCourse = getHeroRoadmapCourse();
 
-    const faqs = dataFAQs();
+    const faqs = courseFAQ();
 
     return {
         registerForm,
@@ -54,6 +55,14 @@ export const load = async ({ params }) => {
         heroRoadmapCourse,
         faqs,
     };
+};
+
+const courseFAQ = () => {
+    const faqs = dataFAQs();
+
+    const filteredFAQs = faqs.filter((faq) => faq.show?.includes(FAQShowLocation.course));
+
+    return filteredFAQs;
 };
 
 const courseMappingData = (course: CourseProps): CourseProps => {
