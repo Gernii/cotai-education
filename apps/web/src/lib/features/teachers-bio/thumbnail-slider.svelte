@@ -65,6 +65,11 @@
     onDestroy(() => {
         $teachersThumbnailsSliderRef?.destroy();
     });
+
+    const onChangeSlide = (idx: number) => {
+        sliderRefsContext.onChangeSlide(idx);
+        currentReview.set(idx);
+    };
 </script>
 
 <div class="flex gap-x-1">
@@ -91,10 +96,8 @@
                 <ThumbnailCard
                     avatar={bio.avatar}
                     teacherName={bio.name}
-                    aria-label={`${idx + 1}`}
-                    title={`${idx + 1}`}
                     active={$currentReview === idx}
-                    on:click={() => sliderRefsContext.onChangeSlide(idx)}
+                    on:click={() => onChangeSlide(idx)}
                 />
             </div>
         {/each}

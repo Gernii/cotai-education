@@ -36,10 +36,7 @@
             },
 
             detailsChanged: (s) => {
-                if ($currentReview === s.track.details.rel) {
-                    return;
-                }
-                $currentReview = s.track.details.rel;
+                currentReview.set(s.track.details.rel);
             },
             created: () => {
                 isSlideRendered = true;

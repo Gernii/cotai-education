@@ -39,10 +39,7 @@ importers:
         specifier: ^3.23.8
         version: 3.23.8
     devDependencies:
-      '@fontsource/inter':
-        specifier: ^5.0.18
-        version: 5.0.18
-      '@fontsource/mulish':
+      '@fontsource/source-code-pro':
         specifier: ^5.0.18
         version: 5.0.18
       '@iconify-json/devicon':
@@ -689,11 +686,8 @@ packages:
   '@floating-ui/utils@0.2.4':
     resolution: {integrity: sha512-dWO2pw8hhi+WrXq1YJy2yCuWoL20PddgGaqTgVe4cOS9Q6qklXCiA1tJEqX6BEwRNSCP84/afac9hd4MS+zEUA==}
 
-  '@fontsource/inter@5.0.18':
-    resolution: {integrity: sha512-YCsoYPTcs713sI7tLtxaPrIhXAXvEetGg5Ry02ivA8qUOb3fQHojbK/X9HLD5OOKvFUNR2Ynkwb1kR1hVKQHpw==}
-
-  '@fontsource/mulish@5.0.18':
-    resolution: {integrity: sha512-vcJcdhJpd10NLsWq5Op6++zEs5UhnVf1BdjvN1Uv+jOGmYD/PFTE/V8IxN1FO/jNY4x27gMdRy2mTMXU+ST6Kw==}
+  '@fontsource/source-code-pro@5.0.18':
+    resolution: {integrity: sha512-5z+MFKaj+qs0PGAzv+WpMBTd8wEvAJEqATj6cGFVFJmFk6A6liJB07F2HAzLe/83FYikGeE4okh1sHM2JDVV+Q==}
 
   '@gcornut/valibot-json-schema@0.31.0':
     resolution: {integrity: sha512-3xGptCurm23e7nuPQkdrE5rEs1FeTPHhAUsBuwwqG4/YeZLwJOoYZv+fmsppUEfo5y9lzUwNQrNqLS/q7HMc7g==}
@@ -4488,9 +4482,7 @@ snapshots:
 
   '@floating-ui/utils@0.2.4': {}
 
-  '@fontsource/inter@5.0.18': {}
-
-  '@fontsource/mulish@5.0.18': {}
+  '@fontsource/source-code-pro@5.0.18': {}
 
   '@gcornut/valibot-json-schema@0.31.0':
     dependencies:

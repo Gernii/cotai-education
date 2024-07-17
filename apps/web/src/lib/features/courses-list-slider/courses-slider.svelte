@@ -101,7 +101,7 @@
                 <button
                     class={cx("btn btn-circle  btn-xs", {
                         "btn-primary": currentReview === idx,
-                        "bg-base-300 dark:bg-base-100": currentReview !== idx,
+                        "bg-base-200": currentReview !== idx,
                     })}
                     on:click={() => onChangeSlide(idx)}
                     aria-label={`${idx + 1}`}

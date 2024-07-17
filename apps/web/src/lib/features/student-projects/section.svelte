@@ -70,7 +70,7 @@
                         {#each projects as project}
                             <button
                                 use:melt={$trigger(project.id)}
-                                class="flex w-full items-center justify-between gap-y-1 rounded-box bg-base-100 px-4 py-4 text-left hover:bg-base-200"
+                                class="flex w-full items-center justify-between gap-y-1 rounded-box bg-base-200 px-4 py-4 text-left hover:bg-base-200/80"
                             >
                                 <div>
                                     <p class="font-semibold">

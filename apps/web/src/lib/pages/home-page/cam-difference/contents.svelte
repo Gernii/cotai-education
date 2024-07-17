@@ -27,7 +27,7 @@
                 <button
                     use:melt={$trigger(id)}
                     class={cx(
-                        "w-full bg-[#asd] bg-base-100 p-5 text-left text-base font-semibold hover:bg-base-200 sm:text-lg",
+                        "w-full bg-base-200 p-5 text-left text-base font-semibold hover:bg-base-200/80 sm:text-lg",
                         {
                             "border-t border-base-content/40": idx !== 0,
                         },
@@ -42,7 +42,7 @@
                 <div
                     use:melt={$accordionContent(id)}
                     transition:slide
-                    class="border-t border-base-content/40 bg-base-200 px-10 py-4 text-sm sm:text-base"
+                    class="border-t border-base-content/40 bg-base-300 px-10 py-4 text-sm sm:text-base"
                     class:rounded-b-xl={idx === dataArray.length - 1}
                 >
                     {@html content.description}

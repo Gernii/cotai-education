@@ -46,22 +46,7 @@ export default defineConfig(({ mode }) => {
                              * Name of the font family.
                              * Require the `@fontsource/mulish` package to be installed.
                              */
-                            name: "Mulish",
-                            /**
-                             * Load only a subset of the font family.
-                             */
-                            weights: [400, 500, 600, 700, 800],
-                            /**
-                             * Restrict the font styles to load.
-                             */
-                            styles: ["normal"],
-                        },
-                        {
-                            /**
-                             * Name of the font family.
-                             * Require the `@fontsource/mulish` package to be installed.
-                             */
-                            name: "Inter",
+                            name: "Source Code Pro",
                             /**
                              * Load only a subset of the font family.
                              */

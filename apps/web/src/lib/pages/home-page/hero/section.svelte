@@ -28,7 +28,7 @@
 </script>
 
 <section
-    class="flex min-h-dvh w-full flex-col justify-center bg-primary/10 pt-header-space-sm dark:bg-base-300"
+    class="flex min-h-dvh w-full flex-col justify-center pt-header-space-sm"
 >
     <Container>
         <ContainerContent class="space-y-8">
@@ -40,9 +40,7 @@
                         <div class="space-y-3 text-4xl lg:text-5xl xl:text-6xl">
                             <p>Học tăng tốc</p>
                             <p>
-                                <span
-                                    class="relative z-[1] after:absolute after:bottom-1 after:left-0 after:-z-[1] after:h-1 after:w-full after:bg-primary/70 after:lg:h-2"
-                                >
+                                <span class="italic text-secondary">
                                     lập trình dự án AI
                                 </span>
                             </p>

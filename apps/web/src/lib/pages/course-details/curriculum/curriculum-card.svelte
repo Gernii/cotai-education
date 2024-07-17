@@ -39,7 +39,7 @@
     class="overflow-hidden rounded-box border border-base-content/5"
 >
     <button
-        class="flex w-full items-center gap-x-3 bg-base-100 px-4 py-3 text-left text-base font-medium sm:px-6 sm:py-4 sm:text-xl"
+        class="flex w-full items-center gap-x-3 bg-base-200 px-4 py-3 text-left text-base font-medium hover:bg-base-200/80 sm:px-6 sm:py-4 sm:text-xl"
         use:melt={$trigger}
         aria-label={m.glad_antsy_gecko_explore()}
     >
@@ -54,7 +54,7 @@
         <span class:text-primary={highlight}>{title}</span>
     </button>
     {#if isContentEnabled && $open}
-        <div class="bg-base-200" use:melt={$content} transition:slide>
+        <div class="bg-base-300" use:melt={$content} transition:slide>
             <div
                 class={cx("px-4 py-4 sm:pl-8 sm:pr-8 md:pl-12", {
                     "grid grid-cols-1 gap-x-8 md:grid-cols-2": images,

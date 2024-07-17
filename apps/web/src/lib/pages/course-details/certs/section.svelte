@@ -69,33 +69,38 @@
                     <div use:confetti />
                 </div>
             {/if}
-            <div class:opacity-0={!isInview} class:animate-fade-left={isInview}>
-                <SectionTitle>
-                    {@html m.every_mild_gadfly_attend()}
-                </SectionTitle>
-            </div>
-            <div class="grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-2">
-                <ul
-                    class="space-y-2 text-base font-semibold sm:text-lg"
-                    class:opacity-0={!isInview}
-                    class:animate-fade-right={isInview}
-                >
-                    {#each results as result}
-                        <li
-                            class="group flex items-center gap-x-2 hover:text-primary"
-                        >
-                            <LucideCheckCheck
-                                class="size-7 flex-shrink-0 text-secondary group-hover:animate-jump"
-                            />
-                            {result}
-                        </li>
-                    {/each}
 
-                    <li class="text-xs font-normal italic">
-                        * Chứng nhận hoàn thành được cấp nếu kết quả học tập đạt
-                        đủ điều kiện theo yêu cầu của từng khóa học
-                    </li>
-                </ul>
+            <div class="grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-2">
+                <div>
+                    <div
+                        class:opacity-0={!isInview}
+                        class:animate-fade-left={isInview}
+                    >
+                        <SectionTitle>
+                            {@html m.every_mild_gadfly_attend()}
+                        </SectionTitle>
+                    </div>
+                    <ul
+                        class="space-y-2 text-base font-semibold sm:text-lg"
+                        class:opacity-0={!isInview}
+                        class:animate-fade-right={isInview}
+                    >
+                        {#each results as result}
+                            <li
+                                class="group flex items-center gap-x-2 hover:text-secondary"
+                            >
+                                <LucideCheckCheck
+                                    class="size-7 flex-shrink-0 text-secondary group-hover:animate-jump"
+                                />
+                                {result}
+                            </li>
+                        {/each}
+
+                        <li class="text-xs font-normal italic">
+                            {m.aloof_chunky_oryx_flip()}
+                        </li>
+                    </ul>
+                </div>
                 <div
                     class:opacity-0={!isInview}
                     class:animate-fade-left={isInview}

@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { cx } from "cva";
+
     import { scrollTo } from "$lib/libs/svelte-scrolling";
 
     import { routerPath } from "$lib/utils/constants";
@@ -30,9 +32,10 @@
         </div>
     {:else if isNavigate}
         <a
-            class="card h-full"
-            class:bg-base-300={!active}
-            class:btn-primary={active}
+            class={cx("card h-full", {
+                "bg-base-200 hover:bg-base-200/80": !active,
+                "btn-primary": active,
+            })}
             {title}
             href={routerPath.courseId(id)}
         >
@@ -40,9 +43,10 @@
         </a>
     {:else}
         <a
-            class="card h-full"
-            class:bg-base-300={!active}
-            class:btn-primary={active}
+            class={cx("card h-full", {
+                "bg-base-200 hover:bg-base-200/80": !active,
+                "btn-primary": active,
+            })}
             {title}
             use:scrollTo={id}
         >

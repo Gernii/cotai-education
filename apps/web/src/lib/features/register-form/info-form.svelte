@@ -32,7 +32,7 @@
     export const snapshot = { capture, restore };
 </script>
 
-<div class="card card-bordered bg-base-100">
+<div class="card card-bordered bg-base-200">
     <div class="card-body space-y-6">
         <div class="ml-1">
             <h2 class="card-title">

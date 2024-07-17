@@ -42,7 +42,7 @@
                 </div>
                 <div class="flex flex-col">
                     <a
-                        class="group card card-compact delay-0 hover:bg-base-100 hover:shadow"
+                        class="group card card-compact hover:bg-base-200 hover:shadow"
                         href={contacts.facebook}
                         class:opacity-0={!$isInview}
                         class:animate-fade-up={$isInview}
@@ -64,7 +64,7 @@
                         </div>
                     </a>
                     <a
-                        class="group card card-compact animate-delay-150 hover:bg-base-100 hover:shadow"
+                        class="group card card-compact animate-delay-150 hover:bg-base-200 hover:shadow"
                         href={`tel:${contacts.phone.tel}`}
                         class:opacity-0={!$isInview}
                         class:animate-fade-up={$isInview}
@@ -88,7 +88,7 @@
                         </div>
                     </a>
                     <a
-                        class="group card card-compact animate-delay-300 hover:bg-base-100 hover:shadow"
+                        class="group card card-compact animate-delay-300 hover:bg-base-200 hover:shadow"
                         href={`mailto:${contacts.email}`}
                         class:opacity-0={!$isInview}
                         class:animate-fade-up={$isInview}

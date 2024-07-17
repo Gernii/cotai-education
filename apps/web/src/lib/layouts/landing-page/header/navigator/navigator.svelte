@@ -11,7 +11,6 @@
     import NavigatorItem from "./navigator-item.svelte";
     import NavigatorCollapse from "./navigator-collapse.svelte";
 
-    import LucideGem from "~icons/lucide/gem";
     import HeroiconsXMark from "~icons/heroicons/x-mark";
     import { coursesMap } from "$lib/datas/courses/healpers";
     interface $$Props {
@@ -54,7 +53,7 @@
         </NavigatorItem>
         {#if coursesMap.size > 0}
             <NavigatorCollapse title={m.ourPrograms()} {sidenav}>
-                <ul class="menu w-full">
+                <ul class="menu w-full shadow-2xl">
                     {#each coursesMap as [id, courseGetter]}
                         {#if courseGetter}
                             {@const course = courseGetter()}
@@ -62,7 +61,8 @@
                                 <a
                                     href={routerPath.courseId(id)}
                                     class={cx("w-full", {
-                                        "whitespace-nowrap": !sidenav,
+                                        "whitespace-nowrap hover:bg-primary":
+                                            !sidenav,
                                     })}
                                 >
                                     {course.title}
@@ -81,14 +81,7 @@
             class="text-primary"
             target="_blank"
         >
-            {#if !sidenav}
-                <LucideGem />
-            {/if}
             {m.gemCollection()}
-
-            {#if sidenav}
-                <LucideGem />
-            {/if}
         </NavigatorItem>
 
         <NavigatorItem href="#footer" target="_self" aria-label={m.contact()}>
