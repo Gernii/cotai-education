@@ -35,8 +35,7 @@
 		"postbuild": "node scripts/post-build.js"
 	},
 	"devDependencies": {
-		"@fontsource/inter": "^5.0.18",
-		"@fontsource/mulish": "^5.0.18",
+		"@fontsource/source-code-pro": "^5.0.18",
 		"@iconify-json/devicon": "^1.1.44",
 		"@iconify-json/flag": "^1.1.53",
 		"@iconify-json/heroicons": "^1.1.21",

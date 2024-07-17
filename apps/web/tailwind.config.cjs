@@ -6,10 +6,10 @@ import daisyThemes from "daisyui/src/theming/themes";
 import Animated from "tailwindcss-animated";
 const config = {
     content: ["./src/**/*.{html,js,svelte,ts}"],
-    darkMode: ["class", '[data-theme="dark"]'],
+    // darkMode: ["class", '[data-theme="dark"]'],
     theme: {
         fontFamily: {
-            sans: ['"Inter"', '"Mulish"', ...defaultTheme.fontFamily.sans],
+            sans: ['"Source Code Pro"', ...defaultTheme.fontFamily.sans],
         },
         extend: {
             spacing: {
@@ -30,7 +30,7 @@ const config = {
             typography: {
                 DEFAULT: {
                     css: {
-                        maxWidth: "100ch", // add required value here
+                        maxWidth: "none", // add required value here
                         color: "inherit",
                     },
                 },
@@ -40,33 +40,17 @@ const config = {
     daisyui: {
         themes: [
             {
-                light: {
-                    ...daisyThemes["winter"],
-                    primary: "#fc8c04",
-                    "primary-content": "oklch(97.03% 0.015 240.310)",
-                    secondary: "oklch(71.03% 0.163 240.29)",
-                    "secondary-content": "oklch(97.03% 0.015 240.310)",
-
-                    "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
-                    "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
-                    "--rounded-badge": "1.9rem", // border radius rounded-badge utility class, used in badges and similar
-                    "--animation-btn": "0.25s", // duration of animation when you click on button
-                    "--animation-input": "0.2s", // duration of animation for inputs like checkbox, toggle, radio, etc
-                    "--btn-focus-scale": "0.95", // scale transform of button when you focus on it
-                    "--border-btn": "1px", // border width of buttons
-                    "--tab-border": "1px", // border width of tabs
-                    "--tab-radius": "0.5rem", // border radius of tabs}
-                },
-            },
-            {
                 dark: {
                     ...daisyThemes["dark"],
-                    primary: "#fc8c04",
-                    "primary-content": "oklch(97.03% 0.015 240.310)",
-                    secondary: "oklch(71.03% 0.163 240.29)",
-                    "secondary-content": "oklch(97.03% 0.015 240.310)",
+                    primary: "#E68369",
+                    "primary-content": "#232946",
+                    secondary: "#ECCEAE",
+                    "secondary-content": "#232946",
 
-                    "base-content": "oklch(90.00% 0.0216 264.435964)",
+                    "base-content": "#edf7fe",
+                    "base-100": "#232946",
+                    "base-200": "#0f132e",
+                    "base-300": "#010115",
 
                     "--rounded-box": "1rem", // border radius rounded-box utility class, used in card and other large boxes
                     "--rounded-btn": "0.5rem", // border radius rounded-btn utility class, used in buttons and similar element
