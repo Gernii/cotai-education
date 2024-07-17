@@ -1,5 +1,4 @@
 <script lang="ts">
-    import { setContext } from "svelte";
     import { writable } from "svelte/store";
 
     import LogoCotAI from "$lib/assets/logo/CoTAI-Ver0-640.png?imagetools";
@@ -8,10 +7,8 @@
 
     import * as m from "$i18n/messages";
 
-    import { HeaderScrollContext } from "./context";
     import { Navigator } from "./navigator";
     import { SidenavTrigger } from "./sidenav";
-    import { headerClassNameHandler } from "./styles";
     interface $$Props {
         disableScrollEvent?: boolean;
     }
@@ -20,12 +17,6 @@
         false;
 
     const isScroll = writable(false);
-
-    setContext(HeaderScrollContext, isScroll);
-
-    $: headerClassName = headerClassNameHandler({
-        disableScrollEvent,
-    });
 
     const onScrollHandler = (e: Event) => {
         if (disableScrollEvent) return;
