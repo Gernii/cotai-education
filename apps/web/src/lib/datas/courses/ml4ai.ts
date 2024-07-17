@@ -68,164 +68,122 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
 
     curriculum: [
         {
-            title: "Representation",
-            hidden: false,
-            classesCountable: true,
+            title: "S1. Representation",
             details: {
-                hidden: false,
+                content: `Học cách biểu diễn kiến thức, khái niệm trong cuộc sống bằng những con số (vector) để đưa vào máy tính.
 
-                content: `- Học cách biểu diễn kiến thức, khái niệm trong cuộc sống bằng những con số (vector) cho máy tính hiểu.
-- Bài tập ứng dụng: 
-    - Hệ thống "Nhận diện khuôn mặt"
-    - Game: tìm từ có cùng ngữ nghĩa trong tiếng Anh.
-    - Mô hình AI tạo sinh ảnh khuôn mặt mới.`,
+Bài tập ứng dụng: 
+- Hệ thống "Nhận diện khuôn mặt"
+- Game: tìm từ có cùng ngữ nghĩa trong tiếng Anh.
+- Mô hình AI tạo sinh ảnh khuôn mặt mới.`,
             },
         },
         {
-            title: "Linear Predictor",
-            hidden: false,
-            classesCountable: true,
+            title: "S2. Linear Predictor",
             details: {
-                hidden: false,
+                content: `Học về nguyên lý để tạo ra các mô hình AI cơ bản nhất - **mô hình tuyến tính** - để dự báo / phân loại.
 
-                content: `- Học về nguyên lý để tạo ra các mô hình AI có khả năng dự báo giá trị.
-- Bài tập ứng dụng: 
-    - Mô hình AI nhận diện và đánh dấu chó, mèo.
-    - Mô hình AI nhận dạng chữ số viết tay.`,
+Bài tập ứng dụng: 
+- Mô hình AI nhận diện và khoanh vùng chó, mèo.
+- Mô hình AI nhận dạng chữ số viết tay.`,
             },
         },
         {
-            title: "MLP (Multi-Layer Perceptron)",
-            hidden: false,
-            classesCountable: true,
+            title: "S3. Multi-Layer Perceptron (MLP)",
             details: {
-                hidden: false,
+                content: `Học về mạng neuron nhân tạo: một loại mô hình mô phỏng cách não người xử lý thông tin và là nền tảng của các mô hình học sâu (Deep Learning).
 
-                content: `- Học về mạng neuron nhân tạo: một loại mô hình mô phỏng cách não người xử lý thông tin và là nền tảng của các mô hình học sâu (Deep Learning).
-- Bài tập ứng dụng: 
-    - Case Study: Phân tích lỗi sai của mô hình khi dự đoán.
-    - Thông qua việc huấn luyện mô hình AI tái tạo chữ viết tay, từ đó tìm hiểu và trả lời câu hỏi "Liệu mô hình AI có thật sự hiểu được hình ảnh?"`,
+Bài tập ứng dụng: 
+- Case Study: Phân tích lỗi sai của mô hình khi dự đoán.
+- Thông qua **mô hình AI tái tạo chữ viết tay**, từ đó tìm hiểu và trả lời câu hỏi "Liệu mô hình AI có thật sự hiểu được hình ảnh?"`,
             },
         },
         {
-            title: "Training Loss & Evaluation Metrics → Optimization",
-            hidden: false,
-            classesCountable: true,
+            title: "S4. Training Loss & Evaluation Metrics → Optimization",
             details: {
-                hidden: false,
+                content: `Hiểu cách máy tính và con người đánh giá chất lượng của các mô hình AI, từ đó hiểu được khái niệm "học - learning" trong Machine Learning.
 
-                content: `- Hiểu cách máy tính và con người đánh giá chất lượng của các mô hình AI, từ đó hiểu được cách các mô hình AI "học".
-- Bài tập ứng dụng:
-    - Mô hình AI đánh giá bình luận tiếng Anh của khách hàng.`,
+Bài tập ứng dụng:
+- Mô hình AI đánh giá bình luận tiếng Anh của khách hàng.`,
             },
         },
         {
-            title: "Kiểm tra giữa kỳ",
-            hidden: false,
-            classesCountable: true,
+            title: "S5. Kiểm tra giữa kỳ",
             details: {
-                hidden: false,
+                content: `Ôn tập và đánh giá kiến thức học được.
 
-                content: `- Ôn tập và đánh giá kiến thức học được.
-- Bài tập ứng dụng:
-    - Mô hình AI dự báo nhân viên nghỉ việc.
-    - Case Study: Phân tích dữ liệu hình ảnh bằng AI.`,
+Bài tập ứng dụng:
+- Mô hình AI dự báo nhân viên nghỉ việc.
+- Case Study: Phân tích dữ liệu hình ảnh bằng AI.`,
             },
         },
         {
-            title: "CNN (Convolutional Neural Network)",
-            hidden: false,
-            classesCountable: true,
+            title: "S6. Convolutional Neural Networks (CNNs)",
             details: {
-                hidden: false,
+                content: `Học về mạng neuron tích chập, một loại mô hình đặc biệt hiệu quả trong việc xử lý hình ảnh.
 
-                content: `- Học về mạng neuron tích chập, một loại mô hình đặc biệt hiệu quả trong việc xử lý hình ảnh.
-- Bài tập ứng dụng:
-    - Mô hình AI phát hiện vết nứt trên bê tông.
-    - Mô hình AI phân loại lá cây bị bệnh.
-    - Mô hình AI nhận diện bàn tay con người → phát hiện thủ ngữ.`,
+Bài tập ứng dụng:
+- Mô hình AI phát hiện vết nứt trên bê tông.
+- Mô hình AI phân loại lá cây bị bệnh.
+- Mô hình AI nhận diện bàn tay con người → phát hiện thủ ngữ.`,
             },
         },
         {
-            title: "RNN (Recurrent Neural Network)",
-            hidden: false,
-            classesCountable: true,
+            title: "S7. Recurrent Neural Networks (RNNs)",
             details: {
-                hidden: false,
+                content: `Học về mạng neuron hồi quy, mô hình hiệu quả trong việc xử lý các dữ liệu tuần tự như chuỗi văn bản, âm thanh.
 
-                content: `- Học về mạng neuron hồi quy, mô hình hiệu quả trong việc xử lý các dữ liệu tuần tự như chuỗi văn bản, âm thanh.
-- Bài tập ứng dụng:
-    - Mô hình AI đánh giá bình luận tiếng Việt.
-    - Mô hình AI phát hiện lỗi sai chính tả.`,
+Bài tập ứng dụng:
+- Mô hình AI đánh giá bình luận tiếng Việt.`,
             },
         },
         {
-            title: "Recommender System",
-            hidden: false,
-            classesCountable: true,
+            title: "S8. Recommender Systems",
             details: {
-                hidden: false,
+                content: `Học về hệ thống gợi ý, mô hình giúp đề xuất sản phẩm, dịch vụ dựa trên sở thích và hành vi của người dùng.
 
-                content: `- Học về hệ thống gợi ý, mô hình giúp đề xuất sản phẩm, dịch vụ dựa trên sở thích và hành vi của người dùng.
-- Bài tập ứng dụng:
-    - Mô hình AI gợi ý phim / sách cho người dùng.`,
+Bài tập ứng dụng:
+- Mô hình AI gợi ý phim / sách cho người dùng.`,
             },
         },
         {
-            title: "Decision Tree",
-            hidden: false,
-            classesCountable: true,
+            title: "S9. Decision Trees",
             details: {
-                hidden: false,
+                content: `Học về mô hình "Cây quyết định" để đưa ra dự báo và cách diễn giải "luồng quyết định" của mô hình
 
-                content: `- Học về mô hình "Cây quyết định" để đưa ra dự báo và cách diễn giải "luồng quyết định" của mô hình
-- Bài tập ứng dụng:
-    - Mô hình AI phát hiện lý do nhân viên nghỉ việc.
-    - Mô hình AI tối ưu chi phí quảng cáo.`,
+Bài tập ứng dụng:
+- Mô hình AI phát hiện lý do nhân viên nghỉ việc.
+- Mô hình AI tối ưu chi phí quảng cáo.`,
             },
         },
         {
-            title: "MDP (Markov Decision Process): Planning",
-            hidden: false,
-            classesCountable: true,
+            title: "S10. Markov Decision Process (MDP) Planning",
             details: {
-                hidden: false,
+                content: `Học về quy trình Markov, giúp AI có khả năng lập kế hoạch.
 
-                content: `- Học về quy trình Markov, giúp AI có khả năng lập kế hoạch.
-- Bài tập ứng dụng:
-    - AI tự chơi game đơn giản.`,
+Bài tập ứng dụng:
+- AI tự chơi game đơn giản.`,
             },
         },
         {
-            title: "Q-Learning & Decision Making",
-            hidden: false,
-            classesCountable: true,
+            title: "S11. Reinforcement Q-Learning",
             details: {
-                hidden: false,
+                content: `Học về thuật toán Q-Learning, một phương pháp giúp máy tính tự học và đưa ra quyết định dựa vào dữ liệu.
 
-                content: `- Học về thuật toán Q-Learning, một phương pháp giúp máy tính tự học và đưa ra quyết định dựa vào dữ liệu
-- Bài tập ứng dụng:
-    - AI chơi game FlappyBird.
-    - AI chơi game Taxi đón khách.`,
+Bài tập ứng dụng:
+- AI chơi game FlappyBird.
+- AI chơi game Taxi đón khách.`,
             },
         },
         {
-            title: "Kiểm tra cuối kỳ",
-            hidden: false,
-            classesCountable: true,
+            title: "S12. Kiểm tra cuối kỳ",
             details: {
-                hidden: false,
-
                 content: "Ôn tập và đánh giá kiến thức toàn khóa học",
             },
         },
         {
-            title: "Báo cáo dự án",
-            hidden: false,
-            classesCountable: true,
+            title: "S13. Báo cáo dự án",
             details: {
-                hidden: false,
-
                 content: "Học viên trình bày về dự án cuối khóa của mình",
             },
         },

@@ -27,10 +27,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
     nextCourseId: CourseIds.mc4ai,
     programId: ProgramIds.public_training,
 
-    whoShouldJoin: [
-        "Học sinh THPT & sinh viên các ngành muốn làm lập trình viên AI hoặc xin học bổng du học & nghiên cứu (được viết thư giới thiệu.)",
-        'Người đi làm muốn phát triển nghề nghiệp chuyên môn với công nghệ AI, lập trình viên muốn nhanh chóng "nâng cấp" năng lực lập trình AI.',
-    ],
+    whoShouldJoin: [],
     skills: ["python", "opencv", "pillow", "streamlit"],
     archives: [
         {
@@ -58,151 +55,133 @@ export const dataCoursePythonAI = (): CourseProps => ({
 
     curriculum: [
         {
-            title: "Nhập môn lập trình Python",
-            hidden: false,
-            classesCountable: true,
+            title: "S1. Nhập môn lập trình Python",
 
             images: [CurriculumPython1],
             details: {
-                hidden: false,
+                content: `Biểu diễn dữ liệu bằng "Biến" (Variable).
 
-                content: `Các lệnh: print, input
+Các kiểu dữ liệu phổ biến: "Số" và "Chuỗi ký tự" (String).
 
-Các kiểu dữ liệu: Integer, Float, String, None
-
-Các toán tử: +,-,*,/,//,%
-
-Ép kiểu`,
+Các phép toán số học trên kiểu dữ liệu "Số".`,
             },
         },
         {
-            title: "Câu lệnh điều kiện",
-            hidden: false,
-            classesCountable: true,
+            title: `S2. Biễu diễn "điều kiện Đúng / Sai"`,
             images: [CurriculumPython2],
 
             details: {
-                hidden: false,
+                content: `Kiểu dữ liệu "Đúng / Sai" (Boolean).
 
-                content: `- Kiểu dữ liệu Boolean
-- Biểu thức điều kiện
-- Các cú pháp câu lệnh điều kiện`,
+Các phép toán so sánh.
+
+Khối lệnh "kiểm tra điều kiện".`,
             },
         },
         {
-            title: "Các kiểu dữ liệu List, Tuple, Dictionary",
-            hidden: false,
-            classesCountable: true,
+            title: `S3. Lưu trữ và quản lý dữ liệu với "Cấu trúc dữ liệu"`,
             images: [CurriculumPython3],
 
             details: {
-                hidden: false,
+                content: `Các kiểu dữ liệu có khả năng "chứa" nhiều dữ liệu bên trong như List, Tuple, Dictionary.
 
-                content: `- List: khởi tạo, các hàm thông dụng, truy cập phần tử, slicing
-- Dictionary: khởi tạo, truy cập phần tử
-- Tuple: khởi tạo, các hàm thông dụng, truy cập phần tử, slicing`,
+Thao tác CRUD (Create - Read - Update - Delete) khi sử dụng "Cấu trúc dữ liệu".`,
             },
         },
         {
-            title: "Vòng lặp",
-            hidden: false,
-            classesCountable: true,
+            title: `S4. Sử dụng "Vòng lặp"`,
             images: [CurriculumPython4],
 
             details: {
-                hidden: false,
+                content: `Định nghĩa vòng lặp để thực hiện 1 công việc nhiều lần.
 
-                content: `- Vòng lặp for
-    - Lặp qua giá trị
-    - Lặp qua vị trí
-    - Kỹ thuật List Comprehension
-- Vòng lặp while
-- Vòng lặp lồng nhau`,
+Sự kết hợp giữa "Vòng lặp" và "Cấu trúc dữ liệu".
+
+Kỹ thuật List Comprehension, "vũ khí lợi hại" của Python.`,
             },
         },
         {
-            title: "Hàm & Các kỹ thuật lập trình cơ bản",
-            hidden: false,
-            classesCountable: true,
+            title: `S5. "Hàm" và các kỹ thuật lập trình cơ bản`,
             images: [CurriculumPython5],
 
             details: {
-                hidden: false,
+                content: `Kỹ thuật "gom nhóm" các dòng code để tái sử dụng và "làm đẹp" code.
 
-                content: `- Cú pháp tạo & gọi hàm
-- Các kỹ thuật lập trình: Cờ hiệu, Lính canh, Cộng dồn`,
+Sử dụng "Vòng lặp" trong "Hàm".
+
+Các kỹ thuật lập trình cơ bản: Đặt cờ hiệu, Đặt lính canh, Cộng dồn.`,
             },
         },
         {
-            title: "Kiểm tra giữa kỳ",
-            hidden: false,
-            classesCountable: true,
+            title: "S6. Kiểm tra giữa kỳ",
             images: [CurriculumExam],
         },
         {
-            title: "Kiểu dữ liệu String & Class",
-            hidden: false,
-            classesCountable: true,
+            title: `S7.1. Nâng cao về "Chuỗi ký tự"`,
             images: [CurriculumPython6],
 
             details: {
-                hidden: false,
-
-                content: `- String: các hàm thông dụng, slicing, mã ASCII
-- Class: định nghĩa class, tạo & sử dụng object`,
+                content: `Các thao tác xử lý và biến đổi "Chuỗi ký tự" thông dụng.`,
             },
         },
         {
-            title: "Xử lý file & 2D List",
-            hidden: false,
-            classesCountable: true,
+            title: `S7.2. Tự định nghĩa kiểu dữ liệu của bạn`,
             images: [CurriculumPython7],
 
             details: {
-                hidden: false,
+                content: `Khái niệm "Class" và "Object" trong lập trình.
 
-                content: `- Mở & đọc file text
-- Xử lý ma trận: input, truy cập dòng, cột, phần tử
-- Khái niệm ảnh grayscale`,
+Sử dụng "Class" để "trừu tượng hóa" quy trình xử lý.`,
             },
         },
         {
-            title: "Xử lý ảnh với Pillow & OpenCV",
-            hidden: false,
-            classesCountable: true,
+            title: "S8.1. Thao tác với tệp tin",
             images: [CurriculumPython8],
 
             details: {
-                hidden: false,
+                content: `Lưu trữ dữ liệu từ biến vào các tệp tin trong máy tính.
 
-                content: `- Khái niệm ảnh màu
-- Pillow: đọc, ghi file ảnh & các thao tác xử lý cơ bản
-- OpenCV:
-    - Đọc, ghi file ảnh
-    - Chuyển đổi hệ màu, zoom ảnh, cắt ảnh
-    - Vẽ hình lên ảnh
-    - Truy cập pixel`,
+Nạp dữ liệu từ các tệp tin vào lại chương trình.`,
             },
         },
         {
-            title: "Lập trình web với Streamlit",
-            hidden: false,
-            classesCountable: true,
+            title: "S8.2. Mảng 2 chiều (2D List)",
             images: [CurriculumPython9],
 
             details: {
-                hidden: false,
+                content: `Mảng 2 chiều và khái niệm ma trận trong toán.
 
-                content: `- Hiển thị văn bản, trạng thái
-- Hiển thị các nút bấm, ô chọn, ...
-- Sắp xếp trang web (layout)
-- Deploy trang web lên internet`,
+Lập trình các phép toán ma trận trên mảng 2 chiều.
+
+Khái niệm "ảnh xám".`,
             },
         },
         {
-            title: "Thi cuối kỳ",
-            hidden: false,
-            classesCountable: true,
+            title: "S9. Xử lý ảnh",
+            images: [CurriculumPython9],
+
+            details: {
+                content: `Khái niệm "ảnh màu".
+
+Thao tác với dữ liệu ảnh bằng thư viện: Pillow và OpenCV`,
+            },
+        },
+        {
+            title: "S10. Lập trình Website với Streamlit",
+            images: [CurriculumPython9],
+
+            details: {
+                content: `Hiển thị văn bản trên Website.
+
+Hiển thị các thành phần giao diện (UI Components) như nút bấm, ô chọn, …
+
+Thay đổi bố cục (layout) của Website.
+
+Triển khai Website lên Internet.`,
+            },
+        },
+        {
+            title: "S11. Kiểm tra cuối kỳ",
             images: [CurriculumExam],
         },
     ],

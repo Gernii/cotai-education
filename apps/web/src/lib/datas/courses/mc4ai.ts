@@ -47,164 +47,118 @@ export const dataCourseMC4AI = (): CourseProps => ({
 
     curriculum: [
         {
-            title: "Đại số tuyến tính & Numpy cơ bản",
-            hidden: false,
-            classesCountable: true,
+            title: "S1. Đại số tuyến tính & Numpy cơ bản",
             details: {
-                hidden: false,
+                content: `Các khái niệm cơ bản của Đại số tuyến tính: Vector, Ma trận
 
-                content: `- Các khái niệm cơ bản của Đại số tuyến tính: Vector, Ma trận
-- Cơ bản về thư viện Numpy:
-	- Khởi tạo nd array
-	- Truy cập phần tử, hàng, cột, slicing
-	- Shape, reshape, transpose, dot product, element-wise operators`,
+Cơ bản về thư viện Numpy:
+- Khởi tạo nd array
+- Truy cập phần tử, hàng, cột, slicing
+- Shape, reshape, transpose, dot product, element-wise operators`,
             },
         },
         {
-            title: "Các hàm thông dụng của Numpy & Matplotlib",
-            hidden: false,
-            classesCountable: true,
+            title: "S2. Các hàm thông dụng của Numpy & Matplotlib",
             details: {
-                hidden: false,
+                content: `Các hàm Numpy: sum, mean, min, max, argmin, argmax; concatenate, where, filter
 
-                content: `- Các hàm Numpy:
-	- Sum, mean, min, max, argmin, argmax
-	- Concatenate, where, filter
-- Matplotlib:
-	- Hàm scatter
-	- Hàm plot`,
+Matplotlib: Hàm scatter & plot`,
             },
         },
         {
-            title: "Pandas & Phân tích dữ liệu",
-            hidden: false,
-            classesCountable: true,
+            title: "S3. Pandas & Phân tích dữ liệu",
             details: {
-                hidden: false,
+                content: `Pandas: Tạo & xử lý Dataframe: truy cập hàng, cột, filter; Các hàm map & apply
 
-                content: `- Pandas:
-	- Tạo Dataframe
-	- Xử lý Dataframe: truy cập hàng, cột, filter
-	- Các hàm map & apply
-- Các kỹ thuật phân tích dữ liệu:
-	- Đọc dữ liệu
-	- Làm sạch dữ liệu
-	- Tổng hợp dữ liệu
-	- Vẽ đồ thị`,
+Các kỹ thuật phân tích dữ liệu: Đọc, làm sạch, tổng hợp dữ liệu & vẽ đồ thị`,
             },
         },
         {
-            title: "Thuật toán Gradient Descent & Plotly",
-            hidden: false,
-            classesCountable: true,
+            title: "S4. Thuật toán Gradient Descent & Plotly",
             details: {
-                hidden: false,
+                content: `Khái niệm đạo hàm & Gradient
 
-                content: `- Khái niệm đạo hàm & Gradient
-- Thuật toán Gradient Descent (nguyên lý, chi tiết cài đặt)
-- Thư viện Plotly:
-	- Module express: hàm scatter_3d
-	- Module graph_objects: hàm Scatter3d & Surface`,
+Thuật toán Gradient Descent (nguyên lý, chi tiết cài đặt)
+
+Thư viện Plotly:
+- Module express: hàm scatter_3d
+- Module graph_objects: hàm Scatter3d & Surface`,
             },
         },
         {
-            title: "Xác suất & Phân phối xác suất",
-            hidden: false,
-            classesCountable: true,
+            title: "S5. Xác suất & Phân phối xác suất",
             details: {
-                hidden: false,
+                content: `Khái niệm xác suất & ứng dụng trong AI
 
-                content: `- Khái niệm xác suất & ứng dụng trong AI
-    - Khái niệm phân phối xác suất, các phân phối thông dụng & cách giả lập bằng Numpy:
-        - Phân phối Bernoulli
-        - Phân phối Categorical
-        - Phân phối đều
-        - Phân phối chuẩn`,
+Khái niệm phân phối xác suất, các phân phối thông dụng & cách giả lập bằng Numpy: Phân phối Bernoulli, Categorical, phân phối đều & phân phối chuẩn`,
             },
         },
         {
-            title: "Kiểm tra giữa kỳ & đăng ký dự án",
-            hidden: false,
-            classesCountable: true,
+            title: "S6. kiểm tra giữa kỳ & đăng ký dự án",
         },
         {
-            title: "Thuật toán kNN & kMeans",
-            hidden: false,
-            classesCountable: true,
+            title: "S7. Thuật toán kNN & kMeans",
             details: {
-                hidden: false,
+                content: `Thuật toán kNN:
+- Nguyên lý & chi tiết cài đặt với Numpy
+- Áp dụng kNN bằng thư viện Scikit-learn
 
-                content: `- Thuật toán kNN:
-	- Nguyên lý & chi tiết cài đặt với Numpy
-	- Áp dụng kNN bằng thư viện Scikit-learn
-- Thuật toán kMeans:
-	- Nguyên lý & chi tiết cài đặt với Numpy
-	- Áp dụng kMeans bằng thư viện Scikit-learn`,
+Thuật toán kMeans:
+- Nguyên lý & chi tiết cài đặt với Numpy
+- Áp dụng kMeans bằng thư viện Scikit-learn`,
             },
         },
         {
-            title: "Mô hình Linear Regression",
-            hidden: false,
-            classesCountable: true,
+            title: "S8. Mô hình Linear Regression",
             details: {
-                hidden: false,
+                content: `Giới thiệu bài toán Regression
 
-                content: `- Giới thiệu bài toán Regression
-- Mô hình Linear Regression
-- MSE Loss
-- Áp dụng mô hình Linear Regression bằng các thư viện Scikit-learn & Keras`,
+Mô hình Linear Regression
+
+MSE Loss
+
+Áp dụng mô hình Linear Regression bằng các thư viện Scikit-learn & Keras`,
             },
         },
         {
-            title: "Mô hình Logistic Regression",
-            hidden: false,
-            classesCountable: true,
+            title: "S9. Mô hình Logistic Regression",
             details: {
-                hidden: false,
+                content: `Hàm Sigmoid & bài toán Binary Classification
 
-                content: `- Hàm Sigmoid
-- Giới thiệu bài toán Binary Classification
-- Mô hình Logistic Regression
-- Binary Cross-Entropy Loss
-- Áp dụng mô hình Logistic Regression bằng các thư viện Scikit-learn & Keras`,
+Mô hình Logistic Regression & Binary Cross-Entropy Loss
+
+Áp dụng mô hình Logistic Regression bằng các thư viện Scikit-learn & Keras`,
             },
         },
         {
-            title: "Mô hình Softmax Regression",
-            hidden: false,
-            classesCountable: true,
+            title: "S10. Mô hình Softmax Regression",
             details: {
-                hidden: false,
+                content: `Hàm Softmax & Cross-Entropy
 
-                content: `- Hàm Softmax & Cross-Entropy
-- Giới thiệu bài toán Multi-class Classification
-- Mô hình Softmax Regression
-- Categorical Cross-Entropy Loss
-- Áp dụng mô hình Softmax Regression bằng thư viện Keras`,
+Giới thiệu bài toán Multi-class Classification & mô hình Softmax Regression
+
+Categorical Cross-Entropy Loss
+
+Áp dụng mô hình Softmax Regression bằng thư viện Keras`,
             },
         },
         {
-            title: "Thuật toán Gradient Descent cho các mô hình tuyến tính",
-            hidden: false,
-            classesCountable: true,
+            title: "S11: Thuật toán Gradient Descent cho các mô hình tuyến tính",
             details: {
-                hidden: false,
+                content: `Lý thuyết toán của mô hình Linear Regression
 
-                content: `- Lý thuyết toán của mô hình Linear Regression
-- Chi tiết cài đặt thuật toán GD
-- Kỹ thuật Normalize
-- Thuật toán SGD & Mini-batch GD`,
+Chi tiết cài đặt thuật toán GD
+
+Kỹ thuật Normalize
+
+Thuật toán SGD & Mini-batch GD`,
             },
         },
         {
-            title: "Thi cuối kỳ",
-            hidden: false,
-            classesCountable: true,
+            title: "S12. Thi cuối kỳ",
         },
         {
-            title: "Báo cáo dự án",
-            hidden: false,
-            classesCountable: true,
+            title: "S13. Báo cáo dự án",
         },
     ],
 });

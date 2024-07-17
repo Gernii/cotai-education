@@ -66,104 +66,64 @@ Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các 
 
     curriculum: [
         {
-            title: "Review: PyTorch & Advanced Training Techniques",
-            hidden: false,
-            classesCountable: true,
+            title: "S1. Review: PyTorch & Advanced Training Techniques",
             details: {
-                hidden: false,
-
-                content:
-                    "Ôn tập lại về cách sử dụng thư viện PyTorch cũng như cách tạo và huấn luyện mô hình AI",
+                content: `Ôn tập lại về cách sử dụng thư viện PyTorch cũng như cách tạo và huấn luyện mô hình AI.`,
             },
         },
         {
-            title: "The history of DCNNs: How to go deeper?",
-            hidden: false,
-            classesCountable: true,
+            title: "S2. The history of DCNNs: How to go deeper?",
             details: {
-                hidden: false,
-
                 content: `Học về các kiến trúc DCNN tiêu biểu: **AlexNet**, **VGG**, **Inception**, **ResNet**. Từ đó hiểu được các thành phần chính của một mô hình và trả lời được câu hỏi "Làm thế nào để tạo ra Deep Neural Network?"`,
             },
         },
         {
-            title: "The history of DCNNs: From Depth to Efficiency",
-            hidden: false,
-            classesCountable: true,
+            title: "S3. The history of DCNNs: From Depth to Efficiency",
             details: {
-                hidden: false,
-
-                content: `Học về các kiến trúc DCNN tiêu biểu: **MobileNet series**, **EfficientNet series**, **Squeeze-and-Excitation Module**, **GhostNet**, **RepVGG**. Từ đó trả lời được câu hỏi "Cần cải tiến những thành phần nào để mô hình DCNN vừa nhẹ nhưng vẫn chính xác?" `,
+                content: `Học về các kiến trúc DCNN tiêu biểu: **MobileNet series**, **EfficientNet series**, **Squeeze-and-Excitation Module**, **GhostNet**, **RepVGG**. Từ đó trả lời được câu hỏi "Cần cải tiến những thành phần nào để mô hình DCNN vừa nhẹ nhưng vẫn chính xác?"`,
             },
         },
         {
-            title: "The history of DCNNs: From Low-resolution to High-resolution & Object Segmentation",
-            hidden: false,
-            classesCountable: true,
+            title: "S4. The history of DCNNs: From Low-resolution to High-resolution & Object Segmentation",
             details: {
-                hidden: false,
-
-                content: `"Các mô hình DCNN được huấn luyện cho bài toán Classification, cần cải tiến những thành phần nào để tạo ra mô hình cho bài toán Object Segmentation?" Học về các kiến trúc Decoder tiêu biểu **FCN**, **UNet**, **FPN**, **PSPNet**, **PAN-Net**, **DeepLab** cùng các hàm Loss và Metric mới cho Segmentation`,
+                content: `"Các mô hình DCNN được huấn luyện cho bài toán Classification, cần cải tiến những thành phần nào để tạo ra mô hình cho bài toán Object Segmentation?" Học về các kiến trúc Decoder tiêu biểu **FCN**, **UNet**, **FPN**, **PSPNet**, **PAN-Net**, **DeepLab** cùng các hàm Loss và Metric mới cho Segmentation.`,
             },
         },
         {
-            title: "Object Detection",
-            hidden: false,
-            classesCountable: true,
+            title: "S5. Object Detection",
             details: {
-                hidden: false,
-
-                content: `Bài toán Object Detection có thể được gói gọn trong các khái niệm sau: **Grids**, **Anchor Boxes**, **Muti-scales Predictions** và **"Multi-stages detection"**. Ngoài ra học viên cũng được học về chuỗi mô hình Object Detection nổi tiếng nhất **YOLO** (You Only ~~Live~~ Look Once)`,
+                content: `Bài toán Object Detection có thể được gói gọn trong các khái niệm sau: **Grids**, **Anchor Boxes**, **Muti-scales Predictions** và **"Multi-stages detection"**. Ngoài ra học viên cũng được học về chuỗi mô hình Object Detection nổi tiếng nhất **YOLO** (You Only ~~Live~~ Look Once).`,
             },
         },
         {
-            title: "Visual Attention & Transformers",
-            hidden: false,
-            classesCountable: true,
+            title: "S6. Visual Attention & Transformers",
             details: {
-                hidden: false,
-
                 content: `Học về **Cơ chế Tập Trung Quan Sát** (Attention Mechanism) để ép mô hình nhìn vào các vùng quan trọng trong ảnh để có thể đưa ra dự đoán tốt hơn.
+
 Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về kiến trúc **hot và phổ biến nhất mọi thời đại** (tất nhiên là cho đến hiện tại) của ngành Deep Learning là **Transformer**.`,
             },
         },
         {
-            title: "Transformer in Computer Vision & ViT (Vision Transformer)",
-            hidden: false,
-            classesCountable: true,
+            title: "S7. Transformer in Computer Vision & ViT (Vision Transformer)",
             details: {
-                hidden: false,
-
-                content: `Thuật toán Convolution không phải là hoàn hảo. Ở buổi này, học viên sẽ được học về các nhược điểm của kiến trúc CNN, từ đó thấy được "ta có thể thay thế Convolution bằng Transformer"`,
+                content: `Thuật toán Convolution không phải là hoàn hảo. Ở buổi này, học viên sẽ được học về các nhược điểm của kiến trúc CNN, từ đó thấy được "ta có thể thay thế Convolution bằng Transformer".`,
             },
         },
         {
-            title: "Transformer in Object Detection & Segmentation",
-            hidden: false,
-            classesCountable: true,
+            title: "S8. Transformer in Object Detection & Segmentation",
             details: {
-                hidden: false,
-
                 content: `"Chỉ dùng ViT thôi là chưa đủ, ta vẫn cần Convolution". Ở buổi này, học viên sẽ được học về các dạng kiến trúc kết hợp cả Convolution và Transformer để giải quyết 2 bài toán phổ biến **Object Segmentation** và **Object Detection**`,
             },
         },
         {
-            title: "Modern ConvNets",
-            hidden: false,
-            classesCountable: true,
+            title: "S9. Modern ConvNets",
             details: {
-                hidden: false,
-
-                content: `"Kiến trúc ViT rất hay, liệu ta có thể thay đổi thuật toán Convolution để bắt chước ViT?". Sau khoảng thời gian bị thất sủng, các kiến trúc dùng Convolution đã quay trở lại. Ở buổi học này, học viên sẽ được học về 2 kiến trúc tiêu biểu đánh dấu sự "comeback mạnh mẽ" của thuật toán Convolution đó là **ConvNext** và **RepLKNet**`,
+                content: `"Kiến trúc ViT rất hay, liệu ta có thể thay đổi thuật toán Convolution để bắt chước ViT?". Sau khoảng thời gian bị thất sủng, các kiến trúc dùng Convolution đã quay trở lại. Ở buổi học này, học viên sẽ được học về 2 kiến trúc tiêu biểu đánh dấu sự "comeback mạnh mẽ" của thuật toán Convolution đó là **ConvNext** và **RepLKNet**.`,
             },
         },
         {
-            title: "Báo cáo dự án",
-            hidden: false,
-            classesCountable: true,
+            title: "S10. Báo cáo dự án",
             details: {
-                hidden: false,
-
                 content: "Học viên trình bày về dự án cuối khóa của mình",
             },
         },
