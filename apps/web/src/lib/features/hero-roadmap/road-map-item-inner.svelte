@@ -4,12 +4,15 @@
 
     import type { HeroRoadmapCourse } from "./types";
 
-    import LucideGraduationCap from "~icons/lucide/graduation-cap";
+    import TeenyiconsStarSmallSolid from "~icons/teenyicons/star-small-solid";
 
-    type $$Props = Pick<HeroRoadmapCourse, "shortTitle" | "title">;
+    interface $$Props extends Pick<HeroRoadmapCourse, "shortTitle" | "title"> {
+        idx: number;
+    }
 
     export let title: $$Props["title"] = undefined;
     export let shortTitle: $$Props["shortTitle"] = undefined;
+    export let idx: $$Props["idx"];
 
     const {
         elements: { trigger, content, arrow },
@@ -30,9 +33,15 @@
     use:melt={$trigger}
     aria-label={title}
 >
-    <LucideGraduationCap class="size-5 flex-shrink-0 lg:size-6" />
+    <div class="flex">
+        {#each new Array(idx + 1) as _}
+            <TeenyiconsStarSmallSolid class="size-5 flex-shrink-0 lg:size-5" />
+        {/each}
+    </div>
     <p class=" flex-grow text-center font-semibold">
-        {shortTitle}
+        <span class="text-xl">
+            {shortTitle}
+        </span>
 
         {#if $open}
             <div

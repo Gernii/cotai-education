@@ -71,6 +71,7 @@ C323.057,236.728,319.385,233.668,315.713,233.668z"
                         shortTitle={course.shortTitle}
                         {isNavigate}
                         {currentCourse}
+                        {idx}
                     />
                 </div>
                 {#if !isCourseLast}
@@ -111,6 +112,7 @@ C323.057,236.728,319.385,233.668,315.713,233.668z"
                                 shortTitle={course.shortTitle}
                                 {isNavigate}
                                 {currentCourse}
+                                {idx}
                             />
                         </div>
                         {#if !isCourseLast}

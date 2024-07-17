@@ -39,7 +39,7 @@
                                 imageClass="w-auto"
                             />
                         </div>
-                        <p class="text-sm font-bold text-base-content/80">
+                        <p class="text-md text-base-content/80">
                             {m.good_glad_crow_commend()}
                         </p>
                     </div>
@@ -147,7 +147,7 @@
                                     <ExternalAnchor
                                         href="https://gem.cot.ai"
                                         aria-label={m.gemCollection()}
-                                        class="link-hover link link-primary"
+                                        class="link-hover link"
                                     >
                                         <span>{m.gemCollection()}</span>
                                     </ExternalAnchor>

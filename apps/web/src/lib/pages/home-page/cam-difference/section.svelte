@@ -16,7 +16,7 @@
     let isInview = writable(false);
 
     let camHighlightedTextClassNames =
-        "md:text-5xl text-primary group-hover:brightness-105";
+        "text-primary group-hover:brightness-105";
     let camTextClassNames =
         "text-primary opacity-100 transition-opacity duration-300 group-hover:opacity-40";
 

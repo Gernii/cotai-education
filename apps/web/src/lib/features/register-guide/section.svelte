@@ -7,6 +7,8 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
+    import * as m from "$i18n/messages";
+
     import GuideItem from "./guide-item.svelte";
 
     import LucideRoute from "~icons/lucide/route";
@@ -37,9 +39,7 @@
                 <div
                     class="relative flex w-full flex-grow justify-between gap-x-1 sm:gap-x-4"
                 >
-                    <GuideItem
-                        title={"Tư vấn miễn phí giúp định hướng chương trình học"}
-                    >
+                    <GuideItem title={m.teal_red_panda_gaze()}>
                         <LucideMessagesSquare
                             slot="icon"
                             class="size-10 flex-shrink-0 stroke-1 sm:size-16"
@@ -56,7 +56,7 @@
                         />
                     </div>
 
-                    <GuideItem title={"Làm bài đánh giá năng lục"}>
+                    <GuideItem title={m.muddy_bright_kangaroo_mix()}>
                         <LucideListChecks
                             slot="icon"
                             class="size-10 flex-shrink-0 stroke-1 sm:size-16"
@@ -75,7 +75,7 @@
                 <div
                     class="relative flex w-full flex-grow justify-between gap-x-1 sm:gap-x-4"
                 >
-                    <GuideItem title={"Lựa chọn lộ trình, khóa học phù hợp"}>
+                    <GuideItem title={m.icy_full_octopus_nurture()}>
                         <LucideRoute
                             slot="icon"
                             class="size-10 flex-shrink-0 stroke-1 sm:size-16"
@@ -91,7 +91,7 @@
                             class="size-6 flex-shrink-0 sm:size-8"
                         />
                     </div>
-                    <GuideItem title={"Bắt đầu khóa học"}>
+                    <GuideItem title={m.quick_good_bear_foster()}>
                         <LucideMonitorCheck
                             slot="icon"
                             class="size-10 flex-shrink-0 stroke-1 sm:size-16"

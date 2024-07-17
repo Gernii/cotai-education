@@ -14,7 +14,6 @@
     import * as m from "$i18n/messages";
 
     import LucideNetwork from "~icons/lucide/network";
-    import LucideUsers from "~icons/lucide/users";
     import type { CourseProps } from "$lib/datas/courses/types";
     import HeroiconsClock from "~icons/heroicons/clock";
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
@@ -108,11 +107,7 @@
                                     class="badge badge-ghost gap-x-1 bg-base-100 px-3 py-4"
                                 >
                                     {courseStudyType[studyType].name}
-                                    {#if studyType === "offline"}
-                                        <LucideUsers
-                                            class="size-4 flex-shrink-0 sm:size-5"
-                                        />
-                                    {:else if studyType === "online"}
+                                    {#if studyType === "online"}
                                         <LucideNetwork
                                             class="size-4 flex-shrink-0 sm:size-5"
                                         />

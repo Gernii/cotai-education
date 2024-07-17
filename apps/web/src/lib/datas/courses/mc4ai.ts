@@ -8,7 +8,7 @@ export const dataCourseMC4AI = (): CourseProps => ({
     title: "Math Coding for AI",
     shortTitle: "MC4AI",
     price: Number.parseInt(PUBLIC_COURSE_PRICE_MC4AI),
-    studyTypes: ["online", "offline", "selfPaced"],
+    studyTypes: ["online", "selfPaced"],
     nextCourseId: CourseIds.ml4ai,
 
     programId: ProgramIds.public_training,

@@ -8,7 +8,7 @@ export const dataCourseDL4CV = (): CourseProps => ({
     title: "Deep Learning for Computer Vision",
     shortTitle: "DL4CV",
     price: Number.parseInt(PUBLIC_COURSE_PRICE_DL4CV),
-    studyTypes: ["online", "offline", "selfPaced"],
+    studyTypes: ["online", "selfPaced"],
 
     programId: ProgramIds.public_training,
 

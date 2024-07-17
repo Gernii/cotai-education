@@ -1,7 +1,7 @@
 export const courseStudyType = {
-    online: { name: "Online" },
+    online: { name: "Zoom" },
     offline: { name: "Offline" },
-    selfPaced: { name: "Tự học" },
+    selfPaced: { name: "Self-paced" },
 };
 
 export enum CourseIds {
