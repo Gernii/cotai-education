@@ -54,14 +54,10 @@ export const dataCourseDL4NLP = (): CourseProps => ({
         },
     ],
 
-    description: `Khóa học được thiết kế theo tiêu chí "dễ học, dễ đọc, dễ hiểu", cung cấp cho học viên cái nhìn toàn diện về lịch sử phát triển của "mạng nơ-ron tích chập - Convolutional Neural Network".
-- Lịch sử ra đời và sự phát triển của các mô hình học sâu (Deep Learning).
-- Các thủ thuật để tạo ra mô hình học sâu nhưng có thể vận hành tốt trên điện thoại thông minh và mạch nhúng.
-- Các mô hình học sâu về Thị Giác Máy Tính - Computer Vision mới và tốt nhất hiện nay.
-- Áp dụng các mô hình vào thực tiễn thông qua 2 bài toán chính của ngành thị giác máy tính: Phân đoạn vật thể (Object Segmentation) và Phát hiện vật thể (Object Detection).
-- Phát triển tư duy logic và kỹ năng giải quyết vấn đề thông qua các bài tập thực hành và Dự án cuối khóa (Capstone Project).
- 
-Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế.`,
+    description: `*Học sâu* (Deep Learning) là nhánh quan trọng nhất của ngành Học máy, chuyên phát triển các mạng nơ-ron nhân tạo học siêu hiệu quả với dữ liệu lớn. DL4NLP (Deep Learning for Natural Language Proessing) là khoá học *chuyên* về các mô hình Học sâu nền tảng cho ngành *Xử lý ngôn ngữ tự nhiên* để xử lý văn bản (như text classification, summarization, extraction/retrieval, Q&A, etc.), giúp AI "nói chuyện" như người (ví dụ ChatGPT.)
+
+Khoá học gồm 3 chủ đề chính: 1-\`Transformers\`, 2-\`Language Models\`, 3-\`NLP Tasks\`, được chia thành nhiều buổi, mỗi buổi bao gồm lý thuyết cô đọng, bài lab thực hành, bài lab về nhà, review & quiz. Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế. Khoá học dành cho các học viên đã hoàn thành hoặc có kiến thức tương đương với khóa ML4AI của CoTAI.
+`,
     components: [],
 
     curriculum: [

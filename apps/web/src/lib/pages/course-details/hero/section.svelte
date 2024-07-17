@@ -33,7 +33,7 @@
     <ContainerContent
         class="h-full space-y-16 pt-header-space-sm lg:pt-header-space"
     >
-        <div class="grid grid-cols-1 gap-x-32 gap-y-16 pt-16 lg:grid-cols-5">
+        <div class="grid grid-cols-1 gap-x-16 gap-y-16 pt-16 lg:grid-cols-5">
             <div class="col-span-1 space-y-4 lg:col-span-3">
                 <div>
                     <p class="text-lg font-semibold">{m.course()}</p>
@@ -52,9 +52,15 @@
                     </div>
                 </div>
                 <hr class="h-1 w-12 border-0 bg-secondary" />
-                {#if course.description}
-                    <ReadMore textContent={course.description} maxChars={400} />
-                {/if}
+                {#key course.description}
+                    {#if course.description}
+                        <ReadMore
+                            textContent={course.description}
+                            maxChars={400}
+                            dotDotDot={""}
+                        />
+                    {/if}
+                {/key}
 
                 {#if course.skills && course.skills.length > 0}
                     <hr class="h-1 w-12 border-0 bg-secondary" />

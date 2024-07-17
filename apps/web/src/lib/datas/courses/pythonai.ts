@@ -45,8 +45,19 @@ export const dataCoursePythonAI = (): CourseProps => ({
                 "Áp dụng kiến thức lập trình Python vào việc xây dựng ứng dụng web thông qua Streamlit, một framework phổ biến cho việc xây dựng ứng dụng web với Python.",
         },
     ],
-    description:
-        "Khoá học cung cấp các kiến thức lập trình cơ bản nhất như biến, kiểu dữ liệu, toán tử, câu lệnh điều kiện, vòng lặp, các thuật toán, kỹ thuật lập trình ... giúp cho học viên có thể giải quyết những bài toán từ cơ bản như Tính chu vi, diện tích hình tròn, Giải phương trình bậc nhất, bậc hai ... đến nâng cao như Xử lý ảnh số (thay đổi màu sắc, vẽ hình, cắt vùng ảnh ...), hoặc xây dựng một website có ứng dụng công nghệ AI & có link chạy thực trên Internet",
+    description: `Khóa học PythonAI giúp các bạn học sinh, sinh viên & người đi làm ở *mọi ngành* có thể nhanh chóng hiểu lập trình Python *qua tương tác với AI*.
+
+👉 Bạn chưa biết lập trình? Đừng lo, khóa học sẽ cung cấp kiến thức nền tảng về Python, cần thiết cho việc thực hành các giải thuật và triển khai các ứng dụng AI ở các lớp kế tiếp trong lộ trình.
+
+👉 Bạn cảm thấy lập trình thật khó & học lâu? Khoá học PythonAI được CoTAI dày công thiết kế chính là để giúp học viên xoá bỏ nỗi lo này!
+
+- 💡 Thông qua tương tác với các ứng dụng AI mới nhất
+
+- 💡 Trực quan hoá tối đa (visualizations) qua giao diện web
+
+- 💡 Kết hợp hài hoà các câu lệnh cơ bản & bậc cao (API calls)
+
+- 💡 Chỉ tập trung vào những kỹ năng & khái niệm cốt lõi để lập trình AI`,
     experienceRequirement: [
         "Các kỹ năng sử dụng máy tính cơ bản: truy cập file, folder, cách cài đặt phần mềm, sử dụng internet",
         "Kiến thức toán cơ bản: hình học cơ bản, giải phương trình bậc 1,2",

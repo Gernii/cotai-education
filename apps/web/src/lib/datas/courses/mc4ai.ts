@@ -41,8 +41,15 @@ export const dataCourseMC4AI = (): CourseProps => ({
         },
     ],
 
-    description:
-        "Khoá học cung cấp các kiến thức Toán nền tảng cho AI như đạo hàm, gradient, đại số tuyến tính, xác suất thống kê, các kỹ năng sử dụng các thư viện AI phổ biến nhất như NumPy, Matplotlib, Plotly, Scikit-learn, Keras ... cùng các thuật toán AI cơ bản nhất như Gradient Descent, kNN, kMeans, Linear Regression ... giúp cho học viên có thể xây dựng một ứng dụng AI hoàn chỉnh, giải quyết được những bài toán thực tế như Phân tích dữ liệu, Dự báo doanh thu, Phân đoạn ảnh, Nhận dạng gương mặt, chữ viết ...",
+    description: `Khóa học MC4AI cung cấp *một cách trực quan* các kiến thức **Toán** *cốt lõi* để học viên bắt đầu lập trình dự án AI & *Phân tích dữ liệu* qua các giải thuật và thư viện Python. Khoá học dành cho các học viên đã biết Python cơ bản (cần bài kiểm tra đầu vào) hoặc đã hoàn thành khoá \`PythonAI\` của CoTAI. 
+
+👉 Bạn luôn mang một nỗi sợ môn Toán? Hãy an tâm! Trung tâm tài năng CoTAI đã miệt mài biên soạn để khoá học "Lập trình nền tảng Toán cho AI" được trực quan dễ hiểu, ngay cả với học sinh THPT. :bulb: Bí quyết rất đơn giản: để các bạn "vọc" thật nhiều với dữ liệu thực tế! Từ hình ảnh, văn bản, đến số liệu kinh doanh.
+
+- 🔥 Xử lý, tính toán, biến đổi, hiển thị các mảng dữ liệu thực 👉 hiểu ngay về ma trận và đại số tuyến tính cho AI.
+
+- 🔥 Mô phỏng & sinh mẫu, đưa ra dự đoán qua các mô hình học máy cơ bản 👉 hiểu ngay về xác suất & “niềm tin”, về các mô hình dự đoán của AI.
+
+- 🔥 Thiết kế ứng dụng mới có tích hợp các mô hình AI với đặc trưng huấn luyện sẵn (pre-trained models) 👉 thoả sức thực hành phát triển các dự án phân tích dữ liệu (Data Analysis)`,
     components: [],
 
     curriculum: [

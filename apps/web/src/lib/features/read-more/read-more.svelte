@@ -1,5 +1,6 @@
 <script lang="ts">
     import { writable } from "svelte/store";
+    import { cx } from "cva";
 
     import * as m from "$i18n/messages";
 
@@ -42,12 +43,19 @@
     $: finalSymbol = isOpen ? "" : dotDotDot;
     $: showButton = !isOpen && isFullText(finalText, cleanText) ? false : true;
 
+    $: classNames = cx(
+        "prose-sm sm:prose",
+        "text-base-content",
+        "prose-headings:pb-[.3em] prose-h1:border-b prose-h2:border-b",
+        "prose-th:border-l prose-th:border-l-base-content/20 first:prose-th:border-l-0 prose-td:border-l prose-td:border-l-base-content/20 prose-td:px-3 prose-td:py-2 first:prose-td:border-l-0",
+    );
+
     const handleClick = () => {
         isOpen = !isOpen;
     };
 </script>
 
-<div>
+<div class={classNames}>
     {@html finalText}
     {#if showButton}
         <span class="whitespace-nowrap">

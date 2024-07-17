@@ -57,13 +57,15 @@ export const dataCourseML4AI = (): CourseProps => ({
                 "Phát triển kỹ năng lập trình, đặc biệt là với ngôn ngữ Python, một trong những ngôn ngữ phổ biến nhất trong lĩnh vực AI và học máy",
         },
     ],
-    description: `Khóa học được thiết kế theo tiêu chí "dễ học, dễ đọc, dễ hiểu", cung cấp cho học viên những kiến thức cơ bản về trí tuệ nhân tạo (AI) và học máy (Machine Learning). Khóa học giúp học viên:
-- Hiểu rõ cách máy tính xử lý và phân tích dữ liệu.
-- Nắm vững các khái niệm và thuật toán cơ bản trong học máy.
-- Áp dụng các mô hình học máy vào thực tiễn, từ dự đoán xu hướng đến phân loại hình ảnh.
-- Phát triển tư duy logic và kỹ năng giải quyết vấn đề thông qua các bài tập thực hành.
+    description: `*Học máy* (Machine Learning) là bộ công cụ để ta xây dựng các "hàm trí tuệ", tạo nên "kiến thức & kỹ năng" cho AI từ dữ liệu. Đây cũng chính là mục tiêu của khóa học ML4AI: giúp học viên nắm vững các nguyên lý cốt lõi & mô hình nền tảng của ngành Học máy cho hầu hết các bài toán AI. Khoá học dành cho các học viên đã hoàn thành khóa MC4AI của CoTAI hoặc có kiến thức & kỹ năng *lập trình Toán cho AI* tương đương (cần làm bài kiểm tra đầu vào). 
 
-Với nội dung phong phú và phương pháp giảng dạy thân thiện, khóa học ML4AI không chỉ là bước khởi đầu tuyệt vời cho các bạn trẻ muốn khám phá thế giới AI, mà còn là công cụ hữu ích để phụ huynh định hướng và khuyến khích con em mình theo đuổi lĩnh vực công nghệ đầy triển vọng này.`,
+🔥 Phương pháp đào tạo tăng tốc *nhanh thành tài* Accelerated Mastery của CoTAI giúp cô đọng cả một ngành học xuống thành một khoá ngắn hạn *hiệu quả cao*, với 6 chủ đề chính:
+- 1️⃣ Representations (feature extraction): trích xuất đặc trưng biểu diễn thành toạ độ nhúng. 
+- 2️⃣ Evaluation (metrics & losses): các chuẩn đánh giá mô hình và hàm lỗi.
+- 3️⃣ Search (optimize/train/learn): huấn luyện mô hình, tối ưu tham số.
+- 4️⃣ Linear & nonlinear predictors (regression, classification, clustering): Các mô hình dự đoán tuyến tính & phi tuyến cho các bài toán cơ sở như dự báo giá trị, phân loại, gom nhóm.
+- 5️⃣ CNNs & RNNs: Các mạng tích chập & mạng hồi quy biểu diễn dữ liệu chuỗi trong không gian & thời gian.
+- 6️⃣ Decision-making: Các bài toán suy luận, lên kế hoạch & ra quyết định bằng hệ khuyến nghị (RecSys), mô hình rừng cây quyết định (Decision Tree & Forest), mô hình Markov (MDP) và học tăng cường (Reinforcement Learning)`,
     components: [],
 
     curriculum: [
