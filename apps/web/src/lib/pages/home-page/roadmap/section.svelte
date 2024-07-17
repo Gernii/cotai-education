@@ -29,7 +29,6 @@
             <div
                 class:opacity-0={!$isInview}
                 class:animate-fade-left={$isInview}
-                class="w-full sm:w-3/4"
             >
                 <SectionTitle id="roadmap">
                     {@html m.lazy_elegant_jannes_support()}
@@ -41,6 +40,7 @@
                         {...course}
                         {idx}
                         last={idx + 1 === courseRoadmap.length}
+                        showRoadMapLine={$isInview}
                     />
                 {/each}
             </ul>

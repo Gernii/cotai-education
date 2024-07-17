@@ -20,7 +20,9 @@
                 class:opacity-0={!$isInview}
                 class:animate-fade-up={$isInview}
             >
-                <div class="card-body flex-col gap-x-8 gap-y-6 md:flex-row">
+                <div
+                    class="card-body flex-col justify-between gap-x-8 gap-y-6 md:flex-row"
+                >
                     <div class="flex-grow">
                         <h2 class="text-xl font-bold md:text-2xl">
                             Nâng tầm đổi mới và sáng tạo cho cuộc sống tươi đẹp

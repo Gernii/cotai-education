@@ -14,7 +14,10 @@
     let className: $$Props["class"] = undefined;
     export { className as class };
 
-    $: classes = cx("size-48 overflow-hidden rounded-box", className);
+    $: classes = cx(
+        "size-40 overflow-hidden rounded-box lg:size-48",
+        className,
+    );
 </script>
 
 <div class={classes}>

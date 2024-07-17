@@ -123,36 +123,6 @@ C323.057,236.728,319.385,233.668,315.713,233.668z"
                     {/each}
                 </div>
             {/each}
-            <!-- <div
-                class="relative flex w-full flex-grow items-center justify-between gap-x-1 sm:gap-x-4"
-            >
-                <RoadMapItem
-                    active={course.id === CourseIds.python4ai}
-                    title="Python4AI"
-                />
-
-                <LucideArrowBigRight class="size-6 flex-shrink-0 sm:size-8" />
-                <RoadMapItem
-                    active={course.id === CourseIds.mc4ai}
-                    title="MC4AI"
-                />
-            </div>
-            <LucideArrowBigRight
-                class="hidden size-6 flex-shrink-0 sm:size-8 lg:block"
-            />
-            <div
-                class="relative flex w-full flex-grow items-center justify-between gap-x-1 sm:gap-x-4"
-            >
-                <RoadMapItem
-                    active={course.id === CourseIds.ml4ai}
-                    title="ML4AI"
-                />
-                <LucideArrowBigRight class="size-6 flex-shrink-0 sm:size-8" />
-                <RoadMapItem
-                    active={course.id === CourseIds.dl4ai}
-                    title="DL4AI"
-                />
-            </div> -->
         </div>
     </div>
 </div>

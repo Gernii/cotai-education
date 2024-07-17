@@ -50,12 +50,13 @@
                 </SectionTitle>
             </div>
             <div
-                class="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-3 md:gap-x-16 lg:gap-x-32"
+                class="grid grid-cols-1 gap-x-8 gap-y-6 md:grid-cols-3 lg:gap-x-16 xl:gap-x-32"
             >
                 {#each camDescribe as describe, idx}
                     <DescribeItem
                         description={describe.description}
                         title={describe.title}
+                        aspectRatio={idx === 0}
                     >
                         {#if idx === 0}
                             <Chart_80_20 />
