@@ -10,6 +10,7 @@
 
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
     import { routerPath } from "$lib/utils/constants";
+    import { countTotalLessons } from "$lib/utils/count-total-lessons";
 
     import * as m from "$i18n/messages";
 
@@ -38,7 +39,7 @@
 
     let isInview = writable(false);
 
-    $: totalSessions = curriculum.filter((c) => c.classesCountable).length;
+    $: totalSessions = countTotalLessons(curriculum);
 
     $: courseThumbnail = coursesThumbnail(id as CourseIds);
 
