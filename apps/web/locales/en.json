@@ -97,7 +97,7 @@
     "cookieConsentBanner_description": "We use cookies to improve your experience on our site. By clicking \"Accept\", you consent to our use of cookies.",
     "privacyPolicy": "Privacy Policy",
     "cookiePolicy": "Cookie Policy",
-    "lazy_elegant_jannes_support": "Roadmap <span class=\"text-primary\">Accelerated learning</span> <span class=\"text-secondary\">AI project programming</span>",
+    "lazy_elegant_jannes_support": "Roadmap <span class=\"text-primary\">Accelerated learning</span> AI project programming",
     "weird_wild_chipmunk_accept": "The program we design specifically for you",
     "nimble_deft_guppy_agree": "Phone number",
     "lost_sound_lizard_bask": "Contact email",
@@ -149,5 +149,7 @@
     "maroon_soft_sheep_jump": "Course completion certificate {title}",
     "front_proud_iguana_nourish": "Next Instructor",
     "polite_close_squirrel_cry": "Previous instructor",
-    "aloof_chunky_oryx_flip": "*Certificate of completion is issued if the learning results meet the requirements for each course"
+    "aloof_chunky_oryx_flip": "*Certificate of completion is issued if the learning results meet the requirements for each course",
+    "jumpy_proof_clownfish_gulp": "Show more",
+    "basic_lucky_ibex_seek": "Show less"
 }

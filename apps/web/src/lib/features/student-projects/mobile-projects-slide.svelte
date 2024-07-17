@@ -70,25 +70,21 @@
 
     <div class="keen-slider" bind:this={carouselRef}>
         {#each projects as project, idx}
-            <div
-                class={cx("keen-slider__slide", {
+            <button
+                use:melt={$trigger(project.id)}
+                class={cx("keen-slider__slide card card-bordered bg-base-200", {
                     hidden: idx !== 0 && !isSlideRendered,
                 })}
             >
-                <button
-                    use:melt={$trigger(project.id)}
-                    class="card card-bordered h-full w-full bg-base-200"
-                >
-                    <div class="w-full p-4 text-center">
-                        <p class="font-semibold">
-                            {project.title}
-                        </p>
-                        <p class="text-sm">
-                            {project.className}
-                        </p>
-                    </div>
-                </button>
-            </div>
+                <div class="w-full p-4 text-center">
+                    <p class="font-semibold">
+                        {project.title}
+                    </p>
+                    <p class="text-sm">
+                        {project.className}
+                    </p>
+                </div>
+            </button>
         {/each}
     </div>
     <div class="flex items-center">

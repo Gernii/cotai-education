@@ -12,7 +12,6 @@
     import { Navigator } from "./navigator";
     import { SidenavTrigger } from "./sidenav";
     import { headerClassNameHandler } from "./styles";
-    import { ThemeSelector } from "./theme-selector";
     interface $$Props {
         disableScrollEvent?: boolean;
     }
@@ -53,27 +52,27 @@
 
 <svelte:window on:scroll={onScrollHandler} />
 
-<header class={headerClassName}>
-    <div class="navbar h-full min-h-fit gap-x-2 lg:gap-x-8">
-        <div class="navbar-start block lg:hidden">
+<header
+    class="fixed inset-x-1 top-1 z-40 h-header-sm rounded-box border border-base-content/5 bg-base-200 px-1 py-1 shadow-xl lg:h-header lg:px-2"
+>
+    <div class="flex h-full items-center gap-x-2 px-2 lg:gap-x-8">
+        <div class="block lg:hidden">
             <SidenavTrigger />
         </div>
-        <div class="h-full flex-shrink-0 max-lg:navbar-center">
-            <a href={"/"} class="inline-block h-full w-full">
-                <Picture meta={LogoCotAI} alt={m.mainLogo()} />
-            </a>
-        </div>
-
+        <a
+            href={"/"}
+            class="absolute left-1/2 w-24 -translate-x-1/2 lg:static lg:translate-x-0"
+        >
+            <Picture meta={LogoCotAI} alt={m.mainLogo()} />
+        </a>
         <div class="hidden lg:block">
             <Navigator />
         </div>
         <div class="flex flex-grow-0 lg:flex-grow" />
-        <div class="navbar-end">
-            <div class="hidden lg:flex">
-                <!-- TODO: re-open after update ENG language   -->
-                <!-- <LangSelector /> -->
-                <ThemeSelector />
-            </div>
+        <div class="hidden lg:flex">
+            <!-- TODO: re-open after update ENG language   -->
+            <!-- <LangSelector /> -->
+            <!-- <ThemeSelector /> -->
         </div>
     </div>
 </header>

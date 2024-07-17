@@ -3,7 +3,6 @@
 
     import KeenSlider from "keen-slider";
     import { onDestroy, onMount } from "svelte";
-    import { cx } from "cva";
 
     import { getSliderRefsContext } from "./context";
     import BioCard from "./bio-card.svelte";
@@ -53,12 +52,6 @@
 
 <div class="keen-slider" bind:this={$teachersBioRef}>
     {#each teachersBio as bio, idx}
-        <div
-            class={cx("keen-slider__slide overflow-hidden rounded-box", {
-                hidden: idx !== 0 && !isSlideRendered,
-            })}
-        >
-            <BioCard {...bio} />
-        </div>
+        <BioCard {...bio} hidden={idx !== 0 && !isSlideRendered} />
     {/each}
 </div>

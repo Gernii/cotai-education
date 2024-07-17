@@ -8,13 +8,16 @@
 
     import HeroiconsClock from "~icons/heroicons/clock";
 
-    type $$Props = CoursesListSliderProps_Courses;
+    interface $$Props extends CoursesListSliderProps_Courses {
+        hidden?: boolean;
+    }
 
     export let id: $$Props["id"];
     export let title: $$Props["title"] = undefined;
     export let description: $$Props["description"] = undefined;
     export let totalLessons: $$Props["totalLessons"] = 0;
     export let currentCourse: $$Props["currentCourse"] = undefined;
+    export let hidden: $$Props["hidden"] = undefined;
 
     $: courseNavigate = routerPath.courseId(id);
 
@@ -41,8 +44,9 @@
 
 {#if title && description}
     <li
-        class="group card card-bordered card-compact m-2 border-base-content/5 bg-base-200 shadow shadow-base-content/5 ring-primary hover:shadow-lg hover:shadow-base-content/5"
-        class:ring-4={currentCourse}
+        class="keen-slider__slide group card card-compact border-primary bg-base-200 hover:shadow"
+        class:border-4={currentCourse}
+        class:hidden
     >
         <div class="overflow-hidden rounded-t-box">
             {#if isDisabled}

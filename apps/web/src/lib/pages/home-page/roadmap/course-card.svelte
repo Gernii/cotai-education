@@ -21,9 +21,11 @@
     import type { CourseIds } from "$lib/datas/courses/constants";
     import { courseStudyType } from "$lib/datas/courses/constants";
     import LucideMonitorPlay from "~icons/lucide/monitor-play";
+    import { ReadMore } from "$lib/features/read-more";
     interface $$Props extends CourseProps {
         idx: number;
         last: boolean;
+        showRoadMapLine: boolean;
     }
 
     export let title: $$Props["title"] = undefined;
@@ -33,6 +35,7 @@
     export let idx: $$Props["idx"];
     export let last: $$Props["last"];
     export let studyTypes: $$Props["studyTypes"] = [];
+    export let showRoadMapLine: $$Props["showRoadMapLine"];
 
     let isInview = writable(false);
 
@@ -49,6 +52,8 @@
         class="flex gap-x-1 sm:gap-x-4"
         use:inview={inviewCommonOptions}
         on:inview_enter={onInViewEnter(isInview)}
+        class:opacity-0={!showRoadMapLine}
+        class:animate-fade={showRoadMapLine}
     >
         <div class="relative flex w-7 flex-col items-center sm:w-14">
             <div
@@ -75,13 +80,11 @@
         >
             <div class="card-body items-start">
                 <div
-                    class={cx("grid w-full grid-cols-1 gap-x-16 gap-y-8", {
-                        "lg:grid-cols-5": !!courseThumbnail,
+                    class={cx("grid w-full grid-cols-1 gap-x-8 gap-y-8", {
+                        "lg:grid-cols-2": !!courseThumbnail,
                     })}
                 >
-                    <div
-                        class="col-span-1 flex flex-col gap-y-4 text-start lg:col-span-3"
-                    >
+                    <div class="flex flex-col gap-y-4 text-start">
                         <div>
                             <p class="font-semibold">
                                 {m.programDetails_courseRoadmap()}
@@ -122,9 +125,13 @@
                             {/each}
                         </ul>
                         <hr class="h-1 w-12 border-0 bg-secondary" />
-                        <div class="flex-grow">
-                            {@html description}
-                        </div>
+                        {#if description}
+                            <ReadMore
+                                textContent={description}
+                                maxChars={300}
+                            />
+                        {/if}
+
                         <div class="card-actions">
                             <a href={courseUrl} class="btn btn-primary">
                                 {m.showDetails()}
@@ -135,7 +142,7 @@
                         </div>
                     </div>
                     {#if courseThumbnail}
-                        <div class="col-span-1 self-center lg:col-span-2">
+                        <div class="self-center">
                             <div class="overflow-hidden rounded-box">
                                 <figure>
                                     <Picture

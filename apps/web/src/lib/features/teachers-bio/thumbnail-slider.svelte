@@ -3,7 +3,6 @@
 
     import KeenSlider from "keen-slider";
     import { onDestroy, onMount } from "svelte";
-    import { cx } from "cva";
 
     import * as m from "$i18n/messages";
 
@@ -85,21 +84,13 @@
 
     <div class="keen-slider" bind:this={$teachersThumbnailsRef}>
         {#each teachersBio as bio, idx}
-            <div
-                class={cx(
-                    "keen-slider__slide overflow-hidden rounded-box p-1",
-                    {
-                        hidden: idx !== 0 && !isSlideRendered,
-                    },
-                )}
-            >
-                <ThumbnailCard
-                    avatar={bio.avatar}
-                    teacherName={bio.name}
-                    active={$currentReview === idx}
-                    on:click={() => onChangeSlide(idx)}
-                />
-            </div>
+            <ThumbnailCard
+                avatar={bio.avatar}
+                teacherName={bio.name}
+                active={$currentReview === idx}
+                hidden={idx !== 0 && !isSlideRendered}
+                on:click={() => onChangeSlide(idx)}
+            />
         {/each}
     </div>
     <div class="flex items-center">

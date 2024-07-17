@@ -14,17 +14,19 @@
             HTMLButtonAttributes {
         active?: boolean;
         teacherName: TeacherBioProps["name"];
+        hidden?: boolean;
     }
 
     export let avatar: $$Props["avatar"];
     export let teacherName: $$Props["teacherName"];
     export let active: $$Props["active"] = undefined;
+    export let hidden: $$Props["hidden"] = false;
 
     $: buttonClasses = cn(
-        "card card-bordered card-compact h-full w-full flex-grow bg-base-200 transition-colors hover:bg-base-200/80",
+        "keen-slider__slide card card-bordered card-compact flex-grow bg-base-200 transition-colors hover:bg-base-200/80",
         {
-            "bg-secondary/70 ring-2 ring-secondary hover:bg-secondary/60":
-                active,
+            "bg-secondary/70 hover:bg-secondary/60": active,
+            hidden: hidden,
         },
     );
 </script>

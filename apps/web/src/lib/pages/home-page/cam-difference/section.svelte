@@ -55,7 +55,7 @@
             </div>
             <div class="grid grid-cols-1 gap-x-8 md:grid-cols-5">
                 <div
-                    class="col-span-2 items-start"
+                    class="col-span-2 hidden items-start md:flex"
                     class:opacity-0={!$isInview}
                     class:animate-fade-right={$isInview}
                 >

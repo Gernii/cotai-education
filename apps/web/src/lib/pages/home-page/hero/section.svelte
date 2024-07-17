@@ -36,8 +36,10 @@
                 <div
                     class="flex flex-col justify-center space-y-1 lg:space-y-4"
                 >
-                    <div class="space-y-6 text-xl font-bold">
-                        <div class="space-y-3 text-4xl lg:text-5xl xl:text-6xl">
+                    <div class="space-y-2 text-xl font-bold md:space-y-6">
+                        <div
+                            class="space-y-1 text-3xl md:space-y-3 lg:text-4xl xl:text-6xl"
+                        >
                             <p>Học tăng tốc</p>
                             <p>
                                 <span class="italic text-secondary">
@@ -46,7 +48,9 @@
                             </p>
                             <p>cùng kỹ sư CoTAI</p>
                         </div>
-                        <div class="text-2xl lg:text-3xl xl:text-4xl">
+                        <div
+                            class="text-xl sm:text-2xl lg:text-3xl xl:text-4xl"
+                        >
                             from <span class="italic">zero</span> to
                             <p>
                                 <span class="text-primary">

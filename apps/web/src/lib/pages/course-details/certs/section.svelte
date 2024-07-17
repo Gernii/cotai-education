@@ -70,8 +70,10 @@
                 </div>
             {/if}
 
-            <div class="grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-2">
-                <div>
+            <div
+                class="grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-3 lg:grid-cols-2"
+            >
+                <div class="col-span-1 md:col-span-2 lg:col-span-1">
                     <div
                         class:opacity-0={!isInview}
                         class:animate-fade-left={isInview}

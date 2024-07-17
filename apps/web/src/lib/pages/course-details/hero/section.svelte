@@ -4,7 +4,6 @@
     import { ContainerContent } from "$lib/components/ui/container";
     import { Picture } from "$lib/components/ui/picture";
     import { ExternalAnchor } from "$lib/components/ui/external-anchor";
-    import { ContentRenderer } from "$lib/components/ui/content-renderer";
 
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
     import { countTotalLessons } from "$lib/utils/count-total-lessons";
@@ -17,6 +16,7 @@
     import { HeroRoadMap } from "$lib/features/hero-roadmap";
     import type { CourseProps } from "$lib/datas/courses/types";
     import type { CourseIds } from "$lib/datas/courses/constants";
+    import ReadMore from "$lib/features/read-more/read-more.svelte";
 
     $: heroRoadmapCourse = $page.data.heroRoadmapCourse as HeroRoadmapCourse[];
 
@@ -50,8 +50,9 @@
                     </div>
                 </div>
                 <hr class="h-1 w-12 border-0 bg-secondary" />
-
-                <ContentRenderer content={course.description} />
+                {#if course.description}
+                    <ReadMore textContent={course.description} maxChars={400} />
+                {/if}
 
                 {#if course.skills && course.skills.length > 0}
                     <hr class="h-1 w-12 border-0 bg-secondary" />

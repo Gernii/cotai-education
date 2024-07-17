@@ -4,15 +4,21 @@
 
     import type { TeacherBioProps } from "$lib/datas/teachers-bio/types";
 
-    type $$Props = TeacherBioProps;
+    interface $$Props extends TeacherBioProps {
+        hidden?: boolean;
+    }
 
     export let avatar: $$Props["avatar"];
     export let name: $$Props["name"];
     export let role: $$Props["role"];
     export let details: $$Props["details"] = undefined;
+    export let hidden: $$Props["hidden"] = undefined;
 </script>
 
-<div class="card card-compact h-full w-full bg-base-200 sm:card-normal">
+<div
+    class="keen-slider__slide card card-compact bg-base-200 sm:card-normal"
+    class:hidden
+>
     <div class="card-body flex-col gap-x-8 md:flex-row">
         <div
             class="size-32 flex-shrink-0 overflow-hidden rounded-box sm:size-44 lg:size-72"
