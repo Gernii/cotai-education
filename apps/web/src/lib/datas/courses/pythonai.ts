@@ -22,7 +22,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
     title: "Python Coding with AI",
     shortTitle: "PythonAI",
     price: Number.parseInt(PUBLIC_COURSE_PRICE_PYTHON_AI),
-    studyTypes: ["online", "offline", "selfPaced"],
+    studyTypes: ["online", "selfPaced"],
     registerUrl: PUBLIC_COURSE_REGISTER_URL_PYTHON_AI,
     nextCourseId: CourseIds.mc4ai,
     programId: ProgramIds.public_training,

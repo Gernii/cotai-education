@@ -12,6 +12,7 @@ export const contacts = {
     },
     email: "contact@cot.ai",
     facebook: "https://m.me/cotaivn",
+    zalo: "https://zalo.me/0815503467",
 } as const;
 
 export const coursesIdDeprecated = [

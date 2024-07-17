@@ -6,6 +6,8 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
+    import HugeiconsAiInnovation02 from "~icons/hugeicons/ai-innovation-02";
+
     let isInview = writable(false);
 </script>
 
@@ -21,21 +23,21 @@
                 class:animate-fade-up={$isInview}
             >
                 <div
-                    class="card-body flex-col justify-between gap-x-8 gap-y-6 md:flex-row"
+                    class="card-body flex-col items-center gap-x-8 gap-y-4 text-center"
                 >
-                    <div class="flex-grow">
-                        <h2 class="text-xl font-bold md:text-2xl">
-                            Nâng tầm đổi mới và sáng tạo cho cuộc sống tươi đẹp
-                        </h2>
-                        <p class="text-md md:text-xl">
-                            Enabling innovation and creativity for social good
-                        </p>
+                    <h2 class="text-xl font-bold md:text-3xl">
+                        Nâng tầm đổi mới và sáng tạo cho cuộc sống tươi đẹp <HugeiconsAiInnovation02
+                            class="inline"
+                        />
+                    </h2>
+                    <div class="flex w-full justify-center">
+                        <hr class="w-1/3 border-primary" />
                     </div>
-                    <div>
-                        <button class="btn btn-primary text-nowrap">
-                            Đăng ký ngay
-                        </button>
-                    </div>
+                    <p class="text-md md:text-2xl">
+                        Enabling innovation and creativity for social good <HugeiconsAiInnovation02
+                            class="inline"
+                        />
+                    </p>
                 </div>
             </div>
         </ContainerContent>

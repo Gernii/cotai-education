@@ -5,6 +5,8 @@
     import { Picture } from "$lib/components/ui/picture";
     import { ExternalAnchor } from "$lib/components/ui/external-anchor";
 
+    import { scrollTo } from "$lib/libs/svelte-scrolling";
+
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
     import { countTotalLessons } from "$lib/utils/count-total-lessons";
 
@@ -101,10 +103,13 @@
                         <div class="divider uppercase">{m.or()}</div>
                     {/if}
                     <div class="space-y-2">
-                        <div class="text-xl font-semibold">{m.contact()}</div>
-                        <address class="not-italic">
-                            <p><span>{m.hotline()}: </span>{m.phoneNumber()}</p>
-                        </address>
+                        <!-- svelte-ignore a11y-missing-attribute -->
+                        <a
+                            use:scrollTo={"register-form"}
+                            class="btn btn-outline btn-block"
+                        >
+                            Tư vấn ngay
+                        </a>
                     </div>
                 </div>
             </div>

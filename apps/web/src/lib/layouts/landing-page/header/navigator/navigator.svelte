@@ -78,7 +78,6 @@
             href="https://gem.cot.ai/"
             rel="noopener noreferrer"
             aria-label={m.gemCollection()}
-            class="text-primary"
             target="_blank"
         >
             {m.gemCollection()}

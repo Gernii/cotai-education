@@ -37,7 +37,7 @@
         <div class="ml-1">
             <h2 class="card-title">
                 <span>
-                    {@html m.tense_happy_zebra_file()}
+                    {m.tense_happy_zebra_file()}
                 </span>
             </h2>
             <p class="text-sm text-base-content/50">
@@ -154,9 +154,9 @@
                     </div>
                 </div>
 
-                <div>
+                <div class="flex justify-end">
                     <button
-                        class="btn btn-primary w-full"
+                        class="btn btn-primary"
                         type="submit"
                         disabled={$submitting}
                     >

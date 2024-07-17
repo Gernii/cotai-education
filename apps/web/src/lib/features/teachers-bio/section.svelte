@@ -29,6 +29,7 @@
     <Container>
         <ContainerContent class="space-y-4">
             <div
+                class="text-center"
                 class:opacity-0={!$isInview}
                 class:animate-fade-left={$isInview}
             >

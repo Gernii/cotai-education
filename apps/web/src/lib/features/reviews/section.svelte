@@ -82,6 +82,7 @@
             <div
                 class:opacity-0={!$isInview}
                 class:animate-fade-left={$isInview}
+                class="text-center"
             >
                 <SectionTitle>{m.reviewsTitle()}</SectionTitle>
             </div>
@@ -91,7 +92,7 @@
                         <button
                             class="btn btn-square btn-ghost"
                             on:click={() => carouselSliderRef?.prev()}
-                            title={m.such_least_squirrel_promise()}
+                            title={m.weary_top_swallow_wish()}
                         >
                             <LucideChevronLeft class="size-12" />
                         </button>
@@ -119,7 +120,7 @@
                         <button
                             class="btn btn-square btn-ghost"
                             on:click={() => carouselSliderRef?.next()}
-                            title={m.mushy_least_clownfish_bask()}
+                            title={m.moving_cuddly_ox_aspire()}
                         >
                             <LucideChevronRight class="size-12" />
                         </button>

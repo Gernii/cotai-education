@@ -33,7 +33,7 @@
         <div>
             <h2 class="text-lg font-bold">{name}</h2>
             {#if classNameTitleI18n}
-                <p class="text-xs italic">
+                <p class="text-sm uppercase">
                     {classNameTitleI18n}
                 </p>
             {/if}

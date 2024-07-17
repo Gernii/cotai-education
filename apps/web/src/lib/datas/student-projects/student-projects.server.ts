@@ -1,3 +1,4 @@
+import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
 import type { StudentProjectProps } from "./types";
 
 export const dataStudentProjects = (): StudentProjectProps[] => [
@@ -5,6 +6,9 @@ export const dataStudentProjects = (): StudentProjectProps[] => [
         id: "1",
         title: "AI tool for English learning",
         members: ["Quốc Bảo"],
+        description: parseMarkdownToHTML(
+            `Web app giúp tăng cường học tiếng Anh với 2 chức năng translator và spelling. Một số thư viện sử dụng: Pillow, pytesseract, pdf2image, googletrans, streamlit-drawable-canvas, opencv-python…`,
+        ),
         externalLinks: [{ title: "Github", url: "https://github.com/kyle-paul/final-project" }],
         demoId: "USx-8hVU5cw",
         className: "MC4AI 2023",
