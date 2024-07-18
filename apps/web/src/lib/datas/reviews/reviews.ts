@@ -1,6 +1,6 @@
 import { CourseIds } from "../courses/constants";
 import type { ReviewProps } from "./types";
-import ChauLeQuanAvatar from "$lib/assets/images/reviews/ChauLeQuan.png?imagetools";
+import ChauLeQuanAvatar from "$lib/assets/images/reviews/ChauLeQuan.jpg?imagetools";
 import TranBaoTienAvatar from "$lib/assets/images/reviews/TranBaoTien.jpg?imagetools";
 import YamashitaTriAnAvatar from "$lib/assets/images/reviews/YamashitaTriAn.png?imagetools";
 import NguyenPhamNhatQuangAvatar from "$lib/assets/images/reviews/NguyenPhamNhatQuang.jpg?imagetools";
