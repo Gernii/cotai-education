@@ -101,8 +101,10 @@ const courseMappingData = (course: CourseProps): CourseProps => {
 };
 
 const getHeroRoadmapCourse = () => {
+    const hardcodedStarsIdx = new Map([[4, 3]]);
+
     const res = dataProgramPublicTraining.coursesRoadmap.reduce(
-        (prev, courseId): HeroRoadmapCourse[] => {
+        (prev, courseId, idx): HeroRoadmapCourse[] => {
             const courseGetter = coursesMap.get(courseId);
             if (!courseGetter) {
                 return prev;
@@ -114,6 +116,7 @@ const getHeroRoadmapCourse = () => {
                 id: course.id,
                 shortTitle: course.shortTitle,
                 title: course.title,
+                totalStars: hardcodedStarsIdx.get(idx) ?? idx,
             };
             prev.push(heroCourse);
             return prev;

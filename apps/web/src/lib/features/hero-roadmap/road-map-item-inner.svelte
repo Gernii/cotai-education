@@ -6,13 +6,15 @@
 
     import TeenyiconsStarSmallSolid from "~icons/teenyicons/star-small-solid";
 
-    interface $$Props extends Pick<HeroRoadmapCourse, "shortTitle" | "title"> {
-        idx: number;
-    }
+    interface $$Props
+        extends Pick<
+            HeroRoadmapCourse,
+            "shortTitle" | "title" | "totalStars"
+        > {}
 
     export let title: $$Props["title"] = undefined;
     export let shortTitle: $$Props["shortTitle"] = undefined;
-    export let idx: $$Props["idx"];
+    export let totalStars: $$Props["totalStars"];
 
     const {
         elements: { trigger, content, arrow },
@@ -34,7 +36,7 @@
     aria-label={title}
 >
     <div class="flex">
-        {#each new Array(idx + 1) as _}
+        {#each new Array(totalStars + 1) as _}
             <TeenyiconsStarSmallSolid class="size-5 flex-shrink-0 lg:size-5" />
         {/each}
     </div>
