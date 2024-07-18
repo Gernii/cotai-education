@@ -26,7 +26,7 @@ Năng lực & thành tựu nổi bật:
         ),
     },
     {
-        role: "Instructor",
+        role: "Kỹ sư AI chính của CoTAI",
         avatar: LeNguyenThanhHuyAvatar,
         name: "Lê Nguyễn Thanh Huy",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư chuyên ngành phần mềm, (ĐH Văn Lang 2018)
@@ -39,7 +39,7 @@ Năng lực & thành tựu nổi bật:
   - Trực tiếp xây dựng hệ thống BackEnd của startup Go2Joy (2016--2018)`),
     },
     {
-        role: "Instructor",
+        role: "Kỹ sư AI của CoTAI",
         avatar: NguyenVietHaAvatar,
         name: "Nguyễn Việt Hà",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư Khoa học máy tính chuyên ngành phần mềm (ĐH KHTN 2007)
@@ -51,7 +51,7 @@ Năng lực & thành tựu nổi bật:
   - Hơn 12 năm kinh nghiệm lập trình viên cao cấp về Java tại MECORP (2014–2020), VIVOO (2011–2014), GAMELOFT (2008–2010)`),
     },
     {
-        role: "Instructor",
+        role: "Trưởng lab xử lý giọng nói, viện Bigdata tập đoàn Vingroup",
         avatar: NguyenTruongThinhAvatar,
         name: "Nguyễn Trường Thịnh",
         details: parseMarkdownToHTML(`Trình độ: Thạc sĩ Khoa học máy tính chuyên ngành AI (ĐH Stuttgart 2019)
@@ -63,7 +63,7 @@ Năng lực & thành tựu nổi bật:
   - Lập trình hệ thống tự động điều hướng tháp năng lượng mặt trời tại The German Aerospace Center (6/2016--8/2019)`),
     },
     {
-        role: "Instructor",
+        role: "Giảng viên nghiên cứu tại AI Lab thuộc ĐH Công Nghệ UET Hà Nội",
         avatar: NguyenVanPhiAvatar,
         name: "Nguyễn Văn Phi",
         details: parseMarkdownToHTML(`Trình độ: Thạc sĩ Khoa học máy tính chuyên ngành AI (ĐH UET 2023)
@@ -75,7 +75,7 @@ Năng lực & thành tựu nổi bật:
   - Xây dựng và chuyển giao hệ thống AI xử lý thoại tự động hoá bán hàng online trong thương mại điện tử cho khách hàng của CoTAI (3/2020 đến 3/2021)`),
     },
     {
-        role: "Instructor",
+        role: "Kỹ sư AI cao cấp tại công ty Tiktok/Bytedance Singapore",
         avatar: HoangGiangAvatar,
         name: "Hoàng Giang",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư Khoa học máy tính chuyên ngành AI (ĐH Công nghệ UET Hà Nội 2020)
@@ -87,7 +87,7 @@ Năng lực & thành tựu nổi bật:
   - Luận văn xuất sắc về tối ưu giải thuật xử lý ảnh y tế, AI Lab ĐH UET.`),
     },
     {
-        role: "Instructor",
+        role: "Chuyên viên cấp cao về Khoa học dữ liệu tại MoMo",
         avatar: NguyenQuynhMaiAvatar,
         name: "Nguyễn Quỳnh Mai",
         details: parseMarkdownToHTML(`Trình độ: Thạc sĩ ngành Công nghệ thông tin (NAIST Japan 2019)
@@ -97,7 +97,7 @@ Kinh nghiệm giảng dạy: 4 năm đào tạo về AI/Học máy tại CoTAI
 Năng lực & thành tựu nổi bật: Nhiều năm kinh nghiệm nghiên cứu phát triển AI xử lý ngôn ngữ tự nhiên tại MoMo (2/2022 đến nay) và viện Vingroup Bigdata (11/2019 đến 2/2022).`),
     },
     {
-        role: "Instructor",
+        role: "Kiến trúc sư giải pháp cloud AI tại Amazon AWS",
         avatar: CaoHoangTungAvatar,
         name: "Cao Hoàng Tùng",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư Công nghệ thông tin chuyên ngành AI (ĐH Công nghệ UET Hà Nội 2023)
