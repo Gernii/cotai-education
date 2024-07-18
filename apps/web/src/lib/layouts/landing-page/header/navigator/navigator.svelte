@@ -45,12 +45,13 @@
         })}
     >
         <NavigatorItem
-            href={routingPathAboutUs()}
+            href={routerPath.home}
             target="_self"
-            aria-label={m.aboutUs()}
+            aria-label={m.lucky_suave_flamingo_stir()}
         >
-            {m.aboutUs()}
+            {m.lucky_suave_flamingo_stir()}
         </NavigatorItem>
+
         {#if coursesMap.size > 0}
             <NavigatorCollapse title={m.ourPrograms()} {sidenav}>
                 <ul class="menu w-full shadow-2xl">
@@ -73,6 +74,14 @@
                 </ul>
             </NavigatorCollapse>
         {/if}
+
+        <NavigatorItem
+            href={routingPathAboutUs()}
+            target="_self"
+            aria-label={m.aboutUs()}
+        >
+            {m.aboutUs()}
+        </NavigatorItem>
 
         <NavigatorItem
             href="https://gem.cot.ai/"

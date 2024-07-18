@@ -12,16 +12,13 @@
 
     import { scrollTo } from "$lib/libs/svelte-scrolling";
 
-    import { roadmapParser } from "./roadmap-parser";
     import Image from "./image.svelte";
 
     import TeenyiconsDiscountSolid from "~icons/teenyicons/discount-solid";
     import { HeroRoadMap } from "$lib/features/hero-roadmap";
-    import type { CourseProps } from "$lib/datas/courses/types";
+    import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types";
 
-    $: courseRoadmap = $page.data.courseRoadmap as CourseProps[];
-
-    $: roadmapProgram = roadmapParser(courseRoadmap);
+    $: heroRoadmapCourse = $page.data.heroRoadmapCourse as HeroRoadmapCourse[];
 
     let isDiscountVisible = false;
     // TODO: Implement i18n
@@ -104,7 +101,7 @@
                     </div>
                 </div>
             </div>
-            <HeroRoadMap isNavigate={false} courses={roadmapProgram} />
+            <HeroRoadMap isNavigate={false} courses={heroRoadmapCourse} />
             {#if isDiscountVisible}
                 <div
                     class="card flex-row gap-x-2 bg-error text-primary-content"

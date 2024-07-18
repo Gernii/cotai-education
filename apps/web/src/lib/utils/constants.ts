@@ -42,6 +42,7 @@ export const routerPath = {
     cookiePolicy: "/cookie-policy",
     privacyPolicy: "/privacy-policy",
     faq: "/faq",
+    home: "/",
 };
 
 export const SEARCH_PARAMS_ACTION = "action";

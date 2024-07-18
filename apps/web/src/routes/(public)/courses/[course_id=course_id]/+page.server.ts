@@ -15,6 +15,7 @@ import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
 import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types";
 import { dataFAQs } from "$lib/datas/faq/faq.server";
 import { FAQShowLocation } from "$lib/datas/faq/types.js";
+import { getDataCourseUnique } from "$lib/datas/course-unique/course-unique.server.js";
 
 export const load = async ({ params }) => {
     const courseId = params.course_id as CourseIds;
@@ -46,6 +47,8 @@ export const load = async ({ params }) => {
 
     const faqs = courseFAQ();
 
+    const courseUnique = getDataCourseUnique();
+
     return {
         registerForm,
         course: courseMappingData(course),
@@ -54,6 +57,7 @@ export const load = async ({ params }) => {
         studentProjects,
         heroRoadmapCourse,
         faqs,
+        courseUnique,
     };
 };
 
@@ -97,8 +101,10 @@ const courseMappingData = (course: CourseProps): CourseProps => {
 };
 
 const getHeroRoadmapCourse = () => {
+    const hardcodedStarsIdx = new Map([[4, 3]]);
+
     const res = dataProgramPublicTraining.coursesRoadmap.reduce(
-        (prev, courseId): HeroRoadmapCourse[] => {
+        (prev, courseId, idx): HeroRoadmapCourse[] => {
             const courseGetter = coursesMap.get(courseId);
             if (!courseGetter) {
                 return prev;
@@ -110,6 +116,7 @@ const getHeroRoadmapCourse = () => {
                 id: course.id,
                 shortTitle: course.shortTitle,
                 title: course.title,
+                totalStars: hardcodedStarsIdx.get(idx) ?? idx,
             };
             prev.push(heroCourse);
             return prev;

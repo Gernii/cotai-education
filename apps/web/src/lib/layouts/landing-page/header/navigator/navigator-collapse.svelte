@@ -17,7 +17,7 @@
         <slot />
     </NavigatorCollapseSidenav>
 {:else}
-    <div class="dropdown dropdown-hover">
+    <div class="dropdown dropdown-bottom dropdown-hover">
         <div
             tabindex="0"
             role="button"
