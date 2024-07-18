@@ -56,48 +56,42 @@ export const dataCourseMC4AI = (): CourseProps => ({
         {
             title: "S1. Đại số tuyến tính & Numpy cơ bản",
             details: {
-                content: `Các khái niệm cơ bản của Đại số tuyến tính: Vector, Ma trận
-
-Cơ bản về thư viện Numpy:
-- Khởi tạo nd array
-- Truy cập phần tử, hàng, cột, slicing
-- Shape, reshape, transpose, dot product, element-wise operators`,
+                content: `- Các khái niệm cơ bản của Đại số tuyến tính: Vector, Ma trận
+- Cơ bản về thư viện Numpy:
+  - Khởi tạo nd array
+  - Truy cập phần tử, hàng, cột, slicing
+  - Shape, reshape, transpose, dot product, element-wise operators`,
             },
         },
         {
             title: "S2. Các hàm thông dụng của Numpy & Matplotlib",
             details: {
-                content: `Các hàm Numpy: sum, mean, min, max, argmin, argmax; concatenate, where, filter
-
-Matplotlib: Hàm scatter & plot`,
+                content: `- Các hàm Numpy: sum, mean, min, max, argmin, argmax; concatenate, where, filter
+- Matplotlib: Hàm scatter & plot`,
             },
         },
         {
             title: "S3. Pandas & Phân tích dữ liệu",
             details: {
-                content: `Pandas: Tạo & xử lý Dataframe: truy cập hàng, cột, filter; Các hàm map & apply
-
-Các kỹ thuật phân tích dữ liệu: Đọc, làm sạch, tổng hợp dữ liệu & vẽ đồ thị`,
+                content: `- Pandas: Tạo & xử lý Dataframe: truy cập hàng, cột, filter; Các hàm map & apply
+- Các kỹ thuật phân tích dữ liệu: Đọc, làm sạch, tổng hợp dữ liệu & vẽ đồ thị`,
             },
         },
         {
             title: "S4. Thuật toán Gradient Descent & Plotly",
             details: {
-                content: `Khái niệm đạo hàm & Gradient
-
-Thuật toán Gradient Descent (nguyên lý, chi tiết cài đặt)
-
-Thư viện Plotly:
-- Module express: hàm scatter_3d
-- Module graph_objects: hàm Scatter3d & Surface`,
+                content: `- Khái niệm đạo hàm & Gradient
+- Thuật toán Gradient Descent (nguyên lý, chi tiết cài đặt)
+- Thư viện Plotly:
+  - Module express: hàm scatter_3d
+  - Module graph_objects: hàm Scatter3d & Surface`,
             },
         },
         {
             title: "S5. Xác suất & Phân phối xác suất",
             details: {
-                content: `Khái niệm xác suất & ứng dụng trong AI
-
-Khái niệm phân phối xác suất, các phân phối thông dụng & cách giả lập bằng Numpy: Phân phối Bernoulli, Categorical, phân phối đều & phân phối chuẩn`,
+                content: `- Khái niệm xác suất & ứng dụng trong AI
+- Khái niệm phân phối xác suất, các phân phối thông dụng & cách giả lập bằng Numpy: Phân phối Bernoulli, Categorical, phân phối đều & phân phối chuẩn`,
             },
         },
         {
@@ -106,59 +100,47 @@ Khái niệm phân phối xác suất, các phân phối thông dụng & cách g
         {
             title: "S7. Thuật toán kNN & kMeans",
             details: {
-                content: `Thuật toán kNN:
-- Nguyên lý & chi tiết cài đặt với Numpy
-- Áp dụng kNN bằng thư viện Scikit-learn
-
-Thuật toán kMeans:
-- Nguyên lý & chi tiết cài đặt với Numpy
-- Áp dụng kMeans bằng thư viện Scikit-learn`,
+                content: `- Thuật toán kNN:
+  - Nguyên lý & chi tiết cài đặt với Numpy
+  - Áp dụng kNN bằng thư viện Scikit-learn
+- Thuật toán kMeans:
+  - Nguyên lý & chi tiết cài đặt với Numpy
+  - Áp dụng kMeans bằng thư viện Scikit-learn`,
             },
         },
         {
             title: "S8. Mô hình Linear Regression",
             details: {
-                content: `Giới thiệu bài toán Regression
-
-Mô hình Linear Regression
-
-MSE Loss
-
-Áp dụng mô hình Linear Regression bằng các thư viện Scikit-learn & Keras`,
+                content: `- Giới thiệu bài toán Regression
+- Mô hình Linear Regression
+- MSE Loss
+- Áp dụng mô hình Linear Regression bằng các thư viện Scikit-learn & Keras`,
             },
         },
         {
             title: "S9. Mô hình Logistic Regression",
             details: {
-                content: `Hàm Sigmoid & bài toán Binary Classification
-
-Mô hình Logistic Regression & Binary Cross-Entropy Loss
-
-Áp dụng mô hình Logistic Regression bằng các thư viện Scikit-learn & Keras`,
+                content: `- Hàm Sigmoid & bài toán Binary Classification
+- Mô hình Logistic Regression & Binary Cross-Entropy Loss
+- Áp dụng mô hình Logistic Regression bằng các thư viện Scikit-learn & Keras`,
             },
         },
         {
             title: "S10. Mô hình Softmax Regression",
             details: {
-                content: `Hàm Softmax & Cross-Entropy
-
-Giới thiệu bài toán Multi-class Classification & mô hình Softmax Regression
-
-Categorical Cross-Entropy Loss
-
-Áp dụng mô hình Softmax Regression bằng thư viện Keras`,
+                content: `- Hàm Softmax & Cross-Entropy
+- Giới thiệu bài toán Multi-class Classification & mô hình Softmax Regression
+- Categorical Cross-Entropy Loss
+- Áp dụng mô hình Softmax Regression bằng thư viện Keras`,
             },
         },
         {
             title: "S11: Thuật toán Gradient Descent cho các mô hình tuyến tính",
             details: {
-                content: `Lý thuyết toán của mô hình Linear Regression
-
-Chi tiết cài đặt thuật toán GD
-
-Kỹ thuật Normalize
-
-Thuật toán SGD & Mini-batch GD`,
+                content: `- Lý thuyết toán của mô hình Linear Regression
+- Chi tiết cài đặt thuật toán GD
+- Kỹ thuật Normalize
+- Thuật toán SGD & Mini-batch GD`,
             },
         },
         {

@@ -23,60 +23,58 @@
     $: whoShouldJoin = course.whoShouldJoin;
 </script>
 
-{#if whoShouldJoin && whoShouldJoin.length > 0}
-    <section
-        use:inview={inviewCommonOptions}
-        on:inview_enter={onInViewEnter(isInview)}
-    >
-        <Container>
-            <!-- <ContainerContent class="flex flex-col gap-x-16 gap-y-8 lg:flex-row"> -->
-            <ContainerContent>
-                <div
-                    class="card rounded-3xl bg-base-200 shadow-lg"
-                    class:opacity-0={!$isInview}
-                    class:animate-fade-up={$isInview}
-                >
-                    <div
-                        class="card-body flex-col gap-x-16 gap-y-8 lg:flex-row"
-                    >
-                        <div class="w-full flex-grow pt-2">
-                            <SectionTitle>{m.who_should_join_1()}</SectionTitle>
+<section
+    use:inview={inviewCommonOptions}
+    on:inview_enter={onInViewEnter(isInview)}
+>
+    <Container>
+        <!-- <ContainerContent class="flex flex-col gap-x-16 gap-y-8 lg:flex-row"> -->
+        <ContainerContent>
+            <div
+                class="card rounded-3xl bg-base-200 shadow-lg"
+                class:opacity-0={!$isInview}
+                class:animate-fade-up={$isInview}
+            >
+                <div class="card-body flex-col gap-x-16 gap-y-8 lg:flex-row">
+                    <div class="w-full flex-grow pt-2">
+                        <SectionTitle>{m.who_should_join_1()}</SectionTitle>
 
-                            <div class="space-y-4 text-sm">
+                        <div class="space-y-4 text-sm">
+                            {#if whoShouldJoin && whoShouldJoin.length > 0}
                                 {#each whoShouldJoin as item}
                                     <Item>
                                         {item}
                                     </Item>
                                 {/each}
-                                <Item>Học sinh THPT & Trung cấp nghề</Item>
-                                <Item>Sinh viên Cao đẳng & Đại học</Item>
-                                <Item>Lập trình viên & Người đi làm</Item>
-                            </div>
+                            {/if}
+                            <Item>Học sinh THPT & Trung cấp nghề</Item>
+                            <Item>Sinh viên Cao đẳng & Đại học</Item>
+                            <Item>Lập trình viên & Người đi làm</Item>
                         </div>
+                    </div>
 
-                        <div
-                            class="h-full w-full flex-shrink-0 flex-grow lg:w-[26rem]"
-                        >
-                            <div class="card h-full bg-base-100">
-                                <div class="card-body space-y-4">
-                                    <SectionTitle paddingBottom={false}>
-                                        {m.needSupport()}
-                                    </SectionTitle>
-                                    <div class="text-lg font-semibold">
-                                        {m.needSupport_description()}
-                                    </div>
-                                    <button
-                                        class="btn btn-primary"
-                                        use:scrollTo={"register-form"}
-                                    >
-                                        Đặt lịch
-                                    </button>
+                    <div
+                        class="h-full w-full flex-shrink-0 flex-grow lg:w-[26rem]"
+                    >
+                        <div class="card h-full bg-base-100">
+                            <div class="card-body space-y-4">
+                                <SectionTitle paddingBottom={false}>
+                                    {m.needSupport()}
+                                </SectionTitle>
+                                <div class="text-lg font-semibold">
+                                    {m.needSupport_description()}
                                 </div>
+                                <button
+                                    class="btn btn-primary"
+                                    use:scrollTo={"register-form"}
+                                >
+                                    Đặt lịch
+                                </button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </ContainerContent>
-        </Container>
-    </section>
-{/if}
+            </div>
+        </ContainerContent>
+    </Container>
+</section>

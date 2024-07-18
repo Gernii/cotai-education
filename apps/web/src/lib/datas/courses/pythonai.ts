@@ -58,10 +58,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
 - 💡 Kết hợp hài hoà các câu lệnh cơ bản & bậc cao (API calls)
 
 - 💡 Chỉ tập trung vào những kỹ năng & khái niệm cốt lõi để lập trình AI`,
-    experienceRequirement: [
-        "Các kỹ năng sử dụng máy tính cơ bản: truy cập file, folder, cách cài đặt phần mềm, sử dụng internet",
-        "Kiến thức toán cơ bản: hình học cơ bản, giải phương trình bậc 1,2",
-    ],
+    experienceRequirement: ["abs"],
     components: [],
 
     curriculum: [
@@ -70,11 +67,9 @@ export const dataCoursePythonAI = (): CourseProps => ({
 
             images: [CurriculumPython1],
             details: {
-                content: `Biểu diễn dữ liệu bằng "Biến" (Variable).
-
-Các kiểu dữ liệu phổ biến: "Số" và "Chuỗi ký tự" (String).
-
-Các phép toán số học trên kiểu dữ liệu "Số".`,
+                content: `- Biểu diễn dữ liệu bằng "Biến" (Variable).
+- Các kiểu dữ liệu phổ biến: "Số" và "Chuỗi ký tự" (String).
+- Các phép toán số học trên kiểu dữ liệu "Số".`,
             },
         },
         {
@@ -82,11 +77,9 @@ Các phép toán số học trên kiểu dữ liệu "Số".`,
             images: [CurriculumPython2],
 
             details: {
-                content: `Kiểu dữ liệu "Đúng / Sai" (Boolean).
-
-Các phép toán so sánh.
-
-Khối lệnh "kiểm tra điều kiện".`,
+                content: `- Kiểu dữ liệu "Đúng / Sai" (Boolean).
+- Các phép toán so sánh.
+- Khối lệnh "kiểm tra điều kiện".`,
             },
         },
         {
@@ -94,9 +87,8 @@ Khối lệnh "kiểm tra điều kiện".`,
             images: [CurriculumPython3],
 
             details: {
-                content: `Các kiểu dữ liệu có khả năng "chứa" nhiều dữ liệu bên trong như List, Tuple, Dictionary.
-
-Thao tác CRUD (Create - Read - Update - Delete) khi sử dụng "Cấu trúc dữ liệu".`,
+                content: `- Các kiểu dữ liệu có khả năng "chứa" nhiều dữ liệu bên trong như List, Tuple, Dictionary.
+- Thao tác CRUD (Create - Read - Update - Delete) khi sử dụng "Cấu trúc dữ liệu".`,
             },
         },
         {
@@ -104,11 +96,9 @@ Thao tác CRUD (Create - Read - Update - Delete) khi sử dụng "Cấu trúc d�
             images: [CurriculumPython4],
 
             details: {
-                content: `Định nghĩa vòng lặp để thực hiện 1 công việc nhiều lần.
-
-Sự kết hợp giữa "Vòng lặp" và "Cấu trúc dữ liệu".
-
-Kỹ thuật List Comprehension, "vũ khí lợi hại" của Python.`,
+                content: `- Định nghĩa vòng lặp để thực hiện 1 công việc nhiều lần.
+- Sự kết hợp giữa "Vòng lặp" và "Cấu trúc dữ liệu".
+- Kỹ thuật List Comprehension, "vũ khí lợi hại" của Python.`,
             },
         },
         {
@@ -116,11 +106,9 @@ Kỹ thuật List Comprehension, "vũ khí lợi hại" của Python.`,
             images: [CurriculumPython5],
 
             details: {
-                content: `Kỹ thuật "gom nhóm" các dòng code để tái sử dụng và "làm đẹp" code.
-
-Sử dụng "Vòng lặp" trong "Hàm".
-
-Các kỹ thuật lập trình cơ bản: Đặt cờ hiệu, Đặt lính canh, Cộng dồn.`,
+                content: `- Kỹ thuật "gom nhóm" các dòng code để tái sử dụng và "làm đẹp" code.
+- Sử dụng "Vòng lặp" trong "Hàm".
+- Các kỹ thuật lập trình cơ bản: Đặt cờ hiệu, Đặt lính canh, Cộng dồn.`,
             },
         },
         {
@@ -132,7 +120,7 @@ Các kỹ thuật lập trình cơ bản: Đặt cờ hiệu, Đặt lính canh,
             images: [CurriculumPython6],
 
             details: {
-                content: `Các thao tác xử lý và biến đổi "Chuỗi ký tự" thông dụng.`,
+                content: `- Các thao tác xử lý và biến đổi "Chuỗi ký tự" thông dụng.`,
             },
         },
         {
@@ -140,9 +128,8 @@ Các kỹ thuật lập trình cơ bản: Đặt cờ hiệu, Đặt lính canh,
             images: [CurriculumPython7],
 
             details: {
-                content: `Khái niệm "Class" và "Object" trong lập trình.
-
-Sử dụng "Class" để "trừu tượng hóa" quy trình xử lý.`,
+                content: `- Khái niệm "Class" và "Object" trong lập trình.
+- Sử dụng "Class" để "trừu tượng hóa" quy trình xử lý.`,
             },
         },
         {
@@ -150,9 +137,8 @@ Sử dụng "Class" để "trừu tượng hóa" quy trình xử lý.`,
             images: [CurriculumPython8],
 
             details: {
-                content: `Lưu trữ dữ liệu từ biến vào các tệp tin trong máy tính.
-
-Nạp dữ liệu từ các tệp tin vào lại chương trình.`,
+                content: `- Lưu trữ dữ liệu từ biến vào các tệp tin trong máy tính.
+- Nạp dữ liệu từ các tệp tin vào lại chương trình.`,
             },
         },
         {
@@ -160,11 +146,9 @@ Nạp dữ liệu từ các tệp tin vào lại chương trình.`,
             images: [CurriculumPython9],
 
             details: {
-                content: `Mảng 2 chiều và khái niệm ma trận trong toán.
-
-Lập trình các phép toán ma trận trên mảng 2 chiều.
-
-Khái niệm "ảnh xám".`,
+                content: `- Mảng 2 chiều và khái niệm ma trận trong toán.
+- Lập trình các phép toán ma trận trên mảng 2 chiều.
+- Khái niệm "ảnh xám".`,
             },
         },
         {
@@ -172,9 +156,8 @@ Khái niệm "ảnh xám".`,
             images: [CurriculumPython9],
 
             details: {
-                content: `Khái niệm "ảnh màu".
-
-Thao tác với dữ liệu ảnh bằng thư viện: Pillow và OpenCV`,
+                content: `- Khái niệm "ảnh màu".
+- Thao tác với dữ liệu ảnh bằng thư viện: Pillow và OpenCV`,
             },
         },
         {
@@ -182,13 +165,10 @@ Thao tác với dữ liệu ảnh bằng thư viện: Pillow và OpenCV`,
             images: [CurriculumPython9],
 
             details: {
-                content: `Hiển thị văn bản trên Website.
-
-Hiển thị các thành phần giao diện (UI Components) như nút bấm, ô chọn, …
-
-Thay đổi bố cục (layout) của Website.
-
-Triển khai Website lên Internet.`,
+                content: `- Hiển thị văn bản trên Website.
+- Hiển thị các thành phần giao diện (UI Components) như nút bấm, ô chọn, …
+- Thay đổi bố cục (layout) của Website.
+- Triển khai Website lên Internet.`,
             },
         },
         {
