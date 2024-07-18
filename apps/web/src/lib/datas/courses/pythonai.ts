@@ -134,7 +134,7 @@ Các toán tử: +,-,*,/,//,%
             },
         },
         {
-            title: "Kiểm tra giữa kỳ",
+            title: "Kiểm tra giữa khóa",
             hidden: false,
             classesCountable: true,
             images: [CurriculumExam],
@@ -200,7 +200,7 @@ Các toán tử: +,-,*,/,//,%
             },
         },
         {
-            title: "Thi cuối kỳ",
+            title: "Kiểm tra cuối khóa",
             hidden: false,
             classesCountable: true,
             images: [CurriculumExam],

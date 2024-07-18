@@ -120,7 +120,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
             },
         },
         {
-            title: "Kiểm tra giữa kỳ",
+            title: "Kiểm tra giữa khóa",
             hidden: false,
             classesCountable: true,
             details: {
@@ -210,7 +210,7 @@ Với nội dung phong phú và phương pháp giảng dạy thân thiện, khó
             },
         },
         {
-            title: "Kiểm tra cuối kỳ",
+            title: "Kiểm tra cuối khóa",
             hidden: false,
             classesCountable: true,
             details: {
