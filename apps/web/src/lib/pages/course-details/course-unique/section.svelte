@@ -21,14 +21,18 @@
                     {m.giant_cuddly_ocelot_achieve()}
                 </SectionTitle>
             </div>
-            <div class="grid grid-cols-3 gap-12">
+            <div class="grid grid-cols-2 gap-2 sm:gap-12 lg:grid-cols-3">
                 {#each courseUnique as unique}
-                    <div class="card">
-                        <div class="card-body gap-y-8 text-center">
-                            <div class="lg:text-7xl">
+                    <div class="card card-compact lg:card-normal">
+                        <div
+                            class="flex flex-col gap-y-2 p-2 text-center sm:card-body md:gap-y-8"
+                        >
+                            <div class="text-5xl md:text-7xl">
                                 {unique.icon}
                             </div>
-                            <p class="text-lg font-bold">
+                            <p
+                                class="text-xs font-bold sm:text-base md:text-lg"
+                            >
                                 {@html unique.title}
                             </p>
                         </div>
