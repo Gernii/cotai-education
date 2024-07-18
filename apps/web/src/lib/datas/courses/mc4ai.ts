@@ -123,7 +123,7 @@ export const dataCourseMC4AI = (): CourseProps => ({
             },
         },
         {
-            title: "Kiểm tra giữa kỳ & đăng ký dự án",
+            title: "Kiểm tra giữa khóa & đăng ký dự án",
             hidden: false,
             classesCountable: true,
         },
@@ -197,7 +197,7 @@ export const dataCourseMC4AI = (): CourseProps => ({
             },
         },
         {
-            title: "Thi cuối kỳ",
+            title: "Kiểm tra cuối khóa",
             hidden: false,
             classesCountable: true,
         },
