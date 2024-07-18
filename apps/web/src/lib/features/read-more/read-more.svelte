@@ -47,7 +47,7 @@
     };
 </script>
 
-<div>
+<span>
     {@html finalText}
     {#if showButton}
         <span class="whitespace-nowrap">
@@ -57,4 +57,4 @@
             </button>
         </span>
     {/if}
-</div>
+</span>

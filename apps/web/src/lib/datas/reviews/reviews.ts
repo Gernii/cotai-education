@@ -7,6 +7,7 @@ import NguyenPhamNhatQuangAvatar from "$lib/assets/images/reviews/NguyenPhamNhat
 import NguyenLyThanhTaiAvatar from "$lib/assets/images/reviews/NguyenLyThanhTai.png?imagetools";
 import NguyenLeQuocBaoAvatar from "$lib/assets/images/reviews/NguyenLeQuocBao.jpg?imagetools";
 import LePhucKhangAvatar from "$lib/assets/images/reviews/LePhucKhang.png?imagetools";
+import LeNamAvatar from "$lib/assets/images/reviews/LeNam.png?imagetools";
 
 export const dataReviews: ReviewProps[] = [
     {
@@ -58,5 +59,12 @@ export const dataReviews: ReviewProps[] = [
         year: 2021,
         name: "Nguyễn Phạm Nhật Quang",
         review: "Sau hai năm học chương trình AI4HighSchool và cơ hội thực tập và làm việc tại CoTAI, em cảm thấy mình đã học được rất nhiều thứ. Những kiến thức và kinh nghiệm em tích lũy được đã giúp em ứng tuyển thành công vào Student Team phát triển xe tự hành & vào DeepNeuron DL team tại trường Monash. Em xin dành lời cảm ơn đặc biệt đến anh Huy đã hướng dẫn em trong suốt kì thực tập hè tại CoTAI Startup Studio",
+    },
+    {
+        avatar: LeNamAvatar,
+        className: CourseIds.mc4ai,
+        year: 2021,
+        name: "Lê Nam",
+        review: "Em chỉ học ở đây 11 tuần mà cảm giác như học xong vài chương trình đại học rồi vậy ạ",
     },
 ];
