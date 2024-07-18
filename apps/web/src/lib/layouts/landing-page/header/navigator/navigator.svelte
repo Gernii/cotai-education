@@ -44,13 +44,10 @@
             "flex-col p-4": sidenav,
         })}
     >
-        <NavigatorItem
-            href={routingPathAboutUs()}
-            target="_self"
-            aria-label={m.aboutUs()}
-        >
-            {m.aboutUs()}
+        <NavigatorItem href="#footer" target="_self" aria-label={m.contact()}>
+            Trang chủ
         </NavigatorItem>
+
         {#if coursesMap.size > 0}
             <NavigatorCollapse title={m.ourPrograms()} {sidenav}>
                 <ul class="menu w-full shadow-2xl">
@@ -73,6 +70,14 @@
                 </ul>
             </NavigatorCollapse>
         {/if}
+
+        <NavigatorItem
+            href={routingPathAboutUs()}
+            target="_self"
+            aria-label={m.aboutUs()}
+        >
+            {m.aboutUs()}
+        </NavigatorItem>
 
         <NavigatorItem
             href="https://gem.cot.ai/"
