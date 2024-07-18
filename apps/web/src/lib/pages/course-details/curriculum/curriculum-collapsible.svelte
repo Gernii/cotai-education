@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { page } from "$app/stores";
+
     import { createCollapsible, melt } from "@melt-ui/svelte";
     import { cx } from "cva";
     import { slide } from "svelte/transition";
@@ -8,8 +10,11 @@
 
     import * as m from "$i18n/messages";
 
+    import type {
+        CourseProps,
+        CurriculumProps,
+    } from "$lib/datas/courses/types";
     import LucideChevronDown from "~icons/lucide/chevron-down";
-    import type { CurriculumProps } from "$lib/datas/courses/types";
 
     interface $$Props extends CurriculumProps {
         forceOpen?: boolean;
@@ -39,6 +44,9 @@
     $: classnames = cx(className, {
         "hover:bg-base-200/80": isContentEnabled,
     });
+
+    $: course = $page.data.course as CourseProps;
+    $: hideCurriculumImages = course.hideCurriculumImages;
 </script>
 
 <div use:melt={$root}>
@@ -62,7 +70,8 @@
         <div class="bg-base-300" use:melt={$content} transition:slide>
             <div
                 class={cx("p-4 sm:p-8", {
-                    "grid grid-cols-1 gap-x-8 md:grid-cols-2": images,
+                    "grid grid-cols-1 gap-x-8 md:grid-cols-2":
+                        images && !hideCurriculumImages,
                 })}
             >
                 <div>
@@ -77,7 +86,7 @@
                         </div>
                     {/if}
                 </div>
-                {#if images}
+                {#if images && !hideCurriculumImages}
                     <div class="overflow-hidden rounded-box">
                         <Picture meta={images[0]} />
                     </div>

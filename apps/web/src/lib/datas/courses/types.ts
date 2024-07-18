@@ -19,6 +19,7 @@ export interface CourseProps {
     description?: string;
     descriptionRaw?: string;
     nextCourseId?: CourseIds;
+    hideCurriculumImages?: boolean;
     experienceRequirement: string[];
     whoShouldJoin: string[];
     skills: SkillTypes[];

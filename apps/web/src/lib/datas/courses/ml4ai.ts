@@ -2,7 +2,18 @@ import type { CourseProps } from "./types";
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
 import { PUBLIC_COURSE_PRICE_ML4AI, PUBLIC_COURSE_REGISTER_URL_ML4AI } from "$env/static/public";
-import CurriculumPython2 from "$lib/assets/images/course/python/2.jpg?imagetools";
+import CurriculumML4AI1 from "$lib/assets/images/course/ml4ai/1.jpg?imagetools";
+import CurriculumML4AI2 from "$lib/assets/images/course/ml4ai/2.jpg?imagetools";
+import CurriculumML4AI3 from "$lib/assets/images/course/ml4ai/3.jpg?imagetools";
+import CurriculumML4AI4 from "$lib/assets/images/course/ml4ai/4.jpg?imagetools";
+import CurriculumML4AI6 from "$lib/assets/images/course/ml4ai/6.jpg?imagetools";
+import CurriculumML4AI7 from "$lib/assets/images/course/ml4ai/7.jpg?imagetools";
+import CurriculumML4AI8 from "$lib/assets/images/course/ml4ai/8.jpg?imagetools";
+import CurriculumML4AI9 from "$lib/assets/images/course/ml4ai/9.jpg?imagetools";
+import CurriculumML4AI10 from "$lib/assets/images/course/ml4ai/10.jpg?imagetools";
+import CurriculumML4AI11 from "$lib/assets/images/course/ml4ai/11.jpg?imagetools";
+import CurriculumExam from "$lib/assets/images/course/exam.jpg?imagetools";
+import CurriculumProjectReport from "$lib/assets/images/course/project-report.jpg?imagetools";
 
 export const dataCourseML4AI = (): CourseProps => ({
     id: CourseIds.ml4ai,
@@ -11,6 +22,7 @@ export const dataCourseML4AI = (): CourseProps => ({
     price: Number.parseInt(PUBLIC_COURSE_PRICE_ML4AI),
     studyTypes: ["online", "selfPaced"],
     nextCourseId: CourseIds.dl4ai,
+    hideCurriculumImages: true,
 
     programId: ProgramIds.public_training,
 
@@ -71,6 +83,8 @@ export const dataCourseML4AI = (): CourseProps => ({
     curriculum: [
         {
             title: "S1. Representation",
+            images: [CurriculumML4AI1],
+
             details: {
                 content: `- Học cách biểu diễn kiến thức, khái niệm trong cuộc sống bằng những con số (vector) để đưa vào máy tính.
 - Bài tập ứng dụng: 
@@ -81,6 +95,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S2. Linear Predictor",
+            images: [CurriculumML4AI2],
+
             details: {
                 content: `- Học về nguyên lý để tạo ra các mô hình AI cơ bản nhất - **mô hình tuyến tính** - để dự báo / phân loại.
 - Bài tập ứng dụng: 
@@ -90,7 +106,7 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S3. Multi-Layer Perceptron (MLP)",
-            images: [CurriculumPython2],
+            images: [CurriculumML4AI3],
             details: {
                 content: `- Học về mạng neuron nhân tạo: một loại mô hình mô phỏng cách não người xử lý thông tin và là nền tảng của các mô hình học sâu (Deep Learning).
 - Bài tập ứng dụng: 
@@ -100,6 +116,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S4. Training Loss & Evaluation Metrics → Optimization",
+            images: [CurriculumML4AI4],
+
             details: {
                 content: `- Hiểu cách máy tính và con người đánh giá chất lượng của các mô hình AI, từ đó hiểu được khái niệm "học - learning" trong Machine Learning.
 - Bài tập ứng dụng:
@@ -108,6 +126,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S5. Kiểm tra giữa kỳ",
+            images: [CurriculumExam],
+
             details: {
                 content: `- Ôn tập và đánh giá kiến thức học được.
 - Bài tập ứng dụng:
@@ -117,6 +137,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S6. Convolutional Neural Networks (CNNs)",
+            images: [CurriculumML4AI6],
+
             details: {
                 content: `- Học về mạng neuron tích chập, một loại mô hình đặc biệt hiệu quả trong việc xử lý hình ảnh.
 - Bài tập ứng dụng:
@@ -127,6 +149,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S7. Recurrent Neural Networks (RNNs)",
+            images: [CurriculumML4AI7],
+
             details: {
                 content: `- Học về mạng neuron hồi quy, mô hình hiệu quả trong việc xử lý các dữ liệu tuần tự như chuỗi văn bản, âm thanh.
 - Bài tập ứng dụng:
@@ -135,6 +159,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S8. Recommender Systems",
+            images: [CurriculumML4AI8],
+
             details: {
                 content: `- Học về hệ thống gợi ý, mô hình giúp đề xuất sản phẩm, dịch vụ dựa trên sở thích và hành vi của người dùng.
 - Bài tập ứng dụng:
@@ -143,6 +169,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S9. Decision Trees",
+            images: [CurriculumML4AI9],
+
             details: {
                 content: `- Học về mô hình "Cây quyết định" để đưa ra dự báo và cách diễn giải "luồng quyết định" của mô hình
 - Bài tập ứng dụng:
@@ -152,6 +180,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S10. Markov Decision Process (MDP) Planning",
+            images: [CurriculumML4AI10],
+
             details: {
                 content: `- Học về quy trình Markov, giúp AI có khả năng lập kế hoạch.
 - Bài tập ứng dụng:
@@ -160,6 +190,8 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S11. Reinforcement Q-Learning",
+            images: [CurriculumML4AI11],
+
             details: {
                 content: `- Học về thuật toán Q-Learning, một phương pháp giúp máy tính tự học và đưa ra quyết định dựa vào dữ liệu.
 - Bài tập ứng dụng:
@@ -169,12 +201,16 @@ export const dataCourseML4AI = (): CourseProps => ({
         },
         {
             title: "S12. Kiểm tra cuối kỳ",
+            images: [CurriculumExam],
+
             details: {
                 content: "Ôn tập và đánh giá kiến thức toàn khóa học",
             },
         },
         {
             title: "S13. Báo cáo dự án",
+            images: [CurriculumProjectReport],
+
             details: {
                 content: "Học viên trình bày về dự án cuối khóa của mình",
             },
