@@ -26,7 +26,7 @@ Năng lực & thành tựu nổi bật:
         ),
     },
     {
-        role: "Kỹ sư AI chính của CoTAI",
+        role: "Kỹ sư AI của CoTAI",
         avatar: LeNguyenThanhHuyAvatar,
         name: "Lê Nguyễn Thanh Huy",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư chuyên ngành phần mềm, (ĐH Văn Lang 2018)

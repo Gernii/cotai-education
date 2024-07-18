@@ -1,7 +1,7 @@
 import { coursesMap } from "$lib/datas/courses/healpers";
 import type { CourseProps } from "$lib/datas/courses/types";
 import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
-import { dataStudentProjects } from "$lib/datas/student-projects/student-projects.server";
+import { getDataStudentProjects } from "$lib/datas/student-projects/student-projects.server";
 import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server";
 import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types.js";
 import {
@@ -17,7 +17,7 @@ export const load = async () => {
 
     const teachersBio = dataTeachersBio();
 
-    const studentProjects = dataStudentProjects();
+    const studentProjects = getDataStudentProjects();
 
     const [courseRoadmap, heroRoadmapCourse] = getCourseRoadmap();
 
