@@ -106,6 +106,6 @@ Kinh nghiệm giảng dạy: 3 năm đào tạo về giải thuật & lập trì
 
 Năng lực & thành tựu nổi bật: 
   - Tham gia dự án AI xử lý giọng nói và văn bản tại viện Vingroup Bigdata (5/2020 đến 9/2021), và AI Lab UET (7/2022 đến 6/2023)
-  - Xây dựng hệ thống phát hiện trang web lừa đảo (phising). Trình bày tại hội nghị Blackhat (USA'23, Asia'20).`),
+  - Xây dựng hệ thống phát hiện trang web lừa đảo (phishing). Trình bày tại hội nghị Blackhat (USA'23, Asia'20).`),
     },
 ];
