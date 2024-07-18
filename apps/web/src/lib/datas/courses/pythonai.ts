@@ -28,6 +28,13 @@ export const dataCoursePythonAI = (): CourseProps => ({
     programId: ProgramIds.public_training,
 
     whoShouldJoin: [],
+    learningOutcomes: [
+        "Kỹ năng lập trình cơ bản",
+        "Làm quen với AI",
+        "Hiện thực hóa ý tưởng bằng Website",
+        "Biết cách cài đặt và sử dụng các thư viện hỗ trợ trong Python",
+    ],
+
     skills: ["python", "opencv", "pillow", "streamlit"],
     archives: [
         {

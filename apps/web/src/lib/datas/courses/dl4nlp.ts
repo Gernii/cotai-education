@@ -14,6 +14,12 @@ export const dataCourseDL4NLP = (): CourseProps => ({
 
     registerUrl: PUBLIC_COURSE_REGISTER_URL_DL4NLP,
 
+    learningOutcomes: [
+        "Biết cách xây dựng và biến đổi các mô hình có sẵn để giải quyết bài toán riêng của mình",
+        "Học được cách sử dụng các thư viện tốt nhất và phổ biến nhất khi lập trình xây dựng mô hình AI",
+        "Hiểu được các khái niệm quan trọng về các kiến trúc Transformers phổ biến và ưu nhược điểm của chúng",
+    ],
+
     experienceRequirement: [
         "Sử dụng thành thạo ngôn ngữ Python",
         "Sử dụng tốt các thư viện liên quan đến xử lý ma trận và xử lý dữ liệu như numpy và pandas",

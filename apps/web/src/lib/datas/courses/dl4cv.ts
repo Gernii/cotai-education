@@ -14,6 +14,12 @@ export const dataCourseDL4CV = (): CourseProps => ({
 
     registerUrl: PUBLIC_COURSE_REGISTER_URL_DL4CV,
 
+    learningOutcomes: [
+        "Biết cách xây dựng và biến đổi các mô hình có sẵn để giải quyết bài toán riêng của mình",
+        "Hiểu được các khái niệm quan trọng về các kiến trúc DCNN phổ biến và ưu nhược điểm của chúng",
+        "Học được cách sử dụng các thư viện tốt nhất và phổ biến nhất khi lập trình xây dựng mô hình AI",
+    ],
+
     experienceRequirement: [
         "Sử dụng thành thạo ngôn ngữ Python",
         "Sử dụng tốt các thư viện liên quan đến xử lý ma trận và xử lý dữ liệu như numpy và pandas",

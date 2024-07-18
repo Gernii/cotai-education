@@ -28,6 +28,12 @@ export const dataCourseML4AI = (): CourseProps => ({
 
     registerUrl: PUBLIC_COURSE_REGISTER_URL_ML4AI,
 
+    learningOutcomes: [
+        "Nắm vững quy trình & kỹ năng xử lý dữ liệu",
+        "Biết cách khai thác các tài nguyên nguồn mở để sáng tạo các ứng dụng AI",
+        "Thành thạo xây dựng, huấn luyện, đánh giá & cải thiện mô hình AI với PyTorch",
+    ],
+
     experienceRequirement: [
         "Sử dụng tốt Python",
         "Có kiến thức về Đại Số Tuyến Tính (Linear Algebra) và Toán Giải Tích (Calculus)",

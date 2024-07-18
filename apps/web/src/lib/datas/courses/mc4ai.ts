@@ -15,6 +15,13 @@ export const dataCourseMC4AI = (): CourseProps => ({
 
     registerUrl: PUBLIC_COURSE_REGISTER_URL_MC4AI,
 
+    learningOutcomes: [
+        'Sẵn sàng để "đắm mình vào Học máy (Machine Learning)"',
+        'Trải nghiệm quá trình làm "Đồ án môn học" capstone project',
+        "Sử dụng thành thạo các thư viện Phân tích dữ liệu phổ biến",
+        "Hiểu sâu và có thể tự lập trình được các thuật toán AI phổ biến",
+    ],
+
     experienceRequirement: ["Đã hoàn thành khoá PythonAI"],
     whoShouldJoin: [
         "Học sinh THPT & sinh viên các ngành muốn làm lập trình viên AI hoặc xin học bổng du học & nghiên cứu (được viết thư giới thiệu.)",

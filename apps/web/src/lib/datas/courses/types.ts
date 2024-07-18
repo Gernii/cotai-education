@@ -30,6 +30,7 @@ export interface CourseProps {
     programId?: ProgramIds;
     certs?: (ImgMeta | ImgMeta[])[];
     faqs?: FAQProps[];
+    learningOutcomes: string[];
 }
 
 export type CourseStudyType = keyof typeof courseStudyType;
