@@ -44,8 +44,12 @@
             "flex-col p-4": sidenav,
         })}
     >
-        <NavigatorItem href="#footer" target="_self" aria-label={m.contact()}>
-            Trang chủ
+        <NavigatorItem
+            href={routerPath.home}
+            target="_self"
+            aria-label={m.lucky_suave_flamingo_stir()}
+        >
+            {m.lucky_suave_flamingo_stir()}
         </NavigatorItem>
 
         {#if coursesMap.size > 0}
