@@ -6,7 +6,7 @@
 
     import Thumbnail1Picture from "$lib/assets/images/homepage-thumbnail/1.jpg?imagetools";
     import Thumbnail2Picture from "$lib/assets/images/homepage-thumbnail/2.jpg?imagetools";
-    import Thumbnail3Picture from "$lib/assets/images/homepage-thumbnail/3.png?imagetools";
+    import Thumbnail3Picture from "$lib/assets/images/homepage-thumbnail/3-1.png?imagetools";
     import Thumbnail4Picture from "$lib/assets/images/homepage-thumbnail/4.jpg?imagetools";
 
     import { ContainerContent } from "$lib/components/ui/container";
@@ -85,7 +85,7 @@
                             class="image-top-left basis-3/5"
                         />
                         <Image
-                            meta={Thumbnail2Picture}
+                            meta={Thumbnail3Picture}
                             alt={"Đào tạo"}
                             class="image-bottom-left basis-2/5"
                         />
@@ -98,7 +98,7 @@
                         />
 
                         <Image
-                            meta={Thumbnail3Picture}
+                            meta={Thumbnail2Picture}
                             alt={"Đào tạo"}
                             class="image-bottom-right basis-3/5"
                         />

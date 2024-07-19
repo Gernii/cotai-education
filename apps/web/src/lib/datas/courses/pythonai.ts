@@ -131,44 +131,40 @@ export const dataCoursePythonAI = (): CourseProps => ({
             images: [CurriculumExam],
         },
         {
-            title: `S7.1. Nâng cao về "Chuỗi ký tự"`,
+            title: `S7. Nâng cao về "Chuỗi ký tự" & Tự định nghĩa kiểu dữ liệu của bạn`,
             images: [CurriculumPython6],
 
             details: {
-                content: `- Các thao tác xử lý và biến đổi "Chuỗi ký tự" thông dụng.`,
+                content: `- Các thao tác xử lý và biến đổi "Chuỗi ký tự" thông dụng.
+- Khái niệm "Class" và "Object" trong lập trình.`,
             },
         },
+
         {
-            title: `S7.2. Tự định nghĩa kiểu dữ liệu của bạn`,
+            title: "S8. Thao tác với tệp tin & Mảng 2 chiều (2D List)",
             images: [CurriculumPython7],
 
             details: {
-                content: `- Khái niệm "Class" và "Object" trong lập trình.
-- Sử dụng "Class" để "trừu tượng hóa" quy trình xử lý.`,
-            },
-        },
-        {
-            title: "S8.1. Thao tác với tệp tin",
-            images: [CurriculumPython8],
-
-            details: {
                 content: `- Lưu trữ dữ liệu từ biến vào các tệp tin trong máy tính.
-- Nạp dữ liệu từ các tệp tin vào lại chương trình.`,
-            },
-        },
-        {
-            title: "S8.2. Mảng 2 chiều (2D List)",
-            images: [CurriculumPython9],
-
-            details: {
-                content: `- Mảng 2 chiều và khái niệm ma trận trong toán.
+- Nạp dữ liệu từ các tệp tin vào lại chương trình.
+- Mảng 2 chiều và khái niệm ma trận trong toán.
 - Lập trình các phép toán ma trận trên mảng 2 chiều.
 - Khái niệm "ảnh xám".`,
             },
         },
+        //         {
+        //             title: "S8.2. Mảng 2 chiều (2D List)",
+        //             images: [CurriculumPython9],
+
+        //             details: {
+        //                 content: `- Mảng 2 chiều và khái niệm ma trận trong toán.
+        // - Lập trình các phép toán ma trận trên mảng 2 chiều.
+        // - Khái niệm "ảnh xám".`,
+        //             },
+        //         },
         {
             title: "S9. Xử lý ảnh",
-            images: [CurriculumPython9],
+            images: [CurriculumPython8],
 
             details: {
                 content: `- Khái niệm "ảnh màu".

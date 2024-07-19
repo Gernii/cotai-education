@@ -100,7 +100,7 @@ export const dataCourseML4AI = (): CourseProps => {
             },
         ],
         description: `*Học máy* (Machine Learning) là bộ công cụ để ta xây dựng các "hàm trí tuệ", tạo nên "kiến thức & kỹ năng" cho AI từ dữ liệu. Đây cũng chính là mục tiêu của khóa học ML4AI: giúp học viên nắm vững các nguyên lý cốt lõi & mô hình nền tảng của ngành Học máy cho hầu hết các bài toán AI.`,
-        descriptionMore: `🔥 Phương pháp đào tạo tăng tốc *nhanh thành tài* Accelerated Mastery của CoTAI giúp cô đọng cả một ngành học xuống thành một khoá ngắn hạn *hiệu quả cao*, với 6 chủ đề chính:
+        descriptionMore: `🔥 Phương pháp đào tạo *tăng tốc thành tài* Accelerated Mastery của CoTAI giúp cô đọng cả một ngành học xuống thành một khoá ngắn hạn *hiệu quả cao*, với 6 chủ đề chính:
 1. Representations (feature extraction): trích xuất đặc trưng biểu diễn thành toạ độ nhúng. 
 2.  Evaluation (metrics & losses): các chuẩn đánh giá mô hình và hàm lỗi.
 3.  Search (optimize/train/learn): huấn luyện mô hình, tối ưu tham số.

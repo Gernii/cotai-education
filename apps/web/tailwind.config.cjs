@@ -47,7 +47,7 @@ const config = {
                     secondary: "#ECCEAE",
                     "secondary-content": "#232946",
 
-                    "base-content": "#edf7fe",
+                    "base-content": "#d6e0e7",
                     "base-100": "#232946",
                     "base-200": "#0f132e",
                     "base-300": "#010115",

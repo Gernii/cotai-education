@@ -5,7 +5,7 @@ export const dataCamDifference = {
         color: "229,222,0",
         title: "Phương pháp khoa học",
         description:
-            "Phương pháp đào tạo tăng tốc <span class='text-primary'>nhanh thành tài</span> Được CoTAI xây dựng từ các kết quả nghiên cứu khoa học và liên tục phát triển cải tiến tối ưu qua nhiều năm triển khai thực tế, được kiểm chứng qua những kết quả thực học thực làm rất ấn tượng của hàng ngàn học viên và của chính đội ngũ CoTAI Startup Studio",
+            "Phương pháp đào tạo <span class='text-primary'>tăng tốc thành tài</span> được CoTAI xây dựng từ các kết quả nghiên cứu khoa học và liên tục phát triển cải tiến tối ưu qua nhiều năm triển khai thực tế, được kiểm chứng qua những kết quả thực học thực làm rất ấn tượng của hàng ngàn học viên và của chính đội ngũ CoTAI Startup Studio",
     },
     "2": {
         title: 'Cơ sở tri thức "second brain" Knowledge Base',

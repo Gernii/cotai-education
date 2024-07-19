@@ -25,10 +25,9 @@
                 <div
                     class="card-body flex-col items-center gap-x-8 gap-y-4 text-center"
                 >
-                    <h2 class="text-xl font-bold md:text-3xl">
-                        Nâng tầm đổi mới và sáng tạo cho cuộc sống tươi đẹp <HugeiconsAiInnovation02
-                            class="inline"
-                        />
+                    <h2 class="text-xl font-bold md:text-2xl">
+                        Khơi nguồn đổi mới & thúc đẩy sáng tạo cho cuộc sống
+                        tươi đẹp <HugeiconsAiInnovation02 class="inline" />
                     </h2>
                     <div class="flex w-full justify-center">
                         <hr class="w-1/3 border-primary" />

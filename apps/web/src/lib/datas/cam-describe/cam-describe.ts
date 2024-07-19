@@ -14,6 +14,6 @@ export const dataCamDescribe: CamDescribeProps[] = [
     {
         title: "Bùng nổ sáng tạo",
         description:
-            "Vô số tài nguyên AI nguồn mở miễn phí tuyệt vời tạo cơ hội để thành danh từ rất sớm 👉 cần học nhanh thành tài để   khai thác, chiếm “lợi thế cạnh tranh” trên thị trường tuyển dụng và khởi nghiệp công nghệ",
+            "Vô số tài nguyên AI nguồn mở miễn phí tuyệt vời mở ra cơ hội để thành danh từ rất sớm 👉 cần học nhanh thành tài để khai thác, chiếm “lợi thế cạnh tranh” trên thị trường tuyển dụng và khởi nghiệp công nghệ",
     },
 ];
