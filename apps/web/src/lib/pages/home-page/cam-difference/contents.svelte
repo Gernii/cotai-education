@@ -15,6 +15,12 @@
         helpers: { isSelected },
     } = createAccordion({
         value: selectedIdContext,
+        onValueChange: (e) => {
+            if (e.next === undefined) {
+                return e.curr;
+            }
+            return e.next;
+        },
     });
 
     let dataArray = Object.entries(dataCamDifference) as CamDifferenceArray[];
