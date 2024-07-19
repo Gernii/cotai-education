@@ -4,7 +4,10 @@
 
     import { PUBLIC_REGISTER_NOW_URL } from "$env/static/public";
 
-    import OutstandingMarks2Picture from "$lib/assets/pages/about/outstanding-marks-2.png?imagetools";
+    import Thumbnail1Picture from "$lib/assets/images/homepage-thumbnail/1.jpg?imagetools";
+    import Thumbnail2Picture from "$lib/assets/images/homepage-thumbnail/2.jpg?imagetools";
+    import Thumbnail3Picture from "$lib/assets/images/homepage-thumbnail/3.png?imagetools";
+    import Thumbnail4Picture from "$lib/assets/images/homepage-thumbnail/4.jpg?imagetools";
 
     import { ContainerContent } from "$lib/components/ui/container";
     import Container from "$lib/components/ui/container/container.svelte";
@@ -29,7 +32,7 @@
 >
     <Container>
         <ContainerContent class="space-y-8">
-            <div class="flex flex-row justify-between gap-y-8">
+            <div class="flex flex-col justify-between gap-y-8 md:flex-row">
                 <div
                     class="flex flex-col justify-center space-y-1 lg:space-y-4"
                 >
@@ -67,36 +70,37 @@
                         </ExternalAnchor>
                         <!-- svelte-ignore a11y-missing-attribute -->
                         <a
-                            class="btn btn-ghost text-nowrap border-0 text-secondary"
+                            class="btn btn-ghost text-nowrap border-0 bg-base-content/10 text-secondary"
                             use:scrollTo={"register-form"}
                         >
                             Liên hệ tư vấn
                         </a>
                     </div>
                 </div>
-                <div class="hidden flex-col gap-y-6 md:flex">
-                    <div class="flex gap-x-6">
+                <div class="flex flex-row gap-x-2">
+                    <div class="flex flex-col gap-y-2">
                         <Image
-                            meta={OutstandingMarks2Picture}
+                            meta={Thumbnail4Picture}
                             alt={"Đào tạo"}
-                            class="image-top-left"
+                            class="image-top-left basis-3/5"
                         />
                         <Image
-                            meta={OutstandingMarks2Picture}
+                            meta={Thumbnail2Picture}
                             alt={"Đào tạo"}
-                            class="image-top-right"
+                            class="image-bottom-left basis-2/5"
                         />
                     </div>
-                    <div class="flex gap-x-6">
+                    <div class="flex flex-col gap-y-2">
                         <Image
-                            meta={OutstandingMarks2Picture}
+                            meta={Thumbnail1Picture}
                             alt={"Đào tạo"}
-                            class="image-bottom-left"
+                            class="image-top-right basis-2/5"
                         />
+
                         <Image
-                            meta={OutstandingMarks2Picture}
+                            meta={Thumbnail3Picture}
                             alt={"Đào tạo"}
-                            class="image-bottom-right"
+                            class="image-bottom-right basis-3/5"
                         />
                     </div>
                 </div>

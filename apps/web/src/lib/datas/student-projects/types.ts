@@ -2,7 +2,7 @@ export interface StudentProjectProps {
     id: string;
     title: string;
     description?: string;
-    className: string;
+    className?: string;
     members: string[];
     externalLinks?: StudentProjectProps_ExternalLinks[];
     demoId?: string;

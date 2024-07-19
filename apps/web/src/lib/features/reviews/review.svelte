@@ -3,6 +3,8 @@
 
     import * as m from "$i18n/messages";
 
+    import ReadMore from "../read-more/read-more.svelte";
+
     import type { ReviewProps } from "$lib/datas/reviews/types";
 
     type $$Props = ReviewProps;
@@ -41,6 +43,8 @@
     </div>
 
     <div class="flex-grow">
-        <p class="italic">"{review}"</p>
+        <p class="italic">
+            <ReadMore textContent={`"${review}"`} maxChars={250} />
+        </p>
     </div>
 </div>
