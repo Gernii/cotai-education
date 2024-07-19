@@ -32,7 +32,6 @@
             <h2>
                 <button
                     use:melt={$trigger(id)}
-                    on:m-click={(e) => {}}
                     class={cx(
                         "w-full bg-base-200 p-5 text-left text-base font-semibold hover:bg-base-200/80 lg:text-lg",
                         {
