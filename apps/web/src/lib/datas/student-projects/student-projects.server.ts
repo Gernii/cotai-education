@@ -3,6 +3,18 @@ import type { StudentProjectProps } from "./types";
 
 export const dataStudentProjects = (): StudentProjectProps[] => [
     {
+        id: "6",
+        title: "Công cụ nhận diện chữ viết tay (Latin & Nhật)",
+        description: `Web nhận diện chữ viết tay chữ Latin và chữ Nhật.`,
+
+        externalLinks: [
+            { title: "Github", url: "https://github.com/mentallyderanged/mc4aiproject" },
+        ],
+        members: ["Quang Vũ"],
+        className: "MC4AI 2024",
+        demoId: "PmSnFf-jc6M",
+    },
+    {
         id: "1",
         title: "AI tool for English learning",
         members: ["Quốc Bảo"],
@@ -61,21 +73,10 @@ Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
         className: "MC4AI 2023",
         demoId: "wVjxxWFER4o",
     },
-    {
-        id: "6",
-        title: "Công cụ nhận diện chữ viết tay (Latin & Nhật)",
-        description: `Web nhận diện chữ viết tay chữ Latin và chữ Nhật.`,
 
-        externalLinks: [
-            { title: "Github", url: "https://github.com/mentallyderanged/mc4aiproject" },
-        ],
-        members: ["Quang Vũ"],
-        className: "MC4AI 2024",
-        demoId: "PmSnFf-jc6M",
-    },
     {
         id: "7",
-        title: "DL4AI 2022",
+        title: "DL4AI Selection",
         description: `- Thiên Phú - [Essay assistant](https://github.com/PaulTr27/vietnamese_essay_identifier)
 - Công Thịnh, Hoàng Phúc, Quỳnh Nga - [Beauty moments synthesis](https://github.com/MeowwMeoww/BeautyMomentSynthesis)
 - Tri Ân - [Translation app](https://github.com/trian-ctrn/envitranslate)
@@ -83,12 +84,12 @@ Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
 - Gia Huy - [Emotion music recommendation](https://github.com/huyg1108/music-recommender)`,
 
         members: [],
-        className: "",
+        className: "DL4AI 2022",
         demoId: "1mYFgDp6sIU",
     },
     {
         id: "8",
-        title: "ML4AI 2022",
+        title: "ML4AI Selection",
         description: `- Phúc Khang, Quang Tuấn - [hand gesture recognition](https://github.com/Reimangod/FINAL-PROJECT/tree/main)
 - Anh Tú - [Fruit classification](https://github.com/NgATu/Fruit-Classifier) 
 - Lệ Quân, Duy Tiến - [Car evaluation web app](https://github.com/Alexeanred/Car-Evaluation-Web-App) 
@@ -96,7 +97,7 @@ Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
 - Vũ Uy, Huy Giáp - [Upscale images](https://github.com/ziap/srcnn)`,
 
         members: [],
-        className: "",
+        className: "ML4AI 2022",
         demoId: "8qE4_CW_bws",
     },
 ];
