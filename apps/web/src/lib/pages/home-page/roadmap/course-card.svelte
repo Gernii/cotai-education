@@ -10,6 +10,7 @@
 
     import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
     import { routerPath } from "$lib/utils/constants";
+    import { countTotalLessons } from "$lib/utils/count-total-lessons";
 
     import * as m from "$i18n/messages";
 
@@ -20,7 +21,7 @@
     import type { CourseIds } from "$lib/datas/courses/constants";
     import { courseStudyType } from "$lib/datas/courses/constants";
     import LucideMonitorPlay from "~icons/lucide/monitor-play";
-    import { ReadMore } from "$lib/features/read-more";
+    import { ReadMoreCustom } from "$lib/features/read-more-custom";
     interface $$Props extends CourseProps {
         idx: number;
         last: boolean;
@@ -30,6 +31,7 @@
     export let title: $$Props["title"] = undefined;
     export let curriculum: $$Props["curriculum"] = [];
     export let description: $$Props["description"] = undefined;
+    export let descriptionMore: $$Props["descriptionMore"] = undefined;
     export let id: $$Props["id"];
     export let idx: $$Props["idx"];
     export let last: $$Props["last"];
@@ -38,7 +40,7 @@
 
     let isInview = writable(false);
 
-    $: totalSessions = curriculum.filter((c) => c.classesCountable).length;
+    $: totalSessions = countTotalLessons(curriculum);
 
     $: courseThumbnail = coursesThumbnail(id as CourseIds);
 
@@ -121,9 +123,9 @@
                         </ul>
                         <hr class="h-1 w-12 border-0 bg-secondary" />
                         {#if description}
-                            <ReadMore
+                            <ReadMoreCustom
                                 textContent={description}
-                                maxChars={300}
+                                textReadmore={descriptionMore}
                             />
                         {/if}
 

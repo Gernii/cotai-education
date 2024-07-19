@@ -46,6 +46,9 @@ const getCourseRoadmap = () => {
             if (course.description) {
                 course.description = parseMarkdownToHTML(course.description);
             }
+            if (course.descriptionMore) {
+                course.descriptionMore = parseMarkdownToHTML(course.descriptionMore);
+            }
 
             prev[0].push(course);
             prev[1].push(heroCourse);

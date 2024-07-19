@@ -25,10 +25,10 @@
     {/if}
     {#each skills as skill}
         <div
-            class="tooltip rounded-full border-4 border-base-200 bg-base-100 p-1.5 transition-colors hover:border-primary"
+            class="tooltip my-0.5 rounded-full border-4 border-base-200 bg-base-100 p-1.5 transition-colors hover:border-primary"
             data-tip={getSkillName(skill)}
         >
-            <Skills {skill} class={cx("size-8", className)} />
+            <Skills {skill} class={cx("size-5", className)} />
         </div>
     {/each}
 </div>

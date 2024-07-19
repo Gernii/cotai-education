@@ -1,171 +1,119 @@
 import type { CourseProps } from "./types";
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
-import { PUBLIC_COURSE_PRICE_DL4NLP, PUBLIC_COURSE_REGISTER_URL_DL4NLP } from "$env/static/public";
+import {
+    PUBLIC_COURSE_PRICE_DL4NLP,
+    PUBLIC_COURSE_REGISTER_URL_DL4NLP,
+    PUBLIC_HOSTNAME,
+} from "$env/static/public";
+import { routerPath } from "$lib/utils/constants";
+import { SkillTypes } from "$lib/features/skill-icons/constant";
 
-export const dataCourseDL4NLP = (): CourseProps => ({
-    id: CourseIds.dl4nlp,
-    title: "Deep Learning for Natural Language Processing",
-    shortTitle: "DL4NLP",
-    price: Number.parseInt(PUBLIC_COURSE_PRICE_DL4NLP),
-    studyTypes: ["online", "selfPaced"],
+export const dataCourseDL4NLP = (): CourseProps => {
+    const id = CourseIds.dl4nlp;
+    return {
+        id,
+        title: "Deep Learning for Natural Language Processing",
+        shortTitle: "DL4NLP",
+        price: Number.parseInt(PUBLIC_COURSE_PRICE_DL4NLP),
+        studyTypes: ["online", "selfPaced"],
 
-    programId: ProgramIds.public_training,
+        programId: ProgramIds.public_training,
 
-    registerUrl: PUBLIC_COURSE_REGISTER_URL_DL4NLP,
+        registerUrl: PUBLIC_COURSE_REGISTER_URL_DL4NLP,
 
-    experienceRequirement: [
-        "Sử dụng thành thạo ngôn ngữ Python",
-        "Sử dụng tốt các thư viện liên quan đến xử lý ma trận và xử lý dữ liệu như numpy và pandas",
-        "Các phương pháp trích xuất đặc trưng và biểu diễn dữ liệu để máy tính hiểu",
-        "Hiểu biết cơ bản về Đại Số Tuyến Tính (Linear Algebra) và Toán Giải Tích (Calculus)",
-    ],
-    whoShouldJoin: [
-        "Các bạn học sinh / sinh viên từ cấp Trung Học Phổ Thông trở lên muốn tìm hiểu và đắm mình vào lĩnh vực AI",
-        'Các bạn lập trình viên muốn "nâng cấp" bản thân để bắt kịp với xu hướng phát triển cực nhanh của lĩnh vực AI',
-    ],
-    skills: [
-        "python",
-        "math",
-        "numpy",
-        "scikit-learn",
-        "pytorch",
-        "torchmetrics",
-        "timm",
-        "torchseg",
-        "mmdetection",
-        "transformers",
-    ],
-    archives: [
-        {
-            title: "Hiểu biết về các kiến trúc CNN bhổ biến",
-            description:
-                "Hiểu được các khái niệm quan trọng về các kiến trúc CNN phổ biến và ưu nhược điểm của chúng",
-        },
-        {
-            title: "Xây dựng và tùy biến mô hình để giải quyết bài toán riêng",
-            description:
-                "Biết cách xây dựng và biến đổi các mô hình có sẵn để giải quyết bài toán riêng của mình",
-        },
-        {
-            title: "Sử dụng hiệu quả các thư viện và phổ biến về lập trình AI",
-            description:
-                "Học được cách sử dụng các thư viện tốt nhất và phổ biến nhất khi lập trình xây dựng mô hình AI",
-        },
-    ],
+        learningOutcomes: [
+            "Hiểu được các khái niệm quan trọng về các kiến trúc `Transformers` phổ biến trong ngành NLP và ưu nhược điểm của chúng",
+            "Học được cách sử dụng các thư viện tốt nhất và phổ biến nhất khi lập trình xây dựng mô hình AI xử lý ngôn ngữ",
+            "Biết cách xây dựng và biến đổi các mô hình có sẵn để giải quyết bài toán riêng của mình",
+            "Biết cách chuyển đổi (convert) mô hình để tăng tốc độ phục vụ khi làm sản phẩm",
+            "Đủ năng lực đọc hiểu các bài báo nghiên cứu chuyên ngành để tự cập nhật kiến thức chuyên môn",
+        ],
 
-    description: `Khóa học được thiết kế theo tiêu chí "dễ học, dễ đọc, dễ hiểu", cung cấp cho học viên cái nhìn toàn diện về lịch sử phát triển của "mạng nơ-ron tích chập - Convolutional Neural Network".
-- Lịch sử ra đời và sự phát triển của các mô hình học sâu (Deep Learning).
-- Các thủ thuật để tạo ra mô hình học sâu nhưng có thể vận hành tốt trên điện thoại thông minh và mạch nhúng.
-- Các mô hình học sâu về Thị Giác Máy Tính - Computer Vision mới và tốt nhất hiện nay.
-- Áp dụng các mô hình vào thực tiễn thông qua 2 bài toán chính của ngành thị giác máy tính: Phân đoạn vật thể (Object Segmentation) và Phát hiện vật thể (Object Detection).
-- Phát triển tư duy logic và kỹ năng giải quyết vấn đề thông qua các bài tập thực hành và Dự án cuối khóa (Capstone Project).
- 
-Ngoài ra Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế.`,
-    components: [],
-
-    curriculum: [
-        {
-            title: "Review: PyTorch & Advanced Training Techniques",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
-
-                content:
-                    "Ôn tập lại về cách sử dụng thư viện PyTorch cũng như cách tạo và huấn luyện mô hình AI",
+        experienceRequirement: [
+            "Sử dụng thành thạo ngôn ngữ Python",
+            "Sử dụng tốt các thư viện liên quan đến xử lý ma trận và xử lý dữ liệu như numpy và pandas",
+            "Các phương pháp trích xuất đặc trưng và biểu diễn dữ liệu để máy tính hiểu",
+            "Hiểu biết cơ bản về Đại Số Tuyến Tính (Linear Algebra) và Toán Giải Tích (Calculus)",
+        ],
+        whoShouldJoin: [
+            `đã biết *xây dựng* & *huấn luyện* các mô hình AI nền tảng (tương đương khoá [ML4AI](${PUBLIC_HOSTNAME}${routerPath.courseId(CourseIds.ml4ai)}) của CoTAI)`,
+            "muốn đào sâu về chuyên ngành Xử lý ngôn ngữ tự nhiên (NLP) cho AI",
+        ],
+        skills: [
+            SkillTypes.python,
+            SkillTypes.pytorch,
+            SkillTypes.numpy,
+            SkillTypes.pandas,
+            SkillTypes.scikitLearn,
+            SkillTypes.keras,
+            SkillTypes.matplotlib,
+            SkillTypes.plotly,
+            SkillTypes.pillow,
+            SkillTypes.albumentations,
+            SkillTypes.torchmetrics,
+            SkillTypes.transformers,
+            SkillTypes.paddlepaddle,
+            SkillTypes.mmcv,
+            SkillTypes.onnx,
+            SkillTypes.openvino,
+            SkillTypes.github,
+            SkillTypes.markdown,
+            SkillTypes.latex,
+        ],
+        archives: [
+            {
+                title: "Hiểu biết về các kiến trúc CNN bhổ biến",
+                description:
+                    "Hiểu được các khái niệm quan trọng về các kiến trúc CNN phổ biến và ưu nhược điểm của chúng",
             },
-        },
-        {
-            title: "The history of DCNNs: How to go deeper?",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
-
-                content: `Học về các kiến trúc DCNN tiêu biểu: **AlexNet**, **VGG**, **Inception**, **ResNet**. Từ đó hiểu được các thành phần chính của một mô hình và trả lời được câu hỏi "Làm thế nào để tạo ra Deep Neural Network?"`,
+            {
+                title: "Xây dựng và tùy biến mô hình để giải quyết bài toán riêng",
+                description:
+                    "Biết cách xây dựng và biến đổi các mô hình có sẵn để giải quyết bài toán riêng của mình",
             },
-        },
-        {
-            title: "The history of DCNNs: From Depth to Efficiency",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
-
-                content: `Học về các kiến trúc DCNN tiêu biểu: **MobileNet series**, **EfficientNet series**, **Squeeze-and-Excitation Module**, **GhostNet**, **RepVGG**. Từ đó trả lời được câu hỏi "Cần cải tiến những thành phần nào để mô hình DCNN vừa nhẹ nhưng vẫn chính xác?" `,
+            {
+                title: "Sử dụng hiệu quả các thư viện và phổ biến về lập trình AI",
+                description:
+                    "Học được cách sử dụng các thư viện tốt nhất và phổ biến nhất khi lập trình xây dựng mô hình AI",
             },
-        },
-        {
-            title: "The history of DCNNs: From Low-resolution to High-resolution & Object Segmentation",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
+        ],
 
-                content: `"Các mô hình DCNN được huấn luyện cho bài toán Classification, cần cải tiến những thành phần nào để tạo ra mô hình cho bài toán Object Segmentation?" Học về các kiến trúc Decoder tiêu biểu **FCN**, **UNet**, **FPN**, **PSPNet**, **PAN-Net**, **DeepLab** cùng các hàm Loss và Metric mới cho Segmentation`,
-            },
-        },
-        {
-            title: "Object Detection",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
+        description: `*Học sâu* (Deep Learning) là nhánh quan trọng nhất của ngành Học máy, chuyên phát triển các mạng neuron nhân tạo học siêu hiệu quả với dữ liệu lớn. DL4NLP (Deep Learning for Natural Language Proessing) là khoá học *chuyên* về các mô hình Học sâu nền tảng cho ngành *Xử lý ngôn ngữ tự nhiên* để xử lý văn bản (như phân loại, tóm tắt, trích xuất, truy vấn, hỏi đáp, hội thoại...), giúp AI "trò chuyện" như người (ví dụ ChatGPT.)`,
+        descriptionMore: `Khoá học gồm 3 chủ đề chính: 1-\`Transformers\`, 2-\`Language Models\`, 3-\`NLP Tasks\`, được chia thành nhiều buổi, mỗi buổi bao gồm lý thuyết cô đọng, bài lab thực hành, bài lab về nhà, review & quiz. Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế.`,
+        components: [],
 
-                content: `Bài toán Object Detection có thể được gói gọn trong các khái niệm sau: **Grids**, **Anchor Boxes**, **Muti-scales Predictions** và **"Multi-stages detection"**. Ngoài ra học viên cũng được học về chuỗi mô hình Object Detection nổi tiếng nhất **YOLO** (You Only ~~Live~~ Look Once)`,
+        curriculum: [
+            {
+                title: "S1. Review*: PyTorch & Advanced Training Techniques",
             },
-        },
-        {
-            title: "Visual Attention & Transformers",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
-
-                content: `Học về **Cơ chế Tập Trung Quan Sát** (Attention Mechanism) để ép mô hình nhìn vào các vùng quan trọng trong ảnh để có thể đưa ra dự đoán tốt hơn.
-Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về kiến trúc **hot và phổ biến nhất mọi thời đại** (tất nhiên là cho đến hiện tại) của ngành Deep Learning là **Transformer**.`,
+            {
+                title: "S2. Review: Word / Sentence Representation (RNN / LSTM / GRU & Embedding)",
             },
-        },
-        {
-            title: "Transformer in Computer Vision & ViT (Vision Transformer)",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
-
-                content: `Thuật toán Convolution không phải là hoàn hảo. Ở buổi này, học viên sẽ được học về các nhược điểm của kiến trúc CNN, từ đó thấy được "ta có thể thay thế Convolution bằng Transformer"`,
+            {
+                title: "S3. From RNNs to Transformers",
             },
-        },
-        {
-            title: "Transformer in Object Detection & Segmentation",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
-
-                content: `"Chỉ dùng ViT thôi là chưa đủ, ta vẫn cần Convolution". Ở buổi này, học viên sẽ được học về các dạng kiến trúc kết hợp cả Convolution và Transformer để giải quyết 2 bài toán phổ biến **Object Segmentation** và **Object Detection**`,
+            {
+                title: "S4. HuggingFace Eco-system",
             },
-        },
-        {
-            title: "Modern ConvNets",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
-
-                content: `"Kiến trúc ViT rất hay, liệu ta có thể thay đổi thuật toán Convolution để bắt chước ViT?". Sau khoảng thời gian bị thất sủng, các kiến trúc dùng Convolution đã quay trở lại. Ở buổi học này, học viên sẽ được học về 2 kiến trúc tiêu biểu đánh dấu sự "comeback mạnh mẽ" của thuật toán Convolution đó là **ConvNext** và **RepLKNet**`,
+            {
+                title: "S5. Pretrained Language Models: Encoder (BERT), Decoder (GPT)",
             },
-        },
-        {
-            title: "Báo cáo dự án",
-            hidden: false,
-            classesCountable: true,
-            details: {
-                hidden: false,
-
-                content: "Học viên trình bày về dự án cuối khóa của mình",
+            {
+                title: "S6. Pretrained Language Models: Encoder-Decoder (BART, T5)",
             },
-        },
-    ],
-});
+            {
+                title: "S7. From Pretrained Models to Downstream Tasks",
+            },
+            {
+                title: "S8. Advanced Techniques to Optimize Language Models",
+            },
+            {
+                title: "S9. Language Models in Production",
+            },
+            {
+                title: "S10. Capstone Project Presentation",
+            },
+        ],
+    };
+};

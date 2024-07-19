@@ -17,8 +17,10 @@ export interface CourseProps {
     embed?: string;
     thumbnail?: string;
     description?: string;
+    descriptionMore?: string;
     descriptionRaw?: string;
     nextCourseId?: CourseIds;
+    hideCurriculumImages?: boolean;
     experienceRequirement: string[];
     whoShouldJoin: string[];
     skills: SkillTypes[];
@@ -29,6 +31,7 @@ export interface CourseProps {
     programId?: ProgramIds;
     certs?: (ImgMeta | ImgMeta[])[];
     faqs?: FAQProps[];
+    learningOutcomes: string[];
 }
 
 export type CourseStudyType = keyof typeof courseStudyType;

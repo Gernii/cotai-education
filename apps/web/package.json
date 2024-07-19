@@ -42,6 +42,7 @@
 		"@iconify-json/hugeicons": "^1.1.0",
 		"@iconify-json/logos": "^1.1.43",
 		"@iconify-json/lucide": "^1.1.194",
+		"@iconify-json/simple-icons": "^1.1.109",
 		"@iconify-json/teenyicons": "^1.1.9",
 		"@inlang/paraglide-js": "^1.10.1",
 		"@inlang/paraglide-js-adapter-sveltekit": "^0.6.7",

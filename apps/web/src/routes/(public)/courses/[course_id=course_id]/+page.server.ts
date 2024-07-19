@@ -20,14 +20,7 @@ import { getDataCourseUnique } from "$lib/datas/course-unique/course-unique.serv
 export const load = async ({ params }) => {
     const courseId = params.course_id as CourseIds;
 
-    const courseGetter = coursesMap.get(courseId);
-
-    if (!courseGetter) {
-        error(404, {
-            message: "Not found",
-        });
-    }
-    const course = courseGetter();
+    const course = getCourse(courseId);
 
     let programCourses: undefined | CourseIds[] = undefined;
     if (course.programId) {
@@ -59,6 +52,36 @@ export const load = async ({ params }) => {
         faqs,
         courseUnique,
     };
+};
+
+const getCourse = (courseId: CourseIds) => {
+    const courseGetter = coursesMap.get(courseId);
+    if (!courseGetter) {
+        error(404, {
+            message: "Not found",
+        });
+    }
+    const course = courseGetter();
+
+    const hardcodedWhoShouldJoin = [
+        "Các bạn học sinh THPT & Trung cấp nghề",
+        "Các bạn sinh viên Cao Đẳng & Đại Học",
+        "Người đi làm trong mọi lĩnh vực & ngành nghề",
+    ];
+
+    course.whoShouldJoin.unshift(...hardcodedWhoShouldJoin);
+    if (course.description) {
+        course.description = parseMarkdownToHTML(course.description);
+    }
+    if (course.descriptionMore) {
+        course.descriptionMore = parseMarkdownToHTML(course.descriptionMore);
+    }
+
+    for (let i = 0; i < course.whoShouldJoin.length; i++) {
+        course.whoShouldJoin[i] = parseMarkdownToHTML(course.whoShouldJoin[i]);
+    }
+
+    return course;
 };
 
 const courseFAQ = () => {

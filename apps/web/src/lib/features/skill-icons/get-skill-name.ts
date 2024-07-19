@@ -1,15 +1,15 @@
 import * as m from "$i18n/messages";
 
-import type { SkillTypes } from "./constant";
+import { SkillTypes } from "./constant";
 export const getSkillName = (skill: SkillTypes) => {
     switch (skill) {
-        case "python":
+        case SkillTypes.python:
             return "Python";
         case "ai":
             return m.artificialintelligence();
-        case "deep-learning":
+        case "deepLearning":
             return "Deep Learning";
-        case "machine-learning":
+        case "machineLearning":
             return "Machine Learning";
         case "anaconda":
             return "Anaconda";
@@ -21,7 +21,7 @@ export const getSkillName = (skill: SkillTypes) => {
             return m.math();
         case "pytorch":
             return "Pytorch";
-        case "raspberry-pi":
+        case "raspberryPi":
             return "Raspberry Pi";
         case "streamlit":
             return "Streamlit";
@@ -41,7 +41,7 @@ export const getSkillName = (skill: SkillTypes) => {
             return "Keras";
         case "pandas":
             return "Pandas";
-        case "scikit-learn":
+        case "scikitLearn":
             return "Scikit-learn";
         case "mmdetection":
             return "MMDetection";
@@ -53,5 +53,27 @@ export const getSkillName = (skill: SkillTypes) => {
             return "Timm";
         case "transformers":
             return "Transformers";
+        case SkillTypes.albumentations:
+            return "Albumentations";
+        case SkillTypes.surprise:
+            return "Surprise";
+        case SkillTypes.github:
+            return "Github";
+        case SkillTypes.markdown:
+            return "Markdown";
+        case SkillTypes.latex:
+            return "Latex";
+        case SkillTypes.interpret:
+            return "Interpret";
+        case SkillTypes.xgboost:
+            return "XGBoost";
+        case SkillTypes.paddlepaddle:
+            return "PaddlePaddle";
+        case SkillTypes.mmcv:
+            return "MMCV";
+        case SkillTypes.onnx:
+            return "ONNX";
+        case SkillTypes.openvino:
+            return "OpenVINO";
     }
 };

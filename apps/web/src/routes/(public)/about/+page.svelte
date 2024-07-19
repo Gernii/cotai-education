@@ -97,13 +97,13 @@
                     {m.fuzzy_bland_crocodile_surge()}
                 </h2>
             </div>
-            <p
+            <div
                 class="text-xl"
                 class:animate-fade-left={$isOurPride}
                 class:opacity-0={!$isOurPride}
             >
                 {@html ourPrideFirst}
-            </p>
+            </div>
             <div
                 class="prose text-justify md:col-span-3"
                 class:animate-fade-right={$isOurPride}
