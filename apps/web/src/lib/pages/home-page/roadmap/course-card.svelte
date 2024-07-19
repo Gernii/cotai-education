@@ -1,6 +1,4 @@
 <script lang="ts">
-    import { beforeNavigate } from "$app/navigation";
-
     import { cx } from "cva";
     import { writable } from "svelte/store";
     import { inview } from "svelte-inview";
@@ -42,21 +40,11 @@
 
     let isInview = writable(false);
 
-    let showMore = false;
-
     $: totalSessions = countTotalLessons(curriculum);
 
     $: courseThumbnail = coursesThumbnail(id as CourseIds);
 
     $: courseUrl = routerPath.courseId(id);
-
-    const onToggleShowMore = () => {
-        showMore = !showMore;
-    };
-
-    beforeNavigate(() => {
-        showMore = false;
-    });
 </script>
 
 {#if title}
