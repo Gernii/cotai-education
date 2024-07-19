@@ -1,26 +1,38 @@
-export type SkillTypes =
-    | "python"
-    | "pytorch"
-    | "tensorflow"
-    | "raspberry-pi"
-    | "anaconda"
-    | "streamlit"
-    | "javascript"
-    | "docker"
-    | "math"
-    | "ai"
-    | "deep-learning"
-    | "machine-learning"
-    | "opencv"
-    | "pillow"
-    | "numpy"
-    | "matplotlib"
-    | "plotly"
-    | "pandas"
-    | "scikit-learn"
-    | "keras"
-    | "timm"
-    | "torchmetrics"
-    | "torchseg"
-    | "mmdetection"
-    | "transformers";
+export enum SkillTypes {
+    python = "python",
+    pytorch = "pytorch",
+    tensorflow = "tensorflow",
+    raspberryPi = "raspberryPi",
+    anaconda = "anaconda",
+    streamlit = "streamlit",
+    javascript = "javascript",
+    docker = "docker",
+    math = "math",
+    ai = "ai",
+    deepLearning = "deepLearning",
+    machineLearning = "machineLearning",
+    opencv = "opencv",
+    pillow = "pillow",
+    numpy = "numpy",
+    matplotlib = "matplotlib",
+    plotly = "plotly",
+    pandas = "pandas",
+    scikitLearn = "scikitLearn",
+    keras = "keras",
+    timm = "timm",
+    torchmetrics = "torchmetrics",
+    torchseg = "torchseg",
+    mmdetection = "mmdetection",
+    transformers = "transformers",
+    github = "github",
+    markdown = "markdown",
+    latex = "latex",
+    albumentations = "albumentations",
+    surprise = "surprise",
+    interpret = "interpret",
+    xgboost = "xgboost",
+    paddlepaddle = "paddlepaddle",
+    mmcv = "mmcv",
+    onnx = "onnx",
+    openvino = "openvino",
+}

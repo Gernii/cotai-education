@@ -7,6 +7,7 @@ import {
     PUBLIC_HOSTNAME,
 } from "$env/static/public";
 import { routerPath } from "$lib/utils/constants";
+import { SkillTypes } from "$lib/features/skill-icons/constant";
 
 export const dataCourseDL4NLP = (): CourseProps => {
     const id = CourseIds.dl4nlp;
@@ -38,16 +39,25 @@ export const dataCourseDL4NLP = (): CourseProps => {
             "muốn đào sâu về chuyên ngành Xử lý ngôn ngữ tự nhiên (NLP) cho AI",
         ],
         skills: [
-            "python",
-            "math",
-            "numpy",
-            "scikit-learn",
-            "pytorch",
-            "torchmetrics",
-            "timm",
-            "torchseg",
-            "mmdetection",
-            "transformers",
+            SkillTypes.python,
+            SkillTypes.pytorch,
+            SkillTypes.numpy,
+            SkillTypes.pandas,
+            SkillTypes.scikitLearn,
+            SkillTypes.keras,
+            SkillTypes.matplotlib,
+            SkillTypes.plotly,
+            SkillTypes.pillow,
+            SkillTypes.albumentations,
+            SkillTypes.torchmetrics,
+            SkillTypes.transformers,
+            SkillTypes.paddlepaddle,
+            SkillTypes.mmcv,
+            SkillTypes.onnx,
+            SkillTypes.openvino,
+            SkillTypes.github,
+            SkillTypes.markdown,
+            SkillTypes.latex,
         ],
         archives: [
             {

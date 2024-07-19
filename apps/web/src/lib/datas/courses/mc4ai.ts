@@ -7,6 +7,7 @@ import {
     PUBLIC_HOSTNAME,
 } from "$env/static/public";
 import { routerPath } from "$lib/utils/constants";
+import { SkillTypes } from "$lib/features/skill-icons/constant";
 
 export const dataCourseMC4AI = (): CourseProps => {
     const id = CourseIds.mc4ai;
@@ -34,7 +35,21 @@ export const dataCourseMC4AI = (): CourseProps => {
             `đã biết lập trình Python cơ bản (tương đương khoá [PythonAI](${PUBLIC_HOSTNAME}${routerPath.courseId(CourseIds.pythonai)}) của CoTAI)`,
             "muốn ôn luyện *Toán ma trận* qua *Phân tích dữ liệu* để được đắm mình vào lĩnh vực AI",
         ],
-        skills: ["python", "numpy", "matplotlib", "plotly", "pandas", "scikit-learn", "keras"],
+        skills: [
+            SkillTypes.python,
+            SkillTypes.numpy,
+            SkillTypes.pandas,
+            SkillTypes.scikitLearn,
+            SkillTypes.keras,
+            SkillTypes.matplotlib,
+            SkillTypes.plotly,
+            SkillTypes.streamlit,
+            SkillTypes.pillow,
+            SkillTypes.opencv,
+            SkillTypes.github,
+            SkillTypes.markdown,
+            SkillTypes.latex,
+        ],
         archives: [
             {
                 title: "Sử dụng thành thạo các thư viện AI phổ biến",

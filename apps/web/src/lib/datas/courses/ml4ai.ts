@@ -19,6 +19,7 @@ import CurriculumML4AI11 from "$lib/assets/images/course/ml4ai/11.jpg?imagetools
 import CurriculumExam from "$lib/assets/images/course/exam.jpg?imagetools";
 import CurriculumProjectReport from "$lib/assets/images/course/project-report.jpg?imagetools";
 import { routerPath } from "$lib/utils/constants";
+import { SkillTypes } from "$lib/features/skill-icons/constant";
 
 export const dataCourseML4AI = (): CourseProps => {
     const id = CourseIds.ml4ai;
@@ -50,7 +51,21 @@ export const dataCourseML4AI = (): CourseProps => {
             `đã biết *lập trình* Toán ma trận (tương đương khoá [MC4AI](${PUBLIC_HOSTNAME}${routerPath.courseId(CourseIds.mc4ai)}) của CoTAI)`,
             "muốn xây dựng và huấn luyện AI thành thạo như một kỹ sư",
         ],
-        skills: [],
+        skills: [
+            SkillTypes.python,
+            SkillTypes.numpy,
+            SkillTypes.pandas,
+            SkillTypes.scikitLearn,
+            SkillTypes.keras,
+            SkillTypes.matplotlib,
+            SkillTypes.plotly,
+            SkillTypes.streamlit,
+            SkillTypes.pillow,
+            SkillTypes.opencv,
+            SkillTypes.github,
+            SkillTypes.markdown,
+            SkillTypes.latex,
+        ],
         archives: [
             {
                 title: "Hiểu biết về dữ liệu",

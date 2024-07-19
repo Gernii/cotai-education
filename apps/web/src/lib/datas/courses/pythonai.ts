@@ -16,6 +16,7 @@ import {
     PUBLIC_COURSE_PRICE_PYTHON_AI,
     PUBLIC_COURSE_REGISTER_URL_PYTHON_AI,
 } from "$env/static/public";
+import { SkillTypes } from "$lib/features/skill-icons/constant";
 
 export const dataCoursePythonAI = (): CourseProps => ({
     id: CourseIds.pythonai,
@@ -35,7 +36,15 @@ export const dataCoursePythonAI = (): CourseProps => ({
         "Biết cách cài đặt và sử dụng các thư viện hỗ trợ trong Python",
     ],
 
-    skills: ["python", "opencv", "pillow", "streamlit"],
+    skills: [
+        SkillTypes.python,
+        SkillTypes.streamlit,
+        SkillTypes.pillow,
+        SkillTypes.opencv,
+        SkillTypes.github,
+        SkillTypes.markdown,
+        SkillTypes.latex,
+    ],
     archives: [
         {
             title: "Kỹ năng lập trình cơ bản",
