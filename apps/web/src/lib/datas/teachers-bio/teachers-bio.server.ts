@@ -11,7 +11,7 @@ import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
 
 export const dataTeachersBio = (): TeacherBioProps[] => [
     {
-        role: "Founder/CEO & Academic Director",
+        role: "CoTAI founder/CEO & Academic Director",
         avatar: NgoQuocHungAvatar,
         name: "Ngô Quốc Hưng",
         details: parseMarkdownToHTML(

@@ -43,7 +43,7 @@
             {title}
         </h2>
         <div class="flex w-full justify-center">
-            <p class="mt-4 text-sm">{description}</p>
+            <p class="mt-4 text-sm md:text-base">{description}</p>
         </div>
     </div>
 </div>

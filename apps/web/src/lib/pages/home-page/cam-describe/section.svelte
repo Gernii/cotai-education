@@ -37,9 +37,11 @@
                     <p class="inline sm:inline-block">
                         <span class="text-primary">Accelerated Mastery</span>
                         luyện
-                        <span class="text-primary">Nhanh Thành Tài</span>
+                        <span class="text-primary">nhanh thành tài</span>
                     </p>
-                    <p class="inline sm:inline-block">
+                    <p
+                        class="inline text-xl font-bold text-secondary sm:inline-block md:text-2xl lg:text-3xl"
+                    >
                         là
                         <span class="text-secondary">chiến lược</span>
                         & <span class="text-secondary">cơ hội</span>

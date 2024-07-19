@@ -17,7 +17,6 @@ export const dataReviews: ReviewProps[] = [
         name: "Nguyễn Lê Quốc Bảo",
         review: "Thầy Hưng thầy Huy ơi, nhóm em sau chung kêt Steamhacks đã có những giải sau đây: Giải đội có UI & Ux tốt nhất và giải cá nhân hacker xuất sắc nhất giải đấu. Em và các thành viên trong team thật sự rất biết ơn và chân thành cảm ơn hai thầy đã giới thiệu cuộc thi và hướng dẫn team em từ tận vòng 1 đến bây giờ. Nếu không nhờ những công sức đó và chỉ dẫn cần thiết đó thì team đã không có được thành quả như bây giờ",
     },
-
     {
         avatar: TranBaoTienAvatar,
         className: CourseIds.mc4ai,

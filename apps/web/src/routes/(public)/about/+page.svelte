@@ -3,6 +3,7 @@
     import { inview } from "svelte-inview";
     import { writable } from "svelte/store";
 
+    import HeroPicture from "$lib/assets/pages/about/hero.jpg?imagetools";
     import LogoCirclePicture from "$lib/assets/images/about-us/1b.png?imagetools";
     import OurPride1Picture from "$lib/assets/images/about-us/2.jpg?imagetools";
     import OurPride2Picture from "$lib/assets/images/about-us/3.png?imagetools";
@@ -40,20 +41,6 @@
 </script>
 
 <SEO title={m.aboutus()} />
-
-<!-- <section class="mt-header-space">
-    <Container>
-        <ContainerContent>
-            <div>
-                <Picture
-                    meta={HeroPicture}
-                    alt={m.mainLogo()}
-                    imageClass="rounded-box"
-                />
-            </div>
-        </ContainerContent>
-    </Container>
-</section> -->
 
 <section class="mt-header-space">
     <Container>
@@ -154,28 +141,27 @@
     <Container>
         <ContainerContent class={wrapperClassName}>
             <div
-                class="border-l-4 border-secondary pl-4"
-                class:opacity-0={!$isPayForward}
-                class:animate-fade={$isPayForward}
-            >
-                <h2
-                    class={sectionH2TitleClassName}
-                    class:animate-fade-left={$isPayForward}
-                >
-                    Văn hoá tiếp nối "pay-forward" 🎁
-                </h2>
-            </div>
-            <div
                 class={textAndImageGridClassName}
                 class:animate-fade-right={$isPayForward}
                 class:opacity-0={!$isPayForward}
             >
-                <div class="prose md:col-span-3">
-                    {@html payForward}
-                    <div class="card bg-base-content/10 p-4 text-secondary">
-                        Còn hơn cả một chương trình đào tạo tuyệt vời: Cùng
-                        CoTAI chung tay xây dựng một cộng đồng tài năng quyết
-                        tâm nâng tầm Việt Nam 🇻🇳
+                <div class="col-span-3">
+                    <div class="pb-4">
+                        <div
+                            class="border-l-4 border-secondary pl-4"
+                            class:opacity-0={!$isPayForward}
+                            class:animate-fade={$isPayForward}
+                        >
+                            <h2
+                                class={sectionH2TitleClassName}
+                                class:animate-fade-left={$isPayForward}
+                            >
+                                Văn hoá tiếp nối "pay-forward" 🎁
+                            </h2>
+                        </div>
+                    </div>
+                    <div class="prose md:col-span-3">
+                        {@html payForward}
                     </div>
                 </div>
                 <div class="md:col-span-2">
@@ -185,6 +171,22 @@
                         imageClass="rounded-box"
                     />
                 </div>
+            </div>
+            <div
+                class:opacity-0={!$isPayForward}
+                class:animate-fade-up={$isPayForward}
+                class="space-y-4"
+            >
+                <div class="card bg-base-content/10 p-4 text-secondary">
+                    Còn hơn cả một chương trình đào tạo tuyệt vời: Cùng CoTAI
+                    chung tay xây dựng một cộng đồng tài năng quyết tâm nâng tầm
+                    Việt Nam 🇻🇳
+                </div>
+                <Picture
+                    meta={HeroPicture}
+                    alt={m.mainLogo()}
+                    imageClass="rounded-box"
+                />
             </div>
         </ContainerContent>
     </Container>

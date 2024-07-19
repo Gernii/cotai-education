@@ -35,7 +35,7 @@ export const containerContentClassNameHandler = cva<ContainerContentCVAProps>("m
             0: "",
         },
         padding: {
-            true: "px-2 sm:px-3",
+            true: "px-4",
             false: "",
         },
     },

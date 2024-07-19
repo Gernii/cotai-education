@@ -10,7 +10,7 @@ CoTAI tập trung vào ba mảng chính để thực hiện tầm nhìn của m�
 3. **CoTAI Startup Studio**: Phát triển các sản phẩm và dịch vụ AI độc quyền, đồng thời hỗ trợ thành lập các công ty khởi nghiệp công nghệ, góp phần tạo nên một hệ sinh thái đổi mới sáng tạo.`);
 
     const ourPrideFirst = parseMarkdownToHTML(
-        `**Đào tạo tăng tốc thành tài accalerated mastery in AI**`,
+        `**Đào tạo tăng tốc thành tài accelerated mastery in AI**`,
     );
 
     const ourPride = parseMarkdownToHTML(
@@ -20,7 +20,7 @@ CoTAI tập trung vào ba mảng chính để thực hiện tầm nhìn của m�
         `CoTAI tự hào có chương trình chuyên sâu *đầu tiên* & *duy nhất* được chính thức triển khai tại trường THPT chuyên Lê Hồng Phong HCM từ năm 2019 đến nay. Học sinh của chương trình đạt nhiều giải thưởng uy tín như giải nhì ISEF quốc tế (lần đầu tiên trong lịch sử!), giải nhất STEAM Hacks toàn quốc... 🏆🎉`,
     );
     const ourPride2 = parseMarkdownToHTML(
-        `Ngoài việc trở thành kỹ sư trụ cột phát triển các dự án và sản phẩm của CoTAI, các học viên đã tốt nghiệp hiện còn đang làm việc tại các công ty lớn như Meta AI (Facebook, UK), TikTok AI Singapore, You.com, Vingroup BigData, và các viện nghiên cứu lớn như TU Darmstadt, KAIST...`,
+        `Ngoài việc trở thành kỹ sư trụ cột phát triển các dự án và sản phẩm của CoTAI, các học viên đã tốt nghiệp hiện còn đang làm việc tại các công ty lớn như Meta AI (Facebook, UK), TikTok AI Singapore, You, Vingroup BigData, và các viện nghiên cứu lớn như TU Darmstadt, KAIST...`,
     );
     const payForward = parseMarkdownToHTML(
         `Đội ngũ CoTAI luôn xem việc đồng hành cùng sự phát triển của học viên là một sứ mệnh cao cả! Học viên được tạo điều kiện tối đa để có cơ hội tham gia các cuộc thi  trải nghiệm, các nhóm nghiên cứu phát triển, thực tập & giảng dạy, cũng như tuyển dụng & cộng tác viên (làm dự án từ xa) trong mạng lưới chuyên gia và khởi nghiệp của CoTAI Startup Studio. `,

@@ -4,8 +4,8 @@ import type { StudentProjectProps } from "./types";
 export const dataStudentProjects = (): StudentProjectProps[] => [
     {
         id: "6",
-        title: "Công cụ nhận diện chữ viết tay (Latin & Nhật)",
-        description: `Web nhận diện chữ viết tay chữ Latin và chữ Nhật.`,
+        title: "Công cụ AI nhận diện chữ viết tay (Latin & Nhật)",
+        description: `Web nhận diện chữ Latin và chữ Nhật viết tay.`,
 
         externalLinks: [
             { title: "Github", url: "https://github.com/mentallyderanged/mc4aiproject" },
@@ -25,7 +25,7 @@ export const dataStudentProjects = (): StudentProjectProps[] => [
     },
     {
         id: "2",
-        title: "Epidemic Simulation",
+        title: "COVID-19 Pandemic Simulation",
         members: ["Phước Khang", "Gia Bảo"],
         description: `Web mô phỏng tình trạng nhiễm COVID dựa theo một số tình huống và thông số giả định. Một số thư viện sử dụng: streamlit, streamlit-autorefresh, numpy, matplotlib.`,
         externalLinks: [
@@ -49,7 +49,7 @@ export const dataStudentProjects = (): StudentProjectProps[] => [
     },
     {
         id: "4",
-        title: "Hệ thống phát hiện xe hơi đậu trước nhà",
+        title: "Hệ thống phát hiện xe hơi đậu trước nhà & phát cảnh báo",
         description: `Chức năng nhận diện xe hơi đậu trước nhà và phát cảnh báo. 
         
 Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
@@ -63,7 +63,7 @@ Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
     },
     {
         id: "5",
-        title: "Hệ thống phát hiện xe hơi đậu trước nhà",
+        title: "Hệ thống phát hiện xe hơi đậu trước nhà & phát cảnh báo",
         description: `Chức năng nhận diện xe hơi đậu trước nhà và phát cảnh báo. 
         
 Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
@@ -73,23 +73,9 @@ Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
         className: "MC4AI 2023",
         demoId: "wVjxxWFER4o",
     },
-
-    {
-        id: "7",
-        title: "DL4AI Selection",
-        description: `- Thiên Phú - [Essay assistant](https://github.com/PaulTr27/vietnamese_essay_identifier)
-- Công Thịnh, Hoàng Phúc, Quỳnh Nga - [Beauty moments synthesis](https://github.com/MeowwMeoww/BeautyMomentSynthesis)
-- Tri Ân - [Translation app](https://github.com/trian-ctrn/envitranslate)
-- Hoàng Tú, Nhật Quang - [Manga translator](https://github.com/tuchau1404/manga_translate)
-- Gia Huy - [Emotion music recommendation](https://github.com/huyg1108/music-recommender)`,
-
-        members: [],
-        className: "DL4AI 2022",
-        demoId: "1mYFgDp6sIU",
-    },
     {
         id: "8",
-        title: "ML4AI Selection",
+        title: "ML4AI Selective Projects",
         description: `- Phúc Khang, Quang Tuấn - [hand gesture recognition](https://github.com/Reimangod/FINAL-PROJECT/tree/main)
 - Anh Tú - [Fruit classification](https://github.com/NgATu/Fruit-Classifier) 
 - Lệ Quân, Duy Tiến - [Car evaluation web app](https://github.com/Alexeanred/Car-Evaluation-Web-App) 
@@ -99,6 +85,19 @@ Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
         members: [],
         className: "ML4AI 2022",
         demoId: "8qE4_CW_bws",
+    },
+    {
+        id: "7",
+        title: "DL4AI Selective Projects",
+        description: `- Thiên Phú - [Essay assistant](https://github.com/PaulTr27/vietnamese_essay_identifier)
+- Công Thịnh, Hoàng Phúc, Quỳnh Nga - [Beauty moments synthesis](https://github.com/MeowwMeoww/BeautyMomentSynthesis)
+- Tri Ân - [Translation app](https://github.com/trian-ctrn/envitranslate)
+- Hoàng Tú, Nhật Quang - [Manga translator](https://github.com/tuchau1404/manga_translate)
+- Gia Huy - [Emotion music recommendation](https://github.com/huyg1108/music-recommender)`,
+
+        members: [],
+        className: "DL4AI 2022",
+        demoId: "1mYFgDp6sIU",
     },
 ];
 
