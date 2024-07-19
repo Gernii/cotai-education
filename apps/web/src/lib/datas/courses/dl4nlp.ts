@@ -23,9 +23,11 @@ export const dataCourseDL4NLP = (): CourseProps => {
         registerUrl: PUBLIC_COURSE_REGISTER_URL_DL4NLP,
 
         learningOutcomes: [
+            "Hiểu được các khái niệm quan trọng về các kiến trúc `Transformers` phổ biến trong ngành NLP và ưu nhược điểm của chúng",
+            "Học được cách sử dụng các thư viện tốt nhất và phổ biến nhất khi lập trình xây dựng mô hình AI xử lý ngôn ngữ",
             "Biết cách xây dựng và biến đổi các mô hình có sẵn để giải quyết bài toán riêng của mình",
-            "Học được cách sử dụng các thư viện tốt nhất và phổ biến nhất khi lập trình xây dựng mô hình AI",
-            "Hiểu được các khái niệm quan trọng về các kiến trúc Transformers phổ biến và ưu nhược điểm của chúng",
+            "Biết cách chuyển đổi (convert) mô hình để tăng tốc độ phục vụ khi làm sản phẩm",
+            "Đủ năng lực đọc hiểu các bài báo nghiên cứu chuyên ngành để tự cập nhật kiến thức chuyên môn",
         ],
 
         experienceRequirement: [
@@ -77,8 +79,8 @@ export const dataCourseDL4NLP = (): CourseProps => {
             },
         ],
 
-        description: `Học sâu (Deep Learning) là nhánh quan trọng nhất của ngành Học máy, chuyên phát triển các mạng nơ-ron nhân tạo học siêu hiệu quả với dữ liệu lớn. DL4NLP (Deep Learning for Natural Language Proessing) là khoá học chuyên về các mô hình Học sâu nền tảng cho ngành *Xử lý ngôn ngữ tự nhiên* để xử lý văn bản (như text classification, summarization, extraction/retrieval, Q&A, etc.), giúp AI "nói chuyện" như người (ví dụ ChatGPT.)`,
-        descriptionMore: `Khoá học gồm 3 chủ đề chính: 1-\`Transformers\`, 2-\`Language Models\`, 3-\`NLP Tasks\`, được chia thành nhiều buổi, mỗi buổi bao gồm lý thuyết cô đọng, bài lab thực hành, bài lab về nhà, review & quiz. Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế. Khoá học dành cho các học viên đã hoàn thành hoặc có kiến thức tương đương với khóa ML4AI của CoTAI.`,
+        description: `*Học sâu* (Deep Learning) là nhánh quan trọng nhất của ngành Học máy, chuyên phát triển các mạng neuron nhân tạo học siêu hiệu quả với dữ liệu lớn. DL4NLP (Deep Learning for Natural Language Proessing) là khoá học *chuyên* về các mô hình Học sâu nền tảng cho ngành *Xử lý ngôn ngữ tự nhiên* để xử lý văn bản (như phân loại, tóm tắt, trích xuất, truy vấn, hỏi đáp, hội thoại...), giúp AI "trò chuyện" như người (ví dụ ChatGPT.)`,
+        descriptionMore: `Khoá học gồm 3 chủ đề chính: 1-\`Transformers\`, 2-\`Language Models\`, 3-\`NLP Tasks\`, được chia thành nhiều buổi, mỗi buổi bao gồm lý thuyết cô đọng, bài lab thực hành, bài lab về nhà, review & quiz. Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế.`,
         components: [],
 
         curriculum: [
@@ -98,7 +100,7 @@ export const dataCourseDL4NLP = (): CourseProps => {
                 title: "S5. Pretrained Language Models: Encoder (BERT), Decoder (GPT)",
             },
             {
-                title: "S6 Pretrained Language Models: Encoder-Decoder (BART, T5)",
+                title: "S6. Pretrained Language Models: Encoder-Decoder (BART, T5)",
             },
             {
                 title: "S7. From Pretrained Models to Downstream Tasks",

@@ -31,7 +31,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
     whoShouldJoin: ["muốn *bắt đầu học lập trình* để được đắm mình vào lĩnh vực AI"],
     learningOutcomes: [
         "Kỹ năng lập trình cơ bản",
-        "Làm quen với AI",
+        "Làm quen với AI qua việc xây dựng ứng dụng",
         "Hiện thực hóa ý tưởng bằng Website",
         "Biết cách cài đặt và sử dụng các thư viện hỗ trợ trong Python",
     ],
@@ -66,13 +66,13 @@ export const dataCoursePythonAI = (): CourseProps => ({
 
 👉 Bạn cảm thấy lập trình thật khó & học lâu? Khoá học PythonAI được CoTAI dày công thiết kế chính là để giúp học viên xoá bỏ nỗi lo này!
 
-- 💡 Thông qua tương tác với các ứng dụng AI mới nhất
+- Thông qua tương tác với các ứng dụng AI mới nhất
 
-- 💡 Trực quan hoá tối đa (visualizations) qua giao diện web
+- Trực quan hoá tối đa (visualizations) qua giao diện web
 
-- 💡 Kết hợp hài hoà các câu lệnh cơ bản & bậc cao (API calls)
+- Kết hợp hài hoà các câu lệnh cơ bản & bậc cao (API calls)
 
-- 💡 Chỉ tập trung vào những kỹ năng & khái niệm cốt lõi để lập trình AI`,
+- Chỉ tập trung vào những nội dung cốt lõi để lập trình AI`,
     experienceRequirement: ["abs"],
     components: [],
 
@@ -127,7 +127,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
             },
         },
         {
-            title: "S6. Kiểm tra giữa kỳ",
+            title: "S6. Kiểm tra giữa khóa",
             images: [CurriculumExam],
         },
         {
@@ -187,7 +187,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
             },
         },
         {
-            title: "S11. Kiểm tra cuối kỳ",
+            title: "S11. Kiểm tra cuối khóa",
             images: [CurriculumExam],
         },
     ],

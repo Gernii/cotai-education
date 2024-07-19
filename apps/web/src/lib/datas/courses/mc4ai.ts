@@ -24,10 +24,10 @@ export const dataCourseMC4AI = (): CourseProps => {
         registerUrl: PUBLIC_COURSE_REGISTER_URL_MC4AI,
 
         learningOutcomes: [
-            'Sẵn sàng để "đắm mình vào Học máy (Machine Learning)"',
-            'Trải nghiệm quá trình làm "Đồ án môn học" capstone project',
+            "Trải nghiệm quá trình làm Dự án cuối khóa capstone project",
             "Sử dụng thành thạo các thư viện Phân tích dữ liệu phổ biến",
-            "Hiểu sâu và có thể tự lập trình được các thuật toán AI phổ biến",
+            "Hiểu sâu và có thể tự lập trình được các mô hình AI cơ bản",
+            'Sẵn sàng để "đắm mình vào Học máy" (Machine Learning)',
         ],
 
         experienceRequirement: [],
@@ -71,10 +71,12 @@ export const dataCourseMC4AI = (): CourseProps => {
         ],
 
         description: `Khóa học MC4AI cung cấp *một cách trực quan* các kiến thức **Toán** *cốt lõi* để học viên bắt đầu lập trình dự án AI & *Phân tích dữ liệu* qua các giải thuật và thư viện Python. Khoá học dành cho các học viên đã biết Python cơ bản (cần bài kiểm tra đầu vào) hoặc đã hoàn thành khoá \`PythonAI\` của CoTAI.`,
-        descriptionMore: `👉 Bạn luôn mang một nỗi sợ môn Toán? Hãy an tâm! Trung tâm tài năng CoTAI đã miệt mài biên soạn để khoá học "Lập trình nền tảng Toán cho AI" được trực quan dễ hiểu, ngay cả với học sinh THPT. 💡 Bí quyết rất đơn giản: để các bạn "vọc" thật nhiều với dữ liệu thực tế! Từ hình ảnh, văn bản, đến số liệu kinh doanh.
-- 🔥 Xử lý, tính toán, biến đổi, hiển thị các mảng dữ liệu thực 👉 hiểu ngay về ma trận và đại số tuyến tính cho AI.
-- 🔥 Mô phỏng & sinh mẫu, đưa ra dự đoán qua các mô hình học máy cơ bản 👉 hiểu ngay về xác suất & “niềm tin”, về các mô hình dự đoán của AI.
-- 🔥 Thiết kế ứng dụng mới có tích hợp các mô hình AI với đặc trưng huấn luyện sẵn (pre-trained models) 👉 thoả sức thực hành phát triển các dự án phân tích dữ liệu (Data Analysis)`,
+        descriptionMore: `👉 Bạn luôn mang một nỗi sợ môn Toán? Hãy an tâm! Trung tâm tài năng CoTAI đã miệt mài biên soạn để khoá học "Lập trình nền tảng Toán cho AI" được trực quan dễ hiểu, ngay cả với học sinh THPT. 
+        
+💡 Bí quyết rất đơn giản: để các bạn "vọc" thật nhiều với dữ liệu thực tế! Từ hình ảnh, văn bản, đến số liệu kinh doanh.
+- Xử lý, tính toán, biến đổi và hiển thị các mảng dữ liệu thực tế 👉 hiểu ngay về ma trận và đại số tuyến tính cho AI.
+- Mô phỏng & sinh mẫu, đưa ra dự đoán qua các mô hình học máy cơ bản 👉 hiểu ngay về xác suất & “niềm tin”, về các mô hình dự đoán của AI.
+- Thiết kế ứng dụng mới có tích hợp các mô hình AI với đặc trưng huấn luyện sẵn (pre-trained models) 👉 thoả sức thực hành phát triển các dự án phân tích dữ liệu (Data Analysis)`,
         components: [],
 
         curriculum: [
@@ -120,7 +122,7 @@ export const dataCourseMC4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S6. kiểm tra giữa kỳ & đăng ký dự án",
+                title: "S6. kiểm tra giữa khóa & đăng ký dự án",
             },
             {
                 title: "S7. Thuật toán kNN & kMeans",
@@ -169,7 +171,7 @@ export const dataCourseMC4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S12. Thi cuối kỳ",
+                title: "S12. Thi cuối khóa",
             },
             {
                 title: "S13. Báo cáo dự án",

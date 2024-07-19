@@ -23,9 +23,11 @@ export const dataCourseDL4CV = (): CourseProps => {
         registerUrl: PUBLIC_COURSE_REGISTER_URL_DL4CV,
 
         learningOutcomes: [
-            "Biết cách xây dựng và biến đổi các mô hình có sẵn để giải quyết bài toán riêng của mình",
-            "Hiểu được các khái niệm quan trọng về các kiến trúc DCNN phổ biến và ưu nhược điểm của chúng",
+            "Hiểu được các khái niệm quan trọng về các kiến trúc học sâu xử lý thị giác phổ biến (DCNNs & ViT) và ưu nhược điểm của chúng",
             "Học được cách sử dụng các thư viện tốt nhất và phổ biến nhất khi lập trình xây dựng mô hình AI",
+            "Biết cách xây dựng và biến đổi các mô hình có sẵn để giải quyết bài toán riêng của mình",
+            "Biết cách chuyển đổi (convert) mô hình để tăng tốc độ phục vụ khi làm sản phẩm",
+            "Đủ năng lực đọc hiểu các bài báo nghiên cứu chuyên ngành để tự cập nhật kiến thức chuyên môn",
         ],
 
         experienceRequirement: [
@@ -77,7 +79,7 @@ export const dataCourseDL4CV = (): CourseProps => {
         ],
 
         description: `*Học sâu* (Deep Learning) là nhánh quan trọng nhất của ngành Học máy, chuyên phát triển các mạng nơ-ron nhân tạo học siêu hiệu quả với dữ liệu lớn. DL4CV (Deep Learning for Computer Vision) là khoá học *chuyên* về các mô hình Học sâu nền tảng cho ngành *Thị giác máy tính* để phát hiện, phân loại và khoanh vùng các vật thể qua cameras, giúp AI "nhìn thấy" được (ví dụ xe tự lái & robots tự hành.)`,
-        descriptionMore: `Khoá học gồm 3 chủ đề chính: 1-\`DCNNs\`, 2-\`Vision Transformers\`, 3-\`Object Detection & Segmentation\`, được chia thành nhiều buổi, mỗi buổi bao gồm lý thuyết cô đọng, bài lab thực hành, bài lab về nhà, review & quiz. Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế. Khoá học dành cho các học viên đã hoàn thành hoặc có kiến thức tương đương với khóa ML4AI của CoTAI.`,
+        descriptionMore: `Khoá học gồm 3 chủ đề chính: 1-\`DCNNs\`, 2-\`Vision Transformers\`, 3-\`Object Detection & Segmentation\`, được chia thành nhiều buổi, mỗi buổi bao gồm lý thuyết cô đọng, bài lab thực hành, bài lab về nhà, review & quiz. Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế.`,
         components: [],
 
         curriculum: [
@@ -116,7 +118,7 @@ export const dataCourseDL4CV = (): CourseProps => {
                 details: {
                     content: `Học về **Cơ chế Tập Trung Quan Sát** (Attention Mechanism) để ép mô hình nhìn vào các vùng quan trọng trong ảnh để có thể đưa ra dự đoán tốt hơn.
     
-    Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về kiến trúc **hot và phổ biến nhất mọi thời đại** (tất nhiên là cho đến hiện tại) của ngành Deep Learning là **Transformer**.`,
+Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về kiến trúc **hot và phổ biến nhất mọi thời đại** (tất nhiên là cho đến hiện tại) của ngành Deep Learning là **Transformer**.`,
                 },
             },
             {

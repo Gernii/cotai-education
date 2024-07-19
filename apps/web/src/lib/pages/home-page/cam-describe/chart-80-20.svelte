@@ -40,7 +40,7 @@
         },
         series: [
             {
-                data: [0, 80, null, null, null, 100],
+                data: [0, 80, null, null, null, 97],
                 type: "line",
                 smooth: true,
                 symbolSize: 15,

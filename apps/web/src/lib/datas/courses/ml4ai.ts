@@ -37,9 +37,10 @@ export const dataCourseML4AI = (): CourseProps => {
         registerUrl: PUBLIC_COURSE_REGISTER_URL_ML4AI,
 
         learningOutcomes: [
-            "Nắm vững quy trình & kỹ năng xử lý dữ liệu",
+            "Hiểu rõ quy trình & kỹ năng xử lý dữ liệu",
+            "Thành thạo xây dựng, huấn luyện, đánh giá & cải thiện mô hình AI với `PyTorch`",
             "Biết cách khai thác các tài nguyên nguồn mở để sáng tạo các ứng dụng AI",
-            "Thành thạo xây dựng, huấn luyện, đánh giá & cải thiện mô hình AI với PyTorch",
+            "Nắm vững kiến thức chung về học máy, sẵn sàng đào sâu vào các lĩnh vực AI cụ thể",
         ],
 
         experienceRequirement: [
@@ -98,20 +99,20 @@ export const dataCourseML4AI = (): CourseProps => {
                     "Phát triển kỹ năng lập trình, đặc biệt là với ngôn ngữ Python, một trong những ngôn ngữ phổ biến nhất trong lĩnh vực AI và học máy",
             },
         ],
-        description: `*Học máy* (Machine Learning) là bộ công cụ để ta xây dựng các "hàm trí tuệ", tạo nên "kiến thức & kỹ năng" cho AI từ dữ liệu. Đây cũng chính là mục tiêu của khóa học ML4AI: giúp học viên nắm vững các nguyên lý cốt lõi & mô hình nền tảng của ngành Học máy cho hầu hết các bài toán AI. Khoá học dành cho các học viên đã hoàn thành khóa MC4AI của CoTAI hoặc có kiến thức & kỹ năng *lập trình Toán cho AI* tương đương (cần làm bài kiểm tra đầu vào).`,
+        description: `*Học máy* (Machine Learning) là bộ công cụ để ta xây dựng các "hàm trí tuệ", tạo nên "kiến thức & kỹ năng" cho AI từ dữ liệu. Đây cũng chính là mục tiêu của khóa học ML4AI: giúp học viên nắm vững các nguyên lý cốt lõi & mô hình nền tảng của ngành Học máy cho hầu hết các bài toán AI.`,
         descriptionMore: `🔥 Phương pháp đào tạo tăng tốc *nhanh thành tài* Accelerated Mastery của CoTAI giúp cô đọng cả một ngành học xuống thành một khoá ngắn hạn *hiệu quả cao*, với 6 chủ đề chính:
-- 1️⃣ Representations (feature extraction): trích xuất đặc trưng biểu diễn thành toạ độ nhúng. 
-- 2️⃣ Evaluation (metrics & losses): các chuẩn đánh giá mô hình và hàm lỗi.
-- 3️⃣ Search (optimize/train/learn): huấn luyện mô hình, tối ưu tham số.
-- 4️⃣ Linear & nonlinear predictors (regression, classification, clustering): Các mô hình dự đoán tuyến tính & phi tuyến cho các bài toán cơ sở như dự báo giá trị, phân loại, gom nhóm.
-- 5️⃣ CNNs & RNNs: Các mạng tích chập & mạng hồi quy biểu diễn dữ liệu chuỗi trong không gian & thời gian.
-- 6️⃣ Decision-making: Các bài toán suy luận, lên kế hoạch & ra quyết định bằng hệ khuyến nghị (RecSys), mô hình rừng cây quyết định (Decision Tree & Forest), mô hình Markov (MDP) và học tăng cường (Reinforcement Learning)`,
+1. Representations (feature extraction): trích xuất đặc trưng biểu diễn thành toạ độ nhúng. 
+2.  Evaluation (metrics & losses): các chuẩn đánh giá mô hình và hàm lỗi.
+3.  Search (optimize/train/learn): huấn luyện mô hình, tối ưu tham số.
+4.  Linear & nonlinear predictors (regression, classification, clustering): Các mô hình dự đoán tuyến tính & phi tuyến cho các bài toán cơ sở như dự báo giá trị, phân loại, gom nhóm.
+5. CNNs & RNNs: Các mạng tích chập & mạng hồi quy biểu diễn dữ liệu chuỗi trong không gian & thời gian.
+6.  Decision-making: Các bài toán suy luận, lên kế hoạch & ra quyết định bằng hệ khuyến nghị (RecSys), mô hình rừng cây quyết định (Decision Tree & Forest), mô hình Markov (MDP) và học tăng cường (Reinforcement Learning)`,
 
         components: [],
 
         curriculum: [
             {
-                title: "S1. Representation",
+                title: "S1. Biểu diễn dữ liệu (representation)",
                 images: [CurriculumML4AI1],
 
                 details: {
@@ -123,7 +124,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S2. Linear Predictor",
+                title: "S2. Mô hình dự đoán đơn giản (linear predictors)",
                 images: [CurriculumML4AI2],
 
                 details: {
@@ -134,7 +135,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S3. Multi-Layer Perceptron (MLP)",
+                title: "S3. Mô hình dự đoán nhiều lớp (MLP)",
                 images: [CurriculumML4AI3],
                 details: {
                     content: `- Học về mạng neuron nhân tạo: một loại mô hình mô phỏng cách não người xử lý thông tin và là nền tảng của các mô hình học sâu (Deep Learning).
@@ -144,7 +145,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S4. Training Loss & Evaluation Metrics → Optimization",
+                title: "S4. Chuẩn đánh giá mô hình và hàm lỗi trong huấn luyện",
                 images: [CurriculumML4AI4],
 
                 details: {
@@ -154,7 +155,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S5. Kiểm tra giữa kỳ",
+                title: "S5. Kiểm tra giữa khóa",
                 images: [CurriculumExam],
 
                 details: {
@@ -165,7 +166,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S6. Convolutional Neural Networks (CNNs)",
+                title: "S6. Mạng neuron tích chập (CNNs)",
                 images: [CurriculumML4AI6],
 
                 details: {
@@ -177,7 +178,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S7. Recurrent Neural Networks (RNNs)",
+                title: "S7. Mạng neuron hồi quy (RNNs)",
                 images: [CurriculumML4AI7],
 
                 details: {
@@ -187,7 +188,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S8. Recommender Systems",
+                title: "S8. Hệ khuyến nghị (recommender systems)",
                 images: [CurriculumML4AI8],
 
                 details: {
@@ -197,7 +198,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S9. Decision Trees",
+                title: "S9. Mô hình cây quyết định (decision trees)",
                 images: [CurriculumML4AI9],
 
                 details: {
@@ -208,7 +209,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S10. Markov Decision Process (MDP) Planning",
+                title: "S10. Mô hình lên kế hoạch (MDP)",
                 images: [CurriculumML4AI10],
 
                 details: {
@@ -218,7 +219,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S11. Reinforcement Q-Learning",
+                title: "S11. Học tăng cường (reinforcement Q-learning)",
                 images: [CurriculumML4AI11],
 
                 details: {
@@ -229,7 +230,7 @@ export const dataCourseML4AI = (): CourseProps => {
                 },
             },
             {
-                title: "S12. Kiểm tra cuối kỳ",
+                title: "S12. Kiểm tra cuối khóa",
                 images: [CurriculumExam],
 
                 details: {
