@@ -11,13 +11,7 @@
 
     $: course = $page.data.course as CourseProps;
 
-    let hardcodedWhoShouldJoin = [
-        "Học sinh THPT & Trung cấp nghề",
-        "Sinh viên Cao đẳng & Đại học",
-        "Lập trình viên & Người đi làm",
-    ];
-
-    $: whoShouldJoin = [...course.whoShouldJoin, ...hardcodedWhoShouldJoin];
+    $: whoShouldJoin = course.whoShouldJoin;
     $: learningOutcomes = course.learningOutcomes;
 </script>
 
@@ -28,7 +22,7 @@
         >
             <div class="card-body">
                 <div
-                    class="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 xl:gap-x-16"
+                    class="grid grid-cols-1 gap-x-8 gap-y-8 md:grid-cols-2 xl:gap-x-20"
                 >
                     <ItemsSection
                         items={whoShouldJoin}

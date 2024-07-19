@@ -55,14 +55,19 @@
     };
 </script>
 
-<div class={classNames}>
-    {@html finalText}
-    {#if showButton}
-        <span class="whitespace-nowrap">
-            {!isOpen ? finalSymbol : ""}
-            <button on:click={handleClick} class="italic hover:text-secondary">
-                {finalLabel}
-            </button>
-        </span>
-    {/if}
-</div>
+{#key textContent}
+    <div class={classNames}>
+        {@html finalText}
+        {#if showButton}
+            <span class="whitespace-nowrap">
+                {!isOpen ? finalSymbol : ""}
+                <button
+                    on:click={handleClick}
+                    class="italic hover:text-secondary"
+                >
+                    {finalLabel}
+                </button>
+            </span>
+        {/if}
+    </div>
+{/key}

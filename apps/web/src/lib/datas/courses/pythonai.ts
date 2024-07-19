@@ -27,7 +27,7 @@ export const dataCoursePythonAI = (): CourseProps => ({
     nextCourseId: CourseIds.mc4ai,
     programId: ProgramIds.public_training,
 
-    whoShouldJoin: [],
+    whoShouldJoin: ["muốn *bắt đầu học lập trình* để được đắm mình vào lĩnh vực AI"],
     learningOutcomes: [
         "Kỹ năng lập trình cơ bản",
         "Làm quen với AI",

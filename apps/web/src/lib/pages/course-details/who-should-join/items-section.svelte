@@ -24,12 +24,12 @@
     use:inview={inviewCommonOptions}
     on:inview_enter={onInViewEnter(isInview)}
 >
-    <div class="space-y-4 p-4 text-sm sm:p-8 md:p-0 lg:text-base">
+    <div class="space-y-4 p-4 sm:p-8 md:p-0">
         <SectionTitle paddingBottom={false}>{sectionTitle}</SectionTitle>
         <ul class="space-y-3">
             {#each items as item}
                 <Item>
-                    {item}
+                    {@html item}
                 </Item>
             {/each}
         </ul>
