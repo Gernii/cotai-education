@@ -35,10 +35,8 @@
 
     let wrapperClassName = cx("space-y-4");
 
-    let isOurAdvantage = writable(false);
-    let isOutstandingMarks = writable(false);
-    let isOurTeam = writable(false);
-    let isPartner = writable(false);
+    let isOurPride = writable(false);
+    let isPayForward = writable(false);
 </script>
 
 <SEO title={m.aboutus()} />
@@ -83,36 +81,40 @@
 
 <section
     use:inview={inviewCommonOptions}
-    on:inview_enter={onInViewEnter(isOurAdvantage)}
+    on:inview_enter={onInViewEnter(isOurPride)}
 >
     <Container>
         <ContainerContent class={wrapperClassName}>
             <div
                 class="border-l-4 border-secondary pl-4"
-                class:opacity-0={!$isOurAdvantage}
-                class:animate-fade={$isOurAdvantage}
+                class:opacity-0={!$isOurPride}
+                class:animate-fade={$isOurPride}
             >
                 <h2
                     class={sectionH2TitleClassName}
-                    class:animate-fade-left={$isOurAdvantage}
+                    class:animate-fade-left={$isOurPride}
                 >
                     {m.fuzzy_bland_crocodile_surge()}
                 </h2>
             </div>
-            <p class="text-xl">
+            <p
+                class="text-xl"
+                class:animate-fade-left={$isOurPride}
+                class:opacity-0={!$isOurPride}
+            >
                 {@html ourPrideFirst}
             </p>
             <div
                 class="prose text-justify md:col-span-3"
-                class:animate-fade-right={$isOurAdvantage}
-                class:opacity-0={!$isOurAdvantage}
+                class:animate-fade-right={$isOurPride}
+                class:opacity-0={!$isOurPride}
             >
                 {@html ourPride}
             </div>
             <div
                 class={textAndImageGridClassName}
-                class:animate-fade-right={$isOurAdvantage}
-                class:opacity-0={!$isOurAdvantage}
+                class:animate-fade-right={$isOurPride}
+                class:opacity-0={!$isOurPride}
             >
                 <div class="md:col-span-2">
                     <Picture
@@ -127,8 +129,8 @@
             </div>
             <div
                 class={textAndImageGridClassName}
-                class:animate-fade-right={$isOurAdvantage}
-                class:opacity-0={!$isOurAdvantage}
+                class:animate-fade-right={$isOurPride}
+                class:opacity-0={!$isOurPride}
             >
                 <div class="md:col-span-2">
                     <Picture
@@ -147,26 +149,26 @@
 
 <section
     use:inview={inviewCommonOptions}
-    on:inview_enter={onInViewEnter(isOurAdvantage)}
+    on:inview_enter={onInViewEnter(isPayForward)}
 >
     <Container>
         <ContainerContent class={wrapperClassName}>
             <div
                 class="border-l-4 border-secondary pl-4"
-                class:opacity-0={!$isOurAdvantage}
-                class:animate-fade={$isOurAdvantage}
+                class:opacity-0={!$isPayForward}
+                class:animate-fade={$isPayForward}
             >
                 <h2
                     class={sectionH2TitleClassName}
-                    class:animate-fade-left={$isOurAdvantage}
+                    class:animate-fade-left={$isPayForward}
                 >
                     Văn hoá tiếp nối "pay-forward" 🎁
                 </h2>
             </div>
             <div
                 class={textAndImageGridClassName}
-                class:animate-fade-right={$isOurAdvantage}
-                class:opacity-0={!$isOurAdvantage}
+                class:animate-fade-right={$isPayForward}
+                class:opacity-0={!$isPayForward}
             >
                 <div class="prose md:col-span-3">
                     {@html payForward}
