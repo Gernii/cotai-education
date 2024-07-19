@@ -3,14 +3,10 @@
     import { inview } from "svelte-inview";
     import { writable } from "svelte/store";
 
-    import HeroPicture from "$lib/assets/pages/about/hero.jpg?imagetools";
-    import CoTAIAIOpenDayPicture from "$lib/assets/pages/about/cotai-ai-open-day.jpg?imagetools";
-    import OutstandingMarks2Picture from "$lib/assets/pages/about/outstanding-marks-2.png?imagetools";
-    import LogoLeHongPhongPicture from "$lib/assets/logo/lhp.png?imagetools";
-    import LogoGambaruPicture from "$lib/assets/logo/gambaru.png?imagetools";
-    import LogoHCMUSPicture from "$lib/assets/logo/HCMUS.png?imagetools";
-    import LogoHCMUTPicture from "$lib/assets/logo/HCMUT.png?imagetools";
-    import LogoHUETPicture from "$lib/assets/logo/HUET.png?imagetools";
+    import LogoCirclePicture from "$lib/assets/images/about-us/1b.png?imagetools";
+    import OurPride1Picture from "$lib/assets/images/about-us/2.jpg?imagetools";
+    import OurPride2Picture from "$lib/assets/images/about-us/3.png?imagetools";
+    import PayForwardPicture from "$lib/assets/images/about-us/4.jpg?imagetools";
 
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import { SEO } from "$lib/components/ui/seo";
@@ -18,17 +14,26 @@
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
-    import { AboutPageMembers, AboutPagePartnerItem } from "$lib/pages/about";
-
     import * as m from "$i18n/messages";
 
+    import { RegisterEnd } from "$lib/features/register-end";
+
+    export let data;
+
+    $: visionAndMissionDescription = data.visionAndMissionDescription;
+    $: ourPride = data.ourPride;
+    $: ourPrideFirst = data.ourPrideFirst;
+    $: ourPride1 = data.ourPride1;
+    $: ourPride2 = data.ourPride2;
+    $: payForward = data.payForward;
+
     let textAndImageGridClassName = cx(
-        "grid grid-cols-1 gap-x-0 gap-y-4 text-justify md:grid-cols-2 md:gap-x-8 lg:gap-x-16",
+        "grid grid-cols-1 items-center gap-x-0 gap-y-4 text-justify md:grid-cols-5 md:gap-x-8 lg:gap-x-16",
     );
 
     let sectionH2TitleClassName = cx("text-xl font-bold sm:text-3xl");
 
-    let wrapperClassName = cx("space-y-4 md:space-y-8");
+    let wrapperClassName = cx("space-y-4");
 
     let isOurAdvantage = writable(false);
     let isOutstandingMarks = writable(false);
@@ -38,7 +43,7 @@
 
 <SEO title={m.aboutus()} />
 
-<section class="mt-header-space">
+<!-- <section class="mt-header-space">
     <Container>
         <ContainerContent>
             <div>
@@ -50,9 +55,9 @@
             </div>
         </ContainerContent>
     </Container>
-</section>
+</section> -->
 
-<section>
+<section class="mt-header-space">
     <Container>
         <ContainerContent class={wrapperClassName}>
             <div class="border-l-4 border-primary pl-4">
@@ -61,12 +66,12 @@
                 </h1>
             </div>
             <div class={textAndImageGridClassName}>
-                <div>
-                    {@html m.ourStory_description()}
+                <div class="prose md:col-span-3">
+                    {@html visionAndMissionDescription}
                 </div>
-                <div class="flex">
+                <div class="flex md:col-span-2">
                     <Picture
-                        meta={CoTAIAIOpenDayPicture}
+                        meta={LogoCirclePicture}
                         alt={"CoTAI Ai Open Day Picture"}
                         imageClass="rounded-box h-auto"
                     />
@@ -91,7 +96,71 @@
                     class={sectionH2TitleClassName}
                     class:animate-fade-left={$isOurAdvantage}
                 >
-                    {m.ourAdvantage()}
+                    {m.fuzzy_bland_crocodile_surge()}
+                </h2>
+            </div>
+            <p class="text-xl">
+                {@html ourPrideFirst}
+            </p>
+            <div
+                class="prose text-justify md:col-span-3"
+                class:animate-fade-right={$isOurAdvantage}
+                class:opacity-0={!$isOurAdvantage}
+            >
+                {@html ourPride}
+            </div>
+            <div
+                class={textAndImageGridClassName}
+                class:animate-fade-right={$isOurAdvantage}
+                class:opacity-0={!$isOurAdvantage}
+            >
+                <div class="md:col-span-2">
+                    <Picture
+                        meta={OurPride1Picture}
+                        alt={"CoTAI Ai Open Day Picture"}
+                        imageClass="rounded-box"
+                    />
+                </div>
+                <div class="prose md:col-span-3">
+                    {@html ourPride1}
+                </div>
+            </div>
+            <div
+                class={textAndImageGridClassName}
+                class:animate-fade-right={$isOurAdvantage}
+                class:opacity-0={!$isOurAdvantage}
+            >
+                <div class="md:col-span-2">
+                    <Picture
+                        meta={OurPride2Picture}
+                        alt={"CoTAI Ai Open Day Picture"}
+                        imageClass="rounded-box"
+                    />
+                </div>
+                <div class="prose md:col-span-3">
+                    {@html ourPride2}
+                </div>
+            </div>
+        </ContainerContent>
+    </Container>
+</section>
+
+<section
+    use:inview={inviewCommonOptions}
+    on:inview_enter={onInViewEnter(isOurAdvantage)}
+>
+    <Container>
+        <ContainerContent class={wrapperClassName}>
+            <div
+                class="border-l-4 border-secondary pl-4"
+                class:opacity-0={!$isOurAdvantage}
+                class:animate-fade={$isOurAdvantage}
+            >
+                <h2
+                    class={sectionH2TitleClassName}
+                    class:animate-fade-left={$isOurAdvantage}
+                >
+                    Văn hoá tiếp nối "pay-forward" 🎁
                 </h2>
             </div>
             <div
@@ -99,12 +168,17 @@
                 class:animate-fade-right={$isOurAdvantage}
                 class:opacity-0={!$isOurAdvantage}
             >
-                <div>
-                    {@html m.ourAdvantage_description()}
+                <div class="prose md:col-span-3">
+                    {@html payForward}
+                    <div class="card bg-base-content/10 p-4 text-secondary">
+                        Còn hơn cả một chương trình đào tạo tuyệt vời: Cùng
+                        CoTAI chung tay xây dựng một cộng đồng tài năng quyết
+                        tâm nâng tầm Việt Nam 🇻🇳
+                    </div>
                 </div>
-                <div>
+                <div class="md:col-span-2">
                     <Picture
-                        meta={CoTAIAIOpenDayPicture}
+                        meta={PayForwardPicture}
                         alt={"CoTAI Ai Open Day Picture"}
                         imageClass="rounded-box"
                     />
@@ -114,62 +188,8 @@
     </Container>
 </section>
 
-<section
-    class="bg-primary/90 text-white"
-    use:inview={inviewCommonOptions}
-    on:inview_enter={onInViewEnter(isOutstandingMarks)}
->
-    <Container>
-        <ContainerContent class={wrapperClassName}>
-            <div
-                class="border-l-4 border-secondary pl-2 sm:pl-4"
-                class:opacity-0={!$isOutstandingMarks}
-                class:animate-fade={$isOutstandingMarks}
-            >
-                <h2
-                    class={sectionH2TitleClassName}
-                    class:animate-fade-left={$isOutstandingMarks}
-                >
-                    {m.outstandingMarks()}
-                </h2>
-            </div>
-            <div
-                class={textAndImageGridClassName}
-                class:animate-fade-left={$isOutstandingMarks}
-                class:opacity-0={!$isOutstandingMarks}
-            >
-                <div>
-                    {@html m.outstandingMarks_description()}
-                </div>
-                <div>
-                    <Picture
-                        meta={HeroPicture}
-                        alt={"CoTAI Ai Open Day Picture"}
-                        imageClass="rounded-box"
-                    />
-                </div>
-            </div>
-            <div
-                class={textAndImageGridClassName}
-                class:animate-fade-right={$isOutstandingMarks}
-                class:opacity-0={!$isOutstandingMarks}
-            >
-                <div class="order-last md:order-none">
-                    <Picture
-                        meta={OutstandingMarks2Picture}
-                        alt={"Đào tạo"}
-                        imageClass="rounded-box"
-                    />
-                </div>
-                <div>
-                    {@html m.outstandingMarks_description_2()}
-                </div>
-            </div>
-        </ContainerContent>
-    </Container>
-</section>
-
-<section
+<RegisterEnd />
+<!-- <section
     use:inview={inviewCommonOptions}
     on:inview_enter={onInViewEnter(isOurTeam)}
 >
@@ -197,9 +217,9 @@
             </div>
         </ContainerContent>
     </Container>
-</section>
+</section> -->
 
-<section
+<!-- <section
     use:inview={inviewCommonOptions}
     on:inview_enter={onInViewEnter(isPartner)}
 >
@@ -247,4 +267,4 @@
             </div>
         </ContainerContent>
     </Container>
-</section>
+</section> -->
