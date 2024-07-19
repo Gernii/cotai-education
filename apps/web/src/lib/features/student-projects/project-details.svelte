@@ -10,7 +10,7 @@
 
     export let title: $$Props["title"];
     export let description: $$Props["description"] = undefined;
-    export let className: $$Props["className"];
+    export let className: $$Props["className"] = undefined;
     export let members: $$Props["members"];
     export let externalLinks: $$Props["externalLinks"] = undefined;
     export let demoId: $$Props["demoId"] = undefined;
