@@ -30,7 +30,7 @@
     "courses": "Danh sách khóa học",
     "siteNameWithTitle": "{title} - CoTAI Education",
     "siteName": "CoTAI Education",
-    "homePage_head_description": "Chuyên cung cấp các khóa học về Trí tuệ Nhân tạo cho mọi độ tuổi từ 15 và các khóa học dành cho những người không cần kỹ năng lập trình",
+    "homePage_head_description": "Đào tạo tăng tốc lập trình dự án AI dành cho học sinh sinh viên & người đi làm - Accelerated Mastery AI training for everyone",
     "noscript": "Trình duyệt của bạn không hỗ trợ Javascript. Vui lòng bật Javascript để trải nghiệm tốt hơn.",
     "error404_title": "UH OH! Bạn bị lạc rồi.",
     "error404_description": "Trang mà bạn đang tìm không tồn tại. Cách bạn đến đây thật là bí ẩn. Nhưng bạn có thể nhấn nút dưới đây để quay về trang chủ.",
@@ -72,7 +72,7 @@
     "artificialintelligence": "Trí tuệ nhân tạo",
     "learningoutcomes": "Học viên đạt được gì?",
     "aboutus": "Về CoTAI",
-    "ourStory": "Câu chuyện của chúng tôi",
+    "ourStory": "Tầm nhìn & Sứ mệnh",
     "memberAvatar": "Ảnh đại diện của {name}",
     "ourTeam": "Đội ngũ trẻ, niềm nở và đam mê",
     "outstandingMarks": "Những dấu ấn nổi bật",
@@ -164,5 +164,6 @@
     "icy_full_octopus_nurture": "Xác nhận ghi danh khóa học",
     "quick_good_bear_foster": "Làm quen với nền tảng Aharium",
     "giant_cuddly_ocelot_achieve": "Ưu điểm vượt trội của khóa học",
-    "lucky_suave_flamingo_stir": "Trang chủ"
+    "lucky_suave_flamingo_stir": "Trang chủ",
+    "fuzzy_bland_crocodile_surge": "Tâm huyết & Niềm tự hào của CoTAI 🍊"
 }
