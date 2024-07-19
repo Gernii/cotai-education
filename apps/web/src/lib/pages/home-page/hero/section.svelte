@@ -70,7 +70,7 @@
                         </ExternalAnchor>
                         <!-- svelte-ignore a11y-missing-attribute -->
                         <a
-                            class="btn btn-ghost text-nowrap border-0 text-secondary"
+                            class="btn btn-ghost text-nowrap border-0 bg-base-content/10 text-secondary"
                             use:scrollTo={"register-form"}
                         >
                             Liên hệ tư vấn
