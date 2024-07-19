@@ -17,6 +17,7 @@ export interface CourseProps {
     embed?: string;
     thumbnail?: string;
     description?: string;
+    descriptionMore?: string;
     descriptionRaw?: string;
     nextCourseId?: CourseIds;
     hideCurriculumImages?: boolean;

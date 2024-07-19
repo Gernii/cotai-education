@@ -18,7 +18,7 @@
     import { HeroRoadMap } from "$lib/features/hero-roadmap";
     import type { CourseProps } from "$lib/datas/courses/types";
     import type { CourseIds } from "$lib/datas/courses/constants";
-    import ReadMore from "$lib/features/read-more/read-more.svelte";
+    import { ReadMoreCustom } from "$lib/features/read-more-custom";
 
     $: heroRoadmapCourse = $page.data.heroRoadmapCourse as HeroRoadmapCourse[];
 
@@ -52,16 +52,13 @@
                     </div>
                 </div>
                 <hr class="h-1 w-12 border-0 bg-secondary" />
-                {#key course.description}
-                    {#if course.description}
-                        <ReadMore
-                            textContent={course.description}
-                            maxChars={400}
-                            dotDotDot={""}
-                        />
-                    {/if}
-                {/key}
 
+                {#if course.description}
+                    <ReadMoreCustom
+                        textContent={course.description}
+                        textReadmore={course.descriptionMore}
+                    />
+                {/if}
                 {#if course.skills && course.skills.length > 0}
                     <hr class="h-1 w-12 border-0 bg-secondary" />
                     <SkillsList skills={course.skills} />

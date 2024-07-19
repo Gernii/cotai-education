@@ -1,4 +1,6 @@
 <script lang="ts">
+    import { beforeNavigate } from "$app/navigation";
+
     import { cx } from "cva";
     import { writable } from "svelte/store";
     import { inview } from "svelte-inview";
@@ -21,7 +23,7 @@
     import type { CourseIds } from "$lib/datas/courses/constants";
     import { courseStudyType } from "$lib/datas/courses/constants";
     import LucideMonitorPlay from "~icons/lucide/monitor-play";
-    import { ReadMore } from "$lib/features/read-more";
+    import { ReadMoreCustom } from "$lib/features/read-more-custom";
     interface $$Props extends CourseProps {
         idx: number;
         last: boolean;
@@ -31,6 +33,7 @@
     export let title: $$Props["title"] = undefined;
     export let curriculum: $$Props["curriculum"] = [];
     export let description: $$Props["description"] = undefined;
+    export let descriptionMore: $$Props["descriptionMore"] = undefined;
     export let id: $$Props["id"];
     export let idx: $$Props["idx"];
     export let last: $$Props["last"];
@@ -39,11 +42,21 @@
 
     let isInview = writable(false);
 
+    let showMore = false;
+
     $: totalSessions = countTotalLessons(curriculum);
 
     $: courseThumbnail = coursesThumbnail(id as CourseIds);
 
     $: courseUrl = routerPath.courseId(id);
+
+    const onToggleShowMore = () => {
+        showMore = !showMore;
+    };
+
+    beforeNavigate(() => {
+        showMore = false;
+    });
 </script>
 
 {#if title}
@@ -122,9 +135,9 @@
                         </ul>
                         <hr class="h-1 w-12 border-0 bg-secondary" />
                         {#if description}
-                            <ReadMore
+                            <ReadMoreCustom
                                 textContent={description}
-                                maxChars={300}
+                                textReadmore={descriptionMore}
                             />
                         {/if}
 

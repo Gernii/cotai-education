@@ -76,9 +76,8 @@ export const dataCourseDL4CV = (): CourseProps => {
             },
         ],
 
-        description: `*Học sâu* (Deep Learning) là nhánh quan trọng nhất của ngành Học máy, chuyên phát triển các mạng nơ-ron nhân tạo học siêu hiệu quả với dữ liệu lớn. DL4CV (Deep Learning for Computer Vision) là khoá học *chuyên* về các mô hình Học sâu nền tảng cho ngành *Thị giác máy tính* để phát hiện, phân loại và khoanh vùng các vật thể qua cameras, giúp AI "nhìn thấy" được (ví dụ xe tự lái & robots tự hành.)
-    
-    Khoá học gồm 3 chủ đề chính: 1-\`DCNNs\`, 2-\`Vision Transformers\`, 3-\`Object Detection & Segmentation\`, được chia thành nhiều buổi, mỗi buổi bao gồm lý thuyết cô đọng, bài lab thực hành, bài lab về nhà, review & quiz. Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế. Khoá học dành cho các học viên đã hoàn thành hoặc có kiến thức tương đương với khóa ML4AI của CoTAI.`,
+        description: `*Học sâu* (Deep Learning) là nhánh quan trọng nhất của ngành Học máy, chuyên phát triển các mạng nơ-ron nhân tạo học siêu hiệu quả với dữ liệu lớn. DL4CV (Deep Learning for Computer Vision) là khoá học *chuyên* về các mô hình Học sâu nền tảng cho ngành *Thị giác máy tính* để phát hiện, phân loại và khoanh vùng các vật thể qua cameras, giúp AI "nhìn thấy" được (ví dụ xe tự lái & robots tự hành.)`,
+        descriptionMore: `Khoá học gồm 3 chủ đề chính: 1-\`DCNNs\`, 2-\`Vision Transformers\`, 3-\`Object Detection & Segmentation\`, được chia thành nhiều buổi, mỗi buổi bao gồm lý thuyết cô đọng, bài lab thực hành, bài lab về nhà, review & quiz. Dự án cuối khóa là cơ hội để học viên áp dụng các kiến thức & kỹ năng đã học vào xây dựng & triển khai một dự án AI ứng dụng thực tế. Khoá học dành cho các học viên đã hoàn thành hoặc có kiến thức tương đương với khóa ML4AI của CoTAI.`,
         components: [],
 
         curriculum: [

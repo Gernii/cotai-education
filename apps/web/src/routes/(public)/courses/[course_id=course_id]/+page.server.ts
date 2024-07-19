@@ -70,6 +70,12 @@ const getCourse = (courseId: CourseIds) => {
     ];
 
     course.whoShouldJoin.unshift(...hardcodedWhoShouldJoin);
+    if (course.description) {
+        course.description = parseMarkdownToHTML(course.description);
+    }
+    if (course.descriptionMore) {
+        course.descriptionMore = parseMarkdownToHTML(course.descriptionMore);
+    }
 
     for (let i = 0; i < course.whoShouldJoin.length; i++) {
         course.whoShouldJoin[i] = parseMarkdownToHTML(course.whoShouldJoin[i]);

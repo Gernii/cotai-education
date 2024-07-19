@@ -55,7 +55,7 @@
     };
 </script>
 
-{#key textContent}
+{#key finalText}
     <div class={classNames}>
         {@html finalText}
         {#if showButton}
