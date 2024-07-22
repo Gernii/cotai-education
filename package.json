@@ -1,29 +1,23 @@
 {
   "name": "cotai-education",
-  "version": "0.0.0",
-
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "build": "pnpm -r --parallel build",
     "validate": "run-s \"validate.*\"",
     "validate.lint": "pnpm -r --parallel lint.fix",
     "validate.fmt": "pnpm -r --parallel fmt.fix",
-
     "dev": "pnpm -r --parallel dev",
-
     "---ISSUES---": "current preview not work yet because backend-aws use serverless and env hvae Ref, which not work with serverless-offline",
     "preview.dev": "pnpm -r --parallel preview.dev",
     "preview.prod": "pnpm -r --parallel preview.prod",
-
     "lint": "pnpm -r --parallel lint.check",
     "test": "pnpm -r --parallel test",
     "fmt": "pnpm -r --parallel fmt.check",
     "check": "pnpm -r --parallel check",
     "deploy": "pnpm -r --parallel deploy",
-    
     "commit": "czg",
     "prepare": "husky"
-
   },
   "devDependencies": {
     "husky": "^9.0.11",
