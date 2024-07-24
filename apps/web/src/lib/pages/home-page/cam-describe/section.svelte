@@ -63,7 +63,10 @@
                         {#if idx === 0}
                             <Chart_80_20 />
                         {:else if idx === 1}
-                            <Picture meta={Cam2} />
+                            <Picture
+                                meta={Cam2}
+                                alt={"Generalist and Specialist"}
+                            />
                         {:else if idx === 2}
                             <video autoplay muted loop playsinline>
                                 <source src={Cam3} type="video/mp4" />

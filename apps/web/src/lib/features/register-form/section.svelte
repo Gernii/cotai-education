@@ -102,7 +102,7 @@
                                 <div
                                     class="size-5 flex-shrink-0 group-hover:animate-jump"
                                 >
-                                    <Picture meta={Zalo} />
+                                    <Picture meta={Zalo} alt="Zalo" />
                                 </div>
                                 <div>
                                     <p

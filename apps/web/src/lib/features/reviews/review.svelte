@@ -29,7 +29,7 @@
     <div class="flex gap-x-2">
         {#if avatar}
             <div class="size-16 overflow-hidden rounded-box">
-                <Picture meta={avatar} />
+                <Picture meta={avatar} alt={name} />
             </div>
         {/if}
         <div>

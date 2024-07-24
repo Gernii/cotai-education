@@ -4,7 +4,7 @@ import { defineConfig } from "vitest/config";
 import { imagetools } from "vite-imagetools";
 import Unfonts from "unplugin-fonts/vite";
 import Icons from "unplugin-icons/vite";
-
+import lqip from "vite-plugin-lqip";
 const supportedExtensions = ["png", "jpg", "jpeg"];
 const defaultImageToolsWidth = "320;640;1280";
 
@@ -13,7 +13,13 @@ export default defineConfig(({ mode }) => {
     return {
         plugins: [
             sveltekit(),
+            lqip(),
             imagetools({
+                cache: {
+                    enabled: true,
+                    dir: "./node_modules/.cache/imagetools",
+                    retention: 172800,
+                },
                 defaultDirectives: (url) => {
                     const searchParams = url.searchParams;
 

@@ -5,6 +5,7 @@
 
     import HeroPicture from "$lib/assets/pages/about/hero.jpg?imagetools";
     import LogoCirclePicture from "$lib/assets/images/about-us/1b.png?imagetools";
+    import LogoCircleBlurPicture from "$lib/assets/images/about-us/1b.png?lqip";
     import OurPride1Picture from "$lib/assets/images/about-us/2.jpg?imagetools";
     import OurPride2Picture from "$lib/assets/images/about-us/3.png?imagetools";
     import PayForwardPicture from "$lib/assets/images/about-us/4.jpg?imagetools";
@@ -54,7 +55,9 @@
                 <div class="flex md:col-span-2">
                     <Picture
                         meta={LogoCirclePicture}
-                        alt={"CoTAI Ai Open Day Picture"}
+                        blur={LogoCircleBlurPicture}
+                        loading="eager"
+                        alt={m.ourStory()}
                         imageClass="rounded-box h-auto"
                     />
                 </div>
@@ -103,7 +106,7 @@
                 <div class="md:col-span-2">
                     <Picture
                         meta={OurPride1Picture}
-                        alt={"CoTAI Ai Open Day Picture"}
+                        alt={m.fuzzy_bland_crocodile_surge()}
                         imageClass="rounded-box"
                     />
                 </div>
@@ -119,7 +122,7 @@
                 <div class="md:col-span-2">
                     <Picture
                         meta={OurPride2Picture}
-                        alt={"CoTAI Ai Open Day Picture"}
+                        alt={m.fuzzy_bland_crocodile_surge()}
                         imageClass="rounded-box"
                     />
                 </div>
@@ -153,7 +156,7 @@
                                 class={sectionH2TitleClassName}
                                 class:animate-fade-left={$isPayForward}
                             >
-                                Văn hoá tiếp nối "pay-forward" 🎁
+                                {m.simple_tasty_koala_embrace()}
                             </h2>
                         </div>
                     </div>
@@ -164,7 +167,7 @@
                 <div class="md:col-span-2">
                     <Picture
                         meta={PayForwardPicture}
-                        alt={"CoTAI Ai Open Day Picture"}
+                        alt={m.simple_tasty_koala_embrace()}
                         imageClass="rounded-box"
                     />
                 </div>
@@ -175,13 +178,11 @@
                 class="space-y-4"
             >
                 <div class="card bg-base-content/10 p-4 text-secondary">
-                    Còn hơn cả một chương trình đào tạo tuyệt vời: Cùng CoTAI
-                    chung tay xây dựng một cộng đồng tài năng quyết tâm nâng tầm
-                    Việt Nam 🇻🇳
+                    {m.wide_royal_haddock_blink()}
                 </div>
                 <Picture
                     meta={HeroPicture}
-                    alt={m.mainLogo()}
+                    alt={m.simple_tasty_koala_embrace()}
                     imageClass="rounded-box"
                 />
             </div>
