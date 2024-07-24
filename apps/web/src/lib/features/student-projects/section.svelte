@@ -25,6 +25,7 @@
     let isInview = writable(false);
 
     $: tabs = createTabs({
+        orientation: "vertical",
         defaultValue: projects[0].id,
     });
 
@@ -59,14 +60,16 @@
                 class="flex flex-col gap-x-2 gap-y-4 rounded-none lg:flex-row"
             >
                 <div
-                    use:melt={$list}
                     class="relative w-full flex-shrink-0 flex-row overflow-y-auto lg:flex lg:w-72 lg:flex-col"
                     aria-label="Projects"
                 >
                     <div class="block lg:hidden">
-                        <MobileProjectsSlide {projects} {trigger} />
+                        <MobileProjectsSlide {projects} {trigger} {list} />
                     </div>
-                    <div class="absolute hidden space-y-2 lg:block">
+                    <div
+                        class="absolute hidden space-y-2 lg:block"
+                        use:melt={$list}
+                    >
                         {#each projects as project}
                             <button
                                 use:melt={$trigger(project.id)}

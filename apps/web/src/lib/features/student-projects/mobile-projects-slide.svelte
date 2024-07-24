@@ -14,10 +14,12 @@
 
     interface $$Props {
         trigger: ReturnType<typeof createTabs>["elements"]["trigger"];
+        list: ReturnType<typeof createTabs>["elements"]["list"];
         projects: Pick<StudentProjectProps, "id" | "title" | "className">[];
     }
 
     export let trigger: $$Props["trigger"];
+    export let list: $$Props["list"];
     export let projects: $$Props["projects"];
 
     let isSlideRendered = false;
@@ -68,13 +70,20 @@
         </button>
     </div>
 
-    <div class="keen-slider" bind:this={carouselRef}>
+    <div
+        class="keen-slider"
+        bind:this={carouselRef}
+        use:melt={$list}
+        aria-orientation="horizontal"
+        data-orientation="horizontal"
+    >
         {#each projects as project, idx}
             <button
                 use:melt={$trigger(project.id)}
                 class={cx("keen-slider__slide card card-bordered bg-base-200", {
                     hidden: idx !== 0 && !isSlideRendered,
                 })}
+                data-orientation="horizontal"
             >
                 <div class="w-full p-4 text-center">
                     <p class="font-semibold">
