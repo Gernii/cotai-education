@@ -8,6 +8,8 @@
 
     import * as m from "$i18n/messages";
 
+    import type { Schema } from "./schema";
+
     import LucideMail from "~icons/lucide/mail";
     import LucidePhone from "~icons/lucide/phone";
     import LucideUser from "~icons/lucide/user";
@@ -31,16 +33,24 @@
         e.stopPropagation();
         submiting = true;
 
+        const body: Schema = {
+            name,
+        };
+        if (email !== "") {
+            body.email = email;
+        }
+        if (phone !== "") {
+            body.phone = phone;
+        }
+        if (comments !== "") {
+            body.comments = comments;
+        }
+
         try {
             await fetch(routerPath.api.contact, {
                 method: "post",
 
-                body: JSON.stringify({
-                    name,
-                    email,
-                    phone,
-                    comments,
-                }),
+                body: JSON.stringify(body),
             });
         } catch (error) {
             console.error(error);
@@ -82,13 +92,18 @@
             <form on:submit={onSubmit} class="space-y-4">
                 <div class="form-control">
                     <label class="input input-bordered flex items-center gap-2">
-                        <LucideUser />
+                        <div class="flex flex-shrink-0 justify-start">
+                            <LucideUser /><span class="text-sm text-error"
+                                >*</span
+                            >
+                        </div>
                         <input
                             type="text"
                             name="name"
                             bind:value={name}
                             placeholder={m.fancy_every_slug_pride()}
                             class="w-full"
+                            required
                         />
                     </label>
                 </div>

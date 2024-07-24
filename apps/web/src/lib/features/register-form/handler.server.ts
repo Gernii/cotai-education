@@ -1,14 +1,19 @@
-import { schema } from "./schema";
 import type { Fetch } from "$lib/utils/types/common";
 import { DISCORD_ID, DISCORD_ROLE, DISCORD_THREAD_ID, DISCORD_TOKEN } from "$env/static/private";
+import * as v from "valibot";
+import { schema } from "./schema";
 
 export const discordContactRequest = async (unvalidatedData: unknown, fetch: Fetch) => {
-    const dataValidated = schema.safeParse(unvalidatedData);
+    const dataValidated = v.safeParse(schema, unvalidatedData);
 
     if (!dataValidated.success) {
         return;
     }
-    const data = dataValidated.data;
+    const data = dataValidated.output;
+
+    if (!(data.email || data.phone)) {
+        return;
+    }
 
     // ? This is the part that sends the form data to Discord
     let content = `<@&${DISCORD_ROLE}>\nHọ và tên: \`${data.name}\`\nEmail: \`${data.email}\`\nSDT: \`${data.phone}\``;

@@ -14,7 +14,6 @@ export const load = () => {
     const studentProjects = getDataStudentProjects();
 
     const [courseRoadmap, heroRoadmapCourse] = getCourseRoadmap();
-
     return { teachersBio, studentProjects, courseRoadmap, heroRoadmapCourse };
 };
 

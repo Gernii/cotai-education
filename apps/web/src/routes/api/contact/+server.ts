@@ -11,8 +11,8 @@ const limiter = new RateLimiter({
 // This handler will respond to PUT, PATCH, DELETE, etc.
 export const POST = async (event) => {
     const { request, fetch } = event;
-    // Every call to isLimited counts as a hit towards the rate limit for the event.
 
+    // Every call to isLimited counts as a hit towards the rate limit for the event.
     if (await limiter.isLimited(event)) {
         return json({});
     }

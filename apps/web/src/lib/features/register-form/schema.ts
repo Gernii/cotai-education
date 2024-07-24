@@ -1,14 +1,9 @@
-import { z } from "zod";
-import * as m from "$i18n/messages";
-
-export const schema = z.object({
-    name: z.string(),
-    email: z.string().email(m.loud_fine_mole_approve()).optional(),
-    phone: z
-        .string()
-        .max(15, m.cute_aqua_eel_stab())
-        .min(9, m.cute_aqua_eel_stab())
-        .refine((value) => /^([+]?\d+)$/.test(value), m.cute_aqua_eel_stab())
-        .optional(),
-    comments: z.string().optional(),
+import * as v from "valibot";
+export const schema = v.object({
+    name: v.string(),
+    email: v.optional(v.pipe(v.string(), v.email())),
+    phone: v.optional(v.pipe(v.string(), v.maxLength(15), v.minLength(9), v.regex(/^([+]?\d+)$/))),
+    comments: v.optional(v.string()),
 });
+
+export type Schema = v.InferOutput<typeof schema>;
