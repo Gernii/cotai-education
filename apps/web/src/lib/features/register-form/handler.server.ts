@@ -1,25 +1,19 @@
-import { message, superValidate } from "sveltekit-superforms";
-import { zod } from "sveltekit-superforms/adapters";
 import { schema } from "./schema";
 import type { Fetch } from "$lib/utils/types/common";
-import { fail } from "@sveltejs/kit";
 import { DISCORD_ID, DISCORD_ROLE, DISCORD_THREAD_ID, DISCORD_TOKEN } from "$env/static/private";
-import * as m from "$i18n/messages";
 
-export const loadValidatorRegisterForm = () => superValidate(zod(schema));
+export const discordContactRequest = async (unvalidatedData: unknown, fetch: Fetch) => {
+    const dataValidated = schema.safeParse(unvalidatedData);
 
-export const discordRegisterForm = async (request: Request, fetch: Fetch) => {
-    const form = await superValidate(request, zod(schema));
-
-    if (!form.valid) {
-        // Again, return { form } and things will just work.
-        return fail(400, { form });
+    if (!dataValidated.success) {
+        return;
     }
+    const data = dataValidated.data;
 
     // ? This is the part that sends the form data to Discord
-    let content = `<@&${DISCORD_ROLE}>\nHọ và tên: \`${form.data.name}\`\nEmail: \`${form.data.email}\`\nSDT: \`${form.data.phone}\``;
-    if (form.data.comments) {
-        content += `\nThông tin:\`\`\`${form.data.comments}\`\`\``;
+    let content = `<@&${DISCORD_ROLE}>\nHọ và tên: \`${data.name}\`\nEmail: \`${data.email}\`\nSDT: \`${data.phone}\``;
+    if (data.comments) {
+        content += `\nThông tin:\`\`\`${data.comments}\`\`\``;
     }
 
     const allowedMentions = {
@@ -41,10 +35,5 @@ export const discordRegisterForm = async (request: Request, fetch: Fetch) => {
         );
     } catch (error) {
         console.error(error);
-
-        return fail(500, { form });
     }
-
-    // Display a success status message
-    return message(form, { text: m.moving_equal_moth_fulfill(), type: "success" });
 };
