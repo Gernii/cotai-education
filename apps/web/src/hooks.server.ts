@@ -1,4 +1,4 @@
-import { redirect, type Handle, type RequestEvent } from "@sveltejs/kit";
+import { redirect, text, type Handle, type RequestEvent } from "@sveltejs/kit";
 
 import { ACCESS_TOKEN, BASE_URL, ID_TOKEN, REFRESH_TOKEN } from "$lib/utils/environment";
 import { fetcher } from "$lib/utils/fetcher";
@@ -10,6 +10,8 @@ import { routerPath } from "$lib/utils/constants";
 import { sourceLanguageTag } from "$i18n/runtime";
 import { sequence } from "@sveltejs/kit/hooks";
 import { i18n } from "$lib/libs/i18n";
+import { dev } from "$app/environment";
+import { PUBLIC_HOSTNAME } from "$env/static/public";
 
 export type Credentials = {
     refreshToken: string;
@@ -101,6 +103,14 @@ const handlePrivateFetch = async <T>(
 
 const mainHandle: Handle = async ({ event, resolve }) => {
     const lang = event.params.lang ?? sourceLanguageTag;
+
+    if (event.route.id?.startsWith("/api")) {
+        if (event.request.headers.get("origin") !== PUBLIC_HOSTNAME && !dev) {
+            return text("Success");
+        }
+
+        event.setHeaders({ "Access-Control-Allow-Origin": PUBLIC_HOSTNAME });
+    }
 
     event.locals.handlePrivateFetch = (url: string, options?: HandlePrivateFetchOptions) =>
         handlePrivateFetch(event, url, options);
