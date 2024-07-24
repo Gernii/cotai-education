@@ -43,6 +43,9 @@ export const routerPath = {
     privacyPolicy: "/privacy-policy",
     faq: "/faq",
     home: "/",
+    api: {
+        contact: "/api/contact",
+    },
 };
 
 export const SEARCH_PARAMS_ACTION = "action";

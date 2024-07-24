@@ -23,9 +23,6 @@
 
     $: visionAndMissionDescription = data.visionAndMissionDescription;
     $: ourPride = data.ourPride;
-    $: ourPrideFirst = data.ourPrideFirst;
-    $: ourPride1 = data.ourPride1;
-    $: ourPride2 = data.ourPride2;
     $: payForward = data.payForward;
 
     let textAndImageGridClassName = cx(
@@ -89,14 +86,14 @@
                 class:animate-fade-left={$isOurPride}
                 class:opacity-0={!$isOurPride}
             >
-                {@html ourPrideFirst}
+                {@html ourPride.subtitle}
             </div>
             <div
                 class="prose text-justify md:col-span-3"
                 class:animate-fade-right={$isOurPride}
                 class:opacity-0={!$isOurPride}
             >
-                {@html ourPride}
+                {@html ourPride.main}
             </div>
             <div
                 class={textAndImageGridClassName}
@@ -111,7 +108,7 @@
                     />
                 </div>
                 <div class="prose md:col-span-3">
-                    {@html ourPride1}
+                    {@html ourPride.sub[0]}
                 </div>
             </div>
             <div
@@ -127,7 +124,7 @@
                     />
                 </div>
                 <div class="prose md:col-span-3">
-                    {@html ourPride2}
+                    {@html ourPride.sub[1]}
                 </div>
             </div>
         </ContainerContent>

@@ -1,9 +1,4 @@
 import { error } from "@sveltejs/kit";
-import {
-    discordRegisterForm,
-    loadValidatorRegisterForm,
-} from "$lib/features/register-form/handler.server";
-import { RateLimiter } from "$lib/libs/sveltekit-rate-limiter";
 import type { CourseIds } from "$lib/datas/courses/constants";
 import { coursesMap } from "$lib/datas/courses/healpers";
 import { programsMap } from "$lib/datas/programs/healpers";
@@ -17,7 +12,9 @@ import { dataFAQs } from "$lib/datas/faq/faq.server";
 import { FAQShowLocation } from "$lib/datas/faq/types.js";
 import { getDataCourseUnique } from "$lib/datas/course-unique/course-unique.server.js";
 
-export const load = async ({ params }) => {
+export const prerender = true;
+
+export const load = ({ params }) => {
     const courseId = params.course_id as CourseIds;
 
     const course = getCourse(courseId);
@@ -30,8 +27,6 @@ export const load = async ({ params }) => {
         }
     }
 
-    const registerForm = await loadValidatorRegisterForm();
-
     const teachersBio = dataTeachersBio();
 
     const studentProjects = getDataStudentProjects();
@@ -43,7 +38,6 @@ export const load = async ({ params }) => {
     const courseUnique = getDataCourseUnique();
 
     return {
-        registerForm,
         course: courseMappingData(course),
         programCourses,
         teachersBio,
@@ -149,24 +143,4 @@ const getHeroRoadmapCourse = () => {
     );
 
     return res;
-};
-
-const limiter = new RateLimiter({
-    IP: [5, "h"], // IP address limiter
-    IPUA: [3, "m"], // IP + User Agent limiter
-});
-
-export const actions = {
-    default: async (event) => {
-        const { request, fetch } = event;
-        // Every call to isLimited counts as a hit towards the rate limit for the event.
-
-        if (await limiter.isLimited(event)) {
-            throw error(429);
-        }
-
-        const res = await discordRegisterForm(request, fetch);
-
-        return res;
-    },
 };

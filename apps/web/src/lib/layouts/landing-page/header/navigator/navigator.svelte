@@ -46,7 +46,6 @@
     >
         <NavigatorItem
             href={routerPath.home}
-            target="_self"
             aria-label={m.lucky_suave_flamingo_stir()}
         >
             {m.lucky_suave_flamingo_stir()}
@@ -75,11 +74,7 @@
             </NavigatorCollapse>
         {/if}
 
-        <NavigatorItem
-            href={routingPathAboutUs()}
-            target="_self"
-            aria-label={m.aboutUs()}
-        >
+        <NavigatorItem href={routingPathAboutUs()} aria-label={m.aboutUs()}>
             {m.aboutUs()}
         </NavigatorItem>
 
@@ -92,7 +87,7 @@
             {m.gemCollection()}
         </NavigatorItem>
 
-        <NavigatorItem href="#footer" target="_self" aria-label={m.contact()}>
+        <NavigatorItem href="#footer" aria-label={m.contact()}>
             {m.contact()}
         </NavigatorItem>
     </nav>
