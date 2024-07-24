@@ -6,8 +6,12 @@
 
     import Thumbnail1Picture from "$lib/assets/images/homepage-thumbnail/1.jpg?imagetools";
     import Thumbnail2Picture from "$lib/assets/images/homepage-thumbnail/2.jpg?imagetools";
-    import Thumbnail3Picture from "$lib/assets/images/homepage-thumbnail/3-1.png?imagetools";
+    import Thumbnail3Picture from "$lib/assets/images/homepage-thumbnail/3.png?imagetools";
     import Thumbnail4Picture from "$lib/assets/images/homepage-thumbnail/4.jpg?imagetools";
+    import Thumbnail1Blur from "$lib/assets/images/homepage-thumbnail/1.jpg?lqip";
+    import Thumbnail2Blur from "$lib/assets/images/homepage-thumbnail/2.jpg?lqip";
+    import Thumbnail3Blur from "$lib/assets/images/homepage-thumbnail/3.png?lqip";
+    import Thumbnail4Blur from "$lib/assets/images/homepage-thumbnail/4.jpg?lqip";
 
     import { ContainerContent } from "$lib/components/ui/container";
     import Container from "$lib/components/ui/container/container.svelte";
@@ -83,11 +87,13 @@
                             meta={Thumbnail4Picture}
                             alt={"Đào tạo"}
                             class="image-top-left basis-3/5"
+                            blur={Thumbnail4Blur}
                         />
                         <Image
                             meta={Thumbnail3Picture}
                             alt={"Đào tạo"}
                             class="image-bottom-left basis-2/5"
+                            blur={Thumbnail3Blur}
                         />
                     </div>
                     <div class="flex flex-col gap-y-2">
@@ -95,12 +101,14 @@
                             meta={Thumbnail1Picture}
                             alt={"Đào tạo"}
                             class="image-top-right basis-2/5"
+                            blur={Thumbnail1Blur}
                         />
 
                         <Image
                             meta={Thumbnail2Picture}
                             alt={"Đào tạo"}
                             class="image-bottom-right basis-3/5"
+                            blur={Thumbnail2Blur}
                         />
                     </div>
                 </div>

@@ -5,12 +5,15 @@
 
     interface $$Props {
         meta: ImgMeta | ImgMeta[];
+        blur: ImgBlur;
+
         alt: string;
         class?: string;
     }
 
     export let meta: $$Props["meta"];
     export let alt: $$Props["alt"];
+    export let blur: $$Props["blur"];
     let className: $$Props["class"] = undefined;
     export { className as class };
 
@@ -21,5 +24,5 @@
 </script>
 
 <div class={classes}>
-    <Picture {meta} {alt} imageClass="object-cover" />
+    <Picture {meta} {alt} {blur} imageClass="object-cover" loading="eager" />
 </div>

@@ -57,7 +57,11 @@
                     href={"/"}
                     class="absolute left-1/2 w-24 -translate-x-1/2 lg:static lg:translate-x-0"
                 >
-                    <Picture meta={LogoCotAI} alt={m.mainLogo()} />
+                    <Picture
+                        meta={LogoCotAI}
+                        alt={m.mainLogo()}
+                        loading="eager"
+                    />
                 </a>
                 <div class="flex flex-grow-0 lg:flex-grow" />
                 <div class="hidden lg:block">

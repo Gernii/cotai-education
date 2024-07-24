@@ -7,7 +7,10 @@
 
     import { scrollTo } from "$lib/libs/svelte-scrolling";
 
-    import { coursesThumbnail } from "$lib/utils/courses-thumbnail";
+    import {
+        coursesBlurThumbnail,
+        coursesThumbnail,
+    } from "$lib/utils/courses-thumbnail";
     import { countTotalLessons } from "$lib/utils/count-total-lessons";
 
     import * as m from "$i18n/messages";
@@ -25,6 +28,8 @@
     $: course = $page.data.course as CourseProps;
 
     $: courseThumbnail = coursesThumbnail(course.id as CourseIds);
+
+    $: courseBlurThumbnail = coursesBlurThumbnail(course.id as CourseIds);
 
     $: totalLessons = countTotalLessons(course.curriculum);
 </script>
@@ -70,6 +75,8 @@
                 <figure class="aspect-thumbnail169">
                     {#if courseThumbnail}
                         <Picture
+                            blur={courseBlurThumbnail}
+                            loading="eager"
                             meta={courseThumbnail}
                             alt={m.thumbnail({ title: course.title ?? "" })}
                             imageClass="w-full object-cover transition-transform duration-300 group-hover:scale-105"
