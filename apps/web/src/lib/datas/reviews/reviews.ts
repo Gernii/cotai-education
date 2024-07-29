@@ -7,7 +7,7 @@ import NguyenPhamNhatQuangAvatar from "$lib/assets/images/reviews/NguyenPhamNhat
 import NguyenLyThanhTaiAvatar from "$lib/assets/images/reviews/NguyenLyThanhTai.png?imagetools";
 import NguyenLeQuocBaoAvatar from "$lib/assets/images/reviews/NguyenLeQuocBao.jpg?imagetools";
 import LePhucKhangAvatar from "$lib/assets/images/reviews/LePhucKhang.png?imagetools";
-import LeNamAvatar from "$lib/assets/images/reviews/LeNam.png?imagetools";
+import LeNamAvatar from "$lib/assets/images/reviews/LeNam.jpg?imagetools";
 
 export const dataReviews: ReviewProps[] = [
     {
