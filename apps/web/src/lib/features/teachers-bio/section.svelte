@@ -3,11 +3,14 @@
 
     import { writable } from "svelte/store";
     import { inview } from "svelte-inview";
+    import { onDestroy } from "svelte";
 
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import { SectionTitle } from "$lib/components/ui/section-title";
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
+
+    import { useBreakpoints } from "$lib/utils/media-matcher/media-matcher";
 
     import * as m from "$i18n/messages";
 
@@ -20,6 +23,14 @@
     setSliderRefsContext();
 
     let isInview = writable(false);
+
+    $: breakpoints = useBreakpoints("lg");
+
+    $: mediaMatcher = breakpoints.match;
+
+    onDestroy(() => {
+        breakpoints.unsubscribe();
+    });
 </script>
 
 <section
@@ -44,15 +55,17 @@
                 <BioList />
             </div>
 
-            <div
-                class="block space-y-4 lg:hidden"
-                class:opacity-0={!$isInview}
-                class:animate-fade-up={$isInview}
-            >
-                <BioSlider />
+            {#if !$mediaMatcher}
+                <div
+                    class="space-y-4"
+                    class:opacity-0={!$isInview}
+                    class:animate-fade-up={$isInview}
+                >
+                    <BioSlider />
 
-                <Dots />
-            </div>
+                    <Dots />
+                </div>
+            {/if}
         </ContainerContent>
     </Container>
 </section>

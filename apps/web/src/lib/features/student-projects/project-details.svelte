@@ -6,17 +6,23 @@
 
     import type { StudentProjectProps } from "$lib/datas/student-projects/types";
 
-    interface $$Props extends Omit<StudentProjectProps, "id"> {}
+    interface $$Props extends Omit<StudentProjectProps, "id"> {
+        hidden?: boolean;
+    }
 
     export let title: $$Props["title"];
+    export let members: $$Props["members"];
+    export let hidden: $$Props["hidden"] = false;
     export let description: $$Props["description"] = undefined;
     export let className: $$Props["className"] = undefined;
-    export let members: $$Props["members"];
     export let externalLinks: $$Props["externalLinks"] = undefined;
     export let demoId: $$Props["demoId"] = undefined;
 </script>
 
-<div class="h-full space-y-4 rounded-box bg-base-200 p-4 lg:p-8">
+<div
+    class="keen-slider__slide space-y-4 rounded-box bg-base-200 p-4 lg:p-8"
+    class:hidden
+>
     <div class="flex gap-x-8">
         <div class="flex-grow space-y-4">
             <div class="space-y-4">
