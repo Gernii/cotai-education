@@ -5,8 +5,8 @@ export const aboutUsData = {
 
 CoTAI tập trung vào ba mảng chính để thực hiện tầm nhìn của mình:
 
-1. **CoTAI Education**: Đào tạo nhân tài AI theo cả hai hướng nghiên cứu khoa học và phát triển sản phẩm, nhằm tạo ra những chuyên gia AI đẳng cấp thế giới.
-2. **CoTAI Solutions**: Cung cấp dịch vụ gia công phần mềm (fullstack AI R&D outsourcing) và phát triển các giải pháp công nghệ AI (white label) cho khách hàng doanh nghiệp.
+1. **CoTAI Education**: Đào tạo nhân tài AI theo cả hai hướng nghiên cứu khoa học và phát triển sản phẩm, nhằm tạo ra nguồn nhân lực AI trình độ thế giới.
+2. **CoTAI Solutions**: Cung cấp dịch vụ gia công phần mềm (fullstack AI R&D outsourcing) và phát triển các giải pháp công nghệ AI riêng (white label) cho khách hàng doanh nghiệp.
 3. **CoTAI Startup Studio**: Phát triển các sản phẩm và dịch vụ AI độc quyền, đồng thời hỗ trợ thành lập các công ty khởi nghiệp công nghệ, góp phần tạo nên một hệ sinh thái đổi mới sáng tạo.`),
     ourPride: {
         subtitle: parseMarkdownToHTML(`**Đào tạo tăng tốc thành tài accelerated mastery in AI**`),
@@ -15,7 +15,7 @@ CoTAI tập trung vào ba mảng chính để thực hiện tầm nhìn của m�
         ),
         sub: [
             parseMarkdownToHTML(
-                `CoTAI tự hào có chương trình chuyên sâu *đầu tiên* & *duy nhất* được chính thức triển khai tại trường THPT chuyên Lê Hồng Phong HCM từ năm 2019 đến nay. Học sinh của chương trình đạt nhiều giải thưởng uy tín như giải nhì ISEF quốc tế (lần đầu tiên trong lịch sử!), giải nhất STEAM Hacks toàn quốc... 🏆🎉`,
+                `CoTAI tự hào có chương trình chuyên sâu đầu tiên & duy nhất của Việt Nam được chính thức triển khai tại trường THPT chuyên Lê Hồng Phong HCM từ năm 2019 đến nay. Học sinh của chương trình đạt nhiều giải thưởng uy tín như giải nhì ISEF quốc tế (lần đầu tiên trong lịch sử!), giải nhất STEAM Hacks toàn quốc... 🏆🎉`,
             ),
             parseMarkdownToHTML(
                 `Ngoài việc trở thành kỹ sư trụ cột phát triển các dự án và sản phẩm của CoTAI, các học viên đã tốt nghiệp hiện còn đang làm việc tại các công ty lớn như Meta AI (Facebook, UK), TikTok AI Singapore, You, Vingroup BigData, và các viện nghiên cứu lớn như TU Darmstadt, KAIST...`,

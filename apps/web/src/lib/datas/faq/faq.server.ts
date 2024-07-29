@@ -23,7 +23,7 @@ Kiểm tra được thực hiện online qua Zoom, gồm câu hỏi viết trên
     {
         title: "Học sinh THCS có tham gia khóa học được không?",
         content: parseMarkdownToHTML(
-            `Chương trình được thiết kế phù hợp nhất cho học sinh THPT trở lên.`,
+            `Chương trình được thiết kế phù hợp nhất cho học sinh THPT trở lên. Các em học sinh THCS có thể tham khảo [tại đây](https://gem.cot.ai/python) để bắt đầu tự học lập trình Python.`,
         ),
     },
     {
@@ -82,14 +82,23 @@ Sau khi hoàn thành lộ trình 5 khoá học, học viên có thể đăng ký
         ),
     },
     {
+        title: "Thông tin về Quỹ học bổng CoTAI",
+        content: parseMarkdownToHTML(
+            `1. Đối tượng: Dành cho học sinh & sinh viên diện chính sách, gia cảnh khó khăn, tình nguyện viên & trợ giảng của CoTAI.
+2. Điều kiện: đã hoàn thành xuất sắc khóa lập trình AI tại CoTAI và đang đăng ký khoá tiếp theo.
+3. Hồ sơ: Học viên cần trình bày nguyện vọng, kết quả học tập khóa AI gần nhất, giấy xác nhận của địa phương hoặc của trường.
+4. Mức học bổng được xét từ 20% đến 30% học phí của khóa đang đăng ký học.`,
+        ),
+    },
+    {
         title: "Các hình thức học tập khác nhau như thế nào?",
         content: parseMarkdownToHTML(`|                            | Zoom online | Self-paced | Onsite |
 | -                          | -           | - |- |
 | Bài giảng                  | Trực tuyến bằng Zoom     | Trực tuyến bằng Video lectures     | Trực tiếp tại lớp |
 | Hệ thống học liệu          | Aharium platform | Aharium platform | Aharium platform |
 | Kênh trao đổi và cộng đồng | CoTAI Discord server (qua tin nhắn và cuộc gọi ngắn)      |CoTAI Discord server (qua tin nhắn và cuộc gọi ngắn)|CoTAI Discord server (qua tin nhắn và cuộc gọi ngắn)|
-| Lịch học                   | cố định 1 hoặc 2 buổi/tuần     | - linh động tự chủ<br>- có thể học nhanh (nhiều bài mỗi tuần)     | cố định 1 hoặc 2 buổi/tuần |
-| Đối tượng phù hợp          | Quen & thích học online tại nhà để tiết kiệm thời gian đi lại<br>Thích tham gia thảo luận trực tiếp trong suốt bài giảng<br>Muốn học với lịch cố định hàng tuần     | Quen & thích học online tại nhà để tiết kiệm thời gian đi lại<br>Muốn hoàn thành bài học theo tốc độ riêng phù hợp với bản thân<br>Thích học theo lịch cá nhân (nhanh chậm không phụ thuộc vào lớp)     |Thích đến lớp để được gặp bạn bè & giảng viên<br>Thích trực tiếp nghe giảng, tương tác và thảo luận<br>Muốn học với lịch cố định hàng tuần |`),
+| Lịch học                   | Cố định 1 hoặc 2 buổi/tuần     | - Linh động tự chủ<br>- Có thể học nhanh (nhiều bài mỗi tuần)     | Cố định 1 hoặc 2 buổi/tuần |
+| Đối tượng phù hợp          | - Quen & thích học online tại nhà để tiết kiệm thời gian đi lại<br>- Thích tham gia thảo luận trực tiếp trong suốt bài giảng<br>- Muốn học với lịch cố định hàng tuần     | - Quen & thích học online tại nhà để tiết kiệm thời gian đi lại<br>- Muốn hoàn thành bài học theo tốc độ riêng phù hợp với bản thân<br>- Thích học theo lịch cá nhân (nhanh chậm không phụ thuộc vào lớp)     |- Thích đến lớp để được gặp bạn bè & giảng viên<br>- Thích trực tiếp nghe giảng, tương tác và thảo luận<br>- Muốn học với lịch cố định hàng tuần`),
     },
     {
         title: "Chương trình được giảng dạy bằng ngôn ngữ gì?",

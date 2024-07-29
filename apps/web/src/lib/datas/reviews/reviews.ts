@@ -6,10 +6,18 @@ import YamashitaTriAnAvatar from "$lib/assets/images/reviews/YamashitaTriAn.png?
 import NguyenPhamNhatQuangAvatar from "$lib/assets/images/reviews/NguyenPhamNhatQuang.jpg?imagetools";
 import NguyenLyThanhTaiAvatar from "$lib/assets/images/reviews/NguyenLyThanhTai.png?imagetools";
 import NguyenLeQuocBaoAvatar from "$lib/assets/images/reviews/NguyenLeQuocBao.jpg?imagetools";
+import NguyenLeQuocBaoDL4CV2024Avatar from "$lib/assets/images/reviews/NguyenLeQuocBao.png?imagetools";
 import LePhucKhangAvatar from "$lib/assets/images/reviews/LePhucKhang.png?imagetools";
 import LeNamAvatar from "$lib/assets/images/reviews/LeNam.jpg?imagetools";
 
 export const dataReviews: ReviewProps[] = [
+    {
+        avatar: NguyenLeQuocBaoDL4CV2024Avatar,
+        className: CourseIds.dl4cv,
+        year: 2024,
+        name: "Nguyễn Lê Quốc Bảo",
+        review: "Thầy Hưng thầy Huy ơi, em đã đạt giải nhì tại ISEF 2024. Nếu không có sự giúp đỡ từ các lớp học của thầy, có lẽ em sẽ không có được thành quả như hôm nay. Em thật sự biết ơn các lớp học của thầy, đặc biệt là lớp DL4AI Computer Vision đã trang bị cho em kiến thức vững vàng để thể hiện tốt trong ngày Judging. Nhờ những lời khuyên và sự chỉnh sửa của thầy, em đã hoàn thành bài nghiên cứu đầu tiên của mình một cách xuất sắc",
+    },
     {
         avatar: NguyenLeQuocBaoAvatar,
         className: CourseIds.ml4ai,
