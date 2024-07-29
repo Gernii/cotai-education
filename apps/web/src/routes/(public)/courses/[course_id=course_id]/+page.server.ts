@@ -11,8 +11,9 @@ import { dataFAQs } from "$lib/datas/faq/faq.server";
 import { FAQShowLocation } from "$lib/datas/faq/types";
 import { getDataCourseUnique } from "$lib/datas/course-unique/course-unique.server";
 import type { ProgramIds } from "$lib/datas/programs/constants";
-import type { CoursesListSliderProps_Courses } from "$lib/features/courses-list-slider/types.js";
-import { coursesMap } from "$lib/datas/courses/helpers.js";
+import type { CoursesListSliderProps_Courses } from "$lib/features/courses-list-slider/types";
+import { coursesMap } from "$lib/datas/courses/helpers";
+import { countTotalLessons } from "$lib/utils/count-total-lessons";
 
 export const prerender = true;
 
@@ -82,10 +83,7 @@ const getOtherProgramCourses = (
                 ? parseMarkdownToHTML(courseDetails.description)
                 : undefined,
             currentCourse: courseId === currentCourseId,
-            totalLessons: courseDetails.curriculum.reduce(
-                (prev, lesson) => (lesson.classesCountable ? prev + 1 : prev),
-                0,
-            ),
+            totalLessons: countTotalLessons(courseDetails.curriculum),
         };
 
         prev.push(data);
