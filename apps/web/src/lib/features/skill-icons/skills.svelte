@@ -13,8 +13,9 @@
 
     import type { SkillTypes } from "./constant";
 
+    import SimpleIconsPandas from "~icons/simple-icons/pandas";
+    import SimpleIconsGithub from "~icons/simple-icons/github";
     import SimpleIconsOnnx from "~icons/simple-icons/onnx";
-    import LogosGithubIcon from "~icons/logos/github-icon";
     import DeviconLatex from "~icons/devicon/latex";
     import LogosMarkdown from "~icons/logos/markdown";
     import LogosMatplotlibIcon from "~icons/logos/matplotlib-icon";
@@ -31,7 +32,6 @@
     import LogosDockerIcon from "~icons/logos/docker-icon";
     import LucideSuperscript from "~icons/lucide/superscript";
     import LucideBrainCog from "~icons/lucide/brain-cog";
-    import DeviconPandasWordmark from "~icons/devicon/pandas-wordmark";
     import DeviconPlotly from "~icons/devicon/plotly";
     import DeviconScikitlearn from "~icons/devicon/scikitlearn";
     import LogosHuggingFaceIcon from "~icons/logos/hugging-face-icon";
@@ -78,7 +78,7 @@
 {:else if skill === "matplotlib"}
     <LogosMatplotlibIcon class={className} />
 {:else if skill === "pandas"}
-    <DeviconPandasWordmark class={className} />
+    <SimpleIconsPandas class={className} />
 {:else if skill === "plotly"}
     <DeviconPlotly class={className} />
 {:else if skill === "scikitLearn"}
@@ -96,7 +96,7 @@
 {:else if skill === "latex"}
     <DeviconLatex class={`${className} fill-base-content`} />
 {:else if skill === "github"}
-    <LogosGithubIcon class={`${className} fill-base-content`} />
+    <SimpleIconsGithub class={`${className} fill-base-content`} />
 {:else if skill === "albumentations"}
     <div class={className}>
         <Picture meta={Albumentations} />
