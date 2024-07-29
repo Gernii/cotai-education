@@ -6,7 +6,7 @@
     import { writable } from "svelte/store";
     import { cx } from "cva";
 
-    import LogoCotAI from "$lib/assets/logo/CoTAI-Ver0-640.png?imagetools";
+    import LogoCotAI from "$lib/assets/logo/CoTAI-Ver0-TM-640.png?imagetools";
 
     import { Picture } from "$lib/components/ui/picture";
 
