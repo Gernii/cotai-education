@@ -1,7 +1,7 @@
 <script lang="ts">
     import { writable } from "svelte/store";
 
-    import LogoCotAI from "$lib/assets/logo/CoTAI-Ver0-640.png?imagetools";
+    import LogoCotAI from "$lib/assets/logo/CoTAI-Ver0-TM-640.png?imagetools";
 
     import { Picture } from "$lib/components/ui/picture";
     import { Container, ContainerContent } from "$lib/components/ui/container";
@@ -45,22 +45,23 @@
 <svelte:window on:scroll={onScrollHandler} />
 
 <header
-    class="fixed inset-x-0 top-0 z-40 bg-base-200 px-3 py-2 shadow-xl lg:px-6 lg:py-4"
+    class="fixed inset-x-0 top-0 z-40 h-header bg-base-200 px-3 py-1 shadow-xl lg:px-6"
 >
-    <Container padding="none">
-        <ContainerContent>
+    <Container padding="none" class="h-full">
+        <ContainerContent class="h-full">
             <div class="flex h-full items-center gap-x-2 px-2 lg:gap-x-8">
                 <div class="block lg:hidden">
                     <SidenavTrigger />
                 </div>
                 <a
                     href={"/"}
-                    class="absolute left-1/2 w-24 -translate-x-1/2 lg:static lg:translate-x-0"
+                    class="absolute left-1/2 h-full -translate-x-1/2 py-2 lg:static lg:translate-x-0 lg:py-1"
                 >
                     <Picture
                         meta={LogoCotAI}
                         alt={m.mainLogo()}
                         loading="eager"
+                        imageClass="w-auto"
                     />
                 </a>
                 <div class="flex flex-grow-0 lg:flex-grow" />

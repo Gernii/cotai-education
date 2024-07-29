@@ -1,5 +1,5 @@
 <script lang="ts">
-    import LogoCotAI from "$lib/assets/logo/CoTAI-Ver0-640.png?imagetools";
+    import LogoCotAI from "$lib/assets/logo/CoTAI-Ver0-TM-640.png?imagetools";
 
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import { Picture } from "$lib/components/ui/picture";
