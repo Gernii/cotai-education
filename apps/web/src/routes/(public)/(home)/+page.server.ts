@@ -1,4 +1,4 @@
-import { coursesMap } from "$lib/datas/courses/healpers";
+import { coursesMap } from "$lib/datas/courses/helpers";
 import type { CourseProps } from "$lib/datas/courses/types";
 import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
 import { getDataStudentProjects } from "$lib/datas/student-projects/student-projects.server";
