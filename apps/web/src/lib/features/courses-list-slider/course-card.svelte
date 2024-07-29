@@ -87,7 +87,7 @@
                     </div>
                 {/if}
             </div>
-            <p class="line-clamp-3 flex-none">{description}</p>
+            <p class="line-clamp-3 flex-none">{@html description}</p>
         </div>
     </li>
 {/if}

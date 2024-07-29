@@ -12,7 +12,7 @@
     import NavigatorCollapse from "./navigator-collapse.svelte";
 
     import HeroiconsXMark from "~icons/heroicons/x-mark";
-    import { coursesMap } from "$lib/datas/courses/healpers";
+    import { coursesMap } from "$lib/datas/courses/helpers";
     interface $$Props {
         sidenav?: boolean;
     }

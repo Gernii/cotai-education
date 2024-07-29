@@ -15,7 +15,7 @@
 
     import LucideMail from "~icons/lucide/mail";
     import LucidePhoneCall from "~icons/lucide/phone-call";
-    import { coursesMap } from "$lib/datas/courses/healpers";
+    import { coursesMap } from "$lib/datas/courses/helpers";
     import LucideYoutube from "~icons/lucide/youtube";
     import LucideFacebook from "~icons/lucide/facebook";
     import LucideLinkedin from "~icons/lucide/linkedin";
