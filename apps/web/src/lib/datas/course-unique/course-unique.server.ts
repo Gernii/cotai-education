@@ -10,7 +10,7 @@ export const dataCourseUnique = (): DataCourseUnique => [
         icon: "💪",
     },
     {
-        title: `Giáo trình
+        title: `Học liệu
 
 đặc sắc công phu`,
         icon: "📚",

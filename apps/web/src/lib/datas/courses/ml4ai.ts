@@ -112,7 +112,7 @@ export const dataCourseML4AI = (): CourseProps => {
 
         curriculum: [
             {
-                title: "S1. Biểu diễn dữ liệu (representation)",
+                title: "S1. Biểu diễn kiến thức (representation)",
                 images: [CurriculumML4AI1],
 
                 details: {

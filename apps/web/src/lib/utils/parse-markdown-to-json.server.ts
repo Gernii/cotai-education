@@ -50,6 +50,12 @@ export const parseMarkdownToHTML = (markdown: string) => {
         return `</${token.tag}></div>`;
     };
 
+    md.renderer.rules.link_open = (tokens, i) => {
+        const token = tokens[i];
+        const href = token.attrGet("href");
+        return `<${token.tag} href="${href}" target="_blank" rel="noopener" class="link not-prose">`;
+    };
+
     md.use(MarkdownMergeCell);
 
     let myResult = md.render(markdown);

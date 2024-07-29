@@ -5,7 +5,6 @@
 
     import HeroPicture from "$lib/assets/pages/about/hero.jpg?imagetools";
     import LogoCirclePicture from "$lib/assets/images/about-us/1b.png?imagetools";
-    import LogoCircleBlurPicture from "$lib/assets/images/about-us/1b.png?lqip";
     import OurPride1Picture from "$lib/assets/images/about-us/2.jpg?imagetools";
     import OurPride2Picture from "$lib/assets/images/about-us/3.png?imagetools";
     import PayForwardPicture from "$lib/assets/images/about-us/4.jpg?imagetools";
@@ -55,7 +54,6 @@
                 <div class="flex md:col-span-2">
                     <Picture
                         meta={LogoCirclePicture}
-                        blur={LogoCircleBlurPicture}
                         loading="eager"
                         alt={m.ourStory()}
                         imageClass="rounded-box h-auto"

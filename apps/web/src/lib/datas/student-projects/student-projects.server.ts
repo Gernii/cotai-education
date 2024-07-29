@@ -15,6 +15,17 @@ export const dataStudentProjects = (): StudentProjectProps[] => [
         demoId: "PmSnFf-jc6M",
     },
     {
+        id: "qb",
+        title: "Virtual therapist",
+        members: ["Quốc Bảo"],
+        description: `Một ứng dụng công nghệ cung cấp trực tuyến các dịch vụ hỗ trợ sức khỏe tâm thần cho người trẻ`,
+        externalLinks: [
+            { title: "Github", url: "https://github.com/Hackathon-LHP-Team/Virtual-Therapist.git" },
+        ],
+        demoId: "da0LndkwHl0",
+        className: "ML4AI 2023",
+    },
+    {
         id: "1",
         title: "AI tool for English learning",
         members: ["Quốc Bảo"],
@@ -47,29 +58,14 @@ export const dataStudentProjects = (): StudentProjectProps[] => [
         className: "MC4AI - 2023",
         demoId: "qLRqG-jUVn8",
     },
-    {
-        id: "4",
-        title: "Hệ thống phát hiện xe hơi đậu trước nhà & phát cảnh báo",
-        description: `Chức năng nhận diện xe hơi đậu trước nhà và phát cảnh báo. 
-        
-Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
 
-        externalLinks: [
-            { title: "Github", url: "https://github.com/giaphu39/mc4ai-project-checkcar" },
-        ],
-        members: ["Gia Phú", "Đông Quân", "Nam Khánh"],
-        className: "MC4AI 2023",
-        demoId: "wVjxxWFER4o",
-    },
     {
         id: "5",
-        title: "Hệ thống phát hiện xe hơi đậu trước nhà & phát cảnh báo",
-        description: `Chức năng nhận diện xe hơi đậu trước nhà và phát cảnh báo. 
-        
-Một số thư viện sử dụng: OpenCV, torch, torchvision, Pillow, tqdm.`,
+        title: "Hệ thống phát hiện xe hơi đậu trước nhà",
+        description: `- Gia Phú, Đông Quân, Nam Khánh - [Link](https://github.com/giaphu39/mc4ai-project-checkcar)
+- Tường Huy - [Link](https://github.com/huypham2403/mc4ai-project) `,
 
-        externalLinks: [{ title: "Github", url: "https://github.com/huypham2403/mc4ai-project" }],
-        members: ["Tường Huy"],
+        members: [],
         className: "MC4AI 2023",
         demoId: "wVjxxWFER4o",
     },

@@ -11,7 +11,7 @@ import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
 
 export const dataTeachersBio = (): TeacherBioProps[] => [
     {
-        role: "CoTAI founder/CEO & Academic Director",
+        role: "CoTAI | Founder/CEO & Academic Director",
         avatar: NgoQuocHungAvatar,
         name: "Ngô Quốc Hưng",
         details: parseMarkdownToHTML(
@@ -26,7 +26,7 @@ Năng lực & thành tựu nổi bật:
         ),
     },
     {
-        role: "Kỹ sư AI của CoTAI",
+        role: "CoTAI | Kỹ sư AI",
         avatar: LeNguyenThanhHuyAvatar,
         name: "Lê Nguyễn Thanh Huy",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư chuyên ngành phần mềm, (ĐH Văn Lang 2018)
@@ -39,7 +39,7 @@ Năng lực & thành tựu nổi bật:
   - Trực tiếp xây dựng hệ thống BackEnd của startup Go2Joy (2016--2018)`),
     },
     {
-        role: "Kỹ sư AI của CoTAI",
+        role: "CoTAI | Kỹ sư AI",
         avatar: NguyenVietHaAvatar,
         name: "Nguyễn Việt Hà",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư Khoa học máy tính chuyên ngành phần mềm (ĐH KHTN 2007)
@@ -51,7 +51,7 @@ Năng lực & thành tựu nổi bật:
   - Hơn 12 năm kinh nghiệm lập trình viên cao cấp về Java tại MECORP (2014–2020), VIVOO (2011–2014), GAMELOFT (2008–2010)`),
     },
     {
-        role: "Trưởng lab xử lý giọng nói, viện Bigdata tập đoàn Vingroup",
+        role: "VinBigdata JSC | Trưởng lab xử lý giọng nói",
         avatar: NguyenTruongThinhAvatar,
         name: "Nguyễn Trường Thịnh",
         details: parseMarkdownToHTML(`Trình độ: Thạc sĩ Khoa học máy tính chuyên ngành AI (ĐH Stuttgart 2019)
@@ -59,11 +59,11 @@ Năng lực & thành tựu nổi bật:
 Kinh nghiệm giảng dạy: 4 năm đào tạo về AI, Học máy & học sâu nhận dạng giọng nói tại CoTAI
 
 Năng lực & thành tựu nổi bật: 
-  - Chuyên gia AI nhận dạng giọng nói tại Vingroup Bigdata Institute từ 9/2019 đến nay, trực tiếp phát triển trợ lý ảo Vivi (dùng cho Vinfast & Vinhomes).
-  - Lập trình hệ thống tự động điều hướng tháp năng lượng mặt trời tại The German Aerospace Center (6/2016--8/2019)`),
+  - Chuyên gia AI nhận dạng giọng nói tại VinBigdata JSC từ 9/2019 đến nay, trực tiếp phát triển trợ lý ảo Vivi (dùng cho Vinfast & Vinhomes).
+  - Lập trình hệ thống tự động điều hướng tháp năng lượng mặt trời tại The German Aerospace Center (6/2016--8/2019).`),
     },
     {
-        role: "Giảng viên nghiên cứu tại AI Lab thuộc ĐH Công Nghệ UET Hà Nội",
+        role: "ĐH Công Nghệ UET Hà Nội | Giảng viên nghiên cứu tại AI Lab",
         avatar: NguyenVanPhiAvatar,
         name: "Nguyễn Văn Phi",
         details: parseMarkdownToHTML(`Trình độ: Thạc sĩ Khoa học máy tính chuyên ngành AI (ĐH UET 2023)
@@ -75,7 +75,7 @@ Năng lực & thành tựu nổi bật:
   - Xây dựng và chuyển giao hệ thống AI xử lý thoại tự động hoá bán hàng online trong thương mại điện tử cho khách hàng của CoTAI (3/2020 đến 3/2021)`),
     },
     {
-        role: "Kỹ sư AI cao cấp tại công ty Tiktok/Bytedance Singapore",
+        role: "Tiktok/Bytedance Singapore | Kỹ sư AI cao cấp",
         avatar: HoangGiangAvatar,
         name: "Hoàng Giang",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư Khoa học máy tính chuyên ngành AI (ĐH Công nghệ UET Hà Nội 2020)
@@ -87,7 +87,7 @@ Năng lực & thành tựu nổi bật:
   - Luận văn xuất sắc về tối ưu giải thuật xử lý ảnh y tế, AI Lab ĐH UET.`),
     },
     {
-        role: "Chuyên viên cấp cao về Khoa học dữ liệu tại MoMo",
+        role: "MoMo | Chuyên viên cấp cao về Khoa học dữ liệu",
         avatar: NguyenQuynhMaiAvatar,
         name: "Nguyễn Quỳnh Mai",
         details: parseMarkdownToHTML(`Trình độ: Thạc sĩ ngành Công nghệ thông tin (NAIST Japan 2019)
@@ -97,7 +97,7 @@ Kinh nghiệm giảng dạy: 4 năm đào tạo về AI/Học máy tại CoTAI
 Năng lực & thành tựu nổi bật: Nhiều năm kinh nghiệm nghiên cứu phát triển AI xử lý ngôn ngữ tự nhiên tại MoMo (2/2022 đến nay) và viện Vingroup Bigdata (11/2019 đến 2/2022).`),
     },
     {
-        role: "Kiến trúc sư giải pháp cloud AI tại Amazon AWS",
+        role: "Amazon AWS | Kiến trúc sư giải pháp cloud AI",
         avatar: CaoHoangTungAvatar,
         name: "Cao Hoàng Tùng",
         details: parseMarkdownToHTML(`Trình độ: Kỹ sư Công nghệ thông tin chuyên ngành AI (ĐH Công nghệ UET Hà Nội 2023)
@@ -106,6 +106,6 @@ Kinh nghiệm giảng dạy: 3 năm đào tạo về giải thuật & lập trì
 
 Năng lực & thành tựu nổi bật: 
   - Tham gia dự án AI xử lý giọng nói và văn bản tại viện Vingroup Bigdata (5/2020 đến 9/2021), và AI Lab UET (7/2022 đến 6/2023)
-  - Xây dựng hệ thống phát hiện trang web lừa đảo (phishing). Trình bày tại hội nghị Blackhat (USA'23, Asia'20).`),
+  - Xây dựng hệ thống phát hiện trang web lừa đảo (phishing), trình bày tại hội nghị Blackhat (USA'23, Asia'20).`),
     },
 ];
