@@ -1,6 +1,5 @@
 import { error } from "@sveltejs/kit";
 import type { CourseIds } from "$lib/datas/courses/constants";
-import { coursesMap } from "$lib/datas/courses/healpers";
 import { programsMap } from "$lib/datas/programs/healpers";
 import type { CourseProps } from "$lib/datas/courses/types";
 import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
@@ -9,8 +8,11 @@ import { getDataStudentProjects } from "$lib/datas/student-projects/student-proj
 import { dataProgramPublicTraining } from "$lib/datas/programs/public-training";
 import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types";
 import { dataFAQs } from "$lib/datas/faq/faq.server";
-import { FAQShowLocation } from "$lib/datas/faq/types.js";
-import { getDataCourseUnique } from "$lib/datas/course-unique/course-unique.server.js";
+import { FAQShowLocation } from "$lib/datas/faq/types";
+import { getDataCourseUnique } from "$lib/datas/course-unique/course-unique.server";
+import type { ProgramIds } from "$lib/datas/programs/constants";
+import type { CoursesListSliderProps_Courses } from "$lib/features/courses-list-slider/types.js";
+import { coursesMap } from "$lib/datas/courses/helpers.js";
 
 export const prerender = true;
 
@@ -18,14 +20,6 @@ export const load = ({ params }) => {
     const courseId = params.course_id as CourseIds;
 
     const course = getCourse(courseId);
-
-    let programCourses: undefined | CourseIds[] = undefined;
-    if (course.programId) {
-        const program = programsMap.get(course.programId);
-        if (program) {
-            programCourses = program.courses;
-        }
-    }
 
     const teachersBio = dataTeachersBio();
 
@@ -37,24 +31,79 @@ export const load = ({ params }) => {
 
     const courseUnique = getDataCourseUnique();
 
+    const otherProgramCourses = getOtherProgramCourses({
+        currentCourseId: courseId,
+        programId: course.programId,
+    });
+
     return {
         course: courseMappingData(course),
-        programCourses,
         teachersBio,
         studentProjects,
         heroRoadmapCourse,
         faqs,
         courseUnique,
+        otherProgramCourses,
     };
+};
+
+interface GetOtherProgramCoursesProps {
+    currentCourseId: CourseIds;
+    programId?: ProgramIds;
+}
+
+const getOtherProgramCourses = (
+    props: GetOtherProgramCoursesProps,
+): CoursesListSliderProps_Courses[] | undefined => {
+    const { currentCourseId, programId } = props;
+    if (!programId) {
+        return;
+    }
+
+    const program = programsMap.get(programId);
+
+    if (!program) {
+        return;
+    }
+
+    const courses = program.courses.reduce((prev, courseId) => {
+        const courseGetter = coursesMap.get(courseId);
+
+        if (!courseGetter) {
+            return prev;
+        }
+
+        const courseDetails = courseGetter();
+
+        const data: CoursesListSliderProps_Courses = {
+            id: courseId,
+            title: courseDetails.title,
+            description: courseDetails.description
+                ? parseMarkdownToHTML(courseDetails.description)
+                : undefined,
+            currentCourse: courseId === currentCourseId,
+            totalLessons: courseDetails.curriculum.reduce(
+                (prev, lesson) => (lesson.classesCountable ? prev + 1 : prev),
+                0,
+            ),
+        };
+
+        prev.push(data);
+        return prev;
+    }, [] as CoursesListSliderProps_Courses[]);
+
+    return courses;
 };
 
 const getCourse = (courseId: CourseIds) => {
     const courseGetter = coursesMap.get(courseId);
+
     if (!courseGetter) {
         error(404, {
             message: "Not found",
         });
     }
+
     const course = courseGetter();
 
     const hardcodedWhoShouldJoin = [
@@ -63,12 +112,16 @@ const getCourse = (courseId: CourseIds) => {
         "Người đi làm trong mọi lĩnh vực & ngành nghề",
     ];
 
-    course.whoShouldJoin.unshift(...hardcodedWhoShouldJoin);
+    course.whoShouldJoin = [...hardcodedWhoShouldJoin, ...course.whoShouldJoin];
     if (course.description) {
         course.description = parseMarkdownToHTML(course.description);
     }
     if (course.descriptionMore) {
         course.descriptionMore = parseMarkdownToHTML(course.descriptionMore);
+    }
+
+    for (let i = 0; i < course.learningOutcomes.length; i++) {
+        course.learningOutcomes[i] = parseMarkdownToHTML(course.learningOutcomes[i]);
     }
 
     for (let i = 0; i < course.whoShouldJoin.length; i++) {
