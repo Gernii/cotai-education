@@ -18,8 +18,6 @@ export const load = () => {
 };
 
 const getCourseRoadmap = () => {
-    const hardcodedStarsIdx = new Map([[4, 3]]);
-
     const res = dataProgramPublicTraining.coursesRoadmap.reduce(
         (prev, courseId, idx) => {
             const courseGetter = coursesMap.get(courseId);
@@ -33,7 +31,7 @@ const getCourseRoadmap = () => {
                 id: course.id,
                 shortTitle: course.shortTitle,
                 title: course.title,
-                totalStars: hardcodedStarsIdx.get(idx) ?? idx,
+                totalStars: idx,
             };
 
             if (course.description) {
