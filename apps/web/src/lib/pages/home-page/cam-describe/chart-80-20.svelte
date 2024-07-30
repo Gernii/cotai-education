@@ -2,7 +2,11 @@
     import { onDestroy, onMount } from "svelte";
     import * as echarts from "echarts/core";
     import type { ECharts } from "echarts/core";
-    import { GridComponent, MarkPointComponent } from "echarts/components";
+    import {
+        GridComponent,
+        MarkLineComponent,
+        MarkPointComponent,
+    } from "echarts/components";
     import { LineChart } from "echarts/charts";
     import { UniversalTransition } from "echarts/features";
     import { CanvasRenderer } from "echarts/renderers";
@@ -13,6 +17,7 @@
     echarts.use([
         GridComponent,
         MarkPointComponent,
+        MarkLineComponent,
         LineChart,
         CanvasRenderer,
         UniversalTransition,
@@ -25,18 +30,21 @@
         color: "#03acfc",
         grid: {
             top: 40,
-            right: 60,
             bottom: 30,
+            left: 45,
         },
         xAxis: {
             type: "category",
             data: [0, 20, 40, 60, 80, 100],
             boundaryGap: false,
-            name: "Effort",
+            name: "% time",
+            nameLocation: "middle",
+
+            nameGap: 20,
         },
         yAxis: {
             type: "value",
-            name: "Results",
+            name: "% expertise",
         },
         series: [
             {
@@ -45,6 +53,19 @@
                 smooth: true,
                 symbolSize: 15,
                 connectNulls: true,
+                markLine: {
+                    data: [
+                        [
+                            {
+                                coord: [1, 1],
+                            },
+                            {
+                                symbol: "none",
+                                coord: [1, 100],
+                            },
+                        ],
+                    ],
+                },
                 markPoint: {
                     data: [
                         {
