@@ -26,7 +26,7 @@
     export let description: NonNullable<$$Props["description"]> =
         m.homePage_head_description();
     export let image: NonNullable<$$Props["image"]> =
-        `${PUBLIC_HOSTNAME}/images/logo/CoTAI-Ver0-320.png`;
+        `${PUBLIC_HOSTNAME}/images/logo/CoTAI-Ver0-TM-320.png`;
     export let type: NonNullable<$$Props["type"]> = "website";
     export let removeSiteNameFromTitle: NonNullable<
         $$Props["removeSiteNameFromTitle"]
