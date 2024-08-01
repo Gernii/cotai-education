@@ -5,14 +5,14 @@
 
     import * as m from "$i18n/messages";
 
+    import type { CourseDetailsPageDataProps } from "../types";
+
     import ItemsSection from "./items-section.svelte";
 
-    import type { CourseProps } from "$lib/datas/courses/types";
-
-    $: course = $page.data.course as CourseProps;
+    $: course = $page.data.course as CourseDetailsPageDataProps;
 
     $: whoShouldJoin = course.whoShouldJoin;
-    $: learningOutcomes = course.learningOutcomes;
+    $: learningOutcomes = course.learningOutcomesHTML;
 </script>
 
 <section class="hidden md:block">

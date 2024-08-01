@@ -13,6 +13,8 @@ export const contacts = {
     email: "contact@cot.ai",
     facebook: "https://m.me/cotaivn",
     zalo: "https://zalo.me/0815503467",
+    linkedin: "https://www.linkedin.com/company/cotai",
+    youtube: "https://www.youtube.com/@cotai",
 } as const;
 
 export const coursesIdDeprecated = [

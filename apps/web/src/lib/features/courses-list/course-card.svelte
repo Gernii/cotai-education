@@ -1,8 +1,7 @@
 <script lang="ts">
     import { Picture } from "$lib/components/ui/picture";
 
-    import { routingPathcoursesIdDeprecated } from "$lib/utils/routing-path";
-    import { type CourseIdDeprecated } from "$lib/utils/constants";
+    import { routerPath, type CourseIdDeprecated } from "$lib/utils/constants";
     import { coursesThumbnailDeprecated } from "$lib/utils/courses-thumbnail";
 
     import * as m from "$i18n/messages";
@@ -18,7 +17,7 @@
     export let description: $$Props["description"] = undefined;
     export let totalLessons: $$Props["totalLessons"] = 0;
 
-    $: courseNavigate = routingPathcoursesIdDeprecated(id);
+    $: courseNavigate = routerPath.courseId(id);
 
     $: courseThumbnail = coursesThumbnailDeprecated(id as CourseIdDeprecated);
 </script>

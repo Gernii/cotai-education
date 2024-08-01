@@ -1,7 +1,6 @@
 <script lang="ts">
     import { cx } from "cva";
 
-    import { routingPathAboutUs } from "$lib/utils/routing-path";
     import { routerPath } from "$lib/utils/constants";
 
     import * as m from "$i18n/messages";
@@ -74,7 +73,7 @@
             </NavigatorCollapse>
         {/if}
 
-        <NavigatorItem href={routingPathAboutUs()} aria-label={m.aboutUs()}>
+        <NavigatorItem href={routerPath.about} aria-label={m.aboutUs()}>
             {m.aboutUs()}
         </NavigatorItem>
 

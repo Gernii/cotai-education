@@ -10,7 +10,7 @@ import type { CourseIds } from "./constants";
 export interface CourseProps {
     studyTypes: CourseStudyType[];
     id: CourseIds;
-    title?: string;
+    title: string;
     shortTitle?: string;
     price?: number;
     registerUrl?: string;

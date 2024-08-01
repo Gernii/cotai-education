@@ -13,7 +13,7 @@
     }
 
     export let id: $$Props["id"];
-    export let title: $$Props["title"] = undefined;
+    export let title: $$Props["title"];
     export let description: $$Props["description"] = undefined;
     export let totalLessons: $$Props["totalLessons"] = 0;
     export let currentCourse: $$Props["currentCourse"] = undefined;
