@@ -18,7 +18,7 @@
 
     export let id: $$Props["id"];
     export let active: $$Props["active"] = undefined;
-    export let title: $$Props["title"] = undefined;
+    export let title: $$Props["title"];
     export let shortTitle: $$Props["shortTitle"] = undefined;
     export let isNavigate: $$Props["isNavigate"] = undefined;
     export let currentCourse: $$Props["currentCourse"] = undefined;

@@ -8,6 +8,8 @@
 
     import { i18n } from "$lib/libs/i18n";
 
+    import { contacts } from "$lib/utils/constants";
+
     import * as m from "$i18n/messages";
     import { languageTag } from "$i18n/runtime";
 
@@ -17,7 +19,7 @@
         title?: string;
         description?: string;
         image?: string;
-        JsonLD?: Thing | WithContext<Thing>;
+        LdJsons?: (Thing | WithContext<Thing>)[];
         type?: "website" | "article";
         removeSiteNameFromTitle?: boolean;
     }
@@ -31,12 +33,30 @@
     export let removeSiteNameFromTitle: NonNullable<
         $$Props["removeSiteNameFromTitle"]
     > = false;
-    export let JsonLD: NonNullable<$$Props["JsonLD"]> = {
+    export let LdJsons: NonNullable<$$Props["LdJsons"]> = [];
+
+    $: websiteLDJson = {
         "@context": "https://schema.org",
         "@type": "WebSite",
         url: PUBLIC_HOSTNAME,
-        description: m.good_glad_crow_commend(),
+        description: m.homePage_head_description(),
+        alternateName: m.siteName(),
+        name: title ?? m.siteName(),
+    } as WithContext<Thing>;
+
+    let organizationLDJson: WithContext<Thing> = {
+        "@context": "https://schema.org",
+        "@type": "Organization",
         name: m.siteName(),
+        logo: `${PUBLIC_HOSTNAME}/images/logo/CoTAI-Ver0-TM-320.png`,
+        url: PUBLIC_HOSTNAME,
+        description: m.homePage_head_description(),
+        sameAs: [
+            contacts.facebook,
+            contacts.zalo,
+            contacts.linkedin,
+            contacts.youtube,
+        ],
     };
     $: currentPage = `${PUBLIC_HOSTNAME}${i18n.route($page.url.pathname)}`;
 
@@ -64,5 +84,11 @@
     <meta property="og:image" content={image} />
     <meta property="og:locale" content={languageTag()} />
     <link rel="canonical" href={currentPage} />
-    {@html serializeSchema(JsonLD)}
+    {@html serializeSchema(websiteLDJson)}
+
+    {@html serializeSchema(organizationLDJson)}
+
+    {#each LdJsons as ldJson}
+        {@html serializeSchema(ldJson)}
+    {/each}
 </svelte:head>

@@ -12,7 +12,7 @@
             "shortTitle" | "title" | "totalStars"
         > {}
 
-    export let title: $$Props["title"] = undefined;
+    export let title: $$Props["title"];
     export let shortTitle: $$Props["shortTitle"] = undefined;
     export let totalStars: $$Props["totalStars"];
 

@@ -13,8 +13,6 @@
 
     import type { CourseDetailsPageDataProps } from "../types";
 
-    import Archives from "./archives.svelte";
-
     let isInview = writable(false);
 
     $: pd = $page.data as CourseDetailsPageDataProps;
@@ -42,9 +40,9 @@
                     class:opacity-0={!$isInview}
                     class:animate-fade-up={$isInview}
                 >
-                    {#each archives as archiveGroup}
+                    <!-- {#each archives as archiveGroup}
                         <Archives archives={archiveGroup} />
-                    {/each}
+                    {/each} -->
                 </div>
             </ContainerContent>
         </Container>

@@ -28,7 +28,7 @@
         showRoadMapLine: boolean;
     }
 
-    export let title: $$Props["title"] = undefined;
+    export let title: $$Props["title"];
     export let curriculum: $$Props["curriculum"] = [];
     export let description: $$Props["description"] = undefined;
     export let descriptionMore: $$Props["descriptionMore"] = undefined;

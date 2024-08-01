@@ -1,7 +1,6 @@
 import { error } from "@sveltejs/kit";
 import type { CourseIds } from "$lib/datas/courses/constants";
 import { programsMap } from "$lib/datas/programs/healpers";
-import type { CourseProps } from "$lib/datas/courses/types";
 import { parseMarkdownToHTML } from "$lib/utils/parse-markdown-to-json.server";
 import { dataTeachersBio } from "$lib/datas/teachers-bio/teachers-bio.server";
 import { getDataStudentProjects } from "$lib/datas/student-projects/student-projects.server";
@@ -14,6 +13,7 @@ import type { ProgramIds } from "$lib/datas/programs/constants";
 import type { CoursesListSliderProps_Courses } from "$lib/features/courses-list-slider/types";
 import { coursesMap } from "$lib/datas/courses/helpers";
 import { countTotalLessons } from "$lib/utils/count-total-lessons";
+import type { CourseDetailsPageDataProps } from "$lib/pages/course-details/types.js";
 
 export const prerender = true;
 
@@ -38,7 +38,7 @@ export const load = ({ params }) => {
     });
 
     return {
-        course: courseMappingData(course),
+        course,
         teachersBio,
         studentProjects,
         heroRoadmapCourse,
@@ -110,42 +110,10 @@ const getCourse = (courseId: CourseIds) => {
         "Người đi làm trong mọi lĩnh vực & ngành nghề",
     ];
 
-    course.whoShouldJoin = [...hardcodedWhoShouldJoin, ...course.whoShouldJoin];
-    if (course.description) {
-        course.description = parseMarkdownToHTML(course.description);
-    }
-    if (course.descriptionMore) {
-        course.descriptionMore = parseMarkdownToHTML(course.descriptionMore);
-    }
-
-    for (let i = 0; i < course.learningOutcomes.length; i++) {
-        course.learningOutcomes[i] = parseMarkdownToHTML(course.learningOutcomes[i]);
-    }
-
-    for (let i = 0; i < course.whoShouldJoin.length; i++) {
-        course.whoShouldJoin[i] = parseMarkdownToHTML(course.whoShouldJoin[i]);
-    }
-
-    return course;
-};
-
-const courseFAQ = () => {
-    const faqs = dataFAQs();
-
-    const filteredFAQs = faqs.filter((faq) => faq.show?.includes(FAQShowLocation.course));
-
-    return filteredFAQs;
-};
-
-const courseMappingData = (course: CourseProps): CourseProps => {
     const faqs = course.faqs?.map((faq) => ({
         title: faq.title,
         content: faq.content ? parseMarkdownToHTML(faq.content) : undefined,
     }));
-
-    const description: CourseProps["description"] = course.description
-        ? parseMarkdownToHTML(course.description)
-        : undefined;
 
     const curriculum = course.curriculum?.map((lesson) => {
         const details = lesson.details;
@@ -160,12 +128,31 @@ const courseMappingData = (course: CourseProps): CourseProps => {
         };
     });
 
-    return {
+    const whoShouldJoin = [...hardcodedWhoShouldJoin, ...course.whoShouldJoin].map((item) =>
+        parseMarkdownToHTML(item),
+    );
+
+    const courseParsed: CourseDetailsPageDataProps = {
         ...course,
+        descriptionHTML: course.description ? parseMarkdownToHTML(course.description) : undefined,
+        descriptionMore: course.descriptionMore
+            ? parseMarkdownToHTML(course.descriptionMore)
+            : undefined,
+        whoShouldJoin,
+        learningOutcomesHTML: course.learningOutcomes.map((item) => parseMarkdownToHTML(item)),
         faqs,
         curriculum,
-        description,
     };
+
+    return courseParsed;
+};
+
+const courseFAQ = () => {
+    const faqs = dataFAQs();
+
+    const filteredFAQs = faqs.filter((faq) => faq.show?.includes(FAQShowLocation.course));
+
+    return filteredFAQs;
 };
 
 const getHeroRoadmapCourse = () => {

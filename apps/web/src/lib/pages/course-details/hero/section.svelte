@@ -15,17 +15,18 @@
 
     import * as m from "$i18n/messages";
 
+    import type { CourseDetailsPageDataProps } from "../types";
+
     import type { HeroRoadmapCourse } from "$lib/features/hero-roadmap/types";
     import HeroiconsClock from "~icons/heroicons/clock";
     import { SkillsList } from "$lib/features/skill-icons";
     import { HeroRoadMap } from "$lib/features/hero-roadmap";
-    import type { CourseProps } from "$lib/datas/courses/types";
     import type { CourseIds } from "$lib/datas/courses/constants";
     import { ReadMoreCustom } from "$lib/features/read-more-custom";
 
     $: heroRoadmapCourse = $page.data.heroRoadmapCourse as HeroRoadmapCourse[];
 
-    $: course = $page.data.course as CourseProps;
+    $: course = $page.data.course as CourseDetailsPageDataProps;
 
     $: courseThumbnail = coursesThumbnail(course.id as CourseIds);
 
@@ -58,9 +59,9 @@
                 </div>
                 <hr class="h-1 w-12 border-0 bg-secondary" />
 
-                {#if course.description}
+                {#if course.descriptionHTML}
                     <ReadMoreCustom
-                        textContent={course.description}
+                        textContent={course.descriptionHTML}
                         textReadmore={course.descriptionMore}
                     />
                 {/if}

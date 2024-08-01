@@ -1,3 +1,6 @@
-import type { Deprecated_CourseProps } from "$lib/utils/types/data.deprecated";
+import type { CourseProps } from "$lib/datas/courses/types";
 
-export interface CourseDetailsPageDataProps extends Deprecated_CourseProps {}
+export interface CourseDetailsPageDataProps extends CourseProps {
+    learningOutcomesHTML: string[];
+    descriptionHTML?: string;
+}
