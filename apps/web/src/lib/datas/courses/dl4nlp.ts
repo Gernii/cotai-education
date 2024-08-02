@@ -85,34 +85,34 @@ export const dataCourseDL4NLP = (): CourseProps => {
 
         curriculum: [
             {
-                title: "S1. Review*: PyTorch & Advanced Training Techniques",
+                title: "S1. Ôn nhanh PyTorch & các kỹ thuật huấn luyện nâng cao",
             },
             {
-                title: "S2. Review: Word / Sentence Representation (RNN / LSTM / GRU & Embedding)",
+                title: "S2. Ôn nhanh biểu diễn câu từ (RNN / LSTM / GRU & Vector embedding)",
             },
             {
-                title: "S3. From RNNs to Transformers",
+                title: "S3. Từ mạng neuron hồi qui `RNNs` qua `Transformers`",
             },
             {
-                title: "S4. HuggingFace Eco-system",
+                title: "S4. Hệ sinh thái `HuggingFace`",
             },
             {
-                title: "S5. Pretrained Language Models: Encoder (BERT), Decoder (GPT)",
+                title: "S5. Mô hình ngôn ngữ huấn luyện sẵn: `Encoder` (`BERT`), `Decoder` (`GPT`)",
             },
             {
-                title: "S6. Pretrained Language Models: Encoder-Decoder (BART, T5)",
+                title: "S6. Mô hình ngôn ngữ huấn luyện sẵn: `Encoder-Decoder` (`BART`, `T5`)",
             },
             {
-                title: "S7. From Pretrained Models to Downstream Tasks",
+                title: "S7. Từ mô hình huấn luyện sẵn đến ứng dụng đầu cuối",
             },
             {
-                title: "S8. Advanced Techniques to Optimize Language Models",
+                title: "S8. Các kỹ thuật nâng cao để tối ưu hiệu suất mô hình ngôn ngữ",
             },
             {
-                title: "S9. Language Models in Production",
+                title: "S9. Mô hình ngôn ngữ trong dự án thực tế",
             },
             {
-                title: "S10. Capstone Project Presentation",
+                title: "S10. Báo cáo dự án",
             },
         ],
     };

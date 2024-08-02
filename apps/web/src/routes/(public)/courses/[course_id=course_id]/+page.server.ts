@@ -118,6 +118,10 @@ const getCourse = (courseId: CourseIds) => {
     const curriculum = course.curriculum?.map((lesson) => {
         const details = lesson.details;
 
+        if (lesson.title) {
+            lesson.title = parseMarkdownToHTML(lesson.title);
+        }
+
         if (details?.content) {
             details.content = parseMarkdownToHTML(details.content);
         }

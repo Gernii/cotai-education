@@ -83,95 +83,72 @@ export const dataCourseMC4AI = (): CourseProps => {
             {
                 title: "S1. Đại số tuyến tính & Numpy cơ bản",
                 details: {
-                    content: `- Các khái niệm cơ bản của Đại số tuyến tính: Vector, Ma trận
-    - Cơ bản về thư viện Numpy:
-      - Khởi tạo nd array
-      - Truy cập phần tử, hàng, cột, slicing
-      - Shape, reshape, transpose, dot product, element-wise operators`,
+                    content: `Đại số tuyến tính là nền tảng tính toán để xây dựng nên các mô hình AI. 
+Ở buổi học này, bạn sẽ được làm quen với các phép toán phổ biến nhất trong Đại số tuyến tính thông qua việc sử dụng thư viện \`numpy\` như tính toán song song, phép nhân 2 ma trận, phép đo khoảng cách giữa 2 \`vector\`.`,
                 },
             },
             {
                 title: "S2. Các hàm thông dụng của Numpy & Matplotlib",
                 details: {
-                    content: `- Các hàm Numpy: sum, mean, min, max, argmin, argmax; concatenate, where, filter
-    - Matplotlib: Hàm scatter & plot`,
+                    content: `"A Chart is Worth A Thousand Words". Một đồ thị có thể mô tả thay cho cả ngàn lời nói.
+Trong Python ta có thể dễ dàng vẽ đồ thị bằng thư viện \`matplotlib\`. Ngoài ra buổi học này còn cung cấp cho bạn cách sử dụng các hàm phổ biến trong thư viện \`numpy\`.`,
                 },
             },
             {
-                title: "S3. Pandas & Phân tích dữ liệu",
+                title: "S3. Dữ liệu dạng bảng `tabular data` & Phân tích dữ liệu",
                 details: {
-                    content: `- Pandas: Tạo & xử lý Dataframe: truy cập hàng, cột, filter; Các hàm map & apply
-    - Các kỹ thuật phân tích dữ liệu: Đọc, làm sạch, tổng hợp dữ liệu & vẽ đồ thị`,
+                    content: `Nền tảng của Phân tích dữ liệu đến từ việc quản lý và "hiểu" dữ liệu dạng bảng. 
+Ở buổi này, bạn sẽ khám phá cách xử lý và thao tác dữ liệu trong các bảng tính thông qua thư viện \`pandas\`. Qua đó, bạn sẽ được trải nghiệm quá trình phân tích dữ liệu, từ việc lọc, sắp xếp, đến tính toán và tổng hợp thông tin, nhằm rút ra những kết luận quan trọng "insights" từ dữ liệu. Ngoài ra, bạn còn được học cách sử dụng thư viện vẽ đồ thị "xịn xò" hơn, đó là \`plotly\`.`,
                 },
             },
             {
-                title: "S4. Thuật toán Gradient Descent & Plotly",
+                title: "S4. Đạo hàm, `Gradient` & thuật toán `Gradient Descent`",
                 details: {
-                    content: `- Khái niệm đạo hàm & Gradient
-    - Thuật toán Gradient Descent (nguyên lý, chi tiết cài đặt)
-    - Thư viện Plotly:
-      - Module express: hàm scatter_3d
-      - Module graph_objects: hàm Scatter3d & Surface`,
+                    content: `Bạn có tin không: hầu hết các mô hình AI thông minh hiện nay đã được huấn luyện dựa trên một khái niệm Toán cơ bản ở bậc THPT! 😲
+- Khái niệm đạo hàm & Gradient
+- Thuật toán Gradient Descent (nguyên lý, chi tiết cài đặt)`,
                 },
             },
             {
                 title: "S5. Xác suất & Phân phối xác suất",
                 details: {
-                    content: `- Khái niệm xác suất & ứng dụng trong AI
-    - Khái niệm phân phối xác suất, các phân phối thông dụng & cách giả lập bằng Numpy: Phân phối Bernoulli, Categorical, phân phối đều & phân phối chuẩn`,
+                    content: `Hôm nay bạn nghĩ khả năng bao nhiêu % sẽ mưa? Làm sao để máy tính mô tả "niềm tin" này?
+- Khái niệm xác suất & ứng dụng trong AI
+- Khái niệm phân phối xác suất, các phân phối thông dụng & cách giả lập bằng Numpy: Phân phối Bernoulli, Categorical, phân phối đều & phân phối chuẩn`,
                 },
             },
             {
-                title: "S6. kiểm tra giữa khóa & đăng ký dự án",
+                title: "S6. Kiểm tra giữa khóa & đăng ký dự án",
             },
             {
                 title: "S7. Thuật toán kNN & kMeans",
                 details: {
-                    content: `- Thuật toán kNN:
-      - Nguyên lý & chi tiết cài đặt với Numpy
-      - Áp dụng kNN bằng thư viện Scikit-learn
-    - Thuật toán kMeans:
-      - Nguyên lý & chi tiết cài đặt với Numpy
-      - Áp dụng kMeans bằng thư viện Scikit-learn`,
+                    content: `Ở buổi này, bạn sẽ hiểu về ứng dụng của phép đo *khoảng cách* (distance) như là mức độ giống nhau \`similarity\` thông qua 2 thuật toán AI đầu tiên: $k$ điểm gần nhất \`kNN\` ($k$ nearest neighbors) và $k$ điểm trọng tâm \`kMeans\`. Bên cạnh đó, bạn còn được học về cách sử dụng thư viện \`sklearn\` - 1 trong những thư viện phổ biến nhất về "Học máy" \`Machine Learning\`.`,
                 },
             },
             {
-                title: "S8. Mô hình Linear Regression",
+                title: "S8, S9, S10. Mô hình tuyến tính `linear models`",
                 details: {
-                    content: `- Giới thiệu bài toán Regression
-    - Mô hình Linear Regression
-    - MSE Loss
-    - Áp dụng mô hình Linear Regression bằng các thư viện Scikit-learn & Keras`,
+                    content: `Chỉ cần cung cấp dữ liệu, AI có thể học ra cách dự đoán giá trị (như điểm số, doanh thu, nhiệt độ ngày mai, ...) hoặc phân loại nhãn (bình luận tích cực / tiêu cực, ảnh đầu vào chứa con gì, ...).
+
+Chuỗi 3 bài học Sessions 8, 9, 10 sẽ giúp bạn thành thạo cách tạo ra các mô hình AI đơn giản nhất, đó là mô hình "phẳng, tuyến tính" \`linear models\`. Ngoài ra, bạn còn được học cách sử dụng thư viện \`Keras\` ("deep learning for human", theo như lời giới thiệu của tác giả.):
+
+- S8. Mô hình dự đoán giá trị \`Linear Regression\`
+- S9. Mô hình phân loại nhị phân (2 nhãn) \`Logistic (Sigmoid) Regression\`
+- S10. Mô hình phân loại nhiều nhãn \`Softmax Regression\``,
                 },
             },
             {
-                title: "S9. Mô hình Logistic Regression",
+                title: "S11. Thuật toán `Gradient Descent` cho các mô hình tuyến tính",
                 details: {
-                    content: `- Hàm Sigmoid & bài toán Binary Classification
-    - Mô hình Logistic Regression & Binary Cross-Entropy Loss
-    - Áp dụng mô hình Logistic Regression bằng các thư viện Scikit-learn & Keras`,
+                    content: `- Lý thuyết toán của mô hình \`Linear Regression\`
+- Chi tiết cài đặt thuật toán \`GD\`
+- Kỹ thuật \`Normalize\`
+- Thuật toán \`SGD\` & \`Mini-batch GD\``,
                 },
             },
             {
-                title: "S10. Mô hình Softmax Regression",
-                details: {
-                    content: `- Hàm Softmax & Cross-Entropy
-    - Giới thiệu bài toán Multi-class Classification & mô hình Softmax Regression
-    - Categorical Cross-Entropy Loss
-    - Áp dụng mô hình Softmax Regression bằng thư viện Keras`,
-                },
-            },
-            {
-                title: "S11: Thuật toán Gradient Descent cho các mô hình tuyến tính",
-                details: {
-                    content: `- Lý thuyết toán của mô hình Linear Regression
-    - Chi tiết cài đặt thuật toán GD
-    - Kỹ thuật Normalize
-    - Thuật toán SGD & Mini-batch GD`,
-                },
-            },
-            {
-                title: "S12. Thi cuối khóa",
+                title: "S12. Kiểm tra cuối khóa",
             },
             {
                 title: "S13. Báo cáo dự án",

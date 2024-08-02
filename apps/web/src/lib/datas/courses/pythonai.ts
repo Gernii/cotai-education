@@ -4,10 +4,10 @@ import CurriculumPython2 from "$lib/assets/images/course/python/2.jpg?imagetools
 import CurriculumPython3 from "$lib/assets/images/course/python/3.jpg?imagetools";
 import CurriculumPython4 from "$lib/assets/images/course/python/4.jpg?imagetools";
 import CurriculumPython5 from "$lib/assets/images/course/python/5.jpg?imagetools";
-import CurriculumPython6 from "$lib/assets/images/course/python/6.jpg?imagetools";
 import CurriculumPython7 from "$lib/assets/images/course/python/7.jpg?imagetools";
-import CurriculumPython8 from "$lib/assets/images/course/python/8.png?imagetools";
-import CurriculumPython9 from "$lib/assets/images/course/python/9.png?imagetools";
+import CurriculumPython8 from "$lib/assets/images/course/python/8.jpg?imagetools";
+import CurriculumPython9 from "$lib/assets/images/course/python/9.jpg?imagetools";
+import CurriculumPython10Video from "$lib/assets/images/course/python/10.mp4";
 import CurriculumExam from "$lib/assets/images/course/exam.jpg?imagetools";
 
 import { CourseIds } from "./constants";
@@ -78,52 +78,59 @@ export const dataCoursePythonAI = (): CourseProps => ({
 
     curriculum: [
         {
-            title: "S1. Nhập môn lập trình Python",
+            title: "S1. Biểu diễn dữ liệu và tính toán",
 
             images: [CurriculumPython1],
             details: {
-                content: `- Biểu diễn dữ liệu bằng "Biến" (Variable).
-- Các kiểu dữ liệu phổ biến: "Số" và "Chuỗi ký tự" (String).
-- Các phép toán số học trên kiểu dữ liệu "Số".`,
+                content: `Tìm hiểu về khái niệm đầu tiên cũng là quan trọng nhất trong lập trình: sử dụng \`Biến\` - Variables để lưu trữ dữ liệu. 
+- Biểu diễn dữ liệu bằng \`Biến\` (Variable)
+- Các kiểu dữ liệu phổ biến: \`Số\` và \`Chuỗi ký tự\` (String)
+- Các phép toán số học trên kiểu dữ liệu số`,
             },
         },
         {
-            title: `S2. Biễu diễn "điều kiện Đúng / Sai"`,
+            title: `S2. Biểu diễn "điều kiện Đúng / Sai"`,
             images: [CurriculumPython2],
 
             details: {
-                content: `- Kiểu dữ liệu "Đúng / Sai" (Boolean).
-- Các phép toán so sánh.
-- Khối lệnh "kiểm tra điều kiện".`,
+                content: `Làm thế nào để điều khiển máy tính ra quyết định dựa trên các điều kiện khác nhau? 
+
+- Kiểu dữ liệu nhị phân \`Đúng / Sai\` (Boolean)
+- Các phép toán so sánh
+- Khối lệnh \`kiểm tra điều kiện\` (if - elseif - else)`,
             },
         },
         {
-            title: `S3. Lưu trữ và quản lý dữ liệu với "Cấu trúc dữ liệu"`,
+            title: `S3. Lưu trữ và quản lý nhiều dữ liệu với \`Cấu trúc dữ liệu\``,
             images: [CurriculumPython3],
 
             details: {
-                content: `- Các kiểu dữ liệu có khả năng "chứa" nhiều dữ liệu bên trong như List, Tuple, Dictionary.
-- Thao tác CRUD (Create - Read - Update - Delete) khi sử dụng "Cấu trúc dữ liệu".`,
+                content: `Làm thế nào để lưu trữ danh sách tên của tất cả học sinh trong lớp chỉ bằng 1 biến? Làm thế nào để thêm / xóa / sửa học sinh mới trong danh sách trên?
+- 3 cấu trúc dữ liệu cơ bản List, Tuple, Dictionary
+- Thao tác CRUD (Create - Read - Update - Delete) khi sử dụng "Cấu trúc dữ liệu"`,
             },
         },
         {
-            title: `S4. Sử dụng "Vòng lặp"`,
+            title: `S4. Sử dụng \`Vòng lặp\``,
             images: [CurriculumPython4],
 
             details: {
-                content: `- Định nghĩa vòng lặp để thực hiện 1 công việc nhiều lần.
-- Sự kết hợp giữa "Vòng lặp" và "Cấu trúc dữ liệu".
-- Kỹ thuật List Comprehension, "vũ khí lợi hại" của Python.`,
+                content: `Làm thế nào để bắt máy tính thực hiện 1 công việc lặp đi lặp lại nhiều lần?
+- Định nghĩa vòng lặp để thực hiện 1 công việc nhiều lần
+- Sự kết hợp giữa \`Vòng lặp\` và \`Cấu trúc dữ liệu\`
+- Kỹ thuật List Comprehension, "vũ khí lợi hại" của Python`,
             },
         },
         {
-            title: `S5. "Hàm" và các kỹ thuật lập trình cơ bản`,
+            title: `S5. \`Hàm\` (function) và các kỹ thuật lập trình cơ bản`,
             images: [CurriculumPython5],
 
             details: {
-                content: `- Kỹ thuật "gom nhóm" các dòng code để tái sử dụng và "làm đẹp" code.
-- Sử dụng "Vòng lặp" trong "Hàm".
-- Các kỹ thuật lập trình cơ bản: Đặt cờ hiệu, Đặt lính canh, Cộng dồn.`,
+                content: `Làm thế nào để lập trình như một lập trình viên thực thụ?
+- Kỹ thuật "gom nhóm" để tái sử dụng và làm đẹp code thông qua \`Hàm\` (function)
+- Sử dụng \`Vòng lặp\` trong \`Hàm\`
+- Các kỹ thuật lập trình cơ bản: Đặt cờ hiệu, Đặt lính canh, Cộng dồn
+- Kỹ thuật "Bác bảo vệ gác cổng" (Security Guard / Early Return) khi viết \`Hàm\``,
             },
         },
         {
@@ -131,55 +138,46 @@ export const dataCoursePythonAI = (): CourseProps => ({
             images: [CurriculumExam],
         },
         {
-            title: `S7. Nâng cao về "Chuỗi ký tự" & Tự định nghĩa kiểu dữ liệu của bạn`,
-            images: [CurriculumPython6],
-
-            details: {
-                content: `- Các thao tác xử lý và biến đổi "Chuỗi ký tự" thông dụng.
-- Khái niệm "Class" và "Object" trong lập trình.`,
-            },
-        },
-
-        {
-            title: "S8. Thao tác với tệp tin & Mảng 2 chiều (2D List)",
+            title: `S7. Sử dụng \`Class\``,
             images: [CurriculumPython7],
 
             details: {
-                content: `- Lưu trữ dữ liệu từ biến vào các tệp tin trong máy tính.
-- Nạp dữ liệu từ các tệp tin vào lại chương trình.
-- Mảng 2 chiều và khái niệm ma trận trong toán.
-- Lập trình các phép toán ma trận trên mảng 2 chiều.
-- Khái niệm "ảnh xám".`,
+                content: `Tự định nghĩa kiểu dữ liệu của riêng bạn.
+- Khái niệm \`lớp Class\` và \`Object\` trong lập trình
+- Sử dụng \`Class\` để "trừu tượng hóa" quy trình xử lý`,
             },
         },
-        //         {
-        //             title: "S8.2. Mảng 2 chiều (2D List)",
-        //             images: [CurriculumPython9],
 
-        //             details: {
-        //                 content: `- Mảng 2 chiều và khái niệm ma trận trong toán.
-        // - Lập trình các phép toán ma trận trên mảng 2 chiều.
-        // - Khái niệm "ảnh xám".`,
-        //             },
-        //         },
         {
-            title: "S9. Xử lý ảnh",
+            title: "S8. Thao tác với tập tin và Mảng 2 chiều (2D List)",
             images: [CurriculumPython8],
 
             details: {
-                content: `- Khái niệm "ảnh màu".
-- Thao tác với dữ liệu ảnh bằng thư viện: Pillow và OpenCV`,
+                content: `- Lưu trữ dữ liệu từ biến vào các tập tin trong máy tính
+- Nạp dữ liệu từ các tập tin vào lại chương trình
+- Mảng 2 chiều và khái niệm \`ma trận\` trong toán
+- Lập trình các phép toán ma trận trên mảng 2 chiều
+- Khái niệm "ảnh xám" (grayscale image)`,
             },
         },
         {
-            title: "S10. Lập trình Website với Streamlit",
+            title: "S9. Xử lý ảnh",
             images: [CurriculumPython9],
 
             details: {
-                content: `- Hiển thị văn bản trên Website.
-- Hiển thị các thành phần giao diện (UI Components) như nút bấm, ô chọn, …
-- Thay đổi bố cục (layout) của Website.
-- Triển khai Website lên Internet.`,
+                content: `- Khái niệm "ảnh màu" (RGB color image)
+- Thao tác với dữ liệu ảnh bằng thư viện: \`Pillow\` và \`OpenCV\``,
+            },
+        },
+        {
+            title: "S10. Lập trình Website với `Streamlit`",
+            videos: [CurriculumPython10Video],
+
+            details: {
+                content: `- Hiển thị văn bản trên Website
+- Hiển thị các thành phần giao diện (UI Components) như nút bấm, ô chọn...
+- Thay đổi bố cục (layout) của Website
+- Triển khai Website lên Internet`,
             },
         },
         {

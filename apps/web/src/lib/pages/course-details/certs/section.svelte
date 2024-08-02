@@ -1,7 +1,8 @@
 <script lang="ts">
     import { page } from "$app/stores";
+    import { beforeNavigate } from "$app/navigation";
 
-    import { onDestroy, tick } from "svelte";
+    import { tick } from "svelte";
     import { inview } from "svelte-inview";
     import { confetti } from "@neoconfetti/svelte";
 
@@ -28,31 +29,21 @@
     let isInview = false;
     let isConfetti = false;
 
-    let delayConfettiTimeout: number | undefined = undefined;
-    let delayConfetti = false;
-
     $: course = $page.data.course as CourseProps;
 
     $: totalCerts = course.certs ? course.certs.length : 0;
 
     const onInViewEnter = async (event: CustomEvent<ObserverEventDetails>) => {
         const { inView } = event.detail;
-        if (inView && !delayConfetti) {
-            delayConfetti = true;
-            isConfetti = false;
+        if (inView) {
             isInview = true;
             await tick();
             isConfetti = true;
-            delayConfettiTimeout = window.setTimeout(() => {
-                delayConfetti = false;
-            }, 10000);
         }
     };
 
-    onDestroy(() => {
-        if (delayConfettiTimeout) {
-            window.clearTimeout(delayConfettiTimeout);
-        }
+    beforeNavigate(() => {
+        isConfetti = false;
     });
 
     const inviewCommonOptions = {
