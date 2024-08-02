@@ -43,7 +43,11 @@
                     class:animate-fade-up={$isInview}
                 >
                     {#each curriculum as section, idx (section.title)}
-                        <CurriculumCard {...section} forceOpen={idx === 0} />
+                        <CurriculumCard
+                            {...section}
+                            forceOpen={idx === 0}
+                            hideCurriculumImages={course.hideCurriculumImages}
+                        />
                     {/each}
                 </ul>
             </ContainerContent>

@@ -18,7 +18,6 @@
     import type { CourseProps } from "$lib/datas/courses/types";
     import HeroiconsClock from "~icons/heroicons/clock";
     import HeroiconsChevronRight16Solid from "~icons/heroicons/chevron-right-16-solid";
-    import type { CourseIds } from "$lib/datas/courses/constants";
     import { courseStudyType } from "$lib/datas/courses/constants";
     import LucideMonitorPlay from "~icons/lucide/monitor-play";
     import { ReadMoreCustom } from "$lib/features/read-more-custom";
@@ -40,9 +39,9 @@
 
     let isInview = writable(false);
 
-    $: totalSessions = countTotalLessons(curriculum);
+    $: totalSessions = countTotalLessons(curriculum, id);
 
-    $: courseThumbnail = coursesThumbnail(id as CourseIds);
+    $: courseThumbnail = coursesThumbnail(id);
 
     $: courseUrl = routerPath.courseId(id);
 </script>

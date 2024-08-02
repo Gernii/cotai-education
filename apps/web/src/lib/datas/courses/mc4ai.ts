@@ -118,7 +118,7 @@ Trong Python ta có thể dễ dàng vẽ đồ thị bằng thư viện \`matpl
                 },
             },
             {
-                title: "S6. Kiểm tra giữa khóa & đăng ký dự án",
+                title: "S6. Kiểm tra giữa khóa",
             },
             {
                 title: "S7. Thuật toán kNN & kMeans",

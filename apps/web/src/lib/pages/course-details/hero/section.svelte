@@ -32,7 +32,7 @@
 
     $: courseBlurThumbnail = coursesBlurThumbnail(course.id as CourseIds);
 
-    $: totalLessons = countTotalLessons(course.curriculum);
+    $: totalLessons = countTotalLessons(course.curriculum, course.id);
 </script>
 
 <section class="mb-16">
