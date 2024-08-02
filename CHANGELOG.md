@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/Gernii/cotai-education/compare/v1.1.0...v1.2.0) (2024-08-02)
+
+
+### Features
+
+* **web:** update course content ([#146](https://github.com/Gernii/cotai-education/issues/146)) ([c80808f](https://github.com/Gernii/cotai-education/commit/c80808f4c8c0a985da708b02b5b10ef1ae5cf206))
+
 # [1.1.0](https://github.com/Gernii/cotai-education/compare/v1.0.0...v1.1.0) (2024-08-02)
 
 
