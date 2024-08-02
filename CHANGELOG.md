@@ -1,3 +1,19 @@
+# [1.1.0](https://github.com/Gernii/cotai-education/compare/v1.0.0...v1.1.0) (2024-08-02)
+
+
+### Bug Fixes
+
+* **web:** course details other course total lesson counter error ([#137](https://github.com/Gernii/cotai-education/issues/137)) ([cced1ec](https://github.com/Gernii/cotai-education/commit/cced1ec70b3fe8f7308a432ebfb2596cc4271219))
+* **web:** fix homepage stars ([#143](https://github.com/Gernii/cotai-education/issues/143)) ([4cb15c2](https://github.com/Gernii/cotai-education/commit/4cb15c23b59c0eabd5b879e9e05a4ec742094b53))
+* **web:** missing markdown renderer ([#134](https://github.com/Gernii/cotai-education/issues/134)) ([6b38d6e](https://github.com/Gernii/cotai-education/commit/6b38d6ebc1777b6548ee497f4855acd89bcd9182))
+* **web:** project demo slider on mobile not function as team expected ([#139](https://github.com/Gernii/cotai-education/issues/139)) ([97bb829](https://github.com/Gernii/cotai-education/commit/97bb829e13de5205ca0522d6c0a8466313a51f32))
+
+
+### Features
+
+* **web:** change content ([#141](https://github.com/Gernii/cotai-education/issues/141)) ([0987da3](https://github.com/Gernii/cotai-education/commit/0987da357365efd354b21dd6751783d17e069ed0))
+* **web:** change favicon and logo ([#144](https://github.com/Gernii/cotai-education/issues/144)) ([0d67f9d](https://github.com/Gernii/cotai-education/commit/0d67f9db2ad4aa0b8430fb5d1fffd855bff6909d))
+
 # 1.0.0 (2024-07-22)
 
 
