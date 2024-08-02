@@ -9,7 +9,6 @@ import CurriculumPython8 from "$lib/assets/images/course/python/8.jpg?imagetools
 import CurriculumPython9 from "$lib/assets/images/course/python/9.jpg?imagetools";
 import CurriculumPython10Video from "$lib/assets/images/course/python/10.mp4";
 import CurriculumExam from "$lib/assets/images/course/exam.jpg?imagetools";
-
 import { CourseIds } from "./constants";
 import { ProgramIds } from "../programs/constants";
 import {

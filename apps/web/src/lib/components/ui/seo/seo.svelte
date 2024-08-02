@@ -35,13 +35,15 @@
     > = false;
     export let LdJsons: NonNullable<$$Props["LdJsons"]> = [];
 
+    let pageTitle = `${m.many_plane_puma_nurture()} - ${m.siteName()}`;
+
     $: websiteLDJson = {
         "@context": "https://schema.org",
         "@type": "WebSite",
         url: PUBLIC_HOSTNAME,
         description: m.homePage_head_description(),
         alternateName: m.siteName(),
-        name: title ?? m.siteName(),
+        name: title ?? pageTitle,
     } as WithContext<Thing>;
 
     let organizationLDJson: WithContext<Thing> = {
@@ -63,7 +65,7 @@
     $: formattedTitle = !removeSiteNameFromTitle
         ? title
             ? m.siteNameWithTitle({ title })
-            : m.siteName()
+            : pageTitle
         : title;
 </script>
 
