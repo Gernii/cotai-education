@@ -41,7 +41,7 @@
         {/each}
     </div>
     <p class=" flex-grow text-center font-semibold">
-        <span class="text-xl">
+        <span class="text-2xl">
             {shortTitle}
         </span>
 

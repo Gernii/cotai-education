@@ -1,8 +1,6 @@
 <script lang="ts">
     import { cx } from "cva";
 
-    import * as m from "$i18n/messages";
-
     import RoadMapItem from "./road-map-item.svelte";
     import type { HeroRoadmapCourse } from "./types";
     import { reorganizeCourses } from "./re-organize-courses";
@@ -24,7 +22,7 @@
 </script>
 
 <div class="space-y-2">
-    <div class="text-center">
+    <!-- <div class="text-center">
         <span class="font-semibold">
             {m.weird_wild_chipmunk_accept()}
         </span>
@@ -58,7 +56,7 @@ C323.057,236.728,319.385,233.668,315.713,233.668z"
                 </g>
             </g>
         </svg>
-    </div>
+    </div> -->
 
     <div class="card bg-base-300">
         <div class="hidden gap-x-1 px-6 py-4 lg:flex">

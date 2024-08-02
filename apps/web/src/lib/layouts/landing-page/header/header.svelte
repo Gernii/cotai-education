@@ -45,7 +45,7 @@
 <svelte:window on:scroll={onScrollHandler} />
 
 <header
-    class="fixed inset-x-0 top-0 z-40 h-header bg-base-200 px-3 py-1 shadow-xl lg:px-6"
+    class="fixed inset-x-0 top-0 z-40 h-header bg-base-200 px-3 py-1 lg:px-6"
 >
     <Container padding="none" class="h-full">
         <ContainerContent class="h-full">
