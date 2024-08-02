@@ -83,7 +83,7 @@ const getOtherProgramCourses = (
                 ? parseMarkdownToHTML(courseDetails.description)
                 : undefined,
             currentCourse: courseId === currentCourseId,
-            totalLessons: countTotalLessons(courseDetails.curriculum),
+            totalLessons: countTotalLessons(courseDetails.curriculum, courseId),
         };
 
         prev.push(data);
