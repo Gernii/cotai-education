@@ -1,3 +1,15 @@
+# [1.3.0](https://github.com/Gernii/cotai-education/compare/v1.2.0...v1.3.0) (2024-08-02)
+
+
+### Bug Fixes
+
+* **web:** fix images and curriculum collapsible ([#147](https://github.com/Gernii/cotai-education/issues/147)) ([2ca1647](https://github.com/Gernii/cotai-education/commit/2ca1647602b4ead139d09ac1f9b16c75f4605a75))
+
+
+### Features
+
+* **web:** move curriculum show more arrow to right ([#148](https://github.com/Gernii/cotai-education/issues/148)) ([f8dc17c](https://github.com/Gernii/cotai-education/commit/f8dc17ce82b1bd2192b8c4b021ba598f6df5a951))
+
 # [1.2.0](https://github.com/Gernii/cotai-education/compare/v1.1.0...v1.2.0) (2024-08-02)
 
 
