@@ -6,6 +6,8 @@
     // import SvelteSeo from 'svelte-seo';
     import type { Thing, WithContext } from "schema-dts";
 
+    import DefaultPageThumbnail from "$lib/assets/images/default-page-thumbnail.jpg?imagetools";
+
     import { i18n } from "$lib/libs/i18n";
 
     import { contacts } from "$lib/utils/constants";
@@ -28,12 +30,14 @@
     export let description: NonNullable<$$Props["description"]> =
         m.homePage_head_description();
     export let image: NonNullable<$$Props["image"]> =
-        `${PUBLIC_HOSTNAME}/images/logo/CoTAI-Ver0-TM-320.png`;
+        `${PUBLIC_HOSTNAME}${(DefaultPageThumbnail as ImgMeta).img.src}`;
     export let type: NonNullable<$$Props["type"]> = "website";
     export let removeSiteNameFromTitle: NonNullable<
         $$Props["removeSiteNameFromTitle"]
     > = false;
     export let LdJsons: NonNullable<$$Props["LdJsons"]> = [];
+
+    let pageTitle = `${m.many_plane_puma_nurture()} - ${m.siteName()}`;
 
     $: websiteLDJson = {
         "@context": "https://schema.org",
@@ -41,14 +45,14 @@
         url: PUBLIC_HOSTNAME,
         description: m.homePage_head_description(),
         alternateName: m.siteName(),
-        name: title ?? m.siteName(),
+        name: title ?? pageTitle,
     } as WithContext<Thing>;
 
     let organizationLDJson: WithContext<Thing> = {
         "@context": "https://schema.org",
         "@type": "Organization",
         name: m.siteName(),
-        logo: `${PUBLIC_HOSTNAME}/images/logo/CoTAI-Ver0-TM-320.png`,
+        logo: image,
         url: PUBLIC_HOSTNAME,
         description: m.homePage_head_description(),
         sameAs: [
@@ -63,7 +67,7 @@
     $: formattedTitle = !removeSiteNameFromTitle
         ? title
             ? m.siteNameWithTitle({ title })
-            : m.siteName()
+            : pageTitle
         : title;
 </script>
 

@@ -24,7 +24,7 @@ export const getCourseLdJson = (
         "@type": "Course",
         name: course.title,
         url: `${PUBLIC_HOSTNAME}${routerPath.courseId(course.id)}`,
-        description: course.description,
+        description: course.descriptionRaw,
         publisher: {
             "@type": "Organization",
             name: m.siteName(),
@@ -102,7 +102,7 @@ export const getCourseLdJson = (
                 // Online self-paced course that takes 2 days to complete.
                 "@type": "CourseInstance",
                 courseMode: "Online",
-                courseWorkload: "P2D",
+                courseWorkload: "P1M",
                 name: course.title,
             },
         ],

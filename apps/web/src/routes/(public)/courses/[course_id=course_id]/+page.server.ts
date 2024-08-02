@@ -14,7 +14,7 @@ import type { CoursesListSliderProps_Courses } from "$lib/features/courses-list-
 import { coursesMap } from "$lib/datas/courses/helpers";
 import { countTotalLessons } from "$lib/utils/count-total-lessons";
 import type { CourseDetailsPageDataProps } from "$lib/pages/course-details/types.js";
-
+import { stripHtml } from "string-strip-html";
 export const prerender = true;
 
 export const load = ({ params }) => {
@@ -136,9 +136,14 @@ const getCourse = (courseId: CourseIds) => {
         parseMarkdownToHTML(item),
     );
 
+    const descriptionHTML = course.description
+        ? parseMarkdownToHTML(course.description)
+        : undefined;
+    const descriptionRaw = descriptionHTML ? stripHtml(descriptionHTML).result : undefined;
     const courseParsed: CourseDetailsPageDataProps = {
         ...course,
-        descriptionHTML: course.description ? parseMarkdownToHTML(course.description) : undefined,
+        descriptionHTML,
+        descriptionRaw,
         descriptionMore: course.descriptionMore
             ? parseMarkdownToHTML(course.descriptionMore)
             : undefined,
