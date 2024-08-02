@@ -3,8 +3,16 @@
 @tailwind components;
 @tailwind utilities;
 
-
-
+/* Write your component styles here, in PostCSS syntax */
+@layer components {
+	
+	.prose{
+ 		@apply max-w-none
+	}
+}
+.MathJax svg {
+	@apply inline-block;
+}
 .MathJax {
 	@apply py-2;
 }

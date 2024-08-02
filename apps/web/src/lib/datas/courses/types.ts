@@ -42,6 +42,7 @@ export interface CurriculumProps {
     classesCountable?: boolean;
     details?: CurriculumProps_Details;
     images?: (ImgMeta | ImgMeta[])[];
+    videos?: string[];
 }
 
 export interface CurriculumProps_Details {

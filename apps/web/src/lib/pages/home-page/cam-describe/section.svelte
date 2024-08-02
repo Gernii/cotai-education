@@ -8,6 +8,7 @@
     import { Container, ContainerContent } from "$lib/components/ui/container";
     import { SectionTitle } from "$lib/components/ui/section-title";
     import Picture from "$lib/components/ui/picture/picture.svelte";
+    import { Video } from "$lib/components/ui/video";
 
     import { inviewCommonOptions, onInViewEnter } from "$lib/libs/inview";
 
@@ -68,9 +69,7 @@
                                 alt={"Generalist and Specialist"}
                             />
                         {:else if idx === 2}
-                            <video autoplay muted loop playsinline>
-                                <source src={Cam3} type="video/mp4" />
-                            </video>
+                            <Video src={Cam3} autoplay muted loop playsinline />
                         {/if}
                     </DescribeItem>
                 {/each}

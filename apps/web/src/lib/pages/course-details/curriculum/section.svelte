@@ -42,7 +42,7 @@
                     class:opacity-0={!$isInview}
                     class:animate-fade-up={$isInview}
                 >
-                    {#each curriculum as section, idx}
+                    {#each curriculum as section, idx (section.title)}
                         <CurriculumCard {...section} forceOpen={idx === 0} />
                     {/each}
                 </ul>

@@ -84,66 +84,62 @@ export const dataCourseDL4CV = (): CourseProps => {
 
         curriculum: [
             {
-                title: "S1. Review: PyTorch & Advanced Training Techniques",
+                title: "S1. Ôn nhanh PyTorch & các kỹ thuật huấn luyện nâng cao",
                 details: {
                     content: `Ôn tập lại về cách sử dụng thư viện PyTorch cũng như cách tạo và huấn luyện mô hình AI.`,
                 },
             },
             {
-                title: "S2. The history of DCNNs: How to go deeper?",
+                title: "S2. Lược sử mạng tích chập DCNNs: Làm sao tăng số lớp?",
                 details: {
-                    content: `Học về các kiến trúc DCNN tiêu biểu: **AlexNet**, **VGG**, **Inception**, **ResNet**. Từ đó hiểu được các thành phần chính của một mô hình và trả lời được câu hỏi "Làm thế nào để tạo ra Deep Neural Network?"`,
+                    content: `Học về các kiến trúc DCNNs tiêu biểu: **AlexNet**, **VGG**, **Inception**, **ResNet**. Từ đó hiểu được các thành phần chính của một mô hình và trả lời được câu hỏi "Làm thế nào để tạo ra mạng neuron học sâu?"`,
                 },
             },
             {
-                title: "S3. The history of DCNNs: From Depth to Efficiency",
+                title: "S3. Lược sử mạng tích chập DCNNs: Cải thiện hiệu suất",
                 details: {
-                    content: `Học về các kiến trúc DCNN tiêu biểu: **MobileNet series**, **EfficientNet series**, **Squeeze-and-Excitation Module**, **GhostNet**. Từ đó trả lời được câu hỏi "Cần cải tiến những thành phần nào để mô hình DCNN vừa nhẹ nhưng vẫn chính xác?"`,
+                    content: `Học về các kiến trúc DCNN tiêu biểu qua chuỗi các mô hình **MobileNet** & **EfficientNet**, **Squeeze-and-Excitation Module**, **GhostNet**. Từ đó trả lời được câu hỏi "Cần cải tiến những thành phần nào để mô hình DCNN vừa nhẹ nhưng vẫn chính xác?"`,
                 },
             },
             {
-                title: "S4. The history of DCNNs: From Low-resolution to High-resolution & Object Segmentation",
+                title: "S4. Lược sử mạng tích chập DCNNs: Độ phân giải và khoanh vùng vật trong ảnh",
                 details: {
-                    content: `"Các mô hình DCNN được huấn luyện cho bài toán Classification, cần cải tiến những thành phần nào để tạo ra mô hình cho bài toán Object Segmentation?" Học về các kiến trúc Decoder tiêu biểu **FCN**, **UNet**, **FPN**, **PSPNet**, **PAN-Net**, **DeepLab** cùng các hàm Loss và Metric mới cho Segmentation.`,
+                    content: `"Các mô hình DCNN được huấn luyện cho bài toán nhận dạng & phân loại *ảnh*, cần cải tiến những thành phần nào để tạo ra mô hình cho bài toán *khoanh vùng vật* trong ảnh \`Object Segmentation\`?" Học về các kiến trúc bộ giải mã \`Decoder\` tiêu biểu **FCN**, **UNet**, **FPN**, **PSPNet**, **PAN-Net**, **DeepLab** cùng các hàm lỗi và chuẩn đánh giá mới cho bài toán khoanh vùng vật trong ảnh.`,
                 },
             },
             {
-                title: "S5. Object Detection",
+                title: "S5. Phát hiện vật trong ảnh `object detection`",
                 details: {
-                    content: `Bài toán Object Detection có thể được gói gọn trong các khái niệm sau: **Grids**, **Anchor Boxes**, **Muti-scales Predictions** và **"Multi-stages detection"**. Ngoài ra học viên cũng được học về chuỗi mô hình Object Detection nổi tiếng nhất **YOLO** (You Only ~~Live~~ Look Once).`,
+                    content: `Bài toán \`object detection\` có thể được gói gọn trong các kỹ thuật sau: **Grids**, **Anchor Boxes**, **Muti-scales Predictions** và **"Multi-stages detection"**. Ngoài ra học viên cũng được học về chuỗi mô hình \`object detection\` nổi tiếng nhất **YOLO** (You Only ~~Live~~ Look Once).`,
                 },
             },
             {
-                title: "S6. Visual Attention & Transformers",
+                title: "S6. Cơ chế tập trung `visual attention` & `Transformers`",
                 details: {
-                    content: `Học về **Cơ chế Tập Trung Quan Sát** (Attention Mechanism) để ép mô hình nhìn vào các vùng quan trọng trong ảnh để có thể đưa ra dự đoán tốt hơn.
-    
-Sau đó, ta tạm gác Computer Vision và CNN lại để tìm hiểu về kiến trúc **hot và phổ biến nhất mọi thời đại** (tất nhiên là cho đến hiện tại) của ngành Deep Learning là **Transformer**.`,
+                    content: `Học về *cơ chế tập trung quan sát* để ép mô hình "nhìn" vào các vùng quan trọng trong ảnh để có thể đưa ra dự đoán tốt hơn.
+Sau đó, ta tạm gác DCNN lại để tìm hiểu về kiến trúc **"hot" và phổ biến nhất** (tất nhiên là cho đến thời điểm hiện tại) của ngành học sâu \`Deep Learning\`, đó là **Transformer**.`,
                 },
             },
             {
-                title: "S7. Transformer in Computer Vision & ViT (Vision Transformer)",
+                title: "S7. `Transformer` trong bài toán Thị giác máy tính & `ViT` (`Vision Transformer`)",
                 details: {
-                    content: `Thuật toán Convolution không phải là hoàn hảo. Ở buổi này, học viên sẽ được học về các nhược điểm của kiến trúc CNN, từ đó thấy được "ta có thể thay thế Convolution bằng Transformer".`,
+                    content: `Thuật toán tích chập không phải là hoàn hảo. Ở buổi này, học viên sẽ được học về các nhược điểm của kiến trúc CNN, từ đó thấy được *ta có thể thay thế CNN bằng Transformer*.`,
                 },
             },
             {
-                title: "S8. Transformer in Object Detection & Segmentation",
+                title: "S8. `Transformer` cho bài toán phát hiện và khoanh vùng vật trong ảnh",
                 details: {
-                    content: `"Chỉ dùng ViT thôi là chưa đủ, ta vẫn cần Convolution". Ở buổi này, học viên sẽ được học về các dạng kiến trúc kết hợp cả Convolution và Transformer để giải quyết 2 bài toán phổ biến **Object Segmentation** và **Object Detection**`,
+                    content: `Chỉ dùng \`ViT\` thôi là chưa đủ, ta vẫn cần các lõi tích chập \`convolution\`. Ở buổi này, học viên sẽ được học về các dạng kiến trúc kết hợp cả \`convolution\` và \`Transformer\` để giải quyết 2 bài toán nền tảng & phổ biến của ngành Thị giác máy tính là phát hiện và khoanh vùng vật trong ảnh.`,
                 },
             },
             {
-                title: "S9. Modern ConvNets",
+                title: "S9. Mạng `ConvNets` hiện đại",
                 details: {
-                    content: `"Kiến trúc ViT rất hay, liệu ta có thể thay đổi thuật toán Convolution để bắt chước ViT?". Sau khoảng thời gian bị thất sủng, các kiến trúc dùng Convolution đã quay trở lại. Ở buổi học này, học viên sẽ được học về 2 kiến trúc tiêu biểu đánh dấu sự "comeback mạnh mẽ" của thuật toán Convolution đó là **ConvNext** và **RepLKNet**.`,
+                    content: `Kiến trúc \`ViT\` rất hay, liệu ta có thể thay đổi thuật toán \`convolution\` để bắt chước \`ViT\`? Sau khoảng thời gian bị thất sủng, các kiến trúc dùng \`convolution\` đã quay trở lại. Ở buổi học này, học viên sẽ được học về 2 kiến trúc tiêu biểu đánh dấu sự "trở lại mạnh mẽ" của thuật toán \`convolution\` đó là **ConvNext** và **RepLKNet**.`,
                 },
             },
             {
                 title: "S10. Báo cáo dự án",
-                details: {
-                    content: "Học viên trình bày về dự án cuối khóa của mình",
-                },
             },
         ],
     };

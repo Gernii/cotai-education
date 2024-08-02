@@ -7,6 +7,7 @@
 
     import { Picture } from "$lib/components/ui/picture";
     import { ContentRenderer } from "$lib/components/ui/content-renderer";
+    import { Video } from "$lib/components/ui/video";
 
     import * as m from "$i18n/messages";
 
@@ -25,6 +26,7 @@
     export let details: $$Props["details"] = undefined;
     export let forceOpen: $$Props["forceOpen"] = undefined;
     export let images: $$Props["images"] = undefined;
+    export let videos: $$Props["videos"] = undefined;
 
     let className: string | undefined = undefined;
 
@@ -38,12 +40,7 @@
         defaultOpen: forceOpen ?? false,
     });
 
-    $: isContentEnabled =
-        (details && !details.hidden) || $$slots.default || !!images;
-
-    $: classnames = cx(className, {
-        "hover:bg-base-200/80": isContentEnabled,
-    });
+    $: classnames = cx("hover:bg-base-200/80", className);
 
     $: course = $page.data.course as CourseProps;
     $: hideCurriculumImages = course.hideCurriculumImages;
@@ -55,23 +52,21 @@
         use:melt={$trigger}
         aria-label={m.glad_antsy_gecko_explore()}
     >
-        {#if isContentEnabled}
-            <LucideChevronDown
-                class={cx("size-6 transform duration-200 ease-in-out", {
-                    "rotate-180": $open,
-                    "rotate-0": !$open,
-                })}
-            />
-        {/if}
-        <span>{title}</span>
+        <LucideChevronDown
+            class={cx("size-6 transform duration-200 ease-in-out", {
+                "rotate-180": $open,
+                "rotate-0": !$open,
+            })}
+        />
+        <span class="prose font-semibold">{@html title}</span>
     </button>
 
-    {#if isContentEnabled && $open}
+    {#if $open}
         <div class="bg-base-300" use:melt={$content} transition:slide>
             <div
                 class={cx("p-4 sm:p-8", {
                     "grid grid-cols-1 gap-x-8 md:grid-cols-2":
-                        images && !hideCurriculumImages,
+                        (images || videos) && !hideCurriculumImages,
                 })}
             >
                 <div>
@@ -89,6 +84,17 @@
                 {#if images && !hideCurriculumImages}
                     <div class="overflow-hidden rounded-box">
                         <Picture meta={images[0]} />
+                    </div>
+                {/if}
+                {#if videos && !hideCurriculumImages}
+                    <div class="overflow-hidden rounded-box">
+                        <Video
+                            src={videos[0]}
+                            autoplay
+                            muted
+                            loop
+                            playsinline
+                        />
                     </div>
                 {/if}
             </div>
