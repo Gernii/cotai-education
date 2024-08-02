@@ -52,13 +52,13 @@
         use:melt={$trigger}
         aria-label={m.glad_antsy_gecko_explore()}
     >
+        <span class="prose w-full font-semibold">{@html title}</span>
         <LucideChevronDown
             class={cx("size-6 transform duration-200 ease-in-out", {
                 "rotate-180": $open,
                 "rotate-0": !$open,
             })}
         />
-        <span class="prose font-semibold">{@html title}</span>
     </button>
 
     {#if $open}
